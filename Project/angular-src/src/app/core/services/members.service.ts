@@ -21,7 +21,7 @@ export class MembersService {
   private coleMember = new Member(
     'Michael Tormey',
     'https://bit.ly/2TfL8Ba',
-    'Michael is a member of the front-end team for BetterHome.'
+    'Michael is a member of the front end team for BetterHome.'
   );
 }
 
