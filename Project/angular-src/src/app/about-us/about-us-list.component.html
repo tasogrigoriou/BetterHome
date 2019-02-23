@@ -1,0 +1,17 @@
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      <div class="column is-4" *ngFor="let member of members">
+        <div class="card">
+          <div class="card-content">
+            <a [routerLink]="[member.name]" skipLocationChange="true" [queryParams]="{
+            name: member.name,
+            photoUrl: member.photoUrl,
+            body: member.body
+            }">{{ member.name }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

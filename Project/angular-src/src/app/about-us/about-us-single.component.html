@@ -1,0 +1,9 @@
+<section class="section">
+  <div class="container">
+    <div class="card" *ngIf="member">
+      <img [src]="member.photoUrl">
+      <h1>{{ member.name }}</h1>
+      <p>{{ member.body }}</p>
+    </div>
+  </div>
+</section>
