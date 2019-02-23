@@ -16,6 +16,12 @@ export class MembersService {
     'https://bit.ly/2NnQCof',
     'Taso is the team lead for BetterHome. He currently works at Ancestry as an iOS engineer, and will be graduating from SFSU in Spring 2019.'
   );
+
+  private sawyerMember = new Member(
+    'Sawyer Nixon',
+    'https://bit.ly/2XkcA04',
+    'Sawyer is the backend lead for BetterHome. He is currently attending SFSU, and will be graduating in Fall 2019.'
+  );
 }
 
 export class Member {
