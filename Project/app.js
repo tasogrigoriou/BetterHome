@@ -23,7 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/users', usersRouter);
 
 app.get('*', function(req, res){
-  res.sendFile('index.html');
+  // res.sendFile('index.html');
+  res.sendFile('index.html', { root: __dirname });
 });
 
 // /* final catch-all route to index.html defined last */
