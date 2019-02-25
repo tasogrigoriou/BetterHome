@@ -22,14 +22,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-/* final catch-all route to index.html defined last */
-app.get('/*', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-})
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+    res.sendfile('index.html');
+  // next(createError(404));
 });
 
 // error handler
