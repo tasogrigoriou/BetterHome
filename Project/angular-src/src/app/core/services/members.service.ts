@@ -9,10 +9,17 @@ export class MembersService {
     return [
       this.tasoMember,
 <<<<<<< HEAD
+<<<<<<< HEAD
       this.austinMember
 =======
       this.henokMember
 >>>>>>> develop
+=======
+
+      this.henokMember,
+
+      this.sawyerMember
+>>>>>>> 1230bfdf12e0cbbe22e5a9aac8111044a4e0eba5
     ]
   }
   private austinMember = new Member(
@@ -33,6 +40,11 @@ export class MembersService {
 
   );
 
+  private sawyerMember = new Member(
+    'Sawyer Nixon',
+    'https://bit.ly/2XkcA04',
+    'Sawyer is the backend lead for BetterHome. He is currently attending SFSU, and will be graduating in Fall 2019.'
+  );
 }
 
 export class Member {
