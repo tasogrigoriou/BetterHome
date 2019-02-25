@@ -27,7 +27,7 @@ export class MembersService {
   );
   private liwangMember = new Member(
     'Liwang Gao',
-    'null',
+    'https://bit.ly/2Nt9ZfN' ,
     'I am the member of front-end team, and will graduate at 2019.'
 
   );
