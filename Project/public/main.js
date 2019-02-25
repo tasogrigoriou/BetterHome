@@ -69,7 +69,7 @@ var AppRoutingModule = /** @class */ (function () {
     }
     AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes, { onSameUrlNavigation: "reload" })],
             exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
         })
     ], AppRoutingModule);
@@ -118,7 +118,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.title = 'angular-src';
     }
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -189,6 +188,17 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/core/components/header/header.component.html":
+/*!**************************************************************!*\
+  !*** ./src/app/core/components/header/header.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<nav class=\"navbar is-dark\">\n  <!-- logo -->\n  <div class=\"navbar-brand\">\n    <a class=\"navbar-item\">\n    </a>\n  </div>\n  <!-- menu -->\n  <div class=\"navbar-menu\">\n    <div class=\"navbar-start\">\n      <a class=\"navbar-item\" routerLink=\"\">Home</a>\n      <a class=\"navbar-item\" routerLink=\"about-us\">About us</a>\n    </div>\n  </div>\n</nav>\n"
+
+/***/ }),
+
 /***/ "./src/app/core/components/header/header.component.ts":
 /*!************************************************************!*\
   !*** ./src/app/core/components/header/header.component.ts ***!
@@ -210,7 +220,7 @@ var HeaderComponent = /** @class */ (function () {
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-header',
-            template: "\n    <nav class=\"navbar is-dark\">\n      <!-- logo -->\n      <div class=\"navbar-brand\">\n        <a class=\"navbar-item\">\n          <!--<img src=\"assets/img/angular-logo.png\">-->\n        </a>\n      </div>\n      <!-- menu -->\n      <div class=\"navbar-menu\">\n        <div class=\"navbar-start\">\n          <a class=\"navbar-item\" routerLink=\"\">Home</a>\n          <a class=\"navbar-item\" routerLink=\"about-us\">About us</a>\n        </div>\n      </div>\n    </nav>\n  "
+            template: __webpack_require__(/*! ./header.component.html */ "./src/app/core/components/header/header.component.html")
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], HeaderComponent);
@@ -287,15 +297,12 @@ __webpack_require__.r(__webpack_exports__);
 
 var MembersService = /** @class */ (function () {
     function MembersService() {
+        this.tasoMember = new Member('Taso Grigoriou', 'https://bit.ly/2NnQCof', 'Taso is the team lead for BetterHome. He currently works at Ancestry as an iOS engineer, and will be graduating from SFSU in Spring 2019.');
     }
     MembersService.prototype.getMembers = function () {
         return [
-            new Member('Taso Grigoriou', ''),
-            new Member('Taso Grigoriou', ''),
-            new Member('Taso Grigoriou', '')
+            this.tasoMember
         ];
-    };
-    MembersService.prototype.getMember = function (username) {
     };
     MembersService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
@@ -305,14 +312,26 @@ var MembersService = /** @class */ (function () {
 }());
 
 var Member = /** @class */ (function () {
-    function Member(name, photoUrl) {
+    function Member(name, photoUrl, body) {
         this.name = name;
         this.photoUrl = photoUrl;
+        this.body = body;
     }
     return Member;
 }());
 
 
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.html":
+/*!******************************************!*\
+  !*** ./src/app/home/home.component.html ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<section class=\"hero is-info is-fullheight is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"container\">\n      <h1 class=\"title\">Home Page</h1>\n    </div>\n  </div>\n</section>\n"
 
 /***/ }),
 
@@ -337,7 +356,7 @@ var HomeComponent = /** @class */ (function () {
     HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-home',
-            template: "\n    <section class=\"hero is-info is-fullheight is-bold\">\n    <div class=\"hero-body\">\n    <div class=\"container\">\n      <h1 class=\"title\">Home Page</h1>\n    </div>\n    </div>\n    </section>\n  "
+            template: __webpack_require__(/*! ./home.component.html */ "./src/app/home/home.component.html")
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], HomeComponent);
