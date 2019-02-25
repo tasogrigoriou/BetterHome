@@ -8,6 +8,7 @@ export class MembersService {
   getMembers() {
     return [
       this.tasoMember,
+
       this.henokMember
     ]
   }
@@ -23,7 +24,6 @@ export class MembersService {
     'Henok is a front-end team lead for BetterHome.'
 
   );
-
 }
 
 export class Member {
