@@ -9,7 +9,8 @@ export class MembersService {
     return [
       this.tasoMember,
 
-      this.henokMember
+      this.henokMember,
+      this.liwangMember
     ]
   }
 
@@ -22,6 +23,12 @@ export class MembersService {
     'henok Kassegn',
     'null',
     'Henok is a front-end team lead for BetterHome.'
+
+  );
+  private liwangMember = new Member(
+    'Liwang Gao',
+    'null',
+    'I am the member of front-end team, and will graduate at 2019.'
 
   );
 }
