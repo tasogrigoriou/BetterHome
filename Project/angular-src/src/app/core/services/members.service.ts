@@ -8,7 +8,8 @@ export class MembersService {
   getMembers() {
     return [
       this.tasoMember,
-      this.coleMember
+
+      this.henokMember
     ]
   }
 
@@ -16,12 +17,12 @@ export class MembersService {
     'Taso Grigoriou',
     'https://bit.ly/2NnQCof',
     'Taso is the team lead for BetterHome. He currently works at Ancestry as an iOS engineer, and will be graduating from SFSU in Spring 2019.'
-  );
+  )
+  private henokMember = new Member(
+    'henok Kassegn',
+    'null',
+    'Henok is a front-end team lead for BetterHome.'
 
-  private coleMember = new Member(
-    'Michael Tormey',
-    'https://bit.ly/2TfL8Ba',
-    'Michael is a member of the front end team for BetterHome.'
   );
 }
 
