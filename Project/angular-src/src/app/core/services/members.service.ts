@@ -9,7 +9,9 @@ export class MembersService {
     return [
       this.tasoMember,
 
-      this.henokMember
+      this.henokMember,
+
+      this.sawyerMember
     ]
   }
 
