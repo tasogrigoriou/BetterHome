@@ -9,7 +9,9 @@ export class MembersService {
     return [
       this.tasoMember,
 
-      this.henokMember
+      this.henokMember,
+
+      this.sawyerMember
     ]
   }
 
@@ -23,6 +25,12 @@ export class MembersService {
     'null',
     'Henok is a front-end team lead for BetterHome.'
 
+  );
+
+  private sawyerMember = new Member(
+    'Sawyer Nixon',
+    'https://bit.ly/2XkcA04',
+    'Sawyer is the backend lead for BetterHome. He is currently attending SFSU, and will be graduating in Fall 2019.'
   );
 }
 
