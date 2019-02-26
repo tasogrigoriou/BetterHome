@@ -8,11 +8,18 @@ export class MembersService {
   getMembers() {
     return [
       this.tasoMember,
+<<<<<<< HEAD
+
+      this.henokMember,
+      this.liwangMember
+    ]
+=======
       this.austinMember,
       this.henokMember,
       this.sawyerMember,
       this.coleMember
     ];
+>>>>>>> develop
   }
   private austinMember = new Member(
     'Austin Sy-Velasco',
@@ -36,11 +43,19 @@ export class MembersService {
     'Henok is a front-end team lead for BetterHome.'
 
   );
+<<<<<<< HEAD
+  private liwangMember = new Member(
+    'Liwang Gao',
+    'https://bit.ly/2Nt9ZfN' ,
+    'I am the member of front-end team, and will graduate at 2019.'
+
+=======
 
   private sawyerMember = new Member(
     'Sawyer Nixon',
     'https://bit.ly/2XkcA04',
     'Sawyer is the backend lead for BetterHome. He is currently attending SFSU, and will be graduating in Fall 2019.'
+>>>>>>> develop
   );
 }
 
