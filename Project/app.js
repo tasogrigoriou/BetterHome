@@ -5,6 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var app = express();
+app.enable('trust proxy');
+
+var connection = require('./models/cloudsql');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -12,6 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// last resort to route 404 to index.html for angular to handle
 app.get('*', function(req, res) {
   res.sendFile('index.html', { root: __dirname });
 });
