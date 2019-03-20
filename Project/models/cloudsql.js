@@ -1,35 +1,50 @@
-const mysql = require('mysql');
+const mysql = require('promise-mysql');
 const config = require('../config.json');
 
-// Database Connection for Production
+let options;
 
-// const options = {
-//     user: config.MYSQL_USER,
-//     password: config.MYSQL_PASSWORD,
-//     database: 'betterhome'
-// };
-//
-// if (config.INSTANCE_CONNECTION_NAME && config.NODE_ENV === 'production') {
-//     options.socketPath = `/cloudsql/${config.INSTANCE_CONNECTION_NAME}`;
-// }
+switch (config.NODE_ENV) {
 
-// const connection = mysql.createConnection(options);
+    // Database Connection for Production
+    case 'prod':
+        options = {
+            user: config.MYSQL_USER,
+            password: config.MYSQL_PASSWORD,
+            database: config.DB_DATABASE
+        };
+        options.socketPath = `/cloudsql/${config.INSTANCE_CONNECTION_NAME}`;
+        break;
 
-// Database Connection for Development
+    // Database Connection for Local Environment
+    case 'local':
+        options = {
+            host: config.HOST,
+            user: config.DB_USER,
+            database: config.DB_DATABASE,
+            password: config.DB_PASS
+        };
+        break;
+}
 
-let connection = mysql.createConnection({
-    host: config.HOST,
-    user: config.DB_USER,
-    database: config.DB_DATABASE,
-    password: config.DB_PASS
+let connection;
+
+mysql.createConnection(options)
+     .then(conn => {
+        connection = conn;
+        console.log('Connected as thread id: ' + connection.threadId);
+        connection.end();
+        module.exports = connection;
+     }).catch(err => {
+     if (connection && connection.end) connection.end();
+     console.log(err);
 });
 
-connection.connect(function(err) {
-    if (err) {
-        console.error('Error connecting: ' + err.stack);
-        return;
-    }
-    console.log('Connected as thread id: ' + connection.threadId);
-});
+// connection.connect(err => {
+//     if (err) {
+//         console.error('Error connecting: ' + err.stack);
+//         return;
+//     }
+//     console.log('Connected as thread id: ' + connection.threadId);
+// });
 
 // module.exports = connection;
