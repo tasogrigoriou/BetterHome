@@ -1,0 +1,3 @@
+runtime: nodejs8
+beta_settings:
+  cloud_sql_instances: better-home-234220:us-west2:better-home-db
