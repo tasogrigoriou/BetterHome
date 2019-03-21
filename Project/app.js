@@ -15,7 +15,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/', express.static(path.join(__dirname, 'public')));
 app.use('/about-us', express.static(path.join(__dirname, 'public')));
 
 // last resort to route 404 to index.html for angular to handle
