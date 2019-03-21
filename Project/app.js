@@ -13,12 +13,15 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'public')));
+app.use('/about-us', express.static(path.join(__dirname, 'public')));
 
 // last resort to route 404 to index.html for angular to handle
-app.get('*', function(req, res) {
-  res.sendFile('index.html', { root: __dirname });
-});
+// app.get('*', function(req, res) {
+//   res.sendFile('index.html', { root: __dirname });
+// });
 
 // error handler
 app.use(function(err, req, res, next) {
