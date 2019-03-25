@@ -17,9 +17,9 @@ export class ExampleService {
 
   /** CRUD functions (create, retrieve, update, delete) **/
 
-  getExamples(): Observable<[Example]> {
+  getExamples(): Observable<Example[]> {
     console.log(apiUrl);
-    return this.http.get<[Example]>(apiUrl, httpOptions).pipe(
+    return this.http.get<Example[]>(apiUrl, httpOptions).pipe(
         catchError(this.handleError)
       );
   }
