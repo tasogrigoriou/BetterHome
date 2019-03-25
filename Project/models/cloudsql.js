@@ -1,4 +1,4 @@
-const mysql = require('promise-mysql');
+const mysql = require('mysql2');
 const config = require('../config.json');
 
 let options;
@@ -10,7 +10,11 @@ switch (config.NODE_ENV) {
         options = {
             user: config.MYSQL_USER,
             password: config.MYSQL_PASSWORD,
-            database: config.DB_DATABASE
+            database: config.DB_DATABASE,
+
+            waitForConnections: true,
+            connectionLimit: 10,
+            queueLimit: 0
         };
         options.socketPath = `/cloudsql/${config.INSTANCE_CONNECTION_NAME}`;
         break;
@@ -21,30 +25,15 @@ switch (config.NODE_ENV) {
             host: config.HOST,
             user: config.DB_USER,
             database: config.DB_DATABASE,
-            password: config.DB_PASS
+            password: config.DB_PASS,
+
+            waitForConnections: true,
+            connectionLimit: 10,
+            queueLimit: 0
         };
         break;
 }
 
-let connection;
+const pool = mysql.createPool(options);
 
-mysql.createConnection(options)
-     .then(conn => {
-        connection = conn;
-        console.log('Connected as thread id: ' + connection.threadId);
-        connection.end();
-        module.exports = connection;
-     }).catch(err => {
-     if (connection && connection.end) connection.end();
-     console.log(err);
-});
-
-// connection.connect(err => {
-//     if (err) {
-//         console.error('Error connecting: ' + err.stack);
-//         return;
-//     }
-//     console.log('Connected as thread id: ' + connection.threadId);
-// });
-
-// module.exports = connection;
+module.exports = pool.promise();

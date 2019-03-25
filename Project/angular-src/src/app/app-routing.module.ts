@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from "./home/home.component";
+import {ExampleComponent} from "./example/example.component";
 
 const routes: Routes = [
   {
@@ -11,6 +12,11 @@ const routes: Routes = [
   {
     path: 'about-us',
     loadChildren: './about-us/about-us.module#AboutUsModule'
+  },
+  {
+    path: 'example',
+    component: ExampleComponent,
+    data: { title: 'Example Fake Data' }
   }
 ];
 

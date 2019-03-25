@@ -7,7 +7,9 @@ var logger = require('morgan');
 var app = express();
 app.enable('trust proxy');
 
-var connection = require('./models/cloudsql');
+var database = require('./models/cloudsql');
+
+var apiExampleRouter = require('./controllers/example');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -15,7 +17,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use('/about-us', express.static(path.join(__dirname, 'public')));
+app.use('/example', express.static(path.join(__dirname, 'public')));
+
+app.use('/api/example', apiExampleRouter);
 
 // error handler
 app.use(function(err, req, res, next) {
