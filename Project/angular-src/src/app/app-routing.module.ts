@@ -4,6 +4,7 @@ import {HomeComponent} from "./home/home.component";
 import {PropertyComponent} from "./property/property.component";
 import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
+import {ExampleComponent} from "./example/example.component";
 
 const routes: Routes = [
   {
@@ -26,6 +27,11 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'example',
+    component: ExampleComponent,
+    data: { title: 'Example Fake Data' }
   }
 ];
 
