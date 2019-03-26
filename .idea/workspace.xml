@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="173cd4e9-2104-407a-98ef-53cf44b7a5bb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Project/controllers/example.js" beforeDir="false" afterPath="$PROJECT_DIR$/Project/controllers/example.js" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/Project/node_modules/" />
+    <ignored path="$PROJECT_DIR$/Project/angular-src/node_modules/" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/app-routing.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-51">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/models/cloudsql.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-187">
+              <caret column="32" selection-start-column="32" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Project/controllers/example.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="100" selection-start-line="20" selection-start-column="100" selection-end-line="20" selection-end-column="100" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/angular-src/angular.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/angular-src/src/index.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/package.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="26" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/angular-src/tsconfig.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/angular-src/tslint.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Project/controllers/example.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="252" />
+    <option name="y" value="-23" />
+    <option name="width" value="986" />
+    <option name="height" value="950" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="csc648-sp19-team43" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-sp19-team43" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc648-sp19-team43" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-sp19-team43" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc648-sp19-team43" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-sp19-team43" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc648-sp19-team43" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-sp19-team43" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc648-sp19-team43" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-sp19-team43" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc648-sp19-team43" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-sp19-team43" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="173cd4e9-2104-407a-98ef-53cf44b7a5bb" name="Default Changelist" comment="" />
+      <created>1551064391813</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551064391813</updated>
+      <workItem from="1551064397096" duration="96000" />
+      <workItem from="1551065114018" duration="774000" />
+      <workItem from="1551065936001" duration="512000" />
+      <workItem from="1551066504089" duration="65000" />
+      <workItem from="1551066857465" duration="38000" />
+      <workItem from="1551069000616" duration="302000" />
+      <workItem from="1551154751781" duration="570000" />
+      <workItem from="1551157798587" duration="406000" />
+      <workItem from="1551158620701" duration="730000" />
+      <workItem from="1551160676620" duration="346000" />
+      <workItem from="1551235428687" duration="3020000" />
+      <workItem from="1551326217694" duration="958000" />
+      <workItem from="1551401089320" duration="1819000" />
+      <workItem from="1551402951533" duration="1061000" />
+      <workItem from="1551404683162" duration="1190000" />
+      <workItem from="1551406263078" duration="1716000" />
+      <workItem from="1551408177765" duration="80000" />
+      <workItem from="1551409011681" duration="485000" />
+      <workItem from="1551412211298" duration="1131000" />
+      <workItem from="1551413361468" duration="30000" />
+      <workItem from="1551415388194" duration="688000" />
+      <workItem from="1551418023054" duration="788000" />
+      <workItem from="1551424207449" duration="42000" />
+      <workItem from="1551496875736" duration="1310000" />
+      <workItem from="1551498525090" duration="643000" />
+      <workItem from="1551499288707" duration="527000" />
+      <workItem from="1551514205363" duration="51000" />
+      <workItem from="1551514321418" duration="3150000" />
+      <workItem from="1551544209300" duration="368000" />
+      <workItem from="1551544700331" duration="1567000" />
+      <workItem from="1551565527195" duration="167000" />
+      <workItem from="1551565699069" duration="179000" />
+      <workItem from="1551565949269" duration="206000" />
+      <workItem from="1551567849593" duration="97000" />
+      <workItem from="1551568556331" duration="92000" />
+      <workItem from="1551571067947" duration="721000" />
+      <workItem from="1551579231274" duration="28000" />
+      <workItem from="1551579844346" duration="1289000" />
+      <workItem from="1551589951949" duration="1166000" />
+      <workItem from="1551591360206" duration="838000" />
+      <workItem from="1551595332577" duration="2010000" />
+      <workItem from="1551597563292" duration="1316000" />
+      <workItem from="1551599553920" duration="91000" />
+      <workItem from="1551599647910" duration="576000" />
+      <workItem from="1551600536624" duration="313000" />
+      <workItem from="1551601788971" duration="62000" />
+      <workItem from="1551602061431" duration="182000" />
+      <workItem from="1551639158332" duration="1374000" />
+      <workItem from="1551640598041" duration="732000" />
+      <workItem from="1551641352581" duration="93000" />
+      <workItem from="1551641496206" duration="161000" />
+      <workItem from="1551641660691" duration="803000" />
+      <workItem from="1551642682676" duration="1275000" />
+      <workItem from="1551656130067" duration="508000" />
+      <workItem from="1551656642145" duration="1388000" />
+      <workItem from="1553626658725" duration="2085000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="45264000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14436248" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3290461" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/register/register.component.scss" />
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/login/login.routing.module.ts" />
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/login/login.component.scss" />
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/login/login.module.ts" />
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/login/login-list.component.ts" />
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/login/login-single.component.ts" />
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/about-us/about-us-list.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/home/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/login.component.ts" />
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/register.component.ts" />
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/register.component.html" />
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/about-us/about-us-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/styles.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/property/property-about.html" />
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/about-us/about-us.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/about-us/about-us-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/about-us/about-us-single.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/about-us/about-us-single.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/core/components/header/header.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/property/property.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/app.component.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/property/property.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/about-us/about-us-HenokAbout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/core/core.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/public/main.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/register/register.css" />
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/core/services/members.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/app.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/register/register.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/register/register.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="21" column="72" selection-start-line="21" selection-start-column="72" selection-end-line="21" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/core/components/header/header.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/core/services/example.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-719">
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/angular.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/src/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/angular-src/tslint.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/models/cloudsql.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/controllers/example.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="100" selection-start-line="20" selection-start-column="100" selection-end-line="20" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
