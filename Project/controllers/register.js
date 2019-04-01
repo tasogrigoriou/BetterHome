@@ -3,7 +3,7 @@ var router = express.Router();
 var database = require('../models/cloudsql');
 
 //Something I found while researching for registering users (NOT FINAL)
-exports.register = function(req, res) {
+module.exports.register = function(req, res) {
     var user = {
         "idUsers": req.body.idUsers,
         "username": req.body.username,
