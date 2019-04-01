@@ -18,13 +18,15 @@ router.get('/:id', async function(req, res, next) {
 
 /* SAVE EXAMPLE DATA */
 router.post('/', async function(req, res, next) {
-    let post = {title:'Post', id}; //Simple layout for how we are going to implement for our website
+    /*
+    let post = {title: req.body.title, id}; //Simple layout for how we are going to implement for our website
     let sql = 'INSERT INTO FakeTable SET ?';
-    let query = db.query(sql, post, (err, result) => {
+    let query = await database.query(sql, post, (err, result) => {
         if(err) throw err;
         console.log(result);
         res.send(result[0]);
     })
+    */
 });
 
 /* UPDATE EXAMPLE DATA */
