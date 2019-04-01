@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var database = require('../models/cloudsql');
 
-module.exports.authenticate = function(req, res){
+router.get('/', async function(req, res) {
     var email = req.body.email;
     var password = req.body.password;
     //Tried the login in a different format for variety :D
@@ -34,4 +34,4 @@ module.exports.authenticate = function(req, res){
             }
 
     });
-}
+});

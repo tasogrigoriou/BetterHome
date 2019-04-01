@@ -3,7 +3,7 @@ var router = express.Router();
 var database = require('../models/cloudsql');
 
 //Something I found while researching for registering users (NOT FINAL)
-module.exports.register = function(req, res) {
+router.post('/', async function(req, res) {
     var user = {
         "idUsers": req.body.idUsers,
         "username": req.body.username,
@@ -19,4 +19,4 @@ module.exports.register = function(req, res) {
         console.log('Registered!');
         res.send(result[0]);
     })
-}
+});
