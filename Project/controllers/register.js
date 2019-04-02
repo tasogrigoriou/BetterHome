@@ -2,21 +2,27 @@ var express = require('express');
 var router = express.Router();
 var database = require('../models/cloudsql');
 
-//Something I found while researching for registering users (NOT FINAL)
-router.post('/', async function(req, res) {
-    var user = {
-        "idUsers": req.body.idUsers,
-        "username": req.body.username,
-        "password": req.body.password,
-        "Fname": req.body.Fname,
-        "Lname": req.body.Lname,
-        "email": req.body.email,
-        "PhoneNum": req.body.PhoneNum
-    }
+//Password encryption tool; npm install bcrypt
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
-    const result = database.query('INSERT INTO Users SET ?', user, function(err, result){
-        if(err) throw err;
-        console.log('Registered!');
-        res.send(result[0]);
-    })
+//Auto-Generate salt and has for password
+router.post('/', async function(req, res) {
+    bcrypt(req.body.password, saltRounds, function(err, hash){
+        database.Users.create({
+            idUsers: req.body.idUsers,
+            username: req.body.username,
+            password: hash,
+            Fname: req.body.Fname,
+            Lname: req.body.Lname,
+            email: req.body.email,
+            PhoneNum: req.body.PhoneNum
+        }).then(function(data){
+            if(data){
+                res.redirect('/home'); //Redirects to home page
+            }
+        });
+
+    });
+
 });
