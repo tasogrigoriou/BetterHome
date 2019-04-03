@@ -9,8 +9,7 @@ const saltRounds = 10;
 //Auto-Generate salt and has for password
 router.post('/', async function(req, res) {
     bcrypt(req.body.password, saltRounds, function(err, hash){
-        database.Users.create({
-            idUsers: req.body.idUsers,
+        database.Users.create({             
             username: req.body.username,
             password: hash,
             Fname: req.body.Fname,

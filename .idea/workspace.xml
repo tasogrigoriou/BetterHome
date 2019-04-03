@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="173cd4e9-2104-407a-98ef-53cf44b7a5bb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Project/controllers/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/Project/controllers/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/controllers/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/Project/controllers/register.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/Project/node_modules/" />
     <ignored path="$PROJECT_DIR$/Project/angular-src/node_modules/" />
@@ -44,20 +44,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project/controllers/register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+            <state relative-caret-position="187">
+              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project/controllers/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+            <state relative-caret-position="153">
+              <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -107,8 +107,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Project/controllers/example.js" />
-        <option value="$PROJECT_DIR$/Project/controllers/register.js" />
         <option value="$PROJECT_DIR$/Project/controllers/login.js" />
+        <option value="$PROJECT_DIR$/Project/controllers/register.js" />
       </list>
     </option>
   </component>
@@ -255,12 +255,12 @@
       <workItem from="1553917192664" duration="775000" />
       <workItem from="1554144447771" duration="5878000" />
       <workItem from="1554155797067" duration="2083000" />
-      <workItem from="1554241270449" duration="2161000" />
+      <workItem from="1554241270449" duration="2929000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62922000" />
+    <option name="totallyTimeSpent" value="63690000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -521,17 +521,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/controllers/register.js">
+    <entry file="file://$PROJECT_DIR$/Project/controllers/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        <state relative-caret-position="153">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/controllers/login.js">
+    <entry file="file://$PROJECT_DIR$/Project/controllers/register.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        <state relative-caret-position="187">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
         </state>
       </provider>
     </entry>
