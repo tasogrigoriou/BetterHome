@@ -15,31 +15,11 @@ export class RegisterService {
 
   constructor(private http: HttpClient) { }
 
-  /** CRUD functions (create, retrieve, update, delete) **/
+  /** CRUD function for create **/
 
-  get(): Observable<Register[]> {
-    console.log(apiUrl);
-    return this.http.get<Register[]>(apiUrl, httpOptions).pipe(
-      catchError(this.handleError)
-    );
-  }
 
   post(data): Observable<any> {
     return this.http.post(apiUrl, data, httpOptions).pipe(
-      catchError(this.handleError)
-    );
-  }
-
-  update(id: string, data): Observable<any> {
-    const url = `${apiUrl}/${id}`;
-    return this.http.put(url, data, httpOptions).pipe(
-      catchError(this.handleError)
-    );
-  }
-
-  delete(id: string): Observable<{}> {
-    const url = `${apiUrl}/${id}`;
-    return this.http.delete(url, httpOptions).pipe(
       catchError(this.handleError)
     );
   }
