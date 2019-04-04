@@ -2,26 +2,35 @@ var express = require('express');
 var router = express.Router();
 var database = require('../models/cloudsql');
 
-//Password encryption tool; npm install bcrypt
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
+//Password encryption tool; npm install cryptr
+var Cryptr = require('cryptr');
+cryptr = new Cryptr('myTotalySecretKey');
 
-//Auto-Generate salt and has for password
-router.post('/', async function(req, res) {
-    bcrypt(req.body.password, saltRounds, function(err, hash){
-        database.Users.create({
-            username: req.body.username,
-            password: hash,
-            Fname: req.body.Fname,
-            Lname: req.body.Lname,
-            email: req.body.email,
-            PhoneNum: req.body.PhoneNum
-        }).then(function(data){
-            if(data){
-                res.redirect('/home'); //Redirects to home page
-            }
-        });
-
+module.exports.register=function(req,res){
+    var encryptedString = cryptr.encrypt(req.body.password);
+    var users={
+        "username":req.body.username,
+        "password":encryptedString,
+        "Fname":req.body.Fname,
+        "Lname":req.body.Lname,
+        "email":req.body.email,
+        "PhoneNum":req.body.PhoneNum
+    }
+    database.query('INSERT INTO users SET ?',users, function (error, results) {
+        if (error) {
+            res.json({
+                status:false,
+                message:'there are some error with query'
+            })
+        }else{
+            res.json({
+                status:true,
+                data:results,
+                message:'user registered sucessfully'
+            })
+        }
     });
 
+
 });
+

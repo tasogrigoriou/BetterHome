@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var registerController = require('./controllers/register');
 
 var app = express();
 app.enable('trust proxy');
@@ -23,6 +24,14 @@ app.use('/example', express.static(path.join(__dirname, 'public')));
 
 app.use('/api/example', apiExampleRouter);
 
+
+app.get('/register.component.html',function(req, res){
+  res.sendFile(__dirname + '/' + "register.component.html");
+})
+
+app.post('/api/register', registerController.register);
+
+app.post('controllers/register', registerController.register);
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
