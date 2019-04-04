@@ -23,15 +23,8 @@ app.use('/about-us', express.static(path.join(__dirname, 'public')));
 app.use('/example', express.static(path.join(__dirname, 'public')));
 
 app.use('/api/example', apiExampleRouter);
+app.use('/api/register',registerController);
 
-
-app.get('/register.component.html',function(req, res){
-  res.sendFile(__dirname + '/' + "register.component.html");
-})
-
-app.post('/api/register', registerController.register);
-
-app.post('controllers/register', registerController.register);
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
