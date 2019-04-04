@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var registerController = require('./controllers/register');
 
 var app = express();
 app.enable('trust proxy');
@@ -22,6 +23,7 @@ app.use('/about-us', express.static(path.join(__dirname, 'public')));
 app.use('/example', express.static(path.join(__dirname, 'public')));
 
 app.use('/api/example', apiExampleRouter);
+app.use('/api/register',registerController);
 
 // error handler
 app.use(function(err, req, res, next) {
