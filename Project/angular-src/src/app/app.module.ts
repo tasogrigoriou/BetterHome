@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import {HomeComponent} from "./home/home.component";
 import {CoreModule} from "./core/core.module";
 
+import {HomeComponent} from "./home/home.component";
 import {PropertyComponent} from "./property/property.component";
 import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
+import { ExampleComponent } from './example/example.component';
+import {AlertComponent} from "./core/components/alert/alert.component";
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -26,9 +28,10 @@ import {
   MatIconModule,
   MatButtonModule,
   MatCardModule,
-  MatFormFieldModule } from '@angular/material';
-
-import { ExampleComponent } from './example/example.component';
+  MatFormFieldModule,
+  MatToolbarModule
+} from '@angular/material';
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -37,7 +40,8 @@ import { ExampleComponent } from './example/example.component';
     PropertyComponent,
     RegisterComponent,
     LoginComponent,
-    ExampleComponent
+    ExampleComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +60,9 @@ import { ExampleComponent } from './example/example.component';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatToolbarModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
