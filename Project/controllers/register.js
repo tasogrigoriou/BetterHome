@@ -1,27 +1,33 @@
 var express = require('express');
 var router = express.Router();
 var database = require('../models/cloudsql');
-
-//Password encryption tool; npm install bcrypt
 const bcrypt = require('bcrypt');
-const saltRounds = 10;
 
-//Auto-Generate salt and has for password
-router.post('/', async function(req, res) {
-    bcrypt(req.body.password, saltRounds, function(err, hash){
-        database.Users.create({
-            username: req.body.username,
-            password: hash,
-            Fname: req.body.Fname,
-            Lname: req.body.Lname,
-            email: req.body.email,
-            PhoneNum: req.body.PhoneNum
-        }).then(function(data){
-            if(data){
-                res.redirect('/home'); //Redirects to home page
+router.post('/', function(req, res) {
+
+    // Auto-Generate salt and hash for password
+    bcrypt.hash(req.body.password, 10, function(err, hash) {
+
+        var sql = `INSERT INTO Users(username, password, firstName, lastName, emailAddress, phoneNumber) VALUES (` +
+            `
+            '${req.body.username}',
+            '${hash}',
+            '${req.body.firstName}',
+            '${req.body.lastName}',
+            '${req.body.emailAddress}',
+            '${req.body.phoneNumber}'
+            )`;
+
+        console.log(sql);
+
+        database.query(sql, function(err, result) {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(result);
+                res.send(result);
             }
-        });
-
+        })
     });
 
 });

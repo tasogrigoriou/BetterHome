@@ -16,10 +16,8 @@ export class RegisterService {
   constructor(private http: HttpClient) { }
 
   /** CRUD function for create **/
-
-
-  post(data): Observable<any> {
-    return this.http.post(apiUrl, data, httpOptions).pipe(
+  registerUser(user: User): Observable<any> {
+    return this.http.post(apiUrl, user, httpOptions).pipe(
       catchError(this.handleError)
     );
   }
@@ -41,7 +39,11 @@ export class RegisterService {
   }
 }
 
-export interface Register {
-  id: string;
-  name: string;
+export class User {
+  username: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+  emailAddress: string;
+  phoneNumber: string;
 }
