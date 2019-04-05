@@ -176,17 +176,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./core/core.module */ "./src/app/core/core.module.ts");
+/* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./core/core.module */ "./src/app/core/core.module.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
 /* harmony import */ var _property_property_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./property/property.component */ "./src/app/property/property.component.ts");
 /* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
 /* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _example_example_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./example/example.component */ "./src/app/example/example.component.ts");
+/* harmony import */ var _example_example_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./example/example.component */ "./src/app/example/example.component.ts");
+/* harmony import */ var _core_components_alert_alert_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./core/components/alert/alert.component */ "./src/app/core/components/alert/alert.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+
+
 
 
 
@@ -210,36 +214,93 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_6__["HomeComponent"],
                 _property_property_component__WEBPACK_IMPORTED_MODULE_7__["PropertyComponent"],
                 _register_register_component__WEBPACK_IMPORTED_MODULE_8__["RegisterComponent"],
                 _login_login_component__WEBPACK_IMPORTED_MODULE_9__["LoginComponent"],
-                _example_example_component__WEBPACK_IMPORTED_MODULE_15__["ExampleComponent"]
+                _example_example_component__WEBPACK_IMPORTED_MODULE_10__["ExampleComponent"],
+                _core_components_alert_alert_component__WEBPACK_IMPORTED_MODULE_11__["AlertComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-                _core_core_module__WEBPACK_IMPORTED_MODULE_6__["CoreModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["BrowserAnimationsModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_11__["NgbModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_12__["FormsModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_12__["ReactiveFormsModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_13__["HttpClientModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatInputModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatTableModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatPaginatorModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatSortModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatProgressSpinnerModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatButtonModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatCardModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatFormFieldModule"]
+                _core_core_module__WEBPACK_IMPORTED_MODULE_5__["CoreModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["BrowserAnimationsModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_13__["NgbModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_14__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_14__["ReactiveFormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_15__["HttpClientModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatPaginatorModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatSortModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatProgressSpinnerModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatIconModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatToolbarModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_17__["FlexLayoutModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/components/alert/alert.component.html":
+/*!************************************************************!*\
+  !*** ./src/app/core/components/alert/alert.component.html ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"message\" [ngClass]=\"\n{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error' }\n\">{{message.text}}</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/core/components/alert/alert.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/core/components/alert/alert.component.ts ***!
+  \**********************************************************/
+/*! exports provided: AlertComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AlertComponent", function() { return AlertComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_alert_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/alert.service */ "./src/app/core/services/alert.service.ts");
+
+
+
+var AlertComponent = /** @class */ (function () {
+    function AlertComponent(alertService) {
+        this.alertService = alertService;
+    }
+    AlertComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.subscription = this.alertService.getMessage().subscribe(function (message) {
+            _this.message = message;
+        });
+    };
+    AlertComponent.prototype.ngOnDestroy = function () {
+        this.subscription.unsubscribe();
+    };
+    AlertComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'alert',
+            template: __webpack_require__(/*! ./alert.component.html */ "./src/app/core/components/alert/alert.component.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_alert_service__WEBPACK_IMPORTED_MODULE_2__["AlertService"]])
+    ], AlertComponent);
+    return AlertComponent;
 }());
 
 
@@ -332,6 +393,70 @@ var CoreModule = /** @class */ (function () {
         })
     ], CoreModule);
     return CoreModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/services/alert.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/core/services/alert.service.ts ***!
+  \************************************************/
+/*! exports provided: AlertService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AlertService", function() { return AlertService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+
+
+
+
+var AlertService = /** @class */ (function () {
+    function AlertService(router) {
+        var _this = this;
+        this.router = router;
+        this.subject = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
+        this.keepAfterNavigationChange = false;
+        // clear alert message on route change
+        router.events.subscribe(function (event) {
+            if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_2__["NavigationStart"]) {
+                if (_this.keepAfterNavigationChange) {
+                    // only keep for a single location change
+                    _this.keepAfterNavigationChange = false;
+                }
+                else {
+                    // clear alert
+                    _this.subject.next();
+                }
+            }
+        });
+    }
+    AlertService.prototype.success = function (message, keepAfterNavigationChange) {
+        if (keepAfterNavigationChange === void 0) { keepAfterNavigationChange = false; }
+        this.keepAfterNavigationChange = keepAfterNavigationChange;
+        this.subject.next({ type: 'success', text: message });
+    };
+    AlertService.prototype.error = function (message, keepAfterNavigationChange) {
+        if (keepAfterNavigationChange === void 0) { keepAfterNavigationChange = false; }
+        this.keepAfterNavigationChange = keepAfterNavigationChange;
+        this.subject.next({ type: 'error', text: message });
+    };
+    AlertService.prototype.getMessage = function () {
+        return this.subject.asObservable();
+    };
+    AlertService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    ], AlertService);
+    return AlertService;
 }());
 
 
@@ -463,6 +588,72 @@ var Member = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/core/services/register.service.ts":
+/*!***************************************************!*\
+  !*** ./src/app/core/services/register.service.ts ***!
+  \***************************************************/
+/*! exports provided: RegisterService, User */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterService", function() { return RegisterService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return User; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]({ 'Content-Type': 'application/json' })
+};
+var apiUrl = '/api/register';
+var RegisterService = /** @class */ (function () {
+    function RegisterService(http) {
+        this.http = http;
+    }
+    /** CRUD function for create **/
+    RegisterService.prototype.registerUser = function (user) {
+        return this.http.post(apiUrl, user, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    };
+    RegisterService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
+    };
+    RegisterService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
+    ], RegisterService);
+    return RegisterService;
+}());
+
+var User = /** @class */ (function () {
+    function User() {
+    }
+    return User;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/example/example.component.css":
 /*!***********************************************!*\
   !*** ./src/app/example/example.component.css ***!
@@ -561,7 +752,7 @@ var ExampleDataSource = /** @class */ (function (_super) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"hero is-info is-fullheight is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"container\">\n      <h1 class=\"title\">Home Page</h1>\n    </div>\n  </div>\n</section>\n"
+module.exports = "<section class=\"hero is-info is-fullheight is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"container\">\n      <h1 class=\"title\">Home Page</h1>\n      <html>\n      <body background=\"blue\">\n      <form action=\"/action_page.php\">\n        Search:<br>\n        <input id=\"search\" type=\"text\" name=\"search\" placeholder=\"Search...\">\n        <br><br>\n        <input type=\"submit\" value=\"Submit\">\n      </form>\n      </body>\n      </html>\n\n    </div>\n  </div>\n</section>\n\n\n\n"
 
 /***/ }),
 
@@ -683,6 +874,17 @@ var PropertyComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/register/register.component.css":
+/*!*************************************************!*\
+  !*** ./src/app/register/register.component.css ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/*.my-card {*/\n  /*margin: 0 auto;*/\n  /*width: 800px;*/\n  /*}*/\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxhQUFhO0VBQ1gsa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNsQixJQUFJIiwiZmlsZSI6InNyYy9hcHAvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qLm15LWNhcmQgeyovXG4gIC8qbWFyZ2luOiAwIGF1dG87Ki9cbiAgLyp3aWR0aDogODAwcHg7Ki9cbi8qfSovXG4iXX0= */"
+
+/***/ }),
+
 /***/ "./src/app/register/register.component.html":
 /*!**************************************************!*\
   !*** ./src/app/register/register.component.html ***!
@@ -690,7 +892,7 @@ var PropertyComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>registerForm</title>\n</head>\n<body>\n  <mat-card>\n     <span>Create New Account</span>\n  </mat-card>\n  <br>\n  <div class=\"container register-form\">\n    <div class=\"form\">\n      <div class=\"note\">\n        <p>Please fill with your details</p>\n      </div>\n\n      <div class=\"form-content\">\n        <div class=\"row\">\n          <div class=\"col-md-6\">\n            <div class=\"form-group\">\n              <input type=\"text\" class=\"form-control\" placeholder=\"Username \" value=\"\"/>\n            </div>\n            <div class=\"form-group\">\n              <input type=\"text\" class=\"form-control\" placeholder=\"Your Email \" value=\"\"/>\n            </div>\n          </div>\n          <div class=\"col-md-6\">\n            <div class=\"form-group\">\n              <input type=\"text\" class=\"form-control\" placeholder=\"Your Password \" value=\"\"/>\n            </div>\n            <div class=\"form-group\">\n              <input type=\"text\" class=\"form-control\" placeholder=\"Confirm Password \" value=\"\"/>\n            </div>\n          </div>\n        </div>\n        <button type=\"button\" class=\"btnSubmit\">Submit</button>\n      </div>\n    </div>\n  </div>\n</body>\n</html>\n\n"
+module.exports = "<mat-toolbar>\n  <span>Registration</span>\n</mat-toolbar>\n<mat-card class=\"my-card\">\n  <mat-card-content>\n\n      <!--FORM FIELDS HERE-->\n    <div fxLayout=\"column\" fxLayoutAlign=\"center\">\n      <mat-form-field class=\"full-width\">\n        <mat-label>First Name</mat-label>\n        <input matInput placeholder=\"First name\" [(ngModel)]=\"user.firstName\" name=\"firstName\" required><br>\n      </mat-form-field>\n      <mat-form-field class=\"full-width\">\n        <mat-label>Last Name</mat-label>\n        <input matInput placeholder=\"Last name\" [(ngModel)]=\"user.lastName\" name=\"lastName\" required>\n      </mat-form-field>\n      <mat-form-field class=\"full-width\">\n        <mat-label>Username</mat-label>\n        <input matInput placeholder=\"Username\" [(ngModel)]=\"user.username\" name=\"username\" required>\n      </mat-form-field>\n      <mat-form-field class=\"full-width\">\n        <mat-label>Password</mat-label>\n        <input matInput placeholder=\"Password\" [(ngModel)]=\"user.password\" name=\"password\" required>\n      </mat-form-field>\n      <mat-form-field class=\"full-width\">\n        <mat-label>Email Address</mat-label>\n        <input matInput placeholder=\"Email address\" [(ngModel)]=\"user.emailAddress\" name=\"emailAddress\" required>\n      </mat-form-field>\n      <mat-form-field class=\"full-width\">\n        <mat-label>Phone Number</mat-label>\n        <input matInput placeholder=\"Phone number\" [(ngModel)]=\"user.phoneNumber\" name=\"phoneNumber\" required>\n      </mat-form-field>\n    </div>\n\n  </mat-card-content>\n  <mat-card-actions>\n\n    <!-- REGISTER BUTTON -->\n    <button mat-raised-button (click)=\"onSubmit()\" color=\"primary\">Register</button>\n\n  </mat-card-actions>\n</mat-card>\n"
 
 /***/ }),
 
@@ -706,18 +908,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterComponent", function() { return RegisterComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _core_services_register_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/services/register.service */ "./src/app/core/services/register.service.ts");
+/* harmony import */ var _core_services_alert_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../core/services/alert.service */ "./src/app/core/services/alert.service.ts");
+
+
+
+
 
 
 var RegisterComponent = /** @class */ (function () {
-    function RegisterComponent() {
+    function RegisterComponent(router, registerService, alertService) {
+        this.router = router;
+        this.registerService = registerService;
+        this.alertService = alertService;
     }
-    RegisterComponent.prototype.ngOnInit = function () { };
+    RegisterComponent.prototype.ngOnInit = function () {
+        this.user = new _core_services_register_service__WEBPACK_IMPORTED_MODULE_4__["User"]();
+    };
+    RegisterComponent.prototype.onSubmit = function () {
+        var _this = this;
+        this.registerService.registerUser(this.user)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])())
+            .subscribe(function (data) {
+            console.log('successful!');
+            _this.alertService.success('Registration successful', true);
+            _this.router.navigate(['/']);
+        }, function (error) {
+            _this.alertService.error(error);
+        });
+    };
     RegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-property',
-            template: __webpack_require__(/*! ./register.component.html */ "./src/app/register/register.component.html")
+            template: __webpack_require__(/*! ./register.component.html */ "./src/app/register/register.component.html"),
+            styles: [__webpack_require__(/*! ./register.component.css */ "./src/app/register/register.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _core_services_register_service__WEBPACK_IMPORTED_MODULE_4__["RegisterService"],
+            _core_services_alert_service__WEBPACK_IMPORTED_MODULE_5__["AlertService"]])
     ], RegisterComponent);
     return RegisterComponent;
 }());

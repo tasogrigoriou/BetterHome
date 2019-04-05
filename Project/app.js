@@ -21,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/about-us', express.static(path.join(__dirname, 'public')));
 app.use('/example', express.static(path.join(__dirname, 'public')));
+app.use('/register', express.static(path.join(__dirname, 'public')));
 
 app.use('/api/example', apiExampleRouter);
 app.use('/api/register',registerController);
