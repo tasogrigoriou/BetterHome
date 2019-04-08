@@ -12,6 +12,7 @@ import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
 import { ExampleComponent } from './example/example.component';
 import {AlertComponent} from "./core/components/alert/alert.component";
+import {UploadComponent} from "./core/components/upload/upload.component";
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -31,7 +32,16 @@ import {
   MatFormFieldModule,
   MatToolbarModule
 } from '@angular/material';
-import {FlexLayoutModule} from "@angular/flex-layout";
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatFileUploadModule} from "angular-material-fileupload";
+
+import { CovalentLayoutModule } from '@covalent/core/layout';
+import { CovalentStepsModule  } from '@covalent/core/steps';
+import { CovalentHttpModule } from '@covalent/http';
+import { CovalentHighlightModule } from '@covalent/highlight';
+import { CovalentMarkdownModule } from '@covalent/markdown';
+import { CovalentDynamicFormsModule } from '@covalent/dynamic-forms';
+import {CovalentFileModule} from "@covalent/core";
 
 @NgModule({
   declarations: [
@@ -41,7 +51,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     RegisterComponent,
     LoginComponent,
     ExampleComponent,
-    AlertComponent
+    AlertComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +63,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
@@ -62,7 +74,17 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MatCardModule,
     MatFormFieldModule,
     MatToolbarModule,
-    FlexLayoutModule
+
+    FlexLayoutModule,
+    MatFileUploadModule,
+    CovalentLayoutModule,
+    CovalentStepsModule,
+    // (optional) Additional Covalent Modules imports
+    CovalentHttpModule.forRoot(),
+    CovalentHighlightModule,
+    CovalentMarkdownModule,
+    CovalentDynamicFormsModule,
+    CovalentFileModule
   ],
   providers: [],
   bootstrap: [AppComponent]

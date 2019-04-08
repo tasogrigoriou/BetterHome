@@ -1,3 +1,5 @@
+<!--Material Design Table Example-->
+
 <div class="button-row">
   <a mat-raised-button color="primary" [routerLink]="['/example-create']"><mat-icon>add</mat-icon></a>
 </div>
@@ -24,3 +26,8 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 </div>
+
+
+<!--Image upload child component example-->
+
+<upload-component [listingId]="listingId"></upload-component>
