@@ -1,11 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Property</title>
-</head>
-<body>
-  <p>Property List</p>
-   <p>For Sale</p>
-</body>
-</html>
+<mat-toolbar>
+
+    <span>Property Listings</span>
+
+</mat-toolbar>
+<P>
+</P>
+<button mat-raised-button>Back to Search</button> <label>Number</label> results found
+
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        <mat-checkbox>For Sell</mat-checkbox>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <mat-checkbox>For rent</mat-checkbox>
+      </mat-list-item>
+      <mat-list-item role="listitem">Price range</mat-list-item>
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+          <mat-checkbox>Under $100k</mat-checkbox>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <mat-checkbox>$100k to $200k</mat-checkbox>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <mat-checkbox>Over $200k</mat-checkbox>
+        </mat-list-item>
+      </mat-list>
+      <mat-list-item role="listitem">Bed Rooms</mat-list-item>
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+          <mat-checkbox>1+</mat-checkbox>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <mat-checkbox>2+</mat-checkbox>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <mat-checkbox>3+</mat-checkbox>
+        </mat-list-item>
+      </mat-list>
+      <mat-list-item role="listitem">Property Type</mat-list-item>
+      <mat-list role="list">
+        <mat-list-item role="listitem"> <mat-checkbox>House</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem"> <mat-checkbox>Apartment</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem"> <mat-checkbox>TownHall</mat-checkbox></mat-list-item>
+      </mat-list>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-tile>listing 1</mat-grid-tile>
+      <mat-grid-tile>2</mat-grid-tile>
+      <mat-grid-tile>3</mat-grid-tile>
+      <mat-grid-tile>4</mat-grid-tile>
+      <mat-grid-tile>5</mat-grid-tile>
+      <mat-grid-tile>6</mat-grid-tile>
+      <mat-grid-tile>7</mat-grid-tile>
+      <mat-grid-tile>8</mat-grid-tile>
+    </mat-grid-list>
+
+
+  </mat-drawer-content>
+</mat-drawer-container>
+
