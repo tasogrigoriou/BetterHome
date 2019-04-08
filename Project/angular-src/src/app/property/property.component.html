@@ -5,40 +5,43 @@
 </mat-toolbar>
 <P>
 </P>
-<button mat-raised-button>Back to Search</button> <label>Number</label> results found
+<div>
+  <div class="example-button-row">
+    <button mat-raised-button>Back to Search</button>
+  <!--</div>-->
+  <!--<div class="sort-button-row">-->
+
+    Sort By : <button mat-raised-button [matMenuTriggerFor]="menu">Relevance</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Price:low to high</button>
+      <button mat-menu-item>Price:high to low</button>
+      <button mat-menu-item>Newest</button>
+    </mat-menu>
+  </div>
+</div>
+<div class = "space">
+  Showing 1 - 8 of {{numberOfResult}} results.
+</div>
+
+
+
 
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened>
     <mat-list role="list">
-      <mat-list-item role="listitem">
-        <mat-checkbox>For Sell</mat-checkbox>
-      </mat-list-item>
-      <mat-list-item role="listitem">
-        <mat-checkbox>For rent</mat-checkbox>
-      </mat-list-item>
+      <mat-list-item role="listitem"><mat-checkbox>For Sell</mat-checkbox></mat-list-item>
+      <mat-list-item role="listitem"><mat-checkbox>For rent</mat-checkbox></mat-list-item>
       <mat-list-item role="listitem">Price range</mat-list-item>
       <mat-list role="list">
-        <mat-list-item role="listitem">
-          <mat-checkbox>Under $100k</mat-checkbox>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-          <mat-checkbox>$100k to $200k</mat-checkbox>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-          <mat-checkbox>Over $200k</mat-checkbox>
-        </mat-list-item>
+        <mat-list-item role="listitem"><mat-checkbox>Under $100k</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem"><mat-checkbox>$100k to $200k</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem"><mat-checkbox>Over $200k</mat-checkbox></mat-list-item>
       </mat-list>
       <mat-list-item role="listitem">Bed Rooms</mat-list-item>
       <mat-list role="list">
-        <mat-list-item role="listitem">
-          <mat-checkbox>1+</mat-checkbox>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-          <mat-checkbox>2+</mat-checkbox>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-          <mat-checkbox>3+</mat-checkbox>
-        </mat-list-item>
+        <mat-list-item role="listitem"><mat-checkbox>1+</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem"><mat-checkbox>2+</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem"><mat-checkbox>3+</mat-checkbox></mat-list-item>
       </mat-list>
       <mat-list-item role="listitem">Property Type</mat-list-item>
       <mat-list role="list">

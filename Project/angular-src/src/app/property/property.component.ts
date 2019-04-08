@@ -9,7 +9,7 @@ import {Component} from '@angular/core';
   styleUrls: ['./property.component.css'],
 })
 export class PropertyComponent {
-
+ numberOfResult=10000;
 }
 
 
