@@ -8,25 +8,38 @@ export class ListingsService {
   getListings(){
      return[
        this.exampleListing1,
-       this.exampleListing2
+       this.exampleListing2,
+       this.exampleListing3,
+       this.exampleListing4
+
 
      ];
   }
-  public exampleListing1 = new ListingInfo(
-    '1 4th st',
+  public exampleListing1 = new Listing(
+    '1 4th St',
     ' San Francisco',
     'California'
   );
-  private exampleListing2 = new ListingInfo(
-    '1 8th Ave',
-    ' New York city',
+  public exampleListing2 = new Listing(
+    '3 8th Ave',
+    ' New York City',
     'New York'
+  );
+  public exampleListing3 = new Listing(
+    '2 Wall St',
+    ' New York City',
+    'New York'
+  );
+  public exampleListing4 = new Listing(
+    '4 Lombard St',
+    ' San Francisco',
+    'California'
   );
 
 
 
 }
-export class ListingInfo {
+export class Listing {
   public listingAddress: string;
   public listingCity: string;
   public listingState: string;

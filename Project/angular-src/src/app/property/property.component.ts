@@ -1,42 +1,27 @@
-import {Component, NgModule, OnInit} from '@angular/core';
-import {ListingInfo, ListingsService} from "../core/services/listings.service";
-import {ActivatedRoute} from "@angular/router";
-import { AppRoutingModule } from './property-routing';
-import {CommonModule} from "@angular/common";
+import {Component, OnInit} from '@angular/core';
+import {ListingsService} from "../core/services/listings.service";
+
+
 
 @Component({
   selector: 'app-property',
   templateUrl: './property.component.html',
-  styleUrls: ['./property.component.css'],
-})
-@NgModule({
-  imports: [
-    CommonModule,
-    AppRoutingModule]
+  styleUrls: ['./property.component.css']
 })
 
+
 export class PropertyComponent implements OnInit{
-  numberOfResult=10000;
-  listingInfo:ListingInfo
+  numberOfResult
   listings
   constructor(
     private listingsService: ListingsService,
-    private route: ActivatedRoute) {}
+    ) {}
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      this.listingInfo = new ListingInfo(params['listingAddress'], params['listingCity'], params['listingState']);
-    });
     this.listings= this.listingsService.getListings();
+    this.numberOfResult = this.listings.length;
   }
 }
-//common out the above class  and use the  following class to see the listing/result page that w/o implement variables
-// export class PropertyComponent implements OnInit{
-//   numberOfResult=10000;
-//   ngOnInit() {
-//
-//   }
-//
-// }
+
 
 
 

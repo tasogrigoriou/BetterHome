@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {PropertyComponent} from "./property.component";
+import {PropertySingleComponent} from "./property-single.component";
 
 const routes: Routes = [
   { path: '', component: PropertyComponent },
-  { path: 'listings.listingAddress', component: PropertyComponent }
+  { path: ':listings.listingAddress', component: PropertySingleComponent }
 ];
 
 @NgModule({
@@ -13,4 +14,4 @@ const routes: Routes = [
   exports: [ RouterModule ]
 
 })
-export class AppRoutingModule { }
+export class PropertyRoutingModule { }
