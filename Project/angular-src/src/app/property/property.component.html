@@ -53,7 +53,14 @@
   </mat-drawer>
   <mat-drawer-content>
     <mat-grid-list cols="2" rowHeight="2:1">
-      <mat-grid-tile>listing 1</mat-grid-tile>
+      <mat-grid-tile>
+        <div class="card" *ngIf="listings">
+          <P>{{ listings.listingAddress }}</P>
+          <p>{{ listings.listingCity }}</p>
+          <p>{{ listings.listingState }}</p>
+        </div>
+
+      </mat-grid-tile>
       <mat-grid-tile>2</mat-grid-tile>
       <mat-grid-tile>3</mat-grid-tile>
       <mat-grid-tile>4</mat-grid-tile>
