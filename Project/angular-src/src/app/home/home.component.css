@@ -1,15 +1,25 @@
-
-.example-container {
+.main-div {
   display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 1;
-  padding: 30px 50px;
-  border: 1px solid #e1dddd;
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
-  background-color: powderblue;
+  justify-content: center;
+  align-items: center;
 }
 
-.example-container > * {
-  width: 100%;
+.cont-form {
+  margin-right: 20px;
+}
+
+.cont-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cont-input {
+  width: 275px;
+  margin-right: 20px;
+}
+
+.cont-button {
+  margin-right: 10px;
 }
