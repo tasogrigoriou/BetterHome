@@ -18,9 +18,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 import {
+
+  MatSidenavModule,
+  MatListModule,
   MatInputModule,
   MatPaginatorModule,
   MatProgressSpinnerModule,
@@ -47,6 +53,9 @@ import {PropertySingleListingComponent} from "./property/property.singleListing.
     PropertySingleListingComponent
   ],
   imports: [
+    MatMenuModule,
+    MatGridListModule,
+    MatCheckboxModule,
     BrowserModule,
     AppRoutingModule,
     CoreModule,
@@ -55,6 +64,8 @@ import {PropertySingleListingComponent} from "./property/property.singleListing.
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatSidenavModule,
+    MatListModule,
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,

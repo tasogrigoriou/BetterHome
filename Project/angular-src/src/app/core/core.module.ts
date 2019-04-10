@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { MembersService } from './services/members.service';
 import {HeaderComponent} from "./components/header/header.component";
+import {ListingsService} from "./services/listings.service";
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import {HeaderComponent} from "./components/header/header.component";
     RouterModule
   ],
   providers: [
-    MembersService
+    MembersService,
+    ListingsService
   ],
   declarations: [
     HeaderComponent
