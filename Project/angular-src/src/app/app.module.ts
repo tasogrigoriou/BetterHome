@@ -9,6 +9,7 @@ import {CoreModule} from "./core/core.module";
 import {HomeComponent} from "./home/home.component";
 import {PropertyComponent} from "./property/property.component";
 import {RegisterComponent} from "./register/register.component";
+import {RegisterDialog} from "./register/register.dialog";
 import {LoginComponent} from "./login/login.component";
 import { ExampleComponent } from './example/example.component';
 import {AlertComponent} from "./core/components/alert/alert.component";
@@ -19,8 +20,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatMenuModule} from '@angular/material/menu';
 
 import {
+
+  MatSidenavModule,
+  MatListModule,
   MatInputModule,
   MatPaginatorModule,
   MatProgressSpinnerModule,
@@ -32,7 +39,8 @@ import {
   MatFormFieldModule,
   MatToolbarModule
 } from '@angular/material';
-import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatDialogModule} from '@angular/material/dialog';
+import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatFileUploadModule} from "angular-material-fileupload";
 
 import { CovalentLayoutModule } from '@covalent/core/layout';
@@ -49,12 +57,19 @@ import {CovalentFileModule} from "@covalent/core";
     HomeComponent,
     PropertyComponent,
     RegisterComponent,
+    RegisterDialog,
     LoginComponent,
     ExampleComponent,
     AlertComponent,
     UploadComponent
   ],
+  entryComponents: [
+    RegisterDialog
+  ],
   imports: [
+    MatMenuModule,
+    MatGridListModule,
+    MatCheckboxModule,
     BrowserModule,
     AppRoutingModule,
     CoreModule,
@@ -64,6 +79,8 @@ import {CovalentFileModule} from "@covalent/core";
     ReactiveFormsModule,
     HttpClientModule,
 
+    MatSidenavModule,
+    MatListModule,
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
@@ -85,6 +102,8 @@ import {CovalentFileModule} from "@covalent/core";
     CovalentMarkdownModule,
     CovalentDynamicFormsModule,
     CovalentFileModule
+    MatDialogModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

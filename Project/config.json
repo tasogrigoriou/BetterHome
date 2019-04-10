@@ -12,5 +12,5 @@
   "DB_PASS": "better-home-db-pw",
   "DB_INSTANCE_NAME": "better-home-db",
 
-  "NODE_ENV": "local"
+  "NODE_ENV": "prod"
 }

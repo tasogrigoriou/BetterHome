@@ -7,6 +7,7 @@ const logger = require('morgan');
 const apiRegisterRouter = require('./controllers/register');
 const apiExampleRouter = require('./controllers/example');
 const apiUploadRouter = require('./controllers/upload');
+var apiLoginRouter = require('./controllers/login');
 
 const app = express();
 app.enable('trust proxy');
@@ -23,9 +24,11 @@ app.use(express.static(path.join(__dirname, 'images')));
 app.use('/about-us', express.static(path.join(__dirname, 'public')));
 app.use('/example', express.static(path.join(__dirname, 'public')));
 app.use('/register', express.static(path.join(__dirname, 'public')));
+app.use('/login', express.static(path.join(__dirname, 'public')));
 
 app.use('/api/example', apiExampleRouter);
 app.use('/api/register',apiRegisterRouter);
+app.use('/api/login', apiLoginRouter);
 app.use('/api/upload', apiUploadRouter);
 
 app.use(function(err, req, res) {
