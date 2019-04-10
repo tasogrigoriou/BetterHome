@@ -17,20 +17,15 @@
     <button class="w3-button w3-light-grey" onclick="plusDivs(-1)" mat-button>❮ Prev</button>
     <button class="w3-button w3-light-grey" onclick="plusDivs(1)" mat-button>Next ❯</button>
   </div>
-  <button class="w3-button previewButton" onclick="currentDiv(1)" mat-button>1</button>
-  <button class="w3-button previewButton" onclick="currentDiv(2)" mat-button>2</button>
-  <button class="w3-button previewButton" onclick="currentDiv(3)" mat-button>3</button>
 </div>
 
 <!--  -->
-<div class="propertyOverview" >
+<div class="propertyOverview" *ngFor="let listing of listings; let i = index" >
   <h2>Overview</h2>
   <hr width="50%" size="8">
-  <p><i class="fa fa-dollar fa-fw w3-margin-right w3-large "></i> For <var id="listingForSaleOrRent"><!-- display sale or rent -->rent</var> $
-                                                                      <var id="listingPrice"><!-- display listing price  -->x,xxx</var></p>
-  <p><i class="fa fa-bath fa-fw w3-margin-right w3-large "></i> <var id="listingNumberOfBedrooms"><!-- display number of bedrooms  -->#</var> bed,
-                                                                <var id="listingNumberOfBathrooms"><!-- display number of bathrooms -->#</var> bath</p>
-  <p><i class="fa fa-map-marker fa-fw w3-margin-right w3-large "></i> <var id="listingAddress"> address</var></p>
+  <p><i class="fa fa-dollar fa-fw w3-margin-right w3-large "></i> For {{ listing.listingRentOrSale }} ${{ listing.listingPrice }}</p>
+  <p><i class="fa fa-bath fa-fw w3-margin-right w3-large "></i> {{ listing.listingNumberOfBedrooms }} bed, {{ listing.listingNumberOfBathrooms }} bath</p>
+  <p><i class="fa fa-map-marker fa-fw w3-margin-right w3-large "></i> {{ listing.listingAddress }}{{ listing.listingCity }} {{ listing.listingState }}</p>
   <h2>Contact</h2>
   <p><i class="fa fa-phone fa-fw w3-margin-right w3-large "></i> <var id="listingPhoneNumber">(xxx)xxx-xxxx</var></p>
   <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large "></i> <var id="listingEmail"> sendhelp@mailboyz.gov</var></p>

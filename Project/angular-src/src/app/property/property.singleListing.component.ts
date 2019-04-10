@@ -1,14 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import {ListingsService, Listing} from "../core/services/listings.service";
+import {PropertyComponent} from "./property.component";
+import {RegisterService} from "../core/services/register.service";
 
 @Component({
-  selector: '',
+  selector: 'app-property',
   templateUrl: './property.singleListing.component.html',
-  //styles: []
   styleUrls: ['./property.singleListing.component.css']
 })
 export class PropertySingleListingComponent implements OnInit {
-  constructor() {}
+  listings
 
-  ngOnInit() {}
+  constructor(
+    private router: Router,
+    private listingsService: ListingsService) { }
+
+
+  ngOnInit() {
+    this.listings= this.listingsService.getListings();
+  }
 
 }
