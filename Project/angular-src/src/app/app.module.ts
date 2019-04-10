@@ -33,6 +33,7 @@ import {
   MatToolbarModule
 } from '@angular/material';
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {PropertySingleListingComponent} from "./property/property.singleListing.component";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     RegisterComponent,
     LoginComponent,
     ExampleComponent,
-    AlertComponent
+    AlertComponent,
+    PropertySingleListingComponent
   ],
   imports: [
     BrowserModule,

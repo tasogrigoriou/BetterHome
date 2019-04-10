@@ -5,6 +5,8 @@ import {PropertyComponent} from "./property/property.component";
 import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
 import {ExampleComponent} from "./example/example.component";
+import {SinglePropOffsetValues} from "@angular/core/src/render3/interfaces/styling";
+import {PropertySingleListingComponent} from "./property/property.singleListing.component";
 
 const routes: Routes = [
   {
@@ -18,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'property',
-    component: PropertyComponent
+    component: PropertySingleListingComponent
   },
   {
     path: 'register',
