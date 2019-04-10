@@ -19,8 +19,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatMenuModule} from '@angular/material/menu';
 
 import {
+
+  MatSidenavModule,
+  MatListModule,
   MatInputModule,
   MatPaginatorModule,
   MatProgressSpinnerModule,
@@ -50,6 +56,9 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     RegisterDialog
   ],
   imports: [
+    MatMenuModule,
+    MatGridListModule,
+    MatCheckboxModule,
     BrowserModule,
     AppRoutingModule,
     CoreModule,
@@ -58,6 +67,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatSidenavModule,
+    MatListModule,
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
