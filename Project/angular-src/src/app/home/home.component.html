@@ -2,20 +2,48 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title">Home Page</h1>
-      <html>
-      <body background="blue">
-      <form action="/action_page.php">
-        Search:<br>
-        <input id="search" type="text" name="search" placeholder="Search...">
-        <br><br>
-        <input type="submit" value="Submit">
-      </form>
-      </body>
-      </html>
+<div class="example-container">
+
+  <mat-form-field>
+    <input matInput placeholder="Ciy" [(ngModel)]="currentValue">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Select Catagories</mat-label>
+    <mat-select value ="selected">
+      <mat-option>All Catagoties</mat-option>
+      <mat-option value="option1"> Apartment</mat-option>
+      <mat-option value="option2">House</mat-option>
+      <mat-option value="option3">Town House</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Select Bedrooms</mat-label>
+    <mat-select value ="selected">
+      <mat-option>All</mat-option>
+      <mat-option value="option1">1 Bed</mat-option>
+      <mat-option value="option2">2 Beds</mat-option>
+      <mat-option value="option3">3 Beds</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Select Bathrooms</mat-label>
+    <mat-select value ="selected">
+      <mat-option>All</mat-option>
+      <mat-option value="option1"> 1 </mat-option>
+      <mat-option value="option2"> 2 </mat-option>
+      <mat-option value="option3"> 3 </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="example-search">
+    <button mat-raised-button="primary">Search</button>
+  </div>
+
+</div>
 
     </div>
   </div>
 </section>
-
-
-

@@ -1,0 +1,15 @@
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  padding: 30px 50px;
+  border: 1px solid #e1dddd;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+  background-color: powderblue;
+}
+
+.example-container > * {
+  width: 100%;
+}

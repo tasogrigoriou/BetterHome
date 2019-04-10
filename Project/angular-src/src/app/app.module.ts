@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatSelectModule} from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -62,6 +63,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MatCardModule,
     MatFormFieldModule,
     MatToolbarModule,
+    MatSelectModule,
     FlexLayoutModule
   ],
   providers: [],
