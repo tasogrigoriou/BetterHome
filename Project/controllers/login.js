@@ -1,30 +1,30 @@
-var express = require('express');
-var router = express.Router();
-var database = require('../models/cloudsql');
-
-//Password encryption tool; npm install bcrypt
+const express = require('express');
+const router = express.Router();
+const database = require('../models/cloudsql');
 const bcrypt = require('bcrypt');
-const saltRounds = 10;
 
-router.post('/', async function(req, res) {
-    database.Users.findOne({
-        where: {
-            email: req.body.email
+router.post('/', function (req, res) {
+    let sql = `SELECT * from Users WHERE username = '${req.body.username}'`;
+    database.query(sql, function(err, dbResponse) {
+        if (err) {
+            res.status(err.status || 500).send(err.message);
         }
-    }).then(function(user) {
-        if(!user){
-            res.redirect('/');
-        }else{
-            bcrypt.compare(req.body.password, user.password, function(err, result){
-                if(result == true){
-                    console.log("Logged in!")
-                    res.redirect('/home');
-                }else{
-                    res.send('Incorrect Password');
-                    res.redirect('/');
+        else if (!dbResponse.length) {
+            res.status(500).send("No entries match query");
+        }
+        else {
+            const user = dbResponse[0];
+            bcrypt.compare(req.body.password, user.password, function(err, bcryptRes) {
+                if (bcryptRes) {
+                    console.log(user);
+                    res.send(user);
+                }
+                else {
+                    res.status(500).send("Unable to login");
                 }
             });
         }
     });
-
 });
+
+module.exports = router;
