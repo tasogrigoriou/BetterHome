@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-import {RegisterService, User} from "../core/services/register.service";
-import {AlertService} from "../core/services/alert.service";
+import {RegisterService, RegisterUser} from "../core/services/register.service";
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {RegisterDialog} from "./register.dialog";
 
 @Component({
   selector: 'app-property',
@@ -10,28 +12,61 @@ import {AlertService} from "../core/services/alert.service";
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  user: User;
+  user: RegisterUser;
 
-  constructor(
-    private router: Router,
-    private registerService: RegisterService,
-    private alertService: AlertService) { }
+  isLoaded = true;
+
+  constructor(private router: Router,
+              private registerService: RegisterService,
+              public dialog: MatDialog) { }
 
   ngOnInit() {
-    this.user = new User();
+    this.user = new RegisterUser();
   }
 
   onSubmit() {
-    this.registerService.registerUser(this.user)
-      .pipe(first())
-      .subscribe(
-        data => {
-          console.log('successful!');
-          this.alertService.success('Registration successful', true);
-          this.router.navigate(['/']);
-        },
-        error => {
-          this.alertService.error(error);
-        });
+    if (this.isDataProvided()) {
+      this.isLoaded = false;
+      this.registerService.registerUser(this.user)
+        .pipe(first())
+        .subscribe(data => {
+            this.isLoaded = true;
+            this.openDialog('Registration successful!', true);
+          },
+          error => {
+            this.isLoaded = true;
+            this.openDialog('Username is already taken. Please choose another username', false);
+          });
+    }
+    else {
+      this.openDialog('Please enter input for all required fields', false);
+    }
+  }
+
+  isDataProvided(): boolean {
+    return (!this.isEmpty(this.user.username) &&
+      !this.isEmpty(this.user.password) &&
+      !this.isEmpty(this.user.firstName) &&
+      !this.isEmpty(this.user.lastName) &&
+      !this.isEmpty(this.user.emailAddress) &&
+      !this.isEmpty(this.user.phoneNumber));
+  }
+
+  isEmpty(str: string): boolean {
+    return (!str || 0 === str.length);
+  }
+
+  openDialog(message: string, subscribe: boolean) {
+    const dialogRef = this.dialog.open(RegisterDialog, {
+      width: '250px',
+      data: {
+        message: message
+      }
+    });
+    if (subscribe) {
+      dialogRef.afterClosed().subscribe(result => {
+        this.router.navigate(['/login']);
+      });
+    }
   }
 }
