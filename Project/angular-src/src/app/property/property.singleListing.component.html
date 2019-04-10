@@ -1,14 +1,11 @@
 <html>
-<title>W3.CSS</title>
+<title>Individual Listing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body class="body">
 
-
-
-
-<div class="w3-content" style="max-width:800px">
+<div class="previewPhotos" style="max-width:800px">
   <img class="mySlides" src="img_nature_wide.jpg" style="width:100%">
   <img class="mySlides" src="img_snow_wide.jpg" style="width:100%">
   <img class="mySlides" src="img_mountains_wide.jpg" style="width:100%">
@@ -20,9 +17,9 @@
     <button class="w3-button w3-light-grey" onclick="plusDivs(-1)" mat-button>❮ Prev</button>
     <button class="w3-button w3-light-grey" onclick="plusDivs(1)" mat-button>Next ❯</button>
   </div>
-  <button class="w3-button demo" onclick="currentDiv(1)" mat-button>1</button>
-  <button class="w3-button demo" onclick="currentDiv(2)" mat-button>2</button>
-  <button class="w3-button demo" onclick="currentDiv(3)" mat-button>3</button>
+  <button class="w3-button previewButton" onclick="currentDiv(1)" mat-button>1</button>
+  <button class="w3-button previewButton" onclick="currentDiv(2)" mat-button>2</button>
+  <button class="w3-button previewButton" onclick="currentDiv(3)" mat-button>3</button>
 </div>
 
 <!--  -->
@@ -56,7 +53,7 @@
   function showDivs(n) {
     var i;
     var x = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
+    var dots = document.getElementsByClassName("previewButton");
     if (n > x.length) {slideIndex = 1}
     if (n < 1) {slideIndex = x.length}
     for (i = 0; i < x.length; i++) {
