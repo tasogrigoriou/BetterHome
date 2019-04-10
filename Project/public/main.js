@@ -184,13 +184,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
 /* harmony import */ var _example_example_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./example/example.component */ "./src/app/example/example.component.ts");
 /* harmony import */ var _core_components_alert_alert_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./core/components/alert/alert.component */ "./src/app/core/components/alert/alert.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _core_components_upload_upload_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./core/components/upload/upload.component */ "./src/app/core/components/upload/upload.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
+/* harmony import */ var _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/grid-list */ "./node_modules/@angular/material/esm5/grid-list.es5.js");
+/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@angular/material/esm5/menu.es5.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var angular_material_fileupload__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! angular-material-fileupload */ "./node_modules/angular-material-fileupload/matFileUpload.esm.js");
+/* harmony import */ var _covalent_core_layout__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @covalent/core/layout */ "./node_modules/@covalent/core/fesm5/covalent-core-layout.js");
+/* harmony import */ var _covalent_core_steps__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @covalent/core/steps */ "./node_modules/@covalent/core/fesm5/covalent-core-steps.js");
+/* harmony import */ var _covalent_http__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @covalent/http */ "./node_modules/@covalent/http/fesm5/covalent-http.js");
+/* harmony import */ var _covalent_highlight__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @covalent/highlight */ "./node_modules/@covalent/highlight/fesm5/covalent-highlight.js");
+/* harmony import */ var _covalent_markdown__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @covalent/markdown */ "./node_modules/@covalent/markdown/fesm5/covalent-markdown.js");
+/* harmony import */ var _covalent_dynamic_forms__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @covalent/dynamic-forms */ "./node_modules/@covalent/dynamic-forms/fesm5/covalent-dynamic-forms.js");
+/* harmony import */ var _covalent_core__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @covalent/core */ "./node_modules/@covalent/core/fesm5/covalent-core.js");
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -224,32 +248,48 @@ var AppModule = /** @class */ (function () {
                 _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__["RegisterDialog"],
                 _login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"],
                 _example_example_component__WEBPACK_IMPORTED_MODULE_11__["ExampleComponent"],
-                _core_components_alert_alert_component__WEBPACK_IMPORTED_MODULE_12__["AlertComponent"]
+                _core_components_alert_alert_component__WEBPACK_IMPORTED_MODULE_12__["AlertComponent"],
+                _core_components_upload_upload_component__WEBPACK_IMPORTED_MODULE_13__["UploadComponent"]
             ],
             entryComponents: [
                 _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__["RegisterDialog"]
             ],
             imports: [
+                _angular_material_menu__WEBPACK_IMPORTED_MODULE_20__["MatMenuModule"],
+                _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_19__["MatGridListModule"],
+                _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_18__["MatCheckboxModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                 _core_core_module__WEBPACK_IMPORTED_MODULE_5__["CoreModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__["BrowserAnimationsModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_14__["NgbModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_15__["FormsModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_15__["ReactiveFormsModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_16__["HttpClientModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_17__["MatInputModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_17__["MatTableModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_17__["MatPaginatorModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_17__["MatSortModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_17__["MatProgressSpinnerModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_17__["MatIconModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_17__["MatButtonModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_17__["MatCardModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_17__["MatFormFieldModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_17__["MatToolbarModule"],
-                _angular_material_dialog__WEBPACK_IMPORTED_MODULE_18__["MatDialogModule"],
-                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_19__["FlexLayoutModule"]
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__["NgbModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_16__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ReactiveFormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_17__["HttpClientModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatSidenavModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatListModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatPaginatorModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatSortModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatProgressSpinnerModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatIconModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatToolbarModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_23__["FlexLayoutModule"],
+                angular_material_fileupload__WEBPACK_IMPORTED_MODULE_24__["MatFileUploadModule"],
+                _covalent_core_layout__WEBPACK_IMPORTED_MODULE_25__["CovalentLayoutModule"],
+                _covalent_core_steps__WEBPACK_IMPORTED_MODULE_26__["CovalentStepsModule"],
+                // (optional) Additional Covalent Modules imports
+                _covalent_http__WEBPACK_IMPORTED_MODULE_27__["CovalentHttpModule"].forRoot(),
+                _covalent_highlight__WEBPACK_IMPORTED_MODULE_28__["CovalentHighlightModule"],
+                _covalent_markdown__WEBPACK_IMPORTED_MODULE_29__["CovalentMarkdownModule"],
+                _covalent_dynamic_forms__WEBPACK_IMPORTED_MODULE_30__["CovalentDynamicFormsModule"],
+                _covalent_core__WEBPACK_IMPORTED_MODULE_31__["CovalentFileModule"],
+                _angular_material_dialog__WEBPACK_IMPORTED_MODULE_22__["MatDialogModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_23__["FlexLayoutModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -442,6 +482,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _services_members_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./services/members.service */ "./src/app/core/services/members.service.ts");
 /* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/header/header.component */ "./src/app/core/components/header/header.component.ts");
+/* harmony import */ var _services_listings_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/listings.service */ "./src/app/core/services/listings.service.ts");
+
 
 
 
@@ -458,7 +500,8 @@ var CoreModule = /** @class */ (function () {
                 _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]
             ],
             providers: [
-                _services_members_service__WEBPACK_IMPORTED_MODULE_4__["MembersService"]
+                _services_members_service__WEBPACK_IMPORTED_MODULE_4__["MembersService"],
+                _services_listings_service__WEBPACK_IMPORTED_MODULE_6__["ListingsService"]
             ],
             declarations: [
                 _components_header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"]
@@ -604,6 +647,56 @@ var ExampleService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
     ], ExampleService);
     return ExampleService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/services/listings.service.ts":
+/*!***************************************************!*\
+  !*** ./src/app/core/services/listings.service.ts ***!
+  \***************************************************/
+/*! exports provided: ListingsService, Listing */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListingsService", function() { return ListingsService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Listing", function() { return Listing; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var ListingsService = /** @class */ (function () {
+    function ListingsService() {
+        this.exampleListing1 = new Listing('1 4th St', ' San Francisco', 'California');
+        this.exampleListing2 = new Listing('3 8th Ave', ' New York City', 'New York');
+        this.exampleListing3 = new Listing('2 Wall St', ' New York City', 'New York');
+        this.exampleListing4 = new Listing('4 Lombard St', ' San Francisco', 'California');
+    }
+    ListingsService.prototype.getListings = function () {
+        return [
+            this.exampleListing1,
+            this.exampleListing2,
+            this.exampleListing3,
+            this.exampleListing4
+        ];
+    };
+    ListingsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], ListingsService);
+    return ListingsService;
+}());
+
+var Listing = /** @class */ (function () {
+    function Listing(listingAddress, listingCity, listingState) {
+        this.listingAddress = listingAddress;
+        this.listingCity = listingCity;
+        this.listingState = listingState;
+    }
+    return Listing;
 }());
 
 
@@ -1094,6 +1187,17 @@ var LoginComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/property/property.component.css":
+/*!*************************************************!*\
+  !*** ./src/app/property/property.component.css ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".example-container {\n  width: 1100px;\n  height:940px;\n  margin: 10px;\n  border: 1px none #555;\n}\n\n.example-button-row button {\n  margin-left: 8px;\n  margin-right: 400px;\n  background-color: aliceblue;\n}\n\n.space{margin-left:10px;}\n\nmat-grid-tile {\n  background: lightblue;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvcGVydHkvcHJvcGVydHkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYixZQUFZO0VBQ1osWUFBWTtFQUNaLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixtQkFBbUI7RUFDbkIsMkJBQTJCO0FBQzdCOztBQUVBLE9BQU8sZ0JBQWdCLENBQUM7O0FBR3hCO0VBQ0UscUJBQXFCO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvcHJvcGVydHkvcHJvcGVydHkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5leGFtcGxlLWNvbnRhaW5lciB7XG4gIHdpZHRoOiAxMTAwcHg7XG4gIGhlaWdodDo5NDBweDtcbiAgbWFyZ2luOiAxMHB4O1xuICBib3JkZXI6IDFweCBub25lICM1NTU7XG59XG5cbi5leGFtcGxlLWJ1dHRvbi1yb3cgYnV0dG9uIHtcbiAgbWFyZ2luLWxlZnQ6IDhweDtcbiAgbWFyZ2luLXJpZ2h0OiA0MDBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogYWxpY2VibHVlO1xufVxuXG4uc3BhY2V7bWFyZ2luLWxlZnQ6MTBweDt9XG5cblxubWF0LWdyaWQtdGlsZSB7XG4gIGJhY2tncm91bmQ6IGxpZ2h0Ymx1ZTtcbn1cbiJdfQ== */"
+
+/***/ }),
+
 /***/ "./src/app/property/property.component.html":
 /*!**************************************************!*\
   !*** ./src/app/property/property.component.html ***!
@@ -1101,7 +1205,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Property</title>\n</head>\n<body>\n  <p>Property List</p>\n   <p>For Sale</p>\n</body>\n</html>\n"
+module.exports = "<mat-toolbar>\n\n    <span>Property Listings</span>\n\n</mat-toolbar>\n<P>\n</P>\n<div>\n  <div class=\"example-button-row\">\n    <button mat-raised-button>Back to Search</button>\n\n    Sort By : <button mat-raised-button [matMenuTriggerFor]=\"menu\">Relevance</button>\n    <mat-menu #menu=\"matMenu\">\n      <button mat-menu-item>Price:low to high</button>\n      <button mat-menu-item>Price:high to low</button>\n      <button mat-menu-item>Newest</button>\n    </mat-menu>\n  </div>\n</div>\n<div class = \"space\">\n  Showing 1 - 9 of {{numberOfResult}} results.\n</div>\n\n\n\n\n<mat-drawer-container class=\"example-container\">\n  <mat-drawer mode=\"side\" opened>\n    <mat-list role=\"list\">\n      <mat-list-item role=\"listitem\"><mat-checkbox>For Sell</mat-checkbox></mat-list-item>\n      <mat-list-item role=\"listitem\"><mat-checkbox>For rent</mat-checkbox></mat-list-item>\n      <mat-list-item role=\"listitem\">Price range</mat-list-item>\n      <mat-list role=\"list\">\n        <mat-list-item role=\"listitem\"><mat-checkbox>Under $100k</mat-checkbox></mat-list-item>\n        <mat-list-item role=\"listitem\"><mat-checkbox>$100k to $200k</mat-checkbox></mat-list-item>\n        <mat-list-item role=\"listitem\"><mat-checkbox>Over $200k</mat-checkbox></mat-list-item>\n      </mat-list>\n      <mat-list-item role=\"listitem\">Bed Rooms</mat-list-item>\n      <mat-list role=\"list\">\n        <mat-list-item role=\"listitem\"><mat-checkbox>1+</mat-checkbox></mat-list-item>\n        <mat-list-item role=\"listitem\"><mat-checkbox>2+</mat-checkbox></mat-list-item>\n        <mat-list-item role=\"listitem\"><mat-checkbox>3+</mat-checkbox></mat-list-item>\n      </mat-list>\n      <mat-list-item role=\"listitem\">Property Type</mat-list-item>\n      <mat-list role=\"list\">\n        <mat-list-item role=\"listitem\"> <mat-checkbox>House</mat-checkbox></mat-list-item>\n        <mat-list-item role=\"listitem\"> <mat-checkbox>Apartment</mat-checkbox></mat-list-item>\n        <mat-list-item role=\"listitem\"> <mat-checkbox>TownHouse</mat-checkbox></mat-list-item>\n      </mat-list>\n    </mat-list>\n  </mat-drawer>\n  <mat-drawer-content>\n    <!--<mat-grid-list cols=\"2\" rowHeight=\"2:1\">-->\n      <!--<mat-grid-tile></mat-grid-tile>-->\n      <!--<mat-grid-tile>2</mat-grid-tile>-->\n      <!--<mat-grid-tile>3</mat-grid-tile>-->\n      <!--<mat-grid-tile>4</mat-grid-tile>-->\n      <!--<mat-grid-tile>5</mat-grid-tile>-->\n      <!--<mat-grid-tile>6</mat-grid-tile>-->\n      <!--<mat-grid-tile>7</mat-grid-tile>-->\n      <!--<mat-grid-tile>8</mat-grid-tile>-->\n    <!--</mat-grid-list>-->\n\n    <section class=\"section\">\n      <div class=\"container\">\n        <div class=\"columns is-multiline\">\n          <div class=\"column is-4\" *ngFor=\"let listing of listings\">\n            <div class=\"card\">\n              <div class=\"card-content\">\n                <!--<a [routerLink]=\"[listing.listingAddress]\" skipLocationChange=\"true\" [queryParams]=\"{-->\n            <!--listingAddress: listing.listingAddress,-->\n            <!--listingCity: listing.listingCity,-->\n            <!--listingState: listing.listingState-->\n            <!--}\">{{ listing.listingAddress }}</a>-->\n                <p>{{ listing.listingAddress }}</p>\n                <p>{{ listing.listingCity }}</p>\n                <p>{{ listing.listingState }}</p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n\n  </mat-drawer-content>\n</mat-drawer-container>\n\n"
 
 /***/ }),
 
@@ -1117,18 +1221,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PropertyComponent", function() { return PropertyComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core_services_listings_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/services/listings.service */ "./src/app/core/services/listings.service.ts");
+
 
 
 var PropertyComponent = /** @class */ (function () {
-    function PropertyComponent() {
+    function PropertyComponent(listingsService) {
+        this.listingsService = listingsService;
     }
-    PropertyComponent.prototype.ngOnInit = function () { };
+    PropertyComponent.prototype.ngOnInit = function () {
+        this.listings = this.listingsService.getListings();
+        this.numberOfResult = this.listings.length;
+    };
     PropertyComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-property',
-            template: __webpack_require__(/*! ./property.component.html */ "./src/app/property/property.component.html")
+            template: __webpack_require__(/*! ./property.component.html */ "./src/app/property/property.component.html"),
+            styles: [__webpack_require__(/*! ./property.component.css */ "./src/app/property/property.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_core_services_listings_service__WEBPACK_IMPORTED_MODULE_2__["ListingsService"]])
     ], PropertyComponent);
     return PropertyComponent;
 }());

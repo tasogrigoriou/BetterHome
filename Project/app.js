@@ -7,7 +7,7 @@ const logger = require('morgan');
 const apiRegisterRouter = require('./controllers/register');
 const apiExampleRouter = require('./controllers/example');
 const apiUploadRouter = require('./controllers/upload');
-var apiLoginRouter = require('./controllers/login');
+const apiLoginRouter = require('./controllers/login');
 
 const app = express();
 app.enable('trust proxy');

@@ -101,7 +101,7 @@ import {CovalentFileModule} from "@covalent/core";
     CovalentHighlightModule,
     CovalentMarkdownModule,
     CovalentDynamicFormsModule,
-    CovalentFileModule
+    CovalentFileModule,
     MatDialogModule,
     FlexLayoutModule
   ],
