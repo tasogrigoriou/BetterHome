@@ -18,13 +18,11 @@ router.post('/', function(req, res) {
             '${req.body.phoneNumber}'
             )`;
 
-        console.log(sql);
-
         database.query(sql, function(err, result) {
             if (err) {
-                console.log(err);
-            } else {
-                console.log(result);
+                res.status(err.status || 500).send(err.message);
+            }
+            else {
                 res.send(result);
             }
         })
