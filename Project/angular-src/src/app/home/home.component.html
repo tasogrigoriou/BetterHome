@@ -1,75 +1,50 @@
 <section class="hero is-info is-fullheight is-bold">
   <div class="hero-body">
-    <h1 class="title">Search </h1>
     <div class="container">
-      <!-- Home Search -->
-      <div class="home_search">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="home_search_container">
-                <div class="home_search_content">
-                  <form action="#" class="search_form d-flex flex-row align-items-start justfy-content-start">
-                    <div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
-                      <div>
-                        <select class="search_form_select">
-                          <option disabled selected>For rent </option>
-                          <option>Yes</option>
-                          <option>No</option>
-                        </select>
-                      </div>
-                      <div>
-                        <select class="search_form_select">
-                          <option disabled selected>All types</option>
-                          <option>Apartment</option>
-                          <option>House</option>
-                          <option>Condo</option>
-                          <option>TownHouse</option>
-                        </select>
-                      </div>
-                      <div>
-                        <select class="search_form_select">
-                          <option disabled selected>City</option>
-                          <option>New York</option>
-                          <option>Paris</option>
-                          <option>Amsterdam</option>
-                          <option>Rome</option>
-                        </select>
-                      </div>
-                      <div>
-                        <select class="search_form_select">
-                          <option disabled selected>Bedrooms</option>
-                          <option>Any</option>
-                          <option>Studio</option>
-                          <option>1 Bed</option>
-                          <option>2 Bed</option>
-                          <option>3 Bed</option>
-                          <option>4 Bed</option>
-                        </select>
-                      </div>
-                      <div>
-                        <select class="search_form_select">
-                          <option disabled selected>Bathrooms</option>
-                          <option>1</option>
-                          <option>1.5</option>
-                          <option>2</option>
-                          <option>2.5</option>
-                          <option>3</option>
-                        </select>
-                      </div>
-                    </div>
-                    <button class="search_form_button ml-auto">search</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <h1 class="cont-title">Search Page</h1>
+
+      <div class="main-div">
+        <mat-card>
+
+          <mat-form-field class="cont-form">
+            <mat-label>Select Listing Type</mat-label>
+            <mat-select [(value)]="listingSearch.listingType">
+              <mat-option value="Any">Any</mat-option>
+              <mat-option value="House">House</mat-option>
+              <mat-option value="Apartment">Apartment</mat-option>
+              <mat-option value="Condo">Condo</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="cont-form">
+            <mat-label>Select Bedrooms</mat-label>
+            <mat-select [(value)]="listingSearch.numBedrooms">
+              <mat-option value=0>Any</mat-option>
+              <mat-option value=1>1 Bed</mat-option>
+              <mat-option value=2>2 Beds</mat-option>
+              <mat-option value=3>3 Beds</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="cont-form">
+            <mat-label>Select Bathrooms</mat-label>
+            <mat-select [(value)]="listingSearch.numBathrooms">
+              <mat-option value=0>Any</mat-option>
+              <mat-option value=1>1</mat-option>
+              <mat-option value=2>2</mat-option>
+              <mat-option value=3>3</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="cont-input">
+            <input matInput placeholder="Search by city..." [(ngModel)]="listingSearch.city" required>
+          </mat-form-field>
+
+          <button class="cont-button" mat-raised-button color="primary" (click)="onSearchClick()">Search</button>
+
+        </mat-card>
       </div>
 
     </div>
   </div>
 </section>
-
-
-
