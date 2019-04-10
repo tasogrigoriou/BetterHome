@@ -8,8 +8,6 @@
 <div>
   <div class="example-button-row">
     <button mat-raised-button>Back to Search</button>
-  <!--</div>-->
-  <!--<div class="sort-button-row">-->
 
     Sort By : <button mat-raised-button [matMenuTriggerFor]="menu">Relevance</button>
     <mat-menu #menu="matMenu">
@@ -20,7 +18,7 @@
   </div>
 </div>
 <div class = "space">
-  Showing 1 - 8 of {{numberOfResult}} results.
+  Showing 1 - 9 of {{numberOfResult}} results.
 </div>
 
 
@@ -47,22 +45,42 @@
       <mat-list role="list">
         <mat-list-item role="listitem"> <mat-checkbox>House</mat-checkbox></mat-list-item>
         <mat-list-item role="listitem"> <mat-checkbox>Apartment</mat-checkbox></mat-list-item>
-        <mat-list-item role="listitem"> <mat-checkbox>TownHall</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem"> <mat-checkbox>TownHouse</mat-checkbox></mat-list-item>
       </mat-list>
     </mat-list>
   </mat-drawer>
   <mat-drawer-content>
-    <mat-grid-list cols="2" rowHeight="2:1">
-      <mat-grid-tile>listing 1</mat-grid-tile>
-      <mat-grid-tile>2</mat-grid-tile>
-      <mat-grid-tile>3</mat-grid-tile>
-      <mat-grid-tile>4</mat-grid-tile>
-      <mat-grid-tile>5</mat-grid-tile>
-      <mat-grid-tile>6</mat-grid-tile>
-      <mat-grid-tile>7</mat-grid-tile>
-      <mat-grid-tile>8</mat-grid-tile>
-    </mat-grid-list>
+    <!--<mat-grid-list cols="2" rowHeight="2:1">-->
+      <!--<mat-grid-tile></mat-grid-tile>-->
+      <!--<mat-grid-tile>2</mat-grid-tile>-->
+      <!--<mat-grid-tile>3</mat-grid-tile>-->
+      <!--<mat-grid-tile>4</mat-grid-tile>-->
+      <!--<mat-grid-tile>5</mat-grid-tile>-->
+      <!--<mat-grid-tile>6</mat-grid-tile>-->
+      <!--<mat-grid-tile>7</mat-grid-tile>-->
+      <!--<mat-grid-tile>8</mat-grid-tile>-->
+    <!--</mat-grid-list>-->
 
+    <section class="section">
+      <div class="container">
+        <div class="columns is-multiline">
+          <div class="column is-4" *ngFor="let listing of listings">
+            <div class="card">
+              <div class="card-content">
+                <!--<a [routerLink]="[listing.listingAddress]" skipLocationChange="true" [queryParams]="{-->
+            <!--listingAddress: listing.listingAddress,-->
+            <!--listingCity: listing.listingCity,-->
+            <!--listingState: listing.listingState-->
+            <!--}">{{ listing.listingAddress }}</a>-->
+                <p>{{ listing.listingAddress }}</p>
+                <p>{{ listing.listingCity }}</p>
+                <p>{{ listing.listingState }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </mat-drawer-content>
 </mat-drawer-container>

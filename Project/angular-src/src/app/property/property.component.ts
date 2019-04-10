@@ -1,15 +1,25 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ListingsService} from "../core/services/listings.service";
 
 
 
-/** @title Basic sidenav */
 @Component({
   selector: 'app-property',
   templateUrl: './property.component.html',
-  styleUrls: ['./property.component.css'],
+  styleUrls: ['./property.component.css']
 })
-export class PropertyComponent {
- numberOfResult=10000;
+
+
+export class PropertyComponent implements OnInit{
+  numberOfResult
+  listings
+  constructor(
+    private listingsService: ListingsService,
+    ) {}
+  ngOnInit() {
+    this.listings= this.listingsService.getListings();
+    this.numberOfResult = this.listings.length;
+  }
 }
 
 
