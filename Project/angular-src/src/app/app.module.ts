@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatSelectModule} from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import {CoreModule} from "./core/core.module";
 import {HomeComponent} from "./home/home.component";
 import {PropertyComponent} from "./property/property.component";
 import {RegisterComponent} from "./register/register.component";
+import {RegisterDialog} from "./register/register.dialog";
 import {LoginComponent} from "./login/login.component";
 import { ExampleComponent } from './example/example.component';
 import {AlertComponent} from "./core/components/alert/alert.component";
@@ -18,9 +20,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatMenuModule} from '@angular/material/menu';
 
 import {
+  MatSidenavModule,
+  MatListModule,
   MatInputModule,
   MatPaginatorModule,
   MatProgressSpinnerModule,
@@ -32,7 +38,9 @@ import {
   MatFormFieldModule,
   MatToolbarModule
 } from '@angular/material';
+import {MatDialogModule} from '@angular/material/dialog';
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   declarations: [
@@ -40,11 +48,19 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     HomeComponent,
     PropertyComponent,
     RegisterComponent,
+    RegisterDialog,
     LoginComponent,
     ExampleComponent,
-    AlertComponent
+    AlertComponent,
+    SearchResultsComponent
+  ],
+  entryComponents: [
+    RegisterDialog
   ],
   imports: [
+    MatMenuModule,
+    MatGridListModule,
+    MatCheckboxModule,
     BrowserModule,
     AppRoutingModule,
     CoreModule,
@@ -53,6 +69,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatSidenavModule,
+    MatListModule,
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
@@ -63,6 +81,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MatCardModule,
     MatFormFieldModule,
     MatToolbarModule,
+    MatSelectModule,
+    MatDialogModule,
     FlexLayoutModule
   ],
   providers: [],

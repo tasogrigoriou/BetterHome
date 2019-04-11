@@ -1,11 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Property</title>
-</head>
-<body>
-  <p>Property List</p>
-   <p>For Sale</p>
-</body>
-</html>
+<mat-toolbar>
+
+    <span>Property Listings</span>
+
+</mat-toolbar>
+<P>
+</P>
+<div>
+  <div class="example-button-row">
+    <button mat-raised-button>Back to Search</button>
+
+    Sort By : <button mat-raised-button [matMenuTriggerFor]="menu">Relevance</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Price:low to high</button>
+      <button mat-menu-item>Price:high to low</button>
+      <button mat-menu-item>Newest</button>
+    </mat-menu>
+  </div>
+</div>
+<div class = "space">
+  Showing 1 - 9 of {{numberOfResult}} results.
+</div>
+
+
+
+
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <mat-list role="list">
+      <mat-list-item role="listitem"><mat-checkbox>For Sell</mat-checkbox></mat-list-item>
+      <mat-list-item role="listitem"><mat-checkbox>For rent</mat-checkbox></mat-list-item>
+      <mat-list-item role="listitem">Price range</mat-list-item>
+      <mat-list role="list">
+        <mat-list-item role="listitem"><mat-checkbox>Under $100k</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem"><mat-checkbox>$100k to $200k</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem"><mat-checkbox>Over $200k</mat-checkbox></mat-list-item>
+      </mat-list>
+      <mat-list-item role="listitem">Bed Rooms</mat-list-item>
+      <mat-list role="list">
+        <mat-list-item role="listitem"><mat-checkbox>1+</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem"><mat-checkbox>2+</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem"><mat-checkbox>3+</mat-checkbox></mat-list-item>
+      </mat-list>
+      <mat-list-item role="listitem">Property Type</mat-list-item>
+      <mat-list role="list">
+        <mat-list-item role="listitem"> <mat-checkbox>House</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem"> <mat-checkbox>Apartment</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem"> <mat-checkbox>TownHouse</mat-checkbox></mat-list-item>
+      </mat-list>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <!--<mat-grid-list cols="2" rowHeight="2:1">-->
+      <!--<mat-grid-tile></mat-grid-tile>-->
+      <!--<mat-grid-tile>2</mat-grid-tile>-->
+      <!--<mat-grid-tile>3</mat-grid-tile>-->
+      <!--<mat-grid-tile>4</mat-grid-tile>-->
+      <!--<mat-grid-tile>5</mat-grid-tile>-->
+      <!--<mat-grid-tile>6</mat-grid-tile>-->
+      <!--<mat-grid-tile>7</mat-grid-tile>-->
+      <!--<mat-grid-tile>8</mat-grid-tile>-->
+    <!--</mat-grid-list>-->
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-multiline">
+          <div class="column is-4" *ngFor="let listing of listings">
+            <div class="card">
+              <div class="card-content">
+                <!--<a [routerLink]="[listing.listingAddress]" skipLocationChange="true" [queryParams]="{-->
+            <!--listingAddress: listing.listingAddress,-->
+            <!--listingCity: listing.listingCity,-->
+            <!--listingState: listing.listingState-->
+            <!--}">{{ listing.listingAddress }}</a>-->
+                <p>{{ listing.listingAddress }}</p>
+                <p>{{ listing.listingCity }}</p>
+                <p>{{ listing.listingState }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </mat-drawer-content>
+</mat-drawer-container>
+

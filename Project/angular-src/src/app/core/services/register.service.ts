@@ -16,7 +16,7 @@ export class RegisterService {
   constructor(private http: HttpClient) { }
 
   /** CRUD function for create **/
-  registerUser(user: User): Observable<any> {
+  registerUser(user: RegisterUser): Observable<any> {
     return this.http.post(apiUrl, user, httpOptions).pipe(
       catchError(this.handleError)
     );
@@ -39,7 +39,7 @@ export class RegisterService {
   }
 }
 
-export class User {
+export class RegisterUser {
   username: string;
   password: string;
   firstName: string;

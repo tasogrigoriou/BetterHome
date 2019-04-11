@@ -20,7 +20,7 @@
       </mat-form-field>
       <mat-form-field class="full-width">
         <mat-label>Password</mat-label>
-        <input matInput placeholder="Password" [(ngModel)]="user.password" name="password" required>
+        <input matInput type="password" placeholder="Password" [(ngModel)]="user.password" name="password" required>
       </mat-form-field>
       <mat-form-field class="full-width">
         <mat-label>Email Address</mat-label>
@@ -37,6 +37,8 @@
 
     <!-- REGISTER BUTTON -->
     <button mat-raised-button (click)="onSubmit()" color="primary">Register</button>
+
+    <mat-spinner *ngIf="!isLoaded"></mat-spinner>
 
   </mat-card-actions>
 </mat-card>

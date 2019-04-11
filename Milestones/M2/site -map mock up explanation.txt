@@ -1,0 +1,53 @@
+Home page 
+-in the box displayed "state", user can click it to choose from a list of states
+-in the box displayed "city", user can click it to choose from a list of cities  that related to the selected "state"
+-in the free text box displayed "Address, neighborhood,zip", user can type any words.
+-click the button "search" to get the results.
+-click the button "login" to go to login page
+
+Login page
+-type username , password in the boxes and click button "login" to login and go back to previous page
+-click the button "sign up" to go register page
+
+Register page
+-fill first name , last name ,username, password, email and click the button "sign up " to complete the registration.
+
+search result page
+-number of results found will be displayed 
+-match listings found will be displayed
+-click button "price" to sort from lowest price to highest price
+-click button "0-50k" to filter the search result and  only  display listings with price in range 0-50k 
+-click button "beds" to sort from home with least number of bed rooms  to most number of bed rooms
+-click button "1+" to only display listings with at least 1 bed room.
+-click button" back" to go back the search page 
+
+Listing content page
+-pictures of the listing will dispayed 
+-click the button ">" to go to next picture
+-click the button "<" to go to previous picture
+-price, room configuration ,address, contact information and all other information will be displayed.
+-click button " save " to add the listing to your account's favorite list.
+-click button "back" to go back to search results page
+
+My account page
+-after login, the label of the button " login" will become "my account", click it to go to my account page.
+-click the button "profile" to go to user's profile page
+-click the button "my listing" to go to user's listing page
+-click the button "favorite" to go to user's favorite list page
+
+Profile page
+-user can modify his/her first name, last name and email.
+
+
+My listing page
+-all the listing user upload/posted will dispayed
+-click button "edit"  to modify the related listing
+-click button " delete" to delete ralted listing
+-click button "new listing +" to create new listing
+
+Editing listing page
+-user can change/fill the title , address, price, email section and click button "add" to add pictures or click button "x" to delete the picture selected.
+-click the button "save' to save all the changes
+-click the button "back" to my listing page 
+
+
