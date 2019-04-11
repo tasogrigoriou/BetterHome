@@ -1,0 +1,14 @@
+<mat-list>
+
+  <h1 mat-subheader>Listings</h1>
+  <mat-divider></mat-divider>
+  <mat-list-item *ngFor="let listing of listings">
+    <p mat-line>title: {{listing.title}}</p>
+    <p mat-line>city: {{listing.city}}</p>
+    <p mat-line>street: {{listing.street}}</p>
+    <p mat-line>bedrooms: {{listing.numBedrooms}}</p>
+    <p mat-line>bathrooms: {{listing.numBathrooms}}</p>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+
+</mat-list>
