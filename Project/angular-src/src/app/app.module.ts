@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatSelectModule} from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import {CoreModule} from "./core/core.module";
 import {HomeComponent} from "./home/home.component";
 import {PropertyComponent} from "./property/property.component";
 import {RegisterComponent} from "./register/register.component";
+import {RegisterDialog} from "./register/register.dialog";
 import {LoginComponent} from "./login/login.component";
 import { ExampleComponent } from './example/example.component';
 import {AlertComponent} from "./core/components/alert/alert.component";
@@ -22,9 +24,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
 
-
 import {
-
   MatSidenavModule,
   MatListModule,
   MatInputModule,
@@ -38,8 +38,13 @@ import {
   MatFormFieldModule,
   MatToolbarModule
 } from '@angular/material';
+import {MatDialogModule} from '@angular/material/dialog';
 import {FlexLayoutModule} from "@angular/flex-layout";
+<<<<<<< HEAD
 import {PropertySingleListingComponent} from "./property/property.singleListing.component";
+=======
+import { SearchResultsComponent } from './search-results/search-results.component';
+>>>>>>> dea92425360877f73eb235ef338622a167b594ec
 
 @NgModule({
   declarations: [
@@ -47,10 +52,18 @@ import {PropertySingleListingComponent} from "./property/property.singleListing.
     HomeComponent,
     PropertyComponent,
     RegisterComponent,
+    RegisterDialog,
     LoginComponent,
     ExampleComponent,
     AlertComponent,
+<<<<<<< HEAD
     PropertySingleListingComponent
+=======
+    SearchResultsComponent
+  ],
+  entryComponents: [
+    RegisterDialog
+>>>>>>> dea92425360877f73eb235ef338622a167b594ec
   ],
   imports: [
     MatMenuModule,
@@ -76,6 +89,8 @@ import {PropertySingleListingComponent} from "./property/property.singleListing.
     MatCardModule,
     MatFormFieldModule,
     MatToolbarModule,
+    MatSelectModule,
+    MatDialogModule,
     FlexLayoutModule
   ],
   providers: [],

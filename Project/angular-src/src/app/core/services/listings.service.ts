@@ -19,8 +19,8 @@ export class ListingsService {
     '1 4th St',
     ' San Francisco',
     'California',
-     'Rent',
-    '3,500',
+     'Sale',
+    '11',
     '2',
     '2'
 
