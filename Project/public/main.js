@@ -870,28 +870,6 @@ var SearchListingsService = /** @class */ (function () {
     return SearchListingsService;
 }());
 
-// export class LoginUser {
-//   userId: number;
-//   username: string;
-//   firstName: string;
-//   lastName: string;
-//   emailAddress: string;
-//   phoneNumber: string;
-//   // favoriteListings: Listing[];
-// }
-//
-// export class Listing {
-//   listingId: number;
-//   title: string;
-//   listingType: string;
-//   price: number;
-//   city: string;
-//   zipCode: string;
-//   street: string;
-//   forSale: boolean;
-//   numBedrooms: number;
-//   numBathrooms: number;
-// }
 
 
 /***/ }),
@@ -1005,7 +983,7 @@ module.exports = ".main-div {\n  display: flex;\n  justify-content: center;\n  a
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"hero is-info is-fullheight is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"container\">\n      <h1 class=\"cont-title\">Search Page</h1>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n\n      <div class=\"main-div\">\n        <mat-card>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Select Listing Type</mat-label>\n            <mat-select [(value)]=\"listingSearch.listingType\">\n              <mat-option value=\"Any\">Any</mat-option>\n              <mat-option value=\"House\">House</mat-option>\n              <mat-option value=\"Apartment\">Apartment</mat-option>\n              <mat-option value=\"Condo\">Condo</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Select Bedrooms</mat-label>\n            <mat-select [(value)]=\"listingSearch.numBedrooms\">\n              <mat-option value=0>Any</mat-option>\n              <mat-option value=1>1 Bed</mat-option>\n              <mat-option value=2>2 Beds</mat-option>\n              <mat-option value=3>3 Beds</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Select Bathrooms</mat-label>\n            <mat-select [(value)]=\"listingSearch.numBathrooms\">\n              <mat-option value=0>Any</mat-option>\n              <mat-option value=1>1</mat-option>\n              <mat-option value=2>2</mat-option>\n              <mat-option value=3>3</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-input\">\n            <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" required>\n          </mat-form-field>\n\n          <button class=\"cont-button\" mat-raised-button color=\"primary\" (click)=\"onSearchClick()\">Search</button>\n\n        </mat-card>\n      </div>\n\n    </div>\n  </div>\n</section>\n"
+module.exports = "<section class=\"hero is-info is-fullheight is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"container\">\n      <h1 class=\"cont-title\">Search Page</h1>\n\n      <div class=\"main-div\">\n        <mat-card>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Select Listing Type</mat-label>\n            <mat-select [(value)]=\"listingSearch.listingType\">\n              <mat-option value=\"Any\">Any</mat-option>\n              <mat-option value=\"House\">House</mat-option>\n              <mat-option value=\"Apartment\">Apartment</mat-option>\n              <mat-option value=\"Condo\">Condo</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Select Bedrooms</mat-label>\n            <mat-select [(value)]=\"listingSearch.numBedrooms\">\n              <mat-option value=0>Any</mat-option>\n              <mat-option value=1>1 Bed</mat-option>\n              <mat-option value=2>2 Beds</mat-option>\n              <mat-option value=3>3 Beds</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Select Bathrooms</mat-label>\n            <mat-select [(value)]=\"listingSearch.numBathrooms\">\n              <mat-option value=0>Any</mat-option>\n              <mat-option value=1>1</mat-option>\n              <mat-option value=2>2</mat-option>\n              <mat-option value=3>3</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-input\">\n            <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" required>\n          </mat-form-field>\n\n          <button class=\"cont-button\" mat-raised-button color=\"primary\" (click)=\"onSearchClick()\">Search</button>\n\n        </mat-card>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n  </div>\n</section>\n"
 
 /***/ }),
 
@@ -1055,8 +1033,6 @@ var HomeComponent = /** @class */ (function () {
                 _this.isLoaded = true;
                 _this.saveListings(listings);
                 _this.openDialog('Successfully retrieved Listings!', true);
-                console.log(typeof (listings));
-                console.log(listings);
             }, function (err) {
                 _this.isLoaded = true;
                 _this.openDialog('Unable to retrieve any listings based on your search. Please try again');
@@ -1315,10 +1291,10 @@ var RegisterComponent = /** @class */ (function () {
                 .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])())
                 .subscribe(function (data) {
                 _this.isLoaded = true;
-                _this.openDialog('Registration successful!', true);
+                _this.openDialog('Registration successful! You may login now', true);
             }, function (error) {
                 _this.isLoaded = true;
-                _this.openDialog('Username is already taken. Please choose another username', false);
+                _this.openDialog('Username or email is already taken. Please try again', false);
             });
         }
         else {
