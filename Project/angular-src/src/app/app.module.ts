@@ -25,7 +25,6 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
 
 import {
-
   MatSidenavModule,
   MatListModule,
   MatInputModule,
@@ -41,6 +40,7 @@ import {
 } from '@angular/material';
 import {MatDialogModule} from '@angular/material/dialog';
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +51,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     RegisterDialog,
     LoginComponent,
     ExampleComponent,
-    AlertComponent
+    AlertComponent,
+    SearchResultsComponent
   ],
   entryComponents: [
     RegisterDialog

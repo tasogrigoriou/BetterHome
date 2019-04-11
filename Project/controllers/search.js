@@ -1,23 +1,44 @@
-var express = require('express');
-var router = express.Router();
-var database = require('../models/cloudsql');
+const express = require('express');
+const router = express.Router();
+const database = require('../models/cloudsql');
 
-function search( req, res, next) {
-    var searchTerm = req.query.search;
+router.post('/', function (req, res) {
 
-    let query = 'SELECT * FROM Users';
-    if(searchTerm != ''){
-        query = 'SELECT * FROM Users WHERE username LIKE \'%' + searchTerm + '%\'';
+    let city = req.body.city;
+    let listingType = req.body.listingType;
+    let numBedrooms = Number(req.body.numBedrooms);
+    let numBathrooms = Number(req.body.numBathrooms);
+
+    let listingTypeQuery = ``;
+    let numBedroomsQuery = ``;
+    let numBathroomsQuery = ``;
+
+    if (listingType && listingType !== 'Any') {
+        listingTypeQuery = `AND listingType = '${listingType}'`;
     }
-    database.query(query, (err, result) => {
-        if(err){
-            req.searchResult = "";
-            req.searchTerm = "";
-            next();
-        }
-        req.searchResult = result;
-        res.searchTerm = searchTerm;
+    if (numBedrooms && numBedrooms !== 0) {
+        numBedroomsQuery = `AND numBedrooms = ${numBedrooms}`;
+    }
+    if (numBathrooms && numBathrooms !== 0) {
+        numBathroomsQuery = `AND numBathrooms = ${numBathrooms}`;
+    }
 
-        next();
+    let sql = `SELECT * FROM Listing WHERE city LIKE '%${city}%' ${listingTypeQuery} ${numBedroomsQuery} ${numBathroomsQuery}`;
+    console.log(sql);
+
+    database.query(sql, function (err, result) {
+        if (err) {
+            res.status(err.status || 500).send(err.message);
+        }
+        else if (!result.length) {
+            res.status(500).send('No listings match given search query');
+        }
+        else {
+            // result is an array of Listing objects
+            console.log(result);
+            res.send(result);
+        }
     });
-}
+});
+
+module.exports = router;
