@@ -11,8 +11,8 @@ import {ListingsService} from "../core/services/listings.service";
 
 
 export class PropertyComponent implements OnInit{
-  numberOfResult
-  listings
+  numberOfResult;
+  listings;
   constructor(
     private listingsService: ListingsService,
     ) {}

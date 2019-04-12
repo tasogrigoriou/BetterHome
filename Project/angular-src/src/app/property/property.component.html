@@ -27,7 +27,9 @@
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened>
     <mat-list role="list">
-      <mat-list-item role="listitem"><mat-checkbox>For Sell</mat-checkbox></mat-list-item>
+      <mat-list-item role="listitem">
+        <mat-checkbox>For Sell</mat-checkbox>
+      </mat-list-item>
       <mat-list-item role="listitem"><mat-checkbox>For rent</mat-checkbox></mat-list-item>
       <mat-list-item role="listitem">Price range</mat-list-item>
       <mat-list role="list">
@@ -67,14 +69,15 @@
           <div class="column is-4" *ngFor="let listing of listings">
             <div class="card">
               <div class="card-content">
-                <!--<a [routerLink]="[listing.listingAddress]" skipLocationChange="true" [queryParams]="{-->
-            <!--listingAddress: listing.listingAddress,-->
-            <!--listingCity: listing.listingCity,-->
-            <!--listingState: listing.listingState-->
-            <!--}"><p>{{ listing.listingAddress }}</p>-->
+                  <a [routerLink]="[listing.listingAddress]" skipLocationChange="true" [queryParams]="{
+            listingAddress: listing.listingAddress,
+            listingCity: listing.listingCity,
+            listingState: listing.listingState
+            }"><p>{{ listing.listingAddress }}</p>
                   <!--<p>{{ listing.listingCity }}</p>-->
-                  <!--<p>{{ listing.listingState }}</p></a>-->
-                <p>{{ listing.listingAddress }}</p>
+                  <!--<p>{{ listing.listingState }}</p>-->
+                </a>
+                <!--<p>{{ listing.listingAddress }}</p>-->
                 <p>{{ listing.listingCity }}</p>
                 <p>{{ listing.listingState }}</p>
               </div>

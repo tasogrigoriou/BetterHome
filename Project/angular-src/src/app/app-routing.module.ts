@@ -20,6 +20,7 @@ const routes: Routes = [
     path: 'property',
     component: PropertyComponent
   },
+
   {
     path: 'register',
     component: RegisterComponent

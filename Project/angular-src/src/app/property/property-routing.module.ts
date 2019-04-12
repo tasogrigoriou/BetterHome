@@ -5,7 +5,7 @@ import {PropertySingleComponent} from "./property-single.component";
 
 const routes: Routes = [
   { path: '', component: PropertyComponent },
-  { path: ':listings.listingAddress', component: PropertySingleComponent }
+  { path: ':listings.listingAddress', component: PropertySingleComponent },
 ];
 
 @NgModule({

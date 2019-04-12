@@ -3,9 +3,9 @@ import {Listing} from "../core/services/listings.service";
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
-  selector: 'app-property',
+  selector: 'app-property-single',
   templateUrl: './property-single.component.html',
-  styleUrls: [],
+  styles: [],
 })
 
 export class PropertySingleComponent implements OnInit {
