@@ -43,8 +43,9 @@
           <button class="cont-button" mat-raised-button color="primary" (click)="onSearchClick()">Search</button>
 
         </mat-card>
-      </div>
 
+        <mat-spinner *ngIf="!isLoaded"></mat-spinner>
+      </div>
     </div>
   </div>
 </section>

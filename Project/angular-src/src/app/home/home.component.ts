@@ -13,12 +13,8 @@ export class HomeComponent implements OnInit {
     constructor() {}
 
   ngOnInit() {
-  this.listingSearch = {
-    city: '',
-    listingType: ' ',
-    numBathrooms: 0,
-    numBedrooms: 0
 
+      
   }
 
 }
