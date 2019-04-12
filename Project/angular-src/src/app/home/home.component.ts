@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {MatDialog} from "@angular/material";
 import {RegisterDialog} from "../register/register.dialog";
 import {SearchListingsService} from "../core/services/search.listings.service";
@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
 
   listingSearch: ListingSearch;
   listings: Listing[];
@@ -23,8 +23,19 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.listingSearch = {
-      city: ''
+    if (localStorage.getItem('listingSearch')) {
+      this.listingSearch = JSON.parse(localStorage.getItem('listingSearch'));
+  }
+    else {
+      this.listingSearch = {
+        city: ''
+      }
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.listingSearch) {
+      localStorage.setItem('listingSearch', JSON.stringify(this.listingSearch));
     }
   }
 
@@ -68,6 +79,7 @@ export class HomeComponent implements OnInit {
 
 export interface ListingSearch {
   city: string;
+  forSale?: boolean;
   listingType?: string;
   numBedrooms?: number;
   numBathrooms?: number;
