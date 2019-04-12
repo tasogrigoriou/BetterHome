@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {zip} from "rxjs";
 
 @Injectable()
 export class ListingsService {
@@ -9,47 +10,48 @@ export class ListingsService {
      return[
        this.exampleListing1,
        this.exampleListing2,
-       this.exampleListing3,
-       this.exampleListing4
+       this.exampleListing3
 
 
      ];
   }
   public exampleListing1 = new Listing(
-    '1 4th St',
-    ' San Francisco',
+    69,
+    0,
     'California',
-     'Sale',
-    '11',
-    '2',
+    'Sale',
+    3000,
+    'San Francisco',
+    94132,
+    '4th St',
+    true,
+    3,
     '2'
-
   );
   public exampleListing2 = new Listing(
-    '3 8th Ave',
-    ' New York City',
-    'New York',
-    'Rent',
-    '3,000',
+    69,
+    0,
+    'California',
+    'Sale',
+    3000,
     '2',
-    '1'
+    94132,
+    '8th St',
+    true,
+    3,
+    '2'
   );
   public exampleListing3 = new Listing(
-    '2 Wall St',
-    ' New York City',
-    'New York',
-    'Rent',
-    '4,500',
-    '1',
-    '1'
-  );
-  public exampleListing4 = new Listing(
-    '4 Lombard St',
-    ' San Francisco',
+    69,
+    0,
     'California',
-    'Rent',
-    '3,600',
-    '3',
+    'Sale',
+    3000,
+    '2',
+    94132,
+    '11th St',
+    true,
+    3,
     '2'
   );
 
@@ -57,24 +59,33 @@ export class ListingsService {
 
 }
 export class Listing {
-  public listingAddress: string;
-  public listingCity: string;
-  public listingState: string;
-  public listingRentOrSale: string;
-  public listingPrice: string;
-  public listingNumberOfBedrooms: string;
-  public listingNumberOfBathrooms: string;
-  public listingPhotos: [];
+  Lid: number;
+  DisplayBoard_boardId: number;
+  title: string;
+  listingType: string;
+  price: number;
+  city: string;
+  zipCode: number;
+  street: string;
+  forSale: boolean;
+  numBedrooms: number;
+  numBathrooms: string;
 
 
-  constructor(listingAddress: string, listingCity: string, listingState: string, listingRentOrSale: string,listingPrice: string, listingNumberOfBedrooms: string, listingNumberOfBathrooms: string) {
-    this.listingAddress = listingAddress;
-    this.listingCity = listingCity;
-    this.listingState = listingState;
-    this.listingRentOrSale = listingRentOrSale;
-    this.listingPrice = listingPrice;
-    this.listingNumberOfBedrooms = listingNumberOfBedrooms;
-    this.listingNumberOfBathrooms = listingNumberOfBathrooms;
+  constructor(Lid: number, DisplayBoard_boardId: number, title: string, listingType: string, price: number, city: string, zipCode: number,
+              street: string, forSale: boolean, numBedrooms: number, numBathrooms: string)
+  {
+    this.Lid = Lid;
+    this.DisplayBoard_boardId = DisplayBoard_boardId;
+    this.title = title;
+    this.listingType = listingType;
+    this.price = price;
+    this.city = city;
+    this.zipCode = zipCode;
+    this.street = street;
+    this.forSale = forSale;
+    this.numBedrooms = numBedrooms;
+    this.numBathrooms = numBathrooms;
   }
 }
 

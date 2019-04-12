@@ -40,11 +40,9 @@ import {
 } from '@angular/material';
 import {MatDialogModule} from '@angular/material/dialog';
 import {FlexLayoutModule} from "@angular/flex-layout";
-<<<<<<< HEAD
 import {PropertySingleListingComponent} from "./property/property.singleListing.component";
-=======
 import { SearchResultsComponent } from './search-results/search-results.component';
->>>>>>> dea92425360877f73eb235ef338622a167b594ec
+
 
 @NgModule({
   declarations: [
@@ -56,14 +54,11 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     LoginComponent,
     ExampleComponent,
     AlertComponent,
-<<<<<<< HEAD
-    PropertySingleListingComponent
-=======
+    PropertySingleListingComponent,
     SearchResultsComponent
   ],
   entryComponents: [
     RegisterDialog
->>>>>>> dea92425360877f73eb235ef338622a167b594ec
   ],
   imports: [
     MatMenuModule,
