@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ListingsService, Listing} from "../core/services/listings.service";
-//import {HomeComponent, Listing} from "../home/home.component";
 import {PropertyComponent} from "./property.component";
 import {RegisterService} from "../core/services/register.service";
 import {Member} from "../core/services/members.service";
+import {Listing} from "../home/home.component";
+import {ListingsService} from "../core/services/listings.service";
 
 @Component({
   selector: 'app-property',
@@ -20,11 +20,13 @@ export class PropertySingleListingComponent implements OnInit {
 
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      this.listing = new Listing(params['Lid'], params['DisplayBoard_boardId'], params['title'], params['listingType'],
-                                 params['price'], params['city'], params['zipCode'], params['street'],
-                                 params['forSale'], params['numBedrooms'], params['numBathrooms']);
+    console.log(this.route.snapshot.params);
+    this.route.paramMap.subscribe(params => {
+      console.log(params);
+      let listingId = Number(params.get('listing.Lid'));
+      console.log(listingId);
+      this.listing = this.listingsService.getListingById(listingId);
+      console.log(this.listing);
     });
   }
-
 }

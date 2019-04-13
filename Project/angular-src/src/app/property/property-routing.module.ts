@@ -9,14 +9,13 @@ const routes: Routes = [
     component: PropertyComponent
   },
   {
-    path: ':listings.city',
+    path: ':listing.Lid',
     component: PropertySingleListingComponent
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-
   exports: [ RouterModule ]
 
 })

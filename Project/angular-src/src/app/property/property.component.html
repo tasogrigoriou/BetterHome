@@ -67,15 +67,7 @@
           <div class="column is-4" *ngFor="let listing of listings">
             <div class="card">
               <div class="card-content">
-                <a [routerLink]="listing.street" [queryParams]="{
-            listingAddress: listing.street,
-            listingCity: listing.city,
-            listingState: listing.state,
-            listingPrice: listing.price,
-            listingRentOrSale: listing.forSale,
-            listingNumberOfBedrooms: listing.numBedrooms,
-            listingNumberOfBathrooms: listing.numBedrooms
-            }">{{ listing.street }}</a>
+                <a [routerLink]="[listing.Lid]">{{ listing.street }}</a>
                 <!--<p>{{ listing.listingAddress }}</p>-->
                 <!--<p>{{ listing.listingCity }}</p>-->
                 <!--<p>{{ listing.listingState }}</p>-->

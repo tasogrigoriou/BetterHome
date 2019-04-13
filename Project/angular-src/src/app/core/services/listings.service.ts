@@ -15,6 +15,17 @@ export class ListingsService {
 
      ];
   }
+
+  getListingById(id: number): Listing {
+    let listings = this.getListings();
+    for (let i = 0; i < listings.length; i++) {
+      if (id == listings[i].Lid) {
+        return listings[i];
+      }
+    }
+    return null;
+  }
+
   public exampleListing1 = new Listing(
     69,
     0,
@@ -29,7 +40,7 @@ export class ListingsService {
     '2'
   );
   public exampleListing2 = new Listing(
-    69,
+    70,
     0,
     'California',
     'Sale',
@@ -42,7 +53,7 @@ export class ListingsService {
     '2'
   );
   public exampleListing3 = new Listing(
-    69,
+    71,
     0,
     'California',
     'Sale',
@@ -70,7 +81,6 @@ export class Listing {
   forSale: boolean;
   numBedrooms: number;
   numBathrooms: string;
-
 
   constructor(Lid: number, DisplayBoard_boardId: number, title: string, listingType: string, price: number, city: string, zipCode: number,
               street: string, forSale: boolean, numBedrooms: number, numBathrooms: string)
