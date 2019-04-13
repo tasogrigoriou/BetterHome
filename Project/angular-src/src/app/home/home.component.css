@@ -23,3 +23,7 @@
 .cont-button {
   margin-right: 10px;
 }
+
+/*.hero {*/
+  /*!*min-height: calc(100% - 64px - 64px);*!*/
+/*}*/

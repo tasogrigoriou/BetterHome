@@ -16,6 +16,7 @@ import {
   MatSortModule, MatTableModule, MatToolbarModule
 } from "@angular/material";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {FooterComponent} from "./components/footer/footer.component";
 
 @NgModule({
   imports: [
@@ -40,10 +41,12 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
     ListingsService
   ],
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
 })
 export class CoreModule { }
