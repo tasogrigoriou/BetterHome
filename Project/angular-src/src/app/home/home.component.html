@@ -8,8 +8,8 @@
 
           <mat-form-field class="cont-form">
             <mat-label>Sale or Rental</mat-label>
-            <mat-select [(value)]="listingSearch.listingType">
-              <mat-option value=2>Both</mat-option>
+            <mat-select [(value)]="listingSearch.forSale">
+              <mat-option value=null>Both</mat-option>
               <mat-option value=1>Sale</mat-option>
               <mat-option value=0>Rental</mat-option>
             </mat-select>

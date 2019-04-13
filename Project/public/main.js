@@ -338,6 +338,17 @@ var AlertComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/core/components/header/header.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/core/components/header/header.component.css ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".my-toolbar {\n  background-color: rgba(0, 0, 0, 0.74);\n}\n\n.example-fill-remaining-space {\n  /* This fills the remaining space, by using flexbox.\n     Every toolbar row uses a flexbox row layout. */\n  flex: 1 1 auto;\n}\n\n/* unvisited link */\n\na:link {\n  color: white;\n}\n\n/* visited link */\n\na:visited {\n  color: white;\n}\n\n/* mouse over link */\n\na:hover {\n  color: white;\n}\n\n/* selected link */\n\na:active {\n  color: white;\n}\n\na {\n  text-decoration: none;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29yZS9jb21wb25lbnRzL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFDQUFxQztBQUN2Qzs7QUFFQTtFQUNFO21EQUNpRDtFQUNqRCxjQUFjO0FBQ2hCOztBQUVBLG1CQUFtQjs7QUFDbkI7RUFDRSxZQUFZO0FBQ2Q7O0FBRUEsaUJBQWlCOztBQUNqQjtFQUNFLFlBQVk7QUFDZDs7QUFFQSxvQkFBb0I7O0FBQ3BCO0VBQ0UsWUFBWTtBQUNkOztBQUVBLGtCQUFrQjs7QUFDbEI7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxxQkFBcUI7QUFDdkIiLCJmaWxlIjoic3JjL2FwcC9jb3JlL2NvbXBvbmVudHMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm15LXRvb2xiYXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuNzQpO1xufVxuXG4uZXhhbXBsZS1maWxsLXJlbWFpbmluZy1zcGFjZSB7XG4gIC8qIFRoaXMgZmlsbHMgdGhlIHJlbWFpbmluZyBzcGFjZSwgYnkgdXNpbmcgZmxleGJveC5cbiAgICAgRXZlcnkgdG9vbGJhciByb3cgdXNlcyBhIGZsZXhib3ggcm93IGxheW91dC4gKi9cbiAgZmxleDogMSAxIGF1dG87XG59XG5cbi8qIHVudmlzaXRlZCBsaW5rICovXG5hOmxpbmsge1xuICBjb2xvcjogd2hpdGU7XG59XG5cbi8qIHZpc2l0ZWQgbGluayAqL1xuYTp2aXNpdGVkIHtcbiAgY29sb3I6IHdoaXRlO1xufVxuXG4vKiBtb3VzZSBvdmVyIGxpbmsgKi9cbmE6aG92ZXIge1xuICBjb2xvcjogd2hpdGU7XG59XG5cbi8qIHNlbGVjdGVkIGxpbmsgKi9cbmE6YWN0aXZlIHtcbiAgY29sb3I6IHdoaXRlO1xufVxuXG5hIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuIl19 */"
+
+/***/ }),
+
 /***/ "./src/app/core/components/header/header.component.html":
 /*!**************************************************************!*\
   !*** ./src/app/core/components/header/header.component.html ***!
@@ -345,7 +356,7 @@ var AlertComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar is-dark\">\n  <!-- menu -->\n  <div class=\"navbar-menu\">\n    <div class=\"navbar-start\">\n      <a class=\"navbar-item\" routerLink=\"\">Home</a>\n      <a class=\"navbar-item\" routerLink=\"about-us\">About us</a>\n      <a class=\"navbar-item\" routerLink=\"property\">Property</a>\n      <a class=\"navbar-item\" routerLink=\"register\">Register</a>\n      <a class=\"navbar-item\" routerLink=\"login\">Login</a>\n    </div>\n  </div>\n</nav>\n"
+module.exports = "<!--<nav class=\"navbar is-dark\">-->\n  <!--&lt;!&ndash; menu &ndash;&gt;-->\n  <!--<div class=\"navbar-menu\">-->\n    <!--<div class=\"navbar-start\">-->\n      <!--<a class=\"navbar-item\" routerLink=\"\">Home</a>-->\n      <!--<a class=\"navbar-item\" routerLink=\"about-us\">About us</a>-->\n      <!--<a class=\"navbar-item\" routerLink=\"property\">Property</a>-->\n      <!--<a class=\"navbar-item\" routerLink=\"register\">Register</a>-->\n      <!--<a class=\"navbar-item\" routerLink=\"login\">Login</a>-->\n    <!--</div>-->\n  <!--</div>-->\n<!--</nav>-->\n\n\n<!-- works in Angular 7.2.4 + Angular Material 7.3.2 as of February 14, 2019 -->\n<!--<mat-toolbar color=\"primary\">-->\n  <!--<mat-toolbar-row>-->\n\n    <!--<span>Better Home</span>-->\n\n    <!--&lt;!&ndash; This fills the remaining space of the current row &ndash;&gt;-->\n    <!--<span class=\"example-fill-remaining-space\"></span>-->\n\n    <!--<a mat-button [routerLink]=\"['/']\">Angular Material Navigation</a>-->\n    <!--&lt;!&ndash;<a mat-button *ngFor=\"let link of links\" [routerLink]=\"link.path\" [routerLinkActive]=\"['mat-button-toggle-checked', 'active-route']\"&ndash;&gt;-->\n       <!--&lt;!&ndash;#rla=\"routerLinkActive\">&ndash;&gt;-->\n      <!--&lt;!&ndash;{{link.label}}&ndash;&gt;-->\n    <!--&lt;!&ndash;</a>&ndash;&gt;-->\n  <!--</mat-toolbar-row>-->\n<!--</mat-toolbar>-->\n\n<mat-toolbar color=\"primary\" class=\"my-toolbar\">\n  <span>\n    <a mat-button [routerLink]=\"'/'\"><h3>Better Home</h3></a>\n  </span>\n\n  <!-- This fills the remaining space of the current row -->\n  <span class=\"example-fill-remaining-space\"></span>\n\n  <!--<span>Right Aligned Text</span>-->\n  <a mat-button [routerLink]=\"'/login'\">Login</a>\n  <a mat-button [routerLink]=\"'/register'\">Register</a>\n\n<a mat-button *ngFor=\"let link of links\" [routerLink]=\"link.path\">\n{{link.label}}\n</a>\n\n</mat-toolbar>\n\n<!--<nav class=\"navbar navbar-dark bg-dark\">-->\n  <!--&lt;!&ndash; Navbar content &ndash;&gt;-->\n<!--</nav>-->\n"
 
 /***/ }),
 
@@ -370,7 +381,8 @@ var HeaderComponent = /** @class */ (function () {
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-header',
-            template: __webpack_require__(/*! ./header.component.html */ "./src/app/core/components/header/header.component.html")
+            template: __webpack_require__(/*! ./header.component.html */ "./src/app/core/components/header/header.component.html"),
+            styles: [__webpack_require__(/*! ./header.component.css */ "./src/app/core/components/header/header.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], HeaderComponent);
@@ -398,6 +410,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_members_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./services/members.service */ "./src/app/core/services/members.service.ts");
 /* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/header/header.component */ "./src/app/core/components/header/header.component.ts");
 /* harmony import */ var _services_listings_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/listings.service */ "./src/app/core/services/listings.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+
+
 
 
 
@@ -412,7 +428,20 @@ var CoreModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]
+                _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatSidenavModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatListModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatPaginatorModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatProgressSpinnerModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatSortModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatIconModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatToolbarModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbModule"]
             ],
             providers: [
                 _services_members_service__WEBPACK_IMPORTED_MODULE_4__["MembersService"],
@@ -983,7 +1012,7 @@ module.exports = ".main-div {\n  display: flex;\n  justify-content: center;\n  a
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"hero is-info is-fullheight is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"container\">\n      <h1 class=\"cont-title\">Search Page</h1>\n\n      <div class=\"main-div\">\n        <mat-card>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Select Listing Type</mat-label>\n            <mat-select [(value)]=\"listingSearch.listingType\">\n              <mat-option value=\"Any\">Any</mat-option>\n              <mat-option value=\"House\">House</mat-option>\n              <mat-option value=\"Apartment\">Apartment</mat-option>\n              <mat-option value=\"Condo\">Condo</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Select Bedrooms</mat-label>\n            <mat-select [(value)]=\"listingSearch.numBedrooms\">\n              <mat-option value=0>Any</mat-option>\n              <mat-option value=1>1 Bed</mat-option>\n              <mat-option value=2>2 Beds</mat-option>\n              <mat-option value=3>3 Beds</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Select Bathrooms</mat-label>\n            <mat-select [(value)]=\"listingSearch.numBathrooms\">\n              <mat-option value=0>Any</mat-option>\n              <mat-option value=1>1</mat-option>\n              <mat-option value=2>2</mat-option>\n              <mat-option value=3>3</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-input\">\n            <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" required>\n          </mat-form-field>\n\n          <button class=\"cont-button\" mat-raised-button color=\"primary\" (click)=\"onSearchClick()\">Search</button>\n\n        </mat-card>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n  </div>\n</section>\n"
+module.exports = "<section class=\"hero is-info is-fullheight is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"container\">\n      <h1 class=\"cont-title\">Search Listings</h1>\n\n      <div class=\"main-div\">\n        <mat-card>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Sale or Rental</mat-label>\n            <mat-select [(value)]=\"listingSearch.forSale\">\n              <mat-option value=null>Both</mat-option>\n              <mat-option value=1>Sale</mat-option>\n              <mat-option value=0>Rental</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Listing Type</mat-label>\n            <mat-select [(value)]=\"listingSearch.listingType\">\n              <mat-option value=\"Any\">Any</mat-option>\n              <mat-option value=\"House\">House</mat-option>\n              <mat-option value=\"Apartment\">Apartment</mat-option>\n              <mat-option value=\"Condo\">Condo</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Bedrooms</mat-label>\n            <mat-select [(value)]=\"listingSearch.numBedrooms\">\n              <mat-option value=0>Any</mat-option>\n              <mat-option value=1>1 Bed</mat-option>\n              <mat-option value=2>2 Beds</mat-option>\n              <mat-option value=3>3 Beds</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Bathrooms</mat-label>\n            <mat-select [(value)]=\"listingSearch.numBathrooms\">\n              <mat-option value=0>Any</mat-option>\n              <mat-option value=1>1</mat-option>\n              <mat-option value=2>2</mat-option>\n              <mat-option value=3>3</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-input\">\n            <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" required>\n          </mat-form-field>\n\n          <button class=\"cont-button\" mat-raised-button color=\"primary\" (click)=\"onSearchClick()\">Search</button>\n\n        </mat-card>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n  </div>\n</section>\n"
 
 /***/ }),
 
@@ -1017,9 +1046,19 @@ var HomeComponent = /** @class */ (function () {
         this.isLoaded = true;
     }
     HomeComponent.prototype.ngOnInit = function () {
-        this.listingSearch = {
-            city: ''
-        };
+        if (localStorage.getItem('listingSearch')) {
+            this.listingSearch = JSON.parse(localStorage.getItem('listingSearch'));
+        }
+        else {
+            this.listingSearch = {
+                city: ''
+            };
+        }
+    };
+    HomeComponent.prototype.ngOnDestroy = function () {
+        if (this.listingSearch) {
+            localStorage.setItem('listingSearch', JSON.stringify(this.listingSearch));
+        }
     };
     HomeComponent.prototype.onSearchClick = function () {
         var _this = this;

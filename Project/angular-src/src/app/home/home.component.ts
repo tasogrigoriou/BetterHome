@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     if (localStorage.getItem('listingSearch')) {
       this.listingSearch = JSON.parse(localStorage.getItem('listingSearch'));
-  }
+    }
     else {
       this.listingSearch = {
         city: ''
