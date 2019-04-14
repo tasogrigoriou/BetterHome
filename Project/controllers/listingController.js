@@ -20,12 +20,13 @@ router.post('/', function (req, res) {
 
     console.log(sql);
 
-    database.query(sql, function (err, result) {
+    database.query(sql, function (err, listingResult) {
         if (err) {
             res.status(err.status || 500).send(err.message);
         } else {
             let sql = `SELECT LAST_INSERT_ID(); from listing`;
             database.query(sql, function (err, dbResponse) {
+                let listing = dbResponse[0];
                 if (err) {
                     res.status(err.status || 500).send(err.message);
                 } else {
@@ -35,7 +36,7 @@ router.post('/', function (req, res) {
                         '${listing.listingId}',
                         '${date.getTime()}',
                         )`;
-                    database.query(sql, function (err, result) {
+                    database.query(sql, function (err, createsResult) {
                         if (err) {
                             res.status(err.status || 500).send(err.message);
                         } else {
