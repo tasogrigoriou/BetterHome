@@ -14,6 +14,7 @@ import {RegisterDialog} from "./register/register.dialog";
 import {LoginComponent} from "./login/login.component";
 import { ExampleComponent } from './example/example.component';
 import {AlertComponent} from "./core/components/alert/alert.component";
+import {AccountComponent} from  "./account/account.component";
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -23,6 +24,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatTabsModule} from '@angular/material';
 
 import {
   MatSidenavModule,
@@ -52,7 +54,8 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     LoginComponent,
     ExampleComponent,
     AlertComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    AccountComponent
   ],
   entryComponents: [
     RegisterDialog
@@ -83,7 +86,8 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     MatToolbarModule,
     MatSelectModule,
     MatDialogModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
