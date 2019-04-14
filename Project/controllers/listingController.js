@@ -5,17 +5,24 @@ var database = require('../models/cloudsql');
 //Create
 router.post('/', function (req, res) {
     let date = new Date();
-    let sql = `INSERT INTO Listing(title, listingType, price, city, state, zipCode, street, forSale, numBedrooms, numBathrooms) VALUES (` +
+    let sql = `INSERT INTO Listing(title, listingType, price, lotSize, city, state, zipCode, street, forSale, paragraph, numBedrooms, numBathrooms, laundry, hospitalAccess, BARTAccess, wheelchairAccess) VALUES (` +
         `
-        '${req.body.title}',
+        '${req.body.title}',    
         '${req.body.listingType}',
         '${req.body.price}',
-        '${req.body.city}',
-        '${req.body.zipCode}',
+        '${req.body.lotSize}',
         '${req.body.street}',
+        '${req.body.city}',
+        '${req.body.state}',
+        '${req.body.zipCode}',
         '${req.body.forSale}',
+        '${req.body.paragraph}',
         '${req.body.numBedrooms}',
-        '${req.body.numBathrooms}'
+        '${req.body.numBathrooms}',
+        '${req.body.laundry}',
+        '${req.body.hospitalAccess}',
+        '${req.body.BARTAccess}',
+        '${req.body.wheelchairAccess}',
         )`;
 
     console.log(sql);
