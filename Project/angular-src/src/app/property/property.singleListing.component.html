@@ -18,12 +18,12 @@
 </div>
 
 <!--  -->
-<div class="propertyOverview" *ngIf="listing.street" >
+<div class="propertyOverview" *ngIf="listing.Lid">
   <h2>Overview</h2>
   <hr width="50%" size="8">
-  <p><i class="fa fa-dollar fa-fw w3-margin-right w3-large "></i> For {{ listing.forSale }} ${{ listing.price }}</p>
+  <p><i class="fa fa-dollar fa-fw w3-margin-right w3-large "></i> For {{ forSale(listing.forSale) }} ${{ listing.price }}</p>
   <p><i class="fa fa-bath fa-fw w3-margin-right w3-large "></i> {{ listing.numBedrooms }} bed, {{ listing.numBathrooms }} bath</p>
-  <p><i class="fa fa-map-marker fa-fw w3-margin-right w3-large "></i> {{ listing.street }}{{ listing.city }} {{ listing.zipCode }}</p>
+  <p><i class="fa fa-map-marker fa-fw w3-margin-right w3-large "></i> {{ listing.street }} {{ listing.city }} {{ listing.zipCode }}</p>
   <h2>Contact</h2>
   <p><i class="fa fa-phone fa-fw w3-margin-right w3-large "></i> <var id="listingPhoneNumber">(xxx)xxx-xxxx</var></p>
   <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large "></i> <var id="listingEmail"> sendhelp@mailboyz.gov</var></p>

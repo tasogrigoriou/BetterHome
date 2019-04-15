@@ -36,7 +36,7 @@ export class ListingsService {
     94132,
     '4th St',
     true,
-    3,
+    2,
     '2'
   );
   public exampleListing2 = new Listing(
@@ -50,7 +50,7 @@ export class ListingsService {
     '8th St',
     true,
     3,
-    '2'
+    '3'
   );
   public exampleListing3 = new Listing(
     71,
@@ -61,9 +61,9 @@ export class ListingsService {
     '2',
     94132,
     '11th St',
-    true,
+    false,
     3,
-    '2'
+    '2 1/2'
   );
 
 

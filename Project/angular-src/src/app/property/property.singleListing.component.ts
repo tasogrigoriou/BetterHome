@@ -29,4 +29,10 @@ export class PropertySingleListingComponent implements OnInit {
       console.log(this.listing);
     });
   }
+
+  forSale(){
+    if(this.listing.forSale == true)
+      return "sale";
+    return "rent";
+  }
 }
