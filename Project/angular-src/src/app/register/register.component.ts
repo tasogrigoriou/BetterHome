@@ -31,11 +31,11 @@ export class RegisterComponent implements OnInit {
         .pipe(first())
         .subscribe(data => {
             this.isLoaded = true;
-            this.openDialog('Registration successful!', true);
+            this.openDialog('Registration successful! You may login now', true);
           },
           error => {
             this.isLoaded = true;
-            this.openDialog('Username is already taken. Please choose another username', false);
+            this.openDialog('Username or email is already taken. Please try again', false);
           });
     }
     else {

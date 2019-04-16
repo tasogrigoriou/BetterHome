@@ -5,6 +5,7 @@ import {PropertyComponent} from "./property/property.component";
 import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
 import {ExampleComponent} from "./example/example.component";
+import {SearchResultsComponent} from "./search-results/search-results.component";
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
     path: 'example',
     component: ExampleComponent,
     data: { title: 'Example Fake Data' }
+  },
+  {
+    path: 'search-results',
+    component: SearchResultsComponent
   }
 ];
 

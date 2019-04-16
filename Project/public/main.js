@@ -53,6 +53,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
 /* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
 /* harmony import */ var _example_example_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./example/example.component */ "./src/app/example/example.component.ts");
+/* harmony import */ var _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./search-results/search-results.component */ "./src/app/search-results/search-results.component.ts");
+
 
 
 
@@ -87,6 +89,10 @@ var routes = [
         path: 'example',
         component: _example_example_component__WEBPACK_IMPORTED_MODULE_7__["ExampleComponent"],
         data: { title: 'Example Fake Data' }
+    },
+    {
+        path: 'search-results',
+        component: _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_8__["SearchResultsComponent"]
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -215,6 +221,32 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./core/core.module */ "./src/app/core/core.module.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _property_property_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./property/property.component */ "./src/app/property/property.component.ts");
+/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
+/* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./register/register.dialog */ "./src/app/register/register.dialog.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _example_example_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./example/example.component */ "./src/app/example/example.component.ts");
+/* harmony import */ var _core_components_alert_alert_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./core/components/alert/alert.component */ "./src/app/core/components/alert/alert.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
+/* harmony import */ var _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/grid-list */ "./node_modules/@angular/material/esm5/grid-list.es5.js");
+/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@angular/material/esm5/menu.es5.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./search-results/search-results.component */ "./src/app/search-results/search-results.component.ts");
+
+
+
+
+
 
 
 
@@ -250,15 +282,46 @@ var AppModule = /** @class */ (function () {
                 _example_example_component__WEBPACK_IMPORTED_MODULE_11__["ExampleComponent"],
                 _core_components_alert_alert_component__WEBPACK_IMPORTED_MODULE_12__["AlertComponent"],
                 _core_components_upload_upload_component__WEBPACK_IMPORTED_MODULE_13__["UploadComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
+                _property_property_component__WEBPACK_IMPORTED_MODULE_8__["PropertyComponent"],
+                _register_register_component__WEBPACK_IMPORTED_MODULE_9__["RegisterComponent"],
+                _register_register_dialog__WEBPACK_IMPORTED_MODULE_10__["RegisterDialog"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"],
+                _example_example_component__WEBPACK_IMPORTED_MODULE_12__["ExampleComponent"],
+                _core_components_alert_alert_component__WEBPACK_IMPORTED_MODULE_13__["AlertComponent"],
+                _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_23__["SearchResultsComponent"]
             ],
             entryComponents: [
-                _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__["RegisterDialog"]
+                _register_register_dialog__WEBPACK_IMPORTED_MODULE_10__["RegisterDialog"]
             ],
             imports: [
                 _angular_material_menu__WEBPACK_IMPORTED_MODULE_20__["MatMenuModule"],
                 _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_19__["MatGridListModule"],
                 _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_18__["MatCheckboxModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
+                _core_core_module__WEBPACK_IMPORTED_MODULE_6__["CoreModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__["NgbModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_16__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ReactiveFormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_17__["HttpClientModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatListModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatPaginatorModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSortModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatProgressSpinnerModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSelectModule"],
+                _angular_material_dialog__WEBPACK_IMPORTED_MODULE_21__["MatDialogModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_22__["FlexLayoutModule"]
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                 _core_core_module__WEBPACK_IMPORTED_MODULE_5__["CoreModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"],
@@ -292,7 +355,7 @@ var AppModule = /** @class */ (function () {
                 _angular_flex_layout__WEBPACK_IMPORTED_MODULE_23__["FlexLayoutModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -703,6 +766,56 @@ var Listing = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/core/services/listings.service.ts":
+/*!***************************************************!*\
+  !*** ./src/app/core/services/listings.service.ts ***!
+  \***************************************************/
+/*! exports provided: ListingsService, Listing */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListingsService", function() { return ListingsService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Listing", function() { return Listing; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var ListingsService = /** @class */ (function () {
+    function ListingsService() {
+        this.exampleListing1 = new Listing('1 4th St', ' San Francisco', 'California');
+        this.exampleListing2 = new Listing('3 8th Ave', ' New York City', 'New York');
+        this.exampleListing3 = new Listing('2 Wall St', ' New York City', 'New York');
+        this.exampleListing4 = new Listing('4 Lombard St', ' San Francisco', 'California');
+    }
+    ListingsService.prototype.getListings = function () {
+        return [
+            this.exampleListing1,
+            this.exampleListing2,
+            this.exampleListing3,
+            this.exampleListing4
+        ];
+    };
+    ListingsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], ListingsService);
+    return ListingsService;
+}());
+
+var Listing = /** @class */ (function () {
+    function Listing(listingAddress, listingCity, listingState) {
+        this.listingAddress = listingAddress;
+        this.listingCity = listingCity;
+        this.listingState = listingState;
+    }
+    return Listing;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/core/services/login.service.ts":
 /*!************************************************!*\
   !*** ./src/app/core/services/login.service.ts ***!
@@ -949,6 +1062,69 @@ var UploadService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/core/services/search.listings.service.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/core/services/search.listings.service.ts ***!
+  \**********************************************************/
+/*! exports provided: SearchListingsService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchListingsService", function() { return SearchListingsService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]({ 'Content-Type': 'application/json' })
+};
+var apiUrl = '/api/search';
+var SearchListingsService = /** @class */ (function () {
+    function SearchListingsService(http) {
+        this.http = http;
+        this.listings = [];
+    }
+    /*** Get Listings from search query ***/
+    SearchListingsService.prototype.getSearchListings = function (searchQuery) {
+        return this.http.post(apiUrl, searchQuery, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    };
+    SearchListingsService.prototype.getListings = function () {
+        return this.listings;
+    };
+    SearchListingsService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
+    };
+    SearchListingsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
+    ], SearchListingsService);
+    return SearchListingsService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/example/example.component.css":
 /*!***********************************************!*\
   !*** ./src/app/example/example.component.css ***!
@@ -1047,7 +1223,7 @@ var ExampleDataSource = /** @class */ (function (_super) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".home_search\n{\n  width: 100%;\n  z-index: 100;\n  background: #FFFFFF;\n}\n.home_search_container\n{\n  position: absolute;\n  top: -112px;\n  left: 15px;\n  width: calc(100% - 30px);\n  height: 90px;\n  border-radius: 45px;\n  padding: 10px;\n  background: rgba(255,255,255,0.33);\n}\n.home_search_content\n{\n  width: 100%;\n  height: 100%;\n  background: #FFFFFF;\n  border-radius: 35px;\n}\n.search_form\n{\n  position: relative;\n  height: 100%;\n}\n.search_form_content\n{\n  width: 100%;\n  height: 100%;\n  padding-left: 14px;\n  padding-right: 11px;\n}\n.search_form_content > div\n{\n  width: 20%;\n  height: 100%;\n  padding-left: 18px;\n  padding-right: 2px;\n}\n.search_form_content > div:not(:last-child)\n{\n  border-right: solid 2px #d1d1d1;\n}\n.search_form_select\n{\n  display: block;\n  position: relative;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n  transform: translateY(-50%);\n  width: 100%;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);\n  -webkit-user-select: none;\n  background-position: center right;\n  background-repeat: no-repeat;\n  border: none;\n  outline: none;\n  font-size: 13px;\n  font-weight: 400;\n  color: #6b6b6b;\n  cursor: pointer;\n}\n.search_form_button\n{\n  width: 193px;\n  height: 100%;\n  border-radius: 35px;\n  border: none;\n  outline: none;\n  cursor: pointer;\n  font-size: 14px;\n  font-weight: 700;\n  color: #FFFFFF;\n  text-transform: uppercase;\n  background: linear-gradient(to right, #487fee, #32fa95);\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0VBRUUsV0FBVztFQUNYLFlBQVk7RUFDWixtQkFBbUI7QUFDckI7QUFDQTs7RUFFRSxrQkFBa0I7RUFDbEIsV0FBVztFQUNYLFVBQVU7RUFDVix3QkFBd0I7RUFDeEIsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQixhQUFhO0VBQ2Isa0NBQWtDO0FBQ3BDO0FBQ0E7O0VBRUUsV0FBVztFQUNYLFlBQVk7RUFDWixtQkFBbUI7RUFDbkIsbUJBQW1CO0FBQ3JCO0FBQ0E7O0VBRUUsa0JBQWtCO0VBQ2xCLFlBQVk7QUFDZDtBQUNBOztFQUVFLFdBQVc7RUFDWCxZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLG1CQUFtQjtBQUNyQjtBQUNBOztFQUVFLFVBQVU7RUFDVixZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLGtCQUFrQjtBQUNwQjtBQUNBOztFQUVFLCtCQUErQjtBQUNqQztBQUNBOztFQUVFLGNBQWM7RUFDZCxrQkFBa0I7RUFDbEIsUUFBUTtFQUNSLG1DQUFtQztFQUluQywyQkFBMkI7RUFDM0IsV0FBVztFQUNYLHdCQUF3QjtFQUN4QixxQkFBcUI7RUFDckIsZ0RBQWdEO0VBQ2hELHlCQUF5QjtFQUN6QixpQ0FBaUM7RUFDakMsNEJBQTRCO0VBQzVCLFlBQVk7RUFDWixhQUFhO0VBQ2IsZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixjQUFjO0VBQ2QsZUFBZTtBQUNqQjtBQUNBOztFQUVFLFlBQVk7RUFDWixZQUFZO0VBQ1osbUJBQW1CO0VBQ25CLFlBQVk7RUFDWixhQUFhO0VBQ2IsZUFBZTtFQUNmLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIsY0FBYztFQUNkLHlCQUF5QjtFQUN6Qix1REFBdUQ7QUFDekQiLCJmaWxlIjoic3JjL2FwcC9ob21lL2hvbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5ob21lX3NlYXJjaFxue1xuICB3aWR0aDogMTAwJTtcbiAgei1pbmRleDogMTAwO1xuICBiYWNrZ3JvdW5kOiAjRkZGRkZGO1xufVxuLmhvbWVfc2VhcmNoX2NvbnRhaW5lclxue1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogLTExMnB4O1xuICBsZWZ0OiAxNXB4O1xuICB3aWR0aDogY2FsYygxMDAlIC0gMzBweCk7XG4gIGhlaWdodDogOTBweDtcbiAgYm9yZGVyLXJhZGl1czogNDVweDtcbiAgcGFkZGluZzogMTBweDtcbiAgYmFja2dyb3VuZDogcmdiYSgyNTUsMjU1LDI1NSwwLjMzKTtcbn1cbi5ob21lX3NlYXJjaF9jb250ZW50XG57XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIGJhY2tncm91bmQ6ICNGRkZGRkY7XG4gIGJvcmRlci1yYWRpdXM6IDM1cHg7XG59XG4uc2VhcmNoX2Zvcm1cbntcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBoZWlnaHQ6IDEwMCU7XG59XG4uc2VhcmNoX2Zvcm1fY29udGVudFxue1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBwYWRkaW5nLWxlZnQ6IDE0cHg7XG4gIHBhZGRpbmctcmlnaHQ6IDExcHg7XG59XG4uc2VhcmNoX2Zvcm1fY29udGVudCA+IGRpdlxue1xuICB3aWR0aDogMjAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIHBhZGRpbmctbGVmdDogMThweDtcbiAgcGFkZGluZy1yaWdodDogMnB4O1xufVxuLnNlYXJjaF9mb3JtX2NvbnRlbnQgPiBkaXY6bm90KDpsYXN0LWNoaWxkKVxue1xuICBib3JkZXItcmlnaHQ6IHNvbGlkIDJweCAjZDFkMWQxO1xufVxuLnNlYXJjaF9mb3JtX3NlbGVjdFxue1xuICBkaXNwbGF5OiBibG9jaztcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB0b3A6IDUwJTtcbiAgLXdlYmtpdC10cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTUwJSk7XG4gIC1tb3otdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xuICAtbXMtdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xuICAtby10cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTUwJSk7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcbiAgd2lkdGg6IDEwMCU7XG4gIC13ZWJraXQtYXBwZWFyYW5jZTogbm9uZTtcbiAgLW1vei1hcHBlYXJhbmNlOiBub25lO1xuICAtd2Via2l0LWJveC1zaGFkb3c6IDBweCAwcHggMHB4IHJnYmEoMCwgMCwgMCwgMCk7XG4gIC13ZWJraXQtdXNlci1zZWxlY3Q6IG5vbmU7XG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlciByaWdodDtcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgYm9yZGVyOiBub25lO1xuICBvdXRsaW5lOiBub25lO1xuICBmb250LXNpemU6IDEzcHg7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG4gIGNvbG9yOiAjNmI2YjZiO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG4uc2VhcmNoX2Zvcm1fYnV0dG9uXG57XG4gIHdpZHRoOiAxOTNweDtcbiAgaGVpZ2h0OiAxMDAlO1xuICBib3JkZXItcmFkaXVzOiAzNXB4O1xuICBib3JkZXI6IG5vbmU7XG4gIG91dGxpbmU6IG5vbmU7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgZm9udC1zaXplOiAxNHB4O1xuICBmb250LXdlaWdodDogNzAwO1xuICBjb2xvcjogI0ZGRkZGRjtcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0LCAjNDg3ZmVlLCAjMzJmYTk1KTtcbn1cbiJdfQ== */"
+module.exports = ".main-div {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.cont-form {\n  margin-right: 20px;\n}\n\n.cont-title {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 20px;\n}\n\n.cont-input {\n  width: 275px;\n  margin-right: 20px;\n}\n\n.cont-button {\n  margin-right: 10px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7RUFDYix1QkFBdUI7RUFDdkIsbUJBQW1CO0VBQ25CLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLFlBQVk7RUFDWixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEIiLCJmaWxlIjoic3JjL2FwcC9ob21lL2hvbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWluLWRpdiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4uY29udC1mb3JtIHtcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xufVxuXG4uY29udC10aXRsZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xufVxuXG4uY29udC1pbnB1dCB7XG4gIHdpZHRoOiAyNzVweDtcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xufVxuXG4uY29udC1idXR0b24ge1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -1058,7 +1234,7 @@ module.exports = ".home_search\n{\n  width: 100%;\n  z-index: 100;\n  background
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"hero is-info is-fullheight is-bold\">\n  <div class=\"hero-body\">\n    <h1 class=\"title\">Search </h1>\n    <div class=\"container\">\n      <!-- Home Search -->\n      <div class=\"home_search\">\n        <div class=\"container\">\n          <div class=\"row\">\n            <div class=\"col\">\n              <div class=\"home_search_container\">\n                <div class=\"home_search_content\">\n                  <form action=\"#\" class=\"search_form d-flex flex-row align-items-start justfy-content-start\">\n                    <div class=\"search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap\">\n                      <div>\n                        <select class=\"search_form_select\">\n                          <option disabled selected>For rent </option>\n                          <option>Yes</option>\n                          <option>No</option>\n                        </select>\n                      </div>\n                      <div>\n                        <select class=\"search_form_select\">\n                          <option disabled selected>All types</option>\n                          <option>Apartment</option>\n                          <option>House</option>\n                          <option>Condo</option>\n                          <option>TownHouse</option>\n                        </select>\n                      </div>\n                      <div>\n                        <select class=\"search_form_select\">\n                          <option disabled selected>City</option>\n                          <option>New York</option>\n                          <option>Paris</option>\n                          <option>Amsterdam</option>\n                          <option>Rome</option>\n                        </select>\n                      </div>\n                      <div>\n                        <select class=\"search_form_select\">\n                          <option disabled selected>Bedrooms</option>\n                          <option>Any</option>\n                          <option>Studio</option>\n                          <option>1 Bed</option>\n                          <option>2 Bed</option>\n                          <option>3 Bed</option>\n                          <option>4 Bed</option>\n                        </select>\n                      </div>\n                      <div>\n                        <select class=\"search_form_select\">\n                          <option disabled selected>Bathrooms</option>\n                          <option>1</option>\n                          <option>1.5</option>\n                          <option>2</option>\n                          <option>2.5</option>\n                          <option>3</option>\n                        </select>\n                      </div>\n                    </div>\n                    <button class=\"search_form_button ml-auto\">search</button>\n                  </form>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n\n    </div>\n  </div>\n</section>\n\n\n\n"
+module.exports = "<section class=\"hero is-info is-fullheight is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"container\">\n      <h1 class=\"cont-title\">Search Page</h1>\n\n      <div class=\"main-div\">\n        <mat-card>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Select Listing Type</mat-label>\n            <mat-select [(value)]=\"listingSearch.listingType\">\n              <mat-option value=\"Any\">Any</mat-option>\n              <mat-option value=\"House\">House</mat-option>\n              <mat-option value=\"Apartment\">Apartment</mat-option>\n              <mat-option value=\"Condo\">Condo</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Select Bedrooms</mat-label>\n            <mat-select [(value)]=\"listingSearch.numBedrooms\">\n              <mat-option value=0>Any</mat-option>\n              <mat-option value=1>1 Bed</mat-option>\n              <mat-option value=2>2 Beds</mat-option>\n              <mat-option value=3>3 Beds</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Select Bathrooms</mat-label>\n            <mat-select [(value)]=\"listingSearch.numBathrooms\">\n              <mat-option value=0>Any</mat-option>\n              <mat-option value=1>1</mat-option>\n              <mat-option value=2>2</mat-option>\n              <mat-option value=3>3</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-input\">\n            <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" required>\n          </mat-form-field>\n\n          <button class=\"cont-button\" mat-raised-button color=\"primary\" (click)=\"onSearchClick()\">Search</button>\n\n        </mat-card>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n  </div>\n</section>\n"
 
 /***/ }),
 
@@ -1074,19 +1250,73 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../register/register.dialog */ "./src/app/register/register.dialog.ts");
+/* harmony import */ var _core_services_search_listings_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/services/search.listings.service */ "./src/app/core/services/search.listings.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+
 
 
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent() {
+    function HomeComponent(router, searchService, dialog) {
+        this.router = router;
+        this.searchService = searchService;
+        this.dialog = dialog;
+        this.isLoaded = true;
     }
-    HomeComponent.prototype.ngOnInit = function () { };
+    HomeComponent.prototype.ngOnInit = function () {
+        this.listingSearch = {
+            city: ''
+        };
+    };
+    HomeComponent.prototype.onSearchClick = function () {
+        var _this = this;
+        if (!this.listingSearch.city.length) {
+            this.openDialog('Please enter some text for the city field');
+        }
+        else {
+            this.isLoaded = false;
+            this.searchService.getSearchListings(this.listingSearch)
+                .subscribe(function (listings) {
+                _this.isLoaded = true;
+                _this.saveListings(listings);
+                _this.openDialog('Successfully retrieved Listings!', true);
+            }, function (err) {
+                _this.isLoaded = true;
+                _this.openDialog('Unable to retrieve any listings based on your search. Please try again');
+            });
+        }
+    };
+    HomeComponent.prototype.saveListings = function (listings) {
+        this.searchService.listings = listings;
+    };
+    HomeComponent.prototype.openDialog = function (message, subscribe) {
+        var _this = this;
+        if (subscribe === void 0) { subscribe = false; }
+        var dialog = this.dialog.open(_register_register_dialog__WEBPACK_IMPORTED_MODULE_3__["RegisterDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        if (subscribe) {
+            dialog.afterClosed().subscribe(function (result) {
+                _this.router.navigate(['/search-results']);
+            });
+        }
+    };
     HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-home',
             template: __webpack_require__(/*! ./home.component.html */ "./src/app/home/home.component.html"),
             styles: [__webpack_require__(/*! ./home.component.css */ "./src/app/home/home.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"],
+            _core_services_search_listings_service__WEBPACK_IMPORTED_MODULE_4__["SearchListingsService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]])
     ], HomeComponent);
     return HomeComponent;
 }());
@@ -1312,10 +1542,10 @@ var RegisterComponent = /** @class */ (function () {
                 .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])())
                 .subscribe(function (data) {
                 _this.isLoaded = true;
-                _this.openDialog('Registration successful!', true);
+                _this.openDialog('Registration successful! You may login now', true);
             }, function (error) {
                 _this.isLoaded = true;
-                _this.openDialog('Username is already taken. Please choose another username', false);
+                _this.openDialog('Username or email is already taken. Please try again', false);
             });
         }
         else {
@@ -1371,7 +1601,7 @@ var RegisterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-dialog-content>\n  {{data.message}}\n</mat-dialog-content>\n<mat-dialog-actions align=\"center\">\n  <button mat-raised-button color=\"primary\" (click)=\"onOkClick()\">Ok</button>\n</mat-dialog-actions>\n"
+module.exports = "<mat-dialog-content>\n  <p>{{data.message}}</p>\n</mat-dialog-content>\n<mat-dialog-actions align=\"center\">\n  <button mat-raised-button color=\"primary\" (click)=\"onOkClick()\">Ok</button>\n</mat-dialog-actions>\n"
 
 /***/ }),
 
@@ -1408,6 +1638,67 @@ var RegisterDialog = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object])
     ], RegisterDialog);
     return RegisterDialog;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/search-results/search-results.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/search-results/search-results.component.css ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NlYXJjaC1yZXN1bHRzL3NlYXJjaC1yZXN1bHRzLmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/search-results/search-results.component.html":
+/*!**************************************************************!*\
+  !*** ./src/app/search-results/search-results.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-list>\n\n  <h1 mat-subheader>Listings</h1>\n  <mat-divider></mat-divider>\n  <mat-list-item *ngFor=\"let listing of listings\">\n    <p mat-line>title: {{listing.title}}</p>\n    <p mat-line>city: {{listing.city}}</p>\n    <p mat-line>street: {{listing.street}}</p>\n    <p mat-line>bedrooms: {{listing.numBedrooms}}</p>\n    <p mat-line>bathrooms: {{listing.numBathrooms}}</p>\n    <mat-divider></mat-divider>\n  </mat-list-item>\n\n</mat-list>\n"
+
+/***/ }),
+
+/***/ "./src/app/search-results/search-results.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/search-results/search-results.component.ts ***!
+  \************************************************************/
+/*! exports provided: SearchResultsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchResultsComponent", function() { return SearchResultsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core_services_search_listings_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/services/search.listings.service */ "./src/app/core/services/search.listings.service.ts");
+
+
+
+var SearchResultsComponent = /** @class */ (function () {
+    function SearchResultsComponent(searchService) {
+        this.searchService = searchService;
+    }
+    SearchResultsComponent.prototype.ngOnInit = function () {
+        this.listings = this.searchService.getListings();
+        console.log(this.listings);
+    };
+    SearchResultsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-search-results',
+            template: __webpack_require__(/*! ./search-results.component.html */ "./src/app/search-results/search-results.component.html"),
+            styles: [__webpack_require__(/*! ./search-results.component.css */ "./src/app/search-results/search-results.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_core_services_search_listings_service__WEBPACK_IMPORTED_MODULE_2__["SearchListingsService"]])
+    ], SearchResultsComponent);
+    return SearchResultsComponent;
 }());
 
 

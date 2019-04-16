@@ -29,6 +29,7 @@
     "@covalent/markdown": "^2.0.1",
     "@ng-bootstrap/ng-bootstrap": "^4.0.4",
     "angular-material-fileupload": "^2.0.0",
+    "@types/jquery": "^3.3.29",
     "bcrypt": "^3.0.5",
     "bulma": "^0.7.4",
     "core-js": "^2.5.4",

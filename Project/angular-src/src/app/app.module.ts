@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatSelectModule} from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -50,6 +51,7 @@ import { CovalentHighlightModule } from '@covalent/highlight';
 import { CovalentMarkdownModule } from '@covalent/markdown';
 import { CovalentDynamicFormsModule } from '@covalent/dynamic-forms';
 import {CovalentFileModule} from "@covalent/core";
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,8 @@ import {CovalentFileModule} from "@covalent/core";
     RegisterDialog,
     LoginComponent,
     ExampleComponent,
+    AlertComponent,
+    SearchResultsComponent
     AlertComponent,
     UploadComponent
   ],
@@ -102,6 +106,7 @@ import {CovalentFileModule} from "@covalent/core";
     CovalentMarkdownModule,
     CovalentDynamicFormsModule,
     CovalentFileModule,
+    MatSelectModule,
     MatDialogModule,
     FlexLayoutModule
   ],

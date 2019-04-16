@@ -12,6 +12,12 @@ const apiLoginRouter = require('./controllers/login');
 const app = express();
 app.enable('trust proxy');
 
+var database = require('./models/cloudsql');
+
+var apiExampleRouter = require('./controllers/example');
+var apiLoginRouter = require('./controllers/login');
+const apiSearchRouter = require('./controllers/search');
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -25,7 +31,9 @@ app.use('/about-us', express.static(path.join(__dirname, 'public')));
 app.use('/example', express.static(path.join(__dirname, 'public')));
 app.use('/register', express.static(path.join(__dirname, 'public')));
 app.use('/login', express.static(path.join(__dirname, 'public')));
+app.use('/search-results', express.static(path.join(__dirname, 'public')));
 
+app.use('/api/search', apiSearchRouter);
 app.use('/api/example', apiExampleRouter);
 app.use('/api/register',apiRegisterRouter);
 app.use('/api/login', apiLoginRouter);
