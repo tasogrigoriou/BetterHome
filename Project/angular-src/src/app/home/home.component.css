@@ -5,6 +5,7 @@
 }
 
 .cont-form {
+  margin-top: 8px;
   margin-right: 20px;
 }
 
@@ -16,14 +17,10 @@
 }
 
 .cont-input {
-  width: 275px;
+  width: 240px;
   margin-right: 20px;
 }
 
 .cont-button {
   margin-right: 10px;
 }
-
-/*.hero {*/
-  /*!*min-height: calc(100% - 64px - 64px);*!*/
-/*}*/

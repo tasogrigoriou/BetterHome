@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.searchService.getSearchListings(this.listingSearch)
         .subscribe(listings => {
         this.isLoaded = true;
-        this.saveListings(listings);
+        this.searchService.saveSearchListings(listings);
         this.openDialog('Successfully retrieved Listings!', true);
       },
             err => {
@@ -56,10 +56,6 @@ export class HomeComponent implements OnInit, OnDestroy {
           this.openDialog('Unable to retrieve any listings based on your search. Please try again');
       });
     }
-  }
-
-  saveListings(listings: Listing[]) {
-    this.searchService.listings = listings;
   }
 
   openDialog(message: string, subscribe: boolean = false) {

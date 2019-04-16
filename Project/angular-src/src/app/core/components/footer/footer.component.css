@@ -11,24 +11,31 @@
 
 /* unvisited link */
 a:link {
-  color: white;
+  color: rgba(0, 0, 0, 0.75);
 }
 
 /* visited link */
 a:visited {
-  color: white;
+  color: rgba(0, 0, 0, 0.75);
 }
 
 /* mouse over link */
 a:hover {
-  color: white;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 /* selected link */
 a:active {
-  color: white;
+  color: rgba(0, 0, 0, 0.75);
 }
 
 a {
   text-decoration: none;
+  padding-right: 10px;
+  padding-bottom: 6px;
+  font-size: 14px;
+}
+
+.my-header {
+  padding-left: 5px;
 }

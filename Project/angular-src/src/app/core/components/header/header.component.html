@@ -29,17 +29,24 @@
   <!--</mat-toolbar-row>-->
 <!--</mat-toolbar>-->
 
-<mat-toolbar color="primary" class="my-toolbar">
+<mat-toolbar color="primary" class="mat-elevation-z2 my-toolbar">
   <span>
-    <a mat-button [routerLink]="'/'"><h3>Better Home</h3></a>
+    <a [routerLink]="'/'"><h3 class="my-header">Better Home</h3></a>
   </span>
 
   <!-- This fills the remaining space of the current row -->
   <span class="example-fill-remaining-space"></span>
 
   <!--<span>Right Aligned Text</span>-->
-  <a mat-button [routerLink]="'/login'">Login</a>
-  <a mat-button [routerLink]="'/register'">Register</a>
+  <ng-template [ngIf]="loginUser">
+  <a [routerLink]="'/example'">Post Listing</a>
+  <a [routerLink]="'/logout'">Logout</a>
+  </ng-template>
+
+  <ng-template [ngIf]="!loginUser">
+    <a [routerLink]="'/login'">Login</a>
+    <a [routerLink]="'/register'">Register</a>
+  </ng-template>
 
 <a mat-button *ngFor="let link of links" [routerLink]="link.path">
 {{link.label}}
