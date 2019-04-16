@@ -1,32 +1,33 @@
-<mat-toolbar>
-  <span>Registration</span>
-</mat-toolbar>
-<mat-card class="my-card">
+<section class="hero is-info is-fullheight-with-navbar is-bold">
+  <div class="hero-body">
+      <div class="main-div">
+<mat-card>
+  <mat-card-title class="main-div">Register</mat-card-title>
   <mat-card-content>
 
       <!--FORM FIELDS HERE-->
     <div fxLayout="column" fxLayoutAlign="center">
-      <mat-form-field class="full-width">
+      <mat-form-field class="cont-input">
         <mat-label>First Name</mat-label>
         <input matInput placeholder="First name" [(ngModel)]="user.firstName" name="firstName" required><br>
       </mat-form-field>
-      <mat-form-field class="full-width">
+      <mat-form-field class="cont-input">
         <mat-label>Last Name</mat-label>
         <input matInput placeholder="Last name" [(ngModel)]="user.lastName" name="lastName" required>
       </mat-form-field>
-      <mat-form-field class="full-width">
+      <mat-form-field class="cont-input">
         <mat-label>Username</mat-label>
         <input matInput placeholder="Username" [(ngModel)]="user.username" name="username" required>
       </mat-form-field>
-      <mat-form-field class="full-width">
+      <mat-form-field class="cont-input">
         <mat-label>Password</mat-label>
         <input matInput type="password" placeholder="Password" [(ngModel)]="user.password" name="password" required>
       </mat-form-field>
-      <mat-form-field class="full-width">
+      <mat-form-field class="cont-input">
         <mat-label>Email Address</mat-label>
         <input matInput placeholder="Email address" [(ngModel)]="user.emailAddress" name="emailAddress" required>
       </mat-form-field>
-      <mat-form-field class="full-width">
+      <mat-form-field class="cont-input">
         <mat-label>Phone Number</mat-label>
         <input matInput placeholder="Phone number" [(ngModel)]="user.phoneNumber" name="phoneNumber" required>
       </mat-form-field>
@@ -36,9 +37,14 @@
   <mat-card-actions>
 
     <!-- REGISTER BUTTON -->
+    <div class="my-button" fxLayout="column" fxLayoutAlign="center">
     <button mat-raised-button (click)="onSubmit()" color="primary">Register</button>
+    </div>
 
     <mat-spinner *ngIf="!isLoaded"></mat-spinner>
 
   </mat-card-actions>
 </mat-card>
+      </div>
+    </div>
+</section>
