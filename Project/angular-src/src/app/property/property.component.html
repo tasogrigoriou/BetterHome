@@ -18,7 +18,7 @@
   </div>
 </div>
 <div class = "space">
-  Showing 1 - 9 of {{numberOfResult}} results .
+  Showing 1 - 9 of {{numberOfResult}} results.
 </div>
 
 
@@ -27,10 +27,8 @@
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened>
     <mat-list role="list">
-      <mat-list-item role="listitem">
-        <mat-checkbox>For Sell</mat-checkbox>
-      </mat-list-item>
-      <mat-list-item role="listitem"><mat-checkbox>For rent</mat-checkbox></mat-list-item>
+      <mat-list-item role="listitem"><mat-checkbox>For Sell</mat-checkbox></mat-list-item>
+      <mat-list-item role="listitem"><mat-checkbox>For Rent</mat-checkbox></mat-list-item>
       <mat-list-item role="listitem">Price range</mat-list-item>
       <mat-list role="list">
         <mat-list-item role="listitem"><mat-checkbox>Under $100k</mat-checkbox></mat-list-item>
@@ -47,11 +45,12 @@
       <mat-list role="list">
         <mat-list-item role="listitem"> <mat-checkbox>House</mat-checkbox></mat-list-item>
         <mat-list-item role="listitem"> <mat-checkbox>Apartment</mat-checkbox></mat-list-item>
-        <mat-list-item role="listitem"> <mat-checkbox>TownHouse</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem"> <mat-checkbox>Condo</mat-checkbox></mat-list-item>
       </mat-list>
     </mat-list>
   </mat-drawer>
   <mat-drawer-content>
+
 
     <section class="section">
       <div class="container">
@@ -59,13 +58,9 @@
           <div class="column is-4" *ngFor="let listing of listings">
             <div class="card">
               <div class="card-content">
-                <a [routerLink]="[listing.title]" skipLocationChange="true"><p>{{ listing.title}}</p></a>
-                <p>{{ listing.photoUrl }}</p>
-                <p>{{ listing.street }}</p>
-                <p>{{ listing.city }}</p>
-                <p>{{ listing.state }}</p>
-                <p>{{ listing.numBedrooms }} Bedrooms</p>
-                <p>{{ listing.numBathrooms }} Bathrooms</p>
+                <P><a [routerLink]="[listing.Lid]">{{ listing.title }}</a></P>
+                <p>{{ listing.street }} ,{{ listing.city }} ,{{ listing.zipCode }}</p>
+                <p>$ {{ listing.price}}</p>
 
               </div>
             </div>

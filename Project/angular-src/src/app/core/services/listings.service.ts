@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {zip} from "rxjs";
 
 @Injectable()
 export class ListingsService {
@@ -9,76 +10,97 @@ export class ListingsService {
      return[
        this.exampleListing1,
        this.exampleListing2,
-       this.exampleListing3,
-       this.exampleListing4
+       this.exampleListing3
 
 
      ];
   }
+
+  getListingById(id: number): Listing {
+    let listings = this.getListings();
+    for (let i = 0; i < listings.length; i++) {
+      if (id == listings[i].Lid) {
+        return listings[i];
+      }
+    }
+    return null;
+  }
+
   public exampleListing1 = new Listing(
-    'listing1',
-    'photo1',
-    'street1',
+    69,
+    0,
+    'Example Listing1',
+    'House',
+    3000,
     'San Francisco',
     'California',
-    '1',
+    94132,
+    'example street1',
+    true,
+    2,
     '2'
   );
   public exampleListing2 = new Listing(
-    'listing2',
-    'photo2',
-    ' street2',
-    'New York City',
-    'New York',
-    '1',
-    '2'
+    70,
+    0,
+    'Example Listing2',
+    'Apartment',
+    10000,
+    "San Francisco",
+    'California',
+    94132,
+    'example street2',
+    true,
+    3,
+    '3'
   );
   public exampleListing3 = new Listing(
-    'listing3',
-    'photo3',
-    ' street3',
-    'New York City',
-    'New York',
-    '2',
-    '1'
-  );
-  public exampleListing4 = new Listing(
-    'listing4',
-    'photo4',
-    ' street4',
-    'San Francisco',
+    71,
+    0,
+    'Example Listing2',
+    'Condo',
+    30000,
+    "San Francisco",
     'California',
-    '2',
-    '1'
+    94132,
+    'example street3',
+    false,
+    3,
+    '2.5'
   );
 
 
 
 }
-
-
-
 export class Listing {
-  public title: string;
-  public photoUrl: string
-  public street: string;
-  public city: string;
-  public state: string;
-  public numBedrooms:string;
-  public numBathrooms:string;
+  Lid: number;
+  DisplayBoard_boardId: number;
+  title: string;
+  listingType: string;
+  price: number;
+  city: string;
+  state:string;
+  zipCode: number;
+  street: string;
+  forSale: boolean;
+  numBedrooms: number;
+  numBathrooms: string;
 
-
-
-  constructor(title:string,photoUrl:string, street: string, city: string, state:string,numBedrooms:string,numBathrooms:string,) {
+  constructor(Lid: number, DisplayBoard_boardId: number, title: string, listingType: string, price: number, city: string,state:string, zipCode: number,
+              street: string, forSale: boolean, numBedrooms: number, numBathrooms: string)
+  {
+    this.Lid = Lid;
+    this.DisplayBoard_boardId = DisplayBoard_boardId;
     this.title = title;
-    this.photoUrl = photoUrl;
-    this.street = street;
+    this.listingType = listingType;
+    this.price = price;
     this.city = city;
     this.state = state;
+    this.zipCode = zipCode;
+    this.street = street;
+    this.forSale = forSale;
     this.numBedrooms = numBedrooms;
     this.numBathrooms = numBathrooms;
-
-
   }
 }
 

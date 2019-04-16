@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from "./home/home.component";
-import {PropertyComponent} from "./property/property.component";
 import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
 import {ExampleComponent} from "./example/example.component";
 import {SearchResultsComponent} from "./search-results/search-results.component";
-
 const routes: Routes = [
   {
     path: '',
@@ -19,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'property',
-    component: PropertyComponent
+    loadChildren: './property/property.module#PropertyModule'
   },
 
   {
