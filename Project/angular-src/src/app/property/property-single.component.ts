@@ -17,7 +17,7 @@ export class PropertySingleComponent implements OnInit {
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
-      this.listing = new Listing(params['listingAddress'], params['listingCity'], params['listingState']);
+      this.listing = new Listing(params['title'],params['photoUrl'],params['street'],params['city'], params['state'],params['numBedrooms'],params['numBathrooms']);
     });
   }
 }

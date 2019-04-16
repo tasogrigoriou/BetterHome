@@ -16,38 +16,69 @@ export class ListingsService {
      ];
   }
   public exampleListing1 = new Listing(
-    '1 4th St',
-    ' San Francisco',
-    'California'
+    'listing1',
+    'photo1',
+    'street1',
+    'San Francisco',
+    'California',
+    '1',
+    '2'
   );
   public exampleListing2 = new Listing(
-    '3 8th Ave',
-    ' New York City',
-    'New York'
+    'listing2',
+    'photo2',
+    ' street2',
+    'New York City',
+    'New York',
+    '1',
+    '2'
   );
   public exampleListing3 = new Listing(
-    '2 Wall St',
-    ' New York City',
-    'New York'
+    'listing3',
+    'photo3',
+    ' street3',
+    'New York City',
+    'New York',
+    '2',
+    '1'
   );
   public exampleListing4 = new Listing(
-    '4 Lombard St',
-    ' San Francisco',
-    'California'
+    'listing4',
+    'photo4',
+    ' street4',
+    'San Francisco',
+    'California',
+    '2',
+    '1'
   );
 
 
 
 }
-export class Listing {
-  public listingAddress: string;
-  public listingCity: string;
-  public listingState: string;
 
-  constructor(listingAddress: string, listingCity: string, listingState: string) {
-    this.listingAddress = listingAddress;
-    this.listingCity = listingCity;
-    this.listingState = listingState;
+
+
+export class Listing {
+  public title: string;
+  public photoUrl: string
+  public street: string;
+  public city: string;
+  public state: string;
+  public numBedrooms:string;
+  public numBathrooms:string;
+
+
+
+  constructor(title:string,photoUrl:string, street: string, city: string, state:string,numBedrooms:string,numBathrooms:string,) {
+    this.title = title;
+    this.photoUrl = photoUrl;
+    this.street = street;
+    this.city = city;
+    this.state = state;
+    this.numBedrooms = numBedrooms;
+    this.numBathrooms = numBathrooms;
+
+
   }
 }
 
