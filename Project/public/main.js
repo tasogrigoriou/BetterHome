@@ -11,6 +11,10 @@ var map = {
 	"./about-us/about-us.module": [
 		"./src/app/about-us/about-us.module.ts",
 		"about-us-about-us-module"
+	],
+	"./property/property.module": [
+		"./src/app/property/property.module.ts",
+		"property-property-module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -49,13 +53,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _property_property_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./property/property.component */ "./src/app/property/property.component.ts");
-/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _example_example_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./example/example.component */ "./src/app/example/example.component.ts");
-/* harmony import */ var _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./search-results/search-results.component */ "./src/app/search-results/search-results.component.ts");
-/* harmony import */ var _logout_logout_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./logout/logout.component */ "./src/app/logout/logout.component.ts");
-
+/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _example_example_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./example/example.component */ "./src/app/example/example.component.ts");
+/* harmony import */ var _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./search-results/search-results.component */ "./src/app/search-results/search-results.component.ts");
+/* harmony import */ var _logout_logout_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./logout/logout.component */ "./src/app/logout/logout.component.ts");
 
 
 
@@ -77,28 +79,28 @@ var routes = [
     },
     {
         path: 'property',
-        component: _property_property_component__WEBPACK_IMPORTED_MODULE_4__["PropertyComponent"]
+        loadChildren: './property/property.module#PropertyModule'
     },
     {
         path: 'register',
-        component: _register_register_component__WEBPACK_IMPORTED_MODULE_5__["RegisterComponent"]
+        component: _register_register_component__WEBPACK_IMPORTED_MODULE_4__["RegisterComponent"]
     },
     {
         path: 'login',
-        component: _login_login_component__WEBPACK_IMPORTED_MODULE_6__["LoginComponent"]
+        component: _login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"]
     },
     {
         path: 'logout',
-        component: _logout_logout_component__WEBPACK_IMPORTED_MODULE_9__["LogoutComponent"]
+        component: _logout_logout_component__WEBPACK_IMPORTED_MODULE_8__["LogoutComponent"]
     },
     {
         path: 'example',
-        component: _example_example_component__WEBPACK_IMPORTED_MODULE_7__["ExampleComponent"],
+        component: _example_example_component__WEBPACK_IMPORTED_MODULE_6__["ExampleComponent"],
         data: { title: 'Example Fake Data' }
     },
     {
         path: 'search-results',
-        component: _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_8__["SearchResultsComponent"]
+        component: _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_7__["SearchResultsComponent"]
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -191,24 +193,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./core/core.module */ "./src/app/core/core.module.ts");
 /* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _property_property_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./property/property.component */ "./src/app/property/property.component.ts");
-/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
-/* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./register/register.dialog */ "./src/app/register/register.dialog.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _example_example_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./example/example.component */ "./src/app/example/example.component.ts");
-/* harmony import */ var _core_components_alert_alert_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./core/components/alert/alert.component */ "./src/app/core/components/alert/alert.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
-/* harmony import */ var _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/grid-list */ "./node_modules/@angular/material/esm5/grid-list.es5.js");
-/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@angular/material/esm5/menu.es5.js");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
-/* harmony import */ var _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./search-results/search-results.component */ "./src/app/search-results/search-results.component.ts");
-/* harmony import */ var _logout_logout_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./logout/logout.component */ "./src/app/logout/logout.component.ts");
-
+/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
+/* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./register/register.dialog */ "./src/app/register/register.dialog.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _example_example_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./example/example.component */ "./src/app/example/example.component.ts");
+/* harmony import */ var _core_components_alert_alert_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./core/components/alert/alert.component */ "./src/app/core/components/alert/alert.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
+/* harmony import */ var _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/grid-list */ "./node_modules/@angular/material/esm5/grid-list.es5.js");
+/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@angular/material/esm5/menu.es5.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./search-results/search-results.component */ "./src/app/search-results/search-results.component.ts");
+/* harmony import */ var _logout_logout_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./logout/logout.component */ "./src/app/logout/logout.component.ts");
 
 
 
@@ -242,30 +242,29 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
                 _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
-                _property_property_component__WEBPACK_IMPORTED_MODULE_8__["PropertyComponent"],
-                _register_register_component__WEBPACK_IMPORTED_MODULE_9__["RegisterComponent"],
-                _register_register_dialog__WEBPACK_IMPORTED_MODULE_10__["RegisterDialog"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"],
-                _example_example_component__WEBPACK_IMPORTED_MODULE_12__["ExampleComponent"],
-                _core_components_alert_alert_component__WEBPACK_IMPORTED_MODULE_13__["AlertComponent"],
-                _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_23__["SearchResultsComponent"],
-                _logout_logout_component__WEBPACK_IMPORTED_MODULE_24__["LogoutComponent"]
+                _register_register_component__WEBPACK_IMPORTED_MODULE_8__["RegisterComponent"],
+                _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__["RegisterDialog"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"],
+                _example_example_component__WEBPACK_IMPORTED_MODULE_11__["ExampleComponent"],
+                _core_components_alert_alert_component__WEBPACK_IMPORTED_MODULE_12__["AlertComponent"],
+                _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_22__["SearchResultsComponent"],
+                _logout_logout_component__WEBPACK_IMPORTED_MODULE_23__["LogoutComponent"]
             ],
             entryComponents: [
-                _register_register_dialog__WEBPACK_IMPORTED_MODULE_10__["RegisterDialog"]
+                _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__["RegisterDialog"]
             ],
             imports: [
-                _angular_material_menu__WEBPACK_IMPORTED_MODULE_20__["MatMenuModule"],
-                _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_19__["MatGridListModule"],
-                _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_18__["MatCheckboxModule"],
+                _angular_material_menu__WEBPACK_IMPORTED_MODULE_19__["MatMenuModule"],
+                _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_18__["MatGridListModule"],
+                _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_17__["MatCheckboxModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
                 _core_core_module__WEBPACK_IMPORTED_MODULE_6__["CoreModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__["NgbModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_16__["FormsModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ReactiveFormsModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_17__["HttpClientModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__["BrowserAnimationsModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_14__["NgbModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_15__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_15__["ReactiveFormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_16__["HttpClientModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatListModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatInputModule"],
@@ -279,8 +278,8 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatFormFieldModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSelectModule"],
-                _angular_material_dialog__WEBPACK_IMPORTED_MODULE_21__["MatDialogModule"],
-                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_22__["FlexLayoutModule"]
+                _angular_material_dialog__WEBPACK_IMPORTED_MODULE_20__["MatDialogModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_21__["FlexLayoutModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
@@ -693,18 +692,25 @@ __webpack_require__.r(__webpack_exports__);
 
 var ListingsService = /** @class */ (function () {
     function ListingsService() {
-        this.exampleListing1 = new Listing('1 4th St', ' San Francisco', 'California');
-        this.exampleListing2 = new Listing('3 8th Ave', ' New York City', 'New York');
-        this.exampleListing3 = new Listing('2 Wall St', ' New York City', 'New York');
-        this.exampleListing4 = new Listing('4 Lombard St', ' San Francisco', 'California');
+        this.exampleListing1 = new Listing(69, 0, 'California', 'Sale', 3000, 'San Francisco', 94132, '4th St', true, 2, '2');
+        this.exampleListing2 = new Listing(70, 0, 'California', 'Sale', 3000, '2', 94132, '8th St', true, 3, '3');
+        this.exampleListing3 = new Listing(71, 0, 'California', 'Sale', 3000, '2', 94132, '11th St', false, 3, '2 1/2');
     }
     ListingsService.prototype.getListings = function () {
         return [
             this.exampleListing1,
             this.exampleListing2,
-            this.exampleListing3,
-            this.exampleListing4
+            this.exampleListing3
         ];
+    };
+    ListingsService.prototype.getListingById = function (id) {
+        var listings = this.getListings();
+        for (var i = 0; i < listings.length; i++) {
+            if (id == listings[i].Lid) {
+                return listings[i];
+            }
+        }
+        return null;
     };
     ListingsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
@@ -714,10 +720,18 @@ var ListingsService = /** @class */ (function () {
 }());
 
 var Listing = /** @class */ (function () {
-    function Listing(listingAddress, listingCity, listingState) {
-        this.listingAddress = listingAddress;
-        this.listingCity = listingCity;
-        this.listingState = listingState;
+    function Listing(Lid, DisplayBoard_boardId, title, listingType, price, city, zipCode, street, forSale, numBedrooms, numBathrooms) {
+        this.Lid = Lid;
+        this.DisplayBoard_boardId = DisplayBoard_boardId;
+        this.title = title;
+        this.listingType = listingType;
+        this.price = price;
+        this.city = city;
+        this.zipCode = zipCode;
+        this.street = street;
+        this.forSale = forSale;
+        this.numBedrooms = numBedrooms;
+        this.numBathrooms = numBathrooms;
     }
     return Listing;
 }());
@@ -1389,67 +1403,6 @@ var LogoutComponent = /** @class */ (function () {
             _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialog"]])
     ], LogoutComponent);
     return LogoutComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/property/property.component.css":
-/*!*************************************************!*\
-  !*** ./src/app/property/property.component.css ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".example-container {\n  width: 1100px;\n  height:940px;\n  margin: 10px;\n  border: 1px none #555;\n}\n\n.example-button-row button {\n  margin-left: 8px;\n  margin-right: 400px;\n  background-color: aliceblue;\n}\n\n.space{margin-left:10px;}\n\nmat-grid-tile {\n  background: lightblue;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvcGVydHkvcHJvcGVydHkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYixZQUFZO0VBQ1osWUFBWTtFQUNaLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixtQkFBbUI7RUFDbkIsMkJBQTJCO0FBQzdCOztBQUVBLE9BQU8sZ0JBQWdCLENBQUM7O0FBR3hCO0VBQ0UscUJBQXFCO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvcHJvcGVydHkvcHJvcGVydHkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5leGFtcGxlLWNvbnRhaW5lciB7XG4gIHdpZHRoOiAxMTAwcHg7XG4gIGhlaWdodDo5NDBweDtcbiAgbWFyZ2luOiAxMHB4O1xuICBib3JkZXI6IDFweCBub25lICM1NTU7XG59XG5cbi5leGFtcGxlLWJ1dHRvbi1yb3cgYnV0dG9uIHtcbiAgbWFyZ2luLWxlZnQ6IDhweDtcbiAgbWFyZ2luLXJpZ2h0OiA0MDBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogYWxpY2VibHVlO1xufVxuXG4uc3BhY2V7bWFyZ2luLWxlZnQ6MTBweDt9XG5cblxubWF0LWdyaWQtdGlsZSB7XG4gIGJhY2tncm91bmQ6IGxpZ2h0Ymx1ZTtcbn1cbiJdfQ== */"
-
-/***/ }),
-
-/***/ "./src/app/property/property.component.html":
-/*!**************************************************!*\
-  !*** ./src/app/property/property.component.html ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<mat-toolbar>\n\n    <span>Property Listings</span>\n\n</mat-toolbar>\n<P>\n</P>\n<div>\n  <div class=\"example-button-row\">\n    <button mat-raised-button>Back to Search</button>\n\n    Sort By : <button mat-raised-button [matMenuTriggerFor]=\"menu\">Relevance</button>\n    <mat-menu #menu=\"matMenu\">\n      <button mat-menu-item>Price:low to high</button>\n      <button mat-menu-item>Price:high to low</button>\n      <button mat-menu-item>Newest</button>\n    </mat-menu>\n  </div>\n</div>\n<div class = \"space\">\n  Showing 1 - 9 of {{numberOfResult}} results.\n</div>\n\n\n\n\n<mat-drawer-container class=\"example-container\">\n  <mat-drawer mode=\"side\" opened>\n    <mat-list role=\"list\">\n      <mat-list-item role=\"listitem\"><mat-checkbox>For Sell</mat-checkbox></mat-list-item>\n      <mat-list-item role=\"listitem\"><mat-checkbox>For rent</mat-checkbox></mat-list-item>\n      <mat-list-item role=\"listitem\">Price range</mat-list-item>\n      <mat-list role=\"list\">\n        <mat-list-item role=\"listitem\"><mat-checkbox>Under $100k</mat-checkbox></mat-list-item>\n        <mat-list-item role=\"listitem\"><mat-checkbox>$100k to $200k</mat-checkbox></mat-list-item>\n        <mat-list-item role=\"listitem\"><mat-checkbox>Over $200k</mat-checkbox></mat-list-item>\n      </mat-list>\n      <mat-list-item role=\"listitem\">Bed Rooms</mat-list-item>\n      <mat-list role=\"list\">\n        <mat-list-item role=\"listitem\"><mat-checkbox>1+</mat-checkbox></mat-list-item>\n        <mat-list-item role=\"listitem\"><mat-checkbox>2+</mat-checkbox></mat-list-item>\n        <mat-list-item role=\"listitem\"><mat-checkbox>3+</mat-checkbox></mat-list-item>\n      </mat-list>\n      <mat-list-item role=\"listitem\">Property Type</mat-list-item>\n      <mat-list role=\"list\">\n        <mat-list-item role=\"listitem\"> <mat-checkbox>House</mat-checkbox></mat-list-item>\n        <mat-list-item role=\"listitem\"> <mat-checkbox>Apartment</mat-checkbox></mat-list-item>\n        <mat-list-item role=\"listitem\"> <mat-checkbox>TownHouse</mat-checkbox></mat-list-item>\n      </mat-list>\n    </mat-list>\n  </mat-drawer>\n  <mat-drawer-content>\n    <!--<mat-grid-list cols=\"2\" rowHeight=\"2:1\">-->\n      <!--<mat-grid-tile></mat-grid-tile>-->\n      <!--<mat-grid-tile>2</mat-grid-tile>-->\n      <!--<mat-grid-tile>3</mat-grid-tile>-->\n      <!--<mat-grid-tile>4</mat-grid-tile>-->\n      <!--<mat-grid-tile>5</mat-grid-tile>-->\n      <!--<mat-grid-tile>6</mat-grid-tile>-->\n      <!--<mat-grid-tile>7</mat-grid-tile>-->\n      <!--<mat-grid-tile>8</mat-grid-tile>-->\n    <!--</mat-grid-list>-->\n\n    <section class=\"section\">\n      <div class=\"container\">\n        <div class=\"columns is-multiline\">\n          <div class=\"column is-4\" *ngFor=\"let listing of listings\">\n            <div class=\"card\">\n              <div class=\"card-content\">\n                <!--<a [routerLink]=\"[listing.listingAddress]\" skipLocationChange=\"true\" [queryParams]=\"{-->\n            <!--listingAddress: listing.listingAddress,-->\n            <!--listingCity: listing.listingCity,-->\n            <!--listingState: listing.listingState-->\n            <!--}\">{{ listing.listingAddress }}</a>-->\n                <p>{{ listing.listingAddress }}</p>\n                <p>{{ listing.listingCity }}</p>\n                <p>{{ listing.listingState }}</p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n\n  </mat-drawer-content>\n</mat-drawer-container>\n\n"
-
-/***/ }),
-
-/***/ "./src/app/property/property.component.ts":
-/*!************************************************!*\
-  !*** ./src/app/property/property.component.ts ***!
-  \************************************************/
-/*! exports provided: PropertyComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PropertyComponent", function() { return PropertyComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _core_services_listings_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/services/listings.service */ "./src/app/core/services/listings.service.ts");
-
-
-
-var PropertyComponent = /** @class */ (function () {
-    function PropertyComponent(listingsService) {
-        this.listingsService = listingsService;
-    }
-    PropertyComponent.prototype.ngOnInit = function () {
-        this.listings = this.listingsService.getListings();
-        this.numberOfResult = this.listings.length;
-    };
-    PropertyComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-property',
-            template: __webpack_require__(/*! ./property.component.html */ "./src/app/property/property.component.html"),
-            styles: [__webpack_require__(/*! ./property.component.css */ "./src/app/property/property.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_core_services_listings_service__WEBPACK_IMPORTED_MODULE_2__["ListingsService"]])
-    ], PropertyComponent);
-    return PropertyComponent;
 }());
 
 
