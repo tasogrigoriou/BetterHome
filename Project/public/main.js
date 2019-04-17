@@ -277,6 +277,16 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCardModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatFormFieldModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_23__["FlexLayoutModule"],
+                angular_material_fileupload__WEBPACK_IMPORTED_MODULE_24__["MatFileUploadModule"],
+                _covalent_core_layout__WEBPACK_IMPORTED_MODULE_25__["CovalentLayoutModule"],
+                _covalent_core_steps__WEBPACK_IMPORTED_MODULE_26__["CovalentStepsModule"],
+                // (optional) Additional Covalent Modules imports
+                _covalent_http__WEBPACK_IMPORTED_MODULE_27__["CovalentHttpModule"].forRoot(),
+                _covalent_highlight__WEBPACK_IMPORTED_MODULE_28__["CovalentHighlightModule"],
+                _covalent_markdown__WEBPACK_IMPORTED_MODULE_29__["CovalentMarkdownModule"],
+                _covalent_dynamic_forms__WEBPACK_IMPORTED_MODULE_30__["CovalentDynamicFormsModule"],
+                _covalent_core__WEBPACK_IMPORTED_MODULE_31__["CovalentFileModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSelectModule"],
                 _angular_material_dialog__WEBPACK_IMPORTED_MODULE_20__["MatDialogModule"],
                 _angular_flex_layout__WEBPACK_IMPORTED_MODULE_21__["FlexLayoutModule"]
@@ -461,6 +471,73 @@ var HeaderComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_login_service__WEBPACK_IMPORTED_MODULE_2__["LoginService"]])
     ], HeaderComponent);
     return HeaderComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/components/upload/upload.component.html":
+/*!**************************************************************!*\
+  !*** ./src/app/core/components/upload/upload.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!--Image Uploading-->\n\n<td-file-upload #fileMultipleUpload (upload)=\"uploadMultipleImages($event)\"\n                accept=\".jpg, .jpeg, .png, .tif\" defaultColor=\"primary\" activeColor=\"primary\" cancelColor=\"primary\" multiple>\n  <mat-icon>file_upload</mat-icon>\n  <span>\n    {{ fileMultipleUpload.value?.name || fileMultipleUpload.value?.length }} <span *ngIf=\"fileMultipleUpload.value?.length\">files selected</span>\n  </span>\n  <ng-template td-file-input-label>\n    <mat-icon>attach_file</mat-icon>\n    <span>\n      Upload images\n    </span>\n  </ng-template>\n</td-file-upload>\n"
+
+/***/ }),
+
+/***/ "./src/app/core/components/upload/upload.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/core/components/upload/upload.component.ts ***!
+  \************************************************************/
+/*! exports provided: UploadComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UploadComponent", function() { return UploadComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_upload_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/upload.service */ "./src/app/core/services/upload.service.ts");
+
+
+
+var UploadComponent = /** @class */ (function () {
+    function UploadComponent(uploadService) {
+        this.uploadService = uploadService;
+    }
+    UploadComponent.prototype.uploadMultipleImages = function (files) {
+        if (files instanceof FileList) {
+            for (var i = 0; i < files.length; i++) {
+                this.uploadService.uploadImage(files[i], this.listingId).then(function (s) {
+                    console.log(s);
+                }).catch(function (err) {
+                    console.log(err);
+                });
+            }
+        }
+        else {
+            this.uploadService.uploadImage(files, this.listingId).then(function (s) {
+                console.log(s);
+            }).catch(function (err) {
+                console.log(err);
+            });
+        }
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
+    ], UploadComponent.prototype, "listingId", void 0);
+    UploadComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'upload-component',
+            template: __webpack_require__(/*! ./upload.component.html */ "./src/app/core/components/upload/upload.component.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_upload_service__WEBPACK_IMPORTED_MODULE_2__["UploadService"]])
+    ], UploadComponent);
+    return UploadComponent;
 }());
 
 
@@ -1014,6 +1091,59 @@ var SearchListingsService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/core/services/upload.service.ts":
+/*!*************************************************!*\
+  !*** ./src/app/core/services/upload.service.ts ***!
+  \*************************************************/
+/*! exports provided: UploadService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UploadService", function() { return UploadService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var apiUrl = '/api/upload';
+var UploadService = /** @class */ (function () {
+    function UploadService() {
+    }
+    UploadService.prototype.uploadImage = function (file, listingId) {
+        if (listingId === void 0) { listingId = 0; }
+        var fd = new FormData();
+        var xhr = new XMLHttpRequest();
+        fd.append('file', file, file.name);
+        return new Promise(function (resolve, reject) {
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        console.log('image uploaded');
+                        resolve(xhr.response);
+                    }
+                    else {
+                        console.log('failed to upload image');
+                        reject(xhr.response);
+                    }
+                }
+            };
+            xhr.open('POST', apiUrl);
+            xhr.setRequestHeader('listingId', String(listingId));
+            xhr.send(fd);
+        });
+    };
+    UploadService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        })
+    ], UploadService);
+    return UploadService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/example/example.component.css":
 /*!***********************************************!*\
   !*** ./src/app/example/example.component.css ***!
@@ -1032,7 +1162,7 @@ module.exports = ".example-container {\n  display: flex;\n  flex-direction: colu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/example-create']\"><mat-icon>add</mat-icon></a>\n</div>\n\n<div class=\"example-container mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n\n    <!-- ID Column -->\n    <ng-container matColumnDef=\"ID\">\n      <th mat-header-cell *matHeaderCellDef> ID </th>\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.id}} </td>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"Name\">\n      <th mat-header-cell *matHeaderCellDef> Name </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n</div>\n"
+module.exports = "<!--Material Design Table Example-->\n\n<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/example-create']\"><mat-icon>add</mat-icon></a>\n</div>\n\n<div class=\"example-container mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n\n    <!-- ID Column -->\n    <ng-container matColumnDef=\"ID\">\n      <th mat-header-cell *matHeaderCellDef> ID </th>\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.id}} </td>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"Name\">\n      <th mat-header-cell *matHeaderCellDef> Name </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n</div>\n\n\n<!--Image upload child component example-->\n\n<upload-component [listingId]=\"listingId\"></upload-component>\n"
 
 /***/ }),
 
