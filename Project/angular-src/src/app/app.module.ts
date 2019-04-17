@@ -63,7 +63,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     LoginComponent,
     ExampleComponent,
     AlertComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
     AlertComponent,
     UploadComponent
   ],

@@ -8,15 +8,10 @@ const apiRegisterRouter = require('./controllers/register');
 const apiExampleRouter = require('./controllers/example');
 const apiUploadRouter = require('./controllers/upload');
 const apiLoginRouter = require('./controllers/login');
+const apiSearchRouter = require('./controllers/search');
 
 const app = express();
 app.enable('trust proxy');
-
-var database = require('./models/cloudsql');
-
-var apiExampleRouter = require('./controllers/example');
-var apiLoginRouter = require('./controllers/login');
-const apiSearchRouter = require('./controllers/search');
 
 app.use(logger('dev'));
 app.use(express.json());

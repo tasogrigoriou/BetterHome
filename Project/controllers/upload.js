@@ -10,19 +10,19 @@ router.post('/', upload.single('file'), function(req, res) {
     console.log(file);
     console.log(listingId);
 
-    let sql1 = `INSERT INTO Image(image_url) VALUES ('${file.filename}')`;
+    let sql1 = `INSERT INTO Image(imageUrl) VALUES ('${file.filename}')`;
     database.query(sql1, function(err, result) {
         if (err) {
-            console.log(err);
+            res.status(err.status || 500).send(err.message);
         } else {
             console.log(result);
         }
     });
 
-    let sql2 = `INSERT INTO ListingImage(Lid, image_url) VALUES ('${listingId}', '${file.filename}')`;
+    let sql2 = `INSERT INTO ListingImage(listingId, imageUrl) VALUES ('${listingId}', '${file.filename}')`;
     database.query(sql2, function(err, result) {
         if (err) {
-            console.log(err);
+            res.status(err.status || 500).send(err.message);
         } else {
             console.log(result);
             res.send('File uploaded successfully! -> name = ' + file.filename);
