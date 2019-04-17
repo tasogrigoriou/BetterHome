@@ -14,9 +14,11 @@ import {ListingsService} from "../core/services/listings.service";
 export class PropertySingleListingComponent implements OnInit {
   listing: Listing;
 
+
   constructor(
     private route: ActivatedRoute,
-    private listingsService: ListingsService) { }
+    private listingsService: ListingsService
+  ) { }
 
 
   ngOnInit() {
@@ -28,11 +30,26 @@ export class PropertySingleListingComponent implements OnInit {
       this.listing = this.listingsService.getListingById(listingId);
       console.log(this.listing);
     });
+
   }
 
   forSale(){
     if(this.listing.forSale == true)
       return "sale";
     return "rent";
+  }
+
+  plusDivs(n) {
+    //this.showDivs(slideIndex += n);
+  }
+
+  showDivs(n) {
+
+    // if (n > x.length) {slideIndex = 1}
+    // if (n < 1) {slideIndex = x.length}
+    // for (var i = 0; i < x.length; i++) {
+    //   x[i].style.display = "none";
+    // }
+    // x[slideIndex-1].style.display = "block";
   }
 }
