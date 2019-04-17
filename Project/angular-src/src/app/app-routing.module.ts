@@ -5,6 +5,9 @@ import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
 import {ExampleComponent} from "./example/example.component";
 import {SearchResultsComponent} from "./search-results/search-results.component";
+import {LogoutComponent} from "./logout/logout.component";
+
+
 const routes: Routes = [
   {
     path: '',
@@ -26,6 +29,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'logout',
+    component: LogoutComponent
   },
   {
     path: 'example',

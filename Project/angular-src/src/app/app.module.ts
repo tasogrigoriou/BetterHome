@@ -40,6 +40,7 @@ import {
 import {MatDialogModule} from '@angular/material/dialog';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     LoginComponent,
     ExampleComponent,
     AlertComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    LogoutComponent
   ],
   entryComponents: [
     RegisterDialog

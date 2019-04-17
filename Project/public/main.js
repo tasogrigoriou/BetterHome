@@ -54,6 +54,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
 /* harmony import */ var _example_example_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./example/example.component */ "./src/app/example/example.component.ts");
 /* harmony import */ var _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./search-results/search-results.component */ "./src/app/search-results/search-results.component.ts");
+/* harmony import */ var _logout_logout_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./logout/logout.component */ "./src/app/logout/logout.component.ts");
+
 
 
 
@@ -84,6 +86,10 @@ var routes = [
     {
         path: 'login',
         component: _login_login_component__WEBPACK_IMPORTED_MODULE_6__["LoginComponent"]
+    },
+    {
+        path: 'logout',
+        component: _logout_logout_component__WEBPACK_IMPORTED_MODULE_9__["LogoutComponent"]
     },
     {
         path: 'example',
@@ -201,6 +207,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
 /* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
 /* harmony import */ var _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./search-results/search-results.component */ "./src/app/search-results/search-results.component.ts");
+/* harmony import */ var _logout_logout_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./logout/logout.component */ "./src/app/logout/logout.component.ts");
+
 
 
 
@@ -240,7 +248,8 @@ var AppModule = /** @class */ (function () {
                 _login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"],
                 _example_example_component__WEBPACK_IMPORTED_MODULE_12__["ExampleComponent"],
                 _core_components_alert_alert_component__WEBPACK_IMPORTED_MODULE_13__["AlertComponent"],
-                _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_23__["SearchResultsComponent"]
+                _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_23__["SearchResultsComponent"],
+                _logout_logout_component__WEBPACK_IMPORTED_MODULE_24__["LogoutComponent"]
             ],
             entryComponents: [
                 _register_register_dialog__WEBPACK_IMPORTED_MODULE_10__["RegisterDialog"]
@@ -338,6 +347,72 @@ var AlertComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/core/components/footer/footer.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/core/components/footer/footer.component.css ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".row {\n  margin-right: 10px;\n  margin-bottom: 20px;\n}\n\n.example-fill-remaining-space {\n  /* This fills the remaining space, by using flexbox.\n     Every toolbar row uses a flexbox row layout. */\n  flex: 1 1 auto;\n}\n\n/* unvisited link */\n\na:link {\n  color: rgba(0, 0, 0, 0.75);\n}\n\n/* visited link */\n\na:visited {\n  color: rgba(0, 0, 0, 0.75);\n}\n\n/* mouse over link */\n\na:hover {\n  color: rgba(0, 0, 0, 0.4);\n}\n\n/* selected link */\n\na:active {\n  color: rgba(0, 0, 0, 0.75);\n}\n\na {\n  text-decoration: none;\n  padding-right: 10px;\n  padding-bottom: 6px;\n  font-size: 14px;\n}\n\n.my-header {\n  padding-left: 5px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29yZS9jb21wb25lbnRzL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGtCQUFrQjtFQUNsQixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRTttREFDaUQ7RUFDakQsY0FBYztBQUNoQjs7QUFFQSxtQkFBbUI7O0FBQ25CO0VBQ0UsMEJBQTBCO0FBQzVCOztBQUVBLGlCQUFpQjs7QUFDakI7RUFDRSwwQkFBMEI7QUFDNUI7O0FBRUEsb0JBQW9COztBQUNwQjtFQUNFLHlCQUF5QjtBQUMzQjs7QUFFQSxrQkFBa0I7O0FBQ2xCO0VBQ0UsMEJBQTBCO0FBQzVCOztBQUVBO0VBQ0UscUJBQXFCO0VBQ3JCLG1CQUFtQjtFQUNuQixtQkFBbUI7RUFDbkIsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL2NvcmUvY29tcG9uZW50cy9mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucm93IHtcbiAgbWFyZ2luLXJpZ2h0OiAxMHB4O1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xufVxuXG4uZXhhbXBsZS1maWxsLXJlbWFpbmluZy1zcGFjZSB7XG4gIC8qIFRoaXMgZmlsbHMgdGhlIHJlbWFpbmluZyBzcGFjZSwgYnkgdXNpbmcgZmxleGJveC5cbiAgICAgRXZlcnkgdG9vbGJhciByb3cgdXNlcyBhIGZsZXhib3ggcm93IGxheW91dC4gKi9cbiAgZmxleDogMSAxIGF1dG87XG59XG5cbi8qIHVudmlzaXRlZCBsaW5rICovXG5hOmxpbmsge1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjc1KTtcbn1cblxuLyogdmlzaXRlZCBsaW5rICovXG5hOnZpc2l0ZWQge1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjc1KTtcbn1cblxuLyogbW91c2Ugb3ZlciBsaW5rICovXG5hOmhvdmVyIHtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC40KTtcbn1cblxuLyogc2VsZWN0ZWQgbGluayAqL1xuYTphY3RpdmUge1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjc1KTtcbn1cblxuYSB7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgcGFkZGluZy1yaWdodDogMTBweDtcbiAgcGFkZGluZy1ib3R0b206IDZweDtcbiAgZm9udC1zaXplOiAxNHB4O1xufVxuXG4ubXktaGVhZGVyIHtcbiAgcGFkZGluZy1sZWZ0OiA1cHg7XG59XG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/core/components/footer/footer.component.html":
+/*!**************************************************************!*\
+  !*** ./src/app/core/components/footer/footer.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n  <span>\n  </span>\n  <span class=\"example-fill-remaining-space\"></span>\n  <a [routerLink]=\"'/about-us'\">About us</a>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/core/components/footer/footer.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/core/components/footer/footer.component.ts ***!
+  \************************************************************/
+/*! exports provided: FooterComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FooterComponent", function() { return FooterComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var FooterComponent = /** @class */ (function () {
+    function FooterComponent() {
+    }
+    FooterComponent.prototype.ngOnInit = function () { };
+    FooterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-footer',
+            template: __webpack_require__(/*! ./footer.component.html */ "./src/app/core/components/footer/footer.component.html"),
+            styles: [__webpack_require__(/*! ./footer.component.css */ "./src/app/core/components/footer/footer.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], FooterComponent);
+    return FooterComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/components/header/header.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/core/components/header/header.component.css ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".my-toolbar {\n  background-color: white;\n  /* Gradient backgrounds for toolbar */\n  /*background-image: linear-gradient(141deg, #04a6d7 0%, #209cee 100%);*/\n  /*background-image: linear-gradient(141deg, rgba(4, 198, 255, 0) 0%, rgba(35, 168, 255, 0.2) 100%);*/\n  position: relative;\n  top: 0;\n  left: 0;\n  right: 0;\n  z-index: 1;\n}\n\n.example-fill-remaining-space {\n  /* This fills the remaining space, by using flexbox.\n     Every toolbar row uses a flexbox row layout. */\n  flex: 1 1 auto;\n}\n\n/* unvisited link */\n\na:link {\n  color: rgba(0, 0, 0, 0.75);\n}\n\n/* visited link */\n\na:visited {\n  color: rgba(0, 0, 0, 0.75);\n}\n\n/* mouse over link */\n\na:hover {\n  color: rgba(0, 0, 0, 0.4);\n}\n\n/* selected link */\n\na:active {\n  color: rgba(0, 0, 0, 0.75);\n}\n\na {\n  text-decoration: none;\n  padding-right: 20px;\n  font-size: 14px;\n}\n\n.my-header-title {\n  padding-left: 5px;\n}\n\n\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29yZS9jb21wb25lbnRzL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHVCQUF1QjtFQUN2QixxQ0FBcUM7RUFDckMsdUVBQXVFO0VBQ3ZFLG9HQUFvRztFQUNwRyxrQkFBa0I7RUFDbEIsTUFBTTtFQUNOLE9BQU87RUFDUCxRQUFRO0VBQ1IsVUFBVTtBQUNaOztBQUVBO0VBQ0U7bURBQ2lEO0VBQ2pELGNBQWM7QUFDaEI7O0FBRUEsbUJBQW1COztBQUNuQjtFQUNFLDBCQUEwQjtBQUM1Qjs7QUFFQSxpQkFBaUI7O0FBQ2pCO0VBQ0UsMEJBQTBCO0FBQzVCOztBQUVBLG9CQUFvQjs7QUFDcEI7RUFDRSx5QkFBeUI7QUFDM0I7O0FBRUEsa0JBQWtCOztBQUNsQjtFQUNFLDBCQUEwQjtBQUM1Qjs7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixtQkFBbUI7RUFDbkIsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL2NvcmUvY29tcG9uZW50cy9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubXktdG9vbGJhciB7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAvKiBHcmFkaWVudCBiYWNrZ3JvdW5kcyBmb3IgdG9vbGJhciAqL1xuICAvKmJhY2tncm91bmQtaW1hZ2U6IGxpbmVhci1ncmFkaWVudCgxNDFkZWcsICMwNGE2ZDcgMCUsICMyMDljZWUgMTAwJSk7Ki9cbiAgLypiYWNrZ3JvdW5kLWltYWdlOiBsaW5lYXItZ3JhZGllbnQoMTQxZGVnLCByZ2JhKDQsIDE5OCwgMjU1LCAwKSAwJSwgcmdiYSgzNSwgMTY4LCAyNTUsIDAuMikgMTAwJSk7Ki9cbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB0b3A6IDA7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICB6LWluZGV4OiAxO1xufVxuXG4uZXhhbXBsZS1maWxsLXJlbWFpbmluZy1zcGFjZSB7XG4gIC8qIFRoaXMgZmlsbHMgdGhlIHJlbWFpbmluZyBzcGFjZSwgYnkgdXNpbmcgZmxleGJveC5cbiAgICAgRXZlcnkgdG9vbGJhciByb3cgdXNlcyBhIGZsZXhib3ggcm93IGxheW91dC4gKi9cbiAgZmxleDogMSAxIGF1dG87XG59XG5cbi8qIHVudmlzaXRlZCBsaW5rICovXG5hOmxpbmsge1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjc1KTtcbn1cblxuLyogdmlzaXRlZCBsaW5rICovXG5hOnZpc2l0ZWQge1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjc1KTtcbn1cblxuLyogbW91c2Ugb3ZlciBsaW5rICovXG5hOmhvdmVyIHtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC40KTtcbn1cblxuLyogc2VsZWN0ZWQgbGluayAqL1xuYTphY3RpdmUge1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjc1KTtcbn1cblxuYSB7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgcGFkZGluZy1yaWdodDogMjBweDtcbiAgZm9udC1zaXplOiAxNHB4O1xufVxuXG4ubXktaGVhZGVyLXRpdGxlIHtcbiAgcGFkZGluZy1sZWZ0OiA1cHg7XG59XG5cblxuIl19 */"
+
+/***/ }),
+
 /***/ "./src/app/core/components/header/header.component.html":
 /*!**************************************************************!*\
   !*** ./src/app/core/components/header/header.component.html ***!
@@ -345,7 +420,7 @@ var AlertComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar is-dark\">\n  <!-- menu -->\n  <div class=\"navbar-menu\">\n    <div class=\"navbar-start\">\n      <a class=\"navbar-item\" routerLink=\"\">Home</a>\n      <a class=\"navbar-item\" routerLink=\"about-us\">About us</a>\n      <a class=\"navbar-item\" routerLink=\"property\">Property</a>\n      <a class=\"navbar-item\" routerLink=\"register\">Register</a>\n      <a class=\"navbar-item\" routerLink=\"login\">Login</a>\n    </div>\n  </div>\n</nav>\n"
+module.exports = "<mat-toolbar color=\"primary\" class=\"mat-elevation-z2 my-toolbar\">\n  <span>\n    <a [routerLink]=\"'/'\"><h3 class=\"my-header-title\">Better Home</h3></a>\n  </span>\n\n  <!-- This fills the remaining space of the current row -->\n  <span class=\"example-fill-remaining-space\"></span>\n\n  <!--<span>Right Aligned Links</span>-->\n  <ng-template [ngIf]=\"loginUser\">\n  <a [routerLink]=\"'/example'\">Post Listing</a>\n  <a [routerLink]=\"'/logout'\">Logout</a>\n  </ng-template>\n\n  <ng-template [ngIf]=\"!loginUser\">\n    <a [routerLink]=\"'/login'\">Login</a>\n    <a [routerLink]=\"'/register'\">Register</a>\n  </ng-template>\n\n</mat-toolbar>\n"
 
 /***/ }),
 
@@ -361,18 +436,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderComponent", function() { return HeaderComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_login_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/login.service */ "./src/app/core/services/login.service.ts");
+
 
 
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent() {
+    function HeaderComponent(loginService) {
+        this.loginService = loginService;
     }
-    HeaderComponent.prototype.ngOnInit = function () { };
+    HeaderComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (localStorage.getItem('loginUser')) {
+            this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
+        }
+        this.loginService.getLoginUser.subscribe(function (loginUser) {
+            _this.loginUser = loginUser;
+        });
+    };
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-header',
-            template: __webpack_require__(/*! ./header.component.html */ "./src/app/core/components/header/header.component.html")
+            template: __webpack_require__(/*! ./header.component.html */ "./src/app/core/components/header/header.component.html"),
+            styles: [__webpack_require__(/*! ./header.component.css */ "./src/app/core/components/header/header.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_login_service__WEBPACK_IMPORTED_MODULE_2__["LoginService"]])
     ], HeaderComponent);
     return HeaderComponent;
 }());
@@ -398,6 +485,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_members_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./services/members.service */ "./src/app/core/services/members.service.ts");
 /* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/header/header.component */ "./src/app/core/components/header/header.component.ts");
 /* harmony import */ var _services_listings_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/listings.service */ "./src/app/core/services/listings.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/core/components/footer/footer.component.ts");
+
+
+
 
 
 
@@ -412,17 +505,32 @@ var CoreModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]
+                _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatSidenavModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatListModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatPaginatorModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatProgressSpinnerModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatSortModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatIconModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatToolbarModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbModule"]
             ],
             providers: [
                 _services_members_service__WEBPACK_IMPORTED_MODULE_4__["MembersService"],
                 _services_listings_service__WEBPACK_IMPORTED_MODULE_6__["ListingsService"]
             ],
             declarations: [
-                _components_header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"]
+                _components_header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"],
+                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_9__["FooterComponent"]
             ],
             exports: [
-                _components_header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"]
+                _components_header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"],
+                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_9__["FooterComponent"]
             ],
         })
     ], CoreModule);
@@ -647,10 +755,19 @@ var apiUrl = '/api/login';
 var LoginService = /** @class */ (function () {
     function LoginService(http) {
         this.http = http;
+        this.getLoginUser = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
     }
     /*** Login User ***/
     LoginService.prototype.loginUser = function (userData) {
         return this.http.post(apiUrl, userData, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    };
+    LoginService.prototype.emitLoginEvent = function (loginUser) {
+        localStorage.setItem('loginUser', JSON.stringify(loginUser));
+        this.getLoginUser.emit(loginUser);
+    };
+    LoginService.prototype.logoutUser = function () {
+        localStorage.removeItem('loginUser');
+        this.getLoginUser.emit(null);
     };
     LoginService.prototype.handleError = function (error) {
         if (error.error instanceof ErrorEvent) {
@@ -666,6 +783,10 @@ var LoginService = /** @class */ (function () {
         // return an observable with a user-facing error message
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
     };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
+    ], LoginService.prototype, "getLoginUser", void 0);
     LoginService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
@@ -838,14 +959,19 @@ var apiUrl = '/api/search';
 var SearchListingsService = /** @class */ (function () {
     function SearchListingsService(http) {
         this.http = http;
-        this.listings = [];
     }
     /*** Get Listings from search query ***/
     SearchListingsService.prototype.getSearchListings = function (searchQuery) {
         return this.http.post(apiUrl, searchQuery, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
     };
+    SearchListingsService.prototype.saveSearchListings = function (listings) {
+        localStorage.setItem('searchListings', JSON.stringify(listings));
+    };
     SearchListingsService.prototype.getListings = function () {
-        return this.listings;
+        if (localStorage.getItem('searchListings')) {
+            return JSON.parse(localStorage.getItem('searchListings'));
+        }
+        return [];
     };
     SearchListingsService.prototype.handleError = function (error) {
         if (error.error instanceof ErrorEvent) {
@@ -972,7 +1098,7 @@ var ExampleDataSource = /** @class */ (function (_super) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".main-div {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.cont-form {\n  margin-right: 20px;\n}\n\n.cont-title {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 20px;\n}\n\n.cont-input {\n  width: 275px;\n  margin-right: 20px;\n}\n\n.cont-button {\n  margin-right: 10px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7RUFDYix1QkFBdUI7RUFDdkIsbUJBQW1CO0VBQ25CLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLFlBQVk7RUFDWixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEIiLCJmaWxlIjoic3JjL2FwcC9ob21lL2hvbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWluLWRpdiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4uY29udC1mb3JtIHtcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xufVxuXG4uY29udC10aXRsZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xufVxuXG4uY29udC1pbnB1dCB7XG4gIHdpZHRoOiAyNzVweDtcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xufVxuXG4uY29udC1idXR0b24ge1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG59XG4iXX0= */"
+module.exports = ".main-div {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.cont-form {\n  margin-top: 8px;\n  margin-right: 20px;\n}\n\n.cont-title {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 20px;\n}\n\n.cont-input {\n  width: 240px;\n  margin-right: 20px;\n}\n\n.cont-button {\n  margin-right: 10px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLGVBQWU7RUFDZixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtFQUNuQixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxZQUFZO0VBQ1osa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0Usa0JBQWtCO0FBQ3BCIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWFpbi1kaXYge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLmNvbnQtZm9ybSB7XG4gIG1hcmdpbi10b3A6IDhweDtcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xufVxuXG4uY29udC10aXRsZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xufVxuXG4uY29udC1pbnB1dCB7XG4gIHdpZHRoOiAyNDBweDtcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xufVxuXG4uY29udC1idXR0b24ge1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -983,7 +1109,7 @@ module.exports = ".main-div {\n  display: flex;\n  justify-content: center;\n  a
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"hero is-info is-fullheight is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"container\">\n      <h1 class=\"cont-title\">Search Page</h1>\n\n      <div class=\"main-div\">\n        <mat-card>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Select Listing Type</mat-label>\n            <mat-select [(value)]=\"listingSearch.listingType\">\n              <mat-option value=\"Any\">Any</mat-option>\n              <mat-option value=\"House\">House</mat-option>\n              <mat-option value=\"Apartment\">Apartment</mat-option>\n              <mat-option value=\"Condo\">Condo</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Select Bedrooms</mat-label>\n            <mat-select [(value)]=\"listingSearch.numBedrooms\">\n              <mat-option value=0>Any</mat-option>\n              <mat-option value=1>1 Bed</mat-option>\n              <mat-option value=2>2 Beds</mat-option>\n              <mat-option value=3>3 Beds</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Select Bathrooms</mat-label>\n            <mat-select [(value)]=\"listingSearch.numBathrooms\">\n              <mat-option value=0>Any</mat-option>\n              <mat-option value=1>1</mat-option>\n              <mat-option value=2>2</mat-option>\n              <mat-option value=3>3</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-input\">\n            <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" required>\n          </mat-form-field>\n\n          <button class=\"cont-button\" mat-raised-button color=\"primary\" (click)=\"onSearchClick()\">Search</button>\n\n        </mat-card>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n  </div>\n</section>\n"
+module.exports = "<section class=\"hero is-info is-fullheight-with-navbar is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"container\">\n      <h1 class=\"cont-title\">Search Listings</h1>\n\n      <div class=\"main-div\">\n        <mat-card>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Sale or Rental</mat-label>\n            <mat-select [(value)]=\"listingSearch.forSale\">\n              <mat-option value=null>Both</mat-option>\n              <mat-option value=1>Sale</mat-option>\n              <mat-option value=0>Rental</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Listing Type</mat-label>\n            <mat-select [(value)]=\"listingSearch.listingType\">\n              <mat-option value=\"Any\">Any</mat-option>\n              <mat-option value=\"House\">House</mat-option>\n              <mat-option value=\"Apartment\">Apartment</mat-option>\n              <mat-option value=\"Condo\">Condo</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Bedrooms</mat-label>\n            <mat-select [(value)]=\"listingSearch.numBedrooms\">\n              <mat-option value=0>Any</mat-option>\n              <mat-option value=1>1 Bed</mat-option>\n              <mat-option value=2>2 Beds</mat-option>\n              <mat-option value=3>3 Beds</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-form\">\n            <mat-label>Bathrooms</mat-label>\n            <mat-select [(value)]=\"listingSearch.numBathrooms\">\n              <mat-option value=0>Any</mat-option>\n              <mat-option value=1>1</mat-option>\n              <mat-option value=2>2</mat-option>\n              <mat-option value=3>3</mat-option>\n            </mat-select>\n          </mat-form-field>\n\n          <mat-form-field class=\"cont-input\">\n            <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" required>\n          </mat-form-field>\n\n          <button class=\"cont-button\" mat-raised-button color=\"primary\" (click)=\"onSearchClick()\">Search</button>\n\n        </mat-card>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n  </div>\n  <app-footer></app-footer>\n</section>\n"
 
 /***/ }),
 
@@ -1017,9 +1143,19 @@ var HomeComponent = /** @class */ (function () {
         this.isLoaded = true;
     }
     HomeComponent.prototype.ngOnInit = function () {
-        this.listingSearch = {
-            city: ''
-        };
+        if (localStorage.getItem('listingSearch')) {
+            this.listingSearch = JSON.parse(localStorage.getItem('listingSearch'));
+        }
+        else {
+            this.listingSearch = {
+                city: ''
+            };
+        }
+    };
+    HomeComponent.prototype.ngOnDestroy = function () {
+        if (this.listingSearch) {
+            localStorage.setItem('listingSearch', JSON.stringify(this.listingSearch));
+        }
     };
     HomeComponent.prototype.onSearchClick = function () {
         var _this = this;
@@ -1031,16 +1167,13 @@ var HomeComponent = /** @class */ (function () {
             this.searchService.getSearchListings(this.listingSearch)
                 .subscribe(function (listings) {
                 _this.isLoaded = true;
-                _this.saveListings(listings);
+                _this.searchService.saveSearchListings(listings);
                 _this.openDialog('Successfully retrieved Listings!', true);
             }, function (err) {
                 _this.isLoaded = true;
                 _this.openDialog('Unable to retrieve any listings based on your search. Please try again');
             });
         }
-    };
-    HomeComponent.prototype.saveListings = function (listings) {
-        this.searchService.listings = listings;
     };
     HomeComponent.prototype.openDialog = function (message, subscribe) {
         var _this = this;
@@ -1074,6 +1207,17 @@ var HomeComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/login/login.component.css":
+/*!*******************************************!*\
+  !*** ./src/app/login/login.component.css ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".main-div {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0 auto;\n}\n\n.cont-input {\n  width: 300px;\n}\n\n.my-button {\n  margin-right: 90px;\n  margin-left: 90px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vbG9naW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYix1QkFBdUI7RUFDdkIsbUJBQW1CO0VBQ25CLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsaUJBQWlCO0FBQ25CIiwiZmlsZSI6InNyYy9hcHAvbG9naW4vbG9naW4uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWluLWRpdiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBtYXJnaW46IDAgYXV0bztcbn1cblxuLmNvbnQtaW5wdXQge1xuICB3aWR0aDogMzAwcHg7XG59XG5cbi5teS1idXR0b24ge1xuICBtYXJnaW4tcmlnaHQ6IDkwcHg7XG4gIG1hcmdpbi1sZWZ0OiA5MHB4O1xufVxuIl19 */"
+
+/***/ }),
+
 /***/ "./src/app/login/login.component.html":
 /*!********************************************!*\
   !*** ./src/app/login/login.component.html ***!
@@ -1081,7 +1225,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar>\n  <span>Login</span>\n</mat-toolbar>\n<mat-card class=\"my-card\">\n  <mat-card-content>\n\n    <!--FORM FIELDS HERE-->\n    <div fxLayout=\"column\" fxLayoutAlign=\"center\">\n      <mat-form-field class=\"full-width\">\n        <mat-label>Username</mat-label>\n        <input matInput placeholder=\"Username\" [(ngModel)]=\"user.username\" name=\"username\" required>\n      </mat-form-field>\n      <mat-form-field class=\"full-width\">\n        <mat-label>Password</mat-label>\n        <input matInput type=\"password\" placeholder=\"Password\" [(ngModel)]=\"user.password\" name=\"password\" required>\n      </mat-form-field>\n    </div>\n\n  </mat-card-content>\n  <mat-card-actions>\n\n    <!-- LOGIN BUTTON -->\n    <button mat-raised-button (click)=\"onSubmit()\" color=\"primary\">Login</button>\n\n    <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n\n  </mat-card-actions>\n</mat-card>\n\n"
+module.exports = "<!--<mat-toolbar>-->\n  <!--<span>Login</span>-->\n<!--</mat-toolbar>-->\n<section class=\"hero is-info is-fullheight-with-navbar is-bold\">\n  <div class=\"hero-body\">\n<div class=\"main-div\">\n<mat-card>\n  <mat-card-title class=\"main-div\">Login</mat-card-title>\n  <mat-card-content>\n\n    <!--FORM FIELDS HERE-->\n    <div fxLayout=\"column\" fxLayoutAlign=\"center\">\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Username</mat-label>\n        <input matInput placeholder=\"Username\" [(ngModel)]=\"user.username\" name=\"username\" required>\n      </mat-form-field>\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Password</mat-label>\n        <input matInput type=\"password\" placeholder=\"Password\" [(ngModel)]=\"user.password\" name=\"password\" required>\n      </mat-form-field>\n    </div>\n\n  </mat-card-content>\n  <mat-card-actions>\n\n    <div class=\"my-button\" fxLayout=\"column\" fxLayoutAlign=\"center\">\n    <!-- LOGIN BUTTON -->\n    <button mat-raised-button (click)=\"onSubmit()\" color=\"primary\">Login</button>\n    </div>\n\n    <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n\n  </mat-card-actions>\n</mat-card>\n</div>\n    </div>\n</section>\n\n"
 
 /***/ }),
 
@@ -1146,6 +1290,7 @@ var LoginComponent = /** @class */ (function () {
         });
         if (subscribe) {
             dialogRef.afterClosed().subscribe(function (result) {
+                _this.loginService.emitLoginEvent(_this.loginUser);
                 _this.router.navigate(['/']);
             });
         }
@@ -1153,13 +1298,97 @@ var LoginComponent = /** @class */ (function () {
     LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-login',
-            template: __webpack_require__(/*! ./login.component.html */ "./src/app/login/login.component.html")
+            template: __webpack_require__(/*! ./login.component.html */ "./src/app/login/login.component.html"),
+            styles: [__webpack_require__(/*! ./login.component.css */ "./src/app/login/login.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _core_services_login_service__WEBPACK_IMPORTED_MODULE_6__["LoginService"],
             _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialog"]])
     ], LoginComponent);
     return LoginComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/logout/logout.component.css":
+/*!*********************************************!*\
+  !*** ./src/app/logout/logout.component.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xvZ291dC9sb2dvdXQuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/logout/logout.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/logout/logout.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n"
+
+/***/ }),
+
+/***/ "./src/app/logout/logout.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/logout/logout.component.ts ***!
+  \********************************************/
+/*! exports provided: LogoutComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LogoutComponent", function() { return LogoutComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_services_login_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/services/login.service */ "./src/app/core/services/login.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../register/register.dialog */ "./src/app/register/register.dialog.ts");
+
+
+
+
+
+
+var LogoutComponent = /** @class */ (function () {
+    function LogoutComponent(router, loginService, dialog) {
+        this.router = router;
+        this.loginService = loginService;
+        this.dialog = dialog;
+    }
+    LogoutComponent.prototype.ngOnInit = function () {
+        this.loginService.logoutUser();
+        this.openDialog('Logout successful!');
+    };
+    LogoutComponent.prototype.openDialog = function (message) {
+        var _this = this;
+        var dialogRef = this.dialog.open(_register_register_dialog__WEBPACK_IMPORTED_MODULE_5__["RegisterDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            _this.router.navigate(['/']);
+        });
+    };
+    LogoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-logout',
+            template: __webpack_require__(/*! ./logout.component.html */ "./src/app/logout/logout.component.html"),
+            styles: [__webpack_require__(/*! ./logout.component.css */ "./src/app/logout/logout.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _core_services_login_service__WEBPACK_IMPORTED_MODULE_3__["LoginService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialog"]])
+    ], LogoutComponent);
+    return LogoutComponent;
 }());
 
 
@@ -1234,7 +1463,7 @@ var PropertyComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*.my-card {*/\n  /*margin: 0 auto;*/\n  /*width: 800px;*/\n  /*}*/\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxhQUFhO0VBQ1gsa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNsQixJQUFJIiwiZmlsZSI6InNyYy9hcHAvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qLm15LWNhcmQgeyovXG4gIC8qbWFyZ2luOiAwIGF1dG87Ki9cbiAgLyp3aWR0aDogODAwcHg7Ki9cbi8qfSovXG4iXX0= */"
+module.exports = ".main-div {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0 auto;\n}\n\n.cont-input {\n  width: 300px;\n}\n\n.my-button {\n  margin-left: 90px;\n  margin-right: 90px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYix1QkFBdUI7RUFDdkIsbUJBQW1CO0VBQ25CLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsa0JBQWtCO0FBQ3BCIiwiZmlsZSI6InNyYy9hcHAvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWluLWRpdiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBtYXJnaW46IDAgYXV0bztcbn1cblxuLmNvbnQtaW5wdXQge1xuICB3aWR0aDogMzAwcHg7XG59XG5cbi5teS1idXR0b24ge1xuICBtYXJnaW4tbGVmdDogOTBweDtcbiAgbWFyZ2luLXJpZ2h0OiA5MHB4O1xufVxuIl19 */"
 
 /***/ }),
 
@@ -1245,7 +1474,7 @@ module.exports = "/*.my-card {*/\n  /*margin: 0 auto;*/\n  /*width: 800px;*/\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar>\n  <span>Registration</span>\n</mat-toolbar>\n<mat-card class=\"my-card\">\n  <mat-card-content>\n\n      <!--FORM FIELDS HERE-->\n    <div fxLayout=\"column\" fxLayoutAlign=\"center\">\n      <mat-form-field class=\"full-width\">\n        <mat-label>First Name</mat-label>\n        <input matInput placeholder=\"First name\" [(ngModel)]=\"user.firstName\" name=\"firstName\" required><br>\n      </mat-form-field>\n      <mat-form-field class=\"full-width\">\n        <mat-label>Last Name</mat-label>\n        <input matInput placeholder=\"Last name\" [(ngModel)]=\"user.lastName\" name=\"lastName\" required>\n      </mat-form-field>\n      <mat-form-field class=\"full-width\">\n        <mat-label>Username</mat-label>\n        <input matInput placeholder=\"Username\" [(ngModel)]=\"user.username\" name=\"username\" required>\n      </mat-form-field>\n      <mat-form-field class=\"full-width\">\n        <mat-label>Password</mat-label>\n        <input matInput type=\"password\" placeholder=\"Password\" [(ngModel)]=\"user.password\" name=\"password\" required>\n      </mat-form-field>\n      <mat-form-field class=\"full-width\">\n        <mat-label>Email Address</mat-label>\n        <input matInput placeholder=\"Email address\" [(ngModel)]=\"user.emailAddress\" name=\"emailAddress\" required>\n      </mat-form-field>\n      <mat-form-field class=\"full-width\">\n        <mat-label>Phone Number</mat-label>\n        <input matInput placeholder=\"Phone number\" [(ngModel)]=\"user.phoneNumber\" name=\"phoneNumber\" required>\n      </mat-form-field>\n    </div>\n\n  </mat-card-content>\n  <mat-card-actions>\n\n    <!-- REGISTER BUTTON -->\n    <button mat-raised-button (click)=\"onSubmit()\" color=\"primary\">Register</button>\n\n    <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n\n  </mat-card-actions>\n</mat-card>\n"
+module.exports = "<section class=\"hero is-info is-fullheight-with-navbar is-bold\">\n  <div class=\"hero-body\">\n      <div class=\"main-div\">\n<mat-card>\n  <mat-card-title class=\"main-div\">Register</mat-card-title>\n  <mat-card-content>\n\n      <!--FORM FIELDS HERE-->\n    <div fxLayout=\"column\" fxLayoutAlign=\"center\">\n      <mat-form-field class=\"cont-input\">\n        <mat-label>First Name</mat-label>\n        <input matInput placeholder=\"First name\" [(ngModel)]=\"user.firstName\" name=\"firstName\" required><br>\n      </mat-form-field>\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Last Name</mat-label>\n        <input matInput placeholder=\"Last name\" [(ngModel)]=\"user.lastName\" name=\"lastName\" required>\n      </mat-form-field>\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Username</mat-label>\n        <input matInput placeholder=\"Username\" [(ngModel)]=\"user.username\" name=\"username\" required>\n      </mat-form-field>\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Password</mat-label>\n        <input matInput type=\"password\" placeholder=\"Password\" [(ngModel)]=\"user.password\" name=\"password\" required>\n      </mat-form-field>\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Email Address</mat-label>\n        <input matInput placeholder=\"Email address\" [(ngModel)]=\"user.emailAddress\" name=\"emailAddress\" required>\n      </mat-form-field>\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Phone Number</mat-label>\n        <input matInput placeholder=\"Phone number\" [(ngModel)]=\"user.phoneNumber\" name=\"phoneNumber\" required>\n      </mat-form-field>\n    </div>\n\n  </mat-card-content>\n  <mat-card-actions>\n\n    <!-- REGISTER BUTTON -->\n    <div class=\"my-button\" fxLayout=\"column\" fxLayoutAlign=\"center\">\n    <button mat-raised-button (click)=\"onSubmit()\" color=\"primary\">Register</button>\n    </div>\n\n    <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n\n  </mat-card-actions>\n</mat-card>\n      </div>\n    </div>\n</section>\n"
 
 /***/ }),
 
