@@ -1,13 +1,22 @@
-<section class="hero is-info is-fullheight is-bold">
+<section class="hero is-info is-fullheight-with-navbar is-bold">
   <div class="hero-body">
     <div class="container">
-      <h1 class="cont-title">Search Page</h1>
+      <h1 class="cont-title">Search Listings</h1>
 
       <div class="main-div">
         <mat-card>
 
           <mat-form-field class="cont-form">
-            <mat-label>Select Listing Type</mat-label>
+            <mat-label>Sale or Rental</mat-label>
+            <mat-select [(value)]="listingSearch.forSale">
+              <mat-option value=null>Both</mat-option>
+              <mat-option value=1>Sale</mat-option>
+              <mat-option value=0>Rental</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="cont-form">
+            <mat-label>Listing Type</mat-label>
             <mat-select [(value)]="listingSearch.listingType">
               <mat-option value="Any">Any</mat-option>
               <mat-option value="House">House</mat-option>
@@ -17,7 +26,7 @@
           </mat-form-field>
 
           <mat-form-field class="cont-form">
-            <mat-label>Select Bedrooms</mat-label>
+            <mat-label>Bedrooms</mat-label>
             <mat-select [(value)]="listingSearch.numBedrooms">
               <mat-option value=0>Any</mat-option>
               <mat-option value=1>1 Bed</mat-option>
@@ -27,7 +36,7 @@
           </mat-form-field>
 
           <mat-form-field class="cont-form">
-            <mat-label>Select Bathrooms</mat-label>
+            <mat-label>Bathrooms</mat-label>
             <mat-select [(value)]="listingSearch.numBathrooms">
               <mat-option value=0>Any</mat-option>
               <mat-option value=1>1</mat-option>
@@ -48,4 +57,5 @@
 
     </div>
   </div>
+  <app-footer></app-footer>
 </section>

@@ -14,8 +14,6 @@ const apiUrl = '/api/search';
 })
 export class SearchListingsService {
 
-  listings: Listing[] = [];
-
   constructor(private http: HttpClient) { }
 
   /*** Get Listings from search query ***/
@@ -25,8 +23,15 @@ export class SearchListingsService {
     );
   }
 
+  saveSearchListings(listings: Listing[]) {
+    localStorage.setItem('searchListings', JSON.stringify(listings));
+  }
+
   getListings(): Listing[] {
-    return this.listings;
+    if (localStorage.getItem('searchListings')) {
+      return JSON.parse(localStorage.getItem('searchListings'));
+    }
+    return [];
   }
 
   private handleError(error: HttpErrorResponse) {

@@ -1,12 +1,20 @@
-<nav class="navbar is-dark">
-  <!-- menu -->
-  <div class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item" routerLink="">Home</a>
-      <a class="navbar-item" routerLink="about-us">About us</a>
-      <a class="navbar-item" routerLink="property">Property</a>
-      <a class="navbar-item" routerLink="register">Register</a>
-      <a class="navbar-item" routerLink="login">Login</a>
-    </div>
-  </div>
-</nav>
+<mat-toolbar color="primary" class="mat-elevation-z2 my-toolbar">
+  <span>
+    <a [routerLink]="'/'"><h3 class="my-header-title">Better Home</h3></a>
+  </span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+
+  <!--<span>Right Aligned Links</span>-->
+  <ng-template [ngIf]="loginUser">
+  <a [routerLink]="'/example'">Post Listing</a>
+  <a [routerLink]="'/logout'">Logout</a>
+  </ng-template>
+
+  <ng-template [ngIf]="!loginUser">
+    <a [routerLink]="'/login'">Login</a>
+    <a [routerLink]="'/register'">Register</a>
+  </ng-template>
+
+</mat-toolbar>

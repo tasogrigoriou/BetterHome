@@ -1,0 +1,15 @@
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.cont-input {
+  width: 300px;
+}
+
+.my-button {
+  margin-right: 90px;
+  margin-left: 90px;
+}

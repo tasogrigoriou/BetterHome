@@ -1,4 +1,15 @@
-/*.my-card {*/
-  /*margin: 0 auto;*/
-  /*width: 800px;*/
-/*}*/
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.cont-input {
+  width: 300px;
+}
+
+.my-button {
+  margin-left: 90px;
+  margin-right: 90px;
+}
