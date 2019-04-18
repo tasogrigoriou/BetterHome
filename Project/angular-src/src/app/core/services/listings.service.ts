@@ -35,10 +35,12 @@ export class ListingsService {
     'San Francisco',
     'California',
     94132,
-    'example street1',
+    'Example Street 1',
     true,
     2,
-    '2'
+    '2',
+    'https://bit.ly/2Vc5oog'
+
   );
   public exampleListing2 = new Listing(
     70,
@@ -49,24 +51,26 @@ export class ListingsService {
     "San Francisco",
     'California',
     94132,
-    'example street2',
+    'Example Street 2',
     true,
     3,
-    '3'
+    '3',
+    'https://bit.ly/2UJTUca'
   );
   public exampleListing3 = new Listing(
     71,
     0,
-    'Example Listing2',
+    'Example Listing3',
     'Condo',
     30000,
     "San Francisco",
     'California',
     94132,
-    'example street3',
+    'Example Street 3',
     false,
     3,
-    '2.5'
+    '2.5',
+    'https://bit.ly/2UtC20w'
   );
 
 
@@ -85,9 +89,10 @@ export class Listing {
   forSale: boolean;
   numBedrooms: number;
   numBathrooms: string;
+  imageUrl:string;
 
   constructor(Lid: number, DisplayBoard_boardId: number, title: string, listingType: string, price: number, city: string,state:string, zipCode: number,
-              street: string, forSale: boolean, numBedrooms: number, numBathrooms: string)
+              street: string, forSale: boolean, numBedrooms: number, numBathrooms: string,imageUrl:string)
   {
     this.Lid = Lid;
     this.DisplayBoard_boardId = DisplayBoard_boardId;
@@ -101,6 +106,7 @@ export class Listing {
     this.forSale = forSale;
     this.numBedrooms = numBedrooms;
     this.numBathrooms = numBathrooms;
+    this.imageUrl = imageUrl;
   }
 }
 

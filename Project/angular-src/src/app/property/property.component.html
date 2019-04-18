@@ -27,47 +27,116 @@
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened>
     <mat-list role="list">
-      <mat-list-item role="listitem"><mat-checkbox>For Sell</mat-checkbox></mat-list-item>
-      <mat-list-item role="listitem"><mat-checkbox>For Rent</mat-checkbox></mat-list-item>
+
+      <!--<mat-selection-list #filte1r>-->
+        <!--<mat-list-option >Filter all</mat-list-option>-->
+      <!--</mat-selection-list>-->
+
+      <mat-list-item role="listitem">
+        <label><input  #filter1 type="checkbox" name="size" (change)="0"> Filter all</label>
+      </mat-list-item>
+
+      <mat-list-item role="listitem">
+        <label><input  #filter2 type="checkbox" name="size" (change)="0"> For Sell</label>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <label><input  #filter2 type="checkbox" name="size" (change)="0"> For Rent</label>
+      </mat-list-item>
       <mat-list-item role="listitem">Price range</mat-list-item>
       <mat-list role="list">
-        <mat-list-item role="listitem"><mat-checkbox>Under $100k</mat-checkbox></mat-list-item>
-        <mat-list-item role="listitem"><mat-checkbox>$100k to $200k</mat-checkbox></mat-list-item>
-        <mat-list-item role="listitem"><mat-checkbox>Over $200k</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> Under $100k</label>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> $100k-$200k</label>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> Over $200k</label>
+        </mat-list-item>
       </mat-list>
-      <mat-list-item role="listitem">Bed Rooms</mat-list-item>
+      <mat-list-item role="listitem">Bedrooms</mat-list-item>
       <mat-list role="list">
-        <mat-list-item role="listitem"><mat-checkbox>1+</mat-checkbox></mat-list-item>
-        <mat-list-item role="listitem"><mat-checkbox>2+</mat-checkbox></mat-list-item>
-        <mat-list-item role="listitem"><mat-checkbox>3+</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> 1+</label>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> 2+</label>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> 3+</label>
+        </mat-list-item>
       </mat-list>
       <mat-list-item role="listitem">Property Type</mat-list-item>
       <mat-list role="list">
-        <mat-list-item role="listitem"> <mat-checkbox>House</mat-checkbox></mat-list-item>
-        <mat-list-item role="listitem"> <mat-checkbox>Apartment</mat-checkbox></mat-list-item>
-        <mat-list-item role="listitem"> <mat-checkbox>Condo</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> House</label>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> Apartment</label>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> Condo</label>
+        </mat-list-item>
       </mat-list>
     </mat-list>
   </mat-drawer>
   <mat-drawer-content>
 
 
-    <section class="section">
-      <div class="container">
-        <div class="columns is-multiline">
-          <div class="column is-4" *ngFor="let listing of listings">
-            <div class="card">
-              <div class="card-content">
-                <P><a [routerLink]="[listing.Lid]">{{ listing.title }}</a></P>
-                <p>{{ listing.street }} ,{{ listing.city }} ,{{ listing.zipCode }}</p>
-                <p>$ {{ listing.price}}</p>
 
+
+    <div *ngIf="!filter1.checked">
+      <div *ngIf="filter">
+
+        <section class="section">
+          <div class="container">
+            <div class="columns is-multiline">
+              <div class="column is-4" *ngFor="let listing of listings">
+                <div class="card">
+                  <div class="card-content">
+
+
+                    <mat-card class="example-card">
+                      <mat-card-header>
+
+                        <mat-card-title>
+                          <p><a [routerLink]="[listing.Lid]">{{ listing.title }}</a></p>
+                        </mat-card-title>
+                        <mat-card-subtitle>
+
+                          <p>{{ listing.street }}</p>
+                          <p>{{ listing.city }} </p>
+                          <p>{{listing.state}},{{ listing.zipCode }}</p>
+                        </mat-card-subtitle>
+                      </mat-card-header>
+                      <img mat-card-image src="{{listing.imageUrl}}" layout-fill>
+                      <mat-card-content>
+                        <p>{{listing.listingType}}</p>
+                        <p>{{listing.numBedrooms}} bedrooms, {{listing.numBathrooms}} bathrooms</p>
+                        <p>$ {{listing.price}}</p>
+                      </mat-card-content>
+                      <mat-card-actions>
+                        <button mat-button>LIKE</button>
+                      </mat-card-actions>
+                    </mat-card>
+
+
+
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+
       </div>
-    </section>
+    </div>
+
+
+
+
+
 
   </mat-drawer-content>
 </mat-drawer-container>
