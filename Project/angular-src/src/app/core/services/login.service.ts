@@ -72,4 +72,12 @@ export class Listing {
   forSale: boolean;
   numBedrooms: number;
   numBathrooms: number;
+  userInfo: UserInfo;
+}
+
+export interface UserInfo {
+  firstName: string;
+  lastName: string;
+  emailAddress: string;
+  phoneNumber: string;
 }

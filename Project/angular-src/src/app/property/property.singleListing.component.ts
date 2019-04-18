@@ -5,6 +5,7 @@ import {RegisterService} from "../core/services/register.service";
 import {Member} from "../core/services/members.service";
 import {Listing} from "../home/home.component";
 import {ListingsService} from "../core/services/listings.service";
+import {LoginUser} from "../core/services/login.service";
 
 @Component({
   selector: 'app-property',
@@ -14,6 +15,8 @@ import {ListingsService} from "../core/services/listings.service";
 export class PropertySingleListingComponent implements OnInit {
   listing: Listing;
 
+  user: LoginUser;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -22,6 +25,8 @@ export class PropertySingleListingComponent implements OnInit {
 
 
   ngOnInit() {
+    localStorage.getItem('userLogin')
+
     console.log(this.route.snapshot.params);
     this.route.paramMap.subscribe(params => {
       console.log(params);
