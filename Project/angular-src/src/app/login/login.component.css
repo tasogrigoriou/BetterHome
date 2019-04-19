@@ -3,13 +3,16 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  max-width: 350px;
+  width: 100%;
 }
 
-.cont-input {
-  width: 300px;
+.my-mat-card {
+  max-width: 350px;
+  width: 100%;
 }
 
 .my-button {
-  margin-right: 90px;
-  margin-left: 90px;
+  margin-right: 80px;
+  margin-left: 80px;
 }

@@ -9,7 +9,7 @@ import {
   MatButtonModule, MatCardModule, MatFormFieldModule,
   MatIconModule,
   MatInputModule,
-  MatListModule,
+  MatListModule, MatMenuModule,
   MatPaginatorModule,
   MatProgressSpinnerModule,
   MatSidenavModule,
@@ -34,6 +34,7 @@ import {FooterComponent} from "./components/footer/footer.component";
     MatCardModule,
     MatFormFieldModule,
     MatToolbarModule,
+    MatMenuModule,
     NgbModule
   ],
   providers: [
