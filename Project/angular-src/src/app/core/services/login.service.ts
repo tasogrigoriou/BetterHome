@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {EventEmitter, Injectable, Output} from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
@@ -13,6 +13,8 @@ const apiUrl = '/api/login';
 })
 export class LoginService {
 
+  @Output() getLoginUser: EventEmitter<LoginUser> = new EventEmitter();
+
   constructor(private http: HttpClient) { }
 
   /*** Login User ***/
@@ -20,6 +22,16 @@ export class LoginService {
     return this.http.post(apiUrl, userData, httpOptions).pipe(
       catchError(this.handleError)
     );
+  }
+
+  emitLoginEvent(loginUser: LoginUser) {
+    localStorage.setItem('loginUser', JSON.stringify(loginUser));
+    this.getLoginUser.emit(loginUser);
+  }
+
+  logoutUser() {
+    localStorage.removeItem('loginUser');
+    this.getLoginUser.emit(null);
   }
 
   private handleError(error: HttpErrorResponse) {
@@ -60,4 +72,12 @@ export class Listing {
   forSale: boolean;
   numBedrooms: number;
   numBathrooms: number;
+  userInfo: UserInfo;
+}
+
+export interface UserInfo {
+  firstName: string;
+  lastName: string;
+  emailAddress: string;
+  phoneNumber: string;
 }

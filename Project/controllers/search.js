@@ -8,10 +8,12 @@ router.post('/', function (req, res) {
     let listingType = req.body.listingType;
     let numBedrooms = Number(req.body.numBedrooms);
     let numBathrooms = Number(req.body.numBathrooms);
+    let forSale = Number(req.body.forSale);
 
     let listingTypeQuery = ``;
     let numBedroomsQuery = ``;
     let numBathroomsQuery = ``;
+    let forSaleQuery = ``;
 
     if (listingType && listingType !== 'Any') {
         listingTypeQuery = `AND listingType = '${listingType}'`;
@@ -22,8 +24,11 @@ router.post('/', function (req, res) {
     if (numBathrooms && numBathrooms !== 0) {
         numBathroomsQuery = `AND numBathrooms = ${numBathrooms}`;
     }
+    if (!isNaN(forSale)) {
+        forSaleQuery = `AND forSale = ${forSale}`;
+    }
 
-    let sql = `SELECT * FROM Listing WHERE city LIKE '%${city}%' ${listingTypeQuery} ${numBedroomsQuery} ${numBathroomsQuery}`;
+    let sql = `SELECT * FROM Listing WHERE city LIKE '%${city}%' ${listingTypeQuery} ${numBedroomsQuery} ${numBathroomsQuery} ${forSaleQuery}`;
     console.log(sql);
 
     database.query(sql, function (err, result) {

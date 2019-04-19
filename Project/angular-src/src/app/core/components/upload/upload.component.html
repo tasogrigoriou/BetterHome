@@ -1,0 +1,15 @@
+<!--Image Uploading-->
+
+<td-file-upload #fileMultipleUpload (upload)="uploadMultipleImages($event)"
+                accept=".jpg, .jpeg, .png, .tif" defaultColor="primary" activeColor="primary" cancelColor="primary" multiple>
+  <mat-icon>file_upload</mat-icon>
+  <span>
+    {{ fileMultipleUpload.value?.name || fileMultipleUpload.value?.length }} <span *ngIf="fileMultipleUpload.value?.length">files selected</span>
+  </span>
+  <ng-template td-file-input-label>
+    <mat-icon>attach_file</mat-icon>
+    <span>
+      Upload images
+    </span>
+  </ng-template>
+</td-file-upload>

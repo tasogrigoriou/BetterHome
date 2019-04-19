@@ -1,0 +1,41 @@
+.row {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+
+/* unvisited link */
+a:link {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+/* visited link */
+a:visited {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* selected link */
+a:active {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+a {
+  text-decoration: none;
+  padding-right: 10px;
+  padding-bottom: 6px;
+  font-size: 14px;
+}
+
+.my-header {
+  padding-left: 5px;
+}

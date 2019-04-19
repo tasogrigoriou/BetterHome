@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from "./home/home.component";
-import {PropertyComponent} from "./property/property.component";
 import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
 import {ExampleComponent} from "./example/example.component";
 import {SearchResultsComponent} from "./search-results/search-results.component";
+import {LogoutComponent} from "./logout/logout.component";
+
 
 const routes: Routes = [
   {
@@ -19,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'property',
-    component: PropertyComponent
+    loadChildren: './property/property.module#PropertyModule'
   },
   {
     path: 'register',
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'logout',
+    component: LogoutComponent
   },
   {
     path: 'example',
