@@ -11,6 +11,7 @@ import {HomeComponent} from "./home/home.component";
 import {RegisterComponent} from "./register/register.component";
 import {RegisterDialog} from "./register/register.dialog";
 import {LoginComponent} from "./login/login.component";
+import {AccountComponent} from "./account/account.component";
 import { ExampleComponent } from './example/example.component';
 import {AlertComponent} from "./core/components/alert/alert.component";
 
@@ -25,6 +26,7 @@ import {MatMenuModule} from '@angular/material/menu';
 
 
 import {
+  MatTabsModule,
   MatSidenavModule,
   MatListModule,
   MatInputModule,
@@ -45,6 +47,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 
 @NgModule({
   declarations: [
+    AccountComponent,
     AppComponent,
     HomeComponent,
     RegisterComponent,
@@ -58,6 +61,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     RegisterDialog
   ],
   imports: [
+    MatTabsModule,
     MatMenuModule,
     MatGridListModule,
     MatCheckboxModule,
