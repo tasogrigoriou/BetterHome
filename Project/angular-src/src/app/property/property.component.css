@@ -7,7 +7,8 @@
 
 .example-button-row button {
   margin-left: 8px;
-  margin-right: 400px;
+  margin-right:250px;
+
   background-color: aliceblue;
 }
 
@@ -16,4 +17,17 @@
 
 mat-grid-tile {
   background: lightblue;
+}
+.search-container {
+  margin-left:10px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+.search-container > * {
+  width: 150px;
+
+  outline: 1px none black;
 }

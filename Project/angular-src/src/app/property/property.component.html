@@ -1,24 +1,58 @@
 <mat-toolbar>
-
     <span>Property Listings</span>
-
 </mat-toolbar>
 <P>
+
 </P>
 <div>
   <div class="example-button-row">
     <button mat-raised-button>Back to Search</button>
 
+
     Sort By : <button mat-raised-button [matMenuTriggerFor]="menu">Relevance</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>Price:low to high</button>
       <button mat-menu-item>Price:high to low</button>
+      <button mat-menu-item>Sq Ft:low ti high</button>
+      <button mat-menu-item>Sq Ft:high to low</button>
       <button mat-menu-item>Newest</button>
     </mat-menu>
+
   </div>
+
+</div>
+<div class="search-container">
+  <!--<mat-form-field>-->
+
+  <input Input placeholder="San Francisco..." value = "">
+  <mat-select placeholder="Sale or Rental">
+    <mat-option value="Sale">Sale</mat-option>
+    <mat-option value="Rental">Rental</mat-option>
+  </mat-select>
+  <mat-select placeholder="Listing Type">
+    <mat-option value="option">House</mat-option>
+    <mat-option value="option">Apartment</mat-option>
+    <mat-option value="option">Condo</mat-option>
+  </mat-select>
+  <mat-select placeholder="Beds">
+    <mat-option value="option">1+</mat-option>
+    <mat-option value="option">2+</mat-option>
+    <mat-option value="option">3+</mat-option>
+  </mat-select>
+  <mat-select placeholder="Baths">
+    <mat-option value="option">1+</mat-option>
+    <mat-option value="option">2+</mat-option>
+    <mat-option value="option">3+</mat-option>
+  </mat-select>
+  <button mat-raised-button>Search</button>
+
+  <!--</mat-form-field>-->
+
 </div>
 <div class = "space">
   Showing 1 - 9 of {{numberOfResult}} results.
+
+
 </div>
 
 
@@ -66,7 +100,7 @@
           <label><input  #filter2 type="checkbox" name="size" (change)="0"> 3+</label>
         </mat-list-item>
       </mat-list>
-      <mat-list-item role="listitem">Property Type</mat-list-item>
+      <mat-list-item role="listitem">Listing Type</mat-list-item>
       <mat-list role="list">
         <mat-list-item role="listitem">
           <label><input  #filter2 type="checkbox" name="size" (change)="0"> House</label>
@@ -81,29 +115,20 @@
     </mat-list>
   </mat-drawer>
   <mat-drawer-content>
-
-
-
-
     <div *ngIf="!filter1.checked">
       <div *ngIf="filter">
-
         <section class="section">
           <div class="container">
             <div class="columns is-multiline">
               <div class="column is-4" *ngFor="let listing of listings">
                 <div class="card">
                   <div class="card-content">
-
-
                     <mat-card class="example-card">
                       <mat-card-header>
-
                         <mat-card-title>
                           <p><a [routerLink]="[listing.Lid]">{{ listing.title }}</a></p>
                         </mat-card-title>
                         <mat-card-subtitle>
-
                           <p>{{ listing.street }}</p>
                           <p>{{ listing.city }} </p>
                           <p>{{listing.state}},{{ listing.zipCode }}</p>
@@ -119,9 +144,6 @@
                         <button mat-button>LIKE</button>
                       </mat-card-actions>
                     </mat-card>
-
-
-
                   </div>
                 </div>
               </div>
@@ -129,15 +151,8 @@
           </div>
         </section>
 
-
       </div>
     </div>
-
-
-
-
-
-
   </mat-drawer-content>
 </mat-drawer-container>
 
