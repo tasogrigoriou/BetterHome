@@ -7,6 +7,7 @@
   background: none;
   float: left;
 }
+
 :host>.mat-tab-group {
   flex-direction: row;
 }
@@ -64,4 +65,10 @@
 }
 #content::after, #main-content::after {
   clear: both;
+}
+
+.label{
+  font-size: xx-large;
+  font-weight: bold;
+
 }
