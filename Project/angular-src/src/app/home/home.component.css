@@ -8,6 +8,29 @@
   margin-right: 20px;
 }
 
+
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont-form {
+  margin-right: 20px;
+}
+
+.cont-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cont-input {
+  width: 275px;
+  margin-right: 20px;
+}
+
 .cont-title {
   display: flex;
   justify-content: center;

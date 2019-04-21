@@ -36,14 +36,14 @@ export class HomeComponent implements OnInit {
       this.isLoaded = false;
       this.searchService.getSearchListings(this.listingSearch)
         .subscribe(listings => {
-        this.isLoaded = true;
-        this.saveListings(listings);
-        this.openDialog('Successfully retrieved Listings!', true);
-      },
-            err => {
-          this.isLoaded = true;
-          this.openDialog('Unable to retrieve any listings based on your search. Please try again');
-      });
+            this.isLoaded = true;
+            this.saveListings(listings);
+            this.openDialog('Successfully retrieved Listings!', true);
+          },
+          err => {
+            this.isLoaded = true;
+            this.openDialog('Unable to retrieve any listings based on your search. Please try again');
+          });
     }
   }
 
