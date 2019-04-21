@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import {ListingsService} from "../core/services/listings.service";
 
 
 @Component({
@@ -11,7 +12,13 @@ import { Component, OnInit} from '@angular/core';
 
 export class AccountComponent implements OnInit {
 
-  constructor() {}
-  ngOnInit() {}
+
+  listings
+  f
+  constructor( private listingsService: ListingsService) {}
+  ngOnInit() {
+    this.listings= this.listingsService.getListings();
+
+  }
 
 }

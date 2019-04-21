@@ -5,10 +5,34 @@
       <span>My Account</span>
     </mat-toolbar>
   </mat-tab>
-  <mat-tab label="My Listing">
+  <mat-tab label="My Listings">
+
     <mat-toolbar>
       <span>MyListings</span>
-    </mat-toolbar></mat-tab>
+    </mat-toolbar>
+
+
+    <section class="section">
+      <div class="container">
+        <div class="card" *ngFor="let listing of listings">
+          <mat-card class="example-card">
+            <p><a [routerLink]="[listing.Lid]">{{ listing.title }}</a></p>
+            <button mat-raised-button>Delete</button>
+            <button mat-raised-button>Modify</button>
+          </mat-card>
+        </div>
+      </div>
+
+    </section>
+    <div class ="btn1">
+      <button >+ Add New Listings</button>
+    </div>
+
+  </mat-tab>
+
+
+
+
   <mat-tab label="Favorites">
     <mat-toolbar>
       <span>Favorites</span>
