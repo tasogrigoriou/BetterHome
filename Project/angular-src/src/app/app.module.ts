@@ -15,7 +15,7 @@ import {LoginComponent} from "./login/login.component";
 import { ExampleComponent } from './example/example.component';
 import {AlertComponent} from "./core/components/alert/alert.component";
 import {AccountComponent} from  "./account/account.component";
-//import {AddlistingComponent} from "./addlisting/addlisting.component";
+import {AddlistingComponent} from "./addlisting/addlisting.component";
 
 
 
@@ -59,7 +59,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     AlertComponent,
     SearchResultsComponent,
     AccountComponent,
-    //AddlistingComponent
+    AddlistingComponent
   ],
   entryComponents: [
     RegisterDialog

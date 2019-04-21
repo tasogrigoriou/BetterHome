@@ -7,7 +7,7 @@ import {LoginComponent} from "./login/login.component";
 import {ExampleComponent} from "./example/example.component";
 import {SearchResultsComponent} from "./search-results/search-results.component";
 import {AccountComponent} from "./account/account.component";
-//import {AddlistingComponent} from  "./addlisting/addlisting.component";
+import {AddlistingComponent} from  "./addlisting/addlisting.component";
 
 
 
@@ -46,10 +46,10 @@ const routes: Routes = [
     path: 'account',
     component: AccountComponent
   },
-  //{
-    //path : 'addlisting',
-    //component: AddlistingComponent
-  //}
+  {
+    path : 'addlisting',
+    component: AddlistingComponent
+  }
 ];
 
 @NgModule({
