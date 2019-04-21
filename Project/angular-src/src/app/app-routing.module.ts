@@ -8,6 +8,7 @@ import {SearchResultsComponent} from "./search-results/search-results.component"
 import {AccountComponent} from "./account/account.component";
 import {AddlistingComponent} from  "./addlisting/addlisting.component";
 
+
 const routes: Routes = [
   {
     path: '',
