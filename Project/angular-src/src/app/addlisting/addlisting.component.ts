@@ -70,9 +70,8 @@ export class AddlistingComponent implements OnInit {
     return true;
   }
 
-  isEmptyStr(str): boolean {
-    if( typeof str == 'string')
-      return (!str || 0 === str.length);
+  isEmptyStr(str: string): boolean {
+    return (!str || 0 == str.length);
   }
 
   isEmptyNum(num: number): boolean {
@@ -80,8 +79,7 @@ export class AddlistingComponent implements OnInit {
   }
 
   isEmptyBool(bool: boolean) {
-    if(!bool)
-      return true;
+    return(!bool);
   }
 
   openDialog(message: string, subscribe: boolean) {
@@ -93,7 +91,7 @@ export class AddlistingComponent implements OnInit {
     });
     if (subscribe) {
       dialogRef.afterClosed().subscribe(result => {
-        this.router.navigate(['/login']);
+        this.router.navigate(['/account']);
       });
     }
   }
