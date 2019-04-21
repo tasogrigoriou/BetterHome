@@ -16,69 +16,64 @@
   </mat-toolbar>
   <div class="example-container">
     <mat-form-field>
-      <input matInput placeholder="Title">
+      <input matInput placeholder="Title" [(ngModel)]="listing.title" required>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Price">
+      <input matInput placeholder="Price" (keypress)="numberOnly($event)" [(ngModel)]="listing.price" required>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Lot Size">
+      <input matInput placeholder="Lot Size" (keypress)="numberOnly($event)" [(ngModel)]="listing.lotSize" required>
     </mat-form-field>
     <mat-form-field>
-      <mat-select placeholder="Sell or Rent">
-        <mat-option value="option1">For sell</mat-option>
-        <mat-option value="option2">For rent</mat-option>
+      <mat-select placeholder="Sell or Rent" [(ngModel)]="listing.forSale" required>
+        <mat-option value="option1" [value]="true">For sell</mat-option>
+        <mat-option value="option2" [value]="false">For rent</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Number of Bedrooms">
+      <input matInput placeholder="Number of Bedrooms" (keypress)="numberOnly($event)" [(ngModel)]="listing.numBedrooms" required>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Number of Bathrooms">
+      <input matInput placeholder="Number of Bathrooms" [(ngModel)]="listing.numBathrooms" required>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Street">
+      <input matInput placeholder="Street" [(ngModel)]="listing.street" required>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="City">
+      <input matInput placeholder="City" [(ngModel)]="listing.city" required>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="State">
+      <input matInput placeholder="State" [(ngModel)]="listing.state" required>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Zip code">
+      <input matInput placeholder="Zip code" (keypress)="numberOnly($event)" [(ngModel)]="listing.zipCode" required>
     </mat-form-field>
     <mat-form-field>
-      <mat-select placeholder="Hospital Access">
-        <mat-option value="option1">Yes</mat-option>
-        <mat-option value="option2">No</mat-option>
+      <mat-select placeholder="Hospital Access" [(ngModel)]="listing.hospitalAccess" required>
+        <mat-option value=" option1" [value]="true" >Yes</mat-option>
+        <mat-option value=" option2" [value]="false" >No</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field>
-      <mat-select placeholder="Bart Access">
-        <mat-option value="option1">Yes</mat-option>
-        <mat-option value="option2">No</mat-option>
+      <mat-select placeholder="Bart Access" [(ngModel)]="listing.BARTAccess" required>
+        <mat-option value="option1" [value]="true">Yes</mat-option>
+        <mat-option value="option2" [value]="false">No</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field>
-      <mat-select placeholder="Wheelchair Access">
-        <mat-option value="option1">Yes</mat-option>
-        <mat-option value="option2">No</mat-option>
+      <mat-select placeholder="Wheelchair Access" [(ngModel)]="listing.wheelchairAccess" required>
+        <mat-option value="option1" [value]="true">Yes</mat-option>
+        <mat-option value="option2" [value]="false">No</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field>
-      <mat-select placeholder="Near Laundry">
-        <mat-option value="option1">Yes</mat-option>
-        <mat-option value="option2">No</mat-option>
+      <mat-select placeholder="Near Laundry" [(ngModel)]="listing.laundry" required>
+        <mat-option value="option1" [value]="true">Yes</mat-option>
+        <mat-option value="option2" [value]="false">No</mat-option>
       </mat-select>
     </mat-form-field>
-
     <mat-form-field>
-      <input matInput placeholder="LotSize">
-    </mat-form-field>
-
-    <mat-form-field>
-      <mat-select placeholder="Listing Type">
+      <mat-select placeholder="Listing Type" [(ngModel)]="listing.listingType" required>
         <mat-option value="option1">House</mat-option>
         <mat-option value="option2">Apartment</mat-option>
         <mat-option value="option3">Condo</mat-option>
@@ -102,7 +97,7 @@
 
   </div>
   <div class ="btn1">
-    <button >Create the Listing</button>
+    <button (click)="onSubmit()">Create the Listing</button>
   </div>
 <br><br>
 </body>
