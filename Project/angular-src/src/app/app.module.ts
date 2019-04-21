@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import {CoreModule} from "./core/core.module";
 
 import {HomeComponent} from "./home/home.component";
-import {PropertyComponent} from "./property/property.component";
 import {RegisterComponent} from "./register/register.component";
 import {RegisterDialog} from "./register/register.dialog";
 import {LoginComponent} from "./login/login.component";
@@ -47,11 +46,11 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { SearchResultsComponent } from './search-results/search-results.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PropertyComponent,
     RegisterComponent,
     RegisterDialog,
     LoginComponent,
