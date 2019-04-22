@@ -14,7 +14,6 @@ export class AccountComponent implements OnInit {
 
 
   listings
-  f
   constructor( private listingsService: ListingsService) {}
   ngOnInit() {
     this.listings= this.listingsService.getListings();

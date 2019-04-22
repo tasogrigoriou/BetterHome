@@ -12,7 +12,9 @@ import {RegisterComponent} from "./register/register.component";
 import {RegisterDialog} from "./register/register.dialog";
 import {LoginComponent} from "./login/login.component";
 import {AccountComponent} from "./account/account.component";
+import {AddListingComponent} from "./addlisting/add-listing.component";
 import { ExampleComponent } from './example/example.component';
+
 import {AlertComponent} from "./core/components/alert/alert.component";
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -47,6 +49,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 
 @NgModule({
   declarations: [
+    AddListingComponent,
     AccountComponent,
     AppComponent,
     HomeComponent,

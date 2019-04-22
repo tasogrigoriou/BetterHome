@@ -6,6 +6,7 @@ import {LoginComponent} from "./login/login.component";
 import {ExampleComponent} from "./example/example.component";
 import {SearchResultsComponent} from "./search-results/search-results.component";
 import {AccountComponent} from "./account/account.component";
+import {AddListingComponent} from "./addlisting/add-listing.component";
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: 'account',
     component: AccountComponent
+  },
+  {
+    path: 'addlisting',
+    component: AddListingComponent
   },
   {
     path: 'example',

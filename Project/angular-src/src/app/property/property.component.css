@@ -31,3 +31,9 @@ mat-grid-tile {
 
   outline: 1px none black;
 }
+img.img1{
+  margin-left: 20px;
+  width: 100px;
+  height: 100px;
+}
+

@@ -1,9 +1,76 @@
 
 <mat-tab-group>
-  <mat-tab label="My Account">
+  <mat-tab label="My Profile">
     <mat-toolbar>
-      <span>My Account</span>
+      <span>My Profile</span>
     </mat-toolbar>
+
+    <div class="card-body">
+
+      <form>
+        <div class="row">
+          <div class="col-md-3">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="First Name">
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Last Name" type="text">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Email Address" type="text">
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Phone Number" type="text">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+        <div class="col-md-3">
+        <mat-form-field class="example-full-width">
+        <input matInput placeholder="Street Address" type="text">
+        </mat-form-field>
+        </div>
+        <div class="col-md-4">
+        <mat-form-field class="example-full-width">
+        <input matInput placeholder="City" type="text">
+        </mat-form-field>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col-md-3">
+        <mat-form-field class="example-full-width">
+        <input matInput placeholder="State" type="text">
+        </mat-form-field>
+        </div>
+        <div class="col-md-4">
+        <mat-form-field class="example-full-width">
+        <input matInput placeholder="Zip Code" type="text">
+        </mat-form-field>
+        </div>
+        </div>
+
+        <div class="w3-center">
+          <div class="w3-section">
+            <button mat-raised-button type = "save">Save</button>
+          </div>
+        </div>
+
+        <!--<button mat-raised-button  type = "edit" class="btn btn-danger pull-right">Edit</button>-->
+
+      </form>
+
+    </div>
   </mat-tab>
   <mat-tab label="My Listings">
 
@@ -39,101 +106,23 @@
   <mat-tab label="Favorites">
     <mat-toolbar>
       <span>Favorites</span>
-    </mat-toolbar></mat-tab>
-
-  <mat-tab label="Add new Listings">
-    <mat-toolbar>
-      <span>Add new Listings</span>
     </mat-toolbar>
-    <div class="example-container">
-      <mat-form-field>
-        <input matInput placeholder="Title">
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Price">
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Lot Size">
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select placeholder="Sell or Rent">
-          <mat-option value="option1">For sell</mat-option>
-          <mat-option value="option2">For rent</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Number of Bedrooms">
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Number of Bathrooms">
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Street">
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="City">
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="State">
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Zip code">
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select placeholder="Hospital Access">
-          <mat-option value="option1">Yes</mat-option>
-          <mat-option value="option2">No</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select placeholder="Bart Access">
-          <mat-option value="option1">Yes</mat-option>
-          <mat-option value="option2">No</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select placeholder="Wheelchair Access">
-          <mat-option value="option1">Yes</mat-option>
-          <mat-option value="option2">No</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select placeholder="Near Laundry">
-          <mat-option value="option1">Yes</mat-option>
-          <mat-option value="option2">No</mat-option>
-        </mat-select>
-      </mat-form-field>
+    <section class="section">
+      <div class="container">
+        <div class="card" *ngFor="let listing of listings">
+          <mat-card class="example-card">
+            <p><a [routerLink]="[listing.Lid]">{{ listing.title }}</a></p>
+            <div class = "delete-btn">
+              <button mat-raised-button>Unfavorite</button>
+            </div>
 
-
-      <mat-form-field>
-        <mat-select placeholder="Listing Type">
-          <mat-option value="option1">House</mat-option>
-          <mat-option value="option2">Apartment</mat-option>
-          <mat-option value="option3">Condo</mat-option>
-        </mat-select>
-      </mat-form-field>
-
-
-
-      <mat-form-field>
-        <textarea matInput placeholder="Description"></textarea>
-      </mat-form-field>
-
-      <!--https://stackoverflow.com/questions/47936183/angular-file-upload-->
-      <div class="form-group">
-        <label for="file">Upload the pictures</label>
-        <br>
-        <input type="file"
-               id="file"
-               (change)="handleFileInput($event.target.files)">
+          </mat-card>
+        </div>
       </div>
 
-    </div>
-    <div class ="btn1">
-      <button >Create the Listing</button>
-    </div>
-    <br><br>
-
+    </section>
 
   </mat-tab>
+
+
 </mat-tab-group>
