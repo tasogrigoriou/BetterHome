@@ -17,8 +17,11 @@
         <div class="card" *ngFor="let listing of listings">
           <mat-card class="example-card">
             <p><a [routerLink]="[listing.Lid]">{{ listing.title }}</a></p>
-            <button mat-raised-button>Delete</button>
-            <button mat-raised-button>Modify</button>
+            <div class = "delete-btn">
+              <button mat-raised-button>Delete</button>
+              <button mat-raised-button>Modify</button>
+            </div>
+
           </mat-card>
         </div>
       </div>
@@ -101,9 +104,6 @@
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field>
-        <input matInput placeholder="LotSize">
-      </mat-form-field>
 
       <mat-form-field>
         <mat-select placeholder="Listing Type">
