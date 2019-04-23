@@ -22,7 +22,7 @@ router.post('/', function (req, res) {
         '${req.body.laundry}',
         '${req.body.hospitalAccess}',
         '${req.body.BARTAccess}',
-        '${req.body.wheelchairAccess}',
+        '${req.body.wheelchairAccess}'
         )`;
 
     console.log(sql);
@@ -47,7 +47,7 @@ router.post('/', function (req, res) {
                         if (err) {
                             res.status(err.status || 500).send(err.message);
                         } else {
-                            res.send(result);
+                            res.send(listingResult);
                         }
                     })
                 }
@@ -70,16 +70,25 @@ router.get('/', async function (req, res) {
 });
 //read one
 router.get('/:id', async function (req, res) {
-    let sql = `SELECT '${req.body.listingId}' FROM Listing`;
-    database.query(sql, function (err, result) {
+    let sql = `SELECT '${req.body.listingId}' FROM Creates`;
+    database.query(sql, function (err, dbResponse) {
         if (err) {
             res.status(err.status || 500).send(err.message);
         } else {
-            console.log(result);
-            res.send(result);
+            let creates = dbResponse[0];
+            let sql =  `SELECT '${creates.listingId}' FROM Listing UNION SELECT '${creates.userId}' FROM Users`;
+            database.query(sql, function (err, result) {
+                if (err) {
+                    res.status(err.status || 500).send(err.message);
+                } else {
+                    console.log(result);
+                    res.send(result);
+                }
+            })
         }
     })
 });
+
 //Update
 router.put('/:id', function (req, res) {
     var sql = `UPDATE Listing SET title = '${req.body.title}', listingType = '${req.body.listingType}', price = '${req.body.price}', city = '${req.body.city}', state = '${req.body.state}', zipCode= '${req.body.zipCode}', street = '${req.body.street}', forSale = '${req.body.forSale}', numBedrooms = '${req.body.numBedrooms}', numBathrooms = '${req.body.numBathrooms}' WHERE Lid = '${req.body.Lid}'`;
