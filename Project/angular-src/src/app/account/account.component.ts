@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import {NgModel} from "@angular/forms";
+import {RegisterService, RegisterUser} from "../core/services/register.service";
 
 
 @Component({
@@ -11,8 +12,18 @@ import {NgModel} from "@angular/forms";
 
 
 export class AccountComponent implements OnInit {
+  user: RegisterUser;
 
-  constructor() {}
-  ngOnInit() {}
+  isLoaded = true;
+
+  constructor(private registerService: RegisterService,
+              ) {}
+  ngOnInit() {
+  }
+
+  onSaveInfoClick() {
+
+
+  }
 
 }
