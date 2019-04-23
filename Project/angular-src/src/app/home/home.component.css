@@ -1,11 +1,12 @@
 .main-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
 }
 
-.cont-form {
-  margin-right: 20px;
+.my-mat-card {
+  max-width: 500px;
+  width: 100%;
 }
 
 .cont-title {
@@ -16,10 +17,5 @@
 }
 
 .cont-input {
-  width: 275px;
-  margin-right: 20px;
-}
-
-.cont-button {
-  margin-right: 10px;
+  width: 100%;
 }

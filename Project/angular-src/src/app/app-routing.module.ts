@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from "./home/home.component";
-import {PropertyComponent} from "./property/property.component";
 import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
+import {LogoutComponent} from "./logout/logout.component";
 import {ExampleComponent} from "./example/example.component";
 import {SearchResultsComponent} from "./search-results/search-results.component";
+import {AccountComponent} from "./account/account.component";
+import {AddlistingComponent} from  "./addlisting/addlisting.component";
+
 
 const routes: Routes = [
   {
@@ -19,7 +22,7 @@ const routes: Routes = [
   },
   {
     path: 'property',
-    component: PropertyComponent
+    loadChildren: './property/property.module#PropertyModule'
   },
   {
     path: 'register',
@@ -30,6 +33,10 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'logout',
+    component: LogoutComponent
+  },
+  {
     path: 'example',
     component: ExampleComponent,
     data: { title: 'Example Fake Data' }
@@ -37,6 +44,14 @@ const routes: Routes = [
   {
     path: 'search-results',
     component: SearchResultsComponent
+  },
+  {
+    path: 'account',
+    component: AccountComponent
+  },
+  {
+    path : 'addlisting',
+    component: AddlistingComponent
   }
 ];
 

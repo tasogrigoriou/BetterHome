@@ -10,18 +10,18 @@ import {ListingsService} from "../core/services/listings.service";
 })
 
 
+
 export class PropertyComponent implements OnInit{
   numberOfResult
   listings
-  constructor(
-    private listingsService: ListingsService,
-    ) {}
+  filter: boolean = true;
+  constructor( private listingsService: ListingsService) {}
   ngOnInit() {
     this.listings= this.listingsService.getListings();
     this.numberOfResult = this.listings.length;
   }
-}
 
+}
 
 
 

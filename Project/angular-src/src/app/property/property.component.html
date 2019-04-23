@@ -1,24 +1,58 @@
 <mat-toolbar>
-
-    <span>Property Listings</span>
-
+  <span>Property Listings</span>
 </mat-toolbar>
 <P>
+
 </P>
 <div>
   <div class="example-button-row">
     <button mat-raised-button>Back to Search</button>
 
+
     Sort By : <button mat-raised-button [matMenuTriggerFor]="menu">Relevance</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>Price:low to high</button>
       <button mat-menu-item>Price:high to low</button>
+      <button mat-menu-item>LotSize:low ti high</button>
+      <button mat-menu-item>LotSize:high to low</button>
       <button mat-menu-item>Newest</button>
     </mat-menu>
+
   </div>
+
+</div>
+<div class="search-container">
+  <!--<mat-form-field>-->
+
+  <input Input placeholder="Filter..." value = "">
+  <mat-select placeholder="Sale or Rental">
+    <mat-option value="Sale">Sale</mat-option>
+    <mat-option value="Rental">Rental</mat-option>
+  </mat-select>
+  <mat-select placeholder="Listing Type">
+    <mat-option value="option">House</mat-option>
+    <mat-option value="option">Apartment</mat-option>
+    <mat-option value="option">Condo</mat-option>
+  </mat-select>
+  <mat-select placeholder="Beds">
+    <mat-option value="option">1+</mat-option>
+    <mat-option value="option">2+</mat-option>
+    <mat-option value="option">3+</mat-option>
+  </mat-select>
+  <mat-select placeholder="Baths">
+    <mat-option value="option">1+</mat-option>
+    <mat-option value="option">2+</mat-option>
+    <mat-option value="option">3+</mat-option>
+  </mat-select>
+  <button mat-raised-button>Search</button>
+
+  <!--</mat-form-field>-->
+
 </div>
 <div class = "space">
   Showing 1 - 9 of {{numberOfResult}} results.
+
+
 </div>
 
 
@@ -27,61 +61,98 @@
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened>
     <mat-list role="list">
-      <mat-list-item role="listitem"><mat-checkbox>For Sell</mat-checkbox></mat-list-item>
-      <mat-list-item role="listitem"><mat-checkbox>For rent</mat-checkbox></mat-list-item>
+
+      <!--<mat-selection-list #filte1r>-->
+      <!--<mat-list-option >Filter all</mat-list-option>-->
+      <!--</mat-selection-list>-->
+
+
+
+      <mat-list-item role="listitem">
+        <label><input  #filter2 type="checkbox" name="size" (change)="0"> For Sell</label>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <label><input  #filter2 type="checkbox" name="size" (change)="0"> For Rent</label>
+      </mat-list-item>
       <mat-list-item role="listitem">Price range</mat-list-item>
       <mat-list role="list">
-        <mat-list-item role="listitem"><mat-checkbox>Under $100k</mat-checkbox></mat-list-item>
-        <mat-list-item role="listitem"><mat-checkbox>$100k to $200k</mat-checkbox></mat-list-item>
-        <mat-list-item role="listitem"><mat-checkbox>Over $200k</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> Under $100k</label>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> $100k-$200k</label>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> Over $200k</label>
+        </mat-list-item>
       </mat-list>
-      <mat-list-item role="listitem">Bed Rooms</mat-list-item>
+      <mat-list-item role="listitem">Bedrooms</mat-list-item>
       <mat-list role="list">
-        <mat-list-item role="listitem"><mat-checkbox>1+</mat-checkbox></mat-list-item>
-        <mat-list-item role="listitem"><mat-checkbox>2+</mat-checkbox></mat-list-item>
-        <mat-list-item role="listitem"><mat-checkbox>3+</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> 1+</label>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> 2+</label>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> 3+</label>
+        </mat-list-item>
       </mat-list>
-      <mat-list-item role="listitem">Property Type</mat-list-item>
+      <mat-list-item role="listitem">Listing Type</mat-list-item>
       <mat-list role="list">
-        <mat-list-item role="listitem"> <mat-checkbox>House</mat-checkbox></mat-list-item>
-        <mat-list-item role="listitem"> <mat-checkbox>Apartment</mat-checkbox></mat-list-item>
-        <mat-list-item role="listitem"> <mat-checkbox>TownHouse</mat-checkbox></mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> House</label>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> Apartment</label>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter2 type="checkbox" name="size" (change)="0"> Condo</label>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <label><input  #filter1 type="checkbox" name="size" (change)="0"> Filter all</label>
+        </mat-list-item>
       </mat-list>
     </mat-list>
   </mat-drawer>
   <mat-drawer-content>
-    <!--<mat-grid-list cols="2" rowHeight="2:1">-->
-      <!--<mat-grid-tile></mat-grid-tile>-->
-      <!--<mat-grid-tile>2</mat-grid-tile>-->
-      <!--<mat-grid-tile>3</mat-grid-tile>-->
-      <!--<mat-grid-tile>4</mat-grid-tile>-->
-      <!--<mat-grid-tile>5</mat-grid-tile>-->
-      <!--<mat-grid-tile>6</mat-grid-tile>-->
-      <!--<mat-grid-tile>7</mat-grid-tile>-->
-      <!--<mat-grid-tile>8</mat-grid-tile>-->
-    <!--</mat-grid-list>-->
-
-    <section class="section">
-      <div class="container">
-        <div class="columns is-multiline">
-          <div class="column is-4" *ngFor="let listing of listings">
-            <div class="card">
-              <div class="card-content">
-                <!--<a [routerLink]="[listing.listingAddress]" skipLocationChange="true" [queryParams]="{-->
-            <!--listingAddress: listing.listingAddress,-->
-            <!--listingCity: listing.listingCity,-->
-            <!--listingState: listing.listingState-->
-            <!--}">{{ listing.listingAddress }}</a>-->
-                <p>{{ listing.listingAddress }}</p>
-                <p>{{ listing.listingCity }}</p>
-                <p>{{ listing.listingState }}</p>
+    <div *ngIf="!filter1.checked">
+      <div *ngIf="filter">
+        <section class="section">
+          <div class="container">
+            <div class="columns is-multiline">
+              <div class="column is-4" *ngFor="let listing of listings">
+                <div class="card">
+                  <div class="card-content">
+                    <mat-card class="example-card">
+                      <mat-card-header>
+                        <mat-card-title>
+                          <p><a [routerLink]="[listing.Lid]">{{ listing.title }}</a></p>
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                          <p>{{ listing.street }}</p>
+                          <p>{{ listing.city }} </p>
+                          <p>{{listing.state}},{{ listing.zipCode }}</p>
+                        </mat-card-subtitle>
+                      </mat-card-header>
+                      <img mat-card-image src="{{listing.imageUrl}}" class="img1">
+                      <mat-card-content>
+                        <p>{{listing.listingType}}</p>
+                        <p>{{listing.numBedrooms}} bedrooms, {{listing.numBathrooms}} bathrooms</p>
+                        <p>$ {{listing.price}}</p>
+                      </mat-card-content>
+                      <mat-card-actions>
+                        <button mat-button>LIKE</button>
+                      </mat-card-actions>
+                    </mat-card>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
+      </div>
+    </div>
   </mat-drawer-content>
 </mat-drawer-container>
-

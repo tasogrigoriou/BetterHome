@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Router} from "@angular/router";
 import {MatDialog} from "@angular/material";
 import {first} from "rxjs/operators";
@@ -8,7 +8,7 @@ import {LoginService, LoginUser} from "../core/services/login.service";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styles: []
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
   user: Login = {
@@ -51,6 +51,7 @@ export class LoginComponent implements OnInit {
     });
     if (subscribe) {
       dialogRef.afterClosed().subscribe(result => {
+        this.loginService.emitLoginEvent(this.loginUser);
         this.router.navigate(['/']);
       });
     }
