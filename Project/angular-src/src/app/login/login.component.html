@@ -1,29 +1,37 @@
-<mat-toolbar>
-  <span>Login</span>
-</mat-toolbar>
-<mat-card class="my-card">
-  <mat-card-content>
+<!--<mat-toolbar>-->
+<!--<span>Login</span>-->
+<!--</mat-toolbar>-->
+<section class="hero is-info is-fullheight-with-navbar is-bold">
+  <div class="hero-body">
+    <div class="main-div">
+      <mat-card class="my-mat-card mat-elevation-z20">
+        <mat-card-title class="main-div">Login</mat-card-title>
+        <mat-card-content>
 
-    <!--FORM FIELDS HERE-->
-    <div fxLayout="column" fxLayoutAlign="center">
-      <mat-form-field class="full-width">
-        <mat-label>Username</mat-label>
-        <input matInput placeholder="Username" [(ngModel)]="user.username" name="username" required>
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <mat-label>Password</mat-label>
-        <input matInput type="password" placeholder="Password" [(ngModel)]="user.password" name="password" required>
-      </mat-form-field>
+          <!--FORM FIELDS HERE-->
+          <div fxLayout="column" fxLayoutAlign="center">
+            <mat-form-field class="cont-input">
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Username" [(ngModel)]="user.username" name="username" required>
+            </mat-form-field>
+            <mat-form-field class="cont-input">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" placeholder="Password" [(ngModel)]="user.password" name="password" required>
+            </mat-form-field>
+          </div>
+
+        </mat-card-content>
+        <mat-card-actions>
+
+          <div class="my-button" fxLayout="column" fxLayoutAlign="center">
+            <!-- LOGIN BUTTON -->
+            <button mat-raised-button (click)="onSubmit()" color="primary">Login</button>
+          </div>
+
+          <mat-spinner *ngIf="!isLoaded"></mat-spinner>
+
+        </mat-card-actions>
+      </mat-card>
     </div>
-
-  </mat-card-content>
-  <mat-card-actions>
-
-    <!-- LOGIN BUTTON -->
-    <button mat-raised-button (click)="onSubmit()" color="primary">Login</button>
-
-    <mat-spinner *ngIf="!isLoaded"></mat-spinner>
-
-  </mat-card-actions>
-</mat-card>
-
+  </div>
+</section>
