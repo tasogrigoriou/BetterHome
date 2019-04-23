@@ -14,8 +14,6 @@ export class ExampleComponent implements OnInit {
 
   displayedColumns: string[] = ['ID', 'Name'];
 
-  listingId: number;
-
   constructor(private exampleService: ExampleService) {}
 
   ngOnInit() {

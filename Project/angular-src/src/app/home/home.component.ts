@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {MatDialog} from "@angular/material";
 import {RegisterDialog} from "../register/register.dialog";
 import {SearchListingsService} from "../core/services/search.listings.service";
@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit {
 
   listingSearch: ListingSearch;
   listings: Listing[];
@@ -23,19 +23,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    if (localStorage.getItem('listingSearch')) {
-      this.listingSearch = JSON.parse(localStorage.getItem('listingSearch'));
-    }
-    else {
-      this.listingSearch = {
-        city: ''
-      }
-    }
-  }
-
-  ngOnDestroy() {
-    if (this.listingSearch) {
-      localStorage.setItem('listingSearch', JSON.stringify(this.listingSearch));
+    this.listingSearch = {
+      city: ''
     }
   }
 
@@ -47,15 +36,19 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.isLoaded = false;
       this.searchService.getSearchListings(this.listingSearch)
         .subscribe(listings => {
-        this.isLoaded = true;
-        this.searchService.saveSearchListings(listings);
-        this.openDialog('Successfully retrieved Listings!', true);
-      },
-            err => {
-          this.isLoaded = true;
-          this.openDialog('Unable to retrieve any listings based on your search. Please try again');
-      });
+            this.isLoaded = true;
+            this.saveListings(listings);
+            this.openDialog('Successfully retrieved Listings!', true);
+          },
+          err => {
+            this.isLoaded = true;
+            this.openDialog('Unable to retrieve any listings based on your search. Please try again');
+          });
     }
+  }
+
+  saveListings(listings: Listing[]) {
+    this.searchService.listings = listings;
   }
 
   openDialog(message: string, subscribe: boolean = false) {
@@ -75,7 +68,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 export interface ListingSearch {
   city: string;
-  forSale?: boolean;
   listingType?: string;
   numBedrooms?: number;
   numBathrooms?: number;

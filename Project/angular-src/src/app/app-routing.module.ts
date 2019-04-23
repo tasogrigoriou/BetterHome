@@ -5,7 +5,8 @@ import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
 import {ExampleComponent} from "./example/example.component";
 import {SearchResultsComponent} from "./search-results/search-results.component";
-import {LogoutComponent} from "./logout/logout.component";
+import {AccountComponent} from "./account/account.component";
+import {AddlistingComponent} from  "./addlisting/addlisting.component";
 
 
 const routes: Routes = [
@@ -31,10 +32,6 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'logout',
-    component: LogoutComponent
-  },
-  {
     path: 'example',
     component: ExampleComponent,
     data: { title: 'Example Fake Data' }
@@ -42,6 +39,14 @@ const routes: Routes = [
   {
     path: 'search-results',
     component: SearchResultsComponent
+  },
+  {
+    path: 'account',
+    component: AccountComponent
+  },
+  {
+    path : 'addlisting',
+    component: AddlistingComponent
   }
 ];
 

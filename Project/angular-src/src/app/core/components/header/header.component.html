@@ -1,37 +1,14 @@
-<mat-toolbar color="primary" class="mat-elevation-z8 my-toolbar">
-  <span>
-    <a [routerLink]="'/'"><h3 class="my-header-title">Better Home</h3></a>
-  </span>
-
-  <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
-
-  <!--Right Aligned Links-->
-  <ng-template [ngIf]="loginUser">
-    <a mat-button class="my-mat-button" color="primary" [matMenuTriggerFor]="menu">{{ loginUser.username }}
-      <mat-icon>arrow_drop_down</mat-icon>
-    </a>
-
-    <mat-menu #menu="matMenu" xPosition="before">
-      <button mat-menu-item [routerLink]="'/account'">
-        <mat-icon>account_box</mat-icon>
-        <span>Account</span>
-      </button>
-      <button mat-menu-item [routerLink]="'/post-listing'">
-        <mat-icon>add</mat-icon>
-        <span>Post Listing</span>
-      </button>
-      <button mat-menu-item [routerLink]="'/logout'">
-        <mat-icon>close</mat-icon>
-        <span>Logout</span>
-      </button>
-    </mat-menu>
-
-  </ng-template>
-
-  <ng-template [ngIf]="!loginUser">
-  <a [routerLink]="'/login'">Login</a>
-  <a [routerLink]="'/register'">Register</a>
-  </ng-template>
-
-</mat-toolbar>
+<nav class="navbar is-dark">
+  <!-- menu -->
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" routerLink="">Home</a>
+      <a class="navbar-item" routerLink="about-us">About us</a>
+      <a class="navbar-item" routerLink="property">Property</a>
+      <a class="navbar-item" routerLink="account">Account</a>
+      <a class="navbar-item" routerLink="addlisting">Add Listing</a>
+      <a class="navbar-item" routerLink="register">Register</a>
+      <a class="navbar-item" routerLink="login">Login</a>
+    </div>
+  </div>
+</nav>

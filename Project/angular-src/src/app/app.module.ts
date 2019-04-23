@@ -13,7 +13,10 @@ import {RegisterDialog} from "./register/register.dialog";
 import {LoginComponent} from "./login/login.component";
 import { ExampleComponent } from './example/example.component';
 import {AlertComponent} from "./core/components/alert/alert.component";
-import {UploadComponent} from "./core/components/upload/upload.component";
+import {AccountComponent} from  "./account/account.component";
+import {AddlistingComponent} from "./addlisting/addlisting.component";
+
+
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -23,6 +26,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatTabsModule} from '@angular/material';
+
 
 import {
 
@@ -41,17 +46,7 @@ import {
 } from '@angular/material';
 import {MatDialogModule} from '@angular/material/dialog';
 import {FlexLayoutModule} from "@angular/flex-layout";
-import {MatFileUploadModule} from "angular-material-fileupload";
-
-import { CovalentLayoutModule } from '@covalent/core/layout';
-import { CovalentStepsModule  } from '@covalent/core/steps';
-import { CovalentHttpModule } from '@covalent/http';
-import { CovalentHighlightModule } from '@covalent/highlight';
-import { CovalentMarkdownModule } from '@covalent/markdown';
-import { CovalentDynamicFormsModule } from '@covalent/dynamic-forms';
-import {CovalentFileModule} from "@covalent/core";
 import { SearchResultsComponent } from './search-results/search-results.component';
-import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
@@ -64,9 +59,8 @@ import { LogoutComponent } from './logout/logout.component';
     ExampleComponent,
     AlertComponent,
     SearchResultsComponent,
-    AlertComponent,
-    UploadComponent,
-    LogoutComponent
+    AccountComponent,
+    AddlistingComponent,
   ],
   entryComponents: [
     RegisterDialog
@@ -83,7 +77,6 @@ import { LogoutComponent } from './logout/logout.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
     MatSidenavModule,
     MatListModule,
     MatInputModule,
@@ -96,20 +89,10 @@ import { LogoutComponent } from './logout/logout.component';
     MatCardModule,
     MatFormFieldModule,
     MatToolbarModule,
-
-    FlexLayoutModule,
-    MatFileUploadModule,
-    CovalentLayoutModule,
-    CovalentStepsModule,
-    // (optional) Additional Covalent Modules imports
-    CovalentHttpModule.forRoot(),
-    CovalentHighlightModule,
-    CovalentMarkdownModule,
-    CovalentDynamicFormsModule,
-    CovalentFileModule,
     MatSelectModule,
     MatDialogModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

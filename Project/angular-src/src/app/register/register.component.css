@@ -1,18 +1,4 @@
-.main-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 350px;
-  width: 100%;
-}
-
-.my-mat-card {
-  max-width: 350px;
-  width: 100%;
-}
-
-.my-button {
-  margin-right: 80px;
-  margin-left: 80px;
-}
+/*.my-card {*/
+  /*margin: 0 auto;*/
+  /*width: 800px;*/
+/*}*/

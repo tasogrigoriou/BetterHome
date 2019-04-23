@@ -7,5 +7,4 @@ import 'hammerjs';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-
 }
