@@ -53,6 +53,7 @@ import { CovalentHighlightModule } from '@covalent/highlight';
 import { CovalentMarkdownModule } from '@covalent/markdown';
 import { CovalentDynamicFormsModule } from '@covalent/dynamic-forms';
 import {CovalentFileModule} from "@covalent/core";
+import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import {CovalentFileModule} from "@covalent/core";
     LogoutComponent,
     AccountComponent,
     AddlistingComponent,
+    AdvancedSearchComponent,
   ],
   entryComponents: [
     RegisterDialog

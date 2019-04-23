@@ -8,6 +8,7 @@ import {ExampleComponent} from "./example/example.component";
 import {SearchResultsComponent} from "./search-results/search-results.component";
 import {AccountComponent} from "./account/account.component";
 import {AddlistingComponent} from  "./addlisting/addlisting.component";
+import {AdvancedSearchComponent} from "./advanced-search/advanced-search.component";
 
 
 const routes: Routes = [
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'logout',
     component: LogoutComponent
+  },
+  {
+    path: 'advanced-search',
+    component: AdvancedSearchComponent
   },
   {
     path: 'example',
