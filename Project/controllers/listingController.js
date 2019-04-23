@@ -41,12 +41,17 @@ router.post('/', function (req, res) {
                         `
                         '${req.body.userId}',
                         '${listing.listingId}',
-                        '${date.getTime()}',
+                        '${date.getTime()}'
+                        ) UNION INSERT INTO ListingImage (listingId, imageUrl) VALUES(` +
+                        `
+                        '${listing.listingId}',
+                        '${req.body.userId}'
                         )`;
                     database.query(sql, function (err, createsResult) {
                         if (err) {
                             res.status(err.status || 500).send(err.message);
                         } else {
+                            console.log(createsResult);
                             res.send(listingResult);
                         }
                     })
@@ -57,6 +62,7 @@ router.post('/', function (req, res) {
 });
 
 //Read all
+/*
 router.get('/', async function (req, res) {
     let sql = `SELECT * FROM Listing`;
     database.query(sql, function (err, result) {
@@ -68,6 +74,7 @@ router.get('/', async function (req, res) {
         }
     })
 });
+ */
 //read one
 router.get('/:id', async function (req, res) {
     let sql = `SELECT '${req.body.listingId}' FROM Creates`;
@@ -76,7 +83,7 @@ router.get('/:id', async function (req, res) {
             res.status(err.status || 500).send(err.message);
         } else {
             let creates = dbResponse[0];
-            let sql =  `SELECT '${creates.listingId}' FROM Listing UNION SELECT '${creates.userId}' FROM Users`;
+            let sql =  `SELECT '${creates.listingId}' FROM Listing UNION SELECT '${creates.userId}' FROM Users UNION SELECT '${creates.listingId}' FROM listingImages`;
             database.query(sql, function (err, result) {
                 if (err) {
                     res.status(err.status || 500).send(err.message);
@@ -89,7 +96,7 @@ router.get('/:id', async function (req, res) {
     })
 });
 
-//Update
+/*
 router.put('/:id', function (req, res) {
     var sql = `UPDATE Listing SET title = '${req.body.title}', listingType = '${req.body.listingType}', price = '${req.body.price}', city = '${req.body.city}', state = '${req.body.state}', zipCode= '${req.body.zipCode}', street = '${req.body.street}', forSale = '${req.body.forSale}', numBedrooms = '${req.body.numBedrooms}', numBathrooms = '${req.body.numBathrooms}' WHERE Lid = '${req.body.Lid}'`;
     console.log(sql);
@@ -102,6 +109,7 @@ router.put('/:id', function (req, res) {
         }
     })
 });
+ */
 //Delete
 router.delete('/id:', async function (req, res) {
     let sql = `DELETE FROM Creates WHERE listingId = '${req.body.listingId} `;
