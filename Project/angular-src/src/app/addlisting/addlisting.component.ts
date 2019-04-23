@@ -16,6 +16,7 @@ import {MatDialog} from "@angular/material";
 
 export class AddlistingComponent implements OnInit {
 
+
   listing: Listing;
 
   isLoaded = true;
