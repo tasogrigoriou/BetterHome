@@ -19,3 +19,35 @@
 .cont-input {
   width: 100%;
 }
+
+/* unvisited link */
+a:link {
+  color: rgba(0, 0, 0, 0);
+}
+
+/* visited link */
+a:visited {
+  color: rgba(0, 0, 0, 0);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgba(0, 0, 0, 0.58);
+}
+
+/* selected link */
+a:active {
+  color: rgba(0, 0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.cont-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+}

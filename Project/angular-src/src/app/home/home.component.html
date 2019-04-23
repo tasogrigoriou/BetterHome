@@ -42,12 +42,15 @@
           <a class="my-search" mat-button matSuffix color="primary" (click)="onSearchClick()"><mat-icon>search</mat-icon></a>
         </mat-form-field>
 
-        <!--<button class="cont-button" mat-raised-button color="primary" (click)="onSearchClick()">Search</button>-->
+<!--        <button class="cont-button" mat-raised-button color="primary" (click)="onSearchClick()">Search</button>-->
 
       </mat-card>
 
       <div>
         <mat-spinner *ngIf="!isLoaded"></mat-spinner>
+      </div>
+      <div class="cont-a">
+        <a [routerLink]="'/advanced-search'">Advanced Search</a>
       </div>
 
     </div>
