@@ -28,7 +28,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material';
 
+
 import {
+
   MatSidenavModule,
   MatListModule,
   MatInputModule,
@@ -58,7 +60,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     AlertComponent,
     SearchResultsComponent,
     AccountComponent,
-    AddlistingComponent
+    AddlistingComponent,
   ],
   entryComponents: [
     RegisterDialog

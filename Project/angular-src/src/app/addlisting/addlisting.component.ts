@@ -16,7 +16,8 @@ import {MatDialog} from "@angular/material";
 
 export class AddlistingComponent implements OnInit {
 
-  listing: Listing;
+
+  listings;
 
   isLoaded = true;
 
@@ -24,13 +25,13 @@ export class AddlistingComponent implements OnInit {
               private listingsService: ListingsService,
               public dialog: MatDialog) {}
   ngOnInit() {
-    this.listing = new Listing();
+    this.listings= this.listingsService.getListings();
   }
 
   onSubmit() {
     if (this.isDataProvided()) {
       this.isLoaded = false;
-      this.listingsService.createListing(this.listing)
+      this.listingsService.createListing(this.listings)
         .pipe(first())
         .subscribe(data => {
             this.isLoaded = true;
@@ -52,21 +53,21 @@ export class AddlistingComponent implements OnInit {
   }
 
   isDataProvided(): boolean {
-    return (!this.isEmptyStr(this.listing.title) &&
-      !this.isEmptyStr(this.listing.listingType) &&
-      !this.isEmptyNum(this.listing.price) &&
-      !this.isEmptyNum(this.listing.lotSize) &&
-      !this.isEmptyStr(this.listing.city) &&
-      !this.isEmptyNum(this.listing.zipCode) &&
-      !this.isEmptyStr(this.listing.street) &&
-      !this.isEmptyStr(this.listing.state) &&
-      !this.isEmptyBool(this.listing.forSale) &&
-      !this.isEmptyNum(this.listing.numBedrooms) &&
-      !this.isEmptyStr(this.listing.numBathrooms) &&
-      !this.isEmptyBool(this.listing.laundry) &&
-      !this.isEmptyBool(this.listing.hospitalAccess) &&
-      !this.isEmptyBool(this.listing.BARTAccess) &&
-      !this.isEmptyBool(this.listing.wheelchairAccess));
+    return (!this.isEmptyStr(this.listings.title) &&
+      !this.isEmptyStr(this.listings.listingType) &&
+      !this.isEmptyNum(this.listings.price) &&
+      !this.isEmptyNum(this.listings.lotSize) &&
+      !this.isEmptyStr(this.listings.city) &&
+      !this.isEmptyNum(this.listings.zipCode) &&
+      !this.isEmptyStr(this.listings.street) &&
+      !this.isEmptyStr(this.listings.state) &&
+      !this.isEmptyBool(this.listings.forSale) &&
+      !this.isEmptyNum(this.listings.numBedrooms) &&
+      !this.isEmptyStr(this.listings.numBathrooms) &&
+      !this.isEmptyBool(this.listings.laundry) &&
+      !this.isEmptyBool(this.listings.hospitalAccess) &&
+      !this.isEmptyBool(this.listings.BARTAccess) &&
+      !this.isEmptyBool(this.listings.wheelchairAccess));
     return true;
   }
 
