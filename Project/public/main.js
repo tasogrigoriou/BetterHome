@@ -237,6 +237,122 @@ var AddlistingComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/advanced-search/advanced-search.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/advanced-search/advanced-search.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".main-div {\n  margin: 0 auto;\n  max-width: 900px;\n  width: 100%;\n}\n\n.my-mat-card {\n  max-width: 900px;\n  width: 100%;\n}\n\n.cont-form {\n  margin-right: 20px;\n}\n\n.cont-title {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 20px;\n}\n\n/* unvisited link */\n\na:link {\n  color: rgba(0, 0, 0, 0);\n}\n\n/* visited link */\n\na:visited {\n  color: rgba(0, 0, 0, 0);\n}\n\n/* mouse over link */\n\na:hover {\n  color: rgba(0, 0, 0, 0.58);\n}\n\n/* selected link */\n\na:active {\n  color: rgba(0, 0, 0, 0);\n}\n\na {\n  text-decoration: none;\n  font-size: 14px;\n}\n\n.cont-a {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-top: 12px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWR2YW5jZWQtc2VhcmNoL2FkdmFuY2VkLXNlYXJjaC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBYztFQUNkLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsV0FBVztBQUNiOztBQUVBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsYUFBYTtFQUNiLHVCQUF1QjtFQUN2QixtQkFBbUI7RUFDbkIsbUJBQW1CO0FBQ3JCOztBQUVBLG1CQUFtQjs7QUFDbkI7RUFDRSx1QkFBdUI7QUFDekI7O0FBRUEsaUJBQWlCOztBQUNqQjtFQUNFLHVCQUF1QjtBQUN6Qjs7QUFFQSxvQkFBb0I7O0FBQ3BCO0VBQ0UsMEJBQTBCO0FBQzVCOztBQUVBLGtCQUFrQjs7QUFDbEI7RUFDRSx1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSxxQkFBcUI7RUFDckIsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLGFBQWE7RUFDYix1QkFBdUI7RUFDdkIsbUJBQW1CO0VBQ25CLGdCQUFnQjtBQUNsQiIsImZpbGUiOiJzcmMvYXBwL2FkdmFuY2VkLXNlYXJjaC9hZHZhbmNlZC1zZWFyY2guY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWluLWRpdiB7XG4gIG1hcmdpbjogMCBhdXRvO1xuICBtYXgtd2lkdGg6IDkwMHB4O1xuICB3aWR0aDogMTAwJTtcbn1cblxuLm15LW1hdC1jYXJkIHtcbiAgbWF4LXdpZHRoOiA5MDBweDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5jb250LWZvcm0ge1xuICBtYXJnaW4tcmlnaHQ6IDIwcHg7XG59XG5cbi5jb250LXRpdGxlIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIG1hcmdpbi1ib3R0b206IDIwcHg7XG59XG5cbi8qIHVudmlzaXRlZCBsaW5rICovXG5hOmxpbmsge1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwKTtcbn1cblxuLyogdmlzaXRlZCBsaW5rICovXG5hOnZpc2l0ZWQge1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwKTtcbn1cblxuLyogbW91c2Ugb3ZlciBsaW5rICovXG5hOmhvdmVyIHtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC41OCk7XG59XG5cbi8qIHNlbGVjdGVkIGxpbmsgKi9cbmE6YWN0aXZlIHtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMCk7XG59XG5cbmEge1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIGZvbnQtc2l6ZTogMTRweDtcbn1cblxuLmNvbnQtYSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBtYXJnaW4tdG9wOiAxMnB4O1xufVxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/advanced-search/advanced-search.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/advanced-search/advanced-search.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<section class=\"hero is-info is-fullheight-with-navbar is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"main-div\">\n\n      <div>\n        <h1 class=\"cont-title\">Advanced Search</h1>\n      </div>\n\n      <mat-card class=\"my-mat-card mat-elevation-z20\">\n\n        <mat-form-field class=\"cont-form\">\n        <mat-label>Sale or Rental</mat-label>\n        <mat-select [(value)]=\"listingSearch.forSale\">\n        <mat-option value=null>Both</mat-option>\n        <mat-option value=1>Sale</mat-option>\n        <mat-option value=0>Rental</mat-option>\n        </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-form\">\n        <mat-label>Bedrooms</mat-label>\n        <mat-select [(value)]=\"listingSearch.numBedrooms\">\n        <mat-option value=0>Any</mat-option>\n        <mat-option value=1>1 Bed</mat-option>\n        <mat-option value=2>2 Beds</mat-option>\n        <mat-option value=3>3 Beds</mat-option>\n        </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-form\">\n        <mat-label>Bathrooms</mat-label>\n        <mat-select [(value)]=\"listingSearch.numBathrooms\">\n        <mat-option value=0>Any</mat-option>\n        <mat-option value=1>1</mat-option>\n        <mat-option value=2>2</mat-option>\n        <mat-option value=3>3</mat-option>\n        </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-form\">\n          <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" (keyup.enter)=\"onSearchClick()\" required>\n          <a class=\"my-search\" mat-button matSuffix color=\"primary\" (click)=\"onSearchClick()\"><mat-icon>search</mat-icon></a>\n        </mat-form-field>\n\n        <!--<button class=\"cont-button\" mat-raised-button color=\"primary\" (click)=\"onSearchClick()\">Search</button>-->\n\n      </mat-card>\n\n      <div>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n\n  </div>\n  <app-footer></app-footer>\n</section>\n"
+
+/***/ }),
+
+/***/ "./src/app/advanced-search/advanced-search.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/advanced-search/advanced-search.component.ts ***!
+  \**************************************************************/
+/*! exports provided: AdvancedSearchComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdvancedSearchComponent", function() { return AdvancedSearchComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_services_search_listings_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/services/search.listings.service */ "./src/app/core/services/search.listings.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../register/register.dialog */ "./src/app/register/register.dialog.ts");
+
+
+
+
+
+
+var AdvancedSearchComponent = /** @class */ (function () {
+    function AdvancedSearchComponent(router, searchService, dialog) {
+        this.router = router;
+        this.searchService = searchService;
+        this.dialog = dialog;
+        this.isLoaded = true;
+    }
+    AdvancedSearchComponent.prototype.ngOnInit = function () {
+        if (localStorage.getItem('listingSearch')) {
+            this.listingSearch = JSON.parse(localStorage.getItem('listingSearch'));
+        }
+        else {
+            this.listingSearch = {
+                city: ''
+            };
+        }
+    };
+    AdvancedSearchComponent.prototype.ngOnDestroy = function () {
+        if (this.listingSearch) {
+            localStorage.setItem('listingSearch', JSON.stringify(this.listingSearch));
+        }
+    };
+    AdvancedSearchComponent.prototype.onSearchClick = function () {
+        var _this = this;
+        if (!this.listingSearch.city.length) {
+            this.openDialog('Please enter some text for the city field');
+        }
+        else {
+            this.isLoaded = false;
+            this.searchService.getSearchListings(this.listingSearch)
+                .subscribe(function (listings) {
+                _this.isLoaded = true;
+                _this.searchService.saveSearchListings(listings);
+                _this.openDialog('Successfully retrieved Listings!', true);
+            }, function (err) {
+                _this.isLoaded = true;
+                _this.openDialog('Unable to retrieve any listings based on your search. Please try again');
+            });
+        }
+    };
+    AdvancedSearchComponent.prototype.openDialog = function (message, subscribe) {
+        var _this = this;
+        if (subscribe === void 0) { subscribe = false; }
+        var dialog = this.dialog.open(_register_register_dialog__WEBPACK_IMPORTED_MODULE_5__["RegisterDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        if (subscribe) {
+            dialog.afterClosed().subscribe(function (result) {
+                _this.router.navigate(['/search-results']);
+            });
+        }
+    };
+    AdvancedSearchComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-advanced-search',
+            template: __webpack_require__(/*! ./advanced-search.component.html */ "./src/app/advanced-search/advanced-search.component.html"),
+            styles: [__webpack_require__(/*! ./advanced-search.component.css */ "./src/app/advanced-search/advanced-search.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _core_services_search_listings_service__WEBPACK_IMPORTED_MODULE_3__["SearchListingsService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialog"]])
+    ], AdvancedSearchComponent);
+    return AdvancedSearchComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/app-routing.module.ts":
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
@@ -258,6 +374,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./search-results/search-results.component */ "./src/app/search-results/search-results.component.ts");
 /* harmony import */ var _account_account_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./account/account.component */ "./src/app/account/account.component.ts");
 /* harmony import */ var _addlisting_addlisting_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./addlisting/addlisting.component */ "./src/app/addlisting/addlisting.component.ts");
+/* harmony import */ var _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./advanced-search/advanced-search.component */ "./src/app/advanced-search/advanced-search.component.ts");
+
 
 
 
@@ -294,6 +412,10 @@ var routes = [
     {
         path: 'logout',
         component: _logout_logout_component__WEBPACK_IMPORTED_MODULE_6__["LogoutComponent"]
+    },
+    {
+        path: 'advanced-search',
+        component: _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_11__["AdvancedSearchComponent"]
     },
     {
         path: 'example',
@@ -429,6 +551,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _covalent_markdown__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @covalent/markdown */ "./node_modules/@covalent/markdown/fesm5/covalent-markdown.js");
 /* harmony import */ var _covalent_dynamic_forms__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @covalent/dynamic-forms */ "./node_modules/@covalent/dynamic-forms/fesm5/covalent-dynamic-forms.js");
 /* harmony import */ var _covalent_core__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @covalent/core */ "./node_modules/@covalent/core/fesm5/covalent-core.js");
+/* harmony import */ var _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./advanced-search/advanced-search.component */ "./src/app/advanced-search/advanced-search.component.ts");
+
 
 
 
@@ -484,6 +608,7 @@ var AppModule = /** @class */ (function () {
                 _logout_logout_component__WEBPACK_IMPORTED_MODULE_17__["LogoutComponent"],
                 _account_account_component__WEBPACK_IMPORTED_MODULE_14__["AccountComponent"],
                 _addlisting_addlisting_component__WEBPACK_IMPORTED_MODULE_15__["AddlistingComponent"],
+                _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_34__["AdvancedSearchComponent"],
             ],
             entryComponents: [
                 _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__["RegisterDialog"]
@@ -1514,7 +1639,7 @@ var ExampleDataSource = /** @class */ (function (_super) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".main-div {\n  margin: 0 auto;\n  max-width: 500px;\n  width: 100%;\n}\n\n.my-mat-card {\n  max-width: 500px;\n  width: 100%;\n}\n\n.cont-title {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 20px;\n}\n\n.cont-input {\n  width: 100%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtFQUNuQixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxXQUFXO0FBQ2IiLCJmaWxlIjoic3JjL2FwcC9ob21lL2hvbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWluLWRpdiB7XG4gIG1hcmdpbjogMCBhdXRvO1xuICBtYXgtd2lkdGg6IDUwMHB4O1xuICB3aWR0aDogMTAwJTtcbn1cblxuLm15LW1hdC1jYXJkIHtcbiAgbWF4LXdpZHRoOiA1MDBweDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5jb250LXRpdGxlIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIG1hcmdpbi1ib3R0b206IDIwcHg7XG59XG5cbi5jb250LWlucHV0IHtcbiAgd2lkdGg6IDEwMCU7XG59XG4iXX0= */"
+module.exports = ".main-div {\n  margin: 0 auto;\n  max-width: 500px;\n  width: 100%;\n}\n\n.my-mat-card {\n  max-width: 500px;\n  width: 100%;\n}\n\n.cont-title {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 20px;\n}\n\n.cont-input {\n  width: 100%;\n}\n\n/* unvisited link */\n\na:link {\n  color: rgba(0, 0, 0, 0);\n}\n\n/* visited link */\n\na:visited {\n  color: rgba(0, 0, 0, 0);\n}\n\n/* mouse over link */\n\na:hover {\n  color: rgba(0, 0, 0, 0.58);\n}\n\n/* selected link */\n\na:active {\n  color: rgba(0, 0, 0, 0);\n}\n\na {\n  text-decoration: none;\n  font-size: 14px;\n}\n\n.cont-a {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-top: 12px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtFQUNuQixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxXQUFXO0FBQ2I7O0FBRUEsbUJBQW1COztBQUNuQjtFQUNFLHVCQUF1QjtBQUN6Qjs7QUFFQSxpQkFBaUI7O0FBQ2pCO0VBQ0UsdUJBQXVCO0FBQ3pCOztBQUVBLG9CQUFvQjs7QUFDcEI7RUFDRSwwQkFBMEI7QUFDNUI7O0FBRUEsa0JBQWtCOztBQUNsQjtFQUNFLHVCQUF1QjtBQUN6Qjs7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsYUFBYTtFQUNiLHVCQUF1QjtFQUN2QixtQkFBbUI7RUFDbkIsZ0JBQWdCO0FBQ2xCIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWFpbi1kaXYge1xuICBtYXJnaW46IDAgYXV0bztcbiAgbWF4LXdpZHRoOiA1MDBweDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5teS1tYXQtY2FyZCB7XG4gIG1heC13aWR0aDogNTAwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uY29udC10aXRsZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xufVxuXG4uY29udC1pbnB1dCB7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4vKiB1bnZpc2l0ZWQgbGluayAqL1xuYTpsaW5rIHtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMCk7XG59XG5cbi8qIHZpc2l0ZWQgbGluayAqL1xuYTp2aXNpdGVkIHtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMCk7XG59XG5cbi8qIG1vdXNlIG92ZXIgbGluayAqL1xuYTpob3ZlciB7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuNTgpO1xufVxuXG4vKiBzZWxlY3RlZCBsaW5rICovXG5hOmFjdGl2ZSB7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDApO1xufVxuXG5hIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICBmb250LXNpemU6IDE0cHg7XG59XG5cbi5jb250LWEge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgbWFyZ2luLXRvcDogMTJweDtcbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -1525,7 +1650,7 @@ module.exports = ".main-div {\n  margin: 0 auto;\n  max-width: 500px;\n  width: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"hero is-info is-fullheight-with-navbar is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"main-div\">\n\n      <div>\n        <h1 class=\"cont-title\">Search Listings</h1>\n      </div>\n\n      <mat-card class=\"my-mat-card mat-elevation-z20\">\n\n        <!--<mat-form-field class=\"cont-form\">-->\n        <!--<mat-label>Sale or Rental</mat-label>-->\n        <!--<mat-select [(value)]=\"listingSearch.forSale\">-->\n        <!--<mat-option value=null>Both</mat-option>-->\n        <!--<mat-option value=1>Sale</mat-option>-->\n        <!--<mat-option value=0>Rental</mat-option>-->\n        <!--</mat-select>-->\n        <!--</mat-form-field>-->\n\n        <!--<mat-form-field class=\"cont-form\">-->\n        <!--<mat-label>Bedrooms</mat-label>-->\n        <!--<mat-select [(value)]=\"listingSearch.numBedrooms\">-->\n        <!--<mat-option value=0>Any</mat-option>-->\n        <!--<mat-option value=1>1 Bed</mat-option>-->\n        <!--<mat-option value=2>2 Beds</mat-option>-->\n        <!--<mat-option value=3>3 Beds</mat-option>-->\n        <!--</mat-select>-->\n        <!--</mat-form-field>-->\n\n        <!--<mat-form-field class=\"cont-form\">-->\n        <!--<mat-label>Bathrooms</mat-label>-->\n        <!--<mat-select [(value)]=\"listingSearch.numBathrooms\">-->\n        <!--<mat-option value=0>Any</mat-option>-->\n        <!--<mat-option value=1>1</mat-option>-->\n        <!--<mat-option value=2>2</mat-option>-->\n        <!--<mat-option value=3>3</mat-option>-->\n        <!--</mat-select>-->\n        <!--</mat-form-field>-->\n\n        <mat-form-field class=\"cont-input\">\n          <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" (keyup.enter)=\"onSearchClick()\" required>\n          <a class=\"my-search\" mat-button matSuffix color=\"primary\" (click)=\"onSearchClick()\"><mat-icon>search</mat-icon></a>\n        </mat-form-field>\n\n        <!--<button class=\"cont-button\" mat-raised-button color=\"primary\" (click)=\"onSearchClick()\">Search</button>-->\n\n      </mat-card>\n\n      <div>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n\n  </div>\n  <app-footer></app-footer>\n</section>\n"
+module.exports = "<section class=\"hero is-info is-fullheight-with-navbar is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"main-div\">\n\n      <div>\n        <h1 class=\"cont-title\">Search Listings</h1>\n      </div>\n\n      <mat-card class=\"my-mat-card mat-elevation-z20\">\n\n        <!--<mat-form-field class=\"cont-form\">-->\n        <!--<mat-label>Sale or Rental</mat-label>-->\n        <!--<mat-select [(value)]=\"listingSearch.forSale\">-->\n        <!--<mat-option value=null>Both</mat-option>-->\n        <!--<mat-option value=1>Sale</mat-option>-->\n        <!--<mat-option value=0>Rental</mat-option>-->\n        <!--</mat-select>-->\n        <!--</mat-form-field>-->\n\n        <!--<mat-form-field class=\"cont-form\">-->\n        <!--<mat-label>Bedrooms</mat-label>-->\n        <!--<mat-select [(value)]=\"listingSearch.numBedrooms\">-->\n        <!--<mat-option value=0>Any</mat-option>-->\n        <!--<mat-option value=1>1 Bed</mat-option>-->\n        <!--<mat-option value=2>2 Beds</mat-option>-->\n        <!--<mat-option value=3>3 Beds</mat-option>-->\n        <!--</mat-select>-->\n        <!--</mat-form-field>-->\n\n        <!--<mat-form-field class=\"cont-form\">-->\n        <!--<mat-label>Bathrooms</mat-label>-->\n        <!--<mat-select [(value)]=\"listingSearch.numBathrooms\">-->\n        <!--<mat-option value=0>Any</mat-option>-->\n        <!--<mat-option value=1>1</mat-option>-->\n        <!--<mat-option value=2>2</mat-option>-->\n        <!--<mat-option value=3>3</mat-option>-->\n        <!--</mat-select>-->\n        <!--</mat-form-field>-->\n\n        <mat-form-field class=\"cont-input\">\n          <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" (keyup.enter)=\"onSearchClick()\" required>\n          <a class=\"my-search\" mat-button matSuffix color=\"primary\" (click)=\"onSearchClick()\"><mat-icon>search</mat-icon></a>\n        </mat-form-field>\n\n<!--        <button class=\"cont-button\" mat-raised-button color=\"primary\" (click)=\"onSearchClick()\">Search</button>-->\n\n      </mat-card>\n\n      <div>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n      <div class=\"cont-a\">\n        <a [routerLink]=\"'/advanced-search'\">Advanced Search</a>\n      </div>\n\n    </div>\n\n  </div>\n  <app-footer></app-footer>\n</section>\n"
 
 /***/ }),
 

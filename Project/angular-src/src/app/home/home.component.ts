@@ -82,8 +82,7 @@ export interface ListingSearch {
 }
 
 export interface Listing {
-  Lid: number;
-  DisplayBoard_boardId: number;
+  listingId: number;
   title: string;
   listingType: string;
   price: number;

@@ -1,54 +1,55 @@
-<mat-toolbar>
-  <span>Property Listings</span>
-</mat-toolbar>
-<P>
+<div class="container-fluid property-toolbar">
+<!--    <h3 class="property-toolbar-title">Property Listings</h3>-->
 
-</P>
-<div>
-  <div class="example-button-row">
-    <button mat-raised-button>Back to Search</button>
+  <mat-form-field class="cont-search" [floatLabel]="'never'">
+    <input matInput placeholder="Search by city..." [(ngModel)]="listingSearch.city" (keyup.enter)="onSearchClick()" required>
+    <a class="my-search" mat-button matSuffix color="primary" (click)="onSearchClick()"><mat-icon>search</mat-icon></a>
+  </mat-form-field>
 
+    <mat-form-field class="cont-form" [floatLabel]="'never'">
+      <mat-label>Listing Type</mat-label>
+      <mat-select [(value)]="listingSearch.listingType">
+        <mat-option value="Any">Any Type</mat-option>
+        <mat-option value="House">House</mat-option>
+        <mat-option value="Apartment">Apartment</mat-option>
+        <mat-option value="Condo">Condo</mat-option>
+      </mat-select>
+    </mat-form-field>
 
-    Sort By : <button mat-raised-button [matMenuTriggerFor]="menu">Relevance</button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Price:low to high</button>
-      <button mat-menu-item>Price:high to low</button>
-      <button mat-menu-item>LotSize:low ti high</button>
-      <button mat-menu-item>LotSize:high to low</button>
-      <button mat-menu-item>Newest</button>
-    </mat-menu>
+    <mat-form-field class="cont-form" [floatLabel]="'never'">
+      <mat-label>Sale or Rental</mat-label>
+      <mat-select [(value)]="listingSearch.forSale">
+        <mat-option value=null>Sale and Rental</mat-option>
+        <mat-option value=1>Sale</mat-option>
+        <mat-option value=0>Rental</mat-option>
+      </mat-select>
+    </mat-form-field>
 
-  </div>
+    <mat-form-field class="cont-form" [floatLabel]="'never'">
+      <mat-label>Bedrooms</mat-label>
+      <mat-select [(value)]="listingSearch.numBedrooms">
+        <mat-option value=0>Any Beds</mat-option>
+        <mat-option value=1>1 Bed</mat-option>
+        <mat-option value=2>2 Beds</mat-option>
+        <mat-option value=3>3 Beds</mat-option>
+      </mat-select>
+    </mat-form-field>
 
-</div>
-<div class="search-container">
-  <!--<mat-form-field>-->
-
-  <input Input placeholder="Filter..." value = "">
-  <mat-select placeholder="Sale or Rental">
-    <mat-option value="Sale">Sale</mat-option>
-    <mat-option value="Rental">Rental</mat-option>
-  </mat-select>
-  <mat-select placeholder="Listing Type">
-    <mat-option value="option">House</mat-option>
-    <mat-option value="option">Apartment</mat-option>
-    <mat-option value="option">Condo</mat-option>
-  </mat-select>
-  <mat-select placeholder="Beds">
-    <mat-option value="option">1+</mat-option>
-    <mat-option value="option">2+</mat-option>
-    <mat-option value="option">3+</mat-option>
-  </mat-select>
-  <mat-select placeholder="Baths">
-    <mat-option value="option">1+</mat-option>
-    <mat-option value="option">2+</mat-option>
-    <mat-option value="option">3+</mat-option>
-  </mat-select>
-  <button mat-raised-button>Search</button>
-
-  <!--</mat-form-field>-->
+    <mat-form-field class="cont-form" [floatLabel]="'never'">
+      <mat-label>Bathrooms</mat-label>
+      <mat-select [(value)]="listingSearch.numBathrooms">
+        <mat-option value=0>Any Bathrooms</mat-option>
+        <mat-option value=1>1 Bathroom</mat-option>
+        <mat-option value=2>2 Bathrooms</mat-option>
+        <mat-option value=3>3 Bathrooms</mat-option>
+      </mat-select>
+    </mat-form-field>
 
 </div>
+<!--<P>-->
+
+<!--</P>-->
+
 <div class = "space">
   Showing 1 - 9 of {{numberOfResult}} results.
 

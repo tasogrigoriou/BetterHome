@@ -147,8 +147,7 @@ export class Listing {
 
   constructor(Lid: number, DisplayBoard_boardId: number, title: string, listingType: string, price: number, city: string,state:string, zipCode: number,
               street: string, forSale: boolean, numBedrooms: number, numBathrooms: string,imageUrl:string, laundry:boolean,hospitalAccess: boolean,
-              BARTAccess: boolean,wheelchairAccess: boolean,lotSize:number)
-  {
+              BARTAccess: boolean,wheelchairAccess: boolean,lotSize:number) {
     this.Lid = Lid;
     this.DisplayBoard_boardId = DisplayBoard_boardId;
     this.title = title;
@@ -168,7 +167,20 @@ export class Listing {
     this.wheelchairAccess = wheelchairAccess;
     this.lotSize = lotSize;
   }
-
-
 }
+
+export interface ListingInterface {
+  listingId: number;
+  title: string;
+  listingType: string;
+  price: number;
+  city: string;
+  zipCode: number;
+  street: string;
+  forSale: boolean;
+  numBedrooms: number;
+  numBathrooms: string;
+}
+
+
 
