@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ListingsService} from "../core/services/listings.service";
+import {Listing, ListingsService} from "../core/services/listings.service";
 
 @Component({
   selector: 'app-property',
@@ -7,8 +7,10 @@ import {ListingsService} from "../core/services/listings.service";
   styleUrls: ['./property.component.css']
 })
 export class PropertyComponent implements OnInit, OnDestroy {
+  breakpoint;
+
   numberOfResult;
-  listings;
+  listings: Listing[];
   listingSearch: ListingSearch;
   filter: boolean = true;
 
@@ -27,12 +29,18 @@ export class PropertyComponent implements OnInit, OnDestroy {
     }
     this.listings= this.listingsService.getListings();
     this.numberOfResult = this.listings.length;
+
+    this.breakpoint = (window.innerWidth <= 400) ? 1 : 3;
   }
 
   ngOnDestroy() {
     if (this.listingSearch) {
       localStorage.setItem('listingSearch', JSON.stringify(this.listingSearch));
     }
+  }
+
+  onResize(event) {
+    this.breakpoint = (event.target.innerWidth <= 400) ? 1 : 3;
   }
 
   onSearchClick() {

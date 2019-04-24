@@ -44,6 +44,9 @@ export class ListingsService {
      return[
        this.exampleListing1,
        this.exampleListing2,
+       this.exampleListing3,
+       this.exampleListing1,
+       this.exampleListing2,
        this.exampleListing3
 
 
