@@ -9,6 +9,16 @@
       <mat-card class="my-mat-card mat-elevation-z20">
 
         <mat-form-field class="cont-form">
+          <mat-label>Listing Type</mat-label>
+          <mat-select [(value)]="listingSearch.listingType">
+            <mat-option value="Any">Any</mat-option>
+            <mat-option value="House">House</mat-option>
+            <mat-option value="Apartment">Apartment</mat-option>
+            <mat-option value="Condo">Condo</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="cont-form">
         <mat-label>Sale or Rental</mat-label>
         <mat-select [(value)]="listingSearch.forSale">
         <mat-option value=null>Both</mat-option>
@@ -37,7 +47,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field class="cont-form">
+        <mat-form-field class="cont-search">
           <input matInput placeholder="Search by city..." [(ngModel)]="listingSearch.city" (keyup.enter)="onSearchClick()" required>
           <a class="my-search" mat-button matSuffix color="primary" (click)="onSearchClick()"><mat-icon>search</mat-icon></a>
         </mat-form-field>

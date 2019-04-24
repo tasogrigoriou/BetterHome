@@ -11,6 +11,12 @@
 
 .cont-form {
   margin-right: 20px;
+  max-width: 135px;
+}
+
+.cont-search {
+  margin-right: 20px;
+  max-width: 210px;
 }
 
 .cont-title {
@@ -18,10 +24,6 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-}
-
-.cont-input {
-  /*width: 100%;*/
 }
 
 /* unvisited link */
