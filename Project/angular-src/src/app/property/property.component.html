@@ -60,15 +60,13 @@
         <mat-card-subtitle>{{listing.city}}</mat-card-subtitle>
       </mat-card-header>
 
-      <img class="property-card-image" [routerLink]="[listing.listingId]"
-           src="http://transcosmos.co.uk/wp-content/uploads/2015/09/google_logo_03-818x600.jpg" alt="">
+      <img class="property-card-image"
+           [routerLink]="[listing.listingId]"
+           [src]="listing.imageUrls[0]"
+           alt="http://transcosmos.co.uk/wp-content/uploads/2015/09/google_logo_03-818x600.jpg">
 
       <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
+        <p>{{listing.description}}</p>
       </mat-card-content>
 
       <mat-card-actions>
@@ -86,133 +84,3 @@
   </mat-paginator>
 
 </div>
-
-<!--<mat-card class="example-card">-->
-<!--  <mat-card-header>-->
-<!--    <div mat-card-avatar class="example-header-image"></div>-->
-<!--    <mat-card-title>Shiba Inu</mat-card-title>-->
-<!--    <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
-<!--  </mat-card-header>-->
-<!--  <img mat-card-image src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="400px" height="400px" alt="">-->
-<!--  <mat-card-content>-->
-<!--    <p>-->
-<!--      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.-->
-<!--      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally-->
-<!--      bred for hunting.-->
-<!--    </p>-->
-<!--  </mat-card-content>-->
-<!--  <mat-card-actions>-->
-<!--    <button mat-button>LIKE</button>-->
-<!--    <button mat-button>SHARE</button>-->
-<!--  </mat-card-actions>-->
-<!--</mat-card>-->
-
-<!--<div class="container"-->
-<!--     fxLayout-->
-<!--     fxLayout.xs="column"-->
-<!--     fxLayoutAlign="center"-->
-<!--     fxLayoutGap="10px"-->
-<!--     fxLayoutGap.xs="0">-->
-<!--  <div class="item item-1" fxFlex>Item 1</div>-->
-<!--  <div class="item item-2" fxFlex>Item 2</div>-->
-<!--  <div class="item item-3" fxFlex>Item 3</div>-->
-<!--</div>-->
-
-<!--<mat-drawer-container class="example-container">-->
-<!--  <mat-drawer mode="side" opened>-->
-<!--    <mat-list role="list">-->
-
-<!--      &lt;!&ndash;<mat-selection-list #filte1r>&ndash;&gt;-->
-<!--      &lt;!&ndash;<mat-list-option >Filter all</mat-list-option>&ndash;&gt;-->
-<!--      &lt;!&ndash;</mat-selection-list>&ndash;&gt;-->
-
-
-
-<!--      <mat-list-item role="listitem">-->
-<!--        <label><input  #filter2 type="checkbox" name="size" (change)="0"> For Sell</label>-->
-<!--      </mat-list-item>-->
-<!--      <mat-list-item role="listitem">-->
-<!--        <label><input  #filter2 type="checkbox" name="size" (change)="0"> For Rent</label>-->
-<!--      </mat-list-item>-->
-<!--      <mat-list-item role="listitem">Price range</mat-list-item>-->
-<!--      <mat-list role="list">-->
-<!--        <mat-list-item role="listitem">-->
-<!--          <label><input  #filter2 type="checkbox" name="size" (change)="0"> Under $100k</label>-->
-<!--        </mat-list-item>-->
-<!--        <mat-list-item role="listitem">-->
-<!--          <label><input  #filter2 type="checkbox" name="size" (change)="0"> $100k-$200k</label>-->
-<!--        </mat-list-item>-->
-<!--        <mat-list-item role="listitem">-->
-<!--          <label><input  #filter2 type="checkbox" name="size" (change)="0"> Over $200k</label>-->
-<!--        </mat-list-item>-->
-<!--      </mat-list>-->
-<!--      <mat-list-item role="listitem">Bedrooms</mat-list-item>-->
-<!--      <mat-list role="list">-->
-<!--        <mat-list-item role="listitem">-->
-<!--          <label><input  #filter2 type="checkbox" name="size" (change)="0"> 1+</label>-->
-<!--        </mat-list-item>-->
-<!--        <mat-list-item role="listitem">-->
-<!--          <label><input  #filter2 type="checkbox" name="size" (change)="0"> 2+</label>-->
-<!--        </mat-list-item>-->
-<!--        <mat-list-item role="listitem">-->
-<!--          <label><input  #filter2 type="checkbox" name="size" (change)="0"> 3+</label>-->
-<!--        </mat-list-item>-->
-<!--      </mat-list>-->
-<!--      <mat-list-item role="listitem">Listing Type</mat-list-item>-->
-<!--      <mat-list role="list">-->
-<!--        <mat-list-item role="listitem">-->
-<!--          <label><input  #filter2 type="checkbox" name="size" (change)="0"> House</label>-->
-<!--        </mat-list-item>-->
-<!--        <mat-list-item role="listitem">-->
-<!--          <label><input  #filter2 type="checkbox" name="size" (change)="0"> Apartment</label>-->
-<!--        </mat-list-item>-->
-<!--        <mat-list-item role="listitem">-->
-<!--          <label><input  #filter2 type="checkbox" name="size" (change)="0"> Condo</label>-->
-<!--        </mat-list-item>-->
-<!--        <mat-list-item role="listitem">-->
-<!--          <label><input  #filter1 type="checkbox" name="size" (change)="0"> Filter all</label>-->
-<!--        </mat-list-item>-->
-<!--      </mat-list>-->
-<!--    </mat-list>-->
-<!--  </mat-drawer>-->
-<!--  <mat-drawer-content>-->
-<!--    <div *ngIf="!filter1.checked">-->
-<!--      <div *ngIf="filter">-->
-<!--        <section class="section">-->
-<!--          <div class="container">-->
-<!--            <div class="columns is-multiline">-->
-<!--              <div class="column is-4" *ngFor="let listing of listing">-->
-<!--                <div class="card">-->
-<!--                  <div class="card-content">-->
-<!--                    <mat-card class="example-card">-->
-<!--                      <mat-card-header>-->
-<!--                        <mat-card-title>-->
-<!--                          <p><a [routerLink]="[listing.listingId]">{{ listing.title }}</a></p>-->
-<!--                        </mat-card-title>-->
-<!--                        <mat-card-subtitle>-->
-<!--                          <p>{{ listing.street }}</p>-->
-<!--                          <p>{{ listing.city }} </p>-->
-<!--                          <p>{{listing.state}},{{ listing.zipCode }}</p>-->
-<!--                        </mat-card-subtitle>-->
-<!--                      </mat-card-header>-->
-<!--                      <img mat-card-image src="{{listing.imageUrl}}" class="img1">-->
-<!--                      <mat-card-content>-->
-<!--                        <p>{{listing.listingType}}</p>-->
-<!--                        <p>{{listing.numBedrooms}} bedrooms, {{listing.numBathrooms}} bathrooms</p>-->
-<!--                        <p>$ {{listing.price}}</p>-->
-<!--                      </mat-card-content>-->
-<!--                      <mat-card-actions>-->
-<!--                        <button mat-button>LIKE</button>-->
-<!--                      </mat-card-actions>-->
-<!--                    </mat-card>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </section>-->
-
-<!--      </div>-->
-<!--    </div>-->
-<!--  </mat-drawer-content>-->
-<!--</mat-drawer-container>-->

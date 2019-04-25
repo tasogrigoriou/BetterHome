@@ -377,6 +377,18 @@ var AdvancedSearchComponent = /** @class */ (function () {
     return AdvancedSearchComponent;
 }());
 
+// export interface Listing {
+//   listingId: number;
+//   title: string;
+//   listingType: string;
+//   price: number;
+//   city: string;
+//   zipCode: number;
+//   street: string;
+//   forSale: boolean;
+//   numBedrooms: number;
+//   numBathrooms: string;
+// }
 
 
 /***/ }),
