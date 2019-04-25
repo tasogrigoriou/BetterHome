@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import {NgModel} from "@angular/forms";
-import {RegisterService, RegisterUser} from "../core/services/register.service";
+import {RegisterService} from "../core/services/register.service";
+import {LoginUser} from "../core/services/login.service";
 
 
 @Component({
@@ -12,7 +13,7 @@ import {RegisterService, RegisterUser} from "../core/services/register.service";
 
 
 export class AccountComponent implements OnInit {
-  user: RegisterUser;
+  user: LoginUser;
 
   isLoaded = true;
 
@@ -21,7 +22,9 @@ export class AccountComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-
+    if (localStorage.getItem('loginUser')) {
+      this.user = JSON.parse(localStorage.getItem('loginUser'));
+    }
   }
 
   onSaveInfoClick() {

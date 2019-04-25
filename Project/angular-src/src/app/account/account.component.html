@@ -13,77 +13,22 @@
 <br>
 <br>
      <div class="container">
-       <div id="content">
-         <div id="main-content">
-           <mat-tab-group>
+       <div>
+         <h3 class="card-header-title">Welcome {{user.username}}!</h3>
+       </div>
+           <mat-tab-group mat-stretch-tabs>
               <mat-tab label="Profile">
                 <br>
                 <div class="card-body">
 
-                 <form>
-                   <div class="row">
-                     <div class="col-md-3">
-                       <mat-form-field class="example-full-width">
-                         <input matInput placeholder="First Name" type="text">
+                  <mat-list role="listitem">
+                    <mat-list-item role="listitem">tasogrigoriou</mat-list-item>
+                    <mat-list-item role="listitem">Anastasios Grigoriou</mat-list-item>
+                    <mat-list-item role="listitem">taso.grigoriou@gmail.com</mat-list-item>
+                    <mat-list-item role="listitem">(415) 412-8367</mat-list-item>
+                  </mat-list>
 
-                         <input matInput placeholder="First Name"> <!--[(ngModel)]="user.username"> -->
-                       </mat-form-field>
-                     </div>
-                     <div class="col-md-4">
-                       <mat-form-field class="example-full-width">
-                         <input matInput placeholder="Last Name" > <!-- [(ngModel)]="user.lastName" type="text"> -->
-                       </mat-form-field>
-                     </div>
-                   </div>
-
-                   <div class="row">
-                     <div class="col-md-3">
-                       <mat-form-field class="example-full-width">
-                         <input matInput placeholder="Email Address" > <!--[(ngModel)]="user.emailAddress" type="text"> -->
-                       </mat-form-field>
-                     </div>
-                     <div class="col-md-4">
-                       <mat-form-field class="example-full-width">
-                         <input matInput placeholder="Phone Number"> <!-- [(ngModel)]="user.phoneNumber" type="text"> -->
-                       </mat-form-field>
-                     </div>
-                   </div>
-
-                   <div class="row">
-                     <div class="col-md-3">
-                       <mat-form-field class="example-full-width">
-                         <input matInput placeholder="Street Address" type="text">
-                       </mat-form-field>
-                     </div>
-                     <div class="col-md-4">
-                       <mat-form-field class="example-full-width">
-                         <input matInput placeholder="City" type="text">
-                       </mat-form-field>
-                     </div>
-                   </div>
-
-                   <div class="row">
-                     <div class="col-md-3">
-                       <mat-form-field class="example-full-width">
-                         <input matInput placeholder="State" type="text">
-                       </mat-form-field>
-                     </div>
-                     <div class="col-md-4">
-                       <mat-form-field class="example-full-width">
-                         <input matInput placeholder="Zip Code" type="text">
-                       </mat-form-field>
-                     </div>
-                   </div>
-
-                   <div class="w3-center">
-                     <div class="w3-section">
-                       <button mat-raised-button type = "save" w3-button w3-light-grey>Save</button>
-                     </div>
-                   </div>
-
-                   <button mat-raised-button  type = "edit" class="btn btn-danger pull-right">Edit</button>
-
-                 </form>
+                   <button mat-raised-button type="edit" class="btn btn-danger pull-right">Edit</button>
 
                </div>
              </mat-tab>
@@ -99,8 +44,8 @@
 
                <div class="w3-center">
                  <div class="w3-section">
-                   <button class="w3-button w3-light-grey" (click)="plusDivs(-1)" mat-button>❮ Prev</button>
-                   <button class="w3-button w3-light-grey" (click)="plusDivs(1)" mat-button>Next ❯</button>
+                   <button mat-button>❮ Prev</button>
+                   <button mat-button>Next ❯</button>
                    <button mat-raised-button  type = "edit" class="btn btn-danger pull-right">Edit</button>
                  </div>
                </div>
@@ -112,7 +57,5 @@
              </mat-tab>
            </mat-tab-group>
          </div>
-       </div>
-     </div>
 </body>
 </html>

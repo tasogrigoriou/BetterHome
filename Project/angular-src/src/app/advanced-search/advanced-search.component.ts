@@ -67,7 +67,7 @@ export class AdvancedSearchComponent implements OnInit, OnDestroy {
     });
     if (subscribe) {
       dialog.afterClosed().subscribe(result => {
-        this.router.navigate(['/search-results']);
+        this.router.navigate(['/properties']);
       });
     }
   }

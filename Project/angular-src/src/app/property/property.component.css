@@ -47,19 +47,6 @@
   margin-bottom: 10px;
 }
 
-.example-container {
-  width: 1100px;
-  height:940px;
-  margin: 10px;
-  border: 1px none #555;
-}
-
-.example-button-row button {
-  margin-left: 8px;
-  margin-right:250px;
-  background-color: aliceblue;
-}
-
 .space {
   margin-top: 15px;
   margin-bottom: 10px;
@@ -74,25 +61,4 @@
 .cont-search {
   margin-right: 20px;
   max-width: 210px;
-}
-
-.search-container {
-  /*margin-left:10px;*/
-  /*display: flex;*/
-  /*flex-direction: row;*/
-}
-
-.search-container > * {
-  width: 150px;
-  outline: 1px none black;
-}
-
-mat-grid-tile {
-  background: lightblue;
-}
-
-img.img1 {
-  margin-left: 20px;
-  width: 100px;
-  height: 100px;
 }

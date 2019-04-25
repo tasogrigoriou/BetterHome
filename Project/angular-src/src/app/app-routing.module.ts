@@ -22,7 +22,7 @@ const routes: Routes = [
     loadChildren: './about-us/about-us.module#AboutUsModule'
   },
   {
-    path: 'property',
+    path: 'properties',
     loadChildren: './property/property.module#PropertyModule'
   },
   {
