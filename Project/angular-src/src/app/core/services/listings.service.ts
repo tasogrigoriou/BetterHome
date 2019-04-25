@@ -40,33 +40,29 @@ export class ListingsService {
   }
 
 
-  getListings(){
-     return[
-       this.exampleListing1,
-       this.exampleListing2,
-       this.exampleListing3,
-       this.exampleListing1,
-       this.exampleListing2,
-       this.exampleListing3
-
-
-     ];
+  getListings() {
+    return [
+      this.exampleListing1,
+      this.exampleListing2,
+      this.exampleListing3,
+      this.exampleListing1,
+      this.exampleListing2,
+      this.exampleListing3
+    ];
   }
 
   getListingById(id: number): Listing {
     let listings = this.getListings();
     for (let i = 0; i < listings.length; i++) {
-      if (id == listings[i].Lid) {
+      if (id == listings[i].listingId) {
         return listings[i];
       }
     }
     return null;
   }
 
-
   public exampleListing1 = new Listing(
     69,
-    0,
     'Example Listing1',
     'House',
     3000,
@@ -77,17 +73,15 @@ export class ListingsService {
     true,
     2,
     '2',
-    'https://bit.ly/2Vc5oog',
+    ['https://bit.ly/2Vc5oog'],
     false,
     false,
     true,
     true,
     800
-
   );
   public exampleListing2 = new Listing(
     70,
-    0,
     'Example Listing2',
     'Apartment',
     10000,
@@ -98,7 +92,7 @@ export class ListingsService {
     true,
     3,
     '3',
-    'https://bit.ly/2UJTUca',
+    ['https://bit.ly/2UJTUca'],
     true,
     true,
     false,
@@ -107,7 +101,6 @@ export class ListingsService {
   );
   public exampleListing3 = new Listing(
     71,
-    0,
     'Example Listing3',
     'Condo',
     30000,
@@ -118,41 +111,56 @@ export class ListingsService {
     false,
     3,
     '2.5',
-    'https://bit.ly/2UtC20w',
+    ['https://bit.ly/2UtC20w'],
     true,
     false,
     true,
     false,
     900
   );
-
-
 }
+
 export class Listing {
-  Lid: number;
-  DisplayBoard_boardId: number;
+  listingId: number;
   title: string;
   listingType: string;
   price: number;
   city: string;
-  state:string;
+  state: string;
   zipCode: number;
   street: string;
   forSale: boolean;
   numBedrooms: number;
   numBathrooms: string;
-  imageUrl:string;
+  imageUrls: string[];
   laundry: boolean;
   hospitalAccess: boolean;
   BARTAccess: boolean;
   wheelchairAccess: boolean;
-  lotSize:number;
+  lotSize: number;
+  description: string;
 
-  constructor(Lid: number, DisplayBoard_boardId: number, title: string, listingType: string, price: number, city: string,state:string, zipCode: number,
-              street: string, forSale: boolean, numBedrooms: number, numBathrooms: string,imageUrl:string, laundry:boolean,hospitalAccess: boolean,
-              BARTAccess: boolean,wheelchairAccess: boolean,lotSize:number) {
-    this.Lid = Lid;
-    this.DisplayBoard_boardId = DisplayBoard_boardId;
+  constructor(
+    listingId: number = null,
+    title: string = '',
+    listingType: string = '',
+    price: number = null,
+    city: string = '',
+    state:string = '',
+    zipCode: number = null,
+    street: string = '',
+    forSale: boolean = null,
+    numBedrooms: number = null,
+    numBathrooms: string = '',
+    imageUrls: string[] = [],
+    laundry: boolean = null,
+    hospitalAccess: boolean = false,
+    BARTAccess: boolean = false,
+    wheelchairAccess: boolean = false,
+    lotSize: number = null,
+    description: string = ''
+  ) {
+    this.listingId = listingId;
     this.title = title;
     this.listingType = listingType;
     this.price = price;
@@ -163,26 +171,34 @@ export class Listing {
     this.forSale = forSale;
     this.numBedrooms = numBedrooms;
     this.numBathrooms = numBathrooms;
-    this.imageUrl = imageUrl;
+    this.imageUrls = imageUrls;
     this.laundry = laundry;
     this.hospitalAccess = hospitalAccess;
     this.BARTAccess = BARTAccess;
     this.wheelchairAccess = wheelchairAccess;
     this.lotSize = lotSize;
+    this.description = description;
   }
 }
 
-export interface ListingInterface {
+export interface Listing2 {
   listingId: number;
   title: string;
   listingType: string;
   price: number;
   city: string;
+  state: string;
   zipCode: number;
   street: string;
   forSale: boolean;
   numBedrooms: number;
   numBathrooms: string;
+  imageUrls: string[];
+  laundry: boolean;
+  hospitalAccess: boolean;
+  BARTAccess: boolean;
+  wheelchairAccess: boolean;
+  lotSize: number;
 }
 
 

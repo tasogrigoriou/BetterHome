@@ -15,7 +15,7 @@ import {ExampleComponent} from './example/example.component';
 import {AlertComponent} from "./core/components/alert/alert.component";
 import {UploadComponent} from "./core/components/upload/upload.component";
 import {AccountComponent} from  "./account/account.component";
-import {AddlistingComponent} from "./addlisting/addlisting.component";
+import {AddListingComponent} from "./add-listing/add-listing.component";
 import {SearchResultsComponent} from './search-results/search-results.component';
 import {LogoutComponent} from './logout/logout.component';
 
@@ -69,7 +69,7 @@ import { AdvancedSearchComponent } from './advanced-search/advanced-search.compo
     UploadComponent,
     LogoutComponent,
     AccountComponent,
-    AddlistingComponent,
+    AddListingComponent,
     AdvancedSearchComponent,
   ],
   entryComponents: [

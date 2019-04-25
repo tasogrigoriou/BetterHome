@@ -8,6 +8,7 @@ import {Listing, ListingsService} from "../core/services/listings.service";
 })
 export class PropertyComponent implements OnInit, OnDestroy {
   breakpoint;
+  rowWidth;
 
   numberOfResult;
   listings: Listing[];
@@ -27,10 +28,11 @@ export class PropertyComponent implements OnInit, OnDestroy {
         city: ''
       }
     }
-    this.listings= this.listingsService.getListings();
+    this.listings = this.listingsService.getListings();
     this.numberOfResult = this.listings.length;
 
     this.breakpoint = (window.innerWidth <= 400) ? 1 : 3;
+    this.rowWidth = (window.innerWidth <= 400) ? '100%' : '30%';
   }
 
   ngOnDestroy() {
@@ -41,9 +43,14 @@ export class PropertyComponent implements OnInit, OnDestroy {
 
   onResize(event) {
     this.breakpoint = (event.target.innerWidth <= 400) ? 1 : 3;
+    this.rowWidth = (event.target.innerWidth <= 400) ? '100%' : '30%';
   }
 
   onSearchClick() {
+
+  }
+
+  onFavoriteClick() {
 
   }
 }

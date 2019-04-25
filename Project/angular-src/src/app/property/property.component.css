@@ -1,11 +1,4 @@
-.prop-cont {
-  height: calc(100% - 65px);
-}
-
 .property-toolbar {
-  /*display: flex;*/
-  /*justify-content: center;*/
-  /*align-items: center;*/
   min-height: 74px;
   height: auto;
   width: 100%;
@@ -37,13 +30,30 @@
   border: 1px;
 }
 
+/*.property-card {*/
+/*  height: 96%;*/
+/*  width: 96%;*/
+/*  !*display: flex;*!*/
+/*  !*justify-content: center;*!*/
+/*  !*align-items: center;*!*/
+/*  border: 1px;*/
+/*}*/
+
+.property-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .property-card {
-  height: 96%;
-  width: 96%;
+  margin: 10px;
+}
+
+.property-card-image {
   /*display: flex;*/
   /*justify-content: center;*/
   /*align-items: center;*/
-  border: 1px;
+  margin-bottom: 10px;
 }
 
 .example-container {
@@ -60,7 +70,8 @@
 }
 
 .space {
-  margin: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .cont-form {

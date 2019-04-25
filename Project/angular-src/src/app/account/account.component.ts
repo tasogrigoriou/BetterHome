@@ -16,13 +16,15 @@ export class AccountComponent implements OnInit {
 
   isLoaded = true;
 
-  constructor(private registerService: RegisterService,
-              ) {}
+  constructor(
+    private registerService: RegisterService,
+  ) {}
+
   ngOnInit() {
+
   }
 
   onSaveInfoClick() {
-
 
   }
 

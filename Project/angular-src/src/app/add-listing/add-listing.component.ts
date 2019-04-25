@@ -6,32 +6,31 @@ import {first} from "rxjs/operators";
 import {RegisterDialog} from "../register/register.dialog";
 import {MatDialog} from "@angular/material";
 
-
-
 @Component({
   selector: 'app-addlisting',
-  templateUrl: './addlisting.component.html',
-  styleUrls: ['./addlisting.component.css']
+  templateUrl: './add-listing.component.html',
+  styleUrls: ['./add-listing.component.css']
 })
+export class AddListingComponent implements OnInit {
 
-export class AddlistingComponent implements OnInit {
-
-
-  listings;
+  listing: Listing;
 
   isLoaded = true;
 
-  constructor(private router: Router,
-              private listingsService: ListingsService,
-              public dialog: MatDialog) {}
+  constructor(
+    private router: Router,
+    private listingsService: ListingsService,
+    public dialog: MatDialog
+  ) {}
+
   ngOnInit() {
-    this.listings= this.listingsService.getListings();
+    this.listing = new Listing();
   }
 
   onSubmit() {
     if (this.isDataProvided()) {
       this.isLoaded = false;
-      this.listingsService.createListing(this.listings)
+      this.listingsService.createListing(this.listing)
         .pipe(first())
         .subscribe(data => {
             this.isLoaded = true;
@@ -45,29 +44,25 @@ export class AddlistingComponent implements OnInit {
 
   numberOnly(event): boolean {
     const charCode = (event.which) ? event.which : event.keyCode;
-    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-      return false;
-    }
-    return true;
-
+    return !(charCode > 31 && (charCode < 48 || charCode > 57));
   }
 
   isDataProvided(): boolean {
-    return (!this.isEmptyStr(this.listings.title) &&
-      !this.isEmptyStr(this.listings.listingType) &&
-      !this.isEmptyNum(this.listings.price) &&
-      !this.isEmptyNum(this.listings.lotSize) &&
-      !this.isEmptyStr(this.listings.city) &&
-      !this.isEmptyNum(this.listings.zipCode) &&
-      !this.isEmptyStr(this.listings.street) &&
-      !this.isEmptyStr(this.listings.state) &&
-      !this.isEmptyBool(this.listings.forSale) &&
-      !this.isEmptyNum(this.listings.numBedrooms) &&
-      !this.isEmptyStr(this.listings.numBathrooms) &&
-      !this.isEmptyBool(this.listings.laundry) &&
-      !this.isEmptyBool(this.listings.hospitalAccess) &&
-      !this.isEmptyBool(this.listings.BARTAccess) &&
-      !this.isEmptyBool(this.listings.wheelchairAccess));
+    return (!this.isEmptyStr(this.listing.title) &&
+      !this.isEmptyStr(this.listing.listingType) &&
+      !this.isEmptyNum(this.listing.price) &&
+      !this.isEmptyNum(this.listing.lotSize) &&
+      !this.isEmptyStr(this.listing.city) &&
+      !this.isEmptyNum(this.listing.zipCode) &&
+      !this.isEmptyStr(this.listing.street) &&
+      !this.isEmptyStr(this.listing.state) &&
+      !this.isEmptyBool(this.listing.forSale) &&
+      !this.isEmptyNum(this.listing.numBedrooms) &&
+      !this.isEmptyStr(this.listing.numBathrooms) &&
+      !this.isEmptyBool(this.listing.laundry) &&
+      !this.isEmptyBool(this.listing.hospitalAccess) &&
+      !this.isEmptyBool(this.listing.BARTAccess) &&
+      !this.isEmptyBool(this.listing.wheelchairAccess));
     return true;
   }
 

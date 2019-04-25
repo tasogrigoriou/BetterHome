@@ -36,7 +36,7 @@ router.post('/', function (req, res) {
             res.status(err.status || 500).send(err.message);
         }
         else if (!result.length) {
-            res.status(500).send('No listings match given search query');
+            res.status(500).send('No listing match given search query');
         }
         else {
             // result is an array of Listing objects

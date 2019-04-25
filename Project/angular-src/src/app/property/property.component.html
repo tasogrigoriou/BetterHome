@@ -1,11 +1,10 @@
 <div class="container">
-<div class="container-fluid property-toolbar">
-<!--    <h3 class="property-toolbar-title">Property Listings</h3>-->
+  <div class="container-fluid property-toolbar">
 
-  <mat-form-field class="cont-search" [floatLabel]="'never'">
-    <input matInput placeholder="Search by city..." [(ngModel)]="listingSearch.city" (keyup.enter)="onSearchClick()" required>
-    <a class="my-search" mat-button matSuffix color="primary" (click)="onSearchClick()"><mat-icon>search</mat-icon></a>
-  </mat-form-field>
+    <mat-form-field class="cont-search" [floatLabel]="'never'">
+      <input matInput placeholder="Search by city..." [(ngModel)]="listingSearch.city" (keyup.enter)="onSearchClick()" required>
+      <a class="my-search" mat-button matSuffix color="primary" (click)="onSearchClick()"><mat-icon>search</mat-icon></a>
+    </mat-form-field>
 
     <mat-form-field class="cont-form" [floatLabel]="'never'">
       <mat-label>Listing Type</mat-label>
@@ -46,67 +45,46 @@
       </mat-select>
     </mat-form-field>
 
-</div>
+  </div>
 
-<div class="space">Property Listings</div>
+  <div class="space"><h2>Property Listings</h2></div>
 
-<!--<div class="container" fxLayout="row wrap">-->
-<!--&lt;!&ndash;<mat-grid-list cols="3" rowHeight="2:1">&ndash;&gt;-->
-<!--  <mat-card class="property-mat-card" *ngFor="let listing of listings">{{listing.city}}</mat-card>-->
-<!--&lt;!&ndash;</mat-grid-list>&ndash;&gt;-->
-<!--</div>-->
+  <div class="property-container" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+    <mat-card class="property-card"
+              [fxFlex]="rowWidth"
+              (window:resize)="onResize($event)"
+              *ngFor="let listing of listings">
 
-<!--<div class="container"-->
-<!--     fxLayout-->
-<!--     fxLayout.xs="column"-->
-<!--     fxLayoutAlign="center"-->
-<!--     fxLayoutGap="10px"-->
-<!--     fxLayoutGap.xs="0">-->
-<!--  <div class="item item-1" fxFlex>Item 1</div>-->
-<!--  <div class="item item-2" fxFlex>Item 2</div>-->
-<!--  <div class="item item-3" fxFlex>Item 3</div>-->
-<!--</div>-->
+      <mat-card-header [routerLink]="[listing.listingId]">
+        <mat-card-title>{{listing.title}}</mat-card-title>
+        <mat-card-subtitle>{{listing.city}}</mat-card-subtitle>
+      </mat-card-header>
 
-<!--<mat-card class="property-mat-card">-->
-  <mat-grid-list class="property-grid-list" [cols]="breakpoint" (window:resize)="onResize($event)">
-    <mat-grid-tile class="property-grid-title" [style.background]="'transparent'" *ngFor="let listing of listings">
-      <mat-card class="property-card" [routerLink]="'/'">
+      <img class="property-card-image" [routerLink]="[listing.listingId]"
+           src="http://transcosmos.co.uk/wp-content/uploads/2015/09/google_logo_03-818x600.jpg" alt="">
 
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
 
-          <mat-card-header>
-<!--            <div mat-card-avatar class="example-header-image"></div>-->
-            <mat-card-title>{{listing.title}}</mat-card-title>
-            <mat-card-subtitle>{{listing.city}}</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-          <mat-card-content>
-<!--            <p>-->
-<!--              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.-->
-<!--              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally-->
-<!--              bred for hunting.-->
-<!--            </p>-->
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
-          </mat-card-actions>
+      <mat-card-actions>
+        <div fxFlex></div>
+        <a mat-button (click)="onFavoriteClick()">
+          <mat-icon>favorite_border</mat-icon>
+        </a>
+      </mat-card-actions>
 
+    </mat-card>
+  </div>
 
-        }</mat-card>
-    </mat-grid-tile>
-<!--    <mat-grid-tile [style.border-right]="'1px dashed #ddd'">-->
-<!--      Paul-->
-<!--    </mat-grid-tile>-->
-<!--    <mat-grid-tile>-->
-<!--      Ringo-->
-<!--    </mat-grid-tile>-->
-  </mat-grid-list>
-<!--</mat-card>-->
+  <mat-paginator
+    [length]="listings.length" [pageSize]="15">
+  </mat-paginator>
 
-<mat-paginator [length]="100"
-               [pageSize]="10"
-               [pageSizeOptions]="[5, 10, 25, 100]">
-</mat-paginator>
 </div>
 
 <!--<mat-card class="example-card">-->
@@ -203,13 +181,13 @@
 <!--        <section class="section">-->
 <!--          <div class="container">-->
 <!--            <div class="columns is-multiline">-->
-<!--              <div class="column is-4" *ngFor="let listing of listings">-->
+<!--              <div class="column is-4" *ngFor="let listing of listing">-->
 <!--                <div class="card">-->
 <!--                  <div class="card-content">-->
 <!--                    <mat-card class="example-card">-->
 <!--                      <mat-card-header>-->
 <!--                        <mat-card-title>-->
-<!--                          <p><a [routerLink]="[listing.Lid]">{{ listing.title }}</a></p>-->
+<!--                          <p><a [routerLink]="[listing.listingId]">{{ listing.title }}</a></p>-->
 <!--                        </mat-card-title>-->
 <!--                        <mat-card-subtitle>-->
 <!--                          <p>{{ listing.street }}</p>-->

@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit, OnDestroy {
           },
           err => {
             this.isLoaded = true;
-            this.openDialog('Unable to retrieve any listings based on your search. Please try again');
+            this.openDialog('Unable to retrieve any listing based on your search. Please try again');
           });
     }
   }
