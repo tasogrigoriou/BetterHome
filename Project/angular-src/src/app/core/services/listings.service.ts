@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable, throwError, zip} from "rxjs";
 import {catchError} from "rxjs/operators";
-import {RegisterUser} from "./register.service";
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 
 const httpOptions = {
@@ -139,19 +138,6 @@ export class Listing {
     public lotSize: number = null,
     public description: string = ''
   ) {}
-}
-
-export interface ListingI {
-  listingId: number;
-  title: string;
-  listingType: string;
-  price: number;
-  city: string;
-  zipCode: number;
-  street: string;
-  forSale: boolean;
-  numBedrooms: number;
-  numBathrooms: string;
 }
 
 
