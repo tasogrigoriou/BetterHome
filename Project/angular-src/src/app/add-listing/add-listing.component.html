@@ -108,17 +108,42 @@
     <textarea matInput placeholder="Description" [(ngModel)]="listing.description" required></textarea>
   </mat-form-field>
 
-  <upload-component [listingId]="listing.listingId"></upload-component>
-
   <div>
-    <button class="create-listing-btn"
-            fxLayout="column"
-            fxLayoutAlign="center"
-            mat-raised-button
-            color="primary"
-            (click)="onSubmit()">
-      Create Listing
-    </button>
+    <mat-spinner *ngIf="!isLoaded"></mat-spinner>
   </div>
+
+  <!--Image Uploading-->
+<!--  <ng-template [ngIf]="!didSaveImages">-->
+    <td-file-upload #fileMultipleUpload
+                    (select)="saveImages($event)"
+                    accept=".jpg, .jpeg, .png, .tif"
+                    defaultColor="primary"
+                    activeColor="primary"
+                    cancelColor="primary"
+                    multiple>
+      <mat-icon>file_upload</mat-icon>
+      <span>
+    {{fileMultipleUpload.value?.name || fileMultipleUpload.value?.length}}
+        <span *ngIf="fileMultipleUpload.value?.length">files selected</span>
+  </span>
+      <ng-template td-file-input-label>
+        <mat-icon>attach_file</mat-icon>
+        <span>Upload images</span>
+      </ng-template>
+    </td-file-upload>
+<!--  </ng-template>-->
+
+  <ng-template [ngIf]="didSaveImages">
+    <div>
+      <button class="create-listing-btn"
+              fxLayout="column"
+              fxLayoutAlign="center"
+              mat-raised-button
+              color="primary"
+              (click)="onSubmit()">
+        Create Listing
+      </button>
+    </div>
+  </ng-template>
 
 </div>

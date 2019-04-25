@@ -5,6 +5,7 @@ import {ListingsService, Listing} from "../core/services/listings.service";
 import {first} from "rxjs/operators";
 import {RegisterDialog} from "../register/register.dialog";
 import {MatDialog} from "@angular/material";
+import {UploadService} from "../core/services/upload.service";
 
 @Component({
   selector: 'app-addlisting',
@@ -15,11 +16,15 @@ export class AddListingComponent implements OnInit {
 
   listing: Listing;
 
+  files: FileList | File;
+
   isLoaded = true;
+  didSaveImages = false;
 
   constructor(
     private router: Router,
     private listingsService: ListingsService,
+    private uploadService: UploadService,
     public dialog: MatDialog
   ) {}
 
@@ -27,19 +32,45 @@ export class AddListingComponent implements OnInit {
     this.listing = new Listing();
   }
 
+  saveImages(files: FileList | File): void {
+    this.files = files;
+    this.didSaveImages = true;
+  }
+
   onSubmit() {
-    if (this.isDataProvided()) {
-      this.isLoaded = false;
-      this.listingsService.createListing(this.listing)
-        .pipe(first())
-        .subscribe(data => {
-            this.isLoaded = true;
-            this.openDialog('Posting creation successful! You may now view and edit your listing under the My Listing tab on your account page', true);
-          });
+    if (!this.isDataProvided()) {
+      this.openDialog('Please enter valid input for all required fields', false);
+      return;
+    }
+    this.isLoaded = false;
+    this.listingsService.createListing(this.listing)
+      .pipe(first())
+      .subscribe(listingId => {
+        this.uploadImages(listingId);
+      });
+  }
+
+  uploadImages(listingId: number) {
+    let promises = [];
+    if (this.files instanceof FileList) {
+      for (let i: number = 0; i < this.files.length; i++) {
+        promises.push(this.uploadService.uploadImage(this.files[i], listingId));
+      }
     }
     else {
-      this.openDialog('Please enter input for all required fields', false);
+      promises.push(this.uploadService.uploadImage(this.files[0], listingId));
     }
+
+    // Waits for all promises to be returned (all image uploading calls finish)
+    Promise.all(promises).then(s => {
+      console.log(s);
+      this.isLoaded = true;
+      this.openDialog('Successfully posted new listing!', false);
+    }).catch(err => {
+      console.log(err);
+      this.isLoaded = true;
+      this.openDialog('Unable to upload images. Please try again', false);
+    });
   }
 
   numberOnly(event): boolean {
@@ -63,7 +94,6 @@ export class AddListingComponent implements OnInit {
       !this.isEmptyBool(this.listing.hospitalAccess) &&
       !this.isEmptyBool(this.listing.BARTAccess) &&
       !this.isEmptyBool(this.listing.wheelchairAccess));
-    return true;
   }
 
   isEmptyStr(str: string): boolean {

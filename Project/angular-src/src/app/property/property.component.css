@@ -26,18 +26,8 @@
 }
 
 .property-grid-title {
-  /*display: flex;*/
   border: 1px;
 }
-
-/*.property-card {*/
-/*  height: 96%;*/
-/*  width: 96%;*/
-/*  !*display: flex;*!*/
-/*  !*justify-content: center;*!*/
-/*  !*align-items: center;*!*/
-/*  border: 1px;*/
-/*}*/
 
 .property-container {
   display: flex;
@@ -50,9 +40,10 @@
 }
 
 .property-card-image {
-  /*display: flex;*/
-  /*justify-content: center;*/
-  /*align-items: center;*/
+  margin-bottom: 10px;
+}
+
+.property-paginator {
   margin-bottom: 10px;
 }
 
