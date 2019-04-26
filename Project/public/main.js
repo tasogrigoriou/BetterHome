@@ -377,18 +377,6 @@ var AdvancedSearchComponent = /** @class */ (function () {
     return AdvancedSearchComponent;
 }());
 
-// export interface Listing {
-//   listingId: number;
-//   title: string;
-//   listingType: string;
-//   price: number;
-//   city: string;
-//   zipCode: number;
-//   street: string;
-//   forSale: boolean;
-//   numBedrooms: number;
-//   numBathrooms: string;
-// }
 
 
 /***/ }),
@@ -964,6 +952,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
 /* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/core/components/footer/footer.component.ts");
+/* harmony import */ var _directives_elevation_directive__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./directives/elevation.directive */ "./src/app/core/directives/elevation.directive.ts");
+
 
 
 
@@ -1003,15 +993,95 @@ var CoreModule = /** @class */ (function () {
             ],
             declarations: [
                 _components_header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"],
-                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_9__["FooterComponent"]
+                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_9__["FooterComponent"],
+                _directives_elevation_directive__WEBPACK_IMPORTED_MODULE_10__["MaterialElevationDirective"]
             ],
             exports: [
                 _components_header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"],
-                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_9__["FooterComponent"]
+                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_9__["FooterComponent"],
+                _directives_elevation_directive__WEBPACK_IMPORTED_MODULE_10__["MaterialElevationDirective"]
             ],
         })
     ], CoreModule);
     return CoreModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/directives/elevation.directive.ts":
+/*!********************************************************!*\
+  !*** ./src/app/core/directives/elevation.directive.ts ***!
+  \********************************************************/
+/*! exports provided: MaterialElevationDirective */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaterialElevationDirective", function() { return MaterialElevationDirective; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var MaterialElevationDirective = /** @class */ (function () {
+    function MaterialElevationDirective(element, renderer) {
+        this.element = element;
+        this.renderer = renderer;
+        this.defaultElevation = 2;
+        this.raisedElevation = 14;
+        this.setElevation(this.defaultElevation);
+    }
+    MaterialElevationDirective.prototype.ngOnChanges = function (_changes) {
+        this.setElevation(this.defaultElevation);
+    };
+    MaterialElevationDirective.prototype.onMouseEnter = function () {
+        this.setElevation(this.raisedElevation);
+    };
+    MaterialElevationDirective.prototype.onMouseLeave = function () {
+        this.setElevation(this.defaultElevation);
+    };
+    MaterialElevationDirective.prototype.setElevation = function (amount) {
+        var _this = this;
+        var elevationPrefix = 'mat-elevation-z';
+        // remove all elevation classes
+        var classesToRemove = Array.from(this.element.nativeElement.classList)
+            .filter(function (c) { return c.startsWith(elevationPrefix); });
+        classesToRemove.forEach(function (c) {
+            _this.renderer.removeClass(_this.element.nativeElement, c);
+        });
+        // add the given elevation class
+        var newClass = "" + elevationPrefix + amount;
+        this.renderer.addClass(this.element.nativeElement, newClass);
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+    ], MaterialElevationDirective.prototype, "defaultElevation", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+    ], MaterialElevationDirective.prototype, "raisedElevation", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('mouseenter'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", []),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", void 0)
+    ], MaterialElevationDirective.prototype, "onMouseEnter", null);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('mouseleave'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", []),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", void 0)
+    ], MaterialElevationDirective.prototype, "onMouseLeave", null);
+    MaterialElevationDirective = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[appMaterialElevation]'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"],
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]])
+    ], MaterialElevationDirective);
+    return MaterialElevationDirective;
 }());
 
 
@@ -1747,7 +1817,10 @@ var HomeComponent = /** @class */ (function () {
     }
     HomeComponent.prototype.ngOnInit = function () {
         if (localStorage.getItem('listingSearch')) {
-            this.listingSearch = JSON.parse(localStorage.getItem('listingSearch'));
+            var search = JSON.parse(localStorage.getItem('listingSearch'));
+            this.listingSearch = {
+                city: search.city
+            };
         }
         else {
             this.listingSearch = {

@@ -47,10 +47,15 @@
 
   </div>
 
-  <div class="space"><h2>Property Listings</h2></div>
+  <div class="space">
+    <h2>Property Listings</h2>
+    <mat-paginator class="property-paginator"
+                   [length]="listings.length" [pageSize]="15">
+    </mat-paginator>
+  </div>
 
   <div class="property-container" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
-    <mat-card class="property-card"
+    <mat-card class="property-card" appMaterialElevation defaultElevation="3" raisedElevation="24"
               [fxFlex]="rowWidth"
               (window:resize)="onResize($event)"
               *ngFor="let listing of listings">
@@ -63,7 +68,7 @@
       <img class="property-card-image"
            [routerLink]="[listing.listingId]"
            [src]="listing.imageUrls[0]"
-           alt="http://transcosmos.co.uk/wp-content/uploads/2015/09/google_logo_03-818x600.jpg">
+           alt="Image not found">
 
       <mat-card-content>
         <p>{{listing.description}}</p>
