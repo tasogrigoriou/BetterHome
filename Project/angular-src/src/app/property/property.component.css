@@ -1,38 +1,70 @@
-.example-container {
-  width: 1100px;
-  height:940px;
-  margin: 10px;
-  border: 1px none #555;
+.property-toolbar {
+  min-height: 74px;
+  height: auto;
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(107, 107, 107, 0.35);
 }
 
-.example-button-row button {
-  margin-left: 8px;
-  margin-right:250px;
-
-  background-color: aliceblue;
+.property-toolbar-title {
+  font-size: 20px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
-.space{margin-left:10px;}
-
-
-mat-grid-tile {
-  background: lightblue;
+.cont-search ::ng-deep .mat-form-field-underline {
+  display: none;
 }
-.search-container {
-  margin-left:10px;
+.cont-form ::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+.property-grid-list {
+  background-color: transparent;
+}
+
+.property-grid-title {
+  border: 1px;
+}
+
+.property-container {
   display: flex;
-  flex-direction: row;
-
+  justify-content: center;
+  align-items: center;
 }
 
-
-.search-container > * {
-  width: 150px;
-
-  outline: 1px none black;
+.property-card {
+  margin: 10px;
 }
-img.img1{
-  margin-left: 20px;
-  width: 100px;
-  height: 100px;
+
+.property-card-image {
+  margin-bottom: 10px;
+}
+
+.property-paginator {
+  margin-bottom: 10px;
+}
+
+.space {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.cont-form {
+  margin-top: 20px;
+  margin-right: 20px;
+  max-width: 135px;
+}
+
+.cont-search {
+  margin-right: 20px;
+  max-width: 210px;
+}
+
+.a-link-card {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
 }

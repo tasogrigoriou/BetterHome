@@ -1,0 +1,59 @@
+.main-div {
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+}
+
+.my-mat-card {
+  max-width: 900px;
+  width: 100%;
+}
+
+.cont-form {
+  margin-right: 20px;
+  max-width: 135px;
+}
+
+.cont-search {
+  margin-right: 20px;
+  max-width: 210px;
+}
+
+.cont-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* unvisited link */
+a:link {
+  color: rgba(0, 0, 0, 0);
+}
+
+/* visited link */
+a:visited {
+  color: rgba(0, 0, 0, 0);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgba(0, 0, 0, 0.58);
+}
+
+/* selected link */
+a:active {
+  color: rgba(0, 0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.cont-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+}

@@ -8,35 +8,34 @@
 <div class="w3-center">
   <div class="w3-section">
 
-    <div>
-      <button class="favorite" mat-raised-button (click)="addToFavorites()" color="primary">+ Add to Favorites</button>
-    </div>
+<!--    <div>-->
+<!--      <button class="favorite" mat-raised-button (click)="addToFavorites()" color="primary">+ Add to Favorites</button>-->
+<!--    </div>-->
     <div class="my-container">
-
       <drag-scroll #drag_scroll>
-        <img drag-scroll-item *ngFor="let photo of listing.propertyPhotos" [src]="photo" alt="" />
+        <img drag-scroll-item *ngFor="let photo of listing.imageUrls" [src]="photo" alt="" />
       </drag-scroll>
-
     </div>
   </div>
 
-  <div>
-    <button class="w3-button w3-light-grey" (click)="moveLeft()" mat-button>❮ Prev</button>
-    <button class="w3-button w3-light-grey" (click)="moveRight()" mat-button>Next ❯</button>
-  </div>
+<!--  <div>-->
+    <button mat-button (click)="moveLeft()">❮ Prev</button>
+    <button mat-button (click)="moveRight()">Next ❯</button>
+<!--  </div>-->
 
 </div>
 
-<!--  -->
-<div class="propertyOverview" *ngIf="listing.Lid">
+<div class="propertyOverview" *ngIf="listing.listingId">
   <h2>Overview</h2>
   <hr width="50%" size="8">
-  <p><i class="fa fa-dollar fa-fw w3-margin-right w3-large "></i> For {{ forSale(listing.forSale) }} ${{ listing.price }}</p>
+  <p><i class="fa fa-dollar fa-fw w3-margin-right w3-large "></i> For {{ forSale() }} ${{ listing.price }}</p>
   <p><i class="fa fa-bath fa-fw w3-margin-right w3-large "></i> {{ listing.numBedrooms }} bed, {{ listing.numBathrooms }} bath</p>
   <p><i class="fa fa-map-marker fa-fw w3-margin-right w3-large "></i> {{ listing.street }} {{ listing.city }} {{ listing.zipCode }}</p>
   <h2>Contact</h2>
-  <p><i class="fa fa-phone fa-fw w3-margin-right w3-large "></i> {{user.phoneNumber}}</p>
-  <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large "></i> {{user.emailAddress}}</p>
+<!--  <p><i class="fa fa-phone fa-fw w3-margin-right w3-large "></i> {{user.phoneNumber || '(415) 766-2205'}}</p>-->
+<!--  <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large "></i> {{user.emailAddress || 'example-email@mail.sfsu.edu'}}</p>-->
+  <p><i class="fa fa-phone fa-fw w3-margin-right w3-large "></i>(415) 766-2205</p>
+  <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large "></i>example-email@mail.sfsu.edu</p>
 </div>
 
 </body>
