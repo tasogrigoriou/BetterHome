@@ -7,12 +7,10 @@
       </div>
 
       <mat-card class="my-mat-card mat-elevation-z24">
-
         <mat-form-field class="cont-input">
           <input matInput placeholder="Search by city..." [(ngModel)]="listingSearch.city" (keyup.enter)="onSearchClick()" required>
           <a class="my-search" mat-button matSuffix color="primary" (click)="onSearchClick()"><mat-icon>search</mat-icon></a>
         </mat-form-field>
-
       </mat-card>
 
       <div>

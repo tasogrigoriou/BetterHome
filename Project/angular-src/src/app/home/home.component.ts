@@ -25,10 +25,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     if (localStorage.getItem('listingSearch')) {
-      let search = JSON.parse(localStorage.getItem('listingSearch'));
-      this.listingSearch = {
-        city: search.city
-      }
+      this.listingSearch = JSON.parse(localStorage.getItem('listingSearch'));
     }
     else {
       this.listingSearch = {
@@ -48,6 +45,9 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.openDialog('Please enter some text for the city field');
     }
     else {
+      this.listingSearch = {
+        city: this.listingSearch.city
+      };
       this.isLoaded = false;
       this.searchService.getSearchListings(this.listingSearch)
         .subscribe(listings => {
