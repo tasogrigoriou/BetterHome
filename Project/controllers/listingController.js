@@ -4,7 +4,7 @@ var database = require('../models/cloudsql');
 
 //Create
 router.post('/', function (req, res) {
-    let date = new Date();
+    //Create new listing in database
     let sql = `INSERT INTO Listing(title, listingType, price, lotSize, city, state, zipCode, street, forSale, paragraph, numBedrooms, numBathrooms, laundry, hospitalAccess, BARTAccess, wheelchairAccess) VALUES (` +
         `
         '${req.body.title}',    
@@ -27,32 +27,37 @@ router.post('/', function (req, res) {
 
     console.log(sql);
 
-    database.query(sql, function (err, listingResult) {
+    database.query(sql, function (err, insertedListingResponse) {
         if (err) {
+            console.log(insertedListingResponse);
             res.status(err.status || 500).send(err.message);
         } else {
-            let sql = `SELECT LAST_INSERT_ID(); from listing`;
-            database.query(sql, function (err, dbResponse) {
-                let listing = dbResponse[0];
+            let insertedListing = insertedListingResponse[0];
+            console.log(insertedListingResponse);
+            //Get the id of the newly inserted listing
+            let sql = `SELECT LAST_INSERT_ID(); from Listing`;
+            database.query(sql, function (err, listingIdResponse) {
                 if (err) {
                     res.status(err.status || 500).send(err.message);
                 } else {
+                    //ListingId response from newly created listing
+                    let listing = listingIdResponse[0];
+                    //Insert new creates containing userId and listingId
                     let sql = `INSERT INTO Creates (userId, listingId, dateAdded) VALUES (` +
                         `
                         '${req.body.userId}',
-                        '${listing.listingId}',
-                        '${date.getTime()}'
-                        ) UNION INSERT INTO ListingImage (listingId, imageUrl) VALUES(` +
-                        `
-                        '${listing.listingId}',
-                        '${req.body.userId}'
-                        )`;
-                    database.query(sql, function (err, createsResult) {
+                        '${listing.listingId}'
+                        `;
+                    database.query(sql, function (err, createsResponse) {
                         if (err) {
                             res.status(err.status || 500).send(err.message);
                         } else {
-                            console.log(createsResult);
-                            res.send(listingResult);
+                            //creates response from database
+                            let creates = createsResponse;
+                            console.log(createsResponse);
+                            //Create result containing the results of the insertions
+                            let result = [insertedListing, creates]
+                            res.send(result);
                         }
                     })
                 }
@@ -77,19 +82,52 @@ router.get('/', async function (req, res) {
  */
 //read one
 router.get('/:id', async function (req, res) {
-    let sql = `SELECT '${req.body.listingId}' FROM Creates`;
-    database.query(sql, function (err, dbResponse) {
+    //Get creates item in order to get the listing owners id
+    let sql = `SELECT * FROM Creates WHERE listingId = '${param.id}'`;
+    database.query(sql, function (err, createsResponse) {
         if (err) {
             res.status(err.status || 500).send(err.message);
         } else {
-            let creates = dbResponse[0];
-            let sql =  `SELECT '${creates.listingId}' FROM Listing UNION SELECT '${creates.userId}' FROM Users UNION SELECT '${creates.listingId}' FROM listingImages`;
-            database.query(sql, function (err, result) {
+            //Creates response from database
+            let creates = createsResponse[0];
+            console.log(createsResponse);
+            //Get User from Users table
+            let sql =  `SELECT * FROM Users WHERE userId = '${creates.userId}'`;
+            database.query(sql, function (err, userResponse) {
                 if (err) {
                     res.status(err.status || 500).send(err.message);
                 } else {
-                    console.log(result);
-                    res.send(result);
+                    //User Response from database
+                    let user = userResponse[0];
+                    console.log(userResponse);
+                    //Get Listing from Listing table
+                    let sql = `SELECT * FROM Listing WHERE listingId = '${creates.listingId}'`;
+                    database.query(sql, function (err, listingResponse) {
+                        if (err) {
+                            res.status(err.status || 500).send(err.message);
+                        } else {
+                            //Listing Response from database
+                            let listing = listingResponse[0];
+                            console.log(listingResponse);
+                            let sql = `SELECT imageUrl FROM ListingImage WHERE listingId = '${creates.listingId}'`;
+                            database.query(sql, function (err, listingImageResponse) {
+                                if (err) {
+                                    res.status(err.status || 500).send(err.message);
+                                } else {
+                                    //imageUrl response from ListingImage in database
+                                    console.log(listingImageResponse);
+                                    //Save imageUrls to an array called listing Images
+                                    let listingImages = [];
+                                    for (let i = 0; i < listingImageResponse.length; i++) {
+                                        listingImages.push(listingImageResponse[i]);
+                                    }
+                                    //Create a response object containing all relevant information
+                                    let result = [user, listing, listingImages];
+                                    res.send(result);
+                                }
+                            })
+                        }
+                    })
                 }
             })
         }
@@ -112,7 +150,7 @@ router.put('/:id', function (req, res) {
  */
 //Delete
 router.delete('/id:', async function (req, res) {
-    let sql = `DELETE FROM Creates WHERE listingId = '${req.body.listingId} `;
+    let sql = `DELETE FROM Creates WHERE listingId = ${req.body.listingId} `;
     const result = await database.query(sql, function (err, result) {
         if (err) {
             res.status(err.status || 500).send(err.message);
