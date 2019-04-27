@@ -18,6 +18,7 @@ import {
 } from "@angular/material";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {FooterComponent} from "./components/footer/footer.component";
+import {MaterialElevationDirective} from "./directives/elevation.directive";
 
 @NgModule({
   imports: [
@@ -44,11 +45,13 @@ import {FooterComponent} from "./components/footer/footer.component";
   ],
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MaterialElevationDirective
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MaterialElevationDirective
   ],
 })
 export class CoreModule { }

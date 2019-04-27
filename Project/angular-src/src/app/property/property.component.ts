@@ -1,5 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Listing, ListingsService} from "../core/services/listings.service";
+import {SearchListingsService} from "../core/services/search.listings.service";
 
 @Component({
   selector: 'app-property',
@@ -16,10 +17,15 @@ export class PropertyComponent implements OnInit, OnDestroy {
   filter: boolean = true;
 
   constructor(
-    private listingsService: ListingsService
+    private listingsService: ListingsService,
+    private searchService: SearchListingsService
   ) {}
 
   ngOnInit() {
+    this.listings = this.searchService.getListings();
+    console.log(this.listings);
+    this.numberOfResult = this.listings.length;
+
     if (localStorage.getItem('listingSearch')) {
       this.listingSearch = JSON.parse(localStorage.getItem('listingSearch'));
     }
@@ -28,11 +34,9 @@ export class PropertyComponent implements OnInit, OnDestroy {
         city: ''
       }
     }
-    this.listings = this.listingsService.getListings();
-    this.numberOfResult = this.listings.length;
 
-    this.breakpoint = (window.innerWidth <= 400) ? 1 : 3;
-    this.rowWidth = (window.innerWidth <= 400) ? '100%' : '30%';
+    this.breakpoint = (window.innerWidth <= 500) ? 1 : 3;
+    this.rowWidth = (window.innerWidth <= 500) ? '100%' : '30%';
   }
 
   ngOnDestroy() {
@@ -42,8 +46,8 @@ export class PropertyComponent implements OnInit, OnDestroy {
   }
 
   onResize(event) {
-    this.breakpoint = (event.target.innerWidth <= 400) ? 1 : 3;
-    this.rowWidth = (event.target.innerWidth <= 400) ? '100%' : '30%';
+    this.breakpoint = (event.target.innerWidth <= 500) ? 1 : 3;
+    this.rowWidth = (event.target.innerWidth <= 500) ? '100%' : '30%';
   }
 
   onSearchClick() {

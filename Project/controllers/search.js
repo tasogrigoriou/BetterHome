@@ -41,9 +41,52 @@ router.post('/', function (req, res) {
         else {
             // result is an array of Listing objects
             console.log(result);
-            res.send(result);
+
+            let promises = [];
+
+            // iterate over all search listing results,
+            // query to get the imageUrls associated with that listing,
+            // assign the urls for that listing
+            for (let i = 0; i < result.length; i++) {
+                let listing = result[i];
+                let sql2 = `SELECT imageUrl FROM ListingImage WHERE listingId = ${listing.listingId}`;
+                let promise = sqlPromiseWrapper(sql2).then(images => {
+                    console.log(images);
+                    let listingImages = [];
+                    for (let i = 0; i < images.length; i++) {
+                        listingImages.push(images[i].imageUrl);
+                    }
+                    listing.imageUrls = listingImages;
+                }).catch(error => {
+                    console.log(error);
+                });
+                promises.push(promise);
+            }
+
+            // Waits for all promises to be returned (all image uploading calls finish)
+            Promise.all(promises).then(s => {
+                // Result will now be the search listing results with imageUrls
+                console.log(result);
+                res.send(result);
+            }).catch(err => {
+                console.log(err);
+            });
         }
     });
 });
+
+// sqlPromiseWrapper wraps a sql query call into a Promise
+// and handles the callbacks with resolve and reject
+function sqlPromiseWrapper(sql) {
+    return new Promise((resolve, reject) => {
+        database.query(sql, function (err, result) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(result);
+            }
+        });
+    });
+}
 
 module.exports = router;

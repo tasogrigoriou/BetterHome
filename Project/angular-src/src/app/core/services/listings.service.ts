@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {Observable, throwError, zip} from "rxjs";
 import {catchError} from "rxjs/operators";
-import {RegisterUser} from "./register.service";
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
+import {LoginUser} from "./login.service";
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -11,8 +11,6 @@ const apiUrl = '/api/register';
 
 @Injectable()
 export class ListingsService {
-
-  listing: Listing;
 
   constructor(private http: HttpClient) { }
 
@@ -121,85 +119,25 @@ export class ListingsService {
 }
 
 export class Listing {
-  listingId: number;
-  title: string;
-  listingType: string;
-  price: number;
-  city: string;
-  state: string;
-  zipCode: number;
-  street: string;
-  forSale: boolean;
-  numBedrooms: number;
-  numBathrooms: string;
-  imageUrls: string[];
-  laundry: boolean;
-  hospitalAccess: boolean;
-  BARTAccess: boolean;
-  wheelchairAccess: boolean;
-  lotSize: number;
-  description: string;
-
   constructor(
-    listingId: number = null,
-    title: string = '',
-    listingType: string = '',
-    price: number = null,
-    city: string = '',
-    state:string = '',
-    zipCode: number = null,
-    street: string = '',
-    forSale: boolean = null,
-    numBedrooms: number = null,
-    numBathrooms: string = '',
-    imageUrls: string[] = [],
-    laundry: boolean = null,
-    hospitalAccess: boolean = false,
-    BARTAccess: boolean = false,
-    wheelchairAccess: boolean = false,
-    lotSize: number = null,
-    description: string = ''
-  ) {
-    this.listingId = listingId;
-    this.title = title;
-    this.listingType = listingType;
-    this.price = price;
-    this.city = city;
-    this.state = state;
-    this.zipCode = zipCode;
-    this.street = street;
-    this.forSale = forSale;
-    this.numBedrooms = numBedrooms;
-    this.numBathrooms = numBathrooms;
-    this.imageUrls = imageUrls;
-    this.laundry = laundry;
-    this.hospitalAccess = hospitalAccess;
-    this.BARTAccess = BARTAccess;
-    this.wheelchairAccess = wheelchairAccess;
-    this.lotSize = lotSize;
-    this.description = description;
-  }
+    public listingId: number = null,
+    public title: string = '',
+    public listingType: string = '',
+    public price: number = null,
+    public city: string = '',
+    public state: string = '',
+    public zipCode: number = null,
+    public street: string = '',
+    public forSale: boolean = null,
+    public numBedrooms: number = null,
+    public numBathrooms: string = '',
+    public imageUrls: string[] = [],
+    public laundry: boolean = null,
+    public hospitalAccess: boolean = false,
+    public BARTAccess: boolean = false,
+    public wheelchairAccess: boolean = false,
+    public lotSize: number = null,
+    public description: string = '',
+    public user: LoginUser = null
+  ) {}
 }
-
-export interface Listing2 {
-  listingId: number;
-  title: string;
-  listingType: string;
-  price: number;
-  city: string;
-  state: string;
-  zipCode: number;
-  street: string;
-  forSale: boolean;
-  numBedrooms: number;
-  numBathrooms: string;
-  imageUrls: string[];
-  laundry: boolean;
-  hospitalAccess: boolean;
-  BARTAccess: boolean;
-  wheelchairAccess: boolean;
-  lotSize: number;
-}
-
-
-

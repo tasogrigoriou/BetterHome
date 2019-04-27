@@ -1,6 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {SearchListingsService} from "../core/services/search.listings.service";
+import {ListingSearch, SearchListingsService} from "../core/services/search.listings.service";
+import {Listing} from "../core/services/listings.service";
 import {MatDialog} from "@angular/material";
 import {RegisterDialog} from "../register/register.dialog";
 
@@ -71,25 +72,4 @@ export class AdvancedSearchComponent implements OnInit, OnDestroy {
       });
     }
   }
-}
-
-export interface ListingSearch {
-  city: string;
-  forSale?: boolean;
-  listingType?: string;
-  numBedrooms?: number;
-  numBathrooms?: number;
-}
-
-export interface Listing {
-  listingId: number;
-  title: string;
-  listingType: string;
-  price: number;
-  city: string;
-  zipCode: number;
-  street: string;
-  forSale: boolean;
-  numBedrooms: number;
-  numBathrooms: string;
 }

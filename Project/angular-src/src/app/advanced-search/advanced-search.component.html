@@ -6,7 +6,7 @@
         <h1 class="cont-title">Advanced Search</h1>
       </div>
 
-      <mat-card class="my-mat-card mat-elevation-z20">
+      <mat-card class="my-mat-card mat-elevation-z24">
 
         <mat-form-field class="cont-form">
           <mat-label>Listing Type</mat-label>
@@ -31,9 +31,12 @@
           <mat-label>Bedrooms</mat-label>
           <mat-select [(value)]="listingSearch.numBedrooms">
             <mat-option value=0>Any</mat-option>
-            <mat-option value=1>1 Bed</mat-option>
-            <mat-option value=2>2 Beds</mat-option>
-            <mat-option value=3>3 Beds</mat-option>
+            <mat-option value=1>1+ Bed</mat-option>
+            <mat-option value=2>2+ Beds</mat-option>
+            <mat-option value=3>3+ Beds</mat-option>
+            <mat-option value=4>4+ Beds</mat-option>
+            <mat-option value=5>5+ Beds</mat-option>
+            <mat-option value=6>6+ Beds</mat-option>
           </mat-select>
         </mat-form-field>
 
@@ -41,9 +44,12 @@
           <mat-label>Bathrooms</mat-label>
           <mat-select [(value)]="listingSearch.numBathrooms">
             <mat-option value=0>Any</mat-option>
-            <mat-option value=1>1 Bathroom</mat-option>
-            <mat-option value=2>2 Bathrooms</mat-option>
-            <mat-option value=3>3 Bathrooms</mat-option>
+            <mat-option value=1>1+ Bath</mat-option>
+            <mat-option value=2>2+ Baths</mat-option>
+            <mat-option value=3>3+ Baths</mat-option>
+            <mat-option value=4>4+ Baths</mat-option>
+            <mat-option value=5>5+ Baths</mat-option>
+            <mat-option value=6>6+ Baths</mat-option>
           </mat-select>
         </mat-form-field>
 

@@ -1,8 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {MatDialog} from "@angular/material";
 import {RegisterDialog} from "../register/register.dialog";
-import {SearchListingsService} from "../core/services/search.listings.service";
+import {ListingSearch, SearchListingsService} from "../core/services/search.listings.service";
 import {Router} from "@angular/router";
+import {Listing} from "../core/services/listings.service";
 
 @Component({
   selector: 'app-home',
@@ -44,6 +45,9 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.openDialog('Please enter some text for the city field');
     }
     else {
+      this.listingSearch = {
+        city: this.listingSearch.city
+      };
       this.isLoaded = false;
       this.searchService.getSearchListings(this.listingSearch)
         .subscribe(listings => {
@@ -71,25 +75,4 @@ export class HomeComponent implements OnInit, OnDestroy {
       });
     }
   }
-}
-
-export interface ListingSearch {
-  city: string;
-  forSale?: boolean;
-  listingType?: string;
-  numBedrooms?: number;
-  numBathrooms?: number;
-}
-
-export interface Listing {
-  listingId: number;
-  title: string;
-  listingType: string;
-  price: number;
-  city: string;
-  zipCode: number;
-  street: string;
-  forSale: boolean;
-  numBedrooms: number;
-  numBathrooms: string;
 }
