@@ -113,7 +113,7 @@
   </div>
 
   <!--Image Uploading-->
-<!--  <ng-template [ngIf]="!didSaveImages">-->
+  <ng-template [ngIf]="!didSaveImages">
     <td-file-upload #fileMultipleUpload
                     (select)="saveImages($event)"
                     accept=".jpg, .jpeg, .png, .tif"
@@ -131,14 +131,11 @@
         <span>Upload images</span>
       </ng-template>
     </td-file-upload>
-<!--  </ng-template>-->
+  </ng-template>
 
   <ng-template [ngIf]="didSaveImages">
     <div>
-      <button class="create-listing-btn"
-              fxLayout="column"
-              fxLayoutAlign="center"
-              mat-raised-button
+      <button mat-raised-button
               color="primary"
               (click)="onSubmit()">
         Create Listing
