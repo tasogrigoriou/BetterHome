@@ -6,43 +6,12 @@
         <h1 class="cont-title">Search Listings</h1>
       </div>
 
-      <mat-card class="my-mat-card mat-elevation-z20">
-
-        <!--<mat-form-field class="cont-form">-->
-        <!--<mat-label>Sale or Rental</mat-label>-->
-        <!--<mat-select [(value)]="listingSearch.forSale">-->
-        <!--<mat-option value=null>Both</mat-option>-->
-        <!--<mat-option value=1>Sale</mat-option>-->
-        <!--<mat-option value=0>Rental</mat-option>-->
-        <!--</mat-select>-->
-        <!--</mat-form-field>-->
-
-        <!--<mat-form-field class="cont-form">-->
-        <!--<mat-label>Bedrooms</mat-label>-->
-        <!--<mat-select [(value)]="listingSearch.numBedrooms">-->
-        <!--<mat-option value=0>Any</mat-option>-->
-        <!--<mat-option value=1>1 Bed</mat-option>-->
-        <!--<mat-option value=2>2 Beds</mat-option>-->
-        <!--<mat-option value=3>3 Beds</mat-option>-->
-        <!--</mat-select>-->
-        <!--</mat-form-field>-->
-
-        <!--<mat-form-field class="cont-form">-->
-        <!--<mat-label>Bathrooms</mat-label>-->
-        <!--<mat-select [(value)]="listingSearch.numBathrooms">-->
-        <!--<mat-option value=0>Any</mat-option>-->
-        <!--<mat-option value=1>1</mat-option>-->
-        <!--<mat-option value=2>2</mat-option>-->
-        <!--<mat-option value=3>3</mat-option>-->
-        <!--</mat-select>-->
-        <!--</mat-form-field>-->
+      <mat-card class="my-mat-card mat-elevation-z24">
 
         <mat-form-field class="cont-input">
           <input matInput placeholder="Search by city..." [(ngModel)]="listingSearch.city" (keyup.enter)="onSearchClick()" required>
           <a class="my-search" mat-button matSuffix color="primary" (click)="onSearchClick()"><mat-icon>search</mat-icon></a>
         </mat-form-field>
-
-<!--        <button class="cont-button" mat-raised-button color="primary" (click)="onSearchClick()">Search</button>-->
 
       </mat-card>
 
