@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 
 const apiUrl = '/api/upload';
-
 @Injectable({
   providedIn: 'root'
 })

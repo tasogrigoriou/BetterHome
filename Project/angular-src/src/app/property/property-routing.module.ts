@@ -9,7 +9,7 @@ const routes: Routes = [
     component: PropertyComponent
   },
   {
-    path: ':listing.Lid',
+    path: ':listing.listingId',
     component: PropertySingleListingComponent
   }
 ];

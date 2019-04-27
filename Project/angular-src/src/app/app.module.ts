@@ -15,7 +15,7 @@ import {ExampleComponent} from './example/example.component';
 import {AlertComponent} from "./core/components/alert/alert.component";
 import {UploadComponent} from "./core/components/upload/upload.component";
 import {AccountComponent} from  "./account/account.component";
-import {AddlistingComponent} from "./addlisting/addlisting.component";
+import {AddListingComponent} from "./add-listing/add-listing.component";
 import {SearchResultsComponent} from './search-results/search-results.component';
 import {LogoutComponent} from './logout/logout.component';
 
@@ -53,6 +53,7 @@ import { CovalentHighlightModule } from '@covalent/highlight';
 import { CovalentMarkdownModule } from '@covalent/markdown';
 import { CovalentDynamicFormsModule } from '@covalent/dynamic-forms';
 import {CovalentFileModule} from "@covalent/core";
+import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import {CovalentFileModule} from "@covalent/core";
     UploadComponent,
     LogoutComponent,
     AccountComponent,
-    AddlistingComponent,
+    AddListingComponent,
+    AdvancedSearchComponent,
   ],
   entryComponents: [
     RegisterDialog

@@ -1,52 +1,83 @@
-<!--<nav class="navbar is-dark">-->
-<!--  &lt;!&ndash; menu &ndash;&gt;-->
-<!--  <div class="navbar-menu">-->
-<!--    <div class="navbar-start">-->
-<!--      <a class="navbar-item" routerLink="">Home</a>-->
-<!--      <a class="navbar-item" routerLink="about-us">About us</a>-->
-<!--      <a class="navbar-item" routerLink="property">Property</a>-->
-<!--      <a class="navbar-item" routerLink="account">Account</a>-->
-<!--      <a class="navbar-item" routerLink="addlisting">Add Listing</a>-->
-<!--      <a class="navbar-item" routerLink="register">Register</a>-->
-<!--      <a class="navbar-item" routerLink="login">Login</a>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</nav>-->
+<ng-template [ngIf]="!isMobileScreen">
+  <mat-toolbar color="primary" class="mat-elevation-z8 my-toolbar" (window:resize)="onResize($event)">
 
-<mat-toolbar color="primary" class="mat-elevation-z8 my-toolbar">
-  <span>
-    <a [routerLink]="'/'"><h3 class="my-header-title">Better Home</h3></a>
+    <a [routerLink]="'/'"><h6 class="home-link">Home</h6></a>
+
+    <!-- Centered Logo -->
+    <span class="my-span">
+    <img class="bh-logo" src="https://i.ibb.co/N1FRWdS/better-home-logo.png" alt="BetterHome" width="100" height="100">
   </span>
 
-  <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
 
-  <!--Right Aligned Links-->
-  <ng-template [ngIf]="loginUser">
-    <a mat-button class="my-mat-button" color="primary" [matMenuTriggerFor]="menu">{{ loginUser.username }}
-      <mat-icon>arrow_drop_down</mat-icon>
-    </a>
+    <ng-template [ngIf]="loginUser">
+      <a [routerLink]="'/add-listing'">Post Listing</a>
+      <a mat-button class="my-mat-button" color="primary" [matMenuTriggerFor]="menu">{{loginUser.username}}
+        <mat-icon>arrow_drop_down</mat-icon>
+      </a>
 
-    <mat-menu #menu="matMenu" xPosition="before">
-      <button mat-menu-item [routerLink]="'/account'">
-        <mat-icon>account_box</mat-icon>
-        <span>Account</span>
-      </button>
-      <button mat-menu-item [routerLink]="'/post-listing'">
-        <mat-icon>add</mat-icon>
-        <span>Post Listing</span>
-      </button>
-      <button mat-menu-item [routerLink]="'/logout'">
-        <mat-icon>close</mat-icon>
-        <span>Logout</span>
-      </button>
-    </mat-menu>
+      <mat-menu #menu="matMenu" xPosition="before">
+        <button mat-menu-item [routerLink]="'/account'">
+          <mat-icon>account_box</mat-icon>
+          <span>Account</span>
+        </button>
+        <button mat-menu-item [routerLink]="'/logout'">
+          <mat-icon>close</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
 
-  </ng-template>
+    </ng-template>
 
-  <ng-template [ngIf]="!loginUser">
-    <a [routerLink]="'/login'">Login</a>
-    <a [routerLink]="'/register'">Register</a>
-  </ng-template>
+      <ng-template [ngIf]="!loginUser">
+        <a [routerLink]="'/login'">Login</a>
+        <a [routerLink]="'/register'">Register</a>
+      </ng-template>
 
-</mat-toolbar>
+  </mat-toolbar>
+</ng-template>
+
+<ng-template [ngIf]="isMobileScreen">
+  <mat-toolbar color="primary" class="mat-elevation-z8 my-toolbar" (window:resize)="onResize($event)">
+
+    <a [routerLink]="'/'"><h6 class="home-link">Home</h6></a>
+
+    <!-- Centered Logo -->
+    <span class="my-span">
+      <img class="bh-logo" src="https://i.ibb.co/N1FRWdS/better-home-logo.png" alt="BetterHome" width="100" height="100">
+    </span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <ng-template [ngIf]="loginUser">
+      <a mat-button class="my-mat-button-push-right" color="primary" [matMenuTriggerFor]="menu">{{loginUser.username}}
+        <mat-icon>arrow_drop_down</mat-icon>
+      </a>
+
+      <mat-menu #menu="matMenu" xPosition="before">
+        <button mat-menu-item [routerLink]="'/account'">
+          <mat-icon>account_box</mat-icon>
+          <span>Account</span>
+        </button>
+        <button mat-menu-item [routerLink]="'/add-listing'">
+          <mat-icon>add</mat-icon>
+          <span>Post Listing</span>
+        </button>
+        <button mat-menu-item [routerLink]="'/logout'">
+          <mat-icon>close</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+
+    </ng-template>
+
+      <ng-template [ngIf]="!loginUser">
+        <a class="my-mat-button-push-slight-right" [routerLink]="'/login'">Login</a>
+        <a class="my-mat-button-push-right" [routerLink]="'/register'">Register</a>
+      </ng-template>
+
+  </mat-toolbar>
+</ng-template>
+
