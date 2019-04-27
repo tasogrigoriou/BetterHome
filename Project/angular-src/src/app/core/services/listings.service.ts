@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {Observable, throwError, zip} from "rxjs";
 import {catchError} from "rxjs/operators";
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
+import {LoginUser} from "./login.service";
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -136,9 +137,7 @@ export class Listing {
     public BARTAccess: boolean = false,
     public wheelchairAccess: boolean = false,
     public lotSize: number = null,
-    public description: string = ''
+    public description: string = '',
+    public user: LoginUser = null
   ) {}
 }
-
-
-

@@ -7,6 +7,16 @@
   margin: 0 auto;
   max-width: 800px;
   width: 100%;
+  padding-bottom: 10px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.form-field-div {
+  display: flex;
+  justify-content: center;
 }
 
 .post-listing-header {
@@ -15,7 +25,13 @@
 }
 
 .cont-input {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
+.cont-form {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .create-listing-btn {

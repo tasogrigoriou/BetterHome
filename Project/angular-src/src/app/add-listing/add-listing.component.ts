@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {RegisterService} from "../core/services/register.service";
 import {ListingsService, Listing} from "../core/services/listings.service";
 import {first} from "rxjs/operators";
 import {RegisterDialog} from "../register/register.dialog";
 import {MatDialog} from "@angular/material";
 import {UploadService} from "../core/services/upload.service";
+import {LoginUser} from "../core/services/login.service";
 
 @Component({
   selector: 'app-addlisting',
@@ -14,12 +14,15 @@ import {UploadService} from "../core/services/upload.service";
 })
 export class AddListingComponent implements OnInit {
 
+  loginUser: LoginUser;
   listing: Listing;
 
   files: FileList | File;
 
   isLoaded = true;
   didSaveImages = false;
+
+  isFullScreen: boolean;
 
   constructor(
     private router: Router,
@@ -30,6 +33,17 @@ export class AddListingComponent implements OnInit {
 
   ngOnInit() {
     this.listing = new Listing();
+
+    if (localStorage.getItem('loginUser')) {
+      this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
+      this.listing.user = this.loginUser;
+    }
+
+    this.isFullScreen = (window.innerWidth >= 1000);
+  }
+
+  onResize(event) {
+    this.isFullScreen = (event.target.innerWidth >= 1000);
   }
 
   saveImages(files: FileList | File): void {
@@ -42,12 +56,20 @@ export class AddListingComponent implements OnInit {
       this.openDialog('Please enter valid input for all required fields', false);
       return;
     }
-    this.isLoaded = false;
+
+    this.showSpinner();
     this.listingsService.createListing(this.listing)
       .pipe(first())
-      .subscribe(listingId => {
-        this.uploadImages(listingId);
-      });
+      .subscribe(
+        listingId => {
+          this.uploadImages(listingId);
+        },
+        err => {
+          console.log(err);
+          this.hideSpinner();
+          this.openDialog('Unable to create listing. Please try again', false);
+        }
+      );
   }
 
   uploadImages(listingId: number) {
@@ -64,13 +86,21 @@ export class AddListingComponent implements OnInit {
     // Waits for all promises to be returned (all image uploading calls finish)
     Promise.all(promises).then(s => {
       console.log(s);
-      this.isLoaded = true;
-      this.openDialog('Successfully posted new listing!', false);
+      this.hideSpinner();
+      this.openDialog('Successfully posted new listing!', true);
     }).catch(err => {
       console.log(err);
-      this.isLoaded = true;
+      this.hideSpinner();
       this.openDialog('Unable to upload images. Please try again', false);
     });
+  }
+
+  showSpinner() {
+    this.isLoaded = false;
+  }
+
+  hideSpinner() {
+    this.isLoaded = true;
   }
 
   numberOnly(event): boolean {
@@ -89,11 +119,7 @@ export class AddListingComponent implements OnInit {
       !this.isEmptyStr(this.listing.state) &&
       !this.isEmptyBool(this.listing.forSale) &&
       !this.isEmptyNum(this.listing.numBedrooms) &&
-      !this.isEmptyStr(this.listing.numBathrooms) &&
-      !this.isEmptyBool(this.listing.laundry) &&
-      !this.isEmptyBool(this.listing.hospitalAccess) &&
-      !this.isEmptyBool(this.listing.BARTAccess) &&
-      !this.isEmptyBool(this.listing.wheelchairAccess));
+      !this.isEmptyStr(this.listing.numBathrooms));
   }
 
   isEmptyStr(str: string): boolean {
