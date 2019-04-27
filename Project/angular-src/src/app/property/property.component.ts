@@ -35,8 +35,8 @@ export class PropertyComponent implements OnInit, OnDestroy {
       }
     }
 
-    this.breakpoint = (window.innerWidth <= 400) ? 1 : 3;
-    this.rowWidth = (window.innerWidth <= 400) ? '100%' : '30%';
+    this.breakpoint = (window.innerWidth <= 500) ? 1 : 3;
+    this.rowWidth = (window.innerWidth <= 500) ? '100%' : '30%';
   }
 
   ngOnDestroy() {
@@ -46,8 +46,8 @@ export class PropertyComponent implements OnInit, OnDestroy {
   }
 
   onResize(event) {
-    this.breakpoint = (event.target.innerWidth <= 400) ? 1 : 3;
-    this.rowWidth = (event.target.innerWidth <= 400) ? '100%' : '30%';
+    this.breakpoint = (event.target.innerWidth <= 500) ? 1 : 3;
+    this.rowWidth = (event.target.innerWidth <= 500) ? '100%' : '30%';
   }
 
   onSearchClick() {

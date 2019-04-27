@@ -1,36 +1,83 @@
-<mat-toolbar color="primary" class="mat-elevation-z8 my-toolbar">
+<ng-template [ngIf]="!isMobileScreen">
+  <mat-toolbar color="primary" class="mat-elevation-z8 my-toolbar" (window:resize)="onResize($event)">
 
-  <a [routerLink]="'/'"><h1 class="my-header-title">Better Home</h1></a>
+    <a [routerLink]="'/'"><h6 class="home-link">Home</h6></a>
 
-  <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
+    <!-- Centered Logo -->
+    <span class="my-span">
+    <img class="bh-logo" src="https://i.ibb.co/N1FRWdS/better-home-logo.png" alt="BetterHome" width="100" height="100">
+  </span>
 
-  <!--Right Aligned Links-->
-  <ng-template [ngIf]="loginUser">
-    <a mat-button class="my-mat-button" color="primary" [matMenuTriggerFor]="menu">{{ loginUser.username }}
-      <mat-icon>arrow_drop_down</mat-icon>
-    </a>
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
 
-    <mat-menu #menu="matMenu" xPosition="before">
-      <button mat-menu-item [routerLink]="'/account'">
-        <mat-icon>account_box</mat-icon>
-        <span>Account</span>
-      </button>
-      <button mat-menu-item [routerLink]="'/add-listing'">
-        <mat-icon>add</mat-icon>
-        <span>Post Listing</span>
-      </button>
-      <button mat-menu-item [routerLink]="'/logout'">
-        <mat-icon>close</mat-icon>
-        <span>Logout</span>
-      </button>
-    </mat-menu>
+    <ng-template [ngIf]="loginUser">
+      <a [routerLink]="'/add-listing'">Post Listing</a>
+      <a mat-button class="my-mat-button" color="primary" [matMenuTriggerFor]="menu">{{loginUser.username}}
+        <mat-icon>arrow_drop_down</mat-icon>
+      </a>
 
-  </ng-template>
+      <mat-menu #menu="matMenu" xPosition="before">
+        <button mat-menu-item [routerLink]="'/account'">
+          <mat-icon>account_box</mat-icon>
+          <span>Account</span>
+        </button>
+        <button mat-menu-item [routerLink]="'/logout'">
+          <mat-icon>close</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
 
-  <ng-template [ngIf]="!loginUser">
-    <a [routerLink]="'/login'">Login</a>
-    <a [routerLink]="'/register'">Register</a>
-  </ng-template>
+    </ng-template>
 
-</mat-toolbar>
+      <ng-template [ngIf]="!loginUser">
+        <a [routerLink]="'/login'">Login</a>
+        <a [routerLink]="'/register'">Register</a>
+      </ng-template>
+
+  </mat-toolbar>
+</ng-template>
+
+<ng-template [ngIf]="isMobileScreen">
+  <mat-toolbar color="primary" class="mat-elevation-z8 my-toolbar" (window:resize)="onResize($event)">
+
+    <a [routerLink]="'/'"><h6 class="home-link">Home</h6></a>
+
+    <!-- Centered Logo -->
+    <span class="my-span">
+      <img class="bh-logo" src="https://i.ibb.co/N1FRWdS/better-home-logo.png" alt="BetterHome" width="100" height="100">
+    </span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <ng-template [ngIf]="loginUser">
+      <a mat-button class="my-mat-button-push-right" color="primary" [matMenuTriggerFor]="menu">{{loginUser.username}}
+        <mat-icon>arrow_drop_down</mat-icon>
+      </a>
+
+      <mat-menu #menu="matMenu" xPosition="before">
+        <button mat-menu-item [routerLink]="'/account'">
+          <mat-icon>account_box</mat-icon>
+          <span>Account</span>
+        </button>
+        <button mat-menu-item [routerLink]="'/add-listing'">
+          <mat-icon>add</mat-icon>
+          <span>Post Listing</span>
+        </button>
+        <button mat-menu-item [routerLink]="'/logout'">
+          <mat-icon>close</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+
+    </ng-template>
+
+      <ng-template [ngIf]="!loginUser">
+        <a class="my-mat-button-push-slight-right" [routerLink]="'/login'">Login</a>
+        <a class="my-mat-button-push-right" [routerLink]="'/register'">Register</a>
+      </ng-template>
+
+  </mat-toolbar>
+</ng-template>
+

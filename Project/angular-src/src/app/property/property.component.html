@@ -60,13 +60,14 @@
               (window:resize)="onResize($event)"
               *ngFor="let listing of listings">
 
-      <mat-card-header [routerLink]="[listing.listingId]">
+      <a class="a-link-card" [routerLink]="[listing.listingId]"></a>
+
+      <mat-card-header>
         <mat-card-title>{{listing.title}}</mat-card-title>
         <mat-card-subtitle>{{listing.city}}</mat-card-subtitle>
       </mat-card-header>
 
       <img class="property-card-image"
-           [routerLink]="[listing.listingId]"
            [src]="listing.imageUrls[0]"
            alt="Image not found">
 

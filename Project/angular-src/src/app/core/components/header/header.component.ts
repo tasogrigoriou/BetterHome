@@ -9,6 +9,8 @@ import {LoginService, LoginUser} from "../../services/login.service";
 export class HeaderComponent implements OnInit {
   loginUser: LoginUser;
 
+  isMobileScreen: boolean;
+
   constructor(private loginService: LoginService) {}
 
   ngOnInit() {
@@ -19,5 +21,11 @@ export class HeaderComponent implements OnInit {
     this.loginService.getLoginUser.subscribe(loginUser => {
       this.loginUser = loginUser;
     });
+
+    this.isMobileScreen = (window.innerWidth <= 500);
+  }
+
+  onResize(event) {
+    this.isMobileScreen = (event.target.innerWidth <= 500);
   }
 }

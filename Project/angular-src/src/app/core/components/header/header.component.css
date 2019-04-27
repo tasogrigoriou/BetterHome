@@ -10,6 +10,23 @@
   z-index: 1;
 }
 
+.home-link {
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+.middle-span {
+  text-align: center;
+}
+
+.my-span {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .example-fill-remaining-space {
   /* This fills the remaining space, by using flexbox.
      Every toolbar row uses a flexbox row layout. */
@@ -50,5 +67,13 @@ a {
 .my-mat-button {
   color: rgba(0, 0, 0, 0.75);
   background-color: white;
+}
+
+.my-mat-button-push-right {
+  margin-right: -25px;
+}
+
+.my-mat-button-push-slight-right {
+  margin-right: -10px;
 }
 
