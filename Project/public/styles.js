@@ -33,6 +33,17 @@ module.exports = [[module.i, "/* You can add global styles to this file, and als
 
 /***/ }),
 
+/***/ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./src/global-styles.css":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src??embedded!./src/global-styles.css ***!
+  \************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = [[module.i, "button {\n  outline: none !important;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9nbG9iYWwtc3R5bGVzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHdCQUF3QjtBQUMxQiIsImZpbGUiOiJzcmMvZ2xvYmFsLXN0eWxlcy5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJidXR0b24ge1xuICBvdXRsaW5lOiBub25lICFpbXBvcnRhbnQ7XG59XG4iXX0= */", '', '']]
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/css/bootstrap.min.css":
 /*!***********************************************************!*\
   !*** ./node_modules/bootstrap/dist/css/bootstrap.min.css ***!
@@ -602,6 +613,36 @@ module.exports = function (css) {
 
 /***/ }),
 
+/***/ "./src/global-styles.css":
+/*!*******************************!*\
+  !*** ./src/global-styles.css ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!../node_modules/postcss-loader/src??embedded!./global-styles.css */ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./src/global-styles.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./src/styles.scss":
 /*!*************************!*\
   !*** ./src/styles.scss ***!
@@ -633,13 +674,14 @@ if(false) {}
 /***/ }),
 
 /***/ 3:
-/*!**********************************************************************************************************************!*\
-  !*** multi ./src/styles.scss ./node_modules/bulma/css/bulma.css ./node_modules/bootstrap/dist/css/bootstrap.min.css ***!
-  \**********************************************************************************************************************/
+/*!**********************************************************************************************************************************************!*\
+  !*** multi ./src/styles.scss ./src/global-styles.css ./node_modules/bulma/css/bulma.css ./node_modules/bootstrap/dist/css/bootstrap.min.css ***!
+  \**********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/tagrigoriou/csc648-sp19-team43/Project/angular-src/src/styles.scss */"./src/styles.scss");
+__webpack_require__(/*! /Users/tagrigoriou/csc648-sp19-team43/Project/angular-src/src/global-styles.css */"./src/global-styles.css");
 __webpack_require__(/*! /Users/tagrigoriou/csc648-sp19-team43/Project/angular-src/node_modules/bulma/css/bulma.css */"./node_modules/bulma/css/bulma.css");
 module.exports = __webpack_require__(/*! /Users/tagrigoriou/csc648-sp19-team43/Project/angular-src/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
 
