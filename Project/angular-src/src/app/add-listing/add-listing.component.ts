@@ -58,11 +58,12 @@ export class AddListingComponent implements OnInit {
     }
 
     this.showSpinner();
+    this.replaceDoubleQuotes();
     this.listingsService.createListing(this.listing)
       .pipe(first())
       .subscribe(
-        listingId => {
-          this.uploadImages(listingId);
+        result => {
+          this.uploadImages(result.listingId);
         },
         err => {
           console.log(err);
@@ -70,6 +71,11 @@ export class AddListingComponent implements OnInit {
           this.openDialog('Unable to create listing. Please try again', false);
         }
       );
+  }
+
+  replaceDoubleQuotes() {
+    this.listing.title = this.listing.title.replace(/"/g, "'");
+    this.listing.description = this.listing.description.replace(/"/g, "'");
   }
 
   uploadImages(listingId: number) {
@@ -80,7 +86,7 @@ export class AddListingComponent implements OnInit {
       }
     }
     else {
-      promises.push(this.uploadService.uploadImage(this.files[0], listingId));
+      promises.push(this.uploadService.uploadImage(this.files, listingId));
     }
 
     // Waits for all promises to be returned (all image uploading calls finish)
@@ -119,7 +125,7 @@ export class AddListingComponent implements OnInit {
       !this.isEmptyStr(this.listing.state) &&
       !this.isEmptyBool(this.listing.forSale) &&
       !this.isEmptyNum(this.listing.numBedrooms) &&
-      !this.isEmptyStr(this.listing.numBathrooms));
+      !this.isEmptyNum(this.listing.numBathrooms));
   }
 
   isEmptyStr(str: string): boolean {
@@ -131,7 +137,7 @@ export class AddListingComponent implements OnInit {
   }
 
   isEmptyBool(bool: boolean) {
-    return(!bool);
+    return (!bool);
   }
 
   openDialog(message: string, subscribe: boolean) {

@@ -1,65 +1,49 @@
-var express = require('express');
-var router = express.Router();
-var database = require('../models/cloudsql');
+const express = require('express');
+const router = express.Router();
+const database = require('../models/cloudsql');
 
-//Create
+// Create new listing
 router.post('/', function (req, res) {
-    //Create new listing in database
-    let sql = `INSERT INTO Listing(title, listingType, price, lotSize, city, state, zipCode, street, forSale, paragraph, numBedrooms, numBathrooms, laundry, hospitalAccess, BARTAccess, wheelchairAccess) VALUES (` +
+    let sql = `INSERT INTO Listing(title, listingType, price, lotSize, street, city, state, zipCode, forSale, description, numBedrooms, numBathrooms, laundry, hospitalAccess, BARTAccess, wheelchairAccess) 
+    VALUES (` +
         `
-        '${req.body.title}',    
-        '${req.body.listingType}',
-        '${req.body.price}',
-        '${req.body.lotSize}',
-        '${req.body.street}',
-        '${req.body.city}',
-        '${req.body.state}',
-        '${req.body.zipCode}',
-        '${req.body.forSale}',
-        '${req.body.paragraph}',
-        '${req.body.numBedrooms}',
-        '${req.body.numBathrooms}',
-        '${req.body.laundry}',
-        '${req.body.hospitalAccess}',
-        '${req.body.BARTAccess}',
-        '${req.body.wheelchairAccess}'
+        "${req.body.title}",    
+        "${req.body.listingType}",
+        ${req.body.price},
+        "${req.body.lotSize}",
+        "${req.body.street}",
+        "${req.body.city}",
+        "${req.body.state}",
+        ${req.body.zipCode},
+        ${req.body.forSale},
+        "${req.body.description}",
+        ${req.body.numBedrooms},
+        ${req.body.numBathrooms},
+        ${req.body.laundry},
+        ${req.body.hospitalAccess},
+        ${req.body.BARTAccess},
+        ${req.body.wheelchairAccess}
         )`;
-
-    console.log(sql);
-
     database.query(sql, function (err, insertedListingResponse) {
         if (err) {
-            console.log(insertedListingResponse);
+            console.log(err);
             res.status(err.status || 500).send(err.message);
         } else {
-            let insertedListing = insertedListingResponse[0];
             console.log(insertedListingResponse);
-            //Get the id of the newly inserted listing
-            let sql = `SELECT LAST_INSERT_ID(); from Listing`;
-            database.query(sql, function (err, listingIdResponse) {
+            let listingId = insertedListingResponse.insertId;
+
+            // Insert new Creates row containing userId and listingId
+            let sql = `INSERT INTO Creates (userId, listingId) VALUES (` +
+                        `
+                        ${req.body.user.userId},
+                        ${listingId}
+                        )`;
+            database.query(sql, function (err, createsResponse) {
                 if (err) {
                     res.status(err.status || 500).send(err.message);
                 } else {
-                    //ListingId response from newly created listing
-                    let listing = listingIdResponse[0];
-                    //Insert new creates containing userId and listingId
-                    let sql = `INSERT INTO Creates (userId, listingId, dateAdded) VALUES (` +
-                        `
-                        '${req.body.userId}',
-                        '${listing.listingId}'
-                        `;
-                    database.query(sql, function (err, createsResponse) {
-                        if (err) {
-                            res.status(err.status || 500).send(err.message);
-                        } else {
-                            //creates response from database
-                            let creates = createsResponse;
-                            console.log(createsResponse);
-                            //Create result containing the results of the insertions
-                            let result = [insertedListing, creates]
-                            res.send(result);
-                        }
-                    })
+                    console.log(createsResponse);
+                    res.send({ listingId: listingId });
                 }
             })
         }
