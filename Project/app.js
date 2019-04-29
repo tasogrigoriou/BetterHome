@@ -9,6 +9,8 @@ const apiExampleRouter = require('./controllers/example');
 const apiUploadRouter = require('./controllers/upload');
 const apiLoginRouter = require('./controllers/login');
 const apiSearchRouter = require('./controllers/search');
+const apiListingRouter = require('./controllers/listing');
+const apiFavoritesRouter = require('./controllers/favorites');
 
 const app = express();
 app.enable('trust proxy');
@@ -33,6 +35,8 @@ app.use('/api/example', apiExampleRouter);
 app.use('/api/register',apiRegisterRouter);
 app.use('/api/login', apiLoginRouter);
 app.use('/api/upload', apiUploadRouter);
+app.use('/api/listing', apiListingRouter);
+app.use('/api/favorites', apiFavoritesRouter);
 
 app.use(function(err, req, res) {
   res.locals.message = err.message;

@@ -7,7 +7,7 @@ import {LoginUser} from "./login.service";
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = '/api/register';
+const apiUrl = '/api/listing';
 
 @Injectable()
 export class ListingsService {
@@ -70,7 +70,7 @@ export class ListingsService {
     'Example Street 1',
     true,
     2,
-    '2',
+    2,
     ['https://bit.ly/2Vc5oog', 'https://bit.ly/2UtC20w', 'https://bit.ly/2UJTUca'],
     false,
     false,
@@ -89,7 +89,7 @@ export class ListingsService {
     'Example Street 2',
     true,
     3,
-    '3',
+    3,
     ['https://bit.ly/2UJTUca', 'https://bit.ly/2Vc5oog', 'https://bit.ly/2UtC20w'],
     true,
     true,
@@ -108,7 +108,7 @@ export class ListingsService {
     'Example Street 3',
     false,
     3,
-    '2.5',
+    2.5,
     ['https://bit.ly/2UtC20w', 'https://bit.ly/2UJTUca', 'https://bit.ly/2Vc5oog'],
     true,
     false,
@@ -130,9 +130,9 @@ export class Listing {
     public street: string = '',
     public forSale: boolean = null,
     public numBedrooms: number = null,
-    public numBathrooms: string = '',
+    public numBathrooms: number = null,
     public imageUrls: string[] = [],
-    public laundry: boolean = null,
+    public laundry: boolean = false,
     public hospitalAccess: boolean = false,
     public BARTAccess: boolean = false,
     public wheelchairAccess: boolean = false,
