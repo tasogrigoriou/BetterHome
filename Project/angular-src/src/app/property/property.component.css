@@ -36,11 +36,27 @@
 }
 
 .property-card {
-  margin: 10px;
+  position: relative;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.favorite-button {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  height: 36px;
+  width: 20px;
+}
+
+.property-card-title {
+  margin-bottom: 8px;
 }
 
 .property-card-image {
-  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
 }
 
 .property-paginator {
@@ -67,4 +83,9 @@
   position: absolute;
   top: 0; left: 0;
   height: 100%; width: 100%;
+}
+
+.property-access-title {
+  margin-top: -10px;
+  color: rgba(0, 0, 0, 0.6);
 }

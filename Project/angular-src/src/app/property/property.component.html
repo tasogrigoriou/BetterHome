@@ -8,7 +8,7 @@
 
     <mat-form-field class="cont-form" [floatLabel]="'never'">
       <mat-label>Listing Type</mat-label>
-      <mat-select [(value)]="listingSearch.listingType">
+      <mat-select [(value)]="listingSearch.listingType" (selectionChange)="onSelectionChange()">
         <mat-option value="Any">Any Type</mat-option>
         <mat-option value="House">House</mat-option>
         <mat-option value="Apartment">Apartment</mat-option>
@@ -18,7 +18,7 @@
 
     <mat-form-field class="cont-form" [floatLabel]="'never'">
       <mat-label>Sale or Rental</mat-label>
-      <mat-select [(value)]="listingSearch.forSale">
+      <mat-select [(value)]="listingSearch.forSale" (selectionChange)="onSelectionChange()">
         <mat-option value=null>Sale and Rental</mat-option>
         <mat-option value=1>Sale</mat-option>
         <mat-option value=0>Rental</mat-option>
@@ -27,7 +27,7 @@
 
     <mat-form-field class="cont-form" [floatLabel]="'never'">
       <mat-label>Bedrooms</mat-label>
-      <mat-select [(value)]="listingSearch.numBedrooms">
+      <mat-select [(value)]="listingSearch.numBedrooms" (selectionChange)="onSelectionChange()">
         <mat-option value=0>Any Beds</mat-option>
         <mat-option value=1>1+ Bed</mat-option>
         <mat-option value=2>2+ Beds</mat-option>
@@ -40,7 +40,7 @@
 
     <mat-form-field class="cont-form" [floatLabel]="'never'">
       <mat-label>Bathrooms</mat-label>
-      <mat-select [(value)]="listingSearch.numBathrooms">
+      <mat-select [(value)]="listingSearch.numBathrooms" (selectionChange)="onSelectionChange()">
         <mat-option value=0>Any Baths</mat-option>
         <mat-option value=1>1+ Bath</mat-option>
         <mat-option value=2>2+ Baths</mat-option>
@@ -55,12 +55,14 @@
 
   <div class="space">
     <h2>Property Listings</h2>
-    <mat-paginator class="property-paginator"
-                   [length]="listings.length" [pageSize]="15">
-    </mat-paginator>
+    <ng-template [ngIf]="listings.length > 0">
+      <mat-paginator class="property-paginator"
+                     [length]="listings.length" [pageSize]="15">
+      </mat-paginator>
+    </ng-template>
   </div>
 
-  <div class="property-container" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+  <div class="property-container" fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="10px" fxLayoutGap.xs="0">
     <mat-card class="property-card" appMaterialElevation defaultElevation="3" raisedElevation="24"
               [fxFlex]="rowWidth"
               (window:resize)="onResize($event)"
@@ -68,31 +70,37 @@
 
       <a class="a-link-card" [routerLink]="[listing.listingId]"></a>
 
+      <a class="favorite-button" (click)="onFavoriteClick(listing)">
+        <mat-icon style="font-size: 21px !important" color="warn">favorite_border</mat-icon>
+      </a>
+
       <mat-card-header>
-        <mat-card-title>{{listing.title}}</mat-card-title>
-        <mat-card-subtitle>{{listing.city}}</mat-card-subtitle>
+        <mat-card-title><h5>{{listing.title}}</h5>
+        </mat-card-title>
+        <mat-card-subtitle style="padding-top: 6px !important">{{listing.street + ', ' + listing.city + ', ' + listing.state}}</mat-card-subtitle>
       </mat-card-header>
 
-      <img class="property-card-image"
+      <img class="property-card-image" mat-card-image
            [src]="listing.imageUrls[0]"
            alt="Image not found">
 
       <mat-card-content>
+        <h6>{{listing.listingType + ' for ' + (listing.forSale ? 'sale' : 'rent')}}</h6>
+        <p><i>{{'$' + numberWithCommas(listing.price) + ' | ' + listing.numBedrooms + ' beds' + ' | ' + listing.numBathrooms + ' baths'}}</i></p>
+        <p class="property-access-title">{{getPropertyAccessibility(listing)}}</p>
         <p>{{listing.description}}</p>
       </mat-card-content>
-
-      <mat-card-actions>
-        <div fxFlex></div>
-        <a mat-button (click)="onFavoriteClick()">
-          <mat-icon>favorite_border</mat-icon>
-        </a>
-      </mat-card-actions>
-
     </mat-card>
   </div>
 
-  <mat-paginator class="property-paginator"
-    [length]="listings.length" [pageSize]="15">
-  </mat-paginator>
+  <div>
+    <mat-spinner *ngIf="!isLoaded"></mat-spinner>
+  </div>
+
+  <ng-template [ngIf]="listings.length > 0">
+    <mat-paginator class="property-paginator"
+                   [length]="listings.length" [pageSize]="15">
+    </mat-paginator>
+  </ng-template>
 
 </div>
