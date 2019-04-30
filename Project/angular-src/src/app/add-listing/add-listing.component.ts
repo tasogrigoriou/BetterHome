@@ -82,11 +82,11 @@ export class AddListingComponent implements OnInit {
     let promises = [];
     if (this.files instanceof FileList) {
       for (let i: number = 0; i < this.files.length; i++) {
-        promises.push(this.uploadService.uploadImage(this.files[i], listingId));
+        promises.push(this.uploadService.uploadImage(this.files[i], listingId).toPromise());
       }
     }
     else {
-      promises.push(this.uploadService.uploadImage(this.files, listingId));
+      promises.push(this.uploadService.uploadImage(this.files, listingId).toPromise());
     }
 
     // Waits for all promises to be returned (all image uploading calls finish)

@@ -15,17 +15,17 @@ export class UploadComponent {
   uploadMultipleImages(files: FileList | File): void {
     if (files instanceof FileList) {
       for (let i: number = 0; i < files.length; i++) {
-        this.uploadService.uploadImage(files[i], this.listingId).then(s => {
+        this.uploadService.uploadImage(files[i], this.listingId).subscribe(s => {
           console.log(s);
-        }).catch(err => {
+        },err => {
           console.log(err);
         });
       }
     }
     else {
-      this.uploadService.uploadImage(files, this.listingId).then(s => {
+      this.uploadService.uploadImage(files, this.listingId).subscribe(s => {
         console.log(s);
-      }).catch(err => {
+      }, err => {
         console.log(err);
       });
     }
