@@ -1,5 +1,10 @@
-const multer = require('multer');
+const Multer = require('multer');
 
-var upload = multer({dest: 'images/'});
+const multer = Multer({
+    storage: Multer.memoryStorage(),
+    limits: {
+        fileSize: 5 * 1024 * 1024 // no larger than 5mb, you can change as needed.
+    }
+});
 
-module.exports = upload;
+module.exports = multer;

@@ -12,5 +12,7 @@
   "DB_PASS": "better-home-db-pw",
   "DB_INSTANCE_NAME": "better-home-db",
 
+  "CLOUD_BUCKET": "better-home-234220",
+
   "NODE_ENV": "local"
 }

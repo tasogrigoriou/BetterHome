@@ -203,11 +203,11 @@ var AddListingComponent = /** @class */ (function () {
         var promises = [];
         if (this.files instanceof FileList) {
             for (var i = 0; i < this.files.length; i++) {
-                promises.push(this.uploadService.uploadImage(this.files[i], listingId));
+                promises.push(this.uploadService.uploadImage(this.files[i], listingId).toPromise());
             }
         }
         else {
-            promises.push(this.uploadService.uploadImage(this.files, listingId));
+            promises.push(this.uploadService.uploadImage(this.files, listingId).toPromise());
         }
         // Waits for all promises to be returned (all image uploading calls finish)
         Promise.all(promises).then(function (s) {
@@ -922,17 +922,17 @@ var UploadComponent = /** @class */ (function () {
     UploadComponent.prototype.uploadMultipleImages = function (files) {
         if (files instanceof FileList) {
             for (var i = 0; i < files.length; i++) {
-                this.uploadService.uploadImage(files[i], this.listingId).then(function (s) {
+                this.uploadService.uploadImage(files[i], this.listingId).subscribe(function (s) {
                     console.log(s);
-                }).catch(function (err) {
+                }, function (err) {
                     console.log(err);
                 });
             }
         }
         else {
-            this.uploadService.uploadImage(files, this.listingId).then(function (s) {
+            this.uploadService.uploadImage(files, this.listingId).subscribe(function (s) {
                 console.log(s);
-            }).catch(function (err) {
+            }, function (err) {
                 console.log(err);
             });
         }
@@ -1657,39 +1657,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UploadService", function() { return UploadService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+
+
+
 
 
 var apiUrl = '/api/upload';
 var UploadService = /** @class */ (function () {
-    function UploadService() {
+    function UploadService(http) {
+        this.http = http;
     }
     UploadService.prototype.uploadImage = function (file, listingId) {
         if (listingId === void 0) { listingId = 0; }
-        var fd = new FormData();
-        var xhr = new XMLHttpRequest();
-        fd.append('file', file, file.name);
-        return new Promise(function (resolve, reject) {
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4) {
-                    if (xhr.status === 200) {
-                        console.log('image uploaded');
-                        resolve(xhr.response);
-                    }
-                    else {
-                        console.log('failed to upload image');
-                        reject(xhr.response);
-                    }
-                }
-            };
-            xhr.open('POST', apiUrl);
-            xhr.setRequestHeader('listingId', String(listingId));
-            xhr.send(fd);
-        });
+        var formData = new FormData();
+        formData.append('file', file, file.name);
+        return this.http.post(apiUrl, formData, {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]({
+                'listingId': String(listingId)
+            })
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(this.handleError));
+    };
+    UploadService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["throwError"])('Something bad happened; please try again later.');
     };
     UploadService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
     ], UploadService);
     return UploadService;
 }());
