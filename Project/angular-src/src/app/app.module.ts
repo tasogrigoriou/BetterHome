@@ -57,6 +57,7 @@ import { AdvancedSearchComponent } from './advanced-search/advanced-search.compo
 import {DragScrollModule} from "ngx-drag-scroll/lib";
 import {DeleteDialog} from "./account/delete.dialog";
 import { UpdateLoginComponent } from './update-login/update-login.component';
+import { UpdatePropertyComponent } from './update-property/update-property.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { UpdateLoginComponent } from './update-login/update-login.component';
     AddListingComponent,
     AdvancedSearchComponent,
     UpdateLoginComponent,
+    UpdatePropertyComponent,
   ],
   entryComponents: [
     RegisterDialog,

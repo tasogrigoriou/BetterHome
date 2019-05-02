@@ -21,6 +21,19 @@ export class ListingsService {
     );
   }
 
+
+  getSingleListing(listingId: number): Observable<any> {
+    return this.http.get(apiUrl + `/${listingId}`, httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  updateListing(listing: Listing): Observable<any> {
+    return this.http.put(apiUrl + `/${listing.listingId}`, listing, httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+
   getUserListings(userId: number): Observable<any> {
     return this.http.get(apiUrl + '/user/listings', {
       headers: new HttpHeaders({

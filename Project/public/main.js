@@ -57,7 +57,7 @@ module.exports = "/*:host>.container {*/\n/*  max-width: 1264px;*/\n/*  width: 1
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Account</title>\n\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n</head>\n<body>\n<br>\n\n  <div class=\"container\">\n    <div>\n      <h3 class=\"card-header-title\">Welcome {{user.username}}!</h3>\n    </div>\n\n    <mat-tab-group mat-stretch-tabs>\n\n      <mat-tab label=\"Profile\">\n        <br>\n        <div class=\"card-body\">\n\n          <mat-list role=\"listitem\">\n            <mat-list-item role=\"listitem\">{{user.username}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.firstName + ' ' + user.lastName}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.emailAddress}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.phoneNumber}}</mat-list-item>\n          </mat-list>\n\n          <button mat-raised-button type=\"edit\" class=\"btn btn-danger pull-right\" (click)=\"onEditAccountClick()\">Edit</button>\n\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"My Listings\">\n        <ng-template [ngIf]=\"userListings[index] && userListings.length > 0\">\n          <div class=\"property-container\">\n            <mat-card class=\"property-card\">\n\n              <a class=\"delete-button\" (click)=\"onDeleteListingClick(userListings[index])\">\n                <mat-icon style=\"font-size: 33px !important\" color=\"warn\">delete_forever</mat-icon>\n              </a>\n\n              <mat-card-header>\n                <mat-card-title><h5>{{userListings[index].title}}</h5>\n                </mat-card-title>\n                <mat-card-subtitle style=\"padding-top: 6px !important\">\n                  {{userListings[index].street + ', ' + userListings[index].city + ', ' + userListings[index].state}}\n                </mat-card-subtitle>\n              </mat-card-header>\n\n              <ng-template [ngIf]=\"userListings[index] && userListings[index].imageUrls.length > 0\">\n                <drag-scroll #drag_scroll>\n                  <div class=\"img-wrap\"\n                       *ngFor=\"let imageUrl of userListings[index].imageUrls\">\n                    <img class=\"img-container\"\n                         drag-scroll-item\n                         [src]=\"imageUrl\"\n                         alt=\"\" />\n\n                    <a class=\"img-upload\" (click)=\"openInput()\">\n                      <mat-icon style=\"font-size: 30px !important\" color=\"primary\">cloud_upload</mat-icon>\n                      <input id=\"fileInput\"\n                             hidden\n                             type=\"file\"\n                             accept=\".jpg, .jpeg, .png, .tif\"\n                             (change)=\"onUploadImageClick($event.target.files)\"\n                             multiple>\n                    </a>\n                    <a class=\"img-delete\" (click)=\"onDeleteImageClick(imageUrl)\">\n                      <mat-icon style=\"font-size: 30px !important\" color=\"warn\">delete_forever</mat-icon>\n                    </a>\n\n                  </div>\n                </drag-scroll>\n              </ng-template>\n\n              <mat-card-content>\n                <h6>{{userListings[index].listingType + ' for ' + (userListings[index].forSale ? 'sale' : 'rent')}}</h6>\n                <p><i>{{'$' + numberWithCommas(userListings[index].price) + ' | ' + userListings[index].numBedrooms + ' beds' + ' | ' + userListings[index].numBathrooms + ' baths'}}</i></p>\n                <p class=\"property-access-title\">{{getPropertyAccessibility(userListings[index])}}</p>\n                <p>{{userListings[index].description}}</p>\n              </mat-card-content>\n            </mat-card>\n          </div>\n        </ng-template>\n\n        <div class=\"w3-center\">\n          <div class=\"w3-section\">\n            <button mat-button (click)=\"clickLeft(index)\">❮ Prev</button>\n            <button mat-button (click)=\"clickRight(index)\">Next ❯</button>\n            <button mat-raised-button type=\"edit\" class=\"btn btn-danger pull-right\">Edit</button>\n          </div>\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"Favorite\">\n        Favorite List\n        <br><br>\n      </mat-tab>\n\n    </mat-tab-group>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n  </div>\n</body>\n</html>\n"
+module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Account</title>\n\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n</head>\n<body>\n<br>\n\n  <div class=\"container\">\n    <div>\n      <h3 class=\"card-header-title\">Welcome {{user.username}}!</h3>\n    </div>\n\n    <mat-tab-group mat-stretch-tabs>\n\n      <mat-tab label=\"Profile\">\n        <br>\n        <div class=\"card-body\">\n\n          <mat-list role=\"listitem\">\n            <mat-list-item role=\"listitem\">{{user.username}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.firstName + ' ' + user.lastName}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.emailAddress}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.phoneNumber}}</mat-list-item>\n          </mat-list>\n\n          <button mat-raised-button type=\"edit\" class=\"btn btn-danger pull-right\" (click)=\"onEditAccountClick()\">Edit</button>\n\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"My Listings\">\n        <ng-template [ngIf]=\"userListings[index] && userListings.length > 0\">\n          <div class=\"property-container\">\n            <mat-card class=\"property-card\">\n\n              <a class=\"delete-button\" (click)=\"onDeleteListingClick(userListings[index])\">\n                <mat-icon style=\"font-size: 33px !important\" color=\"warn\">delete_forever</mat-icon>\n              </a>\n\n              <mat-card-header>\n                <mat-card-title><h5>{{userListings[index].title}}</h5>\n                </mat-card-title>\n                <mat-card-subtitle style=\"padding-top: 6px !important\">\n                  {{userListings[index].street + ', ' + userListings[index].city + ', ' + userListings[index].state}}\n                </mat-card-subtitle>\n              </mat-card-header>\n\n              <ng-template [ngIf]=\"userListings[index] && userListings[index].imageUrls.length > 0\">\n                <drag-scroll #drag_scroll>\n                  <div class=\"img-wrap\"\n                       *ngFor=\"let imageUrl of userListings[index].imageUrls\">\n                    <img class=\"img-container\"\n                         drag-scroll-item\n                         [src]=\"imageUrl\"\n                         alt=\"\" />\n\n                    <a class=\"img-upload\" (click)=\"openInput()\">\n                      <mat-icon style=\"font-size: 30px !important\" color=\"primary\">cloud_upload</mat-icon>\n                      <input id=\"fileInput\"\n                             hidden\n                             type=\"file\"\n                             accept=\".jpg, .jpeg, .png, .tif\"\n                             (change)=\"onUploadImageClick($event.target.files)\"\n                             multiple>\n                    </a>\n                    <a class=\"img-delete\" (click)=\"onDeleteImageClick(imageUrl)\">\n                      <mat-icon style=\"font-size: 30px !important\" color=\"warn\">delete_forever</mat-icon>\n                    </a>\n\n                  </div>\n                </drag-scroll>\n              </ng-template>\n\n              <mat-card-content>\n                <h6>{{userListings[index].listingType + ' for ' + (userListings[index].forSale ? 'sale' : 'rent')}}</h6>\n                <p><i>{{'$' + numberWithCommas(userListings[index].price) + ' | ' + userListings[index].numBedrooms + ' beds' + ' | ' + userListings[index].numBathrooms + ' baths'}}</i></p>\n                <p class=\"property-access-title\">{{getPropertyAccessibility(userListings[index])}}</p>\n                <p>{{userListings[index].description}}</p>\n              </mat-card-content>\n            </mat-card>\n          </div>\n        </ng-template>\n\n        <div class=\"w3-center\">\n          <div class=\"w3-section\">\n            <button mat-button (click)=\"clickLeft(index)\">❮ Prev</button>\n            <button mat-button (click)=\"clickRight(index)\">Next ❯</button>\n            <button mat-raised-button type=\"edit\" class=\"btn btn-danger pull-right\" (click)=\"onEditListingClick()\">Edit</button>\n          </div>\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"Favorite\">\n        Favorite List\n        <br><br>\n      </mat-tab>\n\n    </mat-tab-group>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n  </div>\n</body>\n</html>\n"
 
 /***/ }),
 
@@ -159,6 +159,10 @@ var AccountComponent = /** @class */ (function () {
     };
     AccountComponent.prototype.onEditAccountClick = function () {
         this.router.navigate(['/update-login']);
+    };
+    AccountComponent.prototype.onEditListingClick = function () {
+        var listing = this.userListings[this.index];
+        this.router.navigate(['/update-property', listing.listingId]);
     };
     AccountComponent.prototype.deleteListing = function (listing) {
         var _this = this;
@@ -617,6 +621,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _add_listing_add_listing_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./add-listing/add-listing.component */ "./src/app/add-listing/add-listing.component.ts");
 /* harmony import */ var _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./advanced-search/advanced-search.component */ "./src/app/advanced-search/advanced-search.component.ts");
 /* harmony import */ var _update_login_update_login_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./update-login/update-login.component */ "./src/app/update-login/update-login.component.ts");
+/* harmony import */ var _update_property_update_property_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./update-property/update-property.component */ "./src/app/update-property/update-property.component.ts");
+
 
 
 
@@ -680,6 +686,10 @@ var routes = [
     {
         path: 'add-listing',
         component: _add_listing_add_listing_component__WEBPACK_IMPORTED_MODULE_10__["AddListingComponent"]
+    },
+    {
+        path: 'update-property/:listingId',
+        component: _update_property_update_property_component__WEBPACK_IMPORTED_MODULE_13__["UpdatePropertyComponent"]
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -803,6 +813,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_drag_scroll_lib__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ngx-drag-scroll/lib */ "./node_modules/ngx-drag-scroll/lib/index.js");
 /* harmony import */ var _account_delete_dialog__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./account/delete.dialog */ "./src/app/account/delete.dialog.ts");
 /* harmony import */ var _update_login_update_login_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./update-login/update-login.component */ "./src/app/update-login/update-login.component.ts");
+/* harmony import */ var _update_property_update_property_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./update-property/update-property.component */ "./src/app/update-property/update-property.component.ts");
+
 
 
 
@@ -865,6 +877,7 @@ var AppModule = /** @class */ (function () {
                 _add_listing_add_listing_component__WEBPACK_IMPORTED_MODULE_15__["AddListingComponent"],
                 _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_34__["AdvancedSearchComponent"],
                 _update_login_update_login_component__WEBPACK_IMPORTED_MODULE_37__["UpdateLoginComponent"],
+                _update_property_update_property_component__WEBPACK_IMPORTED_MODULE_38__["UpdatePropertyComponent"],
             ],
             entryComponents: [
                 _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__["RegisterDialog"],
@@ -1491,6 +1504,12 @@ var ListingsService = /** @class */ (function () {
     /** CRUD function for create **/
     ListingsService.prototype.createListing = function (listing) {
         return this.http.post(apiUrl, listing, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ListingsService.prototype.getSingleListing = function (listingId) {
+        return this.http.get(apiUrl + ("/" + listingId), httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ListingsService.prototype.updateListing = function (listing) {
+        return this.http.put(apiUrl + ("/" + listing.listingId), listing, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
     };
     ListingsService.prototype.getUserListings = function (userId) {
         return this.http.get(apiUrl + '/user/listings', {
@@ -2701,6 +2720,173 @@ var UpdateLoginComponent = /** @class */ (function () {
             _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatDialog"]])
     ], UpdateLoginComponent);
     return UpdateLoginComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/update-property/update-property.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/update-property/update-property.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".example-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container > * {\n  margin: 0 auto;\n  max-width: 800px;\n  width: 100%;\n  padding-bottom: 10px;\n}\n\nmat-form-field {\n  width: 100%;\n}\n\n.form-field-div {\n  display: flex;\n  justify-content: center;\n}\n\n.post-listing-header {\n  padding-top: 20px;\n  padding-bottom: 8px;\n}\n\n.cont-input {\n  padding-left: 10px;\n  padding-right: 10px;\n}\n\n.cont-form {\n  padding-left: 10px;\n  padding-right: 10px;\n}\n\n.create-listing-btn {\n  height: 50px;\n  max-width: 800px;\n  width: 100%;\n  margin: 10px auto;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdXBkYXRlLXByb3BlcnR5L3VwZGF0ZS1wcm9wZXJ0eS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtFQUNiLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxnQkFBZ0I7RUFDaEIsV0FBVztFQUNYLG9CQUFvQjtBQUN0Qjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGFBQWE7RUFDYix1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxZQUFZO0VBQ1osZ0JBQWdCO0VBQ2hCLFdBQVc7RUFDWCxpQkFBaUI7QUFDbkIiLCJmaWxlIjoic3JjL2FwcC91cGRhdGUtcHJvcGVydHkvdXBkYXRlLXByb3BlcnR5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhhbXBsZS1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xufVxuXG4uZXhhbXBsZS1jb250YWluZXIgPiAqIHtcbiAgbWFyZ2luOiAwIGF1dG87XG4gIG1heC13aWR0aDogODAwcHg7XG4gIHdpZHRoOiAxMDAlO1xuICBwYWRkaW5nLWJvdHRvbTogMTBweDtcbn1cblxubWF0LWZvcm0tZmllbGQge1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmZvcm0tZmllbGQtZGl2IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59XG5cbi5wb3N0LWxpc3RpbmctaGVhZGVyIHtcbiAgcGFkZGluZy10b3A6IDIwcHg7XG4gIHBhZGRpbmctYm90dG9tOiA4cHg7XG59XG5cbi5jb250LWlucHV0IHtcbiAgcGFkZGluZy1sZWZ0OiAxMHB4O1xuICBwYWRkaW5nLXJpZ2h0OiAxMHB4O1xufVxuXG4uY29udC1mb3JtIHtcbiAgcGFkZGluZy1sZWZ0OiAxMHB4O1xuICBwYWRkaW5nLXJpZ2h0OiAxMHB4O1xufVxuXG4uY3JlYXRlLWxpc3RpbmctYnRuIHtcbiAgaGVpZ2h0OiA1MHB4O1xuICBtYXgtd2lkdGg6IDgwMHB4O1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luOiAxMHB4IGF1dG87XG59XG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/update-property/update-property.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/update-property/update-property.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ng-template [ngIf]=\"loginUser && listing\">\n\n  <ng-template [ngIf]=\"isFullScreen\">\n    <div class=\"container example-container\" (window:resize)=\"onResize($event)\">\n      <h2 class=\"post-listing-header\">Update Listing</h2>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Title</mat-label>\n        <input matInput placeholder=\"Title\" [(ngModel)]=\"listing.title\" required>\n      </mat-form-field>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Listing Type</mat-label>\n          <mat-select placeholder=\"Listing Type\" [(value)]=\"listing.listingType\" required>\n            <mat-option value=\"House\">House</mat-option>\n            <mat-option value=\"Apartment\">Apartment</mat-option>\n            <mat-option value=\"Condo\">Condo</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Sale or Rent</mat-label>\n          <mat-select placeholder=\"Sale or Rent\" [(ngModel)]=\"listing.forSale\" required>\n            <mat-option [value]=1>Sale</mat-option>\n            <mat-option [value]=0>Rent</mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Bedrooms</mat-label>\n          <mat-select [(ngModel)]=\"listing.numBedrooms\" required>\n            <mat-option [value]=1>1 Bed</mat-option>\n            <mat-option [value]=2>2 Beds</mat-option>\n            <mat-option [value]=3>3 Beds</mat-option>\n            <mat-option [value]=4>4 Beds</mat-option>\n            <mat-option [value]=5>5 Beds</mat-option>\n            <mat-option [value]=6>6 Beds</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Bathrooms</mat-label>\n          <mat-select [(ngModel)]=\"listing.numBathrooms\" required>\n            <mat-option [value]=1>1 Bath</mat-option>\n            <mat-option [value]=2>2 Baths</mat-option>\n            <mat-option [value]=3>3 Baths</mat-option>\n            <mat-option [value]=4>4 Baths</mat-option>\n            <mat-option [value]=5>5 Baths</mat-option>\n            <mat-option [value]=6>6 Baths</mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Street</mat-label>\n          <input matInput placeholder=\"Street\" [(ngModel)]=\"listing.street\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>City</mat-label>\n          <input matInput placeholder=\"City\" [(ngModel)]=\"listing.city\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>State</mat-label>\n          <input matInput placeholder=\"State\" [(ngModel)]=\"listing.state\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Zip code</mat-label>\n          <input matInput placeholder=\"Zip code\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.zipCode\" required>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Price</mat-label>\n          <input matInput placeholder=\"Price\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.price\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Lot Size</mat-label>\n          <input matInput placeholder=\"Lot Size\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.lotSize\" required>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Hospital Access</mat-label>\n          <mat-select placeholder=\"Hospital Access\" [(ngModel)]=\"listing.hospitalAccess\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Bart Access</mat-label>\n          <mat-select placeholder=\"Bart Access\" [(ngModel)]=\"listing.BARTAccess\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Wheelchair Access</mat-label>\n          <mat-select placeholder=\"Wheelchair Access\" [(ngModel)]=\"listing.wheelchairAccess\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Laundry Access</mat-label>\n          <mat-select placeholder=\"Laundry Access\" [(ngModel)]=\"listing.laundry\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Description</mat-label>\n        <textarea matInput placeholder=\"Description\" [(ngModel)]=\"listing.description\" required></textarea>\n      </mat-form-field>\n\n      <div>\n        <button mat-raised-button color=\"primary\" (click)=\"onUpdateClick()\">Update Listing</button>\n      </div>\n\n      <div>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n  </ng-template>\n\n  <ng-template [ngIf]=\"!isFullScreen\">\n    <div class=\"container example-container\" (window:resize)=\"onResize($event)\">\n      <h2 class=\"post-listing-header\">Update Listing</h2>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Title</mat-label>\n        <input matInput placeholder=\"Title\" [(ngModel)]=\"listing.title\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Listing Type</mat-label>\n        <mat-select placeholder=\"Listing Type\" [(value)]=\"listing.listingType\" required>\n          <mat-option value=\"House\">House</mat-option>\n          <mat-option value=\"Apartment\">Apartment</mat-option>\n          <mat-option value=\"Condo\">Condo</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Sale or Rent</mat-label>\n        <mat-select placeholder=\"Sale or Rent\" [(ngModel)]=\"listing.forSale\" required>\n          <mat-option [value]=1>Sale</mat-option>\n          <mat-option [value]=0>Rent</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-form\">\n        <mat-label>Bedrooms</mat-label>\n        <mat-select [(ngModel)]=\"listing.numBedrooms\" required>\n          <mat-option [value]=1>1 Bed</mat-option>\n          <mat-option [value]=2>2 Beds</mat-option>\n          <mat-option [value]=3>3 Beds</mat-option>\n          <mat-option [value]=4>4 Beds</mat-option>\n          <mat-option [value]=5>5 Beds</mat-option>\n          <mat-option [value]=6>6 Beds</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-form\">\n        <mat-label>Bathrooms</mat-label>\n        <mat-select [(ngModel)]=\"listing.numBathrooms\" required>\n          <mat-option [value]=1>1 Bath</mat-option>\n          <mat-option [value]=2>2 Baths</mat-option>\n          <mat-option [value]=3>3 Baths</mat-option>\n          <mat-option [value]=4>4 Baths</mat-option>\n          <mat-option [value]=5>5 Baths</mat-option>\n          <mat-option [value]=6>6 Baths</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Street</mat-label>\n        <input matInput placeholder=\"Street\" [(ngModel)]=\"listing.street\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>City</mat-label>\n        <input matInput placeholder=\"City\" [(ngModel)]=\"listing.city\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>State</mat-label>\n        <input matInput placeholder=\"State\" [(ngModel)]=\"listing.state\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Zip code</mat-label>\n        <input matInput placeholder=\"Zip code\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.zipCode\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Price</mat-label>\n        <input matInput placeholder=\"Price\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.price\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Lot Size</mat-label>\n        <input matInput placeholder=\"Lot Size\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.lotSize\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Hospital Access</mat-label>\n        <mat-select placeholder=\"Hospital Access\" [(ngModel)]=\"listing.hospitalAccess\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Bart Access</mat-label>\n        <mat-select placeholder=\"Bart Access\" [(ngModel)]=\"listing.BARTAccess\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Wheelchair Access</mat-label>\n        <mat-select placeholder=\"Wheelchair Access\" [(ngModel)]=\"listing.wheelchairAccess\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Laundry Access</mat-label>\n        <mat-select placeholder=\"Laundry Access\" [(ngModel)]=\"listing.laundry\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Description</mat-label>\n        <textarea matInput placeholder=\"Description\" [(ngModel)]=\"listing.description\" required></textarea>\n      </mat-form-field>\n\n      <div>\n        <button mat-raised-button color=\"primary\" (click)=\"onUpdateClick()\">Update Listing</button>\n      </div>\n\n      <div>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n  </ng-template>\n\n</ng-template>\n"
+
+/***/ }),
+
+/***/ "./src/app/update-property/update-property.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/update-property/update-property.component.ts ***!
+  \**************************************************************/
+/*! exports provided: UpdatePropertyComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdatePropertyComponent", function() { return UpdatePropertyComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/services/listings.service */ "./src/app/core/services/listings.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../register/register.dialog */ "./src/app/register/register.dialog.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _core_services_upload_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../core/services/upload.service */ "./src/app/core/services/upload.service.ts");
+
+
+
+
+
+
+
+
+var UpdatePropertyComponent = /** @class */ (function () {
+    function UpdatePropertyComponent(router, route, listingsService, uploadService, dialog) {
+        this.router = router;
+        this.route = route;
+        this.listingsService = listingsService;
+        this.uploadService = uploadService;
+        this.dialog = dialog;
+        this.isLoaded = true;
+    }
+    UpdatePropertyComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (!localStorage.getItem('loginUser'))
+            return;
+        this.showSpinner();
+        this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
+        this.route.paramMap.subscribe(function (params) {
+            var listingId = Number(params.get('listingId'));
+            _this.listingsService.getSingleListing(listingId).subscribe(function (listing) {
+                console.log(listing);
+                _this.listing = listing;
+                _this.hideSpinner();
+            }, function (err) {
+                console.log(err);
+                _this.hideSpinner();
+            });
+        });
+        this.isFullScreen = (window.innerWidth >= 1000);
+    };
+    UpdatePropertyComponent.prototype.onResize = function (event) {
+        this.isFullScreen = (event.target.innerWidth >= 1000);
+    };
+    UpdatePropertyComponent.prototype.onUpdateClick = function () {
+        var _this = this;
+        if (!this.isDataProvided()) {
+            this.openDialog('Please enter valid input for all required fields', false);
+            return;
+        }
+        this.showSpinner();
+        this.replaceDoubleQuotes();
+        this.listingsService.updateListing(this.listing)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["first"])())
+            .subscribe(function (result) {
+            _this.hideSpinner();
+            _this.openDialog('Successfully update listing!', true);
+        }, function (err) {
+            console.log(err);
+            _this.hideSpinner();
+            _this.openDialog('Unable to update listing. Please try again', false);
+        });
+    };
+    UpdatePropertyComponent.prototype.replaceDoubleQuotes = function () {
+        this.listing.title = this.listing.title.replace(/"/g, "'");
+        this.listing.description = this.listing.description.replace(/"/g, "'");
+    };
+    UpdatePropertyComponent.prototype.showSpinner = function () {
+        this.isLoaded = false;
+    };
+    UpdatePropertyComponent.prototype.hideSpinner = function () {
+        this.isLoaded = true;
+    };
+    UpdatePropertyComponent.prototype.numberOnly = function (event) {
+        var charCode = (event.which) ? event.which : event.keyCode;
+        return !(charCode > 31 && (charCode < 48 || charCode > 57));
+    };
+    UpdatePropertyComponent.prototype.isDataProvided = function () {
+        return (!this.isEmptyStr(this.listing.title) &&
+            !this.isEmptyStr(this.listing.listingType) &&
+            !this.isEmptyNum(this.listing.price) &&
+            !this.isEmptyNum(this.listing.lotSize) &&
+            !this.isEmptyStr(this.listing.city) &&
+            !this.isEmptyNum(this.listing.zipCode) &&
+            !this.isEmptyStr(this.listing.street) &&
+            !this.isEmptyStr(this.listing.state) &&
+            !this.isEmptyBool(this.listing.forSale) &&
+            !this.isEmptyNum(this.listing.numBedrooms) &&
+            !this.isEmptyNum(this.listing.numBathrooms));
+    };
+    UpdatePropertyComponent.prototype.isEmptyStr = function (str) {
+        return (!str || 0 == str.length);
+    };
+    UpdatePropertyComponent.prototype.isEmptyNum = function (num) {
+        return (!num || 0 == num);
+    };
+    UpdatePropertyComponent.prototype.isEmptyBool = function (bool) {
+        return (!bool);
+    };
+    UpdatePropertyComponent.prototype.openDialog = function (message, subscribe) {
+        var _this = this;
+        var dialogRef = this.dialog.open(_register_register_dialog__WEBPACK_IMPORTED_MODULE_5__["RegisterDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        if (subscribe) {
+            dialogRef.afterClosed().subscribe(function (result) {
+                _this.router.navigate(['/account']);
+            });
+        }
+    };
+    UpdatePropertyComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-update-update',
+            template: __webpack_require__(/*! ./update-property.component.html */ "./src/app/update-property/update-property.component.html"),
+            styles: [__webpack_require__(/*! ./update-property.component.css */ "./src/app/update-property/update-property.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
+            _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__["ListingsService"],
+            _core_services_upload_service__WEBPACK_IMPORTED_MODULE_7__["UploadService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDialog"]])
+    ], UpdatePropertyComponent);
+    return UpdatePropertyComponent;
 }());
 
 

@@ -99,6 +99,11 @@ export class AccountComponent implements OnInit {
     this.router.navigate(['/update-login']);
   }
 
+  onEditListingClick() {
+    let listing = this.userListings[this.index];
+    this.router.navigate(['/update-property', listing.listingId]);
+  }
+
   deleteListing(listing: Listing) {
     this.listingsService.deleteListing(listing.listingId).subscribe(result => {
       this.userListings = this.userListings.filter(userListing => {
