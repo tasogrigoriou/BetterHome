@@ -30,7 +30,7 @@
             <mat-list-item role="listitem">{{user.phoneNumber}}</mat-list-item>
           </mat-list>
 
-          <button mat-raised-button type="edit" class="btn btn-danger pull-right">Edit</button>
+          <button mat-raised-button type="edit" class="btn btn-danger pull-right" (click)="onEditAccountClick()">Edit</button>
 
         </div>
       </mat-tab>
@@ -92,7 +92,7 @@
           <div class="w3-section">
             <button mat-button (click)="clickLeft(index)">❮ Prev</button>
             <button mat-button (click)="clickRight(index)">Next ❯</button>
-            <button mat-raised-button  type = "edit" class="btn btn-danger pull-right">Edit</button>
+            <button mat-raised-button type="edit" class="btn btn-danger pull-right">Edit</button>
           </div>
         </div>
       </mat-tab>

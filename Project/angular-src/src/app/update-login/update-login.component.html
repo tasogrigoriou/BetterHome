@@ -1,0 +1,56 @@
+<ng-template [ngIf]="loginUser">
+  <section class="hero is-info is-fullheight-with-navbar is-bold">
+    <div class="hero-body">
+      <div class="main-div">
+        <mat-card class="my-mat-card mat-elevation-z20">
+          <mat-card-title class="main-div">Update Account</mat-card-title>
+          <mat-card-content>
+
+            <!--FORM FIELDS HERE-->
+            <div fxLayout="column" fxLayoutAlign="center">
+              <mat-form-field class="cont-input">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="First name" [(ngModel)]="loginUser.firstName" name="firstName"><br>
+              </mat-form-field>
+              <mat-form-field class="cont-input">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Last name" [(ngModel)]="loginUser.lastName" name="lastName">
+              </mat-form-field>
+              <mat-form-field class="cont-input">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Username" [(ngModel)]="loginUser.username" name="username">
+              </mat-form-field>
+              <mat-form-field class="cont-input">
+                <mat-label>Old Password</mat-label>
+                <input matInput type="password" placeholder="Old Password" [(ngModel)]="oldPassword" name="old-password" required>
+              </mat-form-field>
+              <mat-form-field class="cont-input">
+                <mat-label>New Password</mat-label>
+                <input matInput type="password" placeholder="New Password" [(ngModel)]="newPassword" name="new-password">
+              </mat-form-field>
+              <mat-form-field class="cont-input">
+                <mat-label>Email Address</mat-label>
+                <input matInput placeholder="Email address" [(ngModel)]="loginUser.emailAddress" name="emailAddress">
+              </mat-form-field>
+              <mat-form-field class="cont-input">
+                <mat-label>Phone Number</mat-label>
+                <input matInput placeholder="Phone number" [(ngModel)]="loginUser.phoneNumber" name="phoneNumber">
+              </mat-form-field>
+            </div>
+
+          </mat-card-content>
+          <mat-card-actions>
+
+            <!-- REGISTER BUTTON -->
+            <div class="my-button" fxLayout="column" fxLayoutAlign="center">
+              <button mat-raised-button (click)="onSubmit()" color="primary">Update</button>
+            </div>
+
+            <mat-spinner *ngIf="!isLoaded"></mat-spinner>
+
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+</ng-template>

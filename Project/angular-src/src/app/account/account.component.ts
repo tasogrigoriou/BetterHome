@@ -95,6 +95,10 @@ export class AccountComponent implements OnInit {
     this.openDeleteImageDialog(imageUrl, 'Are you sure you want to delete this image?');
   }
 
+  onEditAccountClick() {
+    this.router.navigate(['/update-login']);
+  }
+
   deleteListing(listing: Listing) {
     this.listingsService.deleteListing(listing.listingId).subscribe(result => {
       this.userListings = this.userListings.filter(userListing => {

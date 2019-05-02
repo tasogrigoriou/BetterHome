@@ -56,6 +56,7 @@ import {CovalentFileModule} from "@covalent/core";
 import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
 import {DragScrollModule} from "ngx-drag-scroll/lib";
 import {DeleteDialog} from "./account/delete.dialog";
+import { UpdateLoginComponent } from './update-login/update-login.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import {DeleteDialog} from "./account/delete.dialog";
     AccountComponent,
     AddListingComponent,
     AdvancedSearchComponent,
+    UpdateLoginComponent,
   ],
   entryComponents: [
     RegisterDialog,

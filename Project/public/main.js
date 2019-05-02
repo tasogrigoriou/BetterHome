@@ -57,7 +57,7 @@ module.exports = "/*:host>.container {*/\n/*  max-width: 1264px;*/\n/*  width: 1
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Account</title>\n\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n</head>\n<body>\n<br>\n\n  <div class=\"container\">\n    <div>\n      <h3 class=\"card-header-title\">Welcome {{user.username}}!</h3>\n    </div>\n\n    <mat-tab-group mat-stretch-tabs>\n\n      <mat-tab label=\"Profile\">\n        <br>\n        <div class=\"card-body\">\n\n          <mat-list role=\"listitem\">\n            <mat-list-item role=\"listitem\">{{user.username}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.firstName + ' ' + user.lastName}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.emailAddress}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.phoneNumber}}</mat-list-item>\n          </mat-list>\n\n          <button mat-raised-button type=\"edit\" class=\"btn btn-danger pull-right\">Edit</button>\n\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"My Listings\">\n        <ng-template [ngIf]=\"userListings[index] && userListings.length > 0\">\n          <div class=\"property-container\">\n            <mat-card class=\"property-card\">\n\n              <a class=\"delete-button\" (click)=\"onDeleteListingClick(userListings[index])\">\n                <mat-icon style=\"font-size: 33px !important\" color=\"warn\">delete_forever</mat-icon>\n              </a>\n\n              <mat-card-header>\n                <mat-card-title><h5>{{userListings[index].title}}</h5>\n                </mat-card-title>\n                <mat-card-subtitle style=\"padding-top: 6px !important\">\n                  {{userListings[index].street + ', ' + userListings[index].city + ', ' + userListings[index].state}}\n                </mat-card-subtitle>\n              </mat-card-header>\n\n              <ng-template [ngIf]=\"userListings[index] && userListings[index].imageUrls.length > 0\">\n                <drag-scroll #drag_scroll>\n                  <div class=\"img-wrap\"\n                       *ngFor=\"let imageUrl of userListings[index].imageUrls\">\n                    <img class=\"img-container\"\n                         drag-scroll-item\n                         [src]=\"imageUrl\"\n                         alt=\"\" />\n\n                    <a class=\"img-upload\" (click)=\"openInput()\">\n                      <mat-icon style=\"font-size: 30px !important\" color=\"primary\">cloud_upload</mat-icon>\n                      <input id=\"fileInput\"\n                             hidden\n                             type=\"file\"\n                             accept=\".jpg, .jpeg, .png, .tif\"\n                             (change)=\"onUploadImageClick($event.target.files)\"\n                             multiple>\n                    </a>\n                    <a class=\"img-delete\" (click)=\"onDeleteImageClick(imageUrl)\">\n                      <mat-icon style=\"font-size: 30px !important\" color=\"warn\">delete_forever</mat-icon>\n                    </a>\n\n                  </div>\n                </drag-scroll>\n              </ng-template>\n\n              <mat-card-content>\n                <h6>{{userListings[index].listingType + ' for ' + (userListings[index].forSale ? 'sale' : 'rent')}}</h6>\n                <p><i>{{'$' + numberWithCommas(userListings[index].price) + ' | ' + userListings[index].numBedrooms + ' beds' + ' | ' + userListings[index].numBathrooms + ' baths'}}</i></p>\n                <p class=\"property-access-title\">{{getPropertyAccessibility(userListings[index])}}</p>\n                <p>{{userListings[index].description}}</p>\n              </mat-card-content>\n            </mat-card>\n          </div>\n        </ng-template>\n\n        <div class=\"w3-center\">\n          <div class=\"w3-section\">\n            <button mat-button (click)=\"clickLeft(index)\">❮ Prev</button>\n            <button mat-button (click)=\"clickRight(index)\">Next ❯</button>\n            <button mat-raised-button  type = \"edit\" class=\"btn btn-danger pull-right\">Edit</button>\n          </div>\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"Favorite\">\n        Favorite List\n        <br><br>\n      </mat-tab>\n\n    </mat-tab-group>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n  </div>\n</body>\n</html>\n"
+module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Account</title>\n\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n</head>\n<body>\n<br>\n\n  <div class=\"container\">\n    <div>\n      <h3 class=\"card-header-title\">Welcome {{user.username}}!</h3>\n    </div>\n\n    <mat-tab-group mat-stretch-tabs>\n\n      <mat-tab label=\"Profile\">\n        <br>\n        <div class=\"card-body\">\n\n          <mat-list role=\"listitem\">\n            <mat-list-item role=\"listitem\">{{user.username}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.firstName + ' ' + user.lastName}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.emailAddress}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.phoneNumber}}</mat-list-item>\n          </mat-list>\n\n          <button mat-raised-button type=\"edit\" class=\"btn btn-danger pull-right\" (click)=\"onEditAccountClick()\">Edit</button>\n\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"My Listings\">\n        <ng-template [ngIf]=\"userListings[index] && userListings.length > 0\">\n          <div class=\"property-container\">\n            <mat-card class=\"property-card\">\n\n              <a class=\"delete-button\" (click)=\"onDeleteListingClick(userListings[index])\">\n                <mat-icon style=\"font-size: 33px !important\" color=\"warn\">delete_forever</mat-icon>\n              </a>\n\n              <mat-card-header>\n                <mat-card-title><h5>{{userListings[index].title}}</h5>\n                </mat-card-title>\n                <mat-card-subtitle style=\"padding-top: 6px !important\">\n                  {{userListings[index].street + ', ' + userListings[index].city + ', ' + userListings[index].state}}\n                </mat-card-subtitle>\n              </mat-card-header>\n\n              <ng-template [ngIf]=\"userListings[index] && userListings[index].imageUrls.length > 0\">\n                <drag-scroll #drag_scroll>\n                  <div class=\"img-wrap\"\n                       *ngFor=\"let imageUrl of userListings[index].imageUrls\">\n                    <img class=\"img-container\"\n                         drag-scroll-item\n                         [src]=\"imageUrl\"\n                         alt=\"\" />\n\n                    <a class=\"img-upload\" (click)=\"openInput()\">\n                      <mat-icon style=\"font-size: 30px !important\" color=\"primary\">cloud_upload</mat-icon>\n                      <input id=\"fileInput\"\n                             hidden\n                             type=\"file\"\n                             accept=\".jpg, .jpeg, .png, .tif\"\n                             (change)=\"onUploadImageClick($event.target.files)\"\n                             multiple>\n                    </a>\n                    <a class=\"img-delete\" (click)=\"onDeleteImageClick(imageUrl)\">\n                      <mat-icon style=\"font-size: 30px !important\" color=\"warn\">delete_forever</mat-icon>\n                    </a>\n\n                  </div>\n                </drag-scroll>\n              </ng-template>\n\n              <mat-card-content>\n                <h6>{{userListings[index].listingType + ' for ' + (userListings[index].forSale ? 'sale' : 'rent')}}</h6>\n                <p><i>{{'$' + numberWithCommas(userListings[index].price) + ' | ' + userListings[index].numBedrooms + ' beds' + ' | ' + userListings[index].numBathrooms + ' baths'}}</i></p>\n                <p class=\"property-access-title\">{{getPropertyAccessibility(userListings[index])}}</p>\n                <p>{{userListings[index].description}}</p>\n              </mat-card-content>\n            </mat-card>\n          </div>\n        </ng-template>\n\n        <div class=\"w3-center\">\n          <div class=\"w3-section\">\n            <button mat-button (click)=\"clickLeft(index)\">❮ Prev</button>\n            <button mat-button (click)=\"clickRight(index)\">Next ❯</button>\n            <button mat-raised-button type=\"edit\" class=\"btn btn-danger pull-right\">Edit</button>\n          </div>\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"Favorite\">\n        Favorite List\n        <br><br>\n      </mat-tab>\n\n    </mat-tab-group>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n  </div>\n</body>\n</html>\n"
 
 /***/ }),
 
@@ -156,6 +156,9 @@ var AccountComponent = /** @class */ (function () {
             return;
         }
         this.openDeleteImageDialog(imageUrl, 'Are you sure you want to delete this image?');
+    };
+    AccountComponent.prototype.onEditAccountClick = function () {
+        this.router.navigate(['/update-login']);
     };
     AccountComponent.prototype.deleteListing = function (listing) {
         var _this = this;
@@ -613,6 +616,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _account_account_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./account/account.component */ "./src/app/account/account.component.ts");
 /* harmony import */ var _add_listing_add_listing_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./add-listing/add-listing.component */ "./src/app/add-listing/add-listing.component.ts");
 /* harmony import */ var _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./advanced-search/advanced-search.component */ "./src/app/advanced-search/advanced-search.component.ts");
+/* harmony import */ var _update_login_update_login_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./update-login/update-login.component */ "./src/app/update-login/update-login.component.ts");
+
 
 
 
@@ -646,6 +651,10 @@ var routes = [
     {
         path: 'login',
         component: _login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"]
+    },
+    {
+        path: 'update-login',
+        component: _update_login_update_login_component__WEBPACK_IMPORTED_MODULE_12__["UpdateLoginComponent"]
     },
     {
         path: 'logout',
@@ -793,6 +802,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./advanced-search/advanced-search.component */ "./src/app/advanced-search/advanced-search.component.ts");
 /* harmony import */ var ngx_drag_scroll_lib__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ngx-drag-scroll/lib */ "./node_modules/ngx-drag-scroll/lib/index.js");
 /* harmony import */ var _account_delete_dialog__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./account/delete.dialog */ "./src/app/account/delete.dialog.ts");
+/* harmony import */ var _update_login_update_login_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./update-login/update-login.component */ "./src/app/update-login/update-login.component.ts");
+
 
 
 
@@ -853,6 +864,7 @@ var AppModule = /** @class */ (function () {
                 _account_account_component__WEBPACK_IMPORTED_MODULE_14__["AccountComponent"],
                 _add_listing_add_listing_component__WEBPACK_IMPORTED_MODULE_15__["AddListingComponent"],
                 _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_34__["AdvancedSearchComponent"],
+                _update_login_update_login_component__WEBPACK_IMPORTED_MODULE_37__["UpdateLoginComponent"],
             ],
             entryComponents: [
                 _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__["RegisterDialog"],
@@ -1616,6 +1628,10 @@ var LoginService = /** @class */ (function () {
     /*** Login User ***/
     LoginService.prototype.loginUser = function (userData) {
         return this.http.post(apiUrl, userData, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    };
+    /*** Update User ***/
+    LoginService.prototype.updateUser = function (user) {
+        return this.http.put(apiUrl, user, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
     };
     LoginService.prototype.emitLoginEvent = function (loginUser) {
         localStorage.setItem('loginUser', JSON.stringify(loginUser));
@@ -2538,6 +2554,153 @@ var SearchResultsComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_core_services_search_listings_service__WEBPACK_IMPORTED_MODULE_2__["SearchListingsService"]])
     ], SearchResultsComponent);
     return SearchResultsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/update-login/update-login.component.css":
+/*!*********************************************************!*\
+  !*** ./src/app/update-login/update-login.component.css ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".main-div {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0 auto;\n  max-width: 350px;\n  width: 100%;\n}\n\n.my-mat-card {\n  max-width: 350px;\n  width: 100%;\n}\n\n.my-button {\n  margin-right: 80px;\n  margin-left: 80px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdXBkYXRlLWxvZ2luL3VwZGF0ZS1sb2dpbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtFQUNiLHVCQUF1QjtFQUN2QixtQkFBbUI7RUFDbkIsY0FBYztFQUNkLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsV0FBVztBQUNiOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL3VwZGF0ZS1sb2dpbi91cGRhdGUtbG9naW4uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWluLWRpdiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBtYXJnaW46IDAgYXV0bztcbiAgbWF4LXdpZHRoOiAzNTBweDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5teS1tYXQtY2FyZCB7XG4gIG1heC13aWR0aDogMzUwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4ubXktYnV0dG9uIHtcbiAgbWFyZ2luLXJpZ2h0OiA4MHB4O1xuICBtYXJnaW4tbGVmdDogODBweDtcbn1cbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/update-login/update-login.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/update-login/update-login.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ng-template [ngIf]=\"loginUser\">\n  <section class=\"hero is-info is-fullheight-with-navbar is-bold\">\n    <div class=\"hero-body\">\n      <div class=\"main-div\">\n        <mat-card class=\"my-mat-card mat-elevation-z20\">\n          <mat-card-title class=\"main-div\">Update Account</mat-card-title>\n          <mat-card-content>\n\n            <!--FORM FIELDS HERE-->\n            <div fxLayout=\"column\" fxLayoutAlign=\"center\">\n              <mat-form-field class=\"cont-input\">\n                <mat-label>First Name</mat-label>\n                <input matInput placeholder=\"First name\" [(ngModel)]=\"loginUser.firstName\" name=\"firstName\"><br>\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>Last Name</mat-label>\n                <input matInput placeholder=\"Last name\" [(ngModel)]=\"loginUser.lastName\" name=\"lastName\">\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>Username</mat-label>\n                <input matInput placeholder=\"Username\" [(ngModel)]=\"loginUser.username\" name=\"username\">\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>Old Password</mat-label>\n                <input matInput type=\"password\" placeholder=\"Old Password\" [(ngModel)]=\"oldPassword\" name=\"old-password\" required>\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>New Password</mat-label>\n                <input matInput type=\"password\" placeholder=\"New Password\" [(ngModel)]=\"newPassword\" name=\"new-password\">\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>Email Address</mat-label>\n                <input matInput placeholder=\"Email address\" [(ngModel)]=\"loginUser.emailAddress\" name=\"emailAddress\">\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>Phone Number</mat-label>\n                <input matInput placeholder=\"Phone number\" [(ngModel)]=\"loginUser.phoneNumber\" name=\"phoneNumber\">\n              </mat-form-field>\n            </div>\n\n          </mat-card-content>\n          <mat-card-actions>\n\n            <!-- REGISTER BUTTON -->\n            <div class=\"my-button\" fxLayout=\"column\" fxLayoutAlign=\"center\">\n              <button mat-raised-button (click)=\"onSubmit()\" color=\"primary\">Update</button>\n            </div>\n\n            <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n\n          </mat-card-actions>\n        </mat-card>\n      </div>\n    </div>\n  </section>\n</ng-template>\n"
+
+/***/ }),
+
+/***/ "./src/app/update-login/update-login.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/update-login/update-login.component.ts ***!
+  \********************************************************/
+/*! exports provided: UpdateLoginComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateLoginComponent", function() { return UpdateLoginComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _core_services_register_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/services/register.service */ "./src/app/core/services/register.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../register/register.dialog */ "./src/app/register/register.dialog.ts");
+/* harmony import */ var _core_services_login_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../core/services/login.service */ "./src/app/core/services/login.service.ts");
+
+
+
+
+
+
+
+
+var UpdateLoginComponent = /** @class */ (function () {
+    function UpdateLoginComponent(router, loginService, dialog) {
+        this.router = router;
+        this.loginService = loginService;
+        this.dialog = dialog;
+        this.user = {
+            username: "",
+            password: ""
+        };
+        this.isLoaded = true;
+    }
+    UpdateLoginComponent.prototype.ngOnInit = function () {
+        if (localStorage.getItem('loginUser')) {
+            this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
+            this.oldUsername = this.loginUser.username;
+        }
+        this.registerUser = new _core_services_register_service__WEBPACK_IMPORTED_MODULE_4__["RegisterUser"]();
+    };
+    UpdateLoginComponent.prototype.onSubmit = function () {
+        var _this = this;
+        if (this.isDataProvided()) {
+            this.isLoaded = false;
+            this.loginService.loginUser({
+                username: this.oldUsername,
+                password: this.oldPassword
+            })
+                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])())
+                .subscribe(function (result) {
+                _this.loginService.updateUser({
+                    userId: result.userId,
+                    firstName: _this.loginUser.firstName,
+                    lastName: _this.loginUser.lastName,
+                    username: _this.loginUser.username,
+                    password: !_this.isEmpty(_this.newPassword) ? _this.newPassword : '',
+                    emailAddress: _this.loginUser.emailAddress,
+                    phoneNumber: _this.loginUser.phoneNumber
+                })
+                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])())
+                    .subscribe(function (data) {
+                    _this.isLoaded = true;
+                    _this.loginService.emitLoginEvent(_this.loginUser);
+                    _this.openDialog('Update login info successful!', true);
+                }, function (error) {
+                    console.log(error);
+                    _this.isLoaded = true;
+                });
+            }, function (err) {
+                console.log(err);
+                _this.isLoaded = true;
+                _this.openDialog('Unable to verify credentials. Old password is incorrect. Please try again');
+            });
+        }
+        else {
+            this.openDialog('Please enter old password for validating credentials');
+        }
+    };
+    UpdateLoginComponent.prototype.isDataProvided = function () {
+        return (!this.isEmpty(this.loginUser.username) &&
+            !this.isEmpty(this.oldPassword) &&
+            !this.isEmpty(this.loginUser.firstName) &&
+            !this.isEmpty(this.loginUser.lastName) &&
+            !this.isEmpty(this.loginUser.emailAddress) &&
+            !this.isEmpty(this.loginUser.phoneNumber));
+    };
+    UpdateLoginComponent.prototype.isEmpty = function (str) {
+        return (!str || 0 === str.length);
+    };
+    UpdateLoginComponent.prototype.openDialog = function (message, subscribe) {
+        var _this = this;
+        if (subscribe === void 0) { subscribe = false; }
+        var dialogRef = this.dialog.open(_register_register_dialog__WEBPACK_IMPORTED_MODULE_6__["RegisterDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        if (subscribe) {
+            dialogRef.afterClosed().subscribe(function (result) {
+                _this.router.navigate(['/account']);
+            });
+        }
+    };
+    UpdateLoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-update-login',
+            template: __webpack_require__(/*! ./update-login.component.html */ "./src/app/update-login/update-login.component.html"),
+            styles: [__webpack_require__(/*! ./update-login.component.css */ "./src/app/update-login/update-login.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _core_services_login_service__WEBPACK_IMPORTED_MODULE_7__["LoginService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatDialog"]])
+    ], UpdateLoginComponent);
+    return UpdateLoginComponent;
 }());
 
 
