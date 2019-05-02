@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Account</title>
+  <meta charset="UTF-8">
+  <title>Account</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -11,51 +11,103 @@
 </head>
 <body>
 <br>
-<br>
-     <div class="container">
-       <div>
-         <h3 class="card-header-title">Welcome {{user.username}}!</h3>
-       </div>
-           <mat-tab-group mat-stretch-tabs>
-              <mat-tab label="Profile">
-                <br>
-                <div class="card-body">
 
-                  <mat-list role="listitem">
-                    <mat-list-item role="listitem">{{user.username}}</mat-list-item>
-                    <mat-list-item role="listitem">{{user.firstName + ' ' + user.lastName}}</mat-list-item>
-                    <mat-list-item role="listitem">{{user.emailAddress}}</mat-list-item>
-                    <mat-list-item role="listitem">{{user.phoneNumber}}</mat-list-item>
-                  </mat-list>
+  <div class="container">
+    <div>
+      <h3 class="card-header-title">Welcome {{user.username}}!</h3>
+    </div>
 
-                   <button mat-raised-button type="edit" class="btn btn-danger pull-right">Edit</button>
+    <mat-tab-group mat-stretch-tabs>
 
-               </div>
-             </mat-tab>
+      <mat-tab label="Profile">
+        <br>
+        <div class="card-body">
 
-             <mat-tab label="My Listing">
-                <br>
-                 <p><i class="fa fa-dollar fa-fw w3-margin-right w3-large "></i> <var id ="listingPrice"> Price </var></p>
-                 <p><i class="fa fa-bed fa-fw w3-margin-right w3-large "></i> <var id = "bedRoom"> Bedroom </var></p>
-                 <p><i class="fa fa-bath fa-fw w3-margin-right w3-large "></i> <var id = "bathRoom"> Bathroom </var></p>
-                 <p><i class="fa fa-map-marker fa-fw w3-margin-right w3-large "></i> <var id = "address"> Address </var></p>
-                 <p><i class="fa fa-phone fa-fw w3-margin-right w3-large "></i> <var id="listingPhoneNumber">(xxx)xxx-xxxx</var></p>
-                 <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large "></i> <var id="listingEmail"> sendhelp@mailboyz.gov</var></p>
+          <mat-list role="listitem">
+            <mat-list-item role="listitem">{{user.username}}</mat-list-item>
+            <mat-list-item role="listitem">{{user.firstName + ' ' + user.lastName}}</mat-list-item>
+            <mat-list-item role="listitem">{{user.emailAddress}}</mat-list-item>
+            <mat-list-item role="listitem">{{user.phoneNumber}}</mat-list-item>
+          </mat-list>
 
-               <div class="w3-center">
-                 <div class="w3-section">
-                   <button mat-button>❮ Prev</button>
-                   <button mat-button>Next ❯</button>
-                   <button mat-raised-button  type = "edit" class="btn btn-danger pull-right">Edit</button>
-                 </div>
-               </div>
+          <button mat-raised-button type="edit" class="btn btn-danger pull-right">Edit</button>
 
-             </mat-tab>
-             <mat-tab label="Favorite">
-               Favorite List
-               <br><br>
-             </mat-tab>
-           </mat-tab-group>
-         </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="My Listings">
+        <ng-template [ngIf]="userListings[index] && userListings.length > 0">
+          <div class="property-container">
+            <mat-card class="property-card">
+
+              <a class="delete-button" (click)="onDeleteListingClick(userListings[index])">
+                <mat-icon style="font-size: 33px !important" color="warn">delete_forever</mat-icon>
+              </a>
+
+              <mat-card-header>
+                <mat-card-title><h5>{{userListings[index].title}}</h5>
+                </mat-card-title>
+                <mat-card-subtitle style="padding-top: 6px !important">
+                  {{userListings[index].street + ', ' + userListings[index].city + ', ' + userListings[index].state}}
+                </mat-card-subtitle>
+              </mat-card-header>
+
+              <ng-template [ngIf]="userListings[index] && userListings[index].imageUrls.length > 0">
+                <drag-scroll #drag_scroll>
+                  <div class="img-wrap"
+                       *ngFor="let imageUrl of userListings[index].imageUrls">
+                    <img class="img-container"
+                         drag-scroll-item
+                         [src]="imageUrl"
+                         alt="" />
+
+                    <a class="img-upload" (click)="openInput()">
+                      <mat-icon style="font-size: 30px !important" color="primary">cloud_upload</mat-icon>
+                      <input id="fileInput"
+                             hidden
+                             type="file"
+                             accept=".jpg, .jpeg, .png, .tif"
+                             (change)="onUploadImageClick($event.target.files)"
+                             multiple>
+                    </a>
+                    <a class="img-delete" (click)="onDeleteImageClick(imageUrl)">
+                      <mat-icon style="font-size: 30px !important" color="warn">delete_forever</mat-icon>
+                    </a>
+
+                  </div>
+                </drag-scroll>
+              </ng-template>
+
+              <mat-card-content>
+                <h6>{{userListings[index].listingType + ' for ' + (userListings[index].forSale ? 'sale' : 'rent')}}</h6>
+                <p><i>{{'$' + numberWithCommas(userListings[index].price) + ' | ' + userListings[index].numBedrooms + ' beds' + ' | ' + userListings[index].numBathrooms + ' baths'}}</i></p>
+                <p class="property-access-title">{{getPropertyAccessibility(userListings[index])}}</p>
+                <p>{{userListings[index].description}}</p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </ng-template>
+
+        <div class="w3-center">
+          <div class="w3-section">
+            <button mat-button (click)="clickLeft(index)">❮ Prev</button>
+            <button mat-button (click)="clickRight(index)">Next ❯</button>
+            <button mat-raised-button  type = "edit" class="btn btn-danger pull-right">Edit</button>
+          </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Favorite">
+        Favorite List
+        <br><br>
+      </mat-tab>
+
+    </mat-tab-group>
+
+    <div>
+      <mat-spinner *ngIf="!isLoaded"></mat-spinner>
+    </div>
+
+  </div>
 </body>
 </html>

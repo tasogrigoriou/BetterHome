@@ -22,7 +22,6 @@ app.use(cookieParser());
 app.use(bodyParser.json({limit: '5MB'}));
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'images')));
 
 app.use('/about-us', express.static(path.join(__dirname, 'public')));
 app.use('/example', express.static(path.join(__dirname, 'public')));

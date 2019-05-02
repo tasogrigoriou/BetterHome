@@ -74,6 +74,55 @@
 
 /*}*/
 
+.card-header-title {
+  padding-top: -20px;
+}
+
+.property-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.property-card {
+  position: relative;
+  margin-top: 10px;
+  align-items: center;
+  width: 80%;
+}
+
+.img-container {
+  max-height: 500px;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.img-wrap {
+  display: inline-block;
+  position: relative;
+}
+
+.img-upload {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+}
+
+.img-delete {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+}
+
+.delete-button {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  height: 46px;
+  width: 30px;
+}
+
 ::ng-deep .mat-tab-labels {
    font-size: 20px;
    justify-content: center;

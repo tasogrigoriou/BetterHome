@@ -46,7 +46,7 @@ module.exports = webpackAsyncContext;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*:host>.container {*/\n/*  max-width: 1264px;*/\n/*  width: 100%;*/\n/*  margin: 0 auto;*/\n/*  display: flex;*/\n/*  justify-content: space-between;*/\n/*  background: none;*/\n/*  float: left;*/\n/*}*/\n/*:host>.mat-tab-group {*/\n/*  flex-direction: row;*/\n/*}*/\n/*:host>.mat-tab-header {*/\n/*  border-bottom: none;*/\n/*}*/\n/*:host>.mat-tab-header-pagination {*/\n/*  display: none !important;*/\n/*}*/\n/*:host>.mat-tab-labels {*/\n/*  flex-direction: column;*/\n/*}*/\n/*:host>.mat-ink-bar {*/\n/*  height: 100%;*/\n/*  left: 98% !important;*/\n/*}*/\n/*:host>.mat-tab-body-wrapper {*/\n/*  flex: 1 1 auto;*/\n/*}*/\n/*.container {*/\n/*  position: relative;*/\n/*  width: 100%;*/\n/*  flex: 1 0 auto;*/\n/*  margin: 0 auto;*/\n/*  text-align: left;*/\n/*}*/\n/*#content {*/\n/*  box-sizing: content-box;*/\n/*  margin: 0 auto;*/\n/*  padding: 15px;*/\n/*  width: 1264px;*/\n/*  background-color: #ffffff;*/\n/*}*/\n/*#content {*/\n/*  max-width: 1100px;*/\n/*  width: 100%;*/\n/*  background-color: #ffffff;*/\n/*  padding: 24px;*/\n/*  box-sizing: border-box;*/\n/*}*/\n/*#content {*/\n/*  max-width: 1100px;*/\n/*  width: 100%;*/\n/*  background-color: #fff;*/\n/*  padding: 24px;*/\n/*  box-sizing: border-box;*/\n/*}*/\n/*#content::before, #main-content::before, #content::after, #main-content::after {*/\n/*  content: \"\";*/\n/*  display: table;*/\n/*}*/\n/*#content::after, #main-content::after {*/\n/*  clear: both;*/\n/*}*/\n/*.label{*/\n/*  font-size: xx-large;*/\n/*  font-weight: bold;*/\n/*}*/\n::ng-deep .mat-tab-labels {\n   font-size: 20px;\n   justify-content: center;\n }\n::ng-deep .mat-tab-label {\n  font-size: 18px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWNjb3VudC9hY2NvdW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEscUJBQXFCO0FBQ3JCLHVCQUF1QjtBQUN2QixpQkFBaUI7QUFDakIsb0JBQW9CO0FBQ3BCLG1CQUFtQjtBQUNuQixvQ0FBb0M7QUFFcEMsc0JBQXNCO0FBQ3RCLGlCQUFpQjtBQUNqQixJQUFJO0FBRUoseUJBQXlCO0FBQ3pCLHlCQUF5QjtBQUN6QixJQUFJO0FBQ0osMEJBQTBCO0FBQzFCLHlCQUF5QjtBQUN6QixJQUFJO0FBQ0oscUNBQXFDO0FBQ3JDLDhCQUE4QjtBQUM5QixJQUFJO0FBQ0osMEJBQTBCO0FBQzFCLDRCQUE0QjtBQUM1QixJQUFJO0FBQ0osdUJBQXVCO0FBQ3ZCLGtCQUFrQjtBQUNsQiwwQkFBMEI7QUFDMUIsSUFBSTtBQUNKLGdDQUFnQztBQUNoQyxvQkFBb0I7QUFDcEIsSUFBSTtBQUdKLGVBQWU7QUFDZix3QkFBd0I7QUFDeEIsaUJBQWlCO0FBQ2pCLG9CQUFvQjtBQUNwQixvQkFBb0I7QUFDcEIsc0JBQXNCO0FBQ3RCLElBQUk7QUFFSixhQUFhO0FBQ2IsNkJBQTZCO0FBQzdCLG9CQUFvQjtBQUNwQixtQkFBbUI7QUFDbkIsbUJBQW1CO0FBQ25CLCtCQUErQjtBQUMvQixJQUFJO0FBRUosYUFBYTtBQUNiLHVCQUF1QjtBQUN2QixpQkFBaUI7QUFDakIsK0JBQStCO0FBQy9CLG1CQUFtQjtBQUNuQiw0QkFBNEI7QUFDNUIsSUFBSTtBQUNKLGFBQWE7QUFDYix1QkFBdUI7QUFDdkIsaUJBQWlCO0FBQ2pCLDRCQUE0QjtBQUM1QixtQkFBbUI7QUFDbkIsNEJBQTRCO0FBQzVCLElBQUk7QUFDSixtRkFBbUY7QUFDbkYsaUJBQWlCO0FBQ2pCLG9CQUFvQjtBQUNwQixJQUFJO0FBQ0osMENBQTBDO0FBQzFDLGlCQUFpQjtBQUNqQixJQUFJO0FBRUosVUFBVTtBQUNWLHlCQUF5QjtBQUN6Qix1QkFBdUI7QUFFdkIsSUFBSTtBQUVKO0dBQ0csZUFBZTtHQUNmLHVCQUF1QjtDQUN6QjtBQUVEO0VBQ0UsZUFBZTtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL2FjY291bnQvYWNjb3VudC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyo6aG9zdD4uY29udGFpbmVyIHsqL1xuLyogIG1heC13aWR0aDogMTI2NHB4OyovXG4vKiAgd2lkdGg6IDEwMCU7Ki9cbi8qICBtYXJnaW46IDAgYXV0bzsqL1xuLyogIGRpc3BsYXk6IGZsZXg7Ki9cbi8qICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47Ki9cblxuLyogIGJhY2tncm91bmQ6IG5vbmU7Ki9cbi8qICBmbG9hdDogbGVmdDsqL1xuLyp9Ki9cblxuLyo6aG9zdD4ubWF0LXRhYi1ncm91cCB7Ki9cbi8qICBmbGV4LWRpcmVjdGlvbjogcm93OyovXG4vKn0qL1xuLyo6aG9zdD4ubWF0LXRhYi1oZWFkZXIgeyovXG4vKiAgYm9yZGVyLWJvdHRvbTogbm9uZTsqL1xuLyp9Ki9cbi8qOmhvc3Q+Lm1hdC10YWItaGVhZGVyLXBhZ2luYXRpb24geyovXG4vKiAgZGlzcGxheTogbm9uZSAhaW1wb3J0YW50OyovXG4vKn0qL1xuLyo6aG9zdD4ubWF0LXRhYi1sYWJlbHMgeyovXG4vKiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsqL1xuLyp9Ki9cbi8qOmhvc3Q+Lm1hdC1pbmstYmFyIHsqL1xuLyogIGhlaWdodDogMTAwJTsqL1xuLyogIGxlZnQ6IDk4JSAhaW1wb3J0YW50OyovXG4vKn0qL1xuLyo6aG9zdD4ubWF0LXRhYi1ib2R5LXdyYXBwZXIgeyovXG4vKiAgZmxleDogMSAxIGF1dG87Ki9cbi8qfSovXG5cblxuLyouY29udGFpbmVyIHsqL1xuLyogIHBvc2l0aW9uOiByZWxhdGl2ZTsqL1xuLyogIHdpZHRoOiAxMDAlOyovXG4vKiAgZmxleDogMSAwIGF1dG87Ki9cbi8qICBtYXJnaW46IDAgYXV0bzsqL1xuLyogIHRleHQtYWxpZ246IGxlZnQ7Ki9cbi8qfSovXG5cbi8qI2NvbnRlbnQgeyovXG4vKiAgYm94LXNpemluZzogY29udGVudC1ib3g7Ki9cbi8qICBtYXJnaW46IDAgYXV0bzsqL1xuLyogIHBhZGRpbmc6IDE1cHg7Ki9cbi8qICB3aWR0aDogMTI2NHB4OyovXG4vKiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjsqL1xuLyp9Ki9cblxuLyojY29udGVudCB7Ki9cbi8qICBtYXgtd2lkdGg6IDExMDBweDsqL1xuLyogIHdpZHRoOiAxMDAlOyovXG4vKiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjsqL1xuLyogIHBhZGRpbmc6IDI0cHg7Ki9cbi8qICBib3gtc2l6aW5nOiBib3JkZXItYm94OyovXG4vKn0qL1xuLyojY29udGVudCB7Ki9cbi8qICBtYXgtd2lkdGg6IDExMDBweDsqL1xuLyogIHdpZHRoOiAxMDAlOyovXG4vKiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjsqL1xuLyogIHBhZGRpbmc6IDI0cHg7Ki9cbi8qICBib3gtc2l6aW5nOiBib3JkZXItYm94OyovXG4vKn0qL1xuLyojY29udGVudDo6YmVmb3JlLCAjbWFpbi1jb250ZW50OjpiZWZvcmUsICNjb250ZW50OjphZnRlciwgI21haW4tY29udGVudDo6YWZ0ZXIgeyovXG4vKiAgY29udGVudDogXCJcIjsqL1xuLyogIGRpc3BsYXk6IHRhYmxlOyovXG4vKn0qL1xuLyojY29udGVudDo6YWZ0ZXIsICNtYWluLWNvbnRlbnQ6OmFmdGVyIHsqL1xuLyogIGNsZWFyOiBib3RoOyovXG4vKn0qL1xuXG4vKi5sYWJlbHsqL1xuLyogIGZvbnQtc2l6ZTogeHgtbGFyZ2U7Ki9cbi8qICBmb250LXdlaWdodDogYm9sZDsqL1xuXG4vKn0qL1xuXG46Om5nLWRlZXAgLm1hdC10YWItbGFiZWxzIHtcbiAgIGZvbnQtc2l6ZTogMjBweDtcbiAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuIH1cblxuOjpuZy1kZWVwIC5tYXQtdGFiLWxhYmVsIHtcbiAgZm9udC1zaXplOiAxOHB4O1xufVxuIl19 */"
+module.exports = "/*:host>.container {*/\n/*  max-width: 1264px;*/\n/*  width: 100%;*/\n/*  margin: 0 auto;*/\n/*  display: flex;*/\n/*  justify-content: space-between;*/\n/*  background: none;*/\n/*  float: left;*/\n/*}*/\n/*:host>.mat-tab-group {*/\n/*  flex-direction: row;*/\n/*}*/\n/*:host>.mat-tab-header {*/\n/*  border-bottom: none;*/\n/*}*/\n/*:host>.mat-tab-header-pagination {*/\n/*  display: none !important;*/\n/*}*/\n/*:host>.mat-tab-labels {*/\n/*  flex-direction: column;*/\n/*}*/\n/*:host>.mat-ink-bar {*/\n/*  height: 100%;*/\n/*  left: 98% !important;*/\n/*}*/\n/*:host>.mat-tab-body-wrapper {*/\n/*  flex: 1 1 auto;*/\n/*}*/\n/*.container {*/\n/*  position: relative;*/\n/*  width: 100%;*/\n/*  flex: 1 0 auto;*/\n/*  margin: 0 auto;*/\n/*  text-align: left;*/\n/*}*/\n/*#content {*/\n/*  box-sizing: content-box;*/\n/*  margin: 0 auto;*/\n/*  padding: 15px;*/\n/*  width: 1264px;*/\n/*  background-color: #ffffff;*/\n/*}*/\n/*#content {*/\n/*  max-width: 1100px;*/\n/*  width: 100%;*/\n/*  background-color: #ffffff;*/\n/*  padding: 24px;*/\n/*  box-sizing: border-box;*/\n/*}*/\n/*#content {*/\n/*  max-width: 1100px;*/\n/*  width: 100%;*/\n/*  background-color: #fff;*/\n/*  padding: 24px;*/\n/*  box-sizing: border-box;*/\n/*}*/\n/*#content::before, #main-content::before, #content::after, #main-content::after {*/\n/*  content: \"\";*/\n/*  display: table;*/\n/*}*/\n/*#content::after, #main-content::after {*/\n/*  clear: both;*/\n/*}*/\n/*.label{*/\n/*  font-size: xx-large;*/\n/*  font-weight: bold;*/\n/*}*/\n.card-header-title {\n  padding-top: -20px;\n}\n.property-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.property-card {\n  position: relative;\n  margin-top: 10px;\n  align-items: center;\n  width: 80%;\n}\n.img-container {\n  max-height: 500px;\n  height: 100%;\n  width: 100%;\n  margin-bottom: 10px;\n}\n.img-wrap {\n  display: inline-block;\n  position: relative;\n}\n.img-upload {\n  position: absolute;\n  top: 14px;\n  left: 16px;\n}\n.img-delete {\n  position: absolute;\n  top: 14px;\n  right: 16px;\n}\n.delete-button {\n  position: absolute;\n  top: 12px;\n  right: 16px;\n  height: 46px;\n  width: 30px;\n}\n::ng-deep .mat-tab-labels {\n   font-size: 20px;\n   justify-content: center;\n }\n::ng-deep .mat-tab-label {\n  font-size: 18px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWNjb3VudC9hY2NvdW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEscUJBQXFCO0FBQ3JCLHVCQUF1QjtBQUN2QixpQkFBaUI7QUFDakIsb0JBQW9CO0FBQ3BCLG1CQUFtQjtBQUNuQixvQ0FBb0M7QUFFcEMsc0JBQXNCO0FBQ3RCLGlCQUFpQjtBQUNqQixJQUFJO0FBRUoseUJBQXlCO0FBQ3pCLHlCQUF5QjtBQUN6QixJQUFJO0FBQ0osMEJBQTBCO0FBQzFCLHlCQUF5QjtBQUN6QixJQUFJO0FBQ0oscUNBQXFDO0FBQ3JDLDhCQUE4QjtBQUM5QixJQUFJO0FBQ0osMEJBQTBCO0FBQzFCLDRCQUE0QjtBQUM1QixJQUFJO0FBQ0osdUJBQXVCO0FBQ3ZCLGtCQUFrQjtBQUNsQiwwQkFBMEI7QUFDMUIsSUFBSTtBQUNKLGdDQUFnQztBQUNoQyxvQkFBb0I7QUFDcEIsSUFBSTtBQUdKLGVBQWU7QUFDZix3QkFBd0I7QUFDeEIsaUJBQWlCO0FBQ2pCLG9CQUFvQjtBQUNwQixvQkFBb0I7QUFDcEIsc0JBQXNCO0FBQ3RCLElBQUk7QUFFSixhQUFhO0FBQ2IsNkJBQTZCO0FBQzdCLG9CQUFvQjtBQUNwQixtQkFBbUI7QUFDbkIsbUJBQW1CO0FBQ25CLCtCQUErQjtBQUMvQixJQUFJO0FBRUosYUFBYTtBQUNiLHVCQUF1QjtBQUN2QixpQkFBaUI7QUFDakIsK0JBQStCO0FBQy9CLG1CQUFtQjtBQUNuQiw0QkFBNEI7QUFDNUIsSUFBSTtBQUNKLGFBQWE7QUFDYix1QkFBdUI7QUFDdkIsaUJBQWlCO0FBQ2pCLDRCQUE0QjtBQUM1QixtQkFBbUI7QUFDbkIsNEJBQTRCO0FBQzVCLElBQUk7QUFDSixtRkFBbUY7QUFDbkYsaUJBQWlCO0FBQ2pCLG9CQUFvQjtBQUNwQixJQUFJO0FBQ0osMENBQTBDO0FBQzFDLGlCQUFpQjtBQUNqQixJQUFJO0FBRUosVUFBVTtBQUNWLHlCQUF5QjtBQUN6Qix1QkFBdUI7QUFFdkIsSUFBSTtBQUVKO0VBQ0Usa0JBQWtCO0FBQ3BCO0FBRUE7RUFDRSxhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtBQUNyQjtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNoQixtQkFBbUI7RUFDbkIsVUFBVTtBQUNaO0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsWUFBWTtFQUNaLFdBQVc7RUFDWCxtQkFBbUI7QUFDckI7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixrQkFBa0I7QUFDcEI7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixTQUFTO0VBQ1QsVUFBVTtBQUNaO0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsU0FBUztFQUNULFdBQVc7QUFDYjtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLFNBQVM7RUFDVCxXQUFXO0VBQ1gsWUFBWTtFQUNaLFdBQVc7QUFDYjtBQUVBO0dBQ0csZUFBZTtHQUNmLHVCQUF1QjtDQUN6QjtBQUVEO0VBQ0UsZUFBZTtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL2FjY291bnQvYWNjb3VudC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyo6aG9zdD4uY29udGFpbmVyIHsqL1xuLyogIG1heC13aWR0aDogMTI2NHB4OyovXG4vKiAgd2lkdGg6IDEwMCU7Ki9cbi8qICBtYXJnaW46IDAgYXV0bzsqL1xuLyogIGRpc3BsYXk6IGZsZXg7Ki9cbi8qICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47Ki9cblxuLyogIGJhY2tncm91bmQ6IG5vbmU7Ki9cbi8qICBmbG9hdDogbGVmdDsqL1xuLyp9Ki9cblxuLyo6aG9zdD4ubWF0LXRhYi1ncm91cCB7Ki9cbi8qICBmbGV4LWRpcmVjdGlvbjogcm93OyovXG4vKn0qL1xuLyo6aG9zdD4ubWF0LXRhYi1oZWFkZXIgeyovXG4vKiAgYm9yZGVyLWJvdHRvbTogbm9uZTsqL1xuLyp9Ki9cbi8qOmhvc3Q+Lm1hdC10YWItaGVhZGVyLXBhZ2luYXRpb24geyovXG4vKiAgZGlzcGxheTogbm9uZSAhaW1wb3J0YW50OyovXG4vKn0qL1xuLyo6aG9zdD4ubWF0LXRhYi1sYWJlbHMgeyovXG4vKiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsqL1xuLyp9Ki9cbi8qOmhvc3Q+Lm1hdC1pbmstYmFyIHsqL1xuLyogIGhlaWdodDogMTAwJTsqL1xuLyogIGxlZnQ6IDk4JSAhaW1wb3J0YW50OyovXG4vKn0qL1xuLyo6aG9zdD4ubWF0LXRhYi1ib2R5LXdyYXBwZXIgeyovXG4vKiAgZmxleDogMSAxIGF1dG87Ki9cbi8qfSovXG5cblxuLyouY29udGFpbmVyIHsqL1xuLyogIHBvc2l0aW9uOiByZWxhdGl2ZTsqL1xuLyogIHdpZHRoOiAxMDAlOyovXG4vKiAgZmxleDogMSAwIGF1dG87Ki9cbi8qICBtYXJnaW46IDAgYXV0bzsqL1xuLyogIHRleHQtYWxpZ246IGxlZnQ7Ki9cbi8qfSovXG5cbi8qI2NvbnRlbnQgeyovXG4vKiAgYm94LXNpemluZzogY29udGVudC1ib3g7Ki9cbi8qICBtYXJnaW46IDAgYXV0bzsqL1xuLyogIHBhZGRpbmc6IDE1cHg7Ki9cbi8qICB3aWR0aDogMTI2NHB4OyovXG4vKiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjsqL1xuLyp9Ki9cblxuLyojY29udGVudCB7Ki9cbi8qICBtYXgtd2lkdGg6IDExMDBweDsqL1xuLyogIHdpZHRoOiAxMDAlOyovXG4vKiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjsqL1xuLyogIHBhZGRpbmc6IDI0cHg7Ki9cbi8qICBib3gtc2l6aW5nOiBib3JkZXItYm94OyovXG4vKn0qL1xuLyojY29udGVudCB7Ki9cbi8qICBtYXgtd2lkdGg6IDExMDBweDsqL1xuLyogIHdpZHRoOiAxMDAlOyovXG4vKiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjsqL1xuLyogIHBhZGRpbmc6IDI0cHg7Ki9cbi8qICBib3gtc2l6aW5nOiBib3JkZXItYm94OyovXG4vKn0qL1xuLyojY29udGVudDo6YmVmb3JlLCAjbWFpbi1jb250ZW50OjpiZWZvcmUsICNjb250ZW50OjphZnRlciwgI21haW4tY29udGVudDo6YWZ0ZXIgeyovXG4vKiAgY29udGVudDogXCJcIjsqL1xuLyogIGRpc3BsYXk6IHRhYmxlOyovXG4vKn0qL1xuLyojY29udGVudDo6YWZ0ZXIsICNtYWluLWNvbnRlbnQ6OmFmdGVyIHsqL1xuLyogIGNsZWFyOiBib3RoOyovXG4vKn0qL1xuXG4vKi5sYWJlbHsqL1xuLyogIGZvbnQtc2l6ZTogeHgtbGFyZ2U7Ki9cbi8qICBmb250LXdlaWdodDogYm9sZDsqL1xuXG4vKn0qL1xuXG4uY2FyZC1oZWFkZXItdGl0bGUge1xuICBwYWRkaW5nLXRvcDogLTIwcHg7XG59XG5cbi5wcm9wZXJ0eS1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLnByb3BlcnR5LWNhcmQge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIG1hcmdpbi10b3A6IDEwcHg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHdpZHRoOiA4MCU7XG59XG5cbi5pbWctY29udGFpbmVyIHtcbiAgbWF4LWhlaWdodDogNTAwcHg7XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG4gIG1hcmdpbi1ib3R0b206IDEwcHg7XG59XG5cbi5pbWctd3JhcCB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG4uaW1nLXVwbG9hZCB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAxNHB4O1xuICBsZWZ0OiAxNnB4O1xufVxuXG4uaW1nLWRlbGV0ZSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAxNHB4O1xuICByaWdodDogMTZweDtcbn1cblxuLmRlbGV0ZS1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMTJweDtcbiAgcmlnaHQ6IDE2cHg7XG4gIGhlaWdodDogNDZweDtcbiAgd2lkdGg6IDMwcHg7XG59XG5cbjo6bmctZGVlcCAubWF0LXRhYi1sYWJlbHMge1xuICAgZm9udC1zaXplOiAyMHB4O1xuICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gfVxuXG46Om5nLWRlZXAgLm1hdC10YWItbGFiZWwge1xuICBmb250LXNpemU6IDE4cHg7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -57,7 +57,7 @@ module.exports = "/*:host>.container {*/\n/*  max-width: 1264px;*/\n/*  width: 1
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Account</title>\n\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n</head>\n<body>\n<br>\n<br>\n     <div class=\"container\">\n       <div>\n         <h3 class=\"card-header-title\">Welcome {{user.username}}!</h3>\n       </div>\n           <mat-tab-group mat-stretch-tabs>\n              <mat-tab label=\"Profile\">\n                <br>\n                <div class=\"card-body\">\n\n                  <mat-list role=\"listitem\">\n                    <mat-list-item role=\"listitem\">{{user.username}}</mat-list-item>\n                    <mat-list-item role=\"listitem\">{{user.firstName + ' ' + user.lastName}}</mat-list-item>\n                    <mat-list-item role=\"listitem\">{{user.emailAddress}}</mat-list-item>\n                    <mat-list-item role=\"listitem\">{{user.phoneNumber}}</mat-list-item>\n                  </mat-list>\n\n                   <button mat-raised-button type=\"edit\" class=\"btn btn-danger pull-right\">Edit</button>\n\n               </div>\n             </mat-tab>\n\n             <mat-tab label=\"My Listing\">\n                <br>\n                 <p><i class=\"fa fa-dollar fa-fw w3-margin-right w3-large \"></i> <var id =\"listingPrice\"> Price </var></p>\n                 <p><i class=\"fa fa-bed fa-fw w3-margin-right w3-large \"></i> <var id = \"bedRoom\"> Bedroom </var></p>\n                 <p><i class=\"fa fa-bath fa-fw w3-margin-right w3-large \"></i> <var id = \"bathRoom\"> Bathroom </var></p>\n                 <p><i class=\"fa fa-map-marker fa-fw w3-margin-right w3-large \"></i> <var id = \"address\"> Address </var></p>\n                 <p><i class=\"fa fa-phone fa-fw w3-margin-right w3-large \"></i> <var id=\"listingPhoneNumber\">(xxx)xxx-xxxx</var></p>\n                 <p><i class=\"fa fa-envelope fa-fw w3-margin-right w3-large \"></i> <var id=\"listingEmail\"> sendhelp@mailboyz.gov</var></p>\n\n               <div class=\"w3-center\">\n                 <div class=\"w3-section\">\n                   <button mat-button>❮ Prev</button>\n                   <button mat-button>Next ❯</button>\n                   <button mat-raised-button  type = \"edit\" class=\"btn btn-danger pull-right\">Edit</button>\n                 </div>\n               </div>\n\n             </mat-tab>\n             <mat-tab label=\"Favorite\">\n               Favorite List\n               <br><br>\n             </mat-tab>\n           </mat-tab-group>\n         </div>\n</body>\n</html>\n"
+module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Account</title>\n\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n</head>\n<body>\n<br>\n\n  <div class=\"container\">\n    <div>\n      <h3 class=\"card-header-title\">Welcome {{user.username}}!</h3>\n    </div>\n\n    <mat-tab-group mat-stretch-tabs>\n\n      <mat-tab label=\"Profile\">\n        <br>\n        <div class=\"card-body\">\n\n          <mat-list role=\"listitem\">\n            <mat-list-item role=\"listitem\">{{user.username}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.firstName + ' ' + user.lastName}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.emailAddress}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.phoneNumber}}</mat-list-item>\n          </mat-list>\n\n          <button mat-raised-button type=\"edit\" class=\"btn btn-danger pull-right\">Edit</button>\n\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"My Listings\">\n        <ng-template [ngIf]=\"userListings[index] && userListings.length > 0\">\n          <div class=\"property-container\">\n            <mat-card class=\"property-card\">\n\n              <a class=\"delete-button\" (click)=\"onDeleteListingClick(userListings[index])\">\n                <mat-icon style=\"font-size: 33px !important\" color=\"warn\">delete_forever</mat-icon>\n              </a>\n\n              <mat-card-header>\n                <mat-card-title><h5>{{userListings[index].title}}</h5>\n                </mat-card-title>\n                <mat-card-subtitle style=\"padding-top: 6px !important\">\n                  {{userListings[index].street + ', ' + userListings[index].city + ', ' + userListings[index].state}}\n                </mat-card-subtitle>\n              </mat-card-header>\n\n              <ng-template [ngIf]=\"userListings[index] && userListings[index].imageUrls.length > 0\">\n                <drag-scroll #drag_scroll>\n                  <div class=\"img-wrap\"\n                       *ngFor=\"let imageUrl of userListings[index].imageUrls\">\n                    <img class=\"img-container\"\n                         drag-scroll-item\n                         [src]=\"imageUrl\"\n                         alt=\"\" />\n\n                    <a class=\"img-upload\" (click)=\"openInput()\">\n                      <mat-icon style=\"font-size: 30px !important\" color=\"primary\">cloud_upload</mat-icon>\n                      <input id=\"fileInput\"\n                             hidden\n                             type=\"file\"\n                             accept=\".jpg, .jpeg, .png, .tif\"\n                             (change)=\"onUploadImageClick($event.target.files)\"\n                             multiple>\n                    </a>\n                    <a class=\"img-delete\" (click)=\"onDeleteImageClick(imageUrl)\">\n                      <mat-icon style=\"font-size: 30px !important\" color=\"warn\">delete_forever</mat-icon>\n                    </a>\n\n                  </div>\n                </drag-scroll>\n              </ng-template>\n\n              <mat-card-content>\n                <h6>{{userListings[index].listingType + ' for ' + (userListings[index].forSale ? 'sale' : 'rent')}}</h6>\n                <p><i>{{'$' + numberWithCommas(userListings[index].price) + ' | ' + userListings[index].numBedrooms + ' beds' + ' | ' + userListings[index].numBathrooms + ' baths'}}</i></p>\n                <p class=\"property-access-title\">{{getPropertyAccessibility(userListings[index])}}</p>\n                <p>{{userListings[index].description}}</p>\n              </mat-card-content>\n            </mat-card>\n          </div>\n        </ng-template>\n\n        <div class=\"w3-center\">\n          <div class=\"w3-section\">\n            <button mat-button (click)=\"clickLeft(index)\">❮ Prev</button>\n            <button mat-button (click)=\"clickRight(index)\">Next ❯</button>\n            <button mat-raised-button  type = \"edit\" class=\"btn btn-danger pull-right\">Edit</button>\n          </div>\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"Favorite\">\n        Favorite List\n        <br><br>\n      </mat-tab>\n\n    </mat-tab-group>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n  </div>\n</body>\n</html>\n"
 
 /***/ }),
 
@@ -74,30 +74,221 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _core_services_register_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/services/register.service */ "./src/app/core/services/register.service.ts");
+/* harmony import */ var _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/services/listings.service */ "./src/app/core/services/listings.service.ts");
+/* harmony import */ var ngx_drag_scroll_lib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-drag-scroll/lib */ "./node_modules/ngx-drag-scroll/lib/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _delete_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./delete.dialog */ "./src/app/account/delete.dialog.ts");
+/* harmony import */ var _core_services_upload_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../core/services/upload.service */ "./src/app/core/services/upload.service.ts");
+
+
+
+
+
+
 
 
 
 var AccountComponent = /** @class */ (function () {
-    function AccountComponent(registerService) {
+    function AccountComponent(router, registerService, listingsService, uploadService, dialog) {
+        this.router = router;
         this.registerService = registerService;
-        this.isLoaded = true;
+        this.listingsService = listingsService;
+        this.uploadService = uploadService;
+        this.dialog = dialog;
+        this.userListings = [];
+        this.favoriteListings = [];
+        this.index = 0;
+        this.isLoaded = false;
     }
     AccountComponent.prototype.ngOnInit = function () {
-        if (localStorage.getItem('loginUser')) {
-            this.user = JSON.parse(localStorage.getItem('loginUser'));
+        if (!localStorage.getItem('loginUser')) {
+            return;
         }
+        this.user = JSON.parse(localStorage.getItem('loginUser'));
+        this.loadData();
     };
-    AccountComponent.prototype.onSaveInfoClick = function () {
+    AccountComponent.prototype.loadData = function () {
+        var _this = this;
+        this.listingsService.getUserListings(this.user.userId).subscribe(function (listings) {
+            console.log(listings);
+            _this.userListings = listings;
+            _this.isLoaded = true;
+        }, function (err) {
+            console.log(err);
+            _this.isLoaded = true;
+        });
     };
+    AccountComponent.prototype.clickLeft = function (i) {
+        if (i == 0)
+            return;
+        this.index--;
+    };
+    AccountComponent.prototype.clickRight = function (i) {
+        if (i == this.userListings.length - 1)
+            return;
+        this.index++;
+    };
+    AccountComponent.prototype.onDeleteListingClick = function (listing) {
+        this.openDeleteListingDialog(listing, 'Are you sure you want to delete this listing?');
+    };
+    AccountComponent.prototype.openInput = function () {
+        document.getElementById("fileInput").click();
+    };
+    AccountComponent.prototype.onUploadImageClick = function (files) {
+        var _this = this;
+        this.isLoaded = false;
+        var promises = [];
+        for (var i = 0; i < files.length; i++) {
+            promises.push(this.uploadService.uploadImage(files[i], this.userListings[this.index].listingId).toPromise());
+        }
+        // Waits for all promises to be returned (all image uploading calls finish)
+        Promise.all(promises).then(function (s) {
+            console.log(s);
+            _this.loadData();
+        }).catch(function (err) {
+            console.log(err);
+            _this.isLoaded = true;
+        });
+    };
+    AccountComponent.prototype.onDeleteImageClick = function (imageUrl) {
+        if (this.userListings[this.index].imageUrls.length == 1) {
+            return;
+        }
+        this.openDeleteImageDialog(imageUrl, 'Are you sure you want to delete this image?');
+    };
+    AccountComponent.prototype.deleteListing = function (listing) {
+        var _this = this;
+        this.listingsService.deleteListing(listing.listingId).subscribe(function (result) {
+            _this.userListings = _this.userListings.filter(function (userListing) {
+                return userListing.listingId !== listing.listingId;
+            });
+            _this.index = 0;
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    AccountComponent.prototype.deleteImage = function (imageUrl) {
+        var _this = this;
+        this.listingsService.deleteImage(imageUrl).subscribe(function (result) {
+            _this.userListings[_this.index].imageUrls = _this.userListings[_this.index].imageUrls.filter(function (url) {
+                return url !== imageUrl;
+            });
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    AccountComponent.prototype.numberWithCommas = function (x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    };
+    AccountComponent.prototype.getPropertyAccessibility = function (listing) {
+        var access = 'Accessibility: ';
+        if (!listing.laundry && !listing.hospitalAccess && !listing.wheelchairAccess && !listing.BARTAccess)
+            return access + 'none';
+        var laundry = listing.laundry ? 'laundry' : '';
+        var hospital = listing.hospitalAccess ? ', hospital' : '';
+        var wheelchair = listing.wheelchairAccess ? ', wheelchair' : '';
+        var bart = listing.BARTAccess ? ', bart' : '';
+        return access + laundry + hospital + wheelchair + bart;
+    };
+    AccountComponent.prototype.openDeleteListingDialog = function (listing, message) {
+        var _this = this;
+        var dialog = this.dialog.open(_delete_dialog__WEBPACK_IMPORTED_MODULE_7__["DeleteDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        dialog.afterClosed().subscribe(function (result) {
+            if (result == 'delete') {
+                _this.deleteListing(listing);
+            }
+        });
+    };
+    AccountComponent.prototype.openDeleteImageDialog = function (imageUrl, message) {
+        var _this = this;
+        var dialog = this.dialog.open(_delete_dialog__WEBPACK_IMPORTED_MODULE_7__["DeleteDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        dialog.afterClosed().subscribe(function (result) {
+            if (result == 'delete') {
+                _this.deleteImage(imageUrl);
+            }
+        });
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('drag_scroll', { read: ngx_drag_scroll_lib__WEBPACK_IMPORTED_MODULE_4__["DragScrollComponent"] }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", ngx_drag_scroll_lib__WEBPACK_IMPORTED_MODULE_4__["DragScrollComponent"])
+    ], AccountComponent.prototype, "dragScroll", void 0);
     AccountComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-account',
             template: __webpack_require__(/*! ./account.component.html */ "./src/app/account/account.component.html"),
             styles: [__webpack_require__(/*! ./account.component.css */ "./src/app/account/account.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_core_services_register_service__WEBPACK_IMPORTED_MODULE_2__["RegisterService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"],
+            _core_services_register_service__WEBPACK_IMPORTED_MODULE_2__["RegisterService"],
+            _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__["ListingsService"],
+            _core_services_upload_service__WEBPACK_IMPORTED_MODULE_8__["UploadService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDialog"]])
     ], AccountComponent);
     return AccountComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/account/delete.dialog.html":
+/*!********************************************!*\
+  !*** ./src/app/account/delete.dialog.html ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-dialog-content>\n  <p>{{data.message}}</p>\n</mat-dialog-content>\n<mat-dialog-actions align=\"center\">\n  <button mat-raised-button color=\"warn\" (click)=\"onDeleteClick()\">Delete</button>\n  <button mat-raised-button (click)=\"onCancelClick()\">Cancel</button>\n</mat-dialog-actions>\n"
+
+/***/ }),
+
+/***/ "./src/app/account/delete.dialog.ts":
+/*!******************************************!*\
+  !*** ./src/app/account/delete.dialog.ts ***!
+  \******************************************/
+/*! exports provided: DeleteDialog */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeleteDialog", function() { return DeleteDialog; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+
+
+
+var DeleteDialog = /** @class */ (function () {
+    function DeleteDialog(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+    }
+    DeleteDialog.prototype.onDeleteClick = function () {
+        this.dialogRef.close('delete');
+    };
+    DeleteDialog.prototype.onCancelClick = function () {
+        this.dialogRef.close();
+    };
+    DeleteDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'delete-dialog-component',
+            template: __webpack_require__(/*! ./delete.dialog.html */ "./src/app/account/delete.dialog.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object])
+    ], DeleteDialog);
+    return DeleteDialog;
 }());
 
 
@@ -600,6 +791,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _covalent_dynamic_forms__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @covalent/dynamic-forms */ "./node_modules/@covalent/dynamic-forms/fesm5/covalent-dynamic-forms.js");
 /* harmony import */ var _covalent_core__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @covalent/core */ "./node_modules/@covalent/core/fesm5/covalent-core.js");
 /* harmony import */ var _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./advanced-search/advanced-search.component */ "./src/app/advanced-search/advanced-search.component.ts");
+/* harmony import */ var ngx_drag_scroll_lib__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ngx-drag-scroll/lib */ "./node_modules/ngx-drag-scroll/lib/index.js");
+/* harmony import */ var _account_delete_dialog__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./account/delete.dialog */ "./src/app/account/delete.dialog.ts");
+
+
 
 
 
@@ -647,6 +842,7 @@ var AppModule = /** @class */ (function () {
                 _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
                 _register_register_component__WEBPACK_IMPORTED_MODULE_8__["RegisterComponent"],
                 _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__["RegisterDialog"],
+                _account_delete_dialog__WEBPACK_IMPORTED_MODULE_36__["DeleteDialog"],
                 _login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"],
                 _example_example_component__WEBPACK_IMPORTED_MODULE_11__["ExampleComponent"],
                 _core_components_alert_alert_component__WEBPACK_IMPORTED_MODULE_12__["AlertComponent"],
@@ -659,7 +855,8 @@ var AppModule = /** @class */ (function () {
                 _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_34__["AdvancedSearchComponent"],
             ],
             entryComponents: [
-                _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__["RegisterDialog"]
+                _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__["RegisterDialog"],
+                _account_delete_dialog__WEBPACK_IMPORTED_MODULE_36__["DeleteDialog"]
             ],
             imports: [
                 _angular_material_menu__WEBPACK_IMPORTED_MODULE_24__["MatMenuModule"],
@@ -697,6 +894,7 @@ var AppModule = /** @class */ (function () {
                 _covalent_markdown__WEBPACK_IMPORTED_MODULE_31__["CovalentMarkdownModule"],
                 _covalent_dynamic_forms__WEBPACK_IMPORTED_MODULE_32__["CovalentDynamicFormsModule"],
                 _covalent_core__WEBPACK_IMPORTED_MODULE_33__["CovalentFileModule"],
+                ngx_drag_scroll_lib__WEBPACK_IMPORTED_MODULE_35__["DragScrollModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
@@ -1281,6 +1479,20 @@ var ListingsService = /** @class */ (function () {
     /** CRUD function for create **/
     ListingsService.prototype.createListing = function (listing) {
         return this.http.post(apiUrl, listing, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ListingsService.prototype.getUserListings = function (userId) {
+        return this.http.get(apiUrl + '/user/listings', {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]({
+                'Content-Type': 'application/json',
+                'userId': String(userId)
+            })
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ListingsService.prototype.deleteListing = function (listingId) {
+        return this.http.delete(apiUrl + ("/" + listingId), httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ListingsService.prototype.deleteImage = function (imageUrl) {
+        return this.http.put(apiUrl + "/delete-image", { imageUrl: imageUrl }, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
     };
     ListingsService.prototype.handleError = function (error) {
         if (error.error instanceof ErrorEvent) {

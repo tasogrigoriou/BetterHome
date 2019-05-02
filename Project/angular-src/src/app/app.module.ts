@@ -54,6 +54,8 @@ import { CovalentMarkdownModule } from '@covalent/markdown';
 import { CovalentDynamicFormsModule } from '@covalent/dynamic-forms';
 import {CovalentFileModule} from "@covalent/core";
 import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
+import {DragScrollModule} from "ngx-drag-scroll/lib";
+import {DeleteDialog} from "./account/delete.dialog";
 
 @NgModule({
   declarations: [
@@ -61,6 +63,7 @@ import { AdvancedSearchComponent } from './advanced-search/advanced-search.compo
     HomeComponent,
     RegisterComponent,
     RegisterDialog,
+    DeleteDialog,
     LoginComponent,
     ExampleComponent,
     AlertComponent,
@@ -73,7 +76,8 @@ import { AdvancedSearchComponent } from './advanced-search/advanced-search.compo
     AdvancedSearchComponent,
   ],
   entryComponents: [
-    RegisterDialog
+    RegisterDialog,
+    DeleteDialog
   ],
   imports: [
     MatMenuModule,
@@ -111,6 +115,7 @@ import { AdvancedSearchComponent } from './advanced-search/advanced-search.compo
     CovalentMarkdownModule,
     CovalentDynamicFormsModule,
     CovalentFileModule,
+    DragScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]
