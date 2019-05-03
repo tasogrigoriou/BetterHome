@@ -26,6 +26,17 @@ export class FavoritesService {
     )
   }
 
+  isFavorite(listingId: number, userId: number): Observable<any> {
+    return this.http.get(apiUrl + `/${listingId}`, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'userId': String(userId)
+      })
+    }).pipe(
+      catchError(this.handleError)
+    )
+  }
+
   addFavorite(listingId: number, userId: number): Observable<any> {
     let body = {
       userId: userId,
@@ -34,6 +45,18 @@ export class FavoritesService {
     return this.http.post(apiUrl, body, httpOptions).pipe(
       catchError(this.handleError)
     );
+  }
+
+  removeFavorite(listingId: number, userId: number): Observable<any> {
+    return this.http.delete(apiUrl, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'userId': String(userId),
+        'listingId': String(listingId)
+      })
+    }).pipe(
+      catchError(this.handleError)
+    )
   }
 
   private handleError(error: HttpErrorResponse) {

@@ -70,9 +70,16 @@
 
       <a class="a-link-card" [routerLink]="[listing.listingId]"></a>
 
-      <a class="favorite-button" (click)="onFavoriteClick(listing.listingId)">
-        <mat-icon style="font-size: 21px !important" color="warn">favorite_border</mat-icon>
-      </a>
+      <ng-template [ngIf]="user">
+        <a class="favorite-button" (click)="onFavoriteClick(listing)">
+          <ng-template [ngIf]="!isFavorite(listing)">
+            <mat-icon style="font-size: 24px !important" color="warn">favorite_border</mat-icon>
+          </ng-template>
+          <ng-template [ngIf]="isFavorite(listing)">
+            <mat-icon style="font-size: 24px !important" color="warn">favorite</mat-icon>
+          </ng-template>
+        </a>
+      </ng-template>
 
       <mat-card-header>
         <mat-card-title><h5>{{listing.title}}</h5>
@@ -80,9 +87,16 @@
         <mat-card-subtitle style="padding-top: 6px !important">{{listing.street + ', ' + listing.city + ', ' + listing.state}}</mat-card-subtitle>
       </mat-card-header>
 
-      <img class="property-card-image" mat-card-image
-           [src]="listing.imageUrls[0]"
-           alt="Image not found">
+      <drag-scroll #drag_scroll>
+        <div class="img-wrap"
+             *ngFor="let imageUrl of listing.imageUrls">
+          <img class="img-container"
+               drag-scroll-item
+               [src]="imageUrl"
+               alt="" />
+          <a class="a-link-card" [routerLink]="[listing.listingId]"></a>
+        </div>
+      </drag-scroll>
 
       <mat-card-content>
         <h6>{{listing.listingType + ' for ' + (listing.forSale ? 'sale' : 'rent')}}</h6>

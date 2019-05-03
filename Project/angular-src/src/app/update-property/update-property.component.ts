@@ -4,7 +4,6 @@ import {ListingsService, Listing} from "../core/services/listings.service";
 import {first} from "rxjs/operators";
 import {RegisterDialog} from "../register/register.dialog";
 import {MatDialog} from "@angular/material";
-import {UploadService} from "../core/services/upload.service";
 import {LoginUser} from "../core/services/login.service";
 
 @Component({
@@ -17,6 +16,7 @@ export class UpdatePropertyComponent implements OnInit {
   listing: Listing;
 
   isLoaded: boolean = true;
+  listingBelongsToUser: boolean = false;
 
   isFullScreen: boolean;
 
@@ -24,7 +24,6 @@ export class UpdatePropertyComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private listingsService: ListingsService,
-    private uploadService: UploadService,
     public dialog: MatDialog
   ) {}
 
@@ -38,6 +37,7 @@ export class UpdatePropertyComponent implements OnInit {
       let listingId = Number(params.get('listingId'));
       this.listingsService.getSingleListing(listingId).subscribe(listing => {
         console.log(listing);
+        this.listingBelongsToUser = listing.user.userId === this.loginUser.userId;
         this.listing = listing;
         this.hideSpinner();
       }, err => {

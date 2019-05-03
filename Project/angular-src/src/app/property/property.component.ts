@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {Listing, ListingsService} from "../core/services/listings.service";
 import {SearchListingsService} from "../core/services/search.listings.service";
 import {RegisterDialog} from "../register/register.dialog";
@@ -6,6 +6,7 @@ import {MatDialog} from "@angular/material";
 import {Router} from "@angular/router";
 import {FavoritesService} from "../core/services/favorites.service";
 import {LoginUser} from "../core/services/login.service";
+import {DragScrollComponent} from "ngx-drag-scroll/lib";
 
 @Component({
   selector: 'app-property',
@@ -20,8 +21,11 @@ export class PropertyComponent implements OnInit, OnDestroy {
 
   listings: Listing[];
   listingSearch: ListingSearch;
+
   filter: boolean = true;
-  isLoaded: boolean = true;
+  isLoaded: boolean = false;
+
+  @ViewChild('drag_scroll', { read: DragScrollComponent }) dragScroll: DragScrollComponent;
 
   constructor(
     private router: Router,
@@ -32,8 +36,6 @@ export class PropertyComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.listings = this.searchService.getListings();
-
     if (localStorage.getItem('loginUser')) {
       this.user = JSON.parse(localStorage.getItem('loginUser'));
     }
@@ -47,8 +49,33 @@ export class PropertyComponent implements OnInit, OnDestroy {
       }
     }
 
+    this.listings = this.searchService.getListings();
+
     this.breakpoint = (window.innerWidth <= 500) ? 1 : 3;
     this.rowWidth = (window.innerWidth <= 500) ? '100%' : '30%';
+
+    if (!this.user) {
+      this.isLoaded = true;
+      return;
+    }
+
+    let promises = [];
+    for (let i = 0; i < this.listings.length; i++) {
+      promises.push(
+        this.favoritesService.isFavorite(this.listings[i].listingId, this.user.userId).toPromise().then(result => {
+          this.listings[i].isFavorite = true;
+        }).catch(err => {
+          console.log(err);
+        })
+      );
+    }
+    Promise.all(promises).then(s => {
+      console.log(s);
+      this.isLoaded = true;
+    }).catch(err => {
+      console.log(err);
+      this.isLoaded = true;
+    });
   }
 
   ngOnDestroy() {
@@ -87,14 +114,27 @@ export class PropertyComponent implements OnInit, OnDestroy {
         });
   }
 
-  onFavoriteClick(listingId: number) {
-    if (this.user) {
-      this.favoritesService.addFavorite(listingId, this.user.userId).subscribe(result => {
+  onFavoriteClick(listing: Listing) {
+    if (!listing.isFavorite) {
+      this.favoritesService.addFavorite(listing.listingId, this.user.userId).subscribe(result => {
         console.log(result);
+        listing.isFavorite = true;
       }, err => {
         console.log(err);
       });
     }
+    else {
+      this.favoritesService.removeFavorite(listing.listingId, this.user.userId).subscribe(result => {
+        console.log(result);
+        listing.isFavorite = false;
+      }, err => {
+        console.log(err);
+      });
+    }
+  }
+
+  isFavorite(listing: Listing): boolean {
+    return listing.isFavorite;
   }
 
   numberWithCommas(x: number) {
@@ -104,11 +144,21 @@ export class PropertyComponent implements OnInit, OnDestroy {
   getPropertyAccessibility(listing: Listing): string {
     let access = 'Accessibility: ';
     if (!listing.laundry && !listing.hospitalAccess && !listing.wheelchairAccess && !listing.BARTAccess) return access + 'none';
-    let laundry = listing.laundry ? 'laundry' : '';
-    let hospital = listing.hospitalAccess ? ', hospital' : '';
-    let wheelchair = listing.wheelchairAccess ? ', wheelchair' : '';
-    let bart = listing.BARTAccess ? ', bart' : '';
-    return access + laundry + hospital + wheelchair + bart;
+
+    let accessList: string[] = [];
+    if (listing.laundry) accessList.push('laundry');
+    if (listing.hospitalAccess) accessList.push('hospital');
+    if (listing.wheelchairAccess) accessList.push('wheelchair');
+    if (listing.BARTAccess) accessList.push('bart');
+    let accessStr = access;
+    for (let i = 0; i < accessList.length; i++) {
+      if (i == 0) {
+        accessStr = accessStr + accessList[i];
+      } else {
+        accessStr = accessStr + ', ' + accessList[i];
+      }
+    }
+    return accessStr;
   }
 
   openDialog(message: string, subscribe: boolean = false) {

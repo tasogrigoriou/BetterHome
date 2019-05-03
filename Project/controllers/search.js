@@ -49,8 +49,8 @@ router.post('/', function (req, res) {
             // assign the urls for that listing
             for (let i = 0; i < result.length; i++) {
                 let listing = result[i];
-                let sql2 = `SELECT imageUrl FROM ListingImage WHERE listingId = ${listing.listingId}`;
-                let promise = sqlPromiseWrapper(sql2).then(images => {
+                let sql3 = `SELECT imageUrl FROM ListingImage WHERE listingId = ${listing.listingId}`;
+                let promise = sqlPromiseWrapper(sql3).then(images => {
                     console.log(images);
                     let listingImages = [];
                     for (let i = 0; i < images.length; i++) {

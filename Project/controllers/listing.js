@@ -73,19 +73,29 @@ router.get('/:id', function (req, res) {
             res.status(err.status || 500).send(err.message);
         } else {
             let listing = result[0];
-            let sql2 = `SELECT imageUrl FROM ListingImage WHERE listingId = ${listing.listingId}`;
-            sqlPromiseWrapper(sql2).then(images => {
-                let listingImages = [];
-                for (let i = 0; i < images.length; i++) {
-                    listingImages.push(images[i].imageUrl);
-                }
-                listing.imageUrls = listingImages;
 
-                res.send(listing);
-            }).catch(error => {
-                console.log(error);
-                res.send(listing);
-            });
+            let sql2 = `SELECT * FROM Users WHERE userId IN (SELECT userId FROM Creates WHERE listingId = ${req.params.id})`;
+            database.query(sql2, function (err, createsResult) {
+                if (err) {
+                    res.status(err.status || 500).send(err.message);
+                } else {
+                    listing.user = createsResult[0];
+
+                    let sql3 = `SELECT imageUrl FROM ListingImage WHERE listingId = ${listing.listingId}`;
+                    sqlPromiseWrapper(sql3).then(images => {
+                        let listingImages = [];
+                        for (let i = 0; i < images.length; i++) {
+                            listingImages.push(images[i].imageUrl);
+                        }
+                        listing.imageUrls = listingImages;
+
+                        res.send(listing);
+                    }).catch(error => {
+                        console.log(error);
+                        res.send(listing);
+                    });
+                }
+            })
         }
     })
 });

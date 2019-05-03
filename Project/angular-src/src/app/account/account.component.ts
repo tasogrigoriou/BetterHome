@@ -51,7 +51,7 @@ export class AccountComponent implements OnInit {
 
     promises.push(
       this.listingsService.getUserListings(this.user.userId).toPromise().then(listings => {
-        console.log(listings);
+        console.log('my listings: ' + listings);
         this.userListings = listings;
       }).catch(err => {
         console.log(err);
@@ -59,7 +59,7 @@ export class AccountComponent implements OnInit {
     );
     promises.push(
       this.favoritesService.getFavorites(this.user.userId).toPromise().then(favorites => {
-        console.log(favorites);
+        console.log('my favorites: ' + favorites);
         this.favoriteListings = favorites;
       }).catch(err => {
         console.log(err);
@@ -67,7 +67,6 @@ export class AccountComponent implements OnInit {
     );
 
     Promise.all(promises).then(s => {
-      console.log(s);
       this.isLoaded = true;
     }).catch(err => {
       console.log(err);
@@ -97,6 +96,10 @@ export class AccountComponent implements OnInit {
 
   onDeleteListingClick(listing: Listing) {
     this.openDeleteListingDialog(listing, 'Are you sure you want to delete this listing?');
+  }
+
+  onRemoveFavoriteListingClick(listing: Listing) {
+    this.openRemoveFavoriteListingDialog(listing, 'Are you sure you want to remove this listing from your favorites?')
   }
 
   openInput() {
@@ -136,6 +139,10 @@ export class AccountComponent implements OnInit {
     this.router.navigate(['/update-property', listing.listingId]);
   }
 
+  navigateToListing(listingId: number) {
+    this.router.navigate(['/properties', listingId]);
+  }
+
   deleteListing(listing: Listing) {
     this.listingsService.deleteListing(listing.listingId).subscribe(result => {
       this.userListings = this.userListings.filter(userListing => {
@@ -157,6 +164,17 @@ export class AccountComponent implements OnInit {
     });
   }
 
+  removeFavoriteListing(listing: Listing) {
+    this.favoritesService.removeFavorite(listing.listingId, this.user.userId).subscribe(result => {
+      this.favoriteListings = this.favoriteListings.filter(favListing => {
+        return favListing.listingId !== listing.listingId;
+      });
+      this.favoriteListingIndex = 0;
+    }, err => {
+      console.log(err);
+    });
+  }
+
   numberWithCommas(x: number) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
@@ -164,11 +182,21 @@ export class AccountComponent implements OnInit {
   getPropertyAccessibility(listing: Listing): string {
     let access = 'Accessibility: ';
     if (!listing.laundry && !listing.hospitalAccess && !listing.wheelchairAccess && !listing.BARTAccess) return access + 'none';
-    let laundry = listing.laundry ? 'laundry' : '';
-    let hospital = listing.hospitalAccess ? ', hospital' : '';
-    let wheelchair = listing.wheelchairAccess ? ', wheelchair' : '';
-    let bart = listing.BARTAccess ? ', bart' : '';
-    return access + laundry + hospital + wheelchair + bart;
+
+    let accessList: string[] = [];
+    if (listing.laundry) accessList.push('laundry');
+    if (listing.hospitalAccess) accessList.push('hospital');
+    if (listing.wheelchairAccess) accessList.push('wheelchair');
+    if (listing.BARTAccess) accessList.push('bart');
+    let accessStr = access;
+    for (let i = 0; i < accessList.length; i++) {
+      if (i == 0) {
+        accessStr = accessStr + accessList[i];
+      } else {
+        accessStr = accessStr + ', ' + accessList[i];
+      }
+    }
+    return accessStr;
   }
 
   openDeleteListingDialog(listing: Listing, message: string) {
@@ -195,6 +223,20 @@ export class AccountComponent implements OnInit {
     dialog.afterClosed().subscribe(result => {
       if (result == 'delete') {
         this.deleteImage(imageUrl);
+      }
+    });
+  }
+
+  openRemoveFavoriteListingDialog(listing: Listing, message: string) {
+    const dialog = this.dialog.open(DeleteDialog, {
+      width: '250px',
+      data: {
+        message: message
+      }
+    });
+    dialog.afterClosed().subscribe(result => {
+      if (result == 'delete') {
+        this.removeFavoriteListing(listing);
       }
     });
   }

@@ -174,6 +174,7 @@ export class Listing {
     public wheelchairAccess: boolean = false,
     public lotSize: number = null,
     public description: string = '',
-    public user: LoginUser = null
+    public user: LoginUser = null,
+    public isFavorite: boolean = false
   ) {}
 }
