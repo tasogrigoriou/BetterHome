@@ -57,7 +57,7 @@ module.exports = "/*:host>.container {*/\n/*  max-width: 1264px;*/\n/*  width: 1
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Account</title>\n\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n</head>\n<body>\n<br>\n\n  <div class=\"container\">\n    <div>\n      <h3 class=\"card-header-title\">Welcome {{user.username}}!</h3>\n    </div>\n\n    <mat-tab-group mat-stretch-tabs>\n\n      <mat-tab label=\"Profile\">\n        <br>\n        <div class=\"card-body\">\n\n          <mat-list role=\"listitem\">\n            <mat-list-item role=\"listitem\">{{user.username}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.firstName + ' ' + user.lastName}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.emailAddress}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.phoneNumber}}</mat-list-item>\n          </mat-list>\n\n          <button mat-raised-button type=\"edit\" class=\"btn btn-danger pull-right\" (click)=\"onEditAccountClick()\">Edit</button>\n\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"My Listings\">\n        <ng-template [ngIf]=\"userListings[index] && userListings.length > 0\">\n          <div class=\"property-container\">\n            <mat-card class=\"property-card\">\n\n              <a class=\"delete-button\" (click)=\"onDeleteListingClick(userListings[index])\">\n                <mat-icon style=\"font-size: 33px !important\" color=\"warn\">delete_forever</mat-icon>\n              </a>\n\n              <mat-card-header>\n                <mat-card-title><h5>{{userListings[index].title}}</h5>\n                </mat-card-title>\n                <mat-card-subtitle style=\"padding-top: 6px !important\">\n                  {{userListings[index].street + ', ' + userListings[index].city + ', ' + userListings[index].state}}\n                </mat-card-subtitle>\n              </mat-card-header>\n\n              <ng-template [ngIf]=\"userListings[index] && userListings[index].imageUrls.length > 0\">\n                <drag-scroll #drag_scroll>\n                  <div class=\"img-wrap\"\n                       *ngFor=\"let imageUrl of userListings[index].imageUrls\">\n                    <img class=\"img-container\"\n                         drag-scroll-item\n                         [src]=\"imageUrl\"\n                         alt=\"\" />\n\n                    <a class=\"img-upload\" (click)=\"openInput()\">\n                      <mat-icon style=\"font-size: 30px !important\" color=\"primary\">cloud_upload</mat-icon>\n                      <input id=\"fileInput\"\n                             hidden\n                             type=\"file\"\n                             accept=\".jpg, .jpeg, .png, .tif\"\n                             (change)=\"onUploadImageClick($event.target.files)\"\n                             multiple>\n                    </a>\n                    <a class=\"img-delete\" (click)=\"onDeleteImageClick(imageUrl)\">\n                      <mat-icon style=\"font-size: 30px !important\" color=\"warn\">delete_forever</mat-icon>\n                    </a>\n\n                  </div>\n                </drag-scroll>\n              </ng-template>\n\n              <mat-card-content>\n                <h6>{{userListings[index].listingType + ' for ' + (userListings[index].forSale ? 'sale' : 'rent')}}</h6>\n                <p><i>{{'$' + numberWithCommas(userListings[index].price) + ' | ' + userListings[index].numBedrooms + ' beds' + ' | ' + userListings[index].numBathrooms + ' baths'}}</i></p>\n                <p class=\"property-access-title\">{{getPropertyAccessibility(userListings[index])}}</p>\n                <p>{{userListings[index].description}}</p>\n              </mat-card-content>\n            </mat-card>\n          </div>\n        </ng-template>\n\n        <div class=\"w3-center\">\n          <div class=\"w3-section\">\n            <button mat-button (click)=\"clickLeft(index)\">❮ Prev</button>\n            <button mat-button (click)=\"clickRight(index)\">Next ❯</button>\n            <button mat-raised-button type=\"edit\" class=\"btn btn-danger pull-right\" (click)=\"onEditListingClick()\">Edit</button>\n          </div>\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"Favorite\">\n        Favorite List\n        <br><br>\n      </mat-tab>\n\n    </mat-tab-group>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n  </div>\n</body>\n</html>\n"
+module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Account</title>\n\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n</head>\n<body>\n<br>\n\n  <div class=\"container\">\n    <div>\n      <h3 class=\"card-header-title\">Welcome {{user.username}}!</h3>\n    </div>\n\n    <mat-tab-group mat-stretch-tabs>\n\n      <mat-tab label=\"Profile\">\n        <br>\n        <div class=\"card-body\">\n\n          <mat-list role=\"listitem\">\n            <mat-list-item role=\"listitem\">{{user.username}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.firstName + ' ' + user.lastName}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.emailAddress}}</mat-list-item>\n            <mat-list-item role=\"listitem\">{{user.phoneNumber}}</mat-list-item>\n          </mat-list>\n\n          <button mat-raised-button type=\"edit\" class=\"btn btn-danger pull-right\" (click)=\"onEditAccountClick()\">Edit</button>\n\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"My Listings\">\n        <ng-template [ngIf]=\"userListings[userListingIndex] && userListings.length > 0\">\n          <div class=\"property-container\">\n            <mat-card class=\"property-card\">\n\n              <a class=\"delete-button\" (click)=\"onDeleteListingClick(userListings[userListingIndex])\">\n                <mat-icon style=\"font-size: 33px !important\" color=\"warn\">delete_forever</mat-icon>\n              </a>\n\n              <mat-card-header>\n                <mat-card-title><h5>{{userListings[userListingIndex].title}}</h5>\n                </mat-card-title>\n                <mat-card-subtitle style=\"padding-top: 6px !important\">\n                  {{userListings[userListingIndex].street + ', ' + userListings[userListingIndex].city + ', ' + userListings[userListingIndex].state}}\n                </mat-card-subtitle>\n              </mat-card-header>\n\n              <ng-template [ngIf]=\"userListings[userListingIndex] && userListings[userListingIndex].imageUrls.length > 0\">\n                <drag-scroll #drag_scroll>\n                  <div class=\"img-wrap\"\n                       *ngFor=\"let imageUrl of userListings[userListingIndex].imageUrls\">\n                    <img class=\"img-container\"\n                         drag-scroll-item\n                         [src]=\"imageUrl\"\n                         alt=\"\" />\n\n                    <a class=\"img-upload\" (click)=\"openInput()\">\n                      <mat-icon style=\"font-size: 30px !important\" color=\"primary\">cloud_upload</mat-icon>\n                      <input id=\"fileInput\"\n                             hidden\n                             type=\"file\"\n                             accept=\".jpg, .jpeg, .png, .tif\"\n                             (change)=\"onUploadImageClick($event.target.files)\"\n                             multiple>\n                    </a>\n                    <a class=\"img-delete\" (click)=\"onDeleteImageClick(imageUrl)\">\n                      <mat-icon style=\"font-size: 30px !important\" color=\"warn\">delete_forever</mat-icon>\n                    </a>\n\n                  </div>\n                </drag-scroll>\n              </ng-template>\n\n              <mat-card-content>\n                <h6>{{userListings[userListingIndex].listingType + ' for ' + (userListings[userListingIndex].forSale ? 'sale' : 'rent')}}</h6>\n                <p><i>{{'$' + numberWithCommas(userListings[userListingIndex].price) + ' | ' + userListings[userListingIndex].numBedrooms + ' beds' + ' | ' + userListings[userListingIndex].numBathrooms + ' baths'}}</i></p>\n                <p class=\"property-access-title\">{{getPropertyAccessibility(userListings[userListingIndex])}}</p>\n                <p>{{userListings[userListingIndex].description}}</p>\n              </mat-card-content>\n            </mat-card>\n          </div>\n        </ng-template>\n\n        <div class=\"w3-center\">\n          <div class=\"w3-section\">\n            <button mat-button (click)=\"clickLeftUserListings(userListingIndex)\">❮ Prev</button>\n            <button mat-button (click)=\"clickRightUserListings(userListingIndex)\">Next ❯</button>\n            <button mat-raised-button type=\"edit\" class=\"btn btn-danger pull-right\" (click)=\"onEditListingClick()\">Edit</button>\n          </div>\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"Favorite\">\n        <ng-template [ngIf]=\"favoriteListings[favoriteListingIndex] && favoriteListings.length > 0\">\n          <div class=\"property-container\">\n            <mat-card class=\"property-card\">\n\n              <a class=\"delete-button\" (click)=\"onDeleteListingClick(favoriteListings[favoriteListingIndex])\">\n                <mat-icon style=\"font-size: 33px !important\" color=\"warn\">delete_forever</mat-icon>\n              </a>\n\n              <mat-card-header>\n                <mat-card-title><h5>{{favoriteListings[favoriteListingIndex].title}}</h5>\n                </mat-card-title>\n                <mat-card-subtitle style=\"padding-top: 6px !important\">\n                  {{favoriteListings[favoriteListingIndex].street + ', ' + favoriteListings[favoriteListingIndex].city + ', ' + favoriteListings[favoriteListingIndex].state}}\n                </mat-card-subtitle>\n              </mat-card-header>\n\n              <ng-template [ngIf]=\"favoriteListings[favoriteListingIndex] && favoriteListings[favoriteListingIndex].imageUrls.length > 0\">\n                <drag-scroll #drag_scroll>\n                  <div class=\"img-wrap\"\n                       *ngFor=\"let imageUrl of favoriteListings[favoriteListingIndex].imageUrls\">\n                    <img class=\"img-container\"\n                         drag-scroll-item\n                         [src]=\"imageUrl\"\n                         alt=\"\" />\n                  </div>\n                </drag-scroll>\n              </ng-template>\n\n              <mat-card-content>\n                <h6>{{favoriteListings[favoriteListingIndex].listingType + ' for ' + (favoriteListings[favoriteListingIndex].forSale ? 'sale' : 'rent')}}</h6>\n                <p><i>{{'$' + numberWithCommas(favoriteListings[favoriteListingIndex].price) + ' | ' + favoriteListings[favoriteListingIndex].numBedrooms + ' beds' + ' | ' + favoriteListings[favoriteListingIndex].numBathrooms + ' baths'}}</i></p>\n                <p class=\"property-access-title\">{{getPropertyAccessibility(favoriteListings[favoriteListingIndex])}}</p>\n                <p>{{favoriteListings[favoriteListingIndex].description}}</p>\n              </mat-card-content>\n            </mat-card>\n          </div>\n        </ng-template>\n\n        <div class=\"w3-center\">\n          <div class=\"w3-section\">\n            <button mat-button (click)=\"clickLeftFavoriteListings(favoriteListingIndex)\">❮ Prev</button>\n            <button mat-button (click)=\"clickRightFavoriteListings(favoriteListingIndex)\">Next ❯</button>\n            <button mat-raised-button type=\"edit\" class=\"btn btn-danger pull-right\" (click)=\"onEditListingClick()\">Edit</button>\n          </div>\n        </div>\n      </mat-tab>\n\n    </mat-tab-group>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n  </div>\n</body>\n</html>\n"
 
 /***/ }),
 
@@ -80,6 +80,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _delete_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./delete.dialog */ "./src/app/account/delete.dialog.ts");
 /* harmony import */ var _core_services_upload_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../core/services/upload.service */ "./src/app/core/services/upload.service.ts");
+/* harmony import */ var _core_services_favorites_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../core/services/favorites.service */ "./src/app/core/services/favorites.service.ts");
+
 
 
 
@@ -90,15 +92,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AccountComponent = /** @class */ (function () {
-    function AccountComponent(router, registerService, listingsService, uploadService, dialog) {
+    function AccountComponent(router, registerService, listingsService, favoritesService, uploadService, dialog) {
         this.router = router;
         this.registerService = registerService;
         this.listingsService = listingsService;
+        this.favoritesService = favoritesService;
         this.uploadService = uploadService;
         this.dialog = dialog;
         this.userListings = [];
         this.favoriteListings = [];
-        this.index = 0;
+        this.userListingIndex = 0;
+        this.favoriteListingIndex = 0;
         this.isLoaded = false;
     }
     AccountComponent.prototype.ngOnInit = function () {
@@ -110,24 +114,46 @@ var AccountComponent = /** @class */ (function () {
     };
     AccountComponent.prototype.loadData = function () {
         var _this = this;
-        this.listingsService.getUserListings(this.user.userId).subscribe(function (listings) {
+        var promises = [];
+        promises.push(this.listingsService.getUserListings(this.user.userId).toPromise().then(function (listings) {
             console.log(listings);
             _this.userListings = listings;
+        }).catch(function (err) {
+            console.log(err);
+        }));
+        promises.push(this.favoritesService.getFavorites(this.user.userId).toPromise().then(function (favorites) {
+            console.log(favorites);
+            _this.favoriteListings = favorites;
+        }).catch(function (err) {
+            console.log(err);
+        }));
+        Promise.all(promises).then(function (s) {
+            console.log(s);
             _this.isLoaded = true;
-        }, function (err) {
+        }).catch(function (err) {
             console.log(err);
             _this.isLoaded = true;
         });
     };
-    AccountComponent.prototype.clickLeft = function (i) {
+    AccountComponent.prototype.clickLeftUserListings = function (i) {
         if (i == 0)
             return;
-        this.index--;
+        this.userListingIndex--;
     };
-    AccountComponent.prototype.clickRight = function (i) {
+    AccountComponent.prototype.clickRightUserListings = function (i) {
         if (i == this.userListings.length - 1)
             return;
-        this.index++;
+        this.userListingIndex++;
+    };
+    AccountComponent.prototype.clickLeftFavoriteListings = function (i) {
+        if (i == 0)
+            return;
+        this.favoriteListingIndex--;
+    };
+    AccountComponent.prototype.clickRightFavoriteListings = function (i) {
+        if (i == this.favoriteListings.length - 1)
+            return;
+        this.favoriteListingIndex++;
     };
     AccountComponent.prototype.onDeleteListingClick = function (listing) {
         this.openDeleteListingDialog(listing, 'Are you sure you want to delete this listing?');
@@ -140,7 +166,7 @@ var AccountComponent = /** @class */ (function () {
         this.isLoaded = false;
         var promises = [];
         for (var i = 0; i < files.length; i++) {
-            promises.push(this.uploadService.uploadImage(files[i], this.userListings[this.index].listingId).toPromise());
+            promises.push(this.uploadService.uploadImage(files[i], this.userListings[this.userListingIndex].listingId).toPromise());
         }
         // Waits for all promises to be returned (all image uploading calls finish)
         Promise.all(promises).then(function (s) {
@@ -152,7 +178,7 @@ var AccountComponent = /** @class */ (function () {
         });
     };
     AccountComponent.prototype.onDeleteImageClick = function (imageUrl) {
-        if (this.userListings[this.index].imageUrls.length == 1) {
+        if (this.userListings[this.userListingIndex].imageUrls.length == 1) {
             return;
         }
         this.openDeleteImageDialog(imageUrl, 'Are you sure you want to delete this image?');
@@ -161,7 +187,7 @@ var AccountComponent = /** @class */ (function () {
         this.router.navigate(['/update-login']);
     };
     AccountComponent.prototype.onEditListingClick = function () {
-        var listing = this.userListings[this.index];
+        var listing = this.userListings[this.userListingIndex];
         this.router.navigate(['/update-property', listing.listingId]);
     };
     AccountComponent.prototype.deleteListing = function (listing) {
@@ -170,7 +196,7 @@ var AccountComponent = /** @class */ (function () {
             _this.userListings = _this.userListings.filter(function (userListing) {
                 return userListing.listingId !== listing.listingId;
             });
-            _this.index = 0;
+            _this.userListingIndex = 0;
         }, function (err) {
             console.log(err);
         });
@@ -178,7 +204,7 @@ var AccountComponent = /** @class */ (function () {
     AccountComponent.prototype.deleteImage = function (imageUrl) {
         var _this = this;
         this.listingsService.deleteImage(imageUrl).subscribe(function (result) {
-            _this.userListings[_this.index].imageUrls = _this.userListings[_this.index].imageUrls.filter(function (url) {
+            _this.userListings[_this.userListingIndex].imageUrls = _this.userListings[_this.userListingIndex].imageUrls.filter(function (url) {
                 return url !== imageUrl;
             });
         }, function (err) {
@@ -239,6 +265,7 @@ var AccountComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"],
             _core_services_register_service__WEBPACK_IMPORTED_MODULE_2__["RegisterService"],
             _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__["ListingsService"],
+            _core_services_favorites_service__WEBPACK_IMPORTED_MODULE_9__["FavoritesService"],
             _core_services_upload_service__WEBPACK_IMPORTED_MODULE_8__["UploadService"],
             _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDialog"]])
     ], AccountComponent);
@@ -1463,6 +1490,76 @@ var ExampleService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
     ], ExampleService);
     return ExampleService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/services/favorites.service.ts":
+/*!****************************************************!*\
+  !*** ./src/app/core/services/favorites.service.ts ***!
+  \****************************************************/
+/*! exports provided: FavoritesService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FavoritesService", function() { return FavoritesService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]({ 'Content-Type': 'application/json' })
+};
+var apiUrl = '/api/favorites';
+var FavoritesService = /** @class */ (function () {
+    function FavoritesService(http) {
+        this.http = http;
+    }
+    FavoritesService.prototype.getFavorites = function (userId) {
+        return this.http.get(apiUrl, {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]({
+                'Content-Type': 'application/json',
+                'userId': String(userId)
+            })
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    FavoritesService.prototype.addFavorite = function (listingId, userId) {
+        var body = {
+            userId: userId,
+            listingId: listingId
+        };
+        return this.http.post(apiUrl, body, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    FavoritesService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
+    };
+    FavoritesService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"]])
+    ], FavoritesService);
+    return FavoritesService;
 }());
 
 

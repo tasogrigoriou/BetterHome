@@ -116,7 +116,7 @@ module.exports = ".property-toolbar {\n  min-height: 74px;\n  height: auto;\n  w
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"container-fluid property-toolbar\">\n\n    <mat-form-field class=\"cont-search\" [floatLabel]=\"'never'\">\n      <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" (keyup.enter)=\"onSearchClick()\" required>\n      <a class=\"my-search\" mat-button matSuffix color=\"primary\" (click)=\"onSearchClick()\"><mat-icon>search</mat-icon></a>\n    </mat-form-field>\n\n    <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n      <mat-label>Listing Type</mat-label>\n      <mat-select [(value)]=\"listingSearch.listingType\" (selectionChange)=\"onSelectionChange()\">\n        <mat-option value=\"Any\">Any Type</mat-option>\n        <mat-option value=\"House\">House</mat-option>\n        <mat-option value=\"Apartment\">Apartment</mat-option>\n        <mat-option value=\"Condo\">Condo</mat-option>\n      </mat-select>\n    </mat-form-field>\n\n    <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n      <mat-label>Sale or Rental</mat-label>\n      <mat-select [(value)]=\"listingSearch.forSale\" (selectionChange)=\"onSelectionChange()\">\n        <mat-option value=null>Sale and Rental</mat-option>\n        <mat-option value=1>Sale</mat-option>\n        <mat-option value=0>Rental</mat-option>\n      </mat-select>\n    </mat-form-field>\n\n    <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n      <mat-label>Bedrooms</mat-label>\n      <mat-select [(value)]=\"listingSearch.numBedrooms\" (selectionChange)=\"onSelectionChange()\">\n        <mat-option value=0>Any Beds</mat-option>\n        <mat-option value=1>1+ Bed</mat-option>\n        <mat-option value=2>2+ Beds</mat-option>\n        <mat-option value=3>3+ Beds</mat-option>\n        <mat-option value=4>4+ Beds</mat-option>\n        <mat-option value=5>5+ Beds</mat-option>\n        <mat-option value=6>6+ Beds</mat-option>\n      </mat-select>\n    </mat-form-field>\n\n    <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n      <mat-label>Bathrooms</mat-label>\n      <mat-select [(value)]=\"listingSearch.numBathrooms\" (selectionChange)=\"onSelectionChange()\">\n        <mat-option value=0>Any Baths</mat-option>\n        <mat-option value=1>1+ Bath</mat-option>\n        <mat-option value=2>2+ Baths</mat-option>\n        <mat-option value=3>3+ Baths</mat-option>\n        <mat-option value=4>4+ Baths</mat-option>\n        <mat-option value=5>5+ Baths</mat-option>\n        <mat-option value=6>6+ Baths</mat-option>\n      </mat-select>\n    </mat-form-field>\n\n  </div>\n\n  <div class=\"space\">\n    <h2>Property Listings</h2>\n    <ng-template [ngIf]=\"listings.length > 0\">\n      <mat-paginator class=\"property-paginator\"\n                     [length]=\"listings.length\" [pageSize]=\"15\">\n      </mat-paginator>\n    </ng-template>\n  </div>\n\n  <div class=\"property-container\" fxLayout=\"row wrap\" fxLayoutAlign=\"start start\" fxLayoutGap=\"10px\" fxLayoutGap.xs=\"0\">\n    <mat-card class=\"property-card\" appMaterialElevation defaultElevation=\"3\" raisedElevation=\"24\"\n              [fxFlex]=\"rowWidth\"\n              (window:resize)=\"onResize($event)\"\n              *ngFor=\"let listing of listings\">\n\n      <a class=\"a-link-card\" [routerLink]=\"[listing.listingId]\"></a>\n\n      <a class=\"favorite-button\" (click)=\"onFavoriteClick(listing)\">\n        <mat-icon style=\"font-size: 21px !important\" color=\"warn\">favorite_border</mat-icon>\n      </a>\n\n      <mat-card-header>\n        <mat-card-title><h5>{{listing.title}}</h5>\n        </mat-card-title>\n        <mat-card-subtitle style=\"padding-top: 6px !important\">{{listing.street + ', ' + listing.city + ', ' + listing.state}}</mat-card-subtitle>\n      </mat-card-header>\n\n      <img class=\"property-card-image\" mat-card-image\n           [src]=\"listing.imageUrls[0]\"\n           alt=\"Image not found\">\n\n      <mat-card-content>\n        <h6>{{listing.listingType + ' for ' + (listing.forSale ? 'sale' : 'rent')}}</h6>\n        <p><i>{{'$' + numberWithCommas(listing.price) + ' | ' + listing.numBedrooms + ' beds' + ' | ' + listing.numBathrooms + ' baths'}}</i></p>\n        <p class=\"property-access-title\">{{getPropertyAccessibility(listing)}}</p>\n        <p>{{listing.description}}</p>\n      </mat-card-content>\n    </mat-card>\n  </div>\n\n  <div>\n    <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n  </div>\n\n  <ng-template [ngIf]=\"listings.length > 0\">\n    <mat-paginator class=\"property-paginator\"\n                   [length]=\"listings.length\" [pageSize]=\"15\">\n    </mat-paginator>\n  </ng-template>\n\n</div>\n"
+module.exports = "<div class=\"container\">\n  <div class=\"container-fluid property-toolbar\">\n\n    <mat-form-field class=\"cont-search\" [floatLabel]=\"'never'\">\n      <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" (keyup.enter)=\"onSearchClick()\" required>\n      <a class=\"my-search\" mat-button matSuffix color=\"primary\" (click)=\"onSearchClick()\"><mat-icon>search</mat-icon></a>\n    </mat-form-field>\n\n    <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n      <mat-label>Listing Type</mat-label>\n      <mat-select [(value)]=\"listingSearch.listingType\" (selectionChange)=\"onSelectionChange()\">\n        <mat-option value=\"Any\">Any Type</mat-option>\n        <mat-option value=\"House\">House</mat-option>\n        <mat-option value=\"Apartment\">Apartment</mat-option>\n        <mat-option value=\"Condo\">Condo</mat-option>\n      </mat-select>\n    </mat-form-field>\n\n    <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n      <mat-label>Sale or Rental</mat-label>\n      <mat-select [(value)]=\"listingSearch.forSale\" (selectionChange)=\"onSelectionChange()\">\n        <mat-option value=null>Sale and Rental</mat-option>\n        <mat-option value=1>Sale</mat-option>\n        <mat-option value=0>Rental</mat-option>\n      </mat-select>\n    </mat-form-field>\n\n    <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n      <mat-label>Bedrooms</mat-label>\n      <mat-select [(value)]=\"listingSearch.numBedrooms\" (selectionChange)=\"onSelectionChange()\">\n        <mat-option value=0>Any Beds</mat-option>\n        <mat-option value=1>1+ Bed</mat-option>\n        <mat-option value=2>2+ Beds</mat-option>\n        <mat-option value=3>3+ Beds</mat-option>\n        <mat-option value=4>4+ Beds</mat-option>\n        <mat-option value=5>5+ Beds</mat-option>\n        <mat-option value=6>6+ Beds</mat-option>\n      </mat-select>\n    </mat-form-field>\n\n    <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n      <mat-label>Bathrooms</mat-label>\n      <mat-select [(value)]=\"listingSearch.numBathrooms\" (selectionChange)=\"onSelectionChange()\">\n        <mat-option value=0>Any Baths</mat-option>\n        <mat-option value=1>1+ Bath</mat-option>\n        <mat-option value=2>2+ Baths</mat-option>\n        <mat-option value=3>3+ Baths</mat-option>\n        <mat-option value=4>4+ Baths</mat-option>\n        <mat-option value=5>5+ Baths</mat-option>\n        <mat-option value=6>6+ Baths</mat-option>\n      </mat-select>\n    </mat-form-field>\n\n  </div>\n\n  <div class=\"space\">\n    <h2>Property Listings</h2>\n    <ng-template [ngIf]=\"listings.length > 0\">\n      <mat-paginator class=\"property-paginator\"\n                     [length]=\"listings.length\" [pageSize]=\"15\">\n      </mat-paginator>\n    </ng-template>\n  </div>\n\n  <div class=\"property-container\" fxLayout=\"row wrap\" fxLayoutAlign=\"start start\" fxLayoutGap=\"10px\" fxLayoutGap.xs=\"0\">\n    <mat-card class=\"property-card\" appMaterialElevation defaultElevation=\"3\" raisedElevation=\"24\"\n              [fxFlex]=\"rowWidth\"\n              (window:resize)=\"onResize($event)\"\n              *ngFor=\"let listing of listings\">\n\n      <a class=\"a-link-card\" [routerLink]=\"[listing.listingId]\"></a>\n\n      <a class=\"favorite-button\" (click)=\"onFavoriteClick(listing.listingId)\">\n        <mat-icon style=\"font-size: 21px !important\" color=\"warn\">favorite_border</mat-icon>\n      </a>\n\n      <mat-card-header>\n        <mat-card-title><h5>{{listing.title}}</h5>\n        </mat-card-title>\n        <mat-card-subtitle style=\"padding-top: 6px !important\">{{listing.street + ', ' + listing.city + ', ' + listing.state}}</mat-card-subtitle>\n      </mat-card-header>\n\n      <img class=\"property-card-image\" mat-card-image\n           [src]=\"listing.imageUrls[0]\"\n           alt=\"Image not found\">\n\n      <mat-card-content>\n        <h6>{{listing.listingType + ' for ' + (listing.forSale ? 'sale' : 'rent')}}</h6>\n        <p><i>{{'$' + numberWithCommas(listing.price) + ' | ' + listing.numBedrooms + ' beds' + ' | ' + listing.numBathrooms + ' baths'}}</i></p>\n        <p class=\"property-access-title\">{{getPropertyAccessibility(listing)}}</p>\n        <p>{{listing.description}}</p>\n      </mat-card-content>\n    </mat-card>\n  </div>\n\n  <div>\n    <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n  </div>\n\n  <ng-template [ngIf]=\"listings.length > 0\">\n    <mat-paginator class=\"property-paginator\"\n                   [length]=\"listings.length\" [pageSize]=\"15\">\n    </mat-paginator>\n  </ng-template>\n\n</div>\n"
 
 /***/ }),
 
@@ -137,6 +137,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../register/register.dialog */ "./src/app/register/register.dialog.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_services_favorites_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../core/services/favorites.service */ "./src/app/core/services/favorites.service.ts");
+
 
 
 
@@ -145,16 +147,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var PropertyComponent = /** @class */ (function () {
-    function PropertyComponent(router, listingsService, searchService, dialog) {
+    function PropertyComponent(router, listingsService, searchService, favoritesService, dialog) {
         this.router = router;
         this.listingsService = listingsService;
         this.searchService = searchService;
+        this.favoritesService = favoritesService;
         this.dialog = dialog;
         this.filter = true;
         this.isLoaded = true;
     }
     PropertyComponent.prototype.ngOnInit = function () {
         this.listings = this.searchService.getListings();
+        if (localStorage.getItem('loginUser')) {
+            this.user = JSON.parse(localStorage.getItem('loginUser'));
+        }
         if (localStorage.getItem('listingSearch')) {
             this.listingSearch = JSON.parse(localStorage.getItem('listingSearch'));
         }
@@ -197,8 +203,14 @@ var PropertyComponent = /** @class */ (function () {
             _this.openDialog('Unable to retrieve any listing based on your search and filter options. Please try again');
         });
     };
-    PropertyComponent.prototype.onFavoriteClick = function (listing) {
-        console.log(listing.title);
+    PropertyComponent.prototype.onFavoriteClick = function (listingId) {
+        if (this.user) {
+            this.favoritesService.addFavorite(listingId, this.user.userId).subscribe(function (result) {
+                console.log(result);
+            }, function (err) {
+                console.log(err);
+            });
+        }
     };
     PropertyComponent.prototype.numberWithCommas = function (x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -231,6 +243,7 @@ var PropertyComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"],
             _core_services_listings_service__WEBPACK_IMPORTED_MODULE_2__["ListingsService"],
             _core_services_search_listings_service__WEBPACK_IMPORTED_MODULE_3__["SearchListingsService"],
+            _core_services_favorites_service__WEBPACK_IMPORTED_MODULE_7__["FavoritesService"],
             _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatDialog"]])
     ], PropertyComponent);
     return PropertyComponent;

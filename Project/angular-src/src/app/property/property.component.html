@@ -70,7 +70,7 @@
 
       <a class="a-link-card" [routerLink]="[listing.listingId]"></a>
 
-      <a class="favorite-button" (click)="onFavoriteClick(listing)">
+      <a class="favorite-button" (click)="onFavoriteClick(listing.listingId)">
         <mat-icon style="font-size: 21px !important" color="warn">favorite_border</mat-icon>
       </a>
 

@@ -4,6 +4,8 @@ import {SearchListingsService} from "../core/services/search.listings.service";
 import {RegisterDialog} from "../register/register.dialog";
 import {MatDialog} from "@angular/material";
 import {Router} from "@angular/router";
+import {FavoritesService} from "../core/services/favorites.service";
+import {LoginUser} from "../core/services/login.service";
 
 @Component({
   selector: 'app-property',
@@ -14,6 +16,8 @@ export class PropertyComponent implements OnInit, OnDestroy {
   breakpoint;
   rowWidth;
 
+  user: LoginUser;
+
   listings: Listing[];
   listingSearch: ListingSearch;
   filter: boolean = true;
@@ -23,11 +27,16 @@ export class PropertyComponent implements OnInit, OnDestroy {
     private router: Router,
     private listingsService: ListingsService,
     private searchService: SearchListingsService,
+    private favoritesService: FavoritesService,
     public dialog: MatDialog
   ) {}
 
   ngOnInit() {
     this.listings = this.searchService.getListings();
+
+    if (localStorage.getItem('loginUser')) {
+      this.user = JSON.parse(localStorage.getItem('loginUser'));
+    }
 
     if (localStorage.getItem('listingSearch')) {
       this.listingSearch = JSON.parse(localStorage.getItem('listingSearch'));
@@ -78,8 +87,14 @@ export class PropertyComponent implements OnInit, OnDestroy {
         });
   }
 
-  onFavoriteClick(listing: Listing) {
-    console.log(listing.title);
+  onFavoriteClick(listingId: number) {
+    if (this.user) {
+      this.favoritesService.addFavorite(listingId, this.user.userId).subscribe(result => {
+        console.log(result);
+      }, err => {
+        console.log(err);
+      });
+    }
   }
 
   numberWithCommas(x: number) {

@@ -36,26 +36,26 @@
       </mat-tab>
 
       <mat-tab label="My Listings">
-        <ng-template [ngIf]="userListings[index] && userListings.length > 0">
+        <ng-template [ngIf]="userListings[userListingIndex] && userListings.length > 0">
           <div class="property-container">
             <mat-card class="property-card">
 
-              <a class="delete-button" (click)="onDeleteListingClick(userListings[index])">
+              <a class="delete-button" (click)="onDeleteListingClick(userListings[userListingIndex])">
                 <mat-icon style="font-size: 33px !important" color="warn">delete_forever</mat-icon>
               </a>
 
               <mat-card-header>
-                <mat-card-title><h5>{{userListings[index].title}}</h5>
+                <mat-card-title><h5>{{userListings[userListingIndex].title}}</h5>
                 </mat-card-title>
                 <mat-card-subtitle style="padding-top: 6px !important">
-                  {{userListings[index].street + ', ' + userListings[index].city + ', ' + userListings[index].state}}
+                  {{userListings[userListingIndex].street + ', ' + userListings[userListingIndex].city + ', ' + userListings[userListingIndex].state}}
                 </mat-card-subtitle>
               </mat-card-header>
 
-              <ng-template [ngIf]="userListings[index] && userListings[index].imageUrls.length > 0">
+              <ng-template [ngIf]="userListings[userListingIndex] && userListings[userListingIndex].imageUrls.length > 0">
                 <drag-scroll #drag_scroll>
                   <div class="img-wrap"
-                       *ngFor="let imageUrl of userListings[index].imageUrls">
+                       *ngFor="let imageUrl of userListings[userListingIndex].imageUrls">
                     <img class="img-container"
                          drag-scroll-item
                          [src]="imageUrl"
@@ -79,10 +79,10 @@
               </ng-template>
 
               <mat-card-content>
-                <h6>{{userListings[index].listingType + ' for ' + (userListings[index].forSale ? 'sale' : 'rent')}}</h6>
-                <p><i>{{'$' + numberWithCommas(userListings[index].price) + ' | ' + userListings[index].numBedrooms + ' beds' + ' | ' + userListings[index].numBathrooms + ' baths'}}</i></p>
-                <p class="property-access-title">{{getPropertyAccessibility(userListings[index])}}</p>
-                <p>{{userListings[index].description}}</p>
+                <h6>{{userListings[userListingIndex].listingType + ' for ' + (userListings[userListingIndex].forSale ? 'sale' : 'rent')}}</h6>
+                <p><i>{{'$' + numberWithCommas(userListings[userListingIndex].price) + ' | ' + userListings[userListingIndex].numBedrooms + ' beds' + ' | ' + userListings[userListingIndex].numBathrooms + ' baths'}}</i></p>
+                <p class="property-access-title">{{getPropertyAccessibility(userListings[userListingIndex])}}</p>
+                <p>{{userListings[userListingIndex].description}}</p>
               </mat-card-content>
             </mat-card>
           </div>
@@ -90,16 +90,59 @@
 
         <div class="w3-center">
           <div class="w3-section">
-            <button mat-button (click)="clickLeft(index)">❮ Prev</button>
-            <button mat-button (click)="clickRight(index)">Next ❯</button>
+            <button mat-button (click)="clickLeftUserListings(userListingIndex)">❮ Prev</button>
+            <button mat-button (click)="clickRightUserListings(userListingIndex)">Next ❯</button>
             <button mat-raised-button type="edit" class="btn btn-danger pull-right" (click)="onEditListingClick()">Edit</button>
           </div>
         </div>
       </mat-tab>
 
       <mat-tab label="Favorite">
-        Favorite List
-        <br><br>
+        <ng-template [ngIf]="favoriteListings[favoriteListingIndex] && favoriteListings.length > 0">
+          <div class="property-container">
+            <mat-card class="property-card">
+
+              <a class="delete-button" (click)="onDeleteListingClick(favoriteListings[favoriteListingIndex])">
+                <mat-icon style="font-size: 33px !important" color="warn">delete_forever</mat-icon>
+              </a>
+
+              <mat-card-header>
+                <mat-card-title><h5>{{favoriteListings[favoriteListingIndex].title}}</h5>
+                </mat-card-title>
+                <mat-card-subtitle style="padding-top: 6px !important">
+                  {{favoriteListings[favoriteListingIndex].street + ', ' + favoriteListings[favoriteListingIndex].city + ', ' + favoriteListings[favoriteListingIndex].state}}
+                </mat-card-subtitle>
+              </mat-card-header>
+
+              <ng-template [ngIf]="favoriteListings[favoriteListingIndex] && favoriteListings[favoriteListingIndex].imageUrls.length > 0">
+                <drag-scroll #drag_scroll>
+                  <div class="img-wrap"
+                       *ngFor="let imageUrl of favoriteListings[favoriteListingIndex].imageUrls">
+                    <img class="img-container"
+                         drag-scroll-item
+                         [src]="imageUrl"
+                         alt="" />
+                  </div>
+                </drag-scroll>
+              </ng-template>
+
+              <mat-card-content>
+                <h6>{{favoriteListings[favoriteListingIndex].listingType + ' for ' + (favoriteListings[favoriteListingIndex].forSale ? 'sale' : 'rent')}}</h6>
+                <p><i>{{'$' + numberWithCommas(favoriteListings[favoriteListingIndex].price) + ' | ' + favoriteListings[favoriteListingIndex].numBedrooms + ' beds' + ' | ' + favoriteListings[favoriteListingIndex].numBathrooms + ' baths'}}</i></p>
+                <p class="property-access-title">{{getPropertyAccessibility(favoriteListings[favoriteListingIndex])}}</p>
+                <p>{{favoriteListings[favoriteListingIndex].description}}</p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </ng-template>
+
+        <div class="w3-center">
+          <div class="w3-section">
+            <button mat-button (click)="clickLeftFavoriteListings(favoriteListingIndex)">❮ Prev</button>
+            <button mat-button (click)="clickRightFavoriteListings(favoriteListingIndex)">Next ❯</button>
+            <button mat-raised-button type="edit" class="btn btn-danger pull-right" (click)="onEditListingClick()">Edit</button>
+          </div>
+        </div>
       </mat-tab>
 
     </mat-tab-group>

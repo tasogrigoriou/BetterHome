@@ -7,6 +7,7 @@ import {Router} from "@angular/router";
 import {MatDialog} from "@angular/material";
 import {DeleteDialog} from "./delete.dialog";
 import {UploadService} from "../core/services/upload.service";
+import {FavoritesService} from "../core/services/favorites.service";
 
 @Component({
   selector: 'app-account',
@@ -15,13 +16,15 @@ import {UploadService} from "../core/services/upload.service";
 })
 export class AccountComponent implements OnInit {
   user: LoginUser;
+
   userListings: Listing[] = [];
   favoriteListings: Listing[] = [];
-
-  index = 0;
-  isLoaded = false;
+  userListingIndex = 0;
+  favoriteListingIndex = 0;
 
   files: File[];
+
+  isLoaded = false;
 
   @ViewChild('drag_scroll', { read: DragScrollComponent }) dragScroll: DragScrollComponent;
 
@@ -29,6 +32,7 @@ export class AccountComponent implements OnInit {
     private router: Router,
     private registerService: RegisterService,
     private listingsService: ListingsService,
+    private favoritesService: FavoritesService,
     private uploadService: UploadService,
     public dialog: MatDialog
   ) {}
@@ -43,24 +47,52 @@ export class AccountComponent implements OnInit {
   }
 
   loadData() {
-    this.listingsService.getUserListings(this.user.userId).subscribe(listings => {
-      console.log(listings);
-      this.userListings = listings;
+    let promises = [];
+
+    promises.push(
+      this.listingsService.getUserListings(this.user.userId).toPromise().then(listings => {
+        console.log(listings);
+        this.userListings = listings;
+      }).catch(err => {
+        console.log(err);
+      })
+    );
+    promises.push(
+      this.favoritesService.getFavorites(this.user.userId).toPromise().then(favorites => {
+        console.log(favorites);
+        this.favoriteListings = favorites;
+      }).catch(err => {
+        console.log(err);
+      })
+    );
+
+    Promise.all(promises).then(s => {
+      console.log(s);
       this.isLoaded = true;
-    }, err => {
+    }).catch(err => {
       console.log(err);
       this.isLoaded = true;
     });
   }
 
-  clickLeft(i: number) {
+  clickLeftUserListings(i: number) {
     if (i == 0) return;
-    this.index--;
+    this.userListingIndex--;
   }
 
-  clickRight(i: number) {
+  clickRightUserListings(i: number) {
     if (i == this.userListings.length - 1) return;
-    this.index++;
+    this.userListingIndex++;
+  }
+
+  clickLeftFavoriteListings(i: number) {
+    if (i == 0) return;
+    this.favoriteListingIndex--;
+  }
+
+  clickRightFavoriteListings(i: number) {
+    if (i == this.favoriteListings.length - 1) return;
+    this.favoriteListingIndex++;
   }
 
   onDeleteListingClick(listing: Listing) {
@@ -75,7 +107,7 @@ export class AccountComponent implements OnInit {
     this.isLoaded = false;
     let promises = [];
     for (let i: number = 0; i < files.length; i++) {
-      promises.push(this.uploadService.uploadImage(files[i], this.userListings[this.index].listingId).toPromise());
+      promises.push(this.uploadService.uploadImage(files[i], this.userListings[this.userListingIndex].listingId).toPromise());
     }
 
     // Waits for all promises to be returned (all image uploading calls finish)
@@ -89,7 +121,7 @@ export class AccountComponent implements OnInit {
   }
 
   onDeleteImageClick(imageUrl: string) {
-    if (this.userListings[this.index].imageUrls.length == 1) {
+    if (this.userListings[this.userListingIndex].imageUrls.length == 1) {
       return;
     }
     this.openDeleteImageDialog(imageUrl, 'Are you sure you want to delete this image?');
@@ -100,7 +132,7 @@ export class AccountComponent implements OnInit {
   }
 
   onEditListingClick() {
-    let listing = this.userListings[this.index];
+    let listing = this.userListings[this.userListingIndex];
     this.router.navigate(['/update-property', listing.listingId]);
   }
 
@@ -109,7 +141,7 @@ export class AccountComponent implements OnInit {
       this.userListings = this.userListings.filter(userListing => {
         return userListing.listingId !== listing.listingId;
       });
-      this.index = 0;
+      this.userListingIndex = 0;
     }, err => {
       console.log(err);
     });
@@ -117,7 +149,7 @@ export class AccountComponent implements OnInit {
 
   deleteImage(imageUrl: string) {
     this.listingsService.deleteImage(imageUrl).subscribe(result => {
-      this.userListings[this.index].imageUrls = this.userListings[this.index].imageUrls.filter(url => {
+      this.userListings[this.userListingIndex].imageUrls = this.userListings[this.userListingIndex].imageUrls.filter(url => {
         return url !== imageUrl;
       });
     }, err => {
