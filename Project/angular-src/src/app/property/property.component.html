@@ -59,6 +59,19 @@
   </mat-form-field>
 
   <mat-form-field class="cont-form" [floatLabel]="'never'">
+    <mat-label>Lot size</mat-label>
+    <mat-select [(value)]="listingSearch.lotSize" (selectionChange)="onSelectionChange()">
+      <mat-option value=0>Any Lot Size</mat-option>
+      <mat-option value=1000>1000+ sqft</mat-option>
+      <mat-option value=2000>2000+ sqft</mat-option>
+      <mat-option value=3000>3000+ sqft</mat-option>
+      <mat-option value=4000>4000+ sqft</mat-option>
+      <mat-option value=5000>5000+ sqft</mat-option>
+      <mat-option value=6000>6000+ sqft</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="cont-form" [floatLabel]="'never'">
     <mat-label>Accessibility</mat-label>
     <mat-select [formControl]="accessibilities" multiple (selectionChange)="onSelectionChange()">
       <mat-option *ngFor="let accessibility of accessibilityList" [value]="accessibility">{{accessibility}}</mat-option>

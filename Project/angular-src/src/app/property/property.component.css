@@ -40,7 +40,6 @@
 
 .property-card {
   position: relative;
-  margin-top: 10px;
   align-items: center;
 }
 
@@ -90,7 +89,7 @@
 }
 
 .cont-search {
-  margin-left: 60px;
+  margin-left: 35px;
   margin-top: 20px;
   margin-right: 20px;
   max-width: 210px;

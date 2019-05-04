@@ -56,6 +56,7 @@ function constructSearchQuery(req) {
     let numBedrooms = Number(req.body.numBedrooms);
     let numBathrooms = Number(req.body.numBathrooms);
     let forSale = Number(req.body.forSale);
+    let lotSize = Number(req.body.lotSize);
     let minPrice = Number(req.body.minPrice);
     let maxPrice = Number(req.body.maxPrice);
     let accessibilities = req.body.accessibilities;
@@ -64,6 +65,7 @@ function constructSearchQuery(req) {
     let numBedroomsQuery = ``;
     let numBathroomsQuery = ``;
     let forSaleQuery = ``;
+    let lotSizeQuery = ``;
     let priceQuery = ``;
     let laundryQuery = ``;
     let hospitalQuery = ``;
@@ -81,6 +83,9 @@ function constructSearchQuery(req) {
     }
     if (!isNaN(forSale)) {
         forSaleQuery = `AND forSale = ` + database.escape(forSale);
+    }
+    if (lotSize && lotSize !== 0) {
+        lotSizeQuery = `AND lotSize >= ` + database.escape(lotSize);
     }
     if (minPrice && maxPrice) {
         priceQuery = `AND price BETWEEN ` + database.escape(minPrice) + ` AND ` + database.escape(maxPrice);
@@ -105,7 +110,7 @@ function constructSearchQuery(req) {
     }
 
     return `SELECT * FROM Listing WHERE city LIKE '%${city}%' 
-    ${listingTypeQuery} ${numBedroomsQuery} ${numBathroomsQuery} ${forSaleQuery} ${priceQuery} 
+    ${listingTypeQuery} ${numBedroomsQuery} ${numBathroomsQuery} ${forSaleQuery} ${priceQuery} ${lotSizeQuery}
     ${laundryQuery} ${hospitalQuery} ${wheelchairQuery} ${bartQuery}`;
 }
 
