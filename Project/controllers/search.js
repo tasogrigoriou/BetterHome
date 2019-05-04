@@ -25,7 +25,7 @@ router.post('/', function (req, res) {
             for (let i = 0; i < result.length; i++) {
                 let listing = result[i];
                 let sql3 = `SELECT imageUrl FROM ListingImage WHERE listingId = ` + database.escape(listing.listingId);
-                let promise = database.query(sql3).then(images => {
+                let promise = sqlPromiseWrapper(sql3).then(images => {
                     console.log(images);
                     let listingImages = [];
                     for (let i = 0; i < images.length; i++) {
@@ -107,6 +107,20 @@ function constructSearchQuery(req) {
     return `SELECT * FROM Listing WHERE city LIKE '%${city}%' 
     ${listingTypeQuery} ${numBedroomsQuery} ${numBathroomsQuery} ${forSaleQuery} ${priceQuery} 
     ${laundryQuery} ${hospitalQuery} ${wheelchairQuery} ${bartQuery}`;
+}
+
+// sqlPromiseWrapper wraps a sql query call into a Promise
+// and handles the callbacks with resolve and reject
+function sqlPromiseWrapper(sql) {
+    return new Promise((resolve, reject) => {
+        database.query(sql, function (err, result) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(result);
+            }
+        });
+    });
 }
 
 module.exports = router;
