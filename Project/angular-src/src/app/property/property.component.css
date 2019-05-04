@@ -40,6 +40,7 @@
 
 .property-card {
   position: relative;
+  margin-bottom: 10px;
   align-items: center;
 }
 
@@ -78,8 +79,8 @@
 }
 
 .space {
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .cont-form {
@@ -110,4 +111,13 @@
 .property-access-title {
   margin-top: -10px;
   color: rgba(0, 0, 0, 0.6);
+}
+
+.desc-cont {
+  /*line-height: 2.5ex;*/
+  /*height: 7.5ex; !* 2.5ex for each visible line *!*/
+  /*overflow: hidden;*/
+  /*display: block;*/
+  /*white-space: nowrap;*/
+  /*text-overflow: ellipsis;*/
 }

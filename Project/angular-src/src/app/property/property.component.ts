@@ -2,7 +2,7 @@ import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {Listing, ListingsService} from "../core/services/listings.service";
 import {ListingSearch, SearchListingsService} from "../core/services/search.listings.service";
 import {RegisterDialog} from "../register/register.dialog";
-import {MatDialog} from "@angular/material";
+import {MatDialog, MatPaginator} from "@angular/material";
 import {Router} from "@angular/router";
 import {FavoritesService} from "../core/services/favorites.service";
 import {LoginUser} from "../core/services/login.service";
@@ -23,12 +23,18 @@ export class PropertyComponent implements OnInit, OnDestroy {
   listings: Listing[];
   listingSearch: ListingSearch;
 
+  pagedListings: Listing[];
+
   filter: boolean = true;
   isLoaded: boolean = false;
 
   accessibilities = new FormControl();
   accessibilityList: string[] = ['Laundry', 'Hospital', 'Wheelchair', 'BART'];
 
+  pageSize: number = 3;
+  pageSizeOptions: number[] = [3, 6, 18, 30, 60];
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild('drag_scroll', { read: DragScrollComponent }) dragScroll: DragScrollComponent;
 
   constructor(
@@ -54,9 +60,10 @@ export class PropertyComponent implements OnInit, OnDestroy {
     }
 
     this.listings = this.searchService.getListings();
+    this.pagedListings = this.listings.slice(0, this.pageSize);
 
     this.breakpoint = (window.innerWidth <= 500) ? 1 : 3;
-    this.rowWidth = (window.innerWidth <= 500) ? '100%' : '30%';
+    this.rowWidth = (window.innerWidth <= 500) ? '100%' : '32%';
 
     if (!this.user) {
       this.isLoaded = true;
@@ -88,9 +95,15 @@ export class PropertyComponent implements OnInit, OnDestroy {
     }
   }
 
+  pageDidChange(event) {
+    this.pageSize = event.pageSize;
+    let startIndex = this.pageSize * event.pageIndex;
+    this.pagedListings = this.listings.slice(startIndex, startIndex + this.pageSize);
+  }
+
   onResize(event) {
     this.breakpoint = (event.target.innerWidth <= 500) ? 1 : 3;
-    this.rowWidth = (event.target.innerWidth <= 500) ? '100%' : '30%';
+    this.rowWidth = (event.target.innerWidth <= 500) ? '100%' : '32%';
   }
 
   onSearchClick() {
