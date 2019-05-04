@@ -3,14 +3,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<h3 class="prop-title">{{listing.title}}</h3>
+
 <body class="body">
 
 <div class="w3-center">
   <div class="w3-section">
-
-<!--    <div>-->
-<!--      <button class="favorite" mat-raised-button (click)="addToFavorites()" color="primary">+ Add to Favorites</button>-->
-<!--    </div>-->
     <div class="my-container">
       <drag-scroll #drag_scroll>
         <img drag-scroll-item *ngFor="let photo of listing.imageUrls" [src]="photo" alt="" />
@@ -18,25 +17,32 @@
     </div>
   </div>
 
-<!--  <div>-->
-    <button mat-button (click)="moveLeft()">❮ Prev</button>
-    <button mat-button (click)="moveRight()">Next ❯</button>
-<!--  </div>-->
+  <button mat-button (click)="moveLeft()">❮ Prev</button>
+  <button mat-button (click)="moveRight()">Next ❯</button>
 
 </div>
 
 <div class="propertyOverview" *ngIf="listing.listingId">
   <h2>Overview</h2>
   <hr width="50%" size="8">
-  <p><i class="fa fa-dollar fa-fw w3-margin-right w3-large "></i> For {{ forSale() }} ${{ listing.price }}</p>
-  <p><i class="fa fa-bath fa-fw w3-margin-right w3-large "></i> {{ listing.numBedrooms }} bed, {{ listing.numBathrooms }} bath</p>
-  <p><i class="fa fa-map-marker fa-fw w3-margin-right w3-large "></i> {{ listing.street }} {{ listing.city }} {{ listing.zipCode }}</p>
+  <p><i class="fa fa-building fa-fw w3-margin-right w3-large "></i>For {{ saleTitle() }}</p>
+  <p><i class="fa fa-dollar fa-fw w3-margin-right w3-large "></i>{{ priceTitle() }}</p>
+  <p><i class="fa fa-map-marker fa-fw w3-margin-right w3-large "></i>{{listing.street }}, {{ listing.city }}, {{ listing.state }}, {{ listing.zipCode }}</p>
+  <p><i class="fa fa-bed fa-fw w3-margin-right w3-large "></i>{{bedTitle()}}</p>
+  <p><i class="fa fa-bath fa-fw w3-margin-right w3-large "></i>{{bathTitle()}}</p>
+  <p><i class="fa fa-universal-access fa-fw w3-margin-right w3-large "></i>{{accessibilityTitle()}}</p>
+  <p><i class="fa fa-info-circle fa-fw w3-margin-right w3-large "></i>{{listing.description}}</p>
   <h2>Contact</h2>
-<!--  <p><i class="fa fa-phone fa-fw w3-margin-right w3-large "></i> {{user.phoneNumber || '(415) 766-2205'}}</p>-->
-<!--  <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large "></i> {{user.emailAddress || 'example-email@mail.sfsu.edu'}}</p>-->
-  <p><i class="fa fa-phone fa-fw w3-margin-right w3-large "></i>(415) 766-2205</p>
-  <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large "></i>example-email@mail.sfsu.edu</p>
+  <hr width="50%" size="8">
+  <p><i class="fa fa-phone fa-fw w3-margin-right w3-large "></i>{{formatPhoneNumber(listing.user.phoneNumber)}}</p>
+  <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large "></i>{{listing.user.emailAddress}}</p>
 </div>
+
+<ng-template [ngIf]="user">
+  <div class="fav-btn-container">
+    <button class="fav-btn" mat-raised-button (click)="addToFavorites()" color="primary">+ Add to Favorites</button>
+  </div>
+</ng-template>
 
 </body>
 </html>

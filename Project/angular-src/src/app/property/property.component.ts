@@ -1,12 +1,13 @@
 import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {Listing, ListingsService} from "../core/services/listings.service";
-import {SearchListingsService} from "../core/services/search.listings.service";
+import {ListingSearch, SearchListingsService} from "../core/services/search.listings.service";
 import {RegisterDialog} from "../register/register.dialog";
 import {MatDialog} from "@angular/material";
 import {Router} from "@angular/router";
 import {FavoritesService} from "../core/services/favorites.service";
 import {LoginUser} from "../core/services/login.service";
 import {DragScrollComponent} from "ngx-drag-scroll/lib";
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-property',
@@ -24,6 +25,9 @@ export class PropertyComponent implements OnInit, OnDestroy {
 
   filter: boolean = true;
   isLoaded: boolean = false;
+
+  accessibilities = new FormControl();
+  accessibilityList: string[] = ['Laundry', 'Hospital', 'Wheelchair', 'BART'];
 
   @ViewChild('drag_scroll', { read: DragScrollComponent }) dragScroll: DragScrollComponent;
 
@@ -90,10 +94,15 @@ export class PropertyComponent implements OnInit, OnDestroy {
   }
 
   onSearchClick() {
+    if (!this.listingSearch.city.length) {
+      this.openDialog('Please enter some text for the city field');
+      return;
+    }
     this.reloadData();
   }
 
   onSelectionChange() {
+    this.listingSearch.accessibilities = this.accessibilities.value;
     this.reloadData();
   }
 
@@ -137,6 +146,11 @@ export class PropertyComponent implements OnInit, OnDestroy {
     return listing.isFavorite;
   }
 
+  numberOnly(event): boolean {
+    const charCode = (event.which) ? event.which : event.keyCode;
+    return !(charCode > 31 && (charCode < 48 || charCode > 57));
+  }
+
   numberWithCommas(x: number) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
@@ -170,16 +184,3 @@ export class PropertyComponent implements OnInit, OnDestroy {
     });
   }
 }
-
-export interface ListingSearch {
-  city: string;
-  forSale?: boolean;
-  listingType?: string;
-  numBedrooms?: number;
-  numBathrooms?: number;
-}
-
-
-
-
-

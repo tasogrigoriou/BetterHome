@@ -1,57 +1,73 @@
+<div class="container-fluid property-toolbar">
+
+  <mat-form-field class="cont-search" [floatLabel]="'never'">
+    <input matInput placeholder="Search by city..." [(ngModel)]="listingSearch.city" (keyup.enter)="onSearchClick()" required>
+    <a class="my-search" mat-button matSuffix color="primary" (click)="onSearchClick()"><mat-icon>search</mat-icon></a>
+  </mat-form-field>
+
+  <mat-form-field class="cont-price-range">
+    <input matInput placeholder="Min price" [(ngModel)]="listingSearch.minPrice" (keypress)="numberOnly($event)" (keyup.enter)="onSearchClick()">
+  </mat-form-field>
+
+  <mat-form-field class="cont-price-range">
+    <input matInput placeholder="Max price" [(ngModel)]="listingSearch.maxPrice" (keypress)="numberOnly($event)" (keyup.enter)="onSearchClick()">
+  </mat-form-field>
+
+  <mat-form-field class="cont-form" [floatLabel]="'never'">
+    <mat-label>Listing Type</mat-label>
+    <mat-select [(value)]="listingSearch.listingType" (selectionChange)="onSelectionChange()">
+      <mat-option value="Any">Any Type</mat-option>
+      <mat-option value="House">House</mat-option>
+      <mat-option value="Apartment">Apartment</mat-option>
+      <mat-option value="Condo">Condo</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="cont-form" [floatLabel]="'never'">
+    <mat-label>Sale or Rental</mat-label>
+    <mat-select [(value)]="listingSearch.forSale" (selectionChange)="onSelectionChange()">
+      <mat-option value=null>Sale and Rental</mat-option>
+      <mat-option value=1>Sale</mat-option>
+      <mat-option value=0>Rental</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="cont-form" [floatLabel]="'never'">
+    <mat-label>Bedrooms</mat-label>
+    <mat-select [(value)]="listingSearch.numBedrooms" (selectionChange)="onSelectionChange()">
+      <mat-option value=0>Any Beds</mat-option>
+      <mat-option value=1>1+ Bed</mat-option>
+      <mat-option value=2>2+ Beds</mat-option>
+      <mat-option value=3>3+ Beds</mat-option>
+      <mat-option value=4>4+ Beds</mat-option>
+      <mat-option value=5>5+ Beds</mat-option>
+      <mat-option value=6>6+ Beds</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="cont-form" [floatLabel]="'never'">
+    <mat-label>Bathrooms</mat-label>
+    <mat-select [(value)]="listingSearch.numBathrooms" (selectionChange)="onSelectionChange()">
+      <mat-option value=0>Any Baths</mat-option>
+      <mat-option value=1>1+ Bath</mat-option>
+      <mat-option value=2>2+ Baths</mat-option>
+      <mat-option value=3>3+ Baths</mat-option>
+      <mat-option value=4>4+ Baths</mat-option>
+      <mat-option value=5>5+ Baths</mat-option>
+      <mat-option value=6>6+ Baths</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="cont-form" [floatLabel]="'never'">
+    <mat-label>Accessibility</mat-label>
+    <mat-select [formControl]="accessibilities" multiple (selectionChange)="onSelectionChange()">
+      <mat-option *ngFor="let accessibility of accessibilityList" [value]="accessibility">{{accessibility}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</div>
+
 <div class="container">
-  <div class="container-fluid property-toolbar">
-
-    <mat-form-field class="cont-search" [floatLabel]="'never'">
-      <input matInput placeholder="Search by city..." [(ngModel)]="listingSearch.city" (keyup.enter)="onSearchClick()" required>
-      <a class="my-search" mat-button matSuffix color="primary" (click)="onSearchClick()"><mat-icon>search</mat-icon></a>
-    </mat-form-field>
-
-    <mat-form-field class="cont-form" [floatLabel]="'never'">
-      <mat-label>Listing Type</mat-label>
-      <mat-select [(value)]="listingSearch.listingType" (selectionChange)="onSelectionChange()">
-        <mat-option value="Any">Any Type</mat-option>
-        <mat-option value="House">House</mat-option>
-        <mat-option value="Apartment">Apartment</mat-option>
-        <mat-option value="Condo">Condo</mat-option>
-      </mat-select>
-    </mat-form-field>
-
-    <mat-form-field class="cont-form" [floatLabel]="'never'">
-      <mat-label>Sale or Rental</mat-label>
-      <mat-select [(value)]="listingSearch.forSale" (selectionChange)="onSelectionChange()">
-        <mat-option value=null>Sale and Rental</mat-option>
-        <mat-option value=1>Sale</mat-option>
-        <mat-option value=0>Rental</mat-option>
-      </mat-select>
-    </mat-form-field>
-
-    <mat-form-field class="cont-form" [floatLabel]="'never'">
-      <mat-label>Bedrooms</mat-label>
-      <mat-select [(value)]="listingSearch.numBedrooms" (selectionChange)="onSelectionChange()">
-        <mat-option value=0>Any Beds</mat-option>
-        <mat-option value=1>1+ Bed</mat-option>
-        <mat-option value=2>2+ Beds</mat-option>
-        <mat-option value=3>3+ Beds</mat-option>
-        <mat-option value=4>4+ Beds</mat-option>
-        <mat-option value=5>5+ Beds</mat-option>
-        <mat-option value=6>6+ Beds</mat-option>
-      </mat-select>
-    </mat-form-field>
-
-    <mat-form-field class="cont-form" [floatLabel]="'never'">
-      <mat-label>Bathrooms</mat-label>
-      <mat-select [(value)]="listingSearch.numBathrooms" (selectionChange)="onSelectionChange()">
-        <mat-option value=0>Any Baths</mat-option>
-        <mat-option value=1>1+ Bath</mat-option>
-        <mat-option value=2>2+ Baths</mat-option>
-        <mat-option value=3>3+ Baths</mat-option>
-        <mat-option value=4>4+ Baths</mat-option>
-        <mat-option value=5>5+ Baths</mat-option>
-        <mat-option value=6>6+ Baths</mat-option>
-      </mat-select>
-    </mat-form-field>
-
-  </div>
 
   <div class="space">
     <h2>Property Listings</h2>
@@ -62,7 +78,7 @@
     </ng-template>
   </div>
 
-  <div class="property-container" fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="10px" fxLayoutGap.xs="0">
+  <div class="property-container" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
     <mat-card class="property-card" appMaterialElevation defaultElevation="3" raisedElevation="24"
               [fxFlex]="rowWidth"
               (window:resize)="onResize($event)"
@@ -100,7 +116,7 @@
 
       <mat-card-content>
         <h6>{{listing.listingType + ' for ' + (listing.forSale ? 'sale' : 'rent')}}</h6>
-        <p><i>{{'$' + numberWithCommas(listing.price) + ' | ' + listing.numBedrooms + ' beds' + ' | ' + listing.numBathrooms + ' baths'}}</i></p>
+        <p><i>{{'$' + numberWithCommas(listing.price) + ' | ' + listing.numBedrooms + ' beds' + ' | ' + listing.numBathrooms + ' baths' + ' | ' + numberWithCommas(listing.lotSize) + ' sqft'}}</i></p>
         <p class="property-access-title">{{getPropertyAccessibility(listing)}}</p>
         <p>{{listing.description}}</p>
       </mat-card-content>

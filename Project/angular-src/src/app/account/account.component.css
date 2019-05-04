@@ -74,6 +74,24 @@
 
 /*}*/
 
+.fa {
+  color: darkgray;
+}
+
+.card-body {
+  margin-left: 25px;
+}
+
+.profile-p {
+  font-size: 18px;
+  font-style: oblique;
+  color: #686868;
+}
+
+.center-btn {
+  text-align: center;
+}
+
 .card-header-title {
   padding-top: -20px;
 }
@@ -88,7 +106,8 @@
   position: relative;
   margin-top: 10px;
   align-items: center;
-  width: 80%;
+  max-width: 400px;
+  width: 100%;
 }
 
 .a-link-card {
@@ -98,7 +117,7 @@
 }
 
 .img-container {
-  max-height: 500px;
+  max-height: 400px;
   height: 100%;
   width: 100%;
   margin-bottom: 10px;

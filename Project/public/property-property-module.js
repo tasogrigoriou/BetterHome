@@ -105,7 +105,7 @@ var PropertySingleComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".property-toolbar {\n  min-height: 74px;\n  height: auto;\n  width: 100%;\n  margin-bottom: 10px;\n  border-bottom: 1px;\n  border-bottom-style: solid;\n  border-bottom-color: rgba(107, 107, 107, 0.35);\n}\n\n.property-toolbar-title {\n  font-size: 20px;\n  padding-top: 5px;\n  padding-left: 5px;\n}\n\n.cont-search ::ng-deep .mat-form-field-underline {\n  display: none;\n}\n\n.cont-form ::ng-deep .mat-form-field-underline {\n  display: none;\n}\n\n.property-grid-list {\n  background-color: transparent;\n}\n\n.property-grid-title {\n  border: 1px;\n}\n\n.property-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.property-card {\n  position: relative;\n  margin-top: 10px;\n  align-items: center;\n}\n\n.favorite-button {\n  position: absolute;\n  top: 12px;\n  right: 16px;\n  height: 36px;\n  width: 20px;\n}\n\n.property-card-title {\n  margin-bottom: 8px;\n}\n\n.property-card-image {\n  margin-left: 0;\n  margin-right: 0;\n  width: 100%;\n}\n\n.img-container {\n  max-height: 500px;\n  height: 100%;\n  width: 100%;\n  margin-bottom: 10px;\n}\n\n.img-wrap {\n  display: inline-block;\n  position: relative;\n}\n\n.property-paginator {\n  margin-bottom: 10px;\n}\n\n.space {\n  margin-top: 15px;\n  margin-bottom: 10px;\n}\n\n.cont-form {\n  margin-top: 20px;\n  margin-right: 20px;\n  max-width: 135px;\n}\n\n.cont-search {\n  margin-right: 20px;\n  max-width: 210px;\n}\n\n.a-link-card {\n  position: absolute;\n  top: 0; left: 0;\n  height: 100%; width: 100%;\n}\n\n.property-access-title {\n  margin-top: -10px;\n  color: rgba(0, 0, 0, 0.6);\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvcGVydHkvcHJvcGVydHkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFnQjtFQUNoQixZQUFZO0VBQ1osV0FBVztFQUNYLG1CQUFtQjtFQUNuQixrQkFBa0I7RUFDbEIsMEJBQTBCO0VBQzFCLDhDQUE4QztBQUNoRDs7QUFFQTtFQUNFLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0UsYUFBYTtBQUNmOztBQUNBO0VBQ0UsYUFBYTtBQUNmOztBQUVBO0VBQ0UsNkJBQTZCO0FBQy9COztBQUVBO0VBQ0UsV0FBVztBQUNiOztBQUVBO0VBQ0UsYUFBYTtFQUNiLHVCQUF1QjtFQUN2QixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixTQUFTO0VBQ1QsV0FBVztFQUNYLFlBQVk7RUFDWixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxjQUFjO0VBQ2QsZUFBZTtFQUNmLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGlCQUFpQjtFQUNqQixZQUFZO0VBQ1osV0FBVztFQUNYLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLE1BQU0sRUFBRSxPQUFPO0VBQ2YsWUFBWSxFQUFFLFdBQVc7QUFDM0I7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIseUJBQXlCO0FBQzNCIiwiZmlsZSI6InNyYy9hcHAvcHJvcGVydHkvcHJvcGVydHkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5wcm9wZXJ0eS10b29sYmFyIHtcbiAgbWluLWhlaWdodDogNzRweDtcbiAgaGVpZ2h0OiBhdXRvO1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcbiAgYm9yZGVyLWJvdHRvbTogMXB4O1xuICBib3JkZXItYm90dG9tLXN0eWxlOiBzb2xpZDtcbiAgYm9yZGVyLWJvdHRvbS1jb2xvcjogcmdiYSgxMDcsIDEwNywgMTA3LCAwLjM1KTtcbn1cblxuLnByb3BlcnR5LXRvb2xiYXItdGl0bGUge1xuICBmb250LXNpemU6IDIwcHg7XG4gIHBhZGRpbmctdG9wOiA1cHg7XG4gIHBhZGRpbmctbGVmdDogNXB4O1xufVxuXG4uY29udC1zZWFyY2ggOjpuZy1kZWVwIC5tYXQtZm9ybS1maWVsZC11bmRlcmxpbmUge1xuICBkaXNwbGF5OiBub25lO1xufVxuLmNvbnQtZm9ybSA6Om5nLWRlZXAgLm1hdC1mb3JtLWZpZWxkLXVuZGVybGluZSB7XG4gIGRpc3BsYXk6IG5vbmU7XG59XG5cbi5wcm9wZXJ0eS1ncmlkLWxpc3Qge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcbn1cblxuLnByb3BlcnR5LWdyaWQtdGl0bGUge1xuICBib3JkZXI6IDFweDtcbn1cblxuLnByb3BlcnR5LWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4ucHJvcGVydHktY2FyZCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgbWFyZ2luLXRvcDogMTBweDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLmZhdm9yaXRlLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAxMnB4O1xuICByaWdodDogMTZweDtcbiAgaGVpZ2h0OiAzNnB4O1xuICB3aWR0aDogMjBweDtcbn1cblxuLnByb3BlcnR5LWNhcmQtdGl0bGUge1xuICBtYXJnaW4tYm90dG9tOiA4cHg7XG59XG5cbi5wcm9wZXJ0eS1jYXJkLWltYWdlIHtcbiAgbWFyZ2luLWxlZnQ6IDA7XG4gIG1hcmdpbi1yaWdodDogMDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5pbWctY29udGFpbmVyIHtcbiAgbWF4LWhlaWdodDogNTAwcHg7XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG4gIG1hcmdpbi1ib3R0b206IDEwcHg7XG59XG5cbi5pbWctd3JhcCB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG4ucHJvcGVydHktcGFnaW5hdG9yIHtcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcbn1cblxuLnNwYWNlIHtcbiAgbWFyZ2luLXRvcDogMTVweDtcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcbn1cblxuLmNvbnQtZm9ybSB7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG4gIG1hcmdpbi1yaWdodDogMjBweDtcbiAgbWF4LXdpZHRoOiAxMzVweDtcbn1cblxuLmNvbnQtc2VhcmNoIHtcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xuICBtYXgtd2lkdGg6IDIxMHB4O1xufVxuXG4uYS1saW5rLWNhcmQge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDsgbGVmdDogMDtcbiAgaGVpZ2h0OiAxMDAlOyB3aWR0aDogMTAwJTtcbn1cblxuLnByb3BlcnR5LWFjY2Vzcy10aXRsZSB7XG4gIG1hcmdpbi10b3A6IC0xMHB4O1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjYpO1xufVxuIl19 */"
+module.exports = ".property-toolbar {\n  min-height: 74px;\n  height: auto;\n  width: 100%;\n  margin-bottom: 10px;\n  border-bottom: 1px;\n  border-bottom-style: solid;\n  border-bottom-color: rgba(107, 107, 107, 0.35);\n  display: flex;\n  justify-content: center;\n\n}\n\n.property-toolbar-title {\n  font-size: 20px;\n  padding-top: 5px;\n  padding-left: 5px;\n}\n\n.cont-search ::ng-deep .mat-form-field-underline {\n  display: none;\n}\n\n.cont-form ::ng-deep .mat-form-field-underline {\n  display: none;\n}\n\n.cont-price-range ::ng-deep .mat-form-field-underline {\n  display: none;\n}\n\n.property-grid-list {\n  background-color: transparent;\n}\n\n.property-grid-title {\n  border: 1px;\n}\n\n.property-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.property-card {\n  position: relative;\n  margin-top: 10px;\n  align-items: center;\n}\n\n.favorite-button {\n  position: absolute;\n  top: 12px;\n  right: 16px;\n  height: 36px;\n  width: 20px;\n}\n\n.property-card-title {\n  margin-bottom: 8px;\n}\n\n.property-card-image {\n  margin-left: 0;\n  margin-right: 0;\n  width: 100%;\n}\n\n.img-container {\n  max-height: 500px;\n  height: 100%;\n  width: 100%;\n  margin-bottom: 10px;\n}\n\n.img-wrap {\n  display: inline-block;\n  position: relative;\n}\n\n.property-paginator {\n  margin-bottom: 10px;\n}\n\n.space {\n  margin-top: 15px;\n  margin-bottom: 10px;\n}\n\n.cont-form {\n  margin-top: 20px;\n  margin-right: 20px;\n  max-width: 135px;\n}\n\n.cont-search {\n  margin-top: 20px;\n  margin-right: 20px;\n  max-width: 210px;\n}\n\n.cont-price-range {\n  margin-top: 20px;\n  margin-right: 20px;\n  max-width: 80px;\n}\n\n.a-link-card {\n  position: absolute;\n  top: 0; left: 0;\n  height: 100%; width: 100%;\n}\n\n.property-access-title {\n  margin-top: -10px;\n  color: rgba(0, 0, 0, 0.6);\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvcGVydHkvcHJvcGVydHkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFnQjtFQUNoQixZQUFZO0VBQ1osV0FBVztFQUNYLG1CQUFtQjtFQUNuQixrQkFBa0I7RUFDbEIsMEJBQTBCO0VBQzFCLDhDQUE4QztFQUM5QyxhQUFhO0VBQ2IsdUJBQXVCOztBQUV6Qjs7QUFFQTtFQUNFLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0UsYUFBYTtBQUNmOztBQUNBO0VBQ0UsYUFBYTtBQUNmOztBQUNBO0VBQ0UsYUFBYTtBQUNmOztBQUVBO0VBQ0UsNkJBQTZCO0FBQy9COztBQUVBO0VBQ0UsV0FBVztBQUNiOztBQUVBO0VBQ0UsYUFBYTtFQUNiLHVCQUF1QjtFQUN2QixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixTQUFTO0VBQ1QsV0FBVztFQUNYLFlBQVk7RUFDWixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxjQUFjO0VBQ2QsZUFBZTtFQUNmLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGlCQUFpQjtFQUNqQixZQUFZO0VBQ1osV0FBVztFQUNYLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixNQUFNLEVBQUUsT0FBTztFQUNmLFlBQVksRUFBRSxXQUFXO0FBQzNCOztBQUVBO0VBQ0UsaUJBQWlCO0VBQ2pCLHlCQUF5QjtBQUMzQiIsImZpbGUiOiJzcmMvYXBwL3Byb3BlcnR5L3Byb3BlcnR5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucHJvcGVydHktdG9vbGJhciB7XG4gIG1pbi1oZWlnaHQ6IDc0cHg7XG4gIGhlaWdodDogYXV0bztcbiAgd2lkdGg6IDEwMCU7XG4gIG1hcmdpbi1ib3R0b206IDEwcHg7XG4gIGJvcmRlci1ib3R0b206IDFweDtcbiAgYm9yZGVyLWJvdHRvbS1zdHlsZTogc29saWQ7XG4gIGJvcmRlci1ib3R0b20tY29sb3I6IHJnYmEoMTA3LCAxMDcsIDEwNywgMC4zNSk7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuXG59XG5cbi5wcm9wZXJ0eS10b29sYmFyLXRpdGxlIHtcbiAgZm9udC1zaXplOiAyMHB4O1xuICBwYWRkaW5nLXRvcDogNXB4O1xuICBwYWRkaW5nLWxlZnQ6IDVweDtcbn1cblxuLmNvbnQtc2VhcmNoIDo6bmctZGVlcCAubWF0LWZvcm0tZmllbGQtdW5kZXJsaW5lIHtcbiAgZGlzcGxheTogbm9uZTtcbn1cbi5jb250LWZvcm0gOjpuZy1kZWVwIC5tYXQtZm9ybS1maWVsZC11bmRlcmxpbmUge1xuICBkaXNwbGF5OiBub25lO1xufVxuLmNvbnQtcHJpY2UtcmFuZ2UgOjpuZy1kZWVwIC5tYXQtZm9ybS1maWVsZC11bmRlcmxpbmUge1xuICBkaXNwbGF5OiBub25lO1xufVxuXG4ucHJvcGVydHktZ3JpZC1saXN0IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG59XG5cbi5wcm9wZXJ0eS1ncmlkLXRpdGxlIHtcbiAgYm9yZGVyOiAxcHg7XG59XG5cbi5wcm9wZXJ0eS1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLnByb3BlcnR5LWNhcmQge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIG1hcmdpbi10b3A6IDEwcHg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5mYXZvcml0ZS1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMTJweDtcbiAgcmlnaHQ6IDE2cHg7XG4gIGhlaWdodDogMzZweDtcbiAgd2lkdGg6IDIwcHg7XG59XG5cbi5wcm9wZXJ0eS1jYXJkLXRpdGxlIHtcbiAgbWFyZ2luLWJvdHRvbTogOHB4O1xufVxuXG4ucHJvcGVydHktY2FyZC1pbWFnZSB7XG4gIG1hcmdpbi1sZWZ0OiAwO1xuICBtYXJnaW4tcmlnaHQ6IDA7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uaW1nLWNvbnRhaW5lciB7XG4gIG1heC1oZWlnaHQ6IDUwMHB4O1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xufVxuXG4uaW1nLXdyYXAge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuLnByb3BlcnR5LXBhZ2luYXRvciB7XG4gIG1hcmdpbi1ib3R0b206IDEwcHg7XG59XG5cbi5zcGFjZSB7XG4gIG1hcmdpbi10b3A6IDE1cHg7XG4gIG1hcmdpbi1ib3R0b206IDEwcHg7XG59XG5cbi5jb250LWZvcm0ge1xuICBtYXJnaW4tdG9wOiAyMHB4O1xuICBtYXJnaW4tcmlnaHQ6IDIwcHg7XG4gIG1heC13aWR0aDogMTM1cHg7XG59XG5cbi5jb250LXNlYXJjaCB7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG4gIG1hcmdpbi1yaWdodDogMjBweDtcbiAgbWF4LXdpZHRoOiAyMTBweDtcbn1cblxuLmNvbnQtcHJpY2UtcmFuZ2Uge1xuICBtYXJnaW4tdG9wOiAyMHB4O1xuICBtYXJnaW4tcmlnaHQ6IDIwcHg7XG4gIG1heC13aWR0aDogODBweDtcbn1cblxuLmEtbGluay1jYXJkIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDA7IGxlZnQ6IDA7XG4gIGhlaWdodDogMTAwJTsgd2lkdGg6IDEwMCU7XG59XG5cbi5wcm9wZXJ0eS1hY2Nlc3MtdGl0bGUge1xuICBtYXJnaW4tdG9wOiAtMTBweDtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC42KTtcbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -116,7 +116,7 @@ module.exports = ".property-toolbar {\n  min-height: 74px;\n  height: auto;\n  w
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"container-fluid property-toolbar\">\n\n    <mat-form-field class=\"cont-search\" [floatLabel]=\"'never'\">\n      <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" (keyup.enter)=\"onSearchClick()\" required>\n      <a class=\"my-search\" mat-button matSuffix color=\"primary\" (click)=\"onSearchClick()\"><mat-icon>search</mat-icon></a>\n    </mat-form-field>\n\n    <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n      <mat-label>Listing Type</mat-label>\n      <mat-select [(value)]=\"listingSearch.listingType\" (selectionChange)=\"onSelectionChange()\">\n        <mat-option value=\"Any\">Any Type</mat-option>\n        <mat-option value=\"House\">House</mat-option>\n        <mat-option value=\"Apartment\">Apartment</mat-option>\n        <mat-option value=\"Condo\">Condo</mat-option>\n      </mat-select>\n    </mat-form-field>\n\n    <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n      <mat-label>Sale or Rental</mat-label>\n      <mat-select [(value)]=\"listingSearch.forSale\" (selectionChange)=\"onSelectionChange()\">\n        <mat-option value=null>Sale and Rental</mat-option>\n        <mat-option value=1>Sale</mat-option>\n        <mat-option value=0>Rental</mat-option>\n      </mat-select>\n    </mat-form-field>\n\n    <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n      <mat-label>Bedrooms</mat-label>\n      <mat-select [(value)]=\"listingSearch.numBedrooms\" (selectionChange)=\"onSelectionChange()\">\n        <mat-option value=0>Any Beds</mat-option>\n        <mat-option value=1>1+ Bed</mat-option>\n        <mat-option value=2>2+ Beds</mat-option>\n        <mat-option value=3>3+ Beds</mat-option>\n        <mat-option value=4>4+ Beds</mat-option>\n        <mat-option value=5>5+ Beds</mat-option>\n        <mat-option value=6>6+ Beds</mat-option>\n      </mat-select>\n    </mat-form-field>\n\n    <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n      <mat-label>Bathrooms</mat-label>\n      <mat-select [(value)]=\"listingSearch.numBathrooms\" (selectionChange)=\"onSelectionChange()\">\n        <mat-option value=0>Any Baths</mat-option>\n        <mat-option value=1>1+ Bath</mat-option>\n        <mat-option value=2>2+ Baths</mat-option>\n        <mat-option value=3>3+ Baths</mat-option>\n        <mat-option value=4>4+ Baths</mat-option>\n        <mat-option value=5>5+ Baths</mat-option>\n        <mat-option value=6>6+ Baths</mat-option>\n      </mat-select>\n    </mat-form-field>\n\n  </div>\n\n  <div class=\"space\">\n    <h2>Property Listings</h2>\n    <ng-template [ngIf]=\"listings.length > 0\">\n      <mat-paginator class=\"property-paginator\"\n                     [length]=\"listings.length\" [pageSize]=\"15\">\n      </mat-paginator>\n    </ng-template>\n  </div>\n\n  <div class=\"property-container\" fxLayout=\"row wrap\" fxLayoutAlign=\"start start\" fxLayoutGap=\"10px\" fxLayoutGap.xs=\"0\">\n    <mat-card class=\"property-card\" appMaterialElevation defaultElevation=\"3\" raisedElevation=\"24\"\n              [fxFlex]=\"rowWidth\"\n              (window:resize)=\"onResize($event)\"\n              *ngFor=\"let listing of listings\">\n\n      <a class=\"a-link-card\" [routerLink]=\"[listing.listingId]\"></a>\n\n      <ng-template [ngIf]=\"user\">\n        <a class=\"favorite-button\" (click)=\"onFavoriteClick(listing)\">\n          <ng-template [ngIf]=\"!isFavorite(listing)\">\n            <mat-icon style=\"font-size: 24px !important\" color=\"warn\">favorite_border</mat-icon>\n          </ng-template>\n          <ng-template [ngIf]=\"isFavorite(listing)\">\n            <mat-icon style=\"font-size: 24px !important\" color=\"warn\">favorite</mat-icon>\n          </ng-template>\n        </a>\n      </ng-template>\n\n      <mat-card-header>\n        <mat-card-title><h5>{{listing.title}}</h5>\n        </mat-card-title>\n        <mat-card-subtitle style=\"padding-top: 6px !important\">{{listing.street + ', ' + listing.city + ', ' + listing.state}}</mat-card-subtitle>\n      </mat-card-header>\n\n      <drag-scroll #drag_scroll>\n        <div class=\"img-wrap\"\n             *ngFor=\"let imageUrl of listing.imageUrls\">\n          <img class=\"img-container\"\n               drag-scroll-item\n               [src]=\"imageUrl\"\n               alt=\"\" />\n          <a class=\"a-link-card\" [routerLink]=\"[listing.listingId]\"></a>\n        </div>\n      </drag-scroll>\n\n      <mat-card-content>\n        <h6>{{listing.listingType + ' for ' + (listing.forSale ? 'sale' : 'rent')}}</h6>\n        <p><i>{{'$' + numberWithCommas(listing.price) + ' | ' + listing.numBedrooms + ' beds' + ' | ' + listing.numBathrooms + ' baths'}}</i></p>\n        <p class=\"property-access-title\">{{getPropertyAccessibility(listing)}}</p>\n        <p>{{listing.description}}</p>\n      </mat-card-content>\n    </mat-card>\n  </div>\n\n  <div>\n    <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n  </div>\n\n  <ng-template [ngIf]=\"listings.length > 0\">\n    <mat-paginator class=\"property-paginator\"\n                   [length]=\"listings.length\" [pageSize]=\"15\">\n    </mat-paginator>\n  </ng-template>\n\n</div>\n"
+module.exports = "<div class=\"container-fluid property-toolbar\">\n\n  <mat-form-field class=\"cont-search\" [floatLabel]=\"'never'\">\n    <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" (keyup.enter)=\"onSearchClick()\" required>\n    <a class=\"my-search\" mat-button matSuffix color=\"primary\" (click)=\"onSearchClick()\"><mat-icon>search</mat-icon></a>\n  </mat-form-field>\n\n  <mat-form-field class=\"cont-price-range\">\n    <input matInput placeholder=\"Min price\" [(ngModel)]=\"listingSearch.minPrice\" (keypress)=\"numberOnly($event)\" (keyup.enter)=\"onSearchClick()\">\n  </mat-form-field>\n\n  <mat-form-field class=\"cont-price-range\">\n    <input matInput placeholder=\"Max price\" [(ngModel)]=\"listingSearch.maxPrice\" (keypress)=\"numberOnly($event)\" (keyup.enter)=\"onSearchClick()\">\n  </mat-form-field>\n\n  <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n    <mat-label>Listing Type</mat-label>\n    <mat-select [(value)]=\"listingSearch.listingType\" (selectionChange)=\"onSelectionChange()\">\n      <mat-option value=\"Any\">Any Type</mat-option>\n      <mat-option value=\"House\">House</mat-option>\n      <mat-option value=\"Apartment\">Apartment</mat-option>\n      <mat-option value=\"Condo\">Condo</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n    <mat-label>Sale or Rental</mat-label>\n    <mat-select [(value)]=\"listingSearch.forSale\" (selectionChange)=\"onSelectionChange()\">\n      <mat-option value=null>Sale and Rental</mat-option>\n      <mat-option value=1>Sale</mat-option>\n      <mat-option value=0>Rental</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n    <mat-label>Bedrooms</mat-label>\n    <mat-select [(value)]=\"listingSearch.numBedrooms\" (selectionChange)=\"onSelectionChange()\">\n      <mat-option value=0>Any Beds</mat-option>\n      <mat-option value=1>1+ Bed</mat-option>\n      <mat-option value=2>2+ Beds</mat-option>\n      <mat-option value=3>3+ Beds</mat-option>\n      <mat-option value=4>4+ Beds</mat-option>\n      <mat-option value=5>5+ Beds</mat-option>\n      <mat-option value=6>6+ Beds</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n    <mat-label>Bathrooms</mat-label>\n    <mat-select [(value)]=\"listingSearch.numBathrooms\" (selectionChange)=\"onSelectionChange()\">\n      <mat-option value=0>Any Baths</mat-option>\n      <mat-option value=1>1+ Bath</mat-option>\n      <mat-option value=2>2+ Baths</mat-option>\n      <mat-option value=3>3+ Baths</mat-option>\n      <mat-option value=4>4+ Baths</mat-option>\n      <mat-option value=5>5+ Baths</mat-option>\n      <mat-option value=6>6+ Baths</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field class=\"cont-form\" [floatLabel]=\"'never'\">\n    <mat-label>Accessibility</mat-label>\n    <mat-select [formControl]=\"accessibilities\" multiple (selectionChange)=\"onSelectionChange()\">\n      <mat-option *ngFor=\"let accessibility of accessibilityList\" [value]=\"accessibility\">{{accessibility}}</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n</div>\n\n<div class=\"container\">\n\n  <div class=\"space\">\n    <h2>Property Listings</h2>\n    <ng-template [ngIf]=\"listings.length > 0\">\n      <mat-paginator class=\"property-paginator\"\n                     [length]=\"listings.length\" [pageSize]=\"15\">\n      </mat-paginator>\n    </ng-template>\n  </div>\n\n  <div class=\"property-container\" fxLayout=\"row wrap\" fxLayoutAlign=\"center\" fxLayoutGap=\"10px\" fxLayoutGap.xs=\"0\">\n    <mat-card class=\"property-card\" appMaterialElevation defaultElevation=\"3\" raisedElevation=\"24\"\n              [fxFlex]=\"rowWidth\"\n              (window:resize)=\"onResize($event)\"\n              *ngFor=\"let listing of listings\">\n\n      <a class=\"a-link-card\" [routerLink]=\"[listing.listingId]\"></a>\n\n      <ng-template [ngIf]=\"user\">\n        <a class=\"favorite-button\" (click)=\"onFavoriteClick(listing)\">\n          <ng-template [ngIf]=\"!isFavorite(listing)\">\n            <mat-icon style=\"font-size: 24px !important\" color=\"warn\">favorite_border</mat-icon>\n          </ng-template>\n          <ng-template [ngIf]=\"isFavorite(listing)\">\n            <mat-icon style=\"font-size: 24px !important\" color=\"warn\">favorite</mat-icon>\n          </ng-template>\n        </a>\n      </ng-template>\n\n      <mat-card-header>\n        <mat-card-title><h5>{{listing.title}}</h5>\n        </mat-card-title>\n        <mat-card-subtitle style=\"padding-top: 6px !important\">{{listing.street + ', ' + listing.city + ', ' + listing.state}}</mat-card-subtitle>\n      </mat-card-header>\n\n      <drag-scroll #drag_scroll>\n        <div class=\"img-wrap\"\n             *ngFor=\"let imageUrl of listing.imageUrls\">\n          <img class=\"img-container\"\n               drag-scroll-item\n               [src]=\"imageUrl\"\n               alt=\"\" />\n          <a class=\"a-link-card\" [routerLink]=\"[listing.listingId]\"></a>\n        </div>\n      </drag-scroll>\n\n      <mat-card-content>\n        <h6>{{listing.listingType + ' for ' + (listing.forSale ? 'sale' : 'rent')}}</h6>\n        <p><i>{{'$' + numberWithCommas(listing.price) + ' | ' + listing.numBedrooms + ' beds' + ' | ' + listing.numBathrooms + ' baths' + ' | ' + numberWithCommas(listing.lotSize) + ' sqft'}}</i></p>\n        <p class=\"property-access-title\">{{getPropertyAccessibility(listing)}}</p>\n        <p>{{listing.description}}</p>\n      </mat-card-content>\n    </mat-card>\n  </div>\n\n  <div>\n    <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n  </div>\n\n  <ng-template [ngIf]=\"listings.length > 0\">\n    <mat-paginator class=\"property-paginator\"\n                   [length]=\"listings.length\" [pageSize]=\"15\">\n    </mat-paginator>\n  </ng-template>\n\n</div>\n"
 
 /***/ }),
 
@@ -139,6 +139,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _core_services_favorites_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../core/services/favorites.service */ "./src/app/core/services/favorites.service.ts");
 /* harmony import */ var ngx_drag_scroll_lib__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-drag-scroll/lib */ "./node_modules/ngx-drag-scroll/lib/index.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+
 
 
 
@@ -157,6 +159,8 @@ var PropertyComponent = /** @class */ (function () {
         this.dialog = dialog;
         this.filter = true;
         this.isLoaded = false;
+        this.accessibilities = new _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormControl"]();
+        this.accessibilityList = ['Laundry', 'Hospital', 'Wheelchair', 'BART'];
     }
     PropertyComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -208,9 +212,14 @@ var PropertyComponent = /** @class */ (function () {
         this.rowWidth = (event.target.innerWidth <= 500) ? '100%' : '30%';
     };
     PropertyComponent.prototype.onSearchClick = function () {
+        if (!this.listingSearch.city.length) {
+            this.openDialog('Please enter some text for the city field');
+            return;
+        }
         this.reloadData();
     };
     PropertyComponent.prototype.onSelectionChange = function () {
+        this.listingSearch.accessibilities = this.accessibilities.value;
         this.reloadData();
     };
     PropertyComponent.prototype.reloadData = function () {
@@ -249,6 +258,10 @@ var PropertyComponent = /** @class */ (function () {
     };
     PropertyComponent.prototype.isFavorite = function (listing) {
         return listing.isFavorite;
+    };
+    PropertyComponent.prototype.numberOnly = function (event) {
+        var charCode = (event.which) ? event.which : event.keyCode;
+        return !(charCode > 31 && (charCode < 48 || charCode > 57));
     };
     PropertyComponent.prototype.numberWithCommas = function (x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -425,7 +438,7 @@ var PropertyModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".body\n{\n  overflow-x: hidden;\n  width: 100%;\n  color: #6b6b6b;\n}\n.mySlides\n{\n  display:none\n}\n.fa\n{\n  color: darkgray;\n}\n.propertyOverview\n{\n  padding-left: 30%\n}\n.favorite\n{\n  padding-left: 60%\n}\n.my-container {\n  margin: 0 auto;\n  max-width: 600px;\n  max-height: 600px;\n  width: 100%;\n  height: 100%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvcGVydHkvcHJvcGVydHkuc2luZ2xlTGlzdGluZy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztFQUVFLGtCQUFrQjtFQUNsQixXQUFXO0VBQ1gsY0FBYztBQUNoQjtBQUNBOztFQUVFO0FBQ0Y7QUFDQTs7RUFFRSxlQUFlO0FBQ2pCO0FBQ0E7O0VBRUU7QUFDRjtBQUNBOztFQUVFO0FBQ0Y7QUFFQTtFQUNFLGNBQWM7RUFDZCxnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLFdBQVc7RUFDWCxZQUFZO0FBQ2QiLCJmaWxlIjoic3JjL2FwcC9wcm9wZXJ0eS9wcm9wZXJ0eS5zaW5nbGVMaXN0aW5nLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYm9keVxue1xuICBvdmVyZmxvdy14OiBoaWRkZW47XG4gIHdpZHRoOiAxMDAlO1xuICBjb2xvcjogIzZiNmI2Yjtcbn1cbi5teVNsaWRlc1xue1xuICBkaXNwbGF5Om5vbmVcbn1cbi5mYVxue1xuICBjb2xvcjogZGFya2dyYXk7XG59XG4ucHJvcGVydHlPdmVydmlld1xue1xuICBwYWRkaW5nLWxlZnQ6IDMwJVxufVxuLmZhdm9yaXRlXG57XG4gIHBhZGRpbmctbGVmdDogNjAlXG59XG5cbi5teS1jb250YWluZXIge1xuICBtYXJnaW46IDAgYXV0bztcbiAgbWF4LXdpZHRoOiA2MDBweDtcbiAgbWF4LWhlaWdodDogNjAwcHg7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG59XG4iXX0= */"
+module.exports = ".body {\n  overflow-x: hidden;\n  width: 100%;\n  color: #6b6b6b;\n}\n.mySlides {\n  display:none\n}\n.fa {\n  color: darkgray;\n}\n.propertyOverview {\n  padding-left: 30%\n}\n.prop-title {\n  font-weight: bold;\n  text-align: center;\n  padding-top: 18px;\n  padding-bottom: 0px;\n}\n.my-container {\n  margin: 0 auto;\n  max-width: 600px;\n  max-height: 600px;\n  width: 100%;\n  height: 100%;\n}\n.fav-btn-container {\n  text-align: center;\n  padding-bottom: 15px;\n}\n.fav-btn {\n  width: 150px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvcGVydHkvcHJvcGVydHkuc2luZ2xlTGlzdGluZy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQWtCO0VBQ2xCLFdBQVc7RUFDWCxjQUFjO0FBQ2hCO0FBQ0E7RUFDRTtBQUNGO0FBRUE7RUFDRSxlQUFlO0FBQ2pCO0FBRUE7RUFDRTtBQUNGO0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsa0JBQWtCO0VBQ2xCLGlCQUFpQjtFQUNqQixtQkFBbUI7QUFDckI7QUFFQTtFQUNFLGNBQWM7RUFDZCxnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLFdBQVc7RUFDWCxZQUFZO0FBQ2Q7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixvQkFBb0I7QUFDdEI7QUFFQTtFQUNFLFlBQVk7QUFDZCIsImZpbGUiOiJzcmMvYXBwL3Byb3BlcnR5L3Byb3BlcnR5LnNpbmdsZUxpc3RpbmcuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5ib2R5IHtcbiAgb3ZlcmZsb3cteDogaGlkZGVuO1xuICB3aWR0aDogMTAwJTtcbiAgY29sb3I6ICM2YjZiNmI7XG59XG4ubXlTbGlkZXMge1xuICBkaXNwbGF5Om5vbmVcbn1cblxuLmZhIHtcbiAgY29sb3I6IGRhcmtncmF5O1xufVxuXG4ucHJvcGVydHlPdmVydmlldyB7XG4gIHBhZGRpbmctbGVmdDogMzAlXG59XG5cbi5wcm9wLXRpdGxlIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgcGFkZGluZy10b3A6IDE4cHg7XG4gIHBhZGRpbmctYm90dG9tOiAwcHg7XG59XG5cbi5teS1jb250YWluZXIge1xuICBtYXJnaW46IDAgYXV0bztcbiAgbWF4LXdpZHRoOiA2MDBweDtcbiAgbWF4LWhlaWdodDogNjAwcHg7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5mYXYtYnRuLWNvbnRhaW5lciB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgcGFkZGluZy1ib3R0b206IDE1cHg7XG59XG5cbi5mYXYtYnRuIHtcbiAgd2lkdGg6IDE1MHB4O1xufVxuIl19 */"
 
 /***/ }),
 
@@ -436,7 +449,7 @@ module.exports = ".body\n{\n  overflow-x: hidden;\n  width: 100%;\n  color: #6b6
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n<title>Individual Listing</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n<body class=\"body\">\n\n<div class=\"w3-center\">\n  <div class=\"w3-section\">\n\n<!--    <div>-->\n<!--      <button class=\"favorite\" mat-raised-button (click)=\"addToFavorites()\" color=\"primary\">+ Add to Favorites</button>-->\n<!--    </div>-->\n    <div class=\"my-container\">\n      <drag-scroll #drag_scroll>\n        <img drag-scroll-item *ngFor=\"let photo of listing.imageUrls\" [src]=\"photo\" alt=\"\" />\n      </drag-scroll>\n    </div>\n  </div>\n\n<!--  <div>-->\n    <button mat-button (click)=\"moveLeft()\">❮ Prev</button>\n    <button mat-button (click)=\"moveRight()\">Next ❯</button>\n<!--  </div>-->\n\n</div>\n\n<div class=\"propertyOverview\" *ngIf=\"listing.listingId\">\n  <h2>Overview</h2>\n  <hr width=\"50%\" size=\"8\">\n  <p><i class=\"fa fa-dollar fa-fw w3-margin-right w3-large \"></i> For {{ forSale() }} ${{ listing.price }}</p>\n  <p><i class=\"fa fa-bath fa-fw w3-margin-right w3-large \"></i> {{ listing.numBedrooms }} bed, {{ listing.numBathrooms }} bath</p>\n  <p><i class=\"fa fa-map-marker fa-fw w3-margin-right w3-large \"></i> {{ listing.street }} {{ listing.city }} {{ listing.zipCode }}</p>\n  <h2>Contact</h2>\n<!--  <p><i class=\"fa fa-phone fa-fw w3-margin-right w3-large \"></i> {{user.phoneNumber || '(415) 766-2205'}}</p>-->\n<!--  <p><i class=\"fa fa-envelope fa-fw w3-margin-right w3-large \"></i> {{user.emailAddress || 'example-email@mail.sfsu.edu'}}</p>-->\n  <p><i class=\"fa fa-phone fa-fw w3-margin-right w3-large \"></i>(415) 766-2205</p>\n  <p><i class=\"fa fa-envelope fa-fw w3-margin-right w3-large \"></i>example-email@mail.sfsu.edu</p>\n</div>\n\n</body>\n</html>\n"
+module.exports = "<html>\n<title>Individual Listing</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n<h3 class=\"prop-title\">{{listing.title}}</h3>\n\n<body class=\"body\">\n\n<div class=\"w3-center\">\n  <div class=\"w3-section\">\n    <div class=\"my-container\">\n      <drag-scroll #drag_scroll>\n        <img drag-scroll-item *ngFor=\"let photo of listing.imageUrls\" [src]=\"photo\" alt=\"\" />\n      </drag-scroll>\n    </div>\n  </div>\n\n  <button mat-button (click)=\"moveLeft()\">❮ Prev</button>\n  <button mat-button (click)=\"moveRight()\">Next ❯</button>\n\n</div>\n\n<div class=\"propertyOverview\" *ngIf=\"listing.listingId\">\n  <h2>Overview</h2>\n  <hr width=\"50%\" size=\"8\">\n  <p><i class=\"fa fa-building fa-fw w3-margin-right w3-large \"></i>For {{ saleTitle() }}</p>\n  <p><i class=\"fa fa-dollar fa-fw w3-margin-right w3-large \"></i>{{ priceTitle() }}</p>\n  <p><i class=\"fa fa-map-marker fa-fw w3-margin-right w3-large \"></i>{{listing.street }}, {{ listing.city }}, {{ listing.state }}, {{ listing.zipCode }}</p>\n  <p><i class=\"fa fa-bed fa-fw w3-margin-right w3-large \"></i>{{bedTitle()}}</p>\n  <p><i class=\"fa fa-bath fa-fw w3-margin-right w3-large \"></i>{{bathTitle()}}</p>\n  <p><i class=\"fa fa-universal-access fa-fw w3-margin-right w3-large \"></i>{{accessibilityTitle()}}</p>\n  <p><i class=\"fa fa-info-circle fa-fw w3-margin-right w3-large \"></i>{{listing.description}}</p>\n  <h2>Contact</h2>\n  <hr width=\"50%\" size=\"8\">\n  <p><i class=\"fa fa-phone fa-fw w3-margin-right w3-large \"></i>{{formatPhoneNumber(listing.user.phoneNumber)}}</p>\n  <p><i class=\"fa fa-envelope fa-fw w3-margin-right w3-large \"></i>{{listing.user.emailAddress}}</p>\n</div>\n\n<ng-template [ngIf]=\"user\">\n  <div class=\"fav-btn-container\">\n    <button class=\"fav-btn\" mat-raised-button (click)=\"addToFavorites()\" color=\"primary\">+ Add to Favorites</button>\n  </div>\n</ng-template>\n\n</body>\n</html>\n"
 
 /***/ }),
 
@@ -455,32 +468,80 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/services/listings.service */ "./src/app/core/services/listings.service.ts");
 /* harmony import */ var ngx_drag_scroll_lib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-drag-scroll/lib */ "./node_modules/ngx-drag-scroll/lib/index.js");
+/* harmony import */ var _core_services_favorites_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../core/services/favorites.service */ "./src/app/core/services/favorites.service.ts");
+/* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../register/register.dialog */ "./src/app/register/register.dialog.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+
+
+
 
 
 
 
 
 var PropertySingleListingComponent = /** @class */ (function () {
-    function PropertySingleListingComponent(route, listingsService) {
+    function PropertySingleListingComponent(route, listingsService, favoritesService, dialog) {
         this.route = route;
         this.listingsService = listingsService;
+        this.favoritesService = favoritesService;
+        this.dialog = dialog;
     }
     PropertySingleListingComponent.prototype.ngOnInit = function () {
         var _this = this;
-        localStorage.getItem('userLogin');
-        console.log(this.route.snapshot.params);
+        if (localStorage.getItem('loginUser')) {
+            this.user = JSON.parse(localStorage.getItem('loginUser'));
+        }
         this.route.paramMap.subscribe(function (params) {
-            console.log(params);
             var listingId = Number(params.get('listing.listingId'));
-            console.log(listingId);
-            _this.listing = _this.listingsService.getListingById(listingId);
-            console.log(_this.listing);
+            _this.listingsService.getSingleListing(listingId).subscribe(function (listing) {
+                _this.listing = listing;
+            }, function (err) {
+                console.log(err);
+            });
         });
     };
-    PropertySingleListingComponent.prototype.forSale = function () {
-        if (this.listing.forSale == true)
-            return "sale";
-        return "rent";
+    PropertySingleListingComponent.prototype.saleTitle = function () {
+        return this.listing.forSale ? 'Sale' : 'Rent';
+    };
+    PropertySingleListingComponent.prototype.priceTitle = function () {
+        return this.listing.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    };
+    PropertySingleListingComponent.prototype.bedTitle = function () {
+        if (this.listing.numBedrooms == 1) {
+            return this.listing.numBedrooms.toString() + ' bed';
+        }
+        return this.listing.numBedrooms.toString() + ' beds';
+    };
+    PropertySingleListingComponent.prototype.bathTitle = function () {
+        if (this.listing.numBathrooms == 1) {
+            return this.listing.numBathrooms.toString() + ' bath';
+        }
+        return this.listing.numBedrooms.toString() + ' baths';
+    };
+    PropertySingleListingComponent.prototype.accessibilityTitle = function () {
+        var listing = this.listing;
+        var access = 'Accessibility: ';
+        if (!listing.laundry && !listing.hospitalAccess && !listing.wheelchairAccess && !listing.BARTAccess)
+            return access + 'none';
+        var accessList = [];
+        if (listing.laundry)
+            accessList.push('laundry');
+        if (listing.hospitalAccess)
+            accessList.push('hospital');
+        if (listing.wheelchairAccess)
+            accessList.push('wheelchair');
+        if (listing.BARTAccess)
+            accessList.push('bart');
+        var accessStr = access;
+        for (var i = 0; i < accessList.length; i++) {
+            if (i == 0) {
+                accessStr = accessStr + accessList[i];
+            }
+            else {
+                accessStr = accessStr + ', ' + accessList[i];
+            }
+        }
+        return accessStr;
     };
     PropertySingleListingComponent.prototype.moveLeft = function () {
         this.dragScroll.moveLeft();
@@ -489,6 +550,28 @@ var PropertySingleListingComponent = /** @class */ (function () {
         this.dragScroll.moveRight();
     };
     PropertySingleListingComponent.prototype.addToFavorites = function () {
+        var _this = this;
+        this.favoritesService.addFavorite(this.listing.listingId, this.user.userId).subscribe(function (result) {
+            _this.openDialog('Successfully added listing to favorites!');
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    PropertySingleListingComponent.prototype.formatPhoneNumber = function (phoneNumberString) {
+        var cleaned = ('' + phoneNumberString).replace(/\D/g, '');
+        var match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+        if (match) {
+            return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+        }
+        return null;
+    };
+    PropertySingleListingComponent.prototype.openDialog = function (message) {
+        var dialog = this.dialog.open(_register_register_dialog__WEBPACK_IMPORTED_MODULE_6__["RegisterDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('drag_scroll', { read: ngx_drag_scroll_lib__WEBPACK_IMPORTED_MODULE_4__["DragScrollComponent"] }),
@@ -501,7 +584,9 @@ var PropertySingleListingComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./property.singleListing.component.css */ "./src/app/property/property.singleListing.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
-            _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__["ListingsService"]])
+            _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__["ListingsService"],
+            _core_services_favorites_service__WEBPACK_IMPORTED_MODULE_5__["FavoritesService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatDialog"]])
     ], PropertySingleListingComponent);
     return PropertySingleListingComponent;
 }());

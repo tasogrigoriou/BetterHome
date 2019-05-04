@@ -4,6 +4,7 @@ import {ListingSearch, SearchListingsService} from "../core/services/search.list
 import {Listing} from "../core/services/listings.service";
 import {MatDialog} from "@angular/material";
 import {RegisterDialog} from "../register/register.dialog";
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-advanced-search',
@@ -14,6 +15,9 @@ export class AdvancedSearchComponent implements OnInit, OnDestroy {
 
   listingSearch: ListingSearch;
   listings: Listing[];
+
+  accessibilities = new FormControl();
+  accessibilityList: string[] = ['Laundry', 'Hospital', 'Wheelchair', 'BART'];
 
   isLoaded = true;
 
@@ -40,6 +44,10 @@ export class AdvancedSearchComponent implements OnInit, OnDestroy {
     }
   }
 
+  onAccessibilityChange() {
+    this.listingSearch.accessibilities = this.accessibilities.value;
+  }
+
   onSearchClick() {
     if (!this.listingSearch.city.length) {
       this.openDialog('Please enter some text for the city field');
@@ -50,13 +58,18 @@ export class AdvancedSearchComponent implements OnInit, OnDestroy {
         .subscribe(listings => {
             this.isLoaded = true;
             this.searchService.saveSearchListings(listings);
-            this.openDialog('Successfully retrieved Listings!', true);
+            this.router.navigate(['/properties']);
           },
           err => {
             this.isLoaded = true;
             this.openDialog('Unable to retrieve any listing based on your search. Please try again');
           });
     }
+  }
+
+  numberOnly(event): boolean {
+    const charCode = (event.which) ? event.which : event.keyCode;
+    return !(charCode > 31 && (charCode < 48 || charCode > 57));
   }
 
   openDialog(message: string, subscribe: boolean = false) {
