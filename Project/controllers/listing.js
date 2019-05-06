@@ -4,27 +4,26 @@ const database = require('../models/cloudsql');
 
 // Create new listing
 router.post('/', function (req, res) {
-    let sql = `INSERT INTO Listing(title, listingType, price, lotSize, street, city, state, zipCode, forSale, description, numBedrooms, numBathrooms, laundry, hospitalAccess, BARTAccess, wheelchairAccess) 
-    VALUES (` +
-        `
-        "${req.body.title}",    
-        "${req.body.listingType}",
-        ${req.body.price},
-        "${req.body.lotSize}",
-        "${req.body.street}",
-        "${req.body.city}",
-        "${req.body.state}",
-        ${req.body.zipCode},
-        ${req.body.forSale},
-        "${req.body.description}",
-        ${req.body.numBedrooms},
-        ${req.body.numBathrooms},
-        ${req.body.laundry},
-        ${req.body.hospitalAccess},
-        ${req.body.BARTAccess},
-        ${req.body.wheelchairAccess}
-        )`;
-    database.query(sql, function (err, insertedListingResponse) {
+    let listing = {
+        title: req.body.title,
+        listingType: req.body.listingType,
+        price: req.body.price,
+        lotSize: req.body.lotSize,
+        street: req.body.street,
+        city: req.body.city,
+        state: req.body.state,
+        zipCode: req.body.zipCode,
+        forSale: req.body.forSale,
+        description: req.body.description,
+        numBedrooms: req.body.numBedrooms,
+        numBathrooms: req.body.numBathrooms,
+        laundry: req.body.laundry,
+        hospitalAccess: req.body.hospitalAccess,
+        BARTAccess: req.body.BARTAccess,
+        wheelchairAccess: req.body.wheelchairAccess
+    };
+    let sql = `INSERT INTO Listing SET ?`;
+    database.query(sql, listing, function (err, insertedListingResponse) {
         if (err) {
             console.log(err);
             res.status(err.status || 500).send(err.message);
@@ -33,12 +32,14 @@ router.post('/', function (req, res) {
             let listingId = insertedListingResponse.insertId;
 
             // Insert new Creates row containing userId and listingId
+
             let sql = `INSERT INTO Creates (userId, listingId) VALUES (` +
                 `
                         ${req.body.user.userId},
                         ${listingId}
                         )`;
             database.query(sql, function (err, createsResponse) {
+
                 if (err) {
                     res.status(err.status || 500).send(err.message);
                 } else {
@@ -64,11 +65,13 @@ router.get('/', async function (req, res) {
     })
 });
  */
+
 // Get one listing
 router.get('/:id', function (req, res) {
     //Get creates item in order to get the listing owners id
     let sql = `SELECT * FROM Listing WHERE listingId = '${req.params.id}'`;
     database.query(sql, function (err, result) {
+
         if (err) {
             res.status(err.status || 500).send(err.message);
         } else {
@@ -94,8 +97,15 @@ router.get('/:id', function (req, res) {
                         console.log(error);
                         res.send(listing);
                     });
+
                 }
-            })
+                listing.imageUrls = listingImages;
+
+                res.send(listing);
+            }).catch(error => {
+                console.log(error);
+                res.send(listing);
+            });
         }
     })
 });
@@ -121,12 +131,28 @@ router.put('/:id', function (req, res) {
     wheelchairAccess = ${req.body.wheelchairAccess}
     WHERE 
     listingId = ${req.params.id}`;
-    database.query(sql, function (err, result) {
+
+    var sql = `UPDATE Listing SET ? WHERE ?`;
+    database.query(sql, [listing, listingId], function (err, listingResponse) {
         if (err) {
             res.status(err.status || 500).send(err.message);
         } else {
-            console.log(result);
-            res.send(result);
+            console.log(listingResponse);
+            res.send(listingResponse);
+        }
+    })
+});
+
+//Delete
+router.delete('/id:', function (req, res) {
+    let deletedListing = {listingId: req.params.id};
+    let sql = `DELETE FROM Creates WHERE ?`;
+    database.query(sql, deletedListing, function (err, deleteResponse) {
+        if (err) {
+            res.status(err.status || 500).send(err.message);
+        } else {
+            console.log(deleteResponse);
+            res.send(deleteResponse);
         }
     })
 });
@@ -134,8 +160,61 @@ router.put('/:id', function (req, res) {
 // Get users posted listings
 router.get('/user/listings', function (req, res) {
     let userId = Number(req.header('userId'));
+    let sql = 'SELECT * FROM Listing WHERE listingId IN (SELECT listingId FROM Creates WHERE userId = ' + database.escape(userId) + ')';
+
+    database.query(sql, function (err, result) {
+        if (err) {
+            res.status(err.status || 500).send(err.message);
+        } else {
+            console.log(result);
+
+            let promises = [];
+
+            // iterate over all the user's posted listings,
+            // query to get the imageUrls associated with that listing,
+            // assign the urls for that listing
+            for (let i = 0; i < result.length; i++) {
+                let listing = result[i];
+                let listingId = {listingId: result[i].listingId};
+                let sql2 = `SELECT imageUrl FROM ListingImage WHERE ?`;
+                let promise = sqlPromiseWrapper(sql2, listingId).then(images => {
+                    let listingImages = [];
+                    for (let i = 0; i < images.length; i++) {
+                        listingImages.push(images[i].imageUrl);
+                    }
+                    listing.imageUrls = listingImages;
+                }).catch(error => {
+                    console.log(error);
+                });
+                promises.push(promise);
+            }
+
+            // Waits for all promises to be returned (all image uploading calls finish)
+            Promise.all(promises).then(s => {
+                // Result will now be the user's posted listings with imageUrls
+                console.log(result);
+                res.send(result);
+            }).catch(err => {
+                console.log(err);
+            });
+        }
+    })
+});
+
+
+// Get users posted listings
+router.get('/user/listings', function (req, res) {
+    let userId = Number(req.header('userId'));
     let sql = `SELECT * FROM Listing WHERE listingId IN (SELECT listingId FROM Creates WHERE userId = ${userId})`;
     database.query(sql, function (err, result) {
+
+// Delete imageURL for a given Listing
+router.put('/delete-image',function (req, res) {
+    console.log(req.body.imageUrl);
+    let imageUrl = {imageUrl: req.body.imagUrl};
+    let sql = `DELETE FROM ListingImage WHERE ?`;
+    database.query(sql, imageUrl, function (err, result) {
+
         if (err) {
             res.status(err.status || 500).send(err.message);
         } else {
@@ -170,7 +249,7 @@ router.get('/user/listings', function (req, res) {
                 console.log(err);
             });
         }
-    })
+    });
 });
 
 // Delete Listing
@@ -217,6 +296,7 @@ router.put('/delete-image',function (req, res) {
 function sqlPromiseWrapper(sql) {
     return new Promise((resolve, reject) => {
         database.query(sql, function (err, result) {
+
             if (err) {
                 reject(err);
             } else {
@@ -227,3 +307,4 @@ function sqlPromiseWrapper(sql) {
 }
 
 module.exports = router;
+
