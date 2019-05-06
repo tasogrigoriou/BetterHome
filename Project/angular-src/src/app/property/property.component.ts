@@ -30,6 +30,7 @@ export class PropertyComponent implements OnInit, OnDestroy {
   accessibilities = new FormControl();
   accessibilityList: string[] = ['Laundry', 'Hospital', 'Wheelchair', 'BART'];
 
+  pageIndex: number = 0;
   pageSize: number = 3;
   pageSizeOptions: number[] = [3, 6, 18, 30, 60];
 
@@ -108,7 +109,8 @@ export class PropertyComponent implements OnInit, OnDestroy {
 
   pageDidChange(event) {
     this.pageSize = event.pageSize;
-    let startIndex = this.pageSize * event.pageIndex;
+    this.pageIndex = event.pageIndex;
+    let startIndex = this.pageSize * this.pageIndex;
     this.pagedListings = this.listings.slice(startIndex, startIndex + this.pageSize);
   }
 
@@ -132,18 +134,20 @@ export class PropertyComponent implements OnInit, OnDestroy {
   reloadData() {
     this.isLoaded = false;
     localStorage.setItem('listingSearch', JSON.stringify(this.listingSearch));
-    this.searchService.getSearchListings(this.listingSearch)
-      .subscribe(listings => {
-          this.isLoaded = true;
-          this.listings = listings;
-          this.searchService.saveSearchListings(listings);
-        },
-        err => {
-          this.isLoaded = true;
-          this.listings = [];
-          this.searchService.saveSearchListings([]);
-          this.openDialog('Unable to retrieve any listing based on your search and filter options. Please try again');
-        });
+    this.searchService.getSearchListings(this.listingSearch).subscribe(listings => {
+        this.isLoaded = true;
+        this.listings = listings;
+        let startIndex = this.pageSize * this.pageIndex;
+        this.pagedListings = this.listings.slice(startIndex, startIndex + this.pageSize);
+        this.searchService.saveSearchListings(listings);
+      },
+      err => {
+        this.isLoaded = true;
+        this.listings = [];
+        this.pagedListings = [];
+        this.searchService.saveSearchListings([]);
+        this.openDialog('Unable to retrieve any listing based on your search and filter options. Please try again');
+      });
   }
 
   onFavoriteClick(listing: Listing) {

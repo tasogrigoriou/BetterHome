@@ -161,6 +161,7 @@ var PropertyComponent = /** @class */ (function () {
         this.isLoaded = false;
         this.accessibilities = new _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormControl"]();
         this.accessibilityList = ['Laundry', 'Hospital', 'Wheelchair', 'BART'];
+        this.pageIndex = 0;
         this.pageSize = 3;
         this.pageSizeOptions = [3, 6, 18, 30, 60];
     }
@@ -221,7 +222,8 @@ var PropertyComponent = /** @class */ (function () {
     };
     PropertyComponent.prototype.pageDidChange = function (event) {
         this.pageSize = event.pageSize;
-        var startIndex = this.pageSize * event.pageIndex;
+        this.pageIndex = event.pageIndex;
+        var startIndex = this.pageSize * this.pageIndex;
         this.pagedListings = this.listings.slice(startIndex, startIndex + this.pageSize);
     };
     PropertyComponent.prototype.onResize = function (event) {
@@ -242,14 +244,16 @@ var PropertyComponent = /** @class */ (function () {
         var _this = this;
         this.isLoaded = false;
         localStorage.setItem('listingSearch', JSON.stringify(this.listingSearch));
-        this.searchService.getSearchListings(this.listingSearch)
-            .subscribe(function (listings) {
+        this.searchService.getSearchListings(this.listingSearch).subscribe(function (listings) {
             _this.isLoaded = true;
             _this.listings = listings;
+            var startIndex = _this.pageSize * _this.pageIndex;
+            _this.pagedListings = _this.listings.slice(startIndex, startIndex + _this.pageSize);
             _this.searchService.saveSearchListings(listings);
         }, function (err) {
             _this.isLoaded = true;
             _this.listings = [];
+            _this.pagedListings = [];
             _this.searchService.saveSearchListings([]);
             _this.openDialog('Unable to retrieve any listing based on your search and filter options. Please try again');
         });
