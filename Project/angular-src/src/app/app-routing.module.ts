@@ -9,6 +9,8 @@ import {SearchResultsComponent} from "./search-results/search-results.component"
 import {AccountComponent} from "./account/account.component";
 import {AddListingComponent} from "./add-listing/add-listing.component";
 import {AdvancedSearchComponent} from "./advanced-search/advanced-search.component";
+import {UpdateLoginComponent} from "./update-login/update-login.component";
+import {UpdatePropertyComponent} from "./update-property/update-property.component";
 
 
 const routes: Routes = [
@@ -34,6 +36,10 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'update-login',
+    component: UpdateLoginComponent
+  },
+  {
     path: 'logout',
     component: LogoutComponent
   },
@@ -55,8 +61,12 @@ const routes: Routes = [
     component: AccountComponent
   },
   {
-    path : 'add-listing',
+    path: 'add-listing',
     component: AddListingComponent
+  },
+  {
+    path: 'update-property/:listingId',
+    component: UpdatePropertyComponent
   }
 ];
 

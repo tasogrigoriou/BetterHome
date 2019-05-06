@@ -2,6 +2,7 @@ import {EventEmitter, Injectable, Output} from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
+import {RegisterUser} from "./register.service";
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -20,6 +21,13 @@ export class LoginService {
   /*** Login User ***/
   loginUser(userData): Observable<any> {
     return this.http.post(apiUrl, userData, httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  /*** Update User ***/
+  updateUser(user): Observable<any> {
+    return this.http.put(apiUrl, user, httpOptions).pipe(
       catchError(this.handleError)
     );
   }

@@ -59,4 +59,8 @@ export interface ListingSearch {
   listingType?: string;
   numBedrooms?: number;
   numBathrooms?: number;
+  lotSize?: number;
+  minPrice?: number;
+  maxPrice?: number;
+  accessibilities?: string[];
 }

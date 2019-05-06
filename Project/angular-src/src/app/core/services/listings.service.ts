@@ -21,6 +21,42 @@ export class ListingsService {
     );
   }
 
+
+  getSingleListing(listingId: number): Observable<any> {
+    return this.http.get(apiUrl + `/${listingId}`, httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  updateListing(listing: Listing): Observable<any> {
+    return this.http.put(apiUrl + `/${listing.listingId}`, listing, httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getUserListings(userId: number): Observable<any> {
+    return this.http.get(apiUrl + '/user/listings', {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'userId': String(userId)
+      })
+    }).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  deleteListing(listingId: number): Observable<any> {
+    return this.http.delete(apiUrl + `/${listingId}`, httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  deleteImage(imageUrl: string): Observable<any> {
+    return this.http.put(apiUrl + `/delete-image`, {imageUrl: imageUrl}, httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.
@@ -138,6 +174,7 @@ export class Listing {
     public wheelchairAccess: boolean = false,
     public lotSize: number = null,
     public description: string = '',
-    public user: LoginUser = null
+    public user: LoginUser = null,
+    public isFavorite: boolean = false
   ) {}
 }

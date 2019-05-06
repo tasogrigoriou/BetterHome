@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         .subscribe(listings => {
             this.isLoaded = true;
             this.searchService.saveSearchListings(listings);
-            this.openDialog('Successfully retrieved Listings!', true);
+            this.router.navigate(['/properties']);
           },
           err => {
             this.isLoaded = true;

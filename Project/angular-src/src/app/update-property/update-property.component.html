@@ -1,0 +1,269 @@
+<ng-template [ngIf]="loginUser && listing && listingBelongsToUser">
+
+  <ng-template [ngIf]="isFullScreen">
+    <div class="container example-container" (window:resize)="onResize($event)">
+      <h2 class="post-listing-header">Update Listing</h2>
+
+      <mat-form-field class="cont-input">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Title" [(ngModel)]="listing.title" required>
+      </mat-form-field>
+
+      <div class="form-field-div">
+        <mat-form-field class="cont-input">
+          <mat-label>Listing Type</mat-label>
+          <mat-select placeholder="Listing Type" [(value)]="listing.listingType" required>
+            <mat-option value="House">House</mat-option>
+            <mat-option value="Apartment">Apartment</mat-option>
+            <mat-option value="Condo">Condo</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="cont-input">
+          <mat-label>Sale or Rent</mat-label>
+          <mat-select placeholder="Sale or Rent" [(ngModel)]="listing.forSale" required>
+            <mat-option [value]=1>Sale</mat-option>
+            <mat-option [value]=0>Rent</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="form-field-div">
+        <mat-form-field class="cont-form">
+          <mat-label>Bedrooms</mat-label>
+          <mat-select [(ngModel)]="listing.numBedrooms" required>
+            <mat-option [value]=1>1 Bed</mat-option>
+            <mat-option [value]=2>2 Beds</mat-option>
+            <mat-option [value]=3>3 Beds</mat-option>
+            <mat-option [value]=4>4 Beds</mat-option>
+            <mat-option [value]=5>5 Beds</mat-option>
+            <mat-option [value]=6>6 Beds</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="cont-form">
+          <mat-label>Bathrooms</mat-label>
+          <mat-select [(ngModel)]="listing.numBathrooms" required>
+            <mat-option [value]=1>1 Bath</mat-option>
+            <mat-option [value]=2>2 Baths</mat-option>
+            <mat-option [value]=3>3 Baths</mat-option>
+            <mat-option [value]=4>4 Baths</mat-option>
+            <mat-option [value]=5>5 Baths</mat-option>
+            <mat-option [value]=6>6 Baths</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="form-field-div">
+        <mat-form-field class="cont-input">
+          <mat-label>Street</mat-label>
+          <input matInput placeholder="Street" [(ngModel)]="listing.street" required>
+        </mat-form-field>
+
+        <mat-form-field class="cont-input">
+          <mat-label>City</mat-label>
+          <input matInput placeholder="City" [(ngModel)]="listing.city" required>
+        </mat-form-field>
+
+        <mat-form-field class="cont-input">
+          <mat-label>State</mat-label>
+          <input matInput placeholder="State" [(ngModel)]="listing.state" required>
+        </mat-form-field>
+
+        <mat-form-field class="cont-input">
+          <mat-label>Zip code</mat-label>
+          <input matInput placeholder="Zip code" (keypress)="numberOnly($event)" [(ngModel)]="listing.zipCode" required>
+        </mat-form-field>
+      </div>
+
+      <div class="form-field-div">
+        <mat-form-field class="cont-input">
+          <mat-label>Price</mat-label>
+          <input matInput placeholder="Price" (keypress)="numberOnly($event)" [(ngModel)]="listing.price" required>
+        </mat-form-field>
+
+        <mat-form-field class="cont-input">
+          <mat-label>Lot Size</mat-label>
+          <input matInput placeholder="Lot Size" (keypress)="numberOnly($event)" [(ngModel)]="listing.lotSize" required>
+        </mat-form-field>
+      </div>
+
+      <div class="form-field-div">
+        <mat-form-field class="cont-input">
+          <mat-label>Hospital Access</mat-label>
+          <mat-select placeholder="Hospital Access" [(ngModel)]="listing.hospitalAccess">
+            <mat-option [value]=1>Yes</mat-option>
+            <mat-option [value]=0>No</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="cont-input">
+          <mat-label>Bart Access</mat-label>
+          <mat-select placeholder="Bart Access" [(ngModel)]="listing.BARTAccess">
+            <mat-option [value]=1>Yes</mat-option>
+            <mat-option [value]=0>No</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="cont-input">
+          <mat-label>Wheelchair Access</mat-label>
+          <mat-select placeholder="Wheelchair Access" [(ngModel)]="listing.wheelchairAccess">
+            <mat-option [value]=1>Yes</mat-option>
+            <mat-option [value]=0>No</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="cont-input">
+          <mat-label>Laundry Access</mat-label>
+          <mat-select placeholder="Laundry Access" [(ngModel)]="listing.laundry">
+            <mat-option [value]=1>Yes</mat-option>
+            <mat-option [value]=0>No</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field class="cont-input">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="Description" [(ngModel)]="listing.description" required></textarea>
+      </mat-form-field>
+
+      <div>
+        <button mat-raised-button color="primary" (click)="onUpdateClick()">Update Listing</button>
+      </div>
+
+      <div>
+        <mat-spinner *ngIf="!isLoaded"></mat-spinner>
+      </div>
+
+    </div>
+  </ng-template>
+
+  <ng-template [ngIf]="!isFullScreen">
+    <div class="container example-container" (window:resize)="onResize($event)">
+      <h2 class="post-listing-header">Update Listing</h2>
+
+      <mat-form-field class="cont-input">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Title" [(ngModel)]="listing.title" required>
+      </mat-form-field>
+
+      <mat-form-field class="cont-input">
+        <mat-label>Listing Type</mat-label>
+        <mat-select placeholder="Listing Type" [(value)]="listing.listingType" required>
+          <mat-option value="House">House</mat-option>
+          <mat-option value="Apartment">Apartment</mat-option>
+          <mat-option value="Condo">Condo</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="cont-input">
+        <mat-label>Sale or Rent</mat-label>
+        <mat-select placeholder="Sale or Rent" [(ngModel)]="listing.forSale" required>
+          <mat-option [value]=1>Sale</mat-option>
+          <mat-option [value]=0>Rent</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="cont-form">
+        <mat-label>Bedrooms</mat-label>
+        <mat-select [(ngModel)]="listing.numBedrooms" required>
+          <mat-option [value]=1>1 Bed</mat-option>
+          <mat-option [value]=2>2 Beds</mat-option>
+          <mat-option [value]=3>3 Beds</mat-option>
+          <mat-option [value]=4>4 Beds</mat-option>
+          <mat-option [value]=5>5 Beds</mat-option>
+          <mat-option [value]=6>6 Beds</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="cont-form">
+        <mat-label>Bathrooms</mat-label>
+        <mat-select [(ngModel)]="listing.numBathrooms" required>
+          <mat-option [value]=1>1 Bath</mat-option>
+          <mat-option [value]=2>2 Baths</mat-option>
+          <mat-option [value]=3>3 Baths</mat-option>
+          <mat-option [value]=4>4 Baths</mat-option>
+          <mat-option [value]=5>5 Baths</mat-option>
+          <mat-option [value]=6>6 Baths</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="cont-input">
+        <mat-label>Street</mat-label>
+        <input matInput placeholder="Street" [(ngModel)]="listing.street" required>
+      </mat-form-field>
+
+      <mat-form-field class="cont-input">
+        <mat-label>City</mat-label>
+        <input matInput placeholder="City" [(ngModel)]="listing.city" required>
+      </mat-form-field>
+
+      <mat-form-field class="cont-input">
+        <mat-label>State</mat-label>
+        <input matInput placeholder="State" [(ngModel)]="listing.state" required>
+      </mat-form-field>
+
+      <mat-form-field class="cont-input">
+        <mat-label>Zip code</mat-label>
+        <input matInput placeholder="Zip code" (keypress)="numberOnly($event)" [(ngModel)]="listing.zipCode" required>
+      </mat-form-field>
+
+      <mat-form-field class="cont-input">
+        <mat-label>Price</mat-label>
+        <input matInput placeholder="Price" (keypress)="numberOnly($event)" [(ngModel)]="listing.price" required>
+      </mat-form-field>
+
+      <mat-form-field class="cont-input">
+        <mat-label>Lot Size</mat-label>
+        <input matInput placeholder="Lot Size" (keypress)="numberOnly($event)" [(ngModel)]="listing.lotSize" required>
+      </mat-form-field>
+
+      <mat-form-field class="cont-input">
+        <mat-label>Hospital Access</mat-label>
+        <mat-select placeholder="Hospital Access" [(ngModel)]="listing.hospitalAccess">
+          <mat-option [value]=1>Yes</mat-option>
+          <mat-option [value]=0>No</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="cont-input">
+        <mat-label>Bart Access</mat-label>
+        <mat-select placeholder="Bart Access" [(ngModel)]="listing.BARTAccess">
+          <mat-option [value]=1>Yes</mat-option>
+          <mat-option [value]=0>No</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="cont-input">
+        <mat-label>Wheelchair Access</mat-label>
+        <mat-select placeholder="Wheelchair Access" [(ngModel)]="listing.wheelchairAccess">
+          <mat-option [value]=1>Yes</mat-option>
+          <mat-option [value]=0>No</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="cont-input">
+        <mat-label>Laundry Access</mat-label>
+        <mat-select placeholder="Laundry Access" [(ngModel)]="listing.laundry">
+          <mat-option [value]=1>Yes</mat-option>
+          <mat-option [value]=0>No</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="cont-input">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="Description" [(ngModel)]="listing.description" required></textarea>
+      </mat-form-field>
+
+      <div>
+        <button mat-raised-button color="primary" (click)="onUpdateClick()">Update Listing</button>
+      </div>
+
+      <div>
+        <mat-spinner *ngIf="!isLoaded"></mat-spinner>
+      </div>
+
+    </div>
+  </ng-template>
+
+</ng-template>

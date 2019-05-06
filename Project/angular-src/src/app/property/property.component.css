@@ -20,6 +20,9 @@
 .cont-form ::ng-deep .mat-form-field-underline {
   display: none;
 }
+.cont-price-range ::ng-deep .mat-form-field-underline {
+  display: none;
+}
 
 .property-grid-list {
   background-color: transparent;
@@ -37,7 +40,7 @@
 
 .property-card {
   position: relative;
-  margin-top: 10px;
+  margin-bottom: 10px;
   align-items: center;
 }
 
@@ -59,13 +62,25 @@
   width: 100%;
 }
 
+.img-container {
+  max-height: 500px;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.img-wrap {
+  display: inline-block;
+  position: relative;
+}
+
 .property-paginator {
   margin-bottom: 10px;
 }
 
 .space {
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .cont-form {
@@ -75,8 +90,16 @@
 }
 
 .cont-search {
+  margin-left: 35px;
+  margin-top: 20px;
   margin-right: 20px;
   max-width: 210px;
+}
+
+.cont-price-range {
+  margin-top: 20px;
+  margin-right: 20px;
+  max-width: 80px;
 }
 
 .a-link-card {
@@ -88,4 +111,13 @@
 .property-access-title {
   margin-top: -10px;
   color: rgba(0, 0, 0, 0.6);
+}
+
+.desc-cont {
+  /*line-height: 2.5ex;*/
+  /*height: 7.5ex; !* 2.5ex for each visible line *!*/
+  /*overflow: hidden;*/
+  /*display: block;*/
+  /*white-space: nowrap;*/
+  /*text-overflow: ellipsis;*/
 }

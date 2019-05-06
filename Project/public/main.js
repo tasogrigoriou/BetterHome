@@ -46,7 +46,7 @@ module.exports = webpackAsyncContext;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*:host>.container {*/\n/*  max-width: 1264px;*/\n/*  width: 100%;*/\n/*  margin: 0 auto;*/\n/*  display: flex;*/\n/*  justify-content: space-between;*/\n/*  background: none;*/\n/*  float: left;*/\n/*}*/\n/*:host>.mat-tab-group {*/\n/*  flex-direction: row;*/\n/*}*/\n/*:host>.mat-tab-header {*/\n/*  border-bottom: none;*/\n/*}*/\n/*:host>.mat-tab-header-pagination {*/\n/*  display: none !important;*/\n/*}*/\n/*:host>.mat-tab-labels {*/\n/*  flex-direction: column;*/\n/*}*/\n/*:host>.mat-ink-bar {*/\n/*  height: 100%;*/\n/*  left: 98% !important;*/\n/*}*/\n/*:host>.mat-tab-body-wrapper {*/\n/*  flex: 1 1 auto;*/\n/*}*/\n/*.container {*/\n/*  position: relative;*/\n/*  width: 100%;*/\n/*  flex: 1 0 auto;*/\n/*  margin: 0 auto;*/\n/*  text-align: left;*/\n/*}*/\n/*#content {*/\n/*  box-sizing: content-box;*/\n/*  margin: 0 auto;*/\n/*  padding: 15px;*/\n/*  width: 1264px;*/\n/*  background-color: #ffffff;*/\n/*}*/\n/*#content {*/\n/*  max-width: 1100px;*/\n/*  width: 100%;*/\n/*  background-color: #ffffff;*/\n/*  padding: 24px;*/\n/*  box-sizing: border-box;*/\n/*}*/\n/*#content {*/\n/*  max-width: 1100px;*/\n/*  width: 100%;*/\n/*  background-color: #fff;*/\n/*  padding: 24px;*/\n/*  box-sizing: border-box;*/\n/*}*/\n/*#content::before, #main-content::before, #content::after, #main-content::after {*/\n/*  content: \"\";*/\n/*  display: table;*/\n/*}*/\n/*#content::after, #main-content::after {*/\n/*  clear: both;*/\n/*}*/\n/*.label{*/\n/*  font-size: xx-large;*/\n/*  font-weight: bold;*/\n/*}*/\n::ng-deep .mat-tab-labels {\n   font-size: 20px;\n   justify-content: center;\n }\n::ng-deep .mat-tab-label {\n  font-size: 18px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWNjb3VudC9hY2NvdW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEscUJBQXFCO0FBQ3JCLHVCQUF1QjtBQUN2QixpQkFBaUI7QUFDakIsb0JBQW9CO0FBQ3BCLG1CQUFtQjtBQUNuQixvQ0FBb0M7QUFFcEMsc0JBQXNCO0FBQ3RCLGlCQUFpQjtBQUNqQixJQUFJO0FBRUoseUJBQXlCO0FBQ3pCLHlCQUF5QjtBQUN6QixJQUFJO0FBQ0osMEJBQTBCO0FBQzFCLHlCQUF5QjtBQUN6QixJQUFJO0FBQ0oscUNBQXFDO0FBQ3JDLDhCQUE4QjtBQUM5QixJQUFJO0FBQ0osMEJBQTBCO0FBQzFCLDRCQUE0QjtBQUM1QixJQUFJO0FBQ0osdUJBQXVCO0FBQ3ZCLGtCQUFrQjtBQUNsQiwwQkFBMEI7QUFDMUIsSUFBSTtBQUNKLGdDQUFnQztBQUNoQyxvQkFBb0I7QUFDcEIsSUFBSTtBQUdKLGVBQWU7QUFDZix3QkFBd0I7QUFDeEIsaUJBQWlCO0FBQ2pCLG9CQUFvQjtBQUNwQixvQkFBb0I7QUFDcEIsc0JBQXNCO0FBQ3RCLElBQUk7QUFFSixhQUFhO0FBQ2IsNkJBQTZCO0FBQzdCLG9CQUFvQjtBQUNwQixtQkFBbUI7QUFDbkIsbUJBQW1CO0FBQ25CLCtCQUErQjtBQUMvQixJQUFJO0FBRUosYUFBYTtBQUNiLHVCQUF1QjtBQUN2QixpQkFBaUI7QUFDakIsK0JBQStCO0FBQy9CLG1CQUFtQjtBQUNuQiw0QkFBNEI7QUFDNUIsSUFBSTtBQUNKLGFBQWE7QUFDYix1QkFBdUI7QUFDdkIsaUJBQWlCO0FBQ2pCLDRCQUE0QjtBQUM1QixtQkFBbUI7QUFDbkIsNEJBQTRCO0FBQzVCLElBQUk7QUFDSixtRkFBbUY7QUFDbkYsaUJBQWlCO0FBQ2pCLG9CQUFvQjtBQUNwQixJQUFJO0FBQ0osMENBQTBDO0FBQzFDLGlCQUFpQjtBQUNqQixJQUFJO0FBRUosVUFBVTtBQUNWLHlCQUF5QjtBQUN6Qix1QkFBdUI7QUFFdkIsSUFBSTtBQUVKO0dBQ0csZUFBZTtHQUNmLHVCQUF1QjtDQUN6QjtBQUVEO0VBQ0UsZUFBZTtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL2FjY291bnQvYWNjb3VudC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyo6aG9zdD4uY29udGFpbmVyIHsqL1xuLyogIG1heC13aWR0aDogMTI2NHB4OyovXG4vKiAgd2lkdGg6IDEwMCU7Ki9cbi8qICBtYXJnaW46IDAgYXV0bzsqL1xuLyogIGRpc3BsYXk6IGZsZXg7Ki9cbi8qICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47Ki9cblxuLyogIGJhY2tncm91bmQ6IG5vbmU7Ki9cbi8qICBmbG9hdDogbGVmdDsqL1xuLyp9Ki9cblxuLyo6aG9zdD4ubWF0LXRhYi1ncm91cCB7Ki9cbi8qICBmbGV4LWRpcmVjdGlvbjogcm93OyovXG4vKn0qL1xuLyo6aG9zdD4ubWF0LXRhYi1oZWFkZXIgeyovXG4vKiAgYm9yZGVyLWJvdHRvbTogbm9uZTsqL1xuLyp9Ki9cbi8qOmhvc3Q+Lm1hdC10YWItaGVhZGVyLXBhZ2luYXRpb24geyovXG4vKiAgZGlzcGxheTogbm9uZSAhaW1wb3J0YW50OyovXG4vKn0qL1xuLyo6aG9zdD4ubWF0LXRhYi1sYWJlbHMgeyovXG4vKiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsqL1xuLyp9Ki9cbi8qOmhvc3Q+Lm1hdC1pbmstYmFyIHsqL1xuLyogIGhlaWdodDogMTAwJTsqL1xuLyogIGxlZnQ6IDk4JSAhaW1wb3J0YW50OyovXG4vKn0qL1xuLyo6aG9zdD4ubWF0LXRhYi1ib2R5LXdyYXBwZXIgeyovXG4vKiAgZmxleDogMSAxIGF1dG87Ki9cbi8qfSovXG5cblxuLyouY29udGFpbmVyIHsqL1xuLyogIHBvc2l0aW9uOiByZWxhdGl2ZTsqL1xuLyogIHdpZHRoOiAxMDAlOyovXG4vKiAgZmxleDogMSAwIGF1dG87Ki9cbi8qICBtYXJnaW46IDAgYXV0bzsqL1xuLyogIHRleHQtYWxpZ246IGxlZnQ7Ki9cbi8qfSovXG5cbi8qI2NvbnRlbnQgeyovXG4vKiAgYm94LXNpemluZzogY29udGVudC1ib3g7Ki9cbi8qICBtYXJnaW46IDAgYXV0bzsqL1xuLyogIHBhZGRpbmc6IDE1cHg7Ki9cbi8qICB3aWR0aDogMTI2NHB4OyovXG4vKiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjsqL1xuLyp9Ki9cblxuLyojY29udGVudCB7Ki9cbi8qICBtYXgtd2lkdGg6IDExMDBweDsqL1xuLyogIHdpZHRoOiAxMDAlOyovXG4vKiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjsqL1xuLyogIHBhZGRpbmc6IDI0cHg7Ki9cbi8qICBib3gtc2l6aW5nOiBib3JkZXItYm94OyovXG4vKn0qL1xuLyojY29udGVudCB7Ki9cbi8qICBtYXgtd2lkdGg6IDExMDBweDsqL1xuLyogIHdpZHRoOiAxMDAlOyovXG4vKiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjsqL1xuLyogIHBhZGRpbmc6IDI0cHg7Ki9cbi8qICBib3gtc2l6aW5nOiBib3JkZXItYm94OyovXG4vKn0qL1xuLyojY29udGVudDo6YmVmb3JlLCAjbWFpbi1jb250ZW50OjpiZWZvcmUsICNjb250ZW50OjphZnRlciwgI21haW4tY29udGVudDo6YWZ0ZXIgeyovXG4vKiAgY29udGVudDogXCJcIjsqL1xuLyogIGRpc3BsYXk6IHRhYmxlOyovXG4vKn0qL1xuLyojY29udGVudDo6YWZ0ZXIsICNtYWluLWNvbnRlbnQ6OmFmdGVyIHsqL1xuLyogIGNsZWFyOiBib3RoOyovXG4vKn0qL1xuXG4vKi5sYWJlbHsqL1xuLyogIGZvbnQtc2l6ZTogeHgtbGFyZ2U7Ki9cbi8qICBmb250LXdlaWdodDogYm9sZDsqL1xuXG4vKn0qL1xuXG46Om5nLWRlZXAgLm1hdC10YWItbGFiZWxzIHtcbiAgIGZvbnQtc2l6ZTogMjBweDtcbiAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuIH1cblxuOjpuZy1kZWVwIC5tYXQtdGFiLWxhYmVsIHtcbiAgZm9udC1zaXplOiAxOHB4O1xufVxuIl19 */"
+module.exports = "/*:host>.container {*/\n/*  max-width: 1264px;*/\n/*  width: 100%;*/\n/*  margin: 0 auto;*/\n/*  display: flex;*/\n/*  justify-content: space-between;*/\n/*  background: none;*/\n/*  float: left;*/\n/*}*/\n/*:host>.mat-tab-group {*/\n/*  flex-direction: row;*/\n/*}*/\n/*:host>.mat-tab-header {*/\n/*  border-bottom: none;*/\n/*}*/\n/*:host>.mat-tab-header-pagination {*/\n/*  display: none !important;*/\n/*}*/\n/*:host>.mat-tab-labels {*/\n/*  flex-direction: column;*/\n/*}*/\n/*:host>.mat-ink-bar {*/\n/*  height: 100%;*/\n/*  left: 98% !important;*/\n/*}*/\n/*:host>.mat-tab-body-wrapper {*/\n/*  flex: 1 1 auto;*/\n/*}*/\n/*.container {*/\n/*  position: relative;*/\n/*  width: 100%;*/\n/*  flex: 1 0 auto;*/\n/*  margin: 0 auto;*/\n/*  text-align: left;*/\n/*}*/\n/*#content {*/\n/*  box-sizing: content-box;*/\n/*  margin: 0 auto;*/\n/*  padding: 15px;*/\n/*  width: 1264px;*/\n/*  background-color: #ffffff;*/\n/*}*/\n/*#content {*/\n/*  max-width: 1100px;*/\n/*  width: 100%;*/\n/*  background-color: #ffffff;*/\n/*  padding: 24px;*/\n/*  box-sizing: border-box;*/\n/*}*/\n/*#content {*/\n/*  max-width: 1100px;*/\n/*  width: 100%;*/\n/*  background-color: #fff;*/\n/*  padding: 24px;*/\n/*  box-sizing: border-box;*/\n/*}*/\n/*#content::before, #main-content::before, #content::after, #main-content::after {*/\n/*  content: \"\";*/\n/*  display: table;*/\n/*}*/\n/*#content::after, #main-content::after {*/\n/*  clear: both;*/\n/*}*/\n/*.label{*/\n/*  font-size: xx-large;*/\n/*  font-weight: bold;*/\n/*}*/\n.fa {\n  color: darkgray;\n}\n.card-body {\n  margin-left: 25px;\n}\n.profile-p {\n  font-size: 18px;\n  font-style: oblique;\n  color: #686868;\n}\n.center-btn {\n  text-align: center;\n}\n.card-header-title {\n  padding-top: -20px;\n}\n.property-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.property-card {\n  position: relative;\n  margin-top: 10px;\n  align-items: center;\n  max-width: 400px;\n  width: 100%;\n}\n.a-link-card {\n  position: absolute;\n  top: 0; left: 0;\n  height: 100%; width: 100%;\n}\n.img-container {\n  max-height: 400px;\n  height: 100%;\n  width: 100%;\n  margin-bottom: 10px;\n}\n.img-wrap {\n  display: inline-block;\n  position: relative;\n}\n.img-upload {\n  position: absolute;\n  top: 14px;\n  left: 16px;\n}\n.img-delete {\n  position: absolute;\n  top: 14px;\n  right: 16px;\n}\n.delete-button {\n  position: absolute;\n  top: 12px;\n  right: 16px;\n  height: 46px;\n  width: 30px;\n}\n::ng-deep .mat-tab-labels {\n   font-size: 20px;\n   justify-content: center;\n }\n::ng-deep .mat-tab-label {\n  font-size: 18px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWNjb3VudC9hY2NvdW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEscUJBQXFCO0FBQ3JCLHVCQUF1QjtBQUN2QixpQkFBaUI7QUFDakIsb0JBQW9CO0FBQ3BCLG1CQUFtQjtBQUNuQixvQ0FBb0M7QUFFcEMsc0JBQXNCO0FBQ3RCLGlCQUFpQjtBQUNqQixJQUFJO0FBRUoseUJBQXlCO0FBQ3pCLHlCQUF5QjtBQUN6QixJQUFJO0FBQ0osMEJBQTBCO0FBQzFCLHlCQUF5QjtBQUN6QixJQUFJO0FBQ0oscUNBQXFDO0FBQ3JDLDhCQUE4QjtBQUM5QixJQUFJO0FBQ0osMEJBQTBCO0FBQzFCLDRCQUE0QjtBQUM1QixJQUFJO0FBQ0osdUJBQXVCO0FBQ3ZCLGtCQUFrQjtBQUNsQiwwQkFBMEI7QUFDMUIsSUFBSTtBQUNKLGdDQUFnQztBQUNoQyxvQkFBb0I7QUFDcEIsSUFBSTtBQUdKLGVBQWU7QUFDZix3QkFBd0I7QUFDeEIsaUJBQWlCO0FBQ2pCLG9CQUFvQjtBQUNwQixvQkFBb0I7QUFDcEIsc0JBQXNCO0FBQ3RCLElBQUk7QUFFSixhQUFhO0FBQ2IsNkJBQTZCO0FBQzdCLG9CQUFvQjtBQUNwQixtQkFBbUI7QUFDbkIsbUJBQW1CO0FBQ25CLCtCQUErQjtBQUMvQixJQUFJO0FBRUosYUFBYTtBQUNiLHVCQUF1QjtBQUN2QixpQkFBaUI7QUFDakIsK0JBQStCO0FBQy9CLG1CQUFtQjtBQUNuQiw0QkFBNEI7QUFDNUIsSUFBSTtBQUNKLGFBQWE7QUFDYix1QkFBdUI7QUFDdkIsaUJBQWlCO0FBQ2pCLDRCQUE0QjtBQUM1QixtQkFBbUI7QUFDbkIsNEJBQTRCO0FBQzVCLElBQUk7QUFDSixtRkFBbUY7QUFDbkYsaUJBQWlCO0FBQ2pCLG9CQUFvQjtBQUNwQixJQUFJO0FBQ0osMENBQTBDO0FBQzFDLGlCQUFpQjtBQUNqQixJQUFJO0FBRUosVUFBVTtBQUNWLHlCQUF5QjtBQUN6Qix1QkFBdUI7QUFFdkIsSUFBSTtBQUVKO0VBQ0UsZUFBZTtBQUNqQjtBQUVBO0VBQ0UsaUJBQWlCO0FBQ25CO0FBRUE7RUFDRSxlQUFlO0VBQ2YsbUJBQW1CO0VBQ25CLGNBQWM7QUFDaEI7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjtBQUVBO0VBQ0Usa0JBQWtCO0FBQ3BCO0FBRUE7RUFDRSxhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtBQUNyQjtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNoQixtQkFBbUI7RUFDbkIsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLE1BQU0sRUFBRSxPQUFPO0VBQ2YsWUFBWSxFQUFFLFdBQVc7QUFDM0I7QUFFQTtFQUNFLGlCQUFpQjtFQUNqQixZQUFZO0VBQ1osV0FBVztFQUNYLG1CQUFtQjtBQUNyQjtBQUVBO0VBQ0UscUJBQXFCO0VBQ3JCLGtCQUFrQjtBQUNwQjtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLFNBQVM7RUFDVCxVQUFVO0FBQ1o7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixTQUFTO0VBQ1QsV0FBVztBQUNiO0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsU0FBUztFQUNULFdBQVc7RUFDWCxZQUFZO0VBQ1osV0FBVztBQUNiO0FBRUE7R0FDRyxlQUFlO0dBQ2YsdUJBQXVCO0NBQ3pCO0FBRUQ7RUFDRSxlQUFlO0FBQ2pCIiwiZmlsZSI6InNyYy9hcHAvYWNjb3VudC9hY2NvdW50LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKjpob3N0Pi5jb250YWluZXIgeyovXG4vKiAgbWF4LXdpZHRoOiAxMjY0cHg7Ki9cbi8qICB3aWR0aDogMTAwJTsqL1xuLyogIG1hcmdpbjogMCBhdXRvOyovXG4vKiAgZGlzcGxheTogZmxleDsqL1xuLyogIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjsqL1xuXG4vKiAgYmFja2dyb3VuZDogbm9uZTsqL1xuLyogIGZsb2F0OiBsZWZ0OyovXG4vKn0qL1xuXG4vKjpob3N0Pi5tYXQtdGFiLWdyb3VwIHsqL1xuLyogIGZsZXgtZGlyZWN0aW9uOiByb3c7Ki9cbi8qfSovXG4vKjpob3N0Pi5tYXQtdGFiLWhlYWRlciB7Ki9cbi8qICBib3JkZXItYm90dG9tOiBub25lOyovXG4vKn0qL1xuLyo6aG9zdD4ubWF0LXRhYi1oZWFkZXItcGFnaW5hdGlvbiB7Ki9cbi8qICBkaXNwbGF5OiBub25lICFpbXBvcnRhbnQ7Ki9cbi8qfSovXG4vKjpob3N0Pi5tYXQtdGFiLWxhYmVscyB7Ki9cbi8qICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOyovXG4vKn0qL1xuLyo6aG9zdD4ubWF0LWluay1iYXIgeyovXG4vKiAgaGVpZ2h0OiAxMDAlOyovXG4vKiAgbGVmdDogOTglICFpbXBvcnRhbnQ7Ki9cbi8qfSovXG4vKjpob3N0Pi5tYXQtdGFiLWJvZHktd3JhcHBlciB7Ki9cbi8qICBmbGV4OiAxIDEgYXV0bzsqL1xuLyp9Ki9cblxuXG4vKi5jb250YWluZXIgeyovXG4vKiAgcG9zaXRpb246IHJlbGF0aXZlOyovXG4vKiAgd2lkdGg6IDEwMCU7Ki9cbi8qICBmbGV4OiAxIDAgYXV0bzsqL1xuLyogIG1hcmdpbjogMCBhdXRvOyovXG4vKiAgdGV4dC1hbGlnbjogbGVmdDsqL1xuLyp9Ki9cblxuLyojY29udGVudCB7Ki9cbi8qICBib3gtc2l6aW5nOiBjb250ZW50LWJveDsqL1xuLyogIG1hcmdpbjogMCBhdXRvOyovXG4vKiAgcGFkZGluZzogMTVweDsqL1xuLyogIHdpZHRoOiAxMjY0cHg7Ki9cbi8qICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmOyovXG4vKn0qL1xuXG4vKiNjb250ZW50IHsqL1xuLyogIG1heC13aWR0aDogMTEwMHB4OyovXG4vKiAgd2lkdGg6IDEwMCU7Ki9cbi8qICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmOyovXG4vKiAgcGFkZGluZzogMjRweDsqL1xuLyogIGJveC1zaXppbmc6IGJvcmRlci1ib3g7Ki9cbi8qfSovXG4vKiNjb250ZW50IHsqL1xuLyogIG1heC13aWR0aDogMTEwMHB4OyovXG4vKiAgd2lkdGg6IDEwMCU7Ki9cbi8qICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmOyovXG4vKiAgcGFkZGluZzogMjRweDsqL1xuLyogIGJveC1zaXppbmc6IGJvcmRlci1ib3g7Ki9cbi8qfSovXG4vKiNjb250ZW50OjpiZWZvcmUsICNtYWluLWNvbnRlbnQ6OmJlZm9yZSwgI2NvbnRlbnQ6OmFmdGVyLCAjbWFpbi1jb250ZW50OjphZnRlciB7Ki9cbi8qICBjb250ZW50OiBcIlwiOyovXG4vKiAgZGlzcGxheTogdGFibGU7Ki9cbi8qfSovXG4vKiNjb250ZW50OjphZnRlciwgI21haW4tY29udGVudDo6YWZ0ZXIgeyovXG4vKiAgY2xlYXI6IGJvdGg7Ki9cbi8qfSovXG5cbi8qLmxhYmVseyovXG4vKiAgZm9udC1zaXplOiB4eC1sYXJnZTsqL1xuLyogIGZvbnQtd2VpZ2h0OiBib2xkOyovXG5cbi8qfSovXG5cbi5mYSB7XG4gIGNvbG9yOiBkYXJrZ3JheTtcbn1cblxuLmNhcmQtYm9keSB7XG4gIG1hcmdpbi1sZWZ0OiAyNXB4O1xufVxuXG4ucHJvZmlsZS1wIHtcbiAgZm9udC1zaXplOiAxOHB4O1xuICBmb250LXN0eWxlOiBvYmxpcXVlO1xuICBjb2xvcjogIzY4Njg2ODtcbn1cblxuLmNlbnRlci1idG4ge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5jYXJkLWhlYWRlci10aXRsZSB7XG4gIHBhZGRpbmctdG9wOiAtMjBweDtcbn1cblxuLnByb3BlcnR5LWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4ucHJvcGVydHktY2FyZCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgbWFyZ2luLXRvcDogMTBweDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgbWF4LXdpZHRoOiA0MDBweDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5hLWxpbmstY2FyZCB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAwOyBsZWZ0OiAwO1xuICBoZWlnaHQ6IDEwMCU7IHdpZHRoOiAxMDAlO1xufVxuXG4uaW1nLWNvbnRhaW5lciB7XG4gIG1heC1oZWlnaHQ6IDQwMHB4O1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xufVxuXG4uaW1nLXdyYXAge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuLmltZy11cGxvYWQge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMTRweDtcbiAgbGVmdDogMTZweDtcbn1cblxuLmltZy1kZWxldGUge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMTRweDtcbiAgcmlnaHQ6IDE2cHg7XG59XG5cbi5kZWxldGUtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDEycHg7XG4gIHJpZ2h0OiAxNnB4O1xuICBoZWlnaHQ6IDQ2cHg7XG4gIHdpZHRoOiAzMHB4O1xufVxuXG46Om5nLWRlZXAgLm1hdC10YWItbGFiZWxzIHtcbiAgIGZvbnQtc2l6ZTogMjBweDtcbiAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuIH1cblxuOjpuZy1kZWVwIC5tYXQtdGFiLWxhYmVsIHtcbiAgZm9udC1zaXplOiAxOHB4O1xufVxuIl19 */"
 
 /***/ }),
 
@@ -57,7 +57,7 @@ module.exports = "/*:host>.container {*/\n/*  max-width: 1264px;*/\n/*  width: 1
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Account</title>\n\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n</head>\n<body>\n<br>\n<br>\n     <div class=\"container\">\n       <div>\n         <h3 class=\"card-header-title\">Welcome {{user.username}}!</h3>\n       </div>\n           <mat-tab-group mat-stretch-tabs>\n              <mat-tab label=\"Profile\">\n                <br>\n                <div class=\"card-body\">\n\n                  <mat-list role=\"listitem\">\n                    <mat-list-item role=\"listitem\">{{user.username}}</mat-list-item>\n                    <mat-list-item role=\"listitem\">{{user.firstName + ' ' + user.lastName}}</mat-list-item>\n                    <mat-list-item role=\"listitem\">{{user.emailAddress}}</mat-list-item>\n                    <mat-list-item role=\"listitem\">{{user.phoneNumber}}</mat-list-item>\n                  </mat-list>\n\n                   <button mat-raised-button type=\"edit\" class=\"btn btn-danger pull-right\">Edit</button>\n\n               </div>\n             </mat-tab>\n\n             <mat-tab label=\"My Listing\">\n                <br>\n                 <p><i class=\"fa fa-dollar fa-fw w3-margin-right w3-large \"></i> <var id =\"listingPrice\"> Price </var></p>\n                 <p><i class=\"fa fa-bed fa-fw w3-margin-right w3-large \"></i> <var id = \"bedRoom\"> Bedroom </var></p>\n                 <p><i class=\"fa fa-bath fa-fw w3-margin-right w3-large \"></i> <var id = \"bathRoom\"> Bathroom </var></p>\n                 <p><i class=\"fa fa-map-marker fa-fw w3-margin-right w3-large \"></i> <var id = \"address\"> Address </var></p>\n                 <p><i class=\"fa fa-phone fa-fw w3-margin-right w3-large \"></i> <var id=\"listingPhoneNumber\">(xxx)xxx-xxxx</var></p>\n                 <p><i class=\"fa fa-envelope fa-fw w3-margin-right w3-large \"></i> <var id=\"listingEmail\"> sendhelp@mailboyz.gov</var></p>\n\n               <div class=\"w3-center\">\n                 <div class=\"w3-section\">\n                   <button mat-button>❮ Prev</button>\n                   <button mat-button>Next ❯</button>\n                   <button mat-raised-button  type = \"edit\" class=\"btn btn-danger pull-right\">Edit</button>\n                 </div>\n               </div>\n\n             </mat-tab>\n             <mat-tab label=\"Favorite\">\n               Favorite List\n               <br><br>\n             </mat-tab>\n           </mat-tab-group>\n         </div>\n</body>\n</html>\n"
+module.exports = "<html>\n<title>Account</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n<body class=\"body\">\n<br>\n\n<div class=\"container\">\n  <div>\n    <h3 class=\"card-header-title\">Welcome {{user.username}}!</h3>\n  </div>\n\n  <mat-tab-group mat-stretch-tabs>\n\n    <mat-tab label=\"Profile\">\n      <br>\n        <div class=\"card-body\">\n\n          <p class=\"profile-p\"><i class=\"fa fa-user fa-fw w3-margin-right w3-xlarge \"></i>{{user.username}}</p>\n          <p class=\"profile-p\"><i class=\"fa fa-info fa-fw w3-margin-right w3-xlarge \"></i>{{user.firstName + ' ' + user.lastName}}</p>\n          <p class=\"profile-p\"><i class=\"fa fa-phone fa-fw w3-margin-right w3-xlarge \"></i>{{formatPhoneNumber(user.phoneNumber)}}</p>\n          <p class=\"profile-p\"><i class=\"fa fa-envelope fa-fw w3-margin-right w3-xlarge \"></i>{{user.emailAddress}}</p>\n\n          <br>\n          <button mat-raised-button type=\"edit\" class=\"btn btn-danger edit-acct-btn\" (click)=\"onEditAccountClick()\">Edit</button>\n\n        </div>\n    </mat-tab>\n\n    <mat-tab label=\"My Listings\">\n      <ng-template [ngIf]=\"userListings[userListingIndex] && userListings.length > 0\">\n        <div class=\"property-container\">\n          <mat-card class=\"property-card\" appMaterialElevation defaultElevation=\"3\" raisedElevation=\"24\">\n\n            <a class=\"a-link-card\" (click)=\"onEditListingClick()\"></a>\n\n            <a class=\"delete-button\" (click)=\"onDeleteListingClick(userListings[userListingIndex])\">\n              <mat-icon style=\"font-size: 33px !important\" color=\"warn\">delete_forever</mat-icon>\n            </a>\n\n            <mat-card-header>\n              <mat-card-title><h5>{{userListings[userListingIndex].title}}</h5>\n              </mat-card-title>\n              <mat-card-subtitle style=\"padding-top: 6px !important\">\n                {{userListings[userListingIndex].street + ', ' + userListings[userListingIndex].city + ', ' + userListings[userListingIndex].state}}\n              </mat-card-subtitle>\n            </mat-card-header>\n\n            <ng-template [ngIf]=\"userListings[userListingIndex] && userListings[userListingIndex].imageUrls.length > 0\">\n              <drag-scroll #drag_scroll>\n                <div class=\"img-wrap\"\n                     *ngFor=\"let imageUrl of userListings[userListingIndex].imageUrls\">\n                  <img class=\"img-container\"\n                       drag-scroll-item\n                       [src]=\"imageUrl\"\n                       alt=\"\" />\n                  <a class=\"a-link-card\" (click)=\"onEditListingClick()\"></a>\n\n                  <a class=\"img-upload\" (click)=\"openInput()\">\n                    <mat-icon style=\"font-size: 30px !important\" color=\"primary\">cloud_upload</mat-icon>\n                    <input id=\"fileInput\"\n                           hidden\n                           type=\"file\"\n                           accept=\".jpg, .jpeg, .png, .tif\"\n                           (change)=\"onUploadImageClick($event.target.files)\"\n                           multiple>\n                  </a>\n                  <a class=\"img-delete\" (click)=\"onDeleteImageClick(imageUrl)\">\n                    <mat-icon style=\"font-size: 30px !important\" color=\"warn\">delete_forever</mat-icon>\n                  </a>\n\n                </div>\n              </drag-scroll>\n            </ng-template>\n\n            <mat-card-content>\n              <h6>{{userListings[userListingIndex].listingType + ' for ' + (userListings[userListingIndex].forSale ? 'sale' : 'rent')}}</h6>\n              <p><i>{{'$' + numberWithCommas(userListings[userListingIndex].price) + ' | ' + userListings[userListingIndex].numBedrooms + ' beds' + ' | ' + userListings[userListingIndex].numBathrooms + ' baths'}}</i></p>\n              <p class=\"property-access-title\">{{getPropertyAccessibility(userListings[userListingIndex])}}</p>\n              <p>{{userListings[userListingIndex].description}}</p>\n            </mat-card-content>\n          </mat-card>\n        </div>\n      </ng-template>\n\n      <div class=\"w3-center\">\n        <div class=\"w3-section\">\n          <div class=\"center-btn\">\n            <button mat-button (click)=\"clickLeftUserListings(userListingIndex)\">❮ Prev</button>\n            <button mat-button (click)=\"clickRightUserListings(userListingIndex)\">Next ❯</button>\n          </div>\n        </div>\n      </div>\n    </mat-tab>\n\n    <mat-tab label=\"My Favorites\">\n      <ng-template [ngIf]=\"favoriteListings[favoriteListingIndex] && favoriteListings.length > 0\">\n        <div class=\"property-container\">\n          <mat-card class=\"property-card\" appMaterialElevation defaultElevation=\"3\" raisedElevation=\"24\">\n\n            <a class=\"a-link-card\" (click)=\"navigateToListing(favoriteListings[favoriteListingIndex].listingId)\"></a>\n\n            <a class=\"delete-button\" (click)=\"onRemoveFavoriteListingClick(favoriteListings[favoriteListingIndex])\">\n              <mat-icon style=\"font-size: 24px !important\" color=\"warn\">favorite</mat-icon>\n            </a>\n\n            <mat-card-header>\n              <mat-card-title><h5>{{favoriteListings[favoriteListingIndex].title}}</h5>\n              </mat-card-title>\n              <mat-card-subtitle style=\"padding-top: 6px !important\">\n                {{favoriteListings[favoriteListingIndex].street + ', ' + favoriteListings[favoriteListingIndex].city + ', ' + favoriteListings[favoriteListingIndex].state}}\n              </mat-card-subtitle>\n            </mat-card-header>\n\n            <ng-template [ngIf]=\"favoriteListings[favoriteListingIndex] && favoriteListings[favoriteListingIndex].imageUrls.length > 0\">\n              <drag-scroll #drag_scroll>\n                <div class=\"img-wrap\"\n                     *ngFor=\"let imageUrl of favoriteListings[favoriteListingIndex].imageUrls\">\n                  <img class=\"img-container\"\n                       drag-scroll-item\n                       [src]=\"imageUrl\"\n                       alt=\"\" />\n                  <a class=\"a-link-card\" (click)=\"navigateToListing(favoriteListings[favoriteListingIndex].listingId)\"></a>\n                </div>\n              </drag-scroll>\n            </ng-template>\n\n            <mat-card-content>\n              <h6>{{favoriteListings[favoriteListingIndex].listingType + ' for ' + (favoriteListings[favoriteListingIndex].forSale ? 'sale' : 'rent')}}</h6>\n              <p><i>{{'$' + numberWithCommas(favoriteListings[favoriteListingIndex].price) + ' | ' + favoriteListings[favoriteListingIndex].numBedrooms + ' beds' + ' | ' + favoriteListings[favoriteListingIndex].numBathrooms + ' baths'}}</i></p>\n              <p class=\"property-access-title\">{{getPropertyAccessibility(favoriteListings[favoriteListingIndex])}}</p>\n              <p>{{favoriteListings[favoriteListingIndex].description}}</p>\n            </mat-card-content>\n          </mat-card>\n        </div>\n      </ng-template>\n\n      <div class=\"w3-center\">\n        <div class=\"w3-section\">\n          <button mat-button (click)=\"clickLeftFavoriteListings(favoriteListingIndex)\">❮ Prev</button>\n          <button mat-button (click)=\"clickRightFavoriteListings(favoriteListingIndex)\">Next ❯</button>\n        </div>\n      </div>\n    </mat-tab>\n\n  </mat-tab-group>\n\n  <div>\n    <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n  </div>\n\n</div>\n</body>\n</html>\n"
 
 /***/ }),
 
@@ -74,30 +74,307 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _core_services_register_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/services/register.service */ "./src/app/core/services/register.service.ts");
+/* harmony import */ var _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/services/listings.service */ "./src/app/core/services/listings.service.ts");
+/* harmony import */ var ngx_drag_scroll_lib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-drag-scroll/lib */ "./node_modules/ngx-drag-scroll/lib/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _delete_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./delete.dialog */ "./src/app/account/delete.dialog.ts");
+/* harmony import */ var _core_services_upload_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../core/services/upload.service */ "./src/app/core/services/upload.service.ts");
+/* harmony import */ var _core_services_favorites_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../core/services/favorites.service */ "./src/app/core/services/favorites.service.ts");
+
+
+
+
+
+
+
 
 
 
 var AccountComponent = /** @class */ (function () {
-    function AccountComponent(registerService) {
+    function AccountComponent(router, registerService, listingsService, favoritesService, uploadService, dialog) {
+        this.router = router;
         this.registerService = registerService;
-        this.isLoaded = true;
+        this.listingsService = listingsService;
+        this.favoritesService = favoritesService;
+        this.uploadService = uploadService;
+        this.dialog = dialog;
+        this.userListings = [];
+        this.favoriteListings = [];
+        this.userListingIndex = 0;
+        this.favoriteListingIndex = 0;
+        this.isLoaded = false;
     }
     AccountComponent.prototype.ngOnInit = function () {
-        if (localStorage.getItem('loginUser')) {
-            this.user = JSON.parse(localStorage.getItem('loginUser'));
+        if (!localStorage.getItem('loginUser')) {
+            return;
         }
+        this.user = JSON.parse(localStorage.getItem('loginUser'));
+        this.loadData();
     };
-    AccountComponent.prototype.onSaveInfoClick = function () {
+    AccountComponent.prototype.loadData = function () {
+        var _this = this;
+        var promises = [];
+        promises.push(this.listingsService.getUserListings(this.user.userId).toPromise().then(function (listings) {
+            console.log('my listings: ' + listings);
+            _this.userListings = listings;
+        }).catch(function (err) {
+            console.log(err);
+        }));
+        promises.push(this.favoritesService.getFavorites(this.user.userId).toPromise().then(function (favorites) {
+            console.log('my favorites: ' + favorites);
+            _this.favoriteListings = favorites;
+        }).catch(function (err) {
+            console.log(err);
+        }));
+        Promise.all(promises).then(function (s) {
+            _this.isLoaded = true;
+        }).catch(function (err) {
+            console.log(err);
+            _this.isLoaded = true;
+        });
     };
+    AccountComponent.prototype.clickLeftUserListings = function (i) {
+        if (i == 0)
+            return;
+        this.userListingIndex--;
+    };
+    AccountComponent.prototype.clickRightUserListings = function (i) {
+        if (i == this.userListings.length - 1)
+            return;
+        this.userListingIndex++;
+    };
+    AccountComponent.prototype.clickLeftFavoriteListings = function (i) {
+        if (i == 0)
+            return;
+        this.favoriteListingIndex--;
+    };
+    AccountComponent.prototype.clickRightFavoriteListings = function (i) {
+        if (i == this.favoriteListings.length - 1)
+            return;
+        this.favoriteListingIndex++;
+    };
+    AccountComponent.prototype.onDeleteListingClick = function (listing) {
+        this.openDeleteListingDialog(listing, 'Are you sure you want to delete this listing?');
+    };
+    AccountComponent.prototype.onRemoveFavoriteListingClick = function (listing) {
+        this.openRemoveFavoriteListingDialog(listing, 'Are you sure you want to remove this listing from your favorites?');
+    };
+    AccountComponent.prototype.openInput = function () {
+        document.getElementById("fileInput").click();
+    };
+    AccountComponent.prototype.onUploadImageClick = function (files) {
+        var _this = this;
+        this.isLoaded = false;
+        var promises = [];
+        for (var i = 0; i < files.length; i++) {
+            promises.push(this.uploadService.uploadImage(files[i], this.userListings[this.userListingIndex].listingId).toPromise());
+        }
+        // Waits for all promises to be returned (all image uploading calls finish)
+        Promise.all(promises).then(function (s) {
+            console.log(s);
+            _this.loadData();
+        }).catch(function (err) {
+            console.log(err);
+            _this.isLoaded = true;
+        });
+    };
+    AccountComponent.prototype.onDeleteImageClick = function (imageUrl) {
+        if (this.userListings[this.userListingIndex].imageUrls.length == 1) {
+            return;
+        }
+        this.openDeleteImageDialog(imageUrl, 'Are you sure you want to delete this image?');
+    };
+    AccountComponent.prototype.onEditAccountClick = function () {
+        this.router.navigate(['/update-login']);
+    };
+    AccountComponent.prototype.onEditListingClick = function () {
+        var listing = this.userListings[this.userListingIndex];
+        this.router.navigate(['/update-property', listing.listingId]);
+    };
+    AccountComponent.prototype.navigateToListing = function (listingId) {
+        this.router.navigate(['/properties', listingId]);
+    };
+    AccountComponent.prototype.deleteListing = function (listing) {
+        var _this = this;
+        this.listingsService.deleteListing(listing.listingId).subscribe(function (result) {
+            _this.userListings = _this.userListings.filter(function (userListing) {
+                return userListing.listingId !== listing.listingId;
+            });
+            _this.userListingIndex = 0;
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    AccountComponent.prototype.deleteImage = function (imageUrl) {
+        var _this = this;
+        this.listingsService.deleteImage(imageUrl).subscribe(function (result) {
+            _this.userListings[_this.userListingIndex].imageUrls = _this.userListings[_this.userListingIndex].imageUrls.filter(function (url) {
+                return url !== imageUrl;
+            });
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    AccountComponent.prototype.removeFavoriteListing = function (listing) {
+        var _this = this;
+        this.favoritesService.removeFavorite(listing.listingId, this.user.userId).subscribe(function (result) {
+            _this.favoriteListings = _this.favoriteListings.filter(function (favListing) {
+                return favListing.listingId !== listing.listingId;
+            });
+            _this.favoriteListingIndex = 0;
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    AccountComponent.prototype.numberWithCommas = function (x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    };
+    AccountComponent.prototype.formatPhoneNumber = function (phoneNumberString) {
+        var cleaned = ('' + phoneNumberString).replace(/\D/g, '');
+        var match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+        if (match) {
+            return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+        }
+        return null;
+    };
+    AccountComponent.prototype.getPropertyAccessibility = function (listing) {
+        var access = 'Accessibility: ';
+        if (!listing.laundry && !listing.hospitalAccess && !listing.wheelchairAccess && !listing.BARTAccess)
+            return access + 'none';
+        var accessList = [];
+        if (listing.laundry)
+            accessList.push('laundry');
+        if (listing.hospitalAccess)
+            accessList.push('hospital');
+        if (listing.wheelchairAccess)
+            accessList.push('wheelchair');
+        if (listing.BARTAccess)
+            accessList.push('bart');
+        var accessStr = access;
+        for (var i = 0; i < accessList.length; i++) {
+            if (i == 0) {
+                accessStr = accessStr + accessList[i];
+            }
+            else {
+                accessStr = accessStr + ', ' + accessList[i];
+            }
+        }
+        return accessStr;
+    };
+    AccountComponent.prototype.openDeleteListingDialog = function (listing, message) {
+        var _this = this;
+        var dialog = this.dialog.open(_delete_dialog__WEBPACK_IMPORTED_MODULE_7__["DeleteDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        dialog.afterClosed().subscribe(function (result) {
+            if (result == 'delete') {
+                _this.deleteListing(listing);
+            }
+        });
+    };
+    AccountComponent.prototype.openDeleteImageDialog = function (imageUrl, message) {
+        var _this = this;
+        var dialog = this.dialog.open(_delete_dialog__WEBPACK_IMPORTED_MODULE_7__["DeleteDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        dialog.afterClosed().subscribe(function (result) {
+            if (result == 'delete') {
+                _this.deleteImage(imageUrl);
+            }
+        });
+    };
+    AccountComponent.prototype.openRemoveFavoriteListingDialog = function (listing, message) {
+        var _this = this;
+        var dialog = this.dialog.open(_delete_dialog__WEBPACK_IMPORTED_MODULE_7__["DeleteDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        dialog.afterClosed().subscribe(function (result) {
+            if (result == 'delete') {
+                _this.removeFavoriteListing(listing);
+            }
+        });
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('drag_scroll', { read: ngx_drag_scroll_lib__WEBPACK_IMPORTED_MODULE_4__["DragScrollComponent"] }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", ngx_drag_scroll_lib__WEBPACK_IMPORTED_MODULE_4__["DragScrollComponent"])
+    ], AccountComponent.prototype, "dragScroll", void 0);
     AccountComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-account',
             template: __webpack_require__(/*! ./account.component.html */ "./src/app/account/account.component.html"),
             styles: [__webpack_require__(/*! ./account.component.css */ "./src/app/account/account.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_core_services_register_service__WEBPACK_IMPORTED_MODULE_2__["RegisterService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"],
+            _core_services_register_service__WEBPACK_IMPORTED_MODULE_2__["RegisterService"],
+            _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__["ListingsService"],
+            _core_services_favorites_service__WEBPACK_IMPORTED_MODULE_9__["FavoritesService"],
+            _core_services_upload_service__WEBPACK_IMPORTED_MODULE_8__["UploadService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDialog"]])
     ], AccountComponent);
     return AccountComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/account/delete.dialog.html":
+/*!********************************************!*\
+  !*** ./src/app/account/delete.dialog.html ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-dialog-content>\n  <p>{{data.message}}</p>\n</mat-dialog-content>\n<mat-dialog-actions align=\"center\">\n  <button mat-raised-button color=\"warn\" (click)=\"onDeleteClick()\">Delete</button>\n  <button mat-raised-button (click)=\"onCancelClick()\">Cancel</button>\n</mat-dialog-actions>\n"
+
+/***/ }),
+
+/***/ "./src/app/account/delete.dialog.ts":
+/*!******************************************!*\
+  !*** ./src/app/account/delete.dialog.ts ***!
+  \******************************************/
+/*! exports provided: DeleteDialog */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeleteDialog", function() { return DeleteDialog; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+
+
+
+var DeleteDialog = /** @class */ (function () {
+    function DeleteDialog(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+    }
+    DeleteDialog.prototype.onDeleteClick = function () {
+        this.dialogRef.close('delete');
+    };
+    DeleteDialog.prototype.onCancelClick = function () {
+        this.dialogRef.close();
+    };
+    DeleteDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'delete-dialog-component',
+            template: __webpack_require__(/*! ./delete.dialog.html */ "./src/app/account/delete.dialog.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object])
+    ], DeleteDialog);
+    return DeleteDialog;
 }());
 
 
@@ -291,7 +568,7 @@ var AddListingComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".main-div {\n  margin: 0 auto;\n  max-width: 900px;\n  width: 100%;\n}\n\n.my-mat-card {\n  max-width: 900px;\n  width: 100%;\n}\n\n.cont-form {\n  margin-right: 20px;\n  max-width: 135px;\n}\n\n.cont-search {\n  margin-right: 20px;\n  max-width: 210px;\n}\n\n.cont-title {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 20px;\n}\n\n/* unvisited link */\n\na:link {\n  color: rgba(0, 0, 0, 0);\n}\n\n/* visited link */\n\na:visited {\n  color: rgba(0, 0, 0, 0);\n}\n\n/* mouse over link */\n\na:hover {\n  color: rgba(0, 0, 0, 0.58);\n}\n\n/* selected link */\n\na:active {\n  color: rgba(0, 0, 0, 0);\n}\n\na {\n  text-decoration: none;\n  font-size: 14px;\n}\n\n.cont-a {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-top: 12px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWR2YW5jZWQtc2VhcmNoL2FkdmFuY2VkLXNlYXJjaC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBYztFQUNkLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsV0FBVztBQUNiOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtFQUNuQixtQkFBbUI7QUFDckI7O0FBRUEsbUJBQW1COztBQUNuQjtFQUNFLHVCQUF1QjtBQUN6Qjs7QUFFQSxpQkFBaUI7O0FBQ2pCO0VBQ0UsdUJBQXVCO0FBQ3pCOztBQUVBLG9CQUFvQjs7QUFDcEI7RUFDRSwwQkFBMEI7QUFDNUI7O0FBRUEsa0JBQWtCOztBQUNsQjtFQUNFLHVCQUF1QjtBQUN6Qjs7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsYUFBYTtFQUNiLHVCQUF1QjtFQUN2QixtQkFBbUI7RUFDbkIsZ0JBQWdCO0FBQ2xCIiwiZmlsZSI6InNyYy9hcHAvYWR2YW5jZWQtc2VhcmNoL2FkdmFuY2VkLXNlYXJjaC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1haW4tZGl2IHtcbiAgbWFyZ2luOiAwIGF1dG87XG4gIG1heC13aWR0aDogOTAwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4ubXktbWF0LWNhcmQge1xuICBtYXgtd2lkdGg6IDkwMHB4O1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmNvbnQtZm9ybSB7XG4gIG1hcmdpbi1yaWdodDogMjBweDtcbiAgbWF4LXdpZHRoOiAxMzVweDtcbn1cblxuLmNvbnQtc2VhcmNoIHtcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xuICBtYXgtd2lkdGg6IDIxMHB4O1xufVxuXG4uY29udC10aXRsZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xufVxuXG4vKiB1bnZpc2l0ZWQgbGluayAqL1xuYTpsaW5rIHtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMCk7XG59XG5cbi8qIHZpc2l0ZWQgbGluayAqL1xuYTp2aXNpdGVkIHtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMCk7XG59XG5cbi8qIG1vdXNlIG92ZXIgbGluayAqL1xuYTpob3ZlciB7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuNTgpO1xufVxuXG4vKiBzZWxlY3RlZCBsaW5rICovXG5hOmFjdGl2ZSB7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDApO1xufVxuXG5hIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICBmb250LXNpemU6IDE0cHg7XG59XG5cbi5jb250LWEge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgbWFyZ2luLXRvcDogMTJweDtcbn1cbiJdfQ== */"
+module.exports = ".main-div {\n  margin: 0 auto;\n  max-width: 1340px;\n  width: 100%;\n}\n\n.my-mat-card {\n  max-width: 1340px;\n  width: 100%;\n}\n\n.cont-form {\n  margin-right: 20px;\n  max-width: 125px;\n}\n\n.cont-price-range {\n  margin-right: 20px;\n  max-width: 80px;\n}\n\n.cont-search {\n  margin-right: 20px;\n  max-width: 210px;\n}\n\n.cont-title {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 20px;\n}\n\n/* unvisited link */\n\na:link {\n  color: rgba(0, 0, 0, 0);\n}\n\n/* visited link */\n\na:visited {\n  color: rgba(0, 0, 0, 0);\n}\n\n/* mouse over link */\n\na:hover {\n  color: rgba(0, 0, 0, 0.58);\n}\n\n/* selected link */\n\na:active {\n  color: rgba(0, 0, 0, 0);\n}\n\na {\n  text-decoration: none;\n  font-size: 14px;\n}\n\n.cont-a {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-top: 12px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWR2YW5jZWQtc2VhcmNoL2FkdmFuY2VkLXNlYXJjaC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBYztFQUNkLGlCQUFpQjtFQUNqQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsV0FBVztBQUNiOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixlQUFlO0FBQ2pCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGFBQWE7RUFDYix1QkFBdUI7RUFDdkIsbUJBQW1CO0VBQ25CLG1CQUFtQjtBQUNyQjs7QUFFQSxtQkFBbUI7O0FBQ25CO0VBQ0UsdUJBQXVCO0FBQ3pCOztBQUVBLGlCQUFpQjs7QUFDakI7RUFDRSx1QkFBdUI7QUFDekI7O0FBRUEsb0JBQW9COztBQUNwQjtFQUNFLDBCQUEwQjtBQUM1Qjs7QUFFQSxrQkFBa0I7O0FBQ2xCO0VBQ0UsdUJBQXVCO0FBQ3pCOztBQUVBO0VBQ0UscUJBQXFCO0VBQ3JCLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtFQUNuQixnQkFBZ0I7QUFDbEIiLCJmaWxlIjoic3JjL2FwcC9hZHZhbmNlZC1zZWFyY2gvYWR2YW5jZWQtc2VhcmNoLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWFpbi1kaXYge1xuICBtYXJnaW46IDAgYXV0bztcbiAgbWF4LXdpZHRoOiAxMzQwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4ubXktbWF0LWNhcmQge1xuICBtYXgtd2lkdGg6IDEzNDBweDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5jb250LWZvcm0ge1xuICBtYXJnaW4tcmlnaHQ6IDIwcHg7XG4gIG1heC13aWR0aDogMTI1cHg7XG59XG5cbi5jb250LXByaWNlLXJhbmdlIHtcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xuICBtYXgtd2lkdGg6IDgwcHg7XG59XG5cbi5jb250LXNlYXJjaCB7XG4gIG1hcmdpbi1yaWdodDogMjBweDtcbiAgbWF4LXdpZHRoOiAyMTBweDtcbn1cblxuLmNvbnQtdGl0bGUge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcbn1cblxuLyogdW52aXNpdGVkIGxpbmsgKi9cbmE6bGluayB7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDApO1xufVxuXG4vKiB2aXNpdGVkIGxpbmsgKi9cbmE6dmlzaXRlZCB7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDApO1xufVxuXG4vKiBtb3VzZSBvdmVyIGxpbmsgKi9cbmE6aG92ZXIge1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjU4KTtcbn1cblxuLyogc2VsZWN0ZWQgbGluayAqL1xuYTphY3RpdmUge1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwKTtcbn1cblxuYSB7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgZm9udC1zaXplOiAxNHB4O1xufVxuXG4uY29udC1hIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIG1hcmdpbi10b3A6IDEycHg7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -302,7 +579,7 @@ module.exports = ".main-div {\n  margin: 0 auto;\n  max-width: 900px;\n  width: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"hero is-info is-fullheight-with-navbar is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"main-div\">\n\n      <div>\n        <h1 class=\"cont-title\">Advanced Search</h1>\n      </div>\n\n      <mat-card class=\"my-mat-card mat-elevation-z24\">\n\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Listing Type</mat-label>\n          <mat-select [(value)]=\"listingSearch.listingType\">\n            <mat-option value=\"Any\">Any</mat-option>\n            <mat-option value=\"House\">House</mat-option>\n            <mat-option value=\"Apartment\">Apartment</mat-option>\n            <mat-option value=\"Condo\">Condo</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Sale or Rental</mat-label>\n          <mat-select [(value)]=\"listingSearch.forSale\">\n            <mat-option value=null>Both</mat-option>\n            <mat-option value=1>Sale</mat-option>\n            <mat-option value=0>Rental</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Bedrooms</mat-label>\n          <mat-select [(value)]=\"listingSearch.numBedrooms\">\n            <mat-option value=0>Any</mat-option>\n            <mat-option value=1>1+ Bed</mat-option>\n            <mat-option value=2>2+ Beds</mat-option>\n            <mat-option value=3>3+ Beds</mat-option>\n            <mat-option value=4>4+ Beds</mat-option>\n            <mat-option value=5>5+ Beds</mat-option>\n            <mat-option value=6>6+ Beds</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Bathrooms</mat-label>\n          <mat-select [(value)]=\"listingSearch.numBathrooms\">\n            <mat-option value=0>Any</mat-option>\n            <mat-option value=1>1+ Bath</mat-option>\n            <mat-option value=2>2+ Baths</mat-option>\n            <mat-option value=3>3+ Baths</mat-option>\n            <mat-option value=4>4+ Baths</mat-option>\n            <mat-option value=5>5+ Baths</mat-option>\n            <mat-option value=6>6+ Baths</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-search\">\n          <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" (keyup.enter)=\"onSearchClick()\" required>\n          <a class=\"my-search\" mat-button matSuffix color=\"primary\" (click)=\"onSearchClick()\"><mat-icon>search</mat-icon></a>\n        </mat-form-field>\n\n      </mat-card>\n\n      <div>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n\n  </div>\n  <app-footer></app-footer>\n</section>\n"
+module.exports = "<section class=\"hero is-info is-fullheight-with-navbar is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"main-div\">\n\n      <div>\n        <h1 class=\"cont-title\">Advanced Search</h1>\n      </div>\n\n      <mat-card class=\"my-mat-card mat-elevation-z24\">\n\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Listing Type</mat-label>\n          <mat-select [(value)]=\"listingSearch.listingType\">\n            <mat-option value=\"Any\">Any</mat-option>\n            <mat-option value=\"House\">House</mat-option>\n            <mat-option value=\"Apartment\">Apartment</mat-option>\n            <mat-option value=\"Condo\">Condo</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Sale or Rental</mat-label>\n          <mat-select [(value)]=\"listingSearch.forSale\">\n            <mat-option value=null>Both</mat-option>\n            <mat-option value=1>Sale</mat-option>\n            <mat-option value=0>Rental</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Bedrooms</mat-label>\n          <mat-select [(value)]=\"listingSearch.numBedrooms\">\n            <mat-option value=0>Any</mat-option>\n            <mat-option value=1>1+ Bed</mat-option>\n            <mat-option value=2>2+ Beds</mat-option>\n            <mat-option value=3>3+ Beds</mat-option>\n            <mat-option value=4>4+ Beds</mat-option>\n            <mat-option value=5>5+ Beds</mat-option>\n            <mat-option value=6>6+ Beds</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Bathrooms</mat-label>\n          <mat-select [(value)]=\"listingSearch.numBathrooms\">\n            <mat-option value=0>Any</mat-option>\n            <mat-option value=1>1+ Bath</mat-option>\n            <mat-option value=2>2+ Baths</mat-option>\n            <mat-option value=3>3+ Baths</mat-option>\n            <mat-option value=4>4+ Baths</mat-option>\n            <mat-option value=5>5+ Baths</mat-option>\n            <mat-option value=6>6+ Baths</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Lot size</mat-label>\n          <mat-select [(value)]=\"listingSearch.lotSize\">\n            <mat-option value=0>Any</mat-option>\n            <mat-option value=1000>1000+ sqft</mat-option>\n            <mat-option value=2000>2000+ sqft</mat-option>\n            <mat-option value=3000>3000+ sqft</mat-option>\n            <mat-option value=4000>4000+ sqft</mat-option>\n            <mat-option value=5000>5000+ sqft</mat-option>\n            <mat-option value=6000>6000+ sqft</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Accessibility</mat-label>\n          <mat-select [formControl]=\"accessibilities\" multiple (selectionChange)=\"onAccessibilityChange()\">\n            <mat-option *ngFor=\"let accessibility of accessibilityList\" [value]=\"accessibility\">{{accessibility}}</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-price-range\">\n          <input matInput placeholder=\"Min price\" [(ngModel)]=\"listingSearch.minPrice\" (keypress)=\"numberOnly($event)\" (keyup.enter)=\"onSearchClick()\">\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-price-range\">\n          <input matInput placeholder=\"Max price\" [(ngModel)]=\"listingSearch.maxPrice\" (keypress)=\"numberOnly($event)\" (keyup.enter)=\"onSearchClick()\">\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-search\">\n          <input matInput placeholder=\"Search by city...\" [(ngModel)]=\"listingSearch.city\" (keyup.enter)=\"onSearchClick()\" required>\n          <a class=\"my-search\" mat-button matSuffix color=\"primary\" (click)=\"onSearchClick()\"><mat-icon>search</mat-icon></a>\n        </mat-form-field>\n\n      </mat-card>\n\n      <div>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n\n  </div>\n  <app-footer></app-footer>\n</section>\n"
 
 /***/ }),
 
@@ -322,6 +599,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_services_search_listings_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/services/search.listings.service */ "./src/app/core/services/search.listings.service.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../register/register.dialog */ "./src/app/register/register.dialog.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+
 
 
 
@@ -333,6 +612,8 @@ var AdvancedSearchComponent = /** @class */ (function () {
         this.router = router;
         this.searchService = searchService;
         this.dialog = dialog;
+        this.accessibilities = new _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormControl"]();
+        this.accessibilityList = ['Laundry', 'Hospital', 'Wheelchair', 'BART'];
         this.isLoaded = true;
     }
     AdvancedSearchComponent.prototype.ngOnInit = function () {
@@ -350,6 +631,9 @@ var AdvancedSearchComponent = /** @class */ (function () {
             localStorage.setItem('listingSearch', JSON.stringify(this.listingSearch));
         }
     };
+    AdvancedSearchComponent.prototype.onAccessibilityChange = function () {
+        this.listingSearch.accessibilities = this.accessibilities.value;
+    };
     AdvancedSearchComponent.prototype.onSearchClick = function () {
         var _this = this;
         if (!this.listingSearch.city.length) {
@@ -361,12 +645,16 @@ var AdvancedSearchComponent = /** @class */ (function () {
                 .subscribe(function (listings) {
                 _this.isLoaded = true;
                 _this.searchService.saveSearchListings(listings);
-                _this.openDialog('Successfully retrieved Listings!', true);
+                _this.router.navigate(['/properties']);
             }, function (err) {
                 _this.isLoaded = true;
                 _this.openDialog('Unable to retrieve any listing based on your search. Please try again');
             });
         }
+    };
+    AdvancedSearchComponent.prototype.numberOnly = function (event) {
+        var charCode = (event.which) ? event.which : event.keyCode;
+        return !(charCode > 31 && (charCode < 48 || charCode > 57));
     };
     AdvancedSearchComponent.prototype.openDialog = function (message, subscribe) {
         var _this = this;
@@ -422,6 +710,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _account_account_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./account/account.component */ "./src/app/account/account.component.ts");
 /* harmony import */ var _add_listing_add_listing_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./add-listing/add-listing.component */ "./src/app/add-listing/add-listing.component.ts");
 /* harmony import */ var _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./advanced-search/advanced-search.component */ "./src/app/advanced-search/advanced-search.component.ts");
+/* harmony import */ var _update_login_update_login_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./update-login/update-login.component */ "./src/app/update-login/update-login.component.ts");
+/* harmony import */ var _update_property_update_property_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./update-property/update-property.component */ "./src/app/update-property/update-property.component.ts");
+
+
 
 
 
@@ -457,6 +749,10 @@ var routes = [
         component: _login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"]
     },
     {
+        path: 'update-login',
+        component: _update_login_update_login_component__WEBPACK_IMPORTED_MODULE_12__["UpdateLoginComponent"]
+    },
+    {
         path: 'logout',
         component: _logout_logout_component__WEBPACK_IMPORTED_MODULE_6__["LogoutComponent"]
     },
@@ -480,6 +776,10 @@ var routes = [
     {
         path: 'add-listing',
         component: _add_listing_add_listing_component__WEBPACK_IMPORTED_MODULE_10__["AddListingComponent"]
+    },
+    {
+        path: 'update-property/:listingId',
+        component: _update_property_update_property_component__WEBPACK_IMPORTED_MODULE_13__["UpdatePropertyComponent"]
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -600,6 +900,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _covalent_dynamic_forms__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @covalent/dynamic-forms */ "./node_modules/@covalent/dynamic-forms/fesm5/covalent-dynamic-forms.js");
 /* harmony import */ var _covalent_core__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @covalent/core */ "./node_modules/@covalent/core/fesm5/covalent-core.js");
 /* harmony import */ var _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./advanced-search/advanced-search.component */ "./src/app/advanced-search/advanced-search.component.ts");
+/* harmony import */ var ngx_drag_scroll_lib__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ngx-drag-scroll/lib */ "./node_modules/ngx-drag-scroll/lib/index.js");
+/* harmony import */ var _account_delete_dialog__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./account/delete.dialog */ "./src/app/account/delete.dialog.ts");
+/* harmony import */ var _update_login_update_login_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./update-login/update-login.component */ "./src/app/update-login/update-login.component.ts");
+/* harmony import */ var _update_property_update_property_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./update-property/update-property.component */ "./src/app/update-property/update-property.component.ts");
+
+
+
+
 
 
 
@@ -647,6 +955,7 @@ var AppModule = /** @class */ (function () {
                 _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
                 _register_register_component__WEBPACK_IMPORTED_MODULE_8__["RegisterComponent"],
                 _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__["RegisterDialog"],
+                _account_delete_dialog__WEBPACK_IMPORTED_MODULE_36__["DeleteDialog"],
                 _login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"],
                 _example_example_component__WEBPACK_IMPORTED_MODULE_11__["ExampleComponent"],
                 _core_components_alert_alert_component__WEBPACK_IMPORTED_MODULE_12__["AlertComponent"],
@@ -657,9 +966,12 @@ var AppModule = /** @class */ (function () {
                 _account_account_component__WEBPACK_IMPORTED_MODULE_14__["AccountComponent"],
                 _add_listing_add_listing_component__WEBPACK_IMPORTED_MODULE_15__["AddListingComponent"],
                 _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_34__["AdvancedSearchComponent"],
+                _update_login_update_login_component__WEBPACK_IMPORTED_MODULE_37__["UpdateLoginComponent"],
+                _update_property_update_property_component__WEBPACK_IMPORTED_MODULE_38__["UpdatePropertyComponent"],
             ],
             entryComponents: [
-                _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__["RegisterDialog"]
+                _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__["RegisterDialog"],
+                _account_delete_dialog__WEBPACK_IMPORTED_MODULE_36__["DeleteDialog"]
             ],
             imports: [
                 _angular_material_menu__WEBPACK_IMPORTED_MODULE_24__["MatMenuModule"],
@@ -697,6 +1009,7 @@ var AppModule = /** @class */ (function () {
                 _covalent_markdown__WEBPACK_IMPORTED_MODULE_31__["CovalentMarkdownModule"],
                 _covalent_dynamic_forms__WEBPACK_IMPORTED_MODULE_32__["CovalentDynamicFormsModule"],
                 _covalent_core__WEBPACK_IMPORTED_MODULE_33__["CovalentFileModule"],
+                ngx_drag_scroll_lib__WEBPACK_IMPORTED_MODULE_35__["DragScrollModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
@@ -1246,6 +1559,93 @@ var ExampleService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/core/services/favorites.service.ts":
+/*!****************************************************!*\
+  !*** ./src/app/core/services/favorites.service.ts ***!
+  \****************************************************/
+/*! exports provided: FavoritesService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FavoritesService", function() { return FavoritesService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]({ 'Content-Type': 'application/json' })
+};
+var apiUrl = '/api/favorites';
+var FavoritesService = /** @class */ (function () {
+    function FavoritesService(http) {
+        this.http = http;
+    }
+    FavoritesService.prototype.getFavorites = function (userId) {
+        return this.http.get(apiUrl, {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]({
+                'Content-Type': 'application/json',
+                'userId': String(userId)
+            })
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    FavoritesService.prototype.isFavorite = function (listingId, userId) {
+        return this.http.get(apiUrl + ("/" + listingId), {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]({
+                'Content-Type': 'application/json',
+                'userId': String(userId)
+            })
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    FavoritesService.prototype.addFavorite = function (listingId, userId) {
+        var body = {
+            userId: userId,
+            listingId: listingId
+        };
+        return this.http.post(apiUrl, body, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    FavoritesService.prototype.removeFavorite = function (listingId, userId) {
+        return this.http.delete(apiUrl, {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]({
+                'Content-Type': 'application/json',
+                'userId': String(userId),
+                'listingId': String(listingId)
+            })
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    FavoritesService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
+    };
+    FavoritesService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"]])
+    ], FavoritesService);
+    return FavoritesService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/core/services/listings.service.ts":
 /*!***************************************************!*\
   !*** ./src/app/core/services/listings.service.ts ***!
@@ -1281,6 +1681,26 @@ var ListingsService = /** @class */ (function () {
     /** CRUD function for create **/
     ListingsService.prototype.createListing = function (listing) {
         return this.http.post(apiUrl, listing, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ListingsService.prototype.getSingleListing = function (listingId) {
+        return this.http.get(apiUrl + ("/" + listingId), httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ListingsService.prototype.updateListing = function (listing) {
+        return this.http.put(apiUrl + ("/" + listing.listingId), listing, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ListingsService.prototype.getUserListings = function (userId) {
+        return this.http.get(apiUrl + '/user/listings', {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]({
+                'Content-Type': 'application/json',
+                'userId': String(userId)
+            })
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ListingsService.prototype.deleteListing = function (listingId) {
+        return this.http.delete(apiUrl + ("/" + listingId), httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ListingsService.prototype.deleteImage = function (imageUrl) {
+        return this.http.put(apiUrl + "/delete-image", { imageUrl: imageUrl }, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
     };
     ListingsService.prototype.handleError = function (error) {
         if (error.error instanceof ErrorEvent) {
@@ -1323,7 +1743,7 @@ var ListingsService = /** @class */ (function () {
 }());
 
 var Listing = /** @class */ (function () {
-    function Listing(listingId, title, listingType, price, city, state, zipCode, street, forSale, numBedrooms, numBathrooms, imageUrls, laundry, hospitalAccess, BARTAccess, wheelchairAccess, lotSize, description, user) {
+    function Listing(listingId, title, listingType, price, city, state, zipCode, street, forSale, numBedrooms, numBathrooms, imageUrls, laundry, hospitalAccess, BARTAccess, wheelchairAccess, lotSize, description, user, isFavorite) {
         if (listingId === void 0) { listingId = null; }
         if (title === void 0) { title = ''; }
         if (listingType === void 0) { listingType = ''; }
@@ -1343,6 +1763,7 @@ var Listing = /** @class */ (function () {
         if (lotSize === void 0) { lotSize = null; }
         if (description === void 0) { description = ''; }
         if (user === void 0) { user = null; }
+        if (isFavorite === void 0) { isFavorite = false; }
         this.listingId = listingId;
         this.title = title;
         this.listingType = listingType;
@@ -1362,6 +1783,7 @@ var Listing = /** @class */ (function () {
         this.lotSize = lotSize;
         this.description = description;
         this.user = user;
+        this.isFavorite = isFavorite;
     }
     return Listing;
 }());
@@ -1404,6 +1826,10 @@ var LoginService = /** @class */ (function () {
     /*** Login User ***/
     LoginService.prototype.loginUser = function (userData) {
         return this.http.post(apiUrl, userData, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    };
+    /*** Update User ***/
+    LoginService.prototype.updateUser = function (user) {
+        return this.http.put(apiUrl, user, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
     };
     LoginService.prototype.emitLoginEvent = function (loginUser) {
         localStorage.setItem('loginUser', JSON.stringify(loginUser));
@@ -1878,7 +2304,7 @@ var HomeComponent = /** @class */ (function () {
                 .subscribe(function (listings) {
                 _this.isLoaded = true;
                 _this.searchService.saveSearchListings(listings);
-                _this.openDialog('Successfully retrieved Listings!', true);
+                _this.router.navigate(['/properties']);
             }, function (err) {
                 _this.isLoaded = true;
                 _this.openDialog('Unable to retrieve any listing based on your search. Please try again');
@@ -2326,6 +2752,318 @@ var SearchResultsComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_core_services_search_listings_service__WEBPACK_IMPORTED_MODULE_2__["SearchListingsService"]])
     ], SearchResultsComponent);
     return SearchResultsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/update-login/update-login.component.css":
+/*!*********************************************************!*\
+  !*** ./src/app/update-login/update-login.component.css ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".main-div {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0 auto;\n  max-width: 350px;\n  width: 100%;\n}\n\n.my-mat-card {\n  max-width: 350px;\n  width: 100%;\n}\n\n.my-button {\n  margin-right: 80px;\n  margin-left: 80px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdXBkYXRlLWxvZ2luL3VwZGF0ZS1sb2dpbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtFQUNiLHVCQUF1QjtFQUN2QixtQkFBbUI7RUFDbkIsY0FBYztFQUNkLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsV0FBVztBQUNiOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL3VwZGF0ZS1sb2dpbi91cGRhdGUtbG9naW4uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWluLWRpdiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBtYXJnaW46IDAgYXV0bztcbiAgbWF4LXdpZHRoOiAzNTBweDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5teS1tYXQtY2FyZCB7XG4gIG1heC13aWR0aDogMzUwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4ubXktYnV0dG9uIHtcbiAgbWFyZ2luLXJpZ2h0OiA4MHB4O1xuICBtYXJnaW4tbGVmdDogODBweDtcbn1cbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/update-login/update-login.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/update-login/update-login.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ng-template [ngIf]=\"loginUser\">\n  <section class=\"hero is-info is-fullheight-with-navbar is-bold\">\n    <div class=\"hero-body\">\n      <div class=\"main-div\">\n        <mat-card class=\"my-mat-card mat-elevation-z20\">\n          <mat-card-title class=\"main-div\">Update Account</mat-card-title>\n          <mat-card-content>\n\n            <!--FORM FIELDS HERE-->\n            <div fxLayout=\"column\" fxLayoutAlign=\"center\">\n              <mat-form-field class=\"cont-input\">\n                <mat-label>First Name</mat-label>\n                <input matInput placeholder=\"First name\" [(ngModel)]=\"loginUser.firstName\" name=\"firstName\"><br>\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>Last Name</mat-label>\n                <input matInput placeholder=\"Last name\" [(ngModel)]=\"loginUser.lastName\" name=\"lastName\">\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>Username</mat-label>\n                <input matInput placeholder=\"Username\" [(ngModel)]=\"loginUser.username\" name=\"username\">\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>Old Password</mat-label>\n                <input matInput type=\"password\" placeholder=\"Old Password\" [(ngModel)]=\"oldPassword\" name=\"old-password\" required>\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>New Password</mat-label>\n                <input matInput type=\"password\" placeholder=\"New Password\" [(ngModel)]=\"newPassword\" name=\"new-password\">\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>Email Address</mat-label>\n                <input matInput placeholder=\"Email address\" [(ngModel)]=\"loginUser.emailAddress\" name=\"emailAddress\">\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>Phone Number</mat-label>\n                <input matInput placeholder=\"Phone number\" [(ngModel)]=\"loginUser.phoneNumber\" name=\"phoneNumber\">\n              </mat-form-field>\n            </div>\n\n          </mat-card-content>\n          <mat-card-actions>\n\n            <!-- REGISTER BUTTON -->\n            <div class=\"my-button\" fxLayout=\"column\" fxLayoutAlign=\"center\">\n              <button mat-raised-button (click)=\"onSubmit()\" color=\"primary\">Update</button>\n            </div>\n\n            <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n\n          </mat-card-actions>\n        </mat-card>\n      </div>\n    </div>\n  </section>\n</ng-template>\n"
+
+/***/ }),
+
+/***/ "./src/app/update-login/update-login.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/update-login/update-login.component.ts ***!
+  \********************************************************/
+/*! exports provided: UpdateLoginComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateLoginComponent", function() { return UpdateLoginComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _core_services_register_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/services/register.service */ "./src/app/core/services/register.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../register/register.dialog */ "./src/app/register/register.dialog.ts");
+/* harmony import */ var _core_services_login_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../core/services/login.service */ "./src/app/core/services/login.service.ts");
+
+
+
+
+
+
+
+
+var UpdateLoginComponent = /** @class */ (function () {
+    function UpdateLoginComponent(router, loginService, dialog) {
+        this.router = router;
+        this.loginService = loginService;
+        this.dialog = dialog;
+        this.user = {
+            username: "",
+            password: ""
+        };
+        this.isLoaded = true;
+    }
+    UpdateLoginComponent.prototype.ngOnInit = function () {
+        if (localStorage.getItem('loginUser')) {
+            this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
+            this.oldUsername = this.loginUser.username;
+        }
+        this.registerUser = new _core_services_register_service__WEBPACK_IMPORTED_MODULE_4__["RegisterUser"]();
+    };
+    UpdateLoginComponent.prototype.onSubmit = function () {
+        var _this = this;
+        if (this.isDataProvided()) {
+            this.isLoaded = false;
+            this.loginService.loginUser({
+                username: this.oldUsername,
+                password: this.oldPassword
+            })
+                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])())
+                .subscribe(function (result) {
+                _this.loginService.updateUser({
+                    userId: result.userId,
+                    firstName: _this.loginUser.firstName,
+                    lastName: _this.loginUser.lastName,
+                    username: _this.loginUser.username,
+                    password: !_this.isEmpty(_this.newPassword) ? _this.newPassword : '',
+                    emailAddress: _this.loginUser.emailAddress,
+                    phoneNumber: _this.loginUser.phoneNumber
+                })
+                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])())
+                    .subscribe(function (data) {
+                    _this.isLoaded = true;
+                    _this.loginService.emitLoginEvent(_this.loginUser);
+                    _this.openDialog('Update login info successful!', true);
+                }, function (error) {
+                    console.log(error);
+                    _this.isLoaded = true;
+                });
+            }, function (err) {
+                console.log(err);
+                _this.isLoaded = true;
+                _this.openDialog('Unable to verify credentials. Old password is incorrect. Please try again');
+            });
+        }
+        else {
+            this.openDialog('Please enter old password for validating credentials');
+        }
+    };
+    UpdateLoginComponent.prototype.isDataProvided = function () {
+        return (!this.isEmpty(this.loginUser.username) &&
+            !this.isEmpty(this.oldPassword) &&
+            !this.isEmpty(this.loginUser.firstName) &&
+            !this.isEmpty(this.loginUser.lastName) &&
+            !this.isEmpty(this.loginUser.emailAddress) &&
+            !this.isEmpty(this.loginUser.phoneNumber));
+    };
+    UpdateLoginComponent.prototype.isEmpty = function (str) {
+        return (!str || 0 === str.length);
+    };
+    UpdateLoginComponent.prototype.openDialog = function (message, subscribe) {
+        var _this = this;
+        if (subscribe === void 0) { subscribe = false; }
+        var dialogRef = this.dialog.open(_register_register_dialog__WEBPACK_IMPORTED_MODULE_6__["RegisterDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        if (subscribe) {
+            dialogRef.afterClosed().subscribe(function (result) {
+                _this.router.navigate(['/account']);
+            });
+        }
+    };
+    UpdateLoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-update-login',
+            template: __webpack_require__(/*! ./update-login.component.html */ "./src/app/update-login/update-login.component.html"),
+            styles: [__webpack_require__(/*! ./update-login.component.css */ "./src/app/update-login/update-login.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _core_services_login_service__WEBPACK_IMPORTED_MODULE_7__["LoginService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatDialog"]])
+    ], UpdateLoginComponent);
+    return UpdateLoginComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/update-property/update-property.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/update-property/update-property.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".example-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container > * {\n  margin: 0 auto;\n  max-width: 800px;\n  width: 100%;\n  padding-bottom: 10px;\n}\n\nmat-form-field {\n  width: 100%;\n}\n\n.form-field-div {\n  display: flex;\n  justify-content: center;\n}\n\n.post-listing-header {\n  padding-top: 20px;\n  padding-bottom: 8px;\n}\n\n.cont-input {\n  padding-left: 10px;\n  padding-right: 10px;\n}\n\n.cont-form {\n  padding-left: 10px;\n  padding-right: 10px;\n}\n\n.create-listing-btn {\n  height: 50px;\n  max-width: 800px;\n  width: 100%;\n  margin: 10px auto;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdXBkYXRlLXByb3BlcnR5L3VwZGF0ZS1wcm9wZXJ0eS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtFQUNiLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxnQkFBZ0I7RUFDaEIsV0FBVztFQUNYLG9CQUFvQjtBQUN0Qjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGFBQWE7RUFDYix1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxZQUFZO0VBQ1osZ0JBQWdCO0VBQ2hCLFdBQVc7RUFDWCxpQkFBaUI7QUFDbkIiLCJmaWxlIjoic3JjL2FwcC91cGRhdGUtcHJvcGVydHkvdXBkYXRlLXByb3BlcnR5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhhbXBsZS1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xufVxuXG4uZXhhbXBsZS1jb250YWluZXIgPiAqIHtcbiAgbWFyZ2luOiAwIGF1dG87XG4gIG1heC13aWR0aDogODAwcHg7XG4gIHdpZHRoOiAxMDAlO1xuICBwYWRkaW5nLWJvdHRvbTogMTBweDtcbn1cblxubWF0LWZvcm0tZmllbGQge1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmZvcm0tZmllbGQtZGl2IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59XG5cbi5wb3N0LWxpc3RpbmctaGVhZGVyIHtcbiAgcGFkZGluZy10b3A6IDIwcHg7XG4gIHBhZGRpbmctYm90dG9tOiA4cHg7XG59XG5cbi5jb250LWlucHV0IHtcbiAgcGFkZGluZy1sZWZ0OiAxMHB4O1xuICBwYWRkaW5nLXJpZ2h0OiAxMHB4O1xufVxuXG4uY29udC1mb3JtIHtcbiAgcGFkZGluZy1sZWZ0OiAxMHB4O1xuICBwYWRkaW5nLXJpZ2h0OiAxMHB4O1xufVxuXG4uY3JlYXRlLWxpc3RpbmctYnRuIHtcbiAgaGVpZ2h0OiA1MHB4O1xuICBtYXgtd2lkdGg6IDgwMHB4O1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luOiAxMHB4IGF1dG87XG59XG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/update-property/update-property.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/update-property/update-property.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ng-template [ngIf]=\"loginUser && listing && listingBelongsToUser\">\n\n  <ng-template [ngIf]=\"isFullScreen\">\n    <div class=\"container example-container\" (window:resize)=\"onResize($event)\">\n      <h2 class=\"post-listing-header\">Update Listing</h2>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Title</mat-label>\n        <input matInput placeholder=\"Title\" [(ngModel)]=\"listing.title\" required>\n      </mat-form-field>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Listing Type</mat-label>\n          <mat-select placeholder=\"Listing Type\" [(value)]=\"listing.listingType\" required>\n            <mat-option value=\"House\">House</mat-option>\n            <mat-option value=\"Apartment\">Apartment</mat-option>\n            <mat-option value=\"Condo\">Condo</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Sale or Rent</mat-label>\n          <mat-select placeholder=\"Sale or Rent\" [(ngModel)]=\"listing.forSale\" required>\n            <mat-option [value]=1>Sale</mat-option>\n            <mat-option [value]=0>Rent</mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Bedrooms</mat-label>\n          <mat-select [(ngModel)]=\"listing.numBedrooms\" required>\n            <mat-option [value]=1>1 Bed</mat-option>\n            <mat-option [value]=2>2 Beds</mat-option>\n            <mat-option [value]=3>3 Beds</mat-option>\n            <mat-option [value]=4>4 Beds</mat-option>\n            <mat-option [value]=5>5 Beds</mat-option>\n            <mat-option [value]=6>6 Beds</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Bathrooms</mat-label>\n          <mat-select [(ngModel)]=\"listing.numBathrooms\" required>\n            <mat-option [value]=1>1 Bath</mat-option>\n            <mat-option [value]=2>2 Baths</mat-option>\n            <mat-option [value]=3>3 Baths</mat-option>\n            <mat-option [value]=4>4 Baths</mat-option>\n            <mat-option [value]=5>5 Baths</mat-option>\n            <mat-option [value]=6>6 Baths</mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Street</mat-label>\n          <input matInput placeholder=\"Street\" [(ngModel)]=\"listing.street\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>City</mat-label>\n          <input matInput placeholder=\"City\" [(ngModel)]=\"listing.city\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>State</mat-label>\n          <input matInput placeholder=\"State\" [(ngModel)]=\"listing.state\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Zip code</mat-label>\n          <input matInput placeholder=\"Zip code\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.zipCode\" required>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Price</mat-label>\n          <input matInput placeholder=\"Price\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.price\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Lot Size</mat-label>\n          <input matInput placeholder=\"Lot Size\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.lotSize\" required>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Hospital Access</mat-label>\n          <mat-select placeholder=\"Hospital Access\" [(ngModel)]=\"listing.hospitalAccess\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Bart Access</mat-label>\n          <mat-select placeholder=\"Bart Access\" [(ngModel)]=\"listing.BARTAccess\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Wheelchair Access</mat-label>\n          <mat-select placeholder=\"Wheelchair Access\" [(ngModel)]=\"listing.wheelchairAccess\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Laundry Access</mat-label>\n          <mat-select placeholder=\"Laundry Access\" [(ngModel)]=\"listing.laundry\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Description</mat-label>\n        <textarea matInput placeholder=\"Description\" [(ngModel)]=\"listing.description\" required></textarea>\n      </mat-form-field>\n\n      <div>\n        <button mat-raised-button color=\"primary\" (click)=\"onUpdateClick()\">Update Listing</button>\n      </div>\n\n      <div>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n  </ng-template>\n\n  <ng-template [ngIf]=\"!isFullScreen\">\n    <div class=\"container example-container\" (window:resize)=\"onResize($event)\">\n      <h2 class=\"post-listing-header\">Update Listing</h2>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Title</mat-label>\n        <input matInput placeholder=\"Title\" [(ngModel)]=\"listing.title\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Listing Type</mat-label>\n        <mat-select placeholder=\"Listing Type\" [(value)]=\"listing.listingType\" required>\n          <mat-option value=\"House\">House</mat-option>\n          <mat-option value=\"Apartment\">Apartment</mat-option>\n          <mat-option value=\"Condo\">Condo</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Sale or Rent</mat-label>\n        <mat-select placeholder=\"Sale or Rent\" [(ngModel)]=\"listing.forSale\" required>\n          <mat-option [value]=1>Sale</mat-option>\n          <mat-option [value]=0>Rent</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-form\">\n        <mat-label>Bedrooms</mat-label>\n        <mat-select [(ngModel)]=\"listing.numBedrooms\" required>\n          <mat-option [value]=1>1 Bed</mat-option>\n          <mat-option [value]=2>2 Beds</mat-option>\n          <mat-option [value]=3>3 Beds</mat-option>\n          <mat-option [value]=4>4 Beds</mat-option>\n          <mat-option [value]=5>5 Beds</mat-option>\n          <mat-option [value]=6>6 Beds</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-form\">\n        <mat-label>Bathrooms</mat-label>\n        <mat-select [(ngModel)]=\"listing.numBathrooms\" required>\n          <mat-option [value]=1>1 Bath</mat-option>\n          <mat-option [value]=2>2 Baths</mat-option>\n          <mat-option [value]=3>3 Baths</mat-option>\n          <mat-option [value]=4>4 Baths</mat-option>\n          <mat-option [value]=5>5 Baths</mat-option>\n          <mat-option [value]=6>6 Baths</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Street</mat-label>\n        <input matInput placeholder=\"Street\" [(ngModel)]=\"listing.street\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>City</mat-label>\n        <input matInput placeholder=\"City\" [(ngModel)]=\"listing.city\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>State</mat-label>\n        <input matInput placeholder=\"State\" [(ngModel)]=\"listing.state\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Zip code</mat-label>\n        <input matInput placeholder=\"Zip code\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.zipCode\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Price</mat-label>\n        <input matInput placeholder=\"Price\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.price\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Lot Size</mat-label>\n        <input matInput placeholder=\"Lot Size\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.lotSize\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Hospital Access</mat-label>\n        <mat-select placeholder=\"Hospital Access\" [(ngModel)]=\"listing.hospitalAccess\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Bart Access</mat-label>\n        <mat-select placeholder=\"Bart Access\" [(ngModel)]=\"listing.BARTAccess\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Wheelchair Access</mat-label>\n        <mat-select placeholder=\"Wheelchair Access\" [(ngModel)]=\"listing.wheelchairAccess\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Laundry Access</mat-label>\n        <mat-select placeholder=\"Laundry Access\" [(ngModel)]=\"listing.laundry\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Description</mat-label>\n        <textarea matInput placeholder=\"Description\" [(ngModel)]=\"listing.description\" required></textarea>\n      </mat-form-field>\n\n      <div>\n        <button mat-raised-button color=\"primary\" (click)=\"onUpdateClick()\">Update Listing</button>\n      </div>\n\n      <div>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n  </ng-template>\n\n</ng-template>\n"
+
+/***/ }),
+
+/***/ "./src/app/update-property/update-property.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/update-property/update-property.component.ts ***!
+  \**************************************************************/
+/*! exports provided: UpdatePropertyComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdatePropertyComponent", function() { return UpdatePropertyComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/services/listings.service */ "./src/app/core/services/listings.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../register/register.dialog */ "./src/app/register/register.dialog.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+
+
+
+
+
+
+
+var UpdatePropertyComponent = /** @class */ (function () {
+    function UpdatePropertyComponent(router, route, listingsService, dialog) {
+        this.router = router;
+        this.route = route;
+        this.listingsService = listingsService;
+        this.dialog = dialog;
+        this.isLoaded = true;
+        this.listingBelongsToUser = false;
+    }
+    UpdatePropertyComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (!localStorage.getItem('loginUser'))
+            return;
+        this.showSpinner();
+        this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
+        this.route.paramMap.subscribe(function (params) {
+            var listingId = Number(params.get('listingId'));
+            _this.listingsService.getSingleListing(listingId).subscribe(function (listing) {
+                console.log(listing);
+                _this.listingBelongsToUser = listing.user.userId === _this.loginUser.userId;
+                _this.listing = listing;
+                _this.hideSpinner();
+            }, function (err) {
+                console.log(err);
+                _this.hideSpinner();
+            });
+        });
+        this.isFullScreen = (window.innerWidth >= 1000);
+    };
+    UpdatePropertyComponent.prototype.onResize = function (event) {
+        this.isFullScreen = (event.target.innerWidth >= 1000);
+    };
+    UpdatePropertyComponent.prototype.onUpdateClick = function () {
+        var _this = this;
+        if (!this.isDataProvided()) {
+            this.openDialog('Please enter valid input for all required fields', false);
+            return;
+        }
+        this.showSpinner();
+        this.replaceDoubleQuotes();
+        this.listingsService.updateListing(this.listing)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["first"])())
+            .subscribe(function (result) {
+            _this.hideSpinner();
+            _this.openDialog('Successfully update listing!', true);
+        }, function (err) {
+            console.log(err);
+            _this.hideSpinner();
+            _this.openDialog('Unable to update listing. Please try again', false);
+        });
+    };
+    UpdatePropertyComponent.prototype.replaceDoubleQuotes = function () {
+        this.listing.title = this.listing.title.replace(/"/g, "'");
+        this.listing.description = this.listing.description.replace(/"/g, "'");
+    };
+    UpdatePropertyComponent.prototype.showSpinner = function () {
+        this.isLoaded = false;
+    };
+    UpdatePropertyComponent.prototype.hideSpinner = function () {
+        this.isLoaded = true;
+    };
+    UpdatePropertyComponent.prototype.numberOnly = function (event) {
+        var charCode = (event.which) ? event.which : event.keyCode;
+        return !(charCode > 31 && (charCode < 48 || charCode > 57));
+    };
+    UpdatePropertyComponent.prototype.isDataProvided = function () {
+        return (!this.isEmptyStr(this.listing.title) &&
+            !this.isEmptyStr(this.listing.listingType) &&
+            !this.isEmptyNum(this.listing.price) &&
+            !this.isEmptyNum(this.listing.lotSize) &&
+            !this.isEmptyStr(this.listing.city) &&
+            !this.isEmptyNum(this.listing.zipCode) &&
+            !this.isEmptyStr(this.listing.street) &&
+            !this.isEmptyStr(this.listing.state) &&
+            !this.isEmptyBool(this.listing.forSale) &&
+            !this.isEmptyNum(this.listing.numBedrooms) &&
+            !this.isEmptyNum(this.listing.numBathrooms));
+    };
+    UpdatePropertyComponent.prototype.isEmptyStr = function (str) {
+        return (!str || 0 == str.length);
+    };
+    UpdatePropertyComponent.prototype.isEmptyNum = function (num) {
+        return (!num || 0 == num);
+    };
+    UpdatePropertyComponent.prototype.isEmptyBool = function (bool) {
+        return (!bool);
+    };
+    UpdatePropertyComponent.prototype.openDialog = function (message, subscribe) {
+        var _this = this;
+        var dialogRef = this.dialog.open(_register_register_dialog__WEBPACK_IMPORTED_MODULE_5__["RegisterDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        if (subscribe) {
+            dialogRef.afterClosed().subscribe(function (result) {
+                _this.router.navigate(['/account']);
+            });
+        }
+    };
+    UpdatePropertyComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-update-update',
+            template: __webpack_require__(/*! ./update-property.component.html */ "./src/app/update-property/update-property.component.html"),
+            styles: [__webpack_require__(/*! ./update-property.component.css */ "./src/app/update-property/update-property.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
+            _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__["ListingsService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDialog"]])
+    ], UpdatePropertyComponent);
+    return UpdatePropertyComponent;
 }());
 
 

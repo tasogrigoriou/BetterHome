@@ -27,4 +27,35 @@ router.post('/', function (req, res) {
     });
 });
 
+router.put('/', function (req, res) {
+    bcrypt.hash(req.body.password, 10, function(err, hash) {
+
+        let passwordQuery = ``;
+        if (req.body.password && req.body.password !== '') {
+            passwordQuery = `password = '${hash}', `;
+        }
+
+        let sql = `UPDATE Users 
+        SET 
+        username = '${req.body.username}', 
+        ${passwordQuery}
+        firstName = '${req.body.firstName}', 
+        lastName = '${req.body.lastName}', 
+        emailAddress = '${req.body.emailAddress}', 
+        phoneNumber = '${req.body.phoneNumber}'
+        WHERE 
+        userId = '${req.body.userId}'`;
+        console.log(sql);
+
+        database.query(sql, function(err, result) {
+            if (err) {
+                res.status(err.status || 500).send(err.message);
+            }
+            else {
+                res.send(result);
+            }
+        })
+    });
+});
+
 module.exports = router;

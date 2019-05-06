@@ -53,6 +53,34 @@
           </mat-select>
         </mat-form-field>
 
+        <mat-form-field class="cont-form">
+          <mat-label>Lot size</mat-label>
+          <mat-select [(value)]="listingSearch.lotSize">
+            <mat-option value=0>Any</mat-option>
+            <mat-option value=1000>1000+ sqft</mat-option>
+            <mat-option value=2000>2000+ sqft</mat-option>
+            <mat-option value=3000>3000+ sqft</mat-option>
+            <mat-option value=4000>4000+ sqft</mat-option>
+            <mat-option value=5000>5000+ sqft</mat-option>
+            <mat-option value=6000>6000+ sqft</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="cont-form">
+          <mat-label>Accessibility</mat-label>
+          <mat-select [formControl]="accessibilities" multiple (selectionChange)="onAccessibilityChange()">
+            <mat-option *ngFor="let accessibility of accessibilityList" [value]="accessibility">{{accessibility}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="cont-price-range">
+          <input matInput placeholder="Min price" [(ngModel)]="listingSearch.minPrice" (keypress)="numberOnly($event)" (keyup.enter)="onSearchClick()">
+        </mat-form-field>
+
+        <mat-form-field class="cont-price-range">
+          <input matInput placeholder="Max price" [(ngModel)]="listingSearch.maxPrice" (keypress)="numberOnly($event)" (keyup.enter)="onSearchClick()">
+        </mat-form-field>
+
         <mat-form-field class="cont-search">
           <input matInput placeholder="Search by city..." [(ngModel)]="listingSearch.city" (keyup.enter)="onSearchClick()" required>
           <a class="my-search" mat-button matSuffix color="primary" (click)="onSearchClick()"><mat-icon>search</mat-icon></a>
