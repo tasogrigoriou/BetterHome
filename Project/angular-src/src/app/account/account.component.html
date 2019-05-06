@@ -76,7 +76,7 @@
 
             <mat-card-content>
               <h6>{{userListings[userListingIndex].listingType + ' for ' + (userListings[userListingIndex].forSale ? 'sale' : 'rent')}}</h6>
-              <p><i>{{'$' + numberWithCommas(userListings[userListingIndex].price) + ' | ' + userListings[userListingIndex].numBedrooms + ' beds' + ' | ' + userListings[userListingIndex].numBathrooms + ' baths'}}</i></p>
+              <p><i>{{'$' + numberWithCommas(userListings[userListingIndex].price) + ' | ' + userListings[userListingIndex].numBedrooms + ' beds' + ' | ' + userListings[userListingIndex].numBathrooms + ' baths' + ' | ' + numberWithCommas(userListings[userListingIndex].lotSize) + ' sqft'}}</i></p>
               <p class="property-access-title">{{getPropertyAccessibility(userListings[userListingIndex])}}</p>
               <p>{{userListings[userListingIndex].description}}</p>
             </mat-card-content>
@@ -128,7 +128,7 @@
 
             <mat-card-content>
               <h6>{{favoriteListings[favoriteListingIndex].listingType + ' for ' + (favoriteListings[favoriteListingIndex].forSale ? 'sale' : 'rent')}}</h6>
-              <p><i>{{'$' + numberWithCommas(favoriteListings[favoriteListingIndex].price) + ' | ' + favoriteListings[favoriteListingIndex].numBedrooms + ' beds' + ' | ' + favoriteListings[favoriteListingIndex].numBathrooms + ' baths'}}</i></p>
+              <p><i>{{'$' + numberWithCommas(favoriteListings[favoriteListingIndex].price) + ' | ' + favoriteListings[favoriteListingIndex].numBedrooms + ' beds' + ' | ' + favoriteListings[favoriteListingIndex].numBathrooms + ' baths' + ' | ' + numberWithCommas(favoriteListings[favoriteListingIndex].lotSize) + ' sqft'}}</i></p>
               <p class="property-access-title">{{getPropertyAccessibility(favoriteListings[favoriteListingIndex])}}</p>
               <p>{{favoriteListings[favoriteListingIndex].description}}</p>
             </mat-card-content>

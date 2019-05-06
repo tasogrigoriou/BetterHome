@@ -21,7 +21,6 @@ export class ListingsService {
     );
   }
 
-
   getSingleListing(listingId: number): Observable<any> {
     return this.http.get(apiUrl + `/${listingId}`, httpOptions).pipe(
       catchError(this.handleError)
@@ -72,86 +71,6 @@ export class ListingsService {
     // return an observable with a user-facing error message
     return throwError('Something bad happened; please try again later.');
   }
-
-
-  getListings() {
-    return [
-      this.exampleListing1,
-      this.exampleListing2,
-      this.exampleListing3,
-      this.exampleListing1,
-      this.exampleListing2,
-      this.exampleListing3
-    ];
-  }
-
-  getListingById(id: number): Listing {
-    let listings = this.getListings();
-    for (let i = 0; i < listings.length; i++) {
-      if (id == listings[i].listingId) {
-        return listings[i];
-      }
-    }
-    return null;
-  }
-
-  public exampleListing1 = new Listing(
-    69,
-    'Example Listing1',
-    'House',
-    3000,
-    'San Francisco',
-    'California',
-    94132,
-    'Example Street 1',
-    true,
-    2,
-    2,
-    ['https://bit.ly/2Vc5oog', 'https://bit.ly/2UtC20w', 'https://bit.ly/2UJTUca'],
-    false,
-    false,
-    true,
-    true,
-    800
-  );
-  public exampleListing2 = new Listing(
-    70,
-    'Example Listing2',
-    'Apartment',
-    10000,
-    "San Francisco",
-    'California',
-    94132,
-    'Example Street 2',
-    true,
-    3,
-    3,
-    ['https://bit.ly/2UJTUca', 'https://bit.ly/2Vc5oog', 'https://bit.ly/2UtC20w'],
-    true,
-    true,
-    false,
-    false,
-    1000
-  );
-  public exampleListing3 = new Listing(
-    71,
-    'Example Listing3',
-    'Condo',
-    30000,
-    "San Francisco",
-    'California',
-    94132,
-    'Example Street 3',
-    false,
-    3,
-    2.5,
-    ['https://bit.ly/2UtC20w', 'https://bit.ly/2UJTUca', 'https://bit.ly/2Vc5oog'],
-    true,
-    false,
-    true,
-    false,
-    900
-  );
 }
 
 export class Listing {

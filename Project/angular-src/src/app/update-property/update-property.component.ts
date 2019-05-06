@@ -54,6 +54,7 @@ export class UpdatePropertyComponent implements OnInit {
   }
 
   onUpdateClick() {
+    console.log(this.listing);
     if (!this.isDataProvided()) {
       this.openDialog('Please enter valid input for all required fields', false);
       return;
@@ -103,7 +104,6 @@ export class UpdatePropertyComponent implements OnInit {
       !this.isEmptyNum(this.listing.zipCode) &&
       !this.isEmptyStr(this.listing.street) &&
       !this.isEmptyStr(this.listing.state) &&
-      !this.isEmptyBool(this.listing.forSale) &&
       !this.isEmptyNum(this.listing.numBedrooms) &&
       !this.isEmptyNum(this.listing.numBathrooms));
   }
