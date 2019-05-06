@@ -5,7 +5,6 @@ const database = require('../models/cloudsql');
 // Create new listing
 router.post('/', function (req, res) {
     let listing = {
-        listingId: null,
         title: req.body.title,
         listingType: req.body.listingType,
         price: req.body.price,
@@ -23,63 +22,36 @@ router.post('/', function (req, res) {
         BARTAccess: req.body.BARTAccess,
         wheelchairAccess: req.body.wheelchairAccess
     };
-    let values = [
-        req.body.title,
-        req.body.listingType,
-        req.body.price,
-        req.body.lotSize,
-        req.body.street,
-        req.body.city,
-        req.body.state,
-        req.body.zipCode,
-        req.body.forSale,
-        req.body.description,
-        req.body.numBedrooms,
-        req.body.numBathrooms,
-        req.body.laundry,
-        req.body.hospitalAccess
-    ]
-    console.log(listing);
-    let sql = `INSERT INTO Listing(title, listingType, price, lotSize, street, city, state, zipCode, forSale, description, numBedrooms, numBathrooms, laundry, hospitalAccess, BARTAccess, wheelchairAccess) 
-    VALUES (` +
-        `
-        
-        )`;
-    database.query(sql, listing, function (err, results) {
-        if (err) {
+
+    let sql = `INSERT INTO Listing SET ?`;
+    database.query(sql, listing).then(results => {
+        console.log(results);
+        let listingId = results[0].insertId;
+        let creates = {
+            userId: req.body.user.userId,
+            listingId: listingId
+        };
+
+        let sql2 = `INSERT INTO Creates SET ?`;
+        database.query(sql2, creates).then(createsResponse => {
+                console.log(createsResponse);
+                res.send({ listingId: listingId });
+        }).catch(err => {
             console.log(err);
             res.status(err.status || 500).send(err.message);
-        } else {
-            console.log(results);
-            let listingId = results.insertId;
-            let userId = database.escape(req.body.user.userId);
+        })
 
-            // Insert new Creates row containing userId and listingId
-
-            let sql = `INSERT INTO Creates (userId, listingId) VALUES (` +
-                `
-                        ${req.body.user.userId},
-                        ${listingId}
-                        )`;
-            database.query(sql, function (err, createsResponse) {
-
-                if (err) {
-                    res.status(err.status || 500).send(err.message);
-                } else {
-                    console.log(createsResponse);
-                    res.send({ listingId: listingId });
-                }
-            })
-        }
+    }).catch(err => {
+        console.log(err);
+        res.status(err.status || 500).send(err.message);
     })
 });
 
 // Get one listing
 router.get('/:id', function (req, res) {
-    //Get creates item in order to get the listing owners id
+
     let sql = `SELECT * FROM Listing WHERE listingId = ` + database.escape(req.params.id);
     database.query(sql, function (err, result) {
-
         if (err) {
             res.status(err.status || 500).send(err.message);
         } else {

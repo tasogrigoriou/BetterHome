@@ -13,7 +13,7 @@ const storage = Storage();
 // A bucket is a container for objects (files).
 const bucket = storage.bucket(config.CLOUD_BUCKET);
 
-router.post('/', upload.single('file'), function(req, res) {
+router.post('/', upload.single('file'), function(req, res, next) {
     if (!req.file) {
         res.status(400).send('No file uploaded.');
         return;
