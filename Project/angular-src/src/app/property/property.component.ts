@@ -15,7 +15,6 @@ import {FormControl} from "@angular/forms";
   styleUrls: ['./property.component.css']
 })
 export class PropertyComponent implements OnInit, OnDestroy {
-  breakpoint;
   rowWidth;
 
   user: LoginUser;
@@ -34,7 +33,8 @@ export class PropertyComponent implements OnInit, OnDestroy {
   pageSize: number = 3;
   pageSizeOptions: number[] = [3, 6, 18, 30, 60];
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild('paginatorTop') topPaginator: MatPaginator;
+  @ViewChild('paginatorBottom') bottomPaginator: MatPaginator;
   @ViewChild('drag_scroll', { read: DragScrollComponent }) dragScroll: DragScrollComponent;
 
   constructor(
@@ -62,8 +62,7 @@ export class PropertyComponent implements OnInit, OnDestroy {
     this.listings = this.searchService.getListings();
     this.pagedListings = this.listings.slice(0, this.pageSize);
 
-    this.breakpoint = (window.innerWidth <= 500) ? 1 : 3;
-    this.rowWidth = (window.innerWidth <= 500) ? '100%' : '32%';
+    this.rowWidth = (window.innerWidth <= 500) ? '100%' : '31%';
 
     if (!this.user) {
       this.isLoaded = true;
@@ -95,6 +94,18 @@ export class PropertyComponent implements OnInit, OnDestroy {
     }
   }
 
+  handlePageTop(event) {
+    this.bottomPaginator.pageSize = event.pageSize;
+    this.bottomPaginator.pageIndex = event.pageIndex;
+    this.pageDidChange(event);
+  }
+
+  handlePageBottom(event) {
+    this.topPaginator.pageSize = event.pageSize;
+    this.topPaginator.pageIndex = event.pageIndex;
+    this.pageDidChange(event);
+  }
+
   pageDidChange(event) {
     this.pageSize = event.pageSize;
     let startIndex = this.pageSize * event.pageIndex;
@@ -102,8 +113,7 @@ export class PropertyComponent implements OnInit, OnDestroy {
   }
 
   onResize(event) {
-    this.breakpoint = (event.target.innerWidth <= 500) ? 1 : 3;
-    this.rowWidth = (event.target.innerWidth <= 500) ? '100%' : '32%';
+    this.rowWidth = (event.target.innerWidth <= 500) ? '100%' : '31%';
   }
 
   onSearchClick() {
