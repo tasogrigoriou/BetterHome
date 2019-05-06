@@ -14,5 +14,5 @@
 
   "CLOUD_BUCKET": "better-home-234220",
 
-  "NODE_ENV": "prod"
+  "NODE_ENV": "local"
 }
