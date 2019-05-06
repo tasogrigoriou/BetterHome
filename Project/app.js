@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 
 const apiRegisterRouter = require('./controllers/register');
-const apiExampleRouter = require('./controllers/example');
 const apiUploadRouter = require('./controllers/upload');
 const apiLoginRouter = require('./controllers/login');
 const apiSearchRouter = require('./controllers/search');
@@ -30,7 +29,6 @@ app.use('/login', express.static(path.join(__dirname, 'public')));
 app.use('/search-results', express.static(path.join(__dirname, 'public')));
 
 app.use('/api/search', apiSearchRouter);
-app.use('/api/example', apiExampleRouter);
 app.use('/api/register',apiRegisterRouter);
 app.use('/api/login', apiLoginRouter);
 app.use('/api/upload', apiUploadRouter);

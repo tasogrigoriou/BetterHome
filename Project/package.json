@@ -6,7 +6,7 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
-    "@google-cloud/storage": "1.6.0",
+    "@google-cloud/storage": "^1.6.0",
     "@ng-bootstrap/ng-bootstrap": "^4.0.4",
     "bcrypt": "^3.0.5",
     "body-parser": "^1.18.3",

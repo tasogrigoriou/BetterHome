@@ -33,15 +33,17 @@ router.post('/', upload.single('file'), function(req, res, next) {
         // The public URL can be used to directly access the file via HTTP.
         const imageUrl = `https://storage.googleapis.com/${bucket.name}/${blob.name}`;
 
-        let sql = `INSERT INTO ListingImage(listingId, imageUrl) VALUES ('${listingId}', '${imageUrl}')`;
-        database.query(sql, function(err, result) {
-            if (err) {
-                res.status(err.status || 500).send(err.message);
-            } else {
-                console.log(result);
-                res.status(200).send({imageUrl: imageUrl});
-            }
-        });
+        let image = {
+            listingId: listingId,
+            imageUrl: imageUrl
+        };
+        let sql = `INSERT INTO ListingImage SET ?`;
+        database.query(sql, image).then(result => {
+            console.log(result);
+            res.status(200).send({imageUrl: imageUrl});
+        }).catch(err => {
+            res.status(err.status || 500).send(err.message);
+        })
     });
 
     blobStream.end(req.file.buffer);

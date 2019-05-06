@@ -3,24 +3,23 @@ const router = express.Router();
 const database = require('../models/cloudsql');
 
 router.post('/', function(req, res) {
-    let userId = req.body.userId;
-    let listingId = req.body.listingId;
-
-    let sq1 = `INSERT INTO Favorites(userId, listingId) VALUES ('${userId}', '${listingId}')`;
-    database.query(sq1, function(err, result) {
-        if (err) {
-            res.status(err.status || 500).send(err.message);
-        } else {
+    let favorite = {
+        userId: req.body.userId,
+        listingId: req.body.listingId
+    };
+    let sql = `INSERT INTO Favorites SET ?`;
+    database.query(sql, favorite).then(result => {
             console.log(result);
             res.send(result);
-        }
-    });
+        }).catch(err => {
+        res.status(err.status || 500).send(err.message);
+    })
 });
 
 router.get('/', function (req, res) {
     let userId = Number(req.header('userId'));
 
-    let sql = `SELECT * FROM Listing WHERE listingId IN (SELECT listingId FROM Favorites WHERE userId = ${userId})`;
+    let sql = `SELECT * FROM Listing WHERE listingId IN (SELECT listingId FROM Favorites WHERE userId = ` + database.escape(userId) + `)`;
     database.query(sql, function (err, result) {
         if (err) {
             console.log(err);
@@ -34,7 +33,7 @@ router.get('/', function (req, res) {
             for (let i = 0; i < result.length; i++) {
                 let listing = result[i];
                 listing.isFavorite = true;
-                let sql2 = `SELECT imageUrl FROM ListingImage WHERE listingId = ${listing.listingId}`;
+                let sql2 = `SELECT imageUrl FROM ListingImage WHERE listingId = ` + database.escape(listing.listingId);
                 let promise = sqlPromiseWrapper(sql2).then(images => {
                     let listingImages = [];
                     for (let i = 0; i < images.length; i++) {
@@ -62,7 +61,7 @@ router.get('/:id', function (req, res) {
     let userId = Number(req.header('userId'));
     let listingId = Number(req.params.id);
 
-    let sql = `SELECT * FROM Favorites WHERE userId = ${userId} AND listingId = ${listingId}`;
+    let sql = `SELECT * FROM Favorites WHERE userId = ` + database.escape(userId) + ` AND listingId = ` + database.escape(listingId);
     database.query(sql, function (err, result) {
         if (err) {
             console.log(err);
@@ -79,7 +78,7 @@ router.delete('/', function(req, res) {
     let userId = Number(req.header('userId'));
     let listingId = Number(req.header('listingId'));
 
-    let sql = `DELETE FROM Favorites WHERE userId = ${userId} AND listingId = ${listingId}`;
+    let sql = `DELETE FROM Favorites WHERE userId = ` + database.escape(userId) + ` AND listingId = ` + database.escape(listingId);
     database.query(sql, function (err, result) {
         if (err) {
             res.status(err.status || 500).send(err.message);
