@@ -168,8 +168,6 @@ var PropertyComponent = /** @class */ (function () {
     PropertyComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.rowWidth = (window.innerWidth <= 800) ? '100%' : '31%';
-        console.log(window.innerWidth);
-        console.log(this.rowWidth);
         if (localStorage.getItem('loginUser')) {
             this.user = JSON.parse(localStorage.getItem('loginUser'));
         }

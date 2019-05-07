@@ -38,7 +38,7 @@ export class AdminImagesComponent implements OnInit {
   ngOnInit() {
     if (!localStorage.getItem('loginUser')) return;
 
-    this.breakpoint = (window.innerWidth <= 600) ? 1 : 2;
+    this.breakpoint = (window.innerWidth <= 800) ? 1 : 2;
 
     this.showSpinner();
     this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
@@ -58,8 +58,7 @@ export class AdminImagesComponent implements OnInit {
   }
 
   onResize(event) {
-    console.log(event.target.innerWidth);
-    this.breakpoint = (event.target.innerWidth <= 600) ? 1 : 2;
+    this.breakpoint = (event.target.innerWidth <= 800) ? 1 : 2;
   }
 
   onDeleteImageClick(imageUrl: string) {

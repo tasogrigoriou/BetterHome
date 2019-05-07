@@ -624,7 +624,7 @@ var AdminImagesComponent = /** @class */ (function () {
     AdminImagesComponent.prototype.ngOnInit = function () {
         if (!localStorage.getItem('loginUser'))
             return;
-        this.breakpoint = (window.innerWidth <= 600) ? 1 : 2;
+        this.breakpoint = (window.innerWidth <= 800) ? 1 : 2;
         this.showSpinner();
         this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
         this.isUserAdmin = this.loginUser.username === 'admin';
@@ -641,8 +641,7 @@ var AdminImagesComponent = /** @class */ (function () {
         });
     };
     AdminImagesComponent.prototype.onResize = function (event) {
-        console.log(event.target.innerWidth);
-        this.breakpoint = (event.target.innerWidth <= 600) ? 1 : 2;
+        this.breakpoint = (event.target.innerWidth <= 800) ? 1 : 2;
     };
     AdminImagesComponent.prototype.onDeleteImageClick = function (imageUrl) {
         this.openDeleteImageDialog(imageUrl, 'Are you sure you want to delete this image?');
@@ -911,7 +910,6 @@ var AdminUsersComponent = /** @class */ (function () {
         this.dataSource.filter = filterValue.trim().toLowerCase();
     };
     AdminUsersComponent.prototype.onRowClick = function (user) {
-        console.log(user);
         this.router.navigate(['/update-account', user.userId]);
     };
     AdminUsersComponent.prototype.showSpinner = function () {
@@ -3315,7 +3313,6 @@ var UpdateAccountComponent = /** @class */ (function () {
         this.route.paramMap.subscribe(function (params) {
             _this.userId = Number(params.get('userId'));
             _this.loginService.getSingleUser(_this.userId).subscribe(function (editUser) {
-                console.log(editUser);
                 _this.editUser = editUser;
                 _this.hideSpinner();
             }, function (err) {

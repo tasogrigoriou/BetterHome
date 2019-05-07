@@ -37,7 +37,6 @@ export class UpdateAccountComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.userId = Number(params.get('userId'));
       this.loginService.getSingleUser(this.userId).subscribe(editUser => {
-        console.log(editUser);
         this.editUser = editUser;
         this.hideSpinner();
       }, err => {

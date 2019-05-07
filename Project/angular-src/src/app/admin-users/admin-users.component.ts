@@ -54,7 +54,6 @@ export class AdminUsersComponent implements OnInit {
   }
 
   onRowClick(user: LoginUser) {
-    console.log(user);
     this.router.navigate(['/update-account', user.userId]);
   }
 

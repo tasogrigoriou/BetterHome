@@ -48,8 +48,6 @@ export class PropertyComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.rowWidth = (window.innerWidth <= 800) ? '100%' : '31%';
-    console.log(window.innerWidth);
-    console.log(this.rowWidth);
 
     if (localStorage.getItem('loginUser')) {
       this.user = JSON.parse(localStorage.getItem('loginUser'));
