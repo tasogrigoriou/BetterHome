@@ -19,6 +19,7 @@ export class UpdatePropertyComponent implements OnInit {
   listingBelongsToUser: boolean = false;
 
   isFullScreen: boolean;
+  isUserAdmin: boolean;
 
   constructor(
     private router: Router,
@@ -32,6 +33,7 @@ export class UpdatePropertyComponent implements OnInit {
 
     this.showSpinner();
     this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
+    this.isUserAdmin = this.loginUser.username === 'admin';
 
     this.route.paramMap.subscribe(params => {
       let listingId = Number(params.get('listingId'));

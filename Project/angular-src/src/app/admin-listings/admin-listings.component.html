@@ -1,0 +1,45 @@
+<ng-template [ngIf]="isUserAdmin">
+  <div class="example-header">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+  </div>
+
+  <div class="example-container mat-elevation-z8">
+
+    <mat-table [dataSource]="dataSource" matSort>
+
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.listingId}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="title">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Title </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.title}}% </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="listingType">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Listing Type </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.listingType}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="price">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Price </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.price}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row class="row-link"
+               *matRowDef="let row; columns: displayedColumns;"
+               (click)="onRowClick(row)">
+      </mat-row>
+    </mat-table>
+
+    <div>
+      <mat-spinner *ngIf="!isLoaded"></mat-spinner>
+    </div>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  </div>
+</ng-template>

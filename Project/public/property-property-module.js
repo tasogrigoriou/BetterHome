@@ -167,6 +167,9 @@ var PropertyComponent = /** @class */ (function () {
     }
     PropertyComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.rowWidth = (window.innerWidth <= 800) ? '100%' : '31%';
+        console.log(window.innerWidth);
+        console.log(this.rowWidth);
         if (localStorage.getItem('loginUser')) {
             this.user = JSON.parse(localStorage.getItem('loginUser'));
         }
@@ -180,7 +183,6 @@ var PropertyComponent = /** @class */ (function () {
         }
         this.listings = this.searchService.getListings();
         this.pagedListings = this.listings.slice(0, this.pageSize);
-        this.rowWidth = (window.innerWidth <= 500) ? '100%' : '31%';
         if (!this.user) {
             this.isLoaded = true;
             return;
@@ -227,7 +229,7 @@ var PropertyComponent = /** @class */ (function () {
         this.pagedListings = this.listings.slice(startIndex, startIndex + this.pageSize);
     };
     PropertyComponent.prototype.onResize = function (event) {
-        this.rowWidth = (event.target.innerWidth <= 500) ? '100%' : '31%';
+        this.rowWidth = (event.target.innerWidth <= 800) ? '100%' : '31%';
     };
     PropertyComponent.prototype.onSearchClick = function () {
         if (!this.listingSearch.city.length) {

@@ -1,0 +1,22 @@
+<ng-template [ngIf]="isUserAdmin">
+  <div class="container">
+
+    <div>
+      <h4 class="card-header-title">Image Gallery</h4>
+    </div>
+
+    <mat-grid-list [cols]="breakpoint" rowHeight="2:1" (window:resize)="onResize($event)">
+      <mat-grid-tile *ngFor="let image of imagess">
+        <img [src]="image" alt="no image">
+        <a class="img-delete" (click)="onDeleteImageClick(image)">
+          <mat-icon style="font-size: 30px !important" color="warn">delete_forever</mat-icon>
+        </a>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <div>
+      <mat-spinner *ngIf="!isLoaded"></mat-spinner>
+    </div>
+
+  </div>
+</ng-template>

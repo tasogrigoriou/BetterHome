@@ -32,6 +32,18 @@ export class LoginService {
     );
   }
 
+  getSingleUser(userId: number): Observable<any> {
+    return this.http.get(apiUrl + `/${userId}`, httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  deleteUser(userId: number): Observable<any> {
+    return this.http.delete(apiUrl + `/${userId}`, httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+
   emitLoginEvent(loginUser: LoginUser) {
     localStorage.setItem('loginUser', JSON.stringify(loginUser));
     this.getLoginUser.emit(loginUser);

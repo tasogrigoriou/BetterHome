@@ -1,0 +1,54 @@
+<ng-template [ngIf]="editUser && isUserAdmin">
+  <section class="hero is-info is-fullheight-with-navbar is-bold">
+    <div class="hero-body">
+      <div class="main-div">
+        <mat-card class="my-mat-card mat-elevation-z20">
+          <mat-card-title class="main-div">Update Account</mat-card-title>
+          <mat-card-content>
+
+            <!--FORM FIELDS HERE-->
+            <div fxLayout="column" fxLayoutAlign="center">
+              <mat-form-field class="cont-input">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="First name" [(ngModel)]="editUser.firstName" name="firstName"><br>
+              </mat-form-field>
+              <mat-form-field class="cont-input">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Last name" [(ngModel)]="editUser.lastName" name="lastName">
+              </mat-form-field>
+              <mat-form-field class="cont-input">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Username" [(ngModel)]="editUser.username" name="username">
+              </mat-form-field>
+              <mat-form-field class="cont-input">
+                <mat-label>New Password</mat-label>
+                <input matInput type="password" placeholder="New Password" [(ngModel)]="newPassword" name="new-password">
+              </mat-form-field>
+              <mat-form-field class="cont-input">
+                <mat-label>Email Address</mat-label>
+                <input matInput placeholder="Email address" [(ngModel)]="editUser.emailAddress" name="emailAddress">
+              </mat-form-field>
+              <mat-form-field class="cont-input">
+                <mat-label>Phone Number</mat-label>
+                <input matInput placeholder="Phone number" [(ngModel)]="editUser.phoneNumber" name="phoneNumber">
+              </mat-form-field>
+            </div>
+
+          </mat-card-content>
+          <mat-card-actions>
+
+            <!-- REGISTER BUTTON -->
+            <div class="my-button" fxLayout="row" fxLayoutAlign="center">
+              <button mat-raised-button (click)="onUpdateClick()" color="primary">Update</button>
+              <button mat-raised-button (click)="onDeleteClick()" color="warn">Delete</button>
+            </div>
+
+            <mat-spinner *ngIf="!isLoaded"></mat-spinner>
+
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+</ng-template>
+

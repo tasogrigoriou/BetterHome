@@ -47,6 +47,10 @@ export class PropertyComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+    this.rowWidth = (window.innerWidth <= 800) ? '100%' : '31%';
+    console.log(window.innerWidth);
+    console.log(this.rowWidth);
+
     if (localStorage.getItem('loginUser')) {
       this.user = JSON.parse(localStorage.getItem('loginUser'));
     }
@@ -62,8 +66,6 @@ export class PropertyComponent implements OnInit, OnDestroy {
 
     this.listings = this.searchService.getListings();
     this.pagedListings = this.listings.slice(0, this.pageSize);
-
-    this.rowWidth = (window.innerWidth <= 500) ? '100%' : '31%';
 
     if (!this.user) {
       this.isLoaded = true;
@@ -115,7 +117,7 @@ export class PropertyComponent implements OnInit, OnDestroy {
   }
 
   onResize(event) {
-    this.rowWidth = (event.target.innerWidth <= 500) ? '100%' : '31%';
+    this.rowWidth = (event.target.innerWidth <= 800) ? '100%' : '31%';
   }
 
   onSearchClick() {

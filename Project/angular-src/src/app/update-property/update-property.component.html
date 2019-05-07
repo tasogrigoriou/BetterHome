@@ -1,4 +1,4 @@
-<ng-template [ngIf]="loginUser && listing && listingBelongsToUser">
+<ng-template [ngIf]="(loginUser && listing && listingBelongsToUser) || (isUserAdmin)">
 
   <ng-template [ngIf]="isFullScreen">
     <div class="container example-container" (window:resize)="onResize($event)">
