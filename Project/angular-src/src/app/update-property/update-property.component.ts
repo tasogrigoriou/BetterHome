@@ -5,6 +5,7 @@ import {first} from "rxjs/operators";
 import {RegisterDialog} from "../register/register.dialog";
 import {MatDialog} from "@angular/material";
 import {LoginUser} from "../core/services/login.service";
+import {DeleteDialog} from "../account/delete.dialog";
 
 @Component({
   selector: 'app-update-update',
@@ -79,6 +80,19 @@ export class UpdatePropertyComponent implements OnInit {
       );
   }
 
+  onDeleteClick() {
+    this.openDeleteListingDialog(this.listing, 'Are you sure you want to delete this listing?');
+  }
+
+  deleteListing(listing: Listing) {
+    this.listingsService.deleteListing(listing.listingId).subscribe(result => {
+      this.openDialog('Successfully deleted listing', true);
+    }, err => {
+      console.log(err);
+      this.openDialog('Unable to delete listing', false);
+    })
+  }
+
   replaceDoubleQuotes() {
     this.listing.title = this.listing.title.replace(/"/g, "'");
     this.listing.description = this.listing.description.replace(/"/g, "'");
@@ -131,8 +145,26 @@ export class UpdatePropertyComponent implements OnInit {
     });
     if (subscribe) {
       dialogRef.afterClosed().subscribe(result => {
-        this.router.navigate(['/account']);
+        if (this.isUserAdmin) {
+          this.router.navigate(['/admin-listings']);
+        } else {
+          this.router.navigate(['/account']);
+        }
       });
     }
+  }
+
+  openDeleteListingDialog(listing: Listing, message: string) {
+    const dialog = this.dialog.open(DeleteDialog, {
+      width: '250px',
+      data: {
+        message: message
+      }
+    });
+    dialog.afterClosed().subscribe(result => {
+      if (result == 'delete') {
+        this.deleteListing(listing);
+      }
+    });
   }
 }

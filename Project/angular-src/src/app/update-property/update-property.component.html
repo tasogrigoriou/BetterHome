@@ -127,8 +127,9 @@
         <textarea matInput placeholder="Description" [(ngModel)]="listing.description" required></textarea>
       </mat-form-field>
 
-      <div>
-        <button mat-raised-button color="primary" (click)="onUpdateClick()">Update Listing</button>
+      <div class="my-button" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="12px" fxLayoutGap.xs="0">
+        <button mat-raised-button (click)="onUpdateClick()" color="primary">Update</button>
+        <button mat-raised-button (click)="onDeleteClick()" color="warn">Delete</button>
       </div>
 
       <div>
@@ -255,8 +256,9 @@
         <textarea matInput placeholder="Description" [(ngModel)]="listing.description" required></textarea>
       </mat-form-field>
 
-      <div>
-        <button mat-raised-button color="primary" (click)="onUpdateClick()">Update Listing</button>
+      <div class="my-button" fxLayout="row" fxLayoutAlign="center">
+        <button mat-raised-button (click)="onUpdateClick()" color="primary">Update</button>
+        <button mat-raised-button (click)="onDeleteClick()" color="warn">Delete</button>
       </div>
 
       <div>
