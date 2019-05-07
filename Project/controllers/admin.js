@@ -3,7 +3,7 @@ const router = express.Router();
 const database = require('../models/cloudsql');
 
 //Get all listings
-router.get('/listing', async function (req, res) {
+router.get('/listings', function (req, res) {
     let sql = `SELECT * FROM Listing`;
     database.query(sql, function (err, result) {
         if (err) {
@@ -30,7 +30,7 @@ router.get('/users', function (req, res) {
 });
 
 //Get all images
-router.get('/listing', function (req, res) {
+router.get('/images', function (req, res) {
     let sql = `SELECT * FROM ListingImage`;
     database.query(sql, function (err, result) {
         if (err) {
@@ -43,9 +43,9 @@ router.get('/listing', function (req, res) {
 });
 
 //Delete a user
-router.delete('/id:', function (req, res) {
-    let sql = `DELETE FROM Users WHERE userId = ${req.body.userId} `;
-    const result = database.query(sql, function (err, result) {
+router.delete('/:id', function (req, res) {
+    let sql = `DELETE FROM Users WHERE userId = ` + database.escape(req.params.id);
+    database.query(sql, function (err, result) {
         if (err) {
             res.status(err.status || 500).send(err.message);
         } else {
@@ -55,18 +55,4 @@ router.delete('/id:', function (req, res) {
     })
 });
 
-// sqlPromiseWrapper wraps a sql query call into a Promise
-// and handles the callbacks with resolve and reject
-function sqlPromiseWrapper(sql) {
-    return new Promise((resolve, reject) => {
-        database.query(sql, function (err, result) {
-
-            if (err) {
-                reject(err);
-            } else {
-                resolve(result);
-            }
-        });
-    });
-}
 module.exports = router;
