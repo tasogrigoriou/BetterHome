@@ -185,22 +185,16 @@ var PropertyComponent = /** @class */ (function () {
             this.isLoaded = true;
             return;
         }
-        var promises = [];
-        var _loop_1 = function (i) {
-            promises.push(this_1.favoritesService.isFavorite(this_1.listings[i].listingId, this_1.user.userId).toPromise().then(function (result) {
-                _this.listings[i].isFavorite = true;
-            }).catch(function (err) {
-                console.log(err);
-            }));
-        };
-        var this_1 = this;
-        for (var i = 0; i < this.listings.length; i++) {
-            _loop_1(i);
-        }
-        Promise.all(promises).then(function (s) {
-            console.log(s);
+        this.favoritesService.getFavorites(this.user.userId).subscribe(function (favorites) {
+            for (var i = 0; i < _this.listings.length; i++) {
+                for (var j = 0; j < favorites.length; j++) {
+                    if (_this.listings[i].listingId === favorites[j].listingId) {
+                        _this.listings[i].isFavorite = true;
+                    }
+                }
+            }
             _this.isLoaded = true;
-        }).catch(function (err) {
+        }, function (err) {
             console.log(err);
             _this.isLoaded = true;
         });

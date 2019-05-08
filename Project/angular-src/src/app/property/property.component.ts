@@ -70,23 +70,19 @@ export class PropertyComponent implements OnInit, OnDestroy {
       return;
     }
 
-    let promises = [];
-    for (let i = 0; i < this.listings.length; i++) {
-      promises.push(
-        this.favoritesService.isFavorite(this.listings[i].listingId, this.user.userId).toPromise().then(result => {
-          this.listings[i].isFavorite = true;
-        }).catch(err => {
-          console.log(err);
-        })
-      );
-    }
-    Promise.all(promises).then(s => {
-      console.log(s);
+    this.favoritesService.getFavorites(this.user.userId).subscribe(favorites => {
+      for (let i = 0; i < this.listings.length; i++) {
+        for (let j = 0; j < favorites.length; j++) {
+          if (this.listings[i].listingId === favorites[j].listingId) {
+            this.listings[i].isFavorite = true;
+          }
+        }
+      }
       this.isLoaded = true;
-    }).catch(err => {
+    }, err => {
       console.log(err);
       this.isLoaded = true;
-    });
+    })
   }
 
   ngOnDestroy() {
