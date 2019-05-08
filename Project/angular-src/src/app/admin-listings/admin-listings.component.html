@@ -16,7 +16,7 @@
 
       <ng-container matColumnDef="title">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Title </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.title}}% </mat-cell>
+        <mat-cell *matCellDef="let row"> {{row.title}} </mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="listingType">
@@ -24,9 +24,19 @@
         <mat-cell *matCellDef="let row"> {{row.listingType}} </mat-cell>
       </ng-container>
 
+      <ng-container matColumnDef="forSale">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Sale or Rent </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{getForSaleTitle(row)}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="address">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Address </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{getAddressTitle(row)}} </mat-cell>
+      </ng-container>
+
       <ng-container matColumnDef="price">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Price </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.price}} </mat-cell>
+        <mat-cell *matCellDef="let row"> ${{numberWithCommas(row.price)}} </mat-cell>
       </ng-container>
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

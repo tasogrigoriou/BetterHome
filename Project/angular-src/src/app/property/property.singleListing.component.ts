@@ -41,6 +41,10 @@ export class PropertySingleListingComponent implements OnInit {
     });
   }
 
+  getImage(imageUrl: string): string {
+    return `${ListingsService.cloudStorage}/${imageUrl}`;
+  }
+
   saleTitle(): string {
     return this.listing.forSale ? 'Sale' : 'Rent';
   }

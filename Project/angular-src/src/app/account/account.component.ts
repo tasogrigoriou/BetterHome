@@ -74,6 +74,10 @@ export class AccountComponent implements OnInit {
     });
   }
 
+  getImage(imageUrl: string): string {
+    return `${ListingsService.cloudStorage}/${imageUrl}`;
+  }
+
   clickLeftUserListings(i: number) {
     if (i == 0) return;
     this.userListingIndex--;

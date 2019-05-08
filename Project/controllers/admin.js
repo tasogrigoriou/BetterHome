@@ -31,13 +31,16 @@ router.get('/users', function (req, res) {
 
 //Get all images
 router.get('/images', function (req, res) {
-    let sql = `SELECT * FROM ListingImage`;
+    let sql = `SELECT imageUrl FROM ListingImage`;
     database.query(sql, function (err, result) {
         if (err) {
             res.status(err.status || 500).send(err.message);
         } else {
-            console.log(result);
-            res.send(result);
+            let imageUrls = [];
+            for (let i = 0; i < result.length; i++) {
+                imageUrls.push(result[i].imageUrl);
+            }
+            res.send(imageUrls);
         }
     })
 });

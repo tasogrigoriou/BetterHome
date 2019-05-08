@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {LoginUser} from "../core/services/login.service";
 import {Router} from "@angular/router";
+import {AdminService} from "../core/services/admin.service";
 
 @Component({
   selector: 'app-admin-users',
@@ -10,6 +11,8 @@ import {Router} from "@angular/router";
 })
 export class AdminUsersComponent implements OnInit {
   loginUser: LoginUser;
+
+  users: LoginUser[];
 
   isUserAdmin: boolean = false;
   isLoaded: boolean = false;
@@ -21,7 +24,8 @@ export class AdminUsersComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private adminService: AdminService
   ) {}
 
   ngOnInit() {
@@ -31,22 +35,16 @@ export class AdminUsersComponent implements OnInit {
     this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
     this.isUserAdmin = this.loginUser.username === 'admin';
 
-    const users: LoginUser[] = [];
-    for (let i = 1; i <= 100; i++) { users.push(createNewUser(i)); }
-
-    // Assign the data to the data source for the table to render
-    this.dataSource = new MatTableDataSource(users);
-
-    this.hideSpinner();
-  }
-
-  /**
-   * Set the paginator and sort after the view init since this component will
-   * be able to query its view for the initialized paginator and sort.
-   */
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+    this.adminService.getAllUsers().subscribe(users => {
+      this.users = users;
+      this.dataSource = new MatTableDataSource(users);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+      this.hideSpinner();
+    }, err => {
+      console.log(err);
+      this.hideSpinner();
+    });
   }
 
   applyFilter(filterValue: string) {
@@ -65,23 +63,3 @@ export class AdminUsersComponent implements OnInit {
     this.isLoaded = true;
   }
 }
-
-/** Builds and returns a new User. */
-function createNewUser(id: number): LoginUser {
-  const name =
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
-
-  return {
-    userId: id,
-    username: name,
-    firstName: name,
-    lastName: name,
-    emailAddress: 'fakeemail@google.com',
-    phoneNumber: '4154188711'
-  };
-}
-
-const NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-  'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-  'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];

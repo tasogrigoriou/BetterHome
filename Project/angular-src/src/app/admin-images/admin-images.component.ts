@@ -14,16 +14,8 @@ import {RegisterDialog} from "../register/register.dialog";
 export class AdminImagesComponent implements OnInit {
   breakpoint;
 
-  imagess: string[] = [
-    'https://storage.googleapis.com/better-home-234220/11222_Dilling_001.0.jpg',
-    'https://storage.googleapis.com/better-home-234220/beach-house-1.jpg',
-    'https://storage.googleapis.com/better-home-234220/beach-house-2.jpg',
-    'https://storage.googleapis.com/better-home-234220/Koala.jpg',
-    'https://storage.googleapis.com/better-home-234220/oakland-hills-1.jpg',
-    'https://storage.googleapis.com/better-home-234220/oakland-hills-3.jpg'
-  ];
-
   loginUser: LoginUser;
+
   images: string[];
 
   isUserAdmin: boolean;
@@ -49,6 +41,7 @@ export class AdminImagesComponent implements OnInit {
 
   loadData() {
     this.adminService.getAllImages().subscribe(images => {
+      console.log(images);
       this.images = images;
       this.hideSpinner();
     }, err => {
@@ -59,6 +52,10 @@ export class AdminImagesComponent implements OnInit {
 
   onResize(event) {
     this.breakpoint = (event.target.innerWidth <= 800) ? 1 : 2;
+  }
+
+  getImage(imageUrl: string): string {
+    return `${ListingsService.cloudStorage}/${imageUrl}`;
   }
 
   onDeleteImageClick(imageUrl: string) {

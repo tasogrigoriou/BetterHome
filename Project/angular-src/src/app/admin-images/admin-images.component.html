@@ -1,4 +1,4 @@
-<ng-template [ngIf]="isUserAdmin">
+<ng-template [ngIf]="isUserAdmin && images">
   <div class="container">
 
     <div>
@@ -6,8 +6,8 @@
     </div>
 
     <mat-grid-list [cols]="breakpoint" rowHeight="2:1" (window:resize)="onResize($event)">
-      <mat-grid-tile *ngFor="let image of imagess">
-        <img [src]="image" alt="no image">
+      <mat-grid-tile *ngFor="let image of images">
+        <img [src]="getImage(image)" alt="no image" style='height: 100%; width: 100%; object-fit: cover'/>
         <a class="img-delete" (click)="onDeleteImageClick(image)">
           <mat-icon style="font-size: 30px !important" color="warn">delete_forever</mat-icon>
         </a>

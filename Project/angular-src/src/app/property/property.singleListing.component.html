@@ -12,7 +12,7 @@
   <div class="w3-section">
     <div class="my-container">
       <drag-scroll #drag_scroll>
-        <img drag-scroll-item *ngFor="let photo of listing.imageUrls" [src]="photo" alt="" />
+        <img drag-scroll-item *ngFor="let photo of listing.imageUrls" [src]="getImage(photo)" alt="" />
       </drag-scroll>
     </div>
   </div>

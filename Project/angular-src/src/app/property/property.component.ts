@@ -114,6 +114,10 @@ export class PropertyComponent implements OnInit, OnDestroy {
     this.pagedListings = this.listings.slice(startIndex, startIndex + this.pageSize);
   }
 
+  getImage(imageUrl: string): string {
+    return `${ListingsService.cloudStorage}/${imageUrl}`;
+  }
+
   onResize(event) {
     this.rowWidth = (event.target.innerWidth <= 800) ? '100%' : '31%';
   }

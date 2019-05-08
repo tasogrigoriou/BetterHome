@@ -57,7 +57,7 @@ module.exports = "/*:host>.container {*/\n/*  max-width: 1264px;*/\n/*  width: 1
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n<title>Account</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n<body class=\"body\">\n<br>\n\n<div class=\"container\">\n  <div>\n    <h3 class=\"card-header-title\">Welcome {{user.username}}!</h3>\n  </div>\n\n  <mat-tab-group mat-stretch-tabs>\n\n    <mat-tab label=\"Profile\">\n      <br>\n        <div class=\"card-body\">\n\n          <p class=\"profile-p\"><i class=\"fa fa-user fa-fw w3-margin-right w3-xlarge \"></i>{{user.username}}</p>\n          <p class=\"profile-p\"><i class=\"fa fa-info fa-fw w3-margin-right w3-xlarge \"></i>{{user.firstName + ' ' + user.lastName}}</p>\n          <p class=\"profile-p\"><i class=\"fa fa-phone fa-fw w3-margin-right w3-xlarge \"></i>{{formatPhoneNumber(user.phoneNumber)}}</p>\n          <p class=\"profile-p\"><i class=\"fa fa-envelope fa-fw w3-margin-right w3-xlarge \"></i>{{user.emailAddress}}</p>\n\n          <br>\n          <button mat-raised-button type=\"edit\" class=\"btn btn-danger edit-acct-btn\" (click)=\"onEditAccountClick()\">Edit</button>\n\n        </div>\n    </mat-tab>\n\n    <mat-tab label=\"My Listings\">\n      <ng-template [ngIf]=\"userListings[userListingIndex] && userListings.length > 0\">\n        <div class=\"property-container\">\n          <mat-card class=\"property-card\" appMaterialElevation defaultElevation=\"3\" raisedElevation=\"24\">\n\n            <a class=\"a-link-card\" (click)=\"onEditListingClick()\"></a>\n\n            <a class=\"delete-button\" (click)=\"onDeleteListingClick(userListings[userListingIndex])\">\n              <mat-icon style=\"font-size: 33px !important\" color=\"warn\">delete_forever</mat-icon>\n            </a>\n\n            <mat-card-header>\n              <mat-card-title><h5>{{userListings[userListingIndex].title}}</h5>\n              </mat-card-title>\n              <mat-card-subtitle style=\"padding-top: 6px !important\">\n                {{userListings[userListingIndex].street + ', ' + userListings[userListingIndex].city + ', ' + userListings[userListingIndex].state}}\n              </mat-card-subtitle>\n            </mat-card-header>\n\n            <ng-template [ngIf]=\"userListings[userListingIndex] && userListings[userListingIndex].imageUrls.length > 0\">\n              <drag-scroll #drag_scroll>\n                <div class=\"img-wrap\"\n                     *ngFor=\"let imageUrl of userListings[userListingIndex].imageUrls\">\n                  <img class=\"img-container\"\n                       drag-scroll-item\n                       [src]=\"imageUrl\"\n                       alt=\"\" />\n                  <a class=\"a-link-card\" (click)=\"onEditListingClick()\"></a>\n\n                  <a class=\"img-upload\" (click)=\"openInput()\">\n                    <mat-icon style=\"font-size: 30px !important\" color=\"primary\">cloud_upload</mat-icon>\n                    <input id=\"fileInput\"\n                           hidden\n                           type=\"file\"\n                           accept=\".jpg, .jpeg, .png, .tif\"\n                           (change)=\"onUploadImageClick($event.target.files)\"\n                           multiple>\n                  </a>\n                  <a class=\"img-delete\" (click)=\"onDeleteImageClick(imageUrl)\">\n                    <mat-icon style=\"font-size: 30px !important\" color=\"warn\">delete_forever</mat-icon>\n                  </a>\n\n                </div>\n              </drag-scroll>\n            </ng-template>\n\n            <mat-card-content>\n              <h6>{{userListings[userListingIndex].listingType + ' for ' + (userListings[userListingIndex].forSale ? 'sale' : 'rent')}}</h6>\n              <p><i>{{'$' + numberWithCommas(userListings[userListingIndex].price) + ' | ' + userListings[userListingIndex].numBedrooms + ' beds' + ' | ' + userListings[userListingIndex].numBathrooms + ' baths' + ' | ' + numberWithCommas(userListings[userListingIndex].lotSize) + ' sqft'}}</i></p>\n              <p class=\"property-access-title\">{{getPropertyAccessibility(userListings[userListingIndex])}}</p>\n              <p>{{userListings[userListingIndex].description}}</p>\n            </mat-card-content>\n          </mat-card>\n        </div>\n      </ng-template>\n\n      <div class=\"w3-center\">\n        <div class=\"w3-section\">\n          <div class=\"center-btn\">\n            <button mat-button (click)=\"clickLeftUserListings(userListingIndex)\">❮ Prev</button>\n            <button mat-button (click)=\"clickRightUserListings(userListingIndex)\">Next ❯</button>\n          </div>\n        </div>\n      </div>\n    </mat-tab>\n\n    <mat-tab label=\"My Favorites\">\n      <ng-template [ngIf]=\"favoriteListings[favoriteListingIndex] && favoriteListings.length > 0\">\n        <div class=\"property-container\">\n          <mat-card class=\"property-card\" appMaterialElevation defaultElevation=\"3\" raisedElevation=\"24\">\n\n            <a class=\"a-link-card\" (click)=\"navigateToListing(favoriteListings[favoriteListingIndex].listingId)\"></a>\n\n            <a class=\"delete-button\" (click)=\"onRemoveFavoriteListingClick(favoriteListings[favoriteListingIndex])\">\n              <mat-icon style=\"font-size: 24px !important\" color=\"warn\">favorite</mat-icon>\n            </a>\n\n            <mat-card-header>\n              <mat-card-title><h5>{{favoriteListings[favoriteListingIndex].title}}</h5>\n              </mat-card-title>\n              <mat-card-subtitle style=\"padding-top: 6px !important\">\n                {{favoriteListings[favoriteListingIndex].street + ', ' + favoriteListings[favoriteListingIndex].city + ', ' + favoriteListings[favoriteListingIndex].state}}\n              </mat-card-subtitle>\n            </mat-card-header>\n\n            <ng-template [ngIf]=\"favoriteListings[favoriteListingIndex] && favoriteListings[favoriteListingIndex].imageUrls.length > 0\">\n              <drag-scroll #drag_scroll>\n                <div class=\"img-wrap\"\n                     *ngFor=\"let imageUrl of favoriteListings[favoriteListingIndex].imageUrls\">\n                  <img class=\"img-container\"\n                       drag-scroll-item\n                       [src]=\"imageUrl\"\n                       alt=\"\" />\n                  <a class=\"a-link-card\" (click)=\"navigateToListing(favoriteListings[favoriteListingIndex].listingId)\"></a>\n                </div>\n              </drag-scroll>\n            </ng-template>\n\n            <mat-card-content>\n              <h6>{{favoriteListings[favoriteListingIndex].listingType + ' for ' + (favoriteListings[favoriteListingIndex].forSale ? 'sale' : 'rent')}}</h6>\n              <p><i>{{'$' + numberWithCommas(favoriteListings[favoriteListingIndex].price) + ' | ' + favoriteListings[favoriteListingIndex].numBedrooms + ' beds' + ' | ' + favoriteListings[favoriteListingIndex].numBathrooms + ' baths' + ' | ' + numberWithCommas(favoriteListings[favoriteListingIndex].lotSize) + ' sqft'}}</i></p>\n              <p class=\"property-access-title\">{{getPropertyAccessibility(favoriteListings[favoriteListingIndex])}}</p>\n              <p>{{favoriteListings[favoriteListingIndex].description}}</p>\n            </mat-card-content>\n          </mat-card>\n        </div>\n      </ng-template>\n\n      <div class=\"w3-center\">\n        <div class=\"w3-section\">\n          <button mat-button (click)=\"clickLeftFavoriteListings(favoriteListingIndex)\">❮ Prev</button>\n          <button mat-button (click)=\"clickRightFavoriteListings(favoriteListingIndex)\">Next ❯</button>\n        </div>\n      </div>\n    </mat-tab>\n\n  </mat-tab-group>\n\n  <div>\n    <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n  </div>\n\n</div>\n</body>\n</html>\n"
+module.exports = "<html>\n<title>Account</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n<body class=\"body\">\n<br>\n\n<div class=\"container\">\n  <div>\n    <h3 class=\"card-header-title\">Welcome {{user.username}}!</h3>\n  </div>\n\n  <mat-tab-group mat-stretch-tabs>\n\n    <mat-tab label=\"Profile\">\n      <br>\n        <div class=\"card-body\">\n\n          <p class=\"profile-p\"><i class=\"fa fa-user fa-fw w3-margin-right w3-xlarge \"></i>{{user.username}}</p>\n          <p class=\"profile-p\"><i class=\"fa fa-info fa-fw w3-margin-right w3-xlarge \"></i>{{user.firstName + ' ' + user.lastName}}</p>\n          <p class=\"profile-p\"><i class=\"fa fa-phone fa-fw w3-margin-right w3-xlarge \"></i>{{formatPhoneNumber(user.phoneNumber)}}</p>\n          <p class=\"profile-p\"><i class=\"fa fa-envelope fa-fw w3-margin-right w3-xlarge \"></i>{{user.emailAddress}}</p>\n\n          <br>\n          <button mat-raised-button type=\"edit\" class=\"btn btn-danger edit-acct-btn\" (click)=\"onEditAccountClick()\">Edit</button>\n\n        </div>\n    </mat-tab>\n\n    <mat-tab label=\"My Listings\">\n      <ng-template [ngIf]=\"userListings[userListingIndex] && userListings.length > 0\">\n        <div class=\"property-container\">\n          <mat-card class=\"property-card\" appMaterialElevation defaultElevation=\"3\" raisedElevation=\"24\">\n\n            <a class=\"a-link-card\" (click)=\"onEditListingClick()\"></a>\n\n            <a class=\"delete-button\" (click)=\"onDeleteListingClick(userListings[userListingIndex])\">\n              <mat-icon style=\"font-size: 33px !important\" color=\"warn\">delete_forever</mat-icon>\n            </a>\n\n            <mat-card-header>\n              <mat-card-title><h5>{{userListings[userListingIndex].title}}</h5>\n              </mat-card-title>\n              <mat-card-subtitle style=\"padding-top: 6px !important\">\n                {{userListings[userListingIndex].street + ', ' + userListings[userListingIndex].city + ', ' + userListings[userListingIndex].state}}\n              </mat-card-subtitle>\n            </mat-card-header>\n\n            <ng-template [ngIf]=\"userListings[userListingIndex] && userListings[userListingIndex].imageUrls.length > 0\">\n              <drag-scroll #drag_scroll>\n                <div class=\"img-wrap\"\n                     *ngFor=\"let imageUrl of userListings[userListingIndex].imageUrls\">\n                  <img class=\"img-container\"\n                       drag-scroll-item\n                       [src]=\"getImage(imageUrl)\"\n                       alt=\"\" />\n                  <a class=\"a-link-card\" (click)=\"onEditListingClick()\"></a>\n\n                  <a class=\"img-upload\" (click)=\"openInput()\">\n                    <mat-icon style=\"font-size: 30px !important\" color=\"primary\">cloud_upload</mat-icon>\n                    <input id=\"fileInput\"\n                           hidden\n                           type=\"file\"\n                           accept=\".jpg, .jpeg, .png, .tif\"\n                           (change)=\"onUploadImageClick($event.target.files)\"\n                           multiple>\n                  </a>\n                  <a class=\"img-delete\" (click)=\"onDeleteImageClick(imageUrl)\">\n                    <mat-icon style=\"font-size: 30px !important\" color=\"warn\">delete_forever</mat-icon>\n                  </a>\n\n                </div>\n              </drag-scroll>\n            </ng-template>\n\n            <mat-card-content>\n              <h6>{{userListings[userListingIndex].listingType + ' for ' + (userListings[userListingIndex].forSale ? 'sale' : 'rent')}}</h6>\n              <p><i>{{'$' + numberWithCommas(userListings[userListingIndex].price) + ' | ' + userListings[userListingIndex].numBedrooms + ' beds' + ' | ' + userListings[userListingIndex].numBathrooms + ' baths' + ' | ' + numberWithCommas(userListings[userListingIndex].lotSize) + ' sqft'}}</i></p>\n              <p class=\"property-access-title\">{{getPropertyAccessibility(userListings[userListingIndex])}}</p>\n              <p>{{userListings[userListingIndex].description}}</p>\n            </mat-card-content>\n          </mat-card>\n        </div>\n      </ng-template>\n\n      <div class=\"w3-center\">\n        <div class=\"w3-section\">\n          <div class=\"center-btn\">\n            <button mat-button (click)=\"clickLeftUserListings(userListingIndex)\">❮ Prev</button>\n            <button mat-button (click)=\"clickRightUserListings(userListingIndex)\">Next ❯</button>\n          </div>\n        </div>\n      </div>\n    </mat-tab>\n\n    <mat-tab label=\"My Favorites\">\n      <ng-template [ngIf]=\"favoriteListings[favoriteListingIndex] && favoriteListings.length > 0\">\n        <div class=\"property-container\">\n          <mat-card class=\"property-card\" appMaterialElevation defaultElevation=\"3\" raisedElevation=\"24\">\n\n            <a class=\"a-link-card\" (click)=\"navigateToListing(favoriteListings[favoriteListingIndex].listingId)\"></a>\n\n            <a class=\"delete-button\" (click)=\"onRemoveFavoriteListingClick(favoriteListings[favoriteListingIndex])\">\n              <mat-icon style=\"font-size: 24px !important\" color=\"warn\">favorite</mat-icon>\n            </a>\n\n            <mat-card-header>\n              <mat-card-title><h5>{{favoriteListings[favoriteListingIndex].title}}</h5>\n              </mat-card-title>\n              <mat-card-subtitle style=\"padding-top: 6px !important\">\n                {{favoriteListings[favoriteListingIndex].street + ', ' + favoriteListings[favoriteListingIndex].city + ', ' + favoriteListings[favoriteListingIndex].state}}\n              </mat-card-subtitle>\n            </mat-card-header>\n\n            <ng-template [ngIf]=\"favoriteListings[favoriteListingIndex] && favoriteListings[favoriteListingIndex].imageUrls.length > 0\">\n              <drag-scroll #drag_scroll>\n                <div class=\"img-wrap\"\n                     *ngFor=\"let imageUrl of favoriteListings[favoriteListingIndex].imageUrls\">\n                  <img class=\"img-container\"\n                       drag-scroll-item\n                       [src]=\"getImage(imageUrl)\"\n                       alt=\"\" />\n                  <a class=\"a-link-card\" (click)=\"navigateToListing(favoriteListings[favoriteListingIndex].listingId)\"></a>\n                </div>\n              </drag-scroll>\n            </ng-template>\n\n            <mat-card-content>\n              <h6>{{favoriteListings[favoriteListingIndex].listingType + ' for ' + (favoriteListings[favoriteListingIndex].forSale ? 'sale' : 'rent')}}</h6>\n              <p><i>{{'$' + numberWithCommas(favoriteListings[favoriteListingIndex].price) + ' | ' + favoriteListings[favoriteListingIndex].numBedrooms + ' beds' + ' | ' + favoriteListings[favoriteListingIndex].numBathrooms + ' baths' + ' | ' + numberWithCommas(favoriteListings[favoriteListingIndex].lotSize) + ' sqft'}}</i></p>\n              <p class=\"property-access-title\">{{getPropertyAccessibility(favoriteListings[favoriteListingIndex])}}</p>\n              <p>{{favoriteListings[favoriteListingIndex].description}}</p>\n            </mat-card-content>\n          </mat-card>\n        </div>\n      </ng-template>\n\n      <div class=\"w3-center\">\n        <div class=\"w3-section\">\n          <button mat-button (click)=\"clickLeftFavoriteListings(favoriteListingIndex)\">❮ Prev</button>\n          <button mat-button (click)=\"clickRightFavoriteListings(favoriteListingIndex)\">Next ❯</button>\n        </div>\n      </div>\n    </mat-tab>\n\n  </mat-tab-group>\n\n  <div>\n    <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n  </div>\n\n</div>\n</body>\n</html>\n"
 
 /***/ }),
 
@@ -133,6 +133,9 @@ var AccountComponent = /** @class */ (function () {
             console.log(err);
             _this.isLoaded = true;
         });
+    };
+    AccountComponent.prototype.getImage = function (imageUrl) {
+        return _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__["ListingsService"].cloudStorage + "/" + imageUrl;
     };
     AccountComponent.prototype.clickLeftUserListings = function (i) {
         if (i == 0)
@@ -568,7 +571,7 @@ var AddListingComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".card-header-title {\n  margin-top: 18px;\n  margin-bottom: 10px;\n  font-size: 30px;\n  font-weight: bold;\n}\n\n.img-container {\n  max-height: 400px;\n  height: 100%;\n  width: 100%;\n  margin-bottom: 10px;\n}\n\n.img-wrap {\n  display: inline-block;\n  position: relative;\n}\n\n.img-delete {\n  position: absolute;\n  top: 14px;\n  right: 16px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4taW1hZ2VzL2FkbWluLWltYWdlcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtFQUNuQixlQUFlO0VBQ2YsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0UsaUJBQWlCO0VBQ2pCLFlBQVk7RUFDWixXQUFXO0VBQ1gsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UscUJBQXFCO0VBQ3JCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixTQUFTO0VBQ1QsV0FBVztBQUNiIiwiZmlsZSI6InNyYy9hcHAvYWRtaW4taW1hZ2VzL2FkbWluLWltYWdlcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhcmQtaGVhZGVyLXRpdGxlIHtcbiAgbWFyZ2luLXRvcDogMThweDtcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcbiAgZm9udC1zaXplOiAzMHB4O1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmltZy1jb250YWluZXIge1xuICBtYXgtaGVpZ2h0OiA0MDBweDtcbiAgaGVpZ2h0OiAxMDAlO1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcbn1cblxuLmltZy13cmFwIHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbi5pbWctZGVsZXRlIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDE0cHg7XG4gIHJpZ2h0OiAxNnB4O1xufVxuIl19 */"
+module.exports = ".card-header-title {\n  margin-top: 18px;\n  margin-bottom: 10px;\n  font-size: 30px;\n  font-weight: bold;\n}\n\n.img-container {\n  max-height: 400px;\n  height: 100%;\n  width: 100%;\n  margin-bottom: 10px;\n}\n\n.img-wrap {\n  display: inline-block;\n  position: relative;\n}\n\n.img-delete {\n  position: absolute;\n  top: 16px;\n  right: 20px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4taW1hZ2VzL2FkbWluLWltYWdlcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtFQUNuQixlQUFlO0VBQ2YsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0UsaUJBQWlCO0VBQ2pCLFlBQVk7RUFDWixXQUFXO0VBQ1gsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UscUJBQXFCO0VBQ3JCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixTQUFTO0VBQ1QsV0FBVztBQUNiIiwiZmlsZSI6InNyYy9hcHAvYWRtaW4taW1hZ2VzL2FkbWluLWltYWdlcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhcmQtaGVhZGVyLXRpdGxlIHtcbiAgbWFyZ2luLXRvcDogMThweDtcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcbiAgZm9udC1zaXplOiAzMHB4O1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmltZy1jb250YWluZXIge1xuICBtYXgtaGVpZ2h0OiA0MDBweDtcbiAgaGVpZ2h0OiAxMDAlO1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcbn1cblxuLmltZy13cmFwIHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbi5pbWctZGVsZXRlIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDE2cHg7XG4gIHJpZ2h0OiAyMHB4O1xufVxuIl19 */"
 
 /***/ }),
 
@@ -579,7 +582,7 @@ module.exports = ".card-header-title {\n  margin-top: 18px;\n  margin-bottom: 10
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-template [ngIf]=\"isUserAdmin\">\n  <div class=\"container\">\n\n    <div>\n      <h4 class=\"card-header-title\">Image Gallery</h4>\n    </div>\n\n    <mat-grid-list [cols]=\"breakpoint\" rowHeight=\"2:1\" (window:resize)=\"onResize($event)\">\n      <mat-grid-tile *ngFor=\"let image of imagess\">\n        <img [src]=\"image\" alt=\"no image\">\n        <a class=\"img-delete\" (click)=\"onDeleteImageClick(image)\">\n          <mat-icon style=\"font-size: 30px !important\" color=\"warn\">delete_forever</mat-icon>\n        </a>\n      </mat-grid-tile>\n    </mat-grid-list>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n  </div>\n</ng-template>\n"
+module.exports = "<ng-template [ngIf]=\"isUserAdmin && images\">\n  <div class=\"container\">\n\n    <div>\n      <h4 class=\"card-header-title\">Image Gallery</h4>\n    </div>\n\n    <mat-grid-list [cols]=\"breakpoint\" rowHeight=\"2:1\" (window:resize)=\"onResize($event)\">\n      <mat-grid-tile *ngFor=\"let image of images\">\n        <img [src]=\"getImage(image)\" alt=\"no image\" style='height: 100%; width: 100%; object-fit: cover'/>\n        <a class=\"img-delete\" (click)=\"onDeleteImageClick(image)\">\n          <mat-icon style=\"font-size: 30px !important\" color=\"warn\">delete_forever</mat-icon>\n        </a>\n      </mat-grid-tile>\n    </mat-grid-list>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n  </div>\n</ng-template>\n"
 
 /***/ }),
 
@@ -612,14 +615,6 @@ var AdminImagesComponent = /** @class */ (function () {
         this.adminService = adminService;
         this.listingsService = listingsService;
         this.dialog = dialog;
-        this.imagess = [
-            'https://storage.googleapis.com/better-home-234220/11222_Dilling_001.0.jpg',
-            'https://storage.googleapis.com/better-home-234220/beach-house-1.jpg',
-            'https://storage.googleapis.com/better-home-234220/beach-house-2.jpg',
-            'https://storage.googleapis.com/better-home-234220/Koala.jpg',
-            'https://storage.googleapis.com/better-home-234220/oakland-hills-1.jpg',
-            'https://storage.googleapis.com/better-home-234220/oakland-hills-3.jpg'
-        ];
     }
     AdminImagesComponent.prototype.ngOnInit = function () {
         if (!localStorage.getItem('loginUser'))
@@ -633,6 +628,7 @@ var AdminImagesComponent = /** @class */ (function () {
     AdminImagesComponent.prototype.loadData = function () {
         var _this = this;
         this.adminService.getAllImages().subscribe(function (images) {
+            console.log(images);
             _this.images = images;
             _this.hideSpinner();
         }, function (err) {
@@ -642,6 +638,9 @@ var AdminImagesComponent = /** @class */ (function () {
     };
     AdminImagesComponent.prototype.onResize = function (event) {
         this.breakpoint = (event.target.innerWidth <= 800) ? 1 : 2;
+    };
+    AdminImagesComponent.prototype.getImage = function (imageUrl) {
+        return _core_services_listings_service__WEBPACK_IMPORTED_MODULE_5__["ListingsService"].cloudStorage + "/" + imageUrl;
     };
     AdminImagesComponent.prototype.onDeleteImageClick = function (imageUrl) {
         this.openDeleteImageDialog(imageUrl, 'Are you sure you want to delete this image?');
@@ -720,7 +719,7 @@ module.exports = "/*@media only screen and (max-width: 736px) and (orientation:p
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-template [ngIf]=\"isUserAdmin\">\n  <div class=\"example-header\">\n    <mat-form-field>\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\n    </mat-form-field>\n  </div>\n\n  <div class=\"example-container mat-elevation-z8\">\n\n    <mat-table [dataSource]=\"dataSource\" matSort>\n\n      <ng-container matColumnDef=\"id\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.listingId}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"title\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Title </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.title}}% </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"listingType\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Listing Type </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.listingType}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"price\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Price </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.price}} </mat-cell>\n      </ng-container>\n\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n      <mat-row class=\"row-link\"\n               *matRowDef=\"let row; columns: displayedColumns;\"\n               (click)=\"onRowClick(row)\">\n      </mat-row>\n    </mat-table>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n  </div>\n</ng-template>\n"
+module.exports = "<ng-template [ngIf]=\"isUserAdmin\">\n  <div class=\"example-header\">\n    <mat-form-field>\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\n    </mat-form-field>\n  </div>\n\n  <div class=\"example-container mat-elevation-z8\">\n\n    <mat-table [dataSource]=\"dataSource\" matSort>\n\n      <ng-container matColumnDef=\"id\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.listingId}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"title\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Title </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.title}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"listingType\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Listing Type </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.listingType}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"forSale\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Sale or Rent </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{getForSaleTitle(row)}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"address\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Address </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{getAddressTitle(row)}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"price\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Price </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> ${{numberWithCommas(row.price)}} </mat-cell>\n      </ng-container>\n\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n      <mat-row class=\"row-link\"\n               *matRowDef=\"let row; columns: displayedColumns;\"\n               (click)=\"onRowClick(row)\">\n      </mat-row>\n    </mat-table>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n  </div>\n</ng-template>\n"
 
 /***/ }),
 
@@ -737,41 +736,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/services/listings.service */ "./src/app/core/services/listings.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_services_admin_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/services/admin.service */ "./src/app/core/services/admin.service.ts");
 
 
 
 
 
 var AdminListingsComponent = /** @class */ (function () {
-    function AdminListingsComponent(router) {
+    function AdminListingsComponent(router, adminService) {
         this.router = router;
+        this.adminService = adminService;
         this.isUserAdmin = false;
         this.isLoaded = false;
-        this.displayedColumns = ['id', 'title', 'listingType', 'price'];
+        this.displayedColumns = ['id', 'title', 'listingType', 'forSale', 'address', 'price'];
     }
     AdminListingsComponent.prototype.ngOnInit = function () {
+        var _this = this;
         if (!localStorage.getItem('loginUser'))
             return;
         this.showSpinner();
         this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
         this.isUserAdmin = this.loginUser.username === 'admin';
-        var listings = [];
-        for (var i = 1; i <= 100; i++) {
-            listings.push(createNewListing(i));
-        }
-        // Assign the data to the data source for the table to render
-        this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](listings);
-        this.hideSpinner();
-    };
-    /**
-     * Set the paginator and sort after the view init since this component will
-     * be able to query its view for the initialized paginator and sort.
-     */
-    AdminListingsComponent.prototype.ngAfterViewInit = function () {
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
+        this.adminService.getAllListings().subscribe(function (listings) {
+            _this.listings = listings;
+            _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](listings);
+            _this.dataSource.paginator = _this.paginator;
+            _this.dataSource.sort = _this.sort;
+            _this.hideSpinner();
+        }, function (err) {
+            console.log(err);
+            _this.hideSpinner();
+        });
     };
     AdminListingsComponent.prototype.applyFilter = function (filterValue) {
         this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -779,6 +775,15 @@ var AdminListingsComponent = /** @class */ (function () {
     AdminListingsComponent.prototype.onRowClick = function (listing) {
         console.log(listing);
         this.router.navigate(['/update-property', listing.listingId]);
+    };
+    AdminListingsComponent.prototype.getForSaleTitle = function (listing) {
+        return listing.forSale ? 'Sale' : 'Rent';
+    };
+    AdminListingsComponent.prototype.getAddressTitle = function (listing) {
+        return listing.street + ", " + listing.city + ", " + listing.state + ", " + listing.zipCode;
+    };
+    AdminListingsComponent.prototype.numberWithCommas = function (x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
     AdminListingsComponent.prototype.showSpinner = function () {
         this.isLoaded = false;
@@ -800,39 +805,12 @@ var AdminListingsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./admin-listings.component.html */ "./src/app/admin-listings/admin-listings.component.html"),
             styles: [__webpack_require__(/*! ./admin-listings.component.css */ "./src/app/admin-listings/admin-listings.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _core_services_admin_service__WEBPACK_IMPORTED_MODULE_4__["AdminService"]])
     ], AdminListingsComponent);
     return AdminListingsComponent;
 }());
 
-function createNewListing(id) {
-    var title = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-        NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
-    return new _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__["Listing"](id, title, 'home', id * 5);
-    // public listingId: number = null,
-    //     public title: string = '',
-    //     public listingType: string = '',
-    //     public price: number = null,
-    //     public city: string = '',
-    //     public state: string = '',
-    //     public zipCode: number = null,
-    //     public street: string = '',
-    //     public forSale: boolean = null,
-    //     public numBedrooms: number = null,
-    //     public numBathrooms: number = null,
-    //     public imageUrls: string[] = [],
-    //     public laundry: boolean = false,
-    //     public hospitalAccess: boolean = false,
-    //     public BARTAccess: boolean = false,
-    //     public wheelchairAccess: boolean = false,
-    //     public lotSize: number = null,
-    //     public description: string = '',
-    //     public user: LoginUser = null,
-    //     public isFavorite: boolean = false
-}
-var NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-    'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-    'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 
 
 /***/ }),
@@ -855,7 +833,7 @@ module.exports = "/*@media only screen and (max-width: 736px) and (orientation:p
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-template [ngIf]=\"isUserAdmin\">\n  <div class=\"example-header\">\n    <mat-form-field>\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\n    </mat-form-field>\n  </div>\n\n  <div class=\"example-container mat-elevation-z8\">\n\n    <mat-table [dataSource]=\"dataSource\" matSort>\n\n      <ng-container matColumnDef=\"id\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.userId}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"username\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Username </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.username}}% </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"firstName\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> First Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.firstName}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"lastName\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.lastName}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"emailAddress\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Email Address </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.emailAddress}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"phoneNumber\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Phone Number </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.phoneNumber}} </mat-cell>\n      </ng-container>\n\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n      <mat-row class=\"row-link\"\n               *matRowDef=\"let row; columns: displayedColumns;\"\n               (click)=\"onRowClick(row)\">\n      </mat-row>\n    </mat-table>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n  </div>\n</ng-template>\n"
+module.exports = "<ng-template [ngIf]=\"isUserAdmin\">\n  <div class=\"example-header\">\n    <mat-form-field>\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\n    </mat-form-field>\n  </div>\n\n  <div class=\"example-container mat-elevation-z8\">\n\n    <mat-table [dataSource]=\"dataSource\" matSort>\n\n      <ng-container matColumnDef=\"id\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.userId}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"username\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Username </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.username}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"firstName\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> First Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.firstName}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"lastName\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.lastName}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"emailAddress\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Email Address </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.emailAddress}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"phoneNumber\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Phone Number </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.phoneNumber}} </mat-cell>\n      </ng-container>\n\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n      <mat-row class=\"row-link\"\n               *matRowDef=\"let row; columns: displayedColumns;\"\n               (click)=\"onRowClick(row)\">\n      </mat-row>\n    </mat-table>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n  </div>\n</ng-template>\n"
 
 /***/ }),
 
@@ -873,38 +851,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_services_admin_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/services/admin.service */ "./src/app/core/services/admin.service.ts");
+
 
 
 
 
 var AdminUsersComponent = /** @class */ (function () {
-    function AdminUsersComponent(router) {
+    function AdminUsersComponent(router, adminService) {
         this.router = router;
+        this.adminService = adminService;
         this.isUserAdmin = false;
         this.isLoaded = false;
         this.displayedColumns = ['id', 'username', 'firstName', 'lastName', 'emailAddress', 'phoneNumber'];
     }
     AdminUsersComponent.prototype.ngOnInit = function () {
+        var _this = this;
         if (!localStorage.getItem('loginUser'))
             return;
         this.showSpinner();
         this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
         this.isUserAdmin = this.loginUser.username === 'admin';
-        var users = [];
-        for (var i = 1; i <= 100; i++) {
-            users.push(createNewUser(i));
-        }
-        // Assign the data to the data source for the table to render
-        this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](users);
-        this.hideSpinner();
-    };
-    /**
-     * Set the paginator and sort after the view init since this component will
-     * be able to query its view for the initialized paginator and sort.
-     */
-    AdminUsersComponent.prototype.ngAfterViewInit = function () {
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
+        this.adminService.getAllUsers().subscribe(function (users) {
+            _this.users = users;
+            _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](users);
+            _this.dataSource.paginator = _this.paginator;
+            _this.dataSource.sort = _this.sort;
+            _this.hideSpinner();
+        }, function (err) {
+            console.log(err);
+            _this.hideSpinner();
+        });
     };
     AdminUsersComponent.prototype.applyFilter = function (filterValue) {
         this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -932,27 +909,12 @@ var AdminUsersComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./admin-users.component.html */ "./src/app/admin-users/admin-users.component.html"),
             styles: [__webpack_require__(/*! ./admin-users.component.css */ "./src/app/admin-users/admin-users.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _core_services_admin_service__WEBPACK_IMPORTED_MODULE_4__["AdminService"]])
     ], AdminUsersComponent);
     return AdminUsersComponent;
 }());
 
-/** Builds and returns a new User. */
-function createNewUser(id) {
-    var name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-        NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
-    return {
-        userId: id,
-        username: name,
-        firstName: name,
-        lastName: name,
-        emailAddress: 'fakeemail@google.com',
-        phoneNumber: '4154188711'
-    };
-}
-var NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-    'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-    'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 
 
 /***/ }),
@@ -2201,7 +2163,8 @@ var ListingsService = /** @class */ (function () {
         return this.http.delete(apiUrl + ("/" + listingId), httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
     };
     ListingsService.prototype.deleteImage = function (imageUrl) {
-        return this.http.put(apiUrl + "/delete-image", { imageUrl: imageUrl }, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+        console.log(imageUrl);
+        return this.http.delete(apiUrl + ("/image/" + imageUrl), httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
     };
     ListingsService.prototype.handleError = function (error) {
         if (error.error instanceof ErrorEvent) {
@@ -2217,6 +2180,7 @@ var ListingsService = /** @class */ (function () {
         // return an observable with a user-facing error message
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
     };
+    ListingsService.cloudStorage = 'https://storage.googleapis.com/better-home-234220';
     ListingsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"]])
