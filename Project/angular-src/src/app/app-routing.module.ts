@@ -11,6 +11,10 @@ import {AddListingComponent} from "./add-listing/add-listing.component";
 import {AdvancedSearchComponent} from "./advanced-search/advanced-search.component";
 import {UpdateLoginComponent} from "./update-login/update-login.component";
 import {UpdatePropertyComponent} from "./update-property/update-property.component";
+import {AdminUsersComponent} from "./admin-users/admin-users.component";
+import {AdminListingsComponent} from "./admin-listings/admin-listings.component";
+import {UpdateAccountComponent} from "./update-account/update-account.component";
+import {AdminImagesComponent} from "./admin-images/admin-images.component";
 
 
 const routes: Routes = [
@@ -67,6 +71,22 @@ const routes: Routes = [
   {
     path: 'update-property/:listingId',
     component: UpdatePropertyComponent
+  },
+  {
+    path: 'admin-users',
+    component: AdminUsersComponent
+  },
+  {
+    path: 'admin-listings',
+    component: AdminListingsComponent
+  },
+  {
+    path: 'admin-images',
+    component: AdminImagesComponent
+  },
+  {
+    path: 'update-account/:userId',
+    component: UpdateAccountComponent
   }
 ];
 

@@ -12,6 +12,8 @@ const apiUrl = '/api/listing';
 @Injectable()
 export class ListingsService {
 
+  public static cloudStorage = 'https://storage.googleapis.com/better-home-234220';
+
   constructor(private http: HttpClient) { }
 
   /** CRUD function for create **/
@@ -51,7 +53,8 @@ export class ListingsService {
   }
 
   deleteImage(imageUrl: string): Observable<any> {
-    return this.http.put(apiUrl + `/delete-image`, {imageUrl: imageUrl}, httpOptions).pipe(
+    console.log(imageUrl);
+    return this.http.delete(apiUrl + `/image/${imageUrl}`, httpOptions).pipe(
       catchError(this.handleError)
     );
   }

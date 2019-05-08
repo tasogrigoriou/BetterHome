@@ -1,0 +1,28 @@
+/*@media only screen and (max-width: 736px) and (orientation:portrait) {*/
+/*  mat-header-row, mat-row {*/
+/*    width: 300%;*/
+/*  }*/
+/*}*/
+
+.mat-form-field {
+  font-size: 16px;
+  width: 250px;
+}
+
+
+.example-header {
+  min-height: 72px;
+  padding: 12px 26px 0;
+}
+
+[mat-row].remove-background {
+  background: none;
+}
+
+.row-link:hover {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+.table-link {
+  cursor: pointer;
+}

@@ -47,6 +47,8 @@ export class PropertyComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+    this.rowWidth = (window.innerWidth <= 800) ? '100%' : '31%';
+
     if (localStorage.getItem('loginUser')) {
       this.user = JSON.parse(localStorage.getItem('loginUser'));
     }
@@ -63,30 +65,24 @@ export class PropertyComponent implements OnInit, OnDestroy {
     this.listings = this.searchService.getListings();
     this.pagedListings = this.listings.slice(0, this.pageSize);
 
-    this.rowWidth = (window.innerWidth <= 500) ? '100%' : '31%';
-
     if (!this.user) {
       this.isLoaded = true;
       return;
     }
 
-    let promises = [];
-    for (let i = 0; i < this.listings.length; i++) {
-      promises.push(
-        this.favoritesService.isFavorite(this.listings[i].listingId, this.user.userId).toPromise().then(result => {
-          this.listings[i].isFavorite = true;
-        }).catch(err => {
-          console.log(err);
-        })
-      );
-    }
-    Promise.all(promises).then(s => {
-      console.log(s);
+    this.favoritesService.getFavorites(this.user.userId).subscribe(favorites => {
+      for (let i = 0; i < this.listings.length; i++) {
+        for (let j = 0; j < favorites.length; j++) {
+          if (this.listings[i].listingId === favorites[j].listingId) {
+            this.listings[i].isFavorite = true;
+          }
+        }
+      }
       this.isLoaded = true;
-    }).catch(err => {
+    }, err => {
       console.log(err);
       this.isLoaded = true;
-    });
+    })
   }
 
   ngOnDestroy() {
@@ -114,8 +110,12 @@ export class PropertyComponent implements OnInit, OnDestroy {
     this.pagedListings = this.listings.slice(startIndex, startIndex + this.pageSize);
   }
 
+  getImage(imageUrl: string): string {
+    return `${ListingsService.cloudStorage}/${imageUrl}`;
+  }
+
   onResize(event) {
-    this.rowWidth = (event.target.innerWidth <= 500) ? '100%' : '31%';
+    this.rowWidth = (event.target.innerWidth <= 800) ? '100%' : '31%';
   }
 
   onSearchClick() {

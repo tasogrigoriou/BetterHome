@@ -58,6 +58,10 @@ import {DragScrollModule} from "ngx-drag-scroll/lib";
 import {DeleteDialog} from "./account/delete.dialog";
 import { UpdateLoginComponent } from './update-login/update-login.component';
 import { UpdatePropertyComponent } from './update-property/update-property.component';
+import { AdminUsersComponent } from './admin-users/admin-users.component';
+import { AdminListingsComponent } from './admin-listings/admin-listings.component';
+import { UpdateAccountComponent } from './update-account/update-account.component';
+import { AdminImagesComponent } from './admin-images/admin-images.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +82,10 @@ import { UpdatePropertyComponent } from './update-property/update-property.compo
     AdvancedSearchComponent,
     UpdateLoginComponent,
     UpdatePropertyComponent,
+    AdminUsersComponent,
+    AdminListingsComponent,
+    UpdateAccountComponent,
+    AdminImagesComponent
   ],
   entryComponents: [
     RegisterDialog,

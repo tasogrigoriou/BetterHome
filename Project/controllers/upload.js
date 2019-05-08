@@ -35,7 +35,7 @@ router.post('/', upload.single('file'), function(req, res, next) {
 
         let image = {
             listingId: listingId,
-            imageUrl: imageUrl
+            imageUrl: blob.name
         };
         let sql = `INSERT INTO ListingImage SET ?`;
         database.query(sql, image).then(result => {

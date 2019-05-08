@@ -124,7 +124,7 @@
              *ngFor="let imageUrl of listing.imageUrls">
           <img class="img-container"
                drag-scroll-item
-               [src]="imageUrl"
+               [src]="getImage(imageUrl)"
                alt="" />
           <a class="a-link-card" [routerLink]="[listing.listingId]"></a>
         </div>
