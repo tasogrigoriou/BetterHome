@@ -50,4 +50,27 @@ router.put('/', function (req, res) {
     });
 });
 
+router.get('/:id', function (req, res) {
+    let sql = `SELECT * FROM Users WHERE userId = ` + database.escape(req.params.id);
+    database.query(sql, function (err, result) {
+        if (err) {
+            res.status(err.status || 500).send(err.message);
+        } else {
+            let user = result[0];
+            res.send(user);
+        }
+    });
+});
+
+router.delete('/:id', function (req, res) {
+    let sql = `DELETE FROM Users WHERE userId = ` + database.escape(req.params.id);
+    database.query(sql, function (err, result) {
+        if (err) {
+            res.status(err.status || 500).send(err.message);
+        } else {
+            res.send(result);
+        }
+    });
+});
+
 module.exports = router;

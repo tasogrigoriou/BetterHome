@@ -46,7 +46,7 @@ module.exports = webpackAsyncContext;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*:host>.container {*/\n/*  max-width: 1264px;*/\n/*  width: 100%;*/\n/*  margin: 0 auto;*/\n/*  display: flex;*/\n/*  justify-content: space-between;*/\n/*  background: none;*/\n/*  float: left;*/\n/*}*/\n/*:host>.mat-tab-group {*/\n/*  flex-direction: row;*/\n/*}*/\n/*:host>.mat-tab-header {*/\n/*  border-bottom: none;*/\n/*}*/\n/*:host>.mat-tab-header-pagination {*/\n/*  display: none !important;*/\n/*}*/\n/*:host>.mat-tab-labels {*/\n/*  flex-direction: column;*/\n/*}*/\n/*:host>.mat-ink-bar {*/\n/*  height: 100%;*/\n/*  left: 98% !important;*/\n/*}*/\n/*:host>.mat-tab-body-wrapper {*/\n/*  flex: 1 1 auto;*/\n/*}*/\n/*.container {*/\n/*  position: relative;*/\n/*  width: 100%;*/\n/*  flex: 1 0 auto;*/\n/*  margin: 0 auto;*/\n/*  text-align: left;*/\n/*}*/\n/*#content {*/\n/*  box-sizing: content-box;*/\n/*  margin: 0 auto;*/\n/*  padding: 15px;*/\n/*  width: 1264px;*/\n/*  background-color: #ffffff;*/\n/*}*/\n/*#content {*/\n/*  max-width: 1100px;*/\n/*  width: 100%;*/\n/*  background-color: #ffffff;*/\n/*  padding: 24px;*/\n/*  box-sizing: border-box;*/\n/*}*/\n/*#content {*/\n/*  max-width: 1100px;*/\n/*  width: 100%;*/\n/*  background-color: #fff;*/\n/*  padding: 24px;*/\n/*  box-sizing: border-box;*/\n/*}*/\n/*#content::before, #main-content::before, #content::after, #main-content::after {*/\n/*  content: \"\";*/\n/*  display: table;*/\n/*}*/\n/*#content::after, #main-content::after {*/\n/*  clear: both;*/\n/*}*/\n/*.label{*/\n/*  font-size: xx-large;*/\n/*  font-weight: bold;*/\n/*}*/\n.fa {\n  color: darkgray;\n}\n.card-body {\n  margin-left: 25px;\n}\n.profile-p {\n  font-size: 18px;\n  font-style: oblique;\n  color: #686868;\n}\n.center-btn {\n  text-align: center;\n}\n.card-header-title {\n  padding-top: -20px;\n}\n.property-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.property-card {\n  position: relative;\n  margin-top: 10px;\n  align-items: center;\n  max-width: 400px;\n  width: 100%;\n}\n.a-link-card {\n  position: absolute;\n  top: 0; left: 0;\n  height: 100%; width: 100%;\n}\n.img-container {\n  max-height: 400px;\n  height: 100%;\n  width: 100%;\n  margin-bottom: 10px;\n}\n.img-wrap {\n  display: inline-block;\n  position: relative;\n}\n.img-upload {\n  position: absolute;\n  top: 14px;\n  left: 16px;\n}\n.img-delete {\n  position: absolute;\n  top: 14px;\n  right: 16px;\n}\n.delete-button {\n  position: absolute;\n  top: 12px;\n  right: 16px;\n  height: 46px;\n  width: 30px;\n}\n::ng-deep .mat-tab-labels {\n   font-size: 20px;\n   justify-content: center;\n }\n::ng-deep .mat-tab-label {\n  font-size: 18px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWNjb3VudC9hY2NvdW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEscUJBQXFCO0FBQ3JCLHVCQUF1QjtBQUN2QixpQkFBaUI7QUFDakIsb0JBQW9CO0FBQ3BCLG1CQUFtQjtBQUNuQixvQ0FBb0M7QUFFcEMsc0JBQXNCO0FBQ3RCLGlCQUFpQjtBQUNqQixJQUFJO0FBRUoseUJBQXlCO0FBQ3pCLHlCQUF5QjtBQUN6QixJQUFJO0FBQ0osMEJBQTBCO0FBQzFCLHlCQUF5QjtBQUN6QixJQUFJO0FBQ0oscUNBQXFDO0FBQ3JDLDhCQUE4QjtBQUM5QixJQUFJO0FBQ0osMEJBQTBCO0FBQzFCLDRCQUE0QjtBQUM1QixJQUFJO0FBQ0osdUJBQXVCO0FBQ3ZCLGtCQUFrQjtBQUNsQiwwQkFBMEI7QUFDMUIsSUFBSTtBQUNKLGdDQUFnQztBQUNoQyxvQkFBb0I7QUFDcEIsSUFBSTtBQUdKLGVBQWU7QUFDZix3QkFBd0I7QUFDeEIsaUJBQWlCO0FBQ2pCLG9CQUFvQjtBQUNwQixvQkFBb0I7QUFDcEIsc0JBQXNCO0FBQ3RCLElBQUk7QUFFSixhQUFhO0FBQ2IsNkJBQTZCO0FBQzdCLG9CQUFvQjtBQUNwQixtQkFBbUI7QUFDbkIsbUJBQW1CO0FBQ25CLCtCQUErQjtBQUMvQixJQUFJO0FBRUosYUFBYTtBQUNiLHVCQUF1QjtBQUN2QixpQkFBaUI7QUFDakIsK0JBQStCO0FBQy9CLG1CQUFtQjtBQUNuQiw0QkFBNEI7QUFDNUIsSUFBSTtBQUNKLGFBQWE7QUFDYix1QkFBdUI7QUFDdkIsaUJBQWlCO0FBQ2pCLDRCQUE0QjtBQUM1QixtQkFBbUI7QUFDbkIsNEJBQTRCO0FBQzVCLElBQUk7QUFDSixtRkFBbUY7QUFDbkYsaUJBQWlCO0FBQ2pCLG9CQUFvQjtBQUNwQixJQUFJO0FBQ0osMENBQTBDO0FBQzFDLGlCQUFpQjtBQUNqQixJQUFJO0FBRUosVUFBVTtBQUNWLHlCQUF5QjtBQUN6Qix1QkFBdUI7QUFFdkIsSUFBSTtBQUVKO0VBQ0UsZUFBZTtBQUNqQjtBQUVBO0VBQ0UsaUJBQWlCO0FBQ25CO0FBRUE7RUFDRSxlQUFlO0VBQ2YsbUJBQW1CO0VBQ25CLGNBQWM7QUFDaEI7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjtBQUVBO0VBQ0Usa0JBQWtCO0FBQ3BCO0FBRUE7RUFDRSxhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtBQUNyQjtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNoQixtQkFBbUI7RUFDbkIsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLE1BQU0sRUFBRSxPQUFPO0VBQ2YsWUFBWSxFQUFFLFdBQVc7QUFDM0I7QUFFQTtFQUNFLGlCQUFpQjtFQUNqQixZQUFZO0VBQ1osV0FBVztFQUNYLG1CQUFtQjtBQUNyQjtBQUVBO0VBQ0UscUJBQXFCO0VBQ3JCLGtCQUFrQjtBQUNwQjtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLFNBQVM7RUFDVCxVQUFVO0FBQ1o7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixTQUFTO0VBQ1QsV0FBVztBQUNiO0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsU0FBUztFQUNULFdBQVc7RUFDWCxZQUFZO0VBQ1osV0FBVztBQUNiO0FBRUE7R0FDRyxlQUFlO0dBQ2YsdUJBQXVCO0NBQ3pCO0FBRUQ7RUFDRSxlQUFlO0FBQ2pCIiwiZmlsZSI6InNyYy9hcHAvYWNjb3VudC9hY2NvdW50LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKjpob3N0Pi5jb250YWluZXIgeyovXG4vKiAgbWF4LXdpZHRoOiAxMjY0cHg7Ki9cbi8qICB3aWR0aDogMTAwJTsqL1xuLyogIG1hcmdpbjogMCBhdXRvOyovXG4vKiAgZGlzcGxheTogZmxleDsqL1xuLyogIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjsqL1xuXG4vKiAgYmFja2dyb3VuZDogbm9uZTsqL1xuLyogIGZsb2F0OiBsZWZ0OyovXG4vKn0qL1xuXG4vKjpob3N0Pi5tYXQtdGFiLWdyb3VwIHsqL1xuLyogIGZsZXgtZGlyZWN0aW9uOiByb3c7Ki9cbi8qfSovXG4vKjpob3N0Pi5tYXQtdGFiLWhlYWRlciB7Ki9cbi8qICBib3JkZXItYm90dG9tOiBub25lOyovXG4vKn0qL1xuLyo6aG9zdD4ubWF0LXRhYi1oZWFkZXItcGFnaW5hdGlvbiB7Ki9cbi8qICBkaXNwbGF5OiBub25lICFpbXBvcnRhbnQ7Ki9cbi8qfSovXG4vKjpob3N0Pi5tYXQtdGFiLWxhYmVscyB7Ki9cbi8qICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOyovXG4vKn0qL1xuLyo6aG9zdD4ubWF0LWluay1iYXIgeyovXG4vKiAgaGVpZ2h0OiAxMDAlOyovXG4vKiAgbGVmdDogOTglICFpbXBvcnRhbnQ7Ki9cbi8qfSovXG4vKjpob3N0Pi5tYXQtdGFiLWJvZHktd3JhcHBlciB7Ki9cbi8qICBmbGV4OiAxIDEgYXV0bzsqL1xuLyp9Ki9cblxuXG4vKi5jb250YWluZXIgeyovXG4vKiAgcG9zaXRpb246IHJlbGF0aXZlOyovXG4vKiAgd2lkdGg6IDEwMCU7Ki9cbi8qICBmbGV4OiAxIDAgYXV0bzsqL1xuLyogIG1hcmdpbjogMCBhdXRvOyovXG4vKiAgdGV4dC1hbGlnbjogbGVmdDsqL1xuLyp9Ki9cblxuLyojY29udGVudCB7Ki9cbi8qICBib3gtc2l6aW5nOiBjb250ZW50LWJveDsqL1xuLyogIG1hcmdpbjogMCBhdXRvOyovXG4vKiAgcGFkZGluZzogMTVweDsqL1xuLyogIHdpZHRoOiAxMjY0cHg7Ki9cbi8qICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmOyovXG4vKn0qL1xuXG4vKiNjb250ZW50IHsqL1xuLyogIG1heC13aWR0aDogMTEwMHB4OyovXG4vKiAgd2lkdGg6IDEwMCU7Ki9cbi8qICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmOyovXG4vKiAgcGFkZGluZzogMjRweDsqL1xuLyogIGJveC1zaXppbmc6IGJvcmRlci1ib3g7Ki9cbi8qfSovXG4vKiNjb250ZW50IHsqL1xuLyogIG1heC13aWR0aDogMTEwMHB4OyovXG4vKiAgd2lkdGg6IDEwMCU7Ki9cbi8qICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmOyovXG4vKiAgcGFkZGluZzogMjRweDsqL1xuLyogIGJveC1zaXppbmc6IGJvcmRlci1ib3g7Ki9cbi8qfSovXG4vKiNjb250ZW50OjpiZWZvcmUsICNtYWluLWNvbnRlbnQ6OmJlZm9yZSwgI2NvbnRlbnQ6OmFmdGVyLCAjbWFpbi1jb250ZW50OjphZnRlciB7Ki9cbi8qICBjb250ZW50OiBcIlwiOyovXG4vKiAgZGlzcGxheTogdGFibGU7Ki9cbi8qfSovXG4vKiNjb250ZW50OjphZnRlciwgI21haW4tY29udGVudDo6YWZ0ZXIgeyovXG4vKiAgY2xlYXI6IGJvdGg7Ki9cbi8qfSovXG5cbi8qLmxhYmVseyovXG4vKiAgZm9udC1zaXplOiB4eC1sYXJnZTsqL1xuLyogIGZvbnQtd2VpZ2h0OiBib2xkOyovXG5cbi8qfSovXG5cbi5mYSB7XG4gIGNvbG9yOiBkYXJrZ3JheTtcbn1cblxuLmNhcmQtYm9keSB7XG4gIG1hcmdpbi1sZWZ0OiAyNXB4O1xufVxuXG4ucHJvZmlsZS1wIHtcbiAgZm9udC1zaXplOiAxOHB4O1xuICBmb250LXN0eWxlOiBvYmxpcXVlO1xuICBjb2xvcjogIzY4Njg2ODtcbn1cblxuLmNlbnRlci1idG4ge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5jYXJkLWhlYWRlci10aXRsZSB7XG4gIHBhZGRpbmctdG9wOiAtMjBweDtcbn1cblxuLnByb3BlcnR5LWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4ucHJvcGVydHktY2FyZCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgbWFyZ2luLXRvcDogMTBweDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgbWF4LXdpZHRoOiA0MDBweDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5hLWxpbmstY2FyZCB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAwOyBsZWZ0OiAwO1xuICBoZWlnaHQ6IDEwMCU7IHdpZHRoOiAxMDAlO1xufVxuXG4uaW1nLWNvbnRhaW5lciB7XG4gIG1heC1oZWlnaHQ6IDQwMHB4O1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xufVxuXG4uaW1nLXdyYXAge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuLmltZy11cGxvYWQge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMTRweDtcbiAgbGVmdDogMTZweDtcbn1cblxuLmltZy1kZWxldGUge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMTRweDtcbiAgcmlnaHQ6IDE2cHg7XG59XG5cbi5kZWxldGUtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDEycHg7XG4gIHJpZ2h0OiAxNnB4O1xuICBoZWlnaHQ6IDQ2cHg7XG4gIHdpZHRoOiAzMHB4O1xufVxuXG46Om5nLWRlZXAgLm1hdC10YWItbGFiZWxzIHtcbiAgIGZvbnQtc2l6ZTogMjBweDtcbiAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuIH1cblxuOjpuZy1kZWVwIC5tYXQtdGFiLWxhYmVsIHtcbiAgZm9udC1zaXplOiAxOHB4O1xufVxuIl19 */"
+module.exports = "/*:host>.container {*/\n/*  max-width: 1264px;*/\n/*  width: 100%;*/\n/*  margin: 0 auto;*/\n/*  display: flex;*/\n/*  justify-content: space-between;*/\n/*  background: none;*/\n/*  float: left;*/\n/*}*/\n/*:host>.mat-tab-group {*/\n/*  flex-direction: row;*/\n/*}*/\n/*:host>.mat-tab-header {*/\n/*  border-bottom: none;*/\n/*}*/\n/*:host>.mat-tab-header-pagination {*/\n/*  display: none !important;*/\n/*}*/\n/*:host>.mat-tab-labels {*/\n/*  flex-direction: column;*/\n/*}*/\n/*:host>.mat-ink-bar {*/\n/*  height: 100%;*/\n/*  left: 98% !important;*/\n/*}*/\n/*:host>.mat-tab-body-wrapper {*/\n/*  flex: 1 1 auto;*/\n/*}*/\n/*.container {*/\n/*  position: relative;*/\n/*  width: 100%;*/\n/*  flex: 1 0 auto;*/\n/*  margin: 0 auto;*/\n/*  text-align: left;*/\n/*}*/\n/*#content {*/\n/*  box-sizing: content-box;*/\n/*  margin: 0 auto;*/\n/*  padding: 15px;*/\n/*  width: 1264px;*/\n/*  background-color: #ffffff;*/\n/*}*/\n/*#content {*/\n/*  max-width: 1100px;*/\n/*  width: 100%;*/\n/*  background-color: #ffffff;*/\n/*  padding: 24px;*/\n/*  box-sizing: border-box;*/\n/*}*/\n/*#content {*/\n/*  max-width: 1100px;*/\n/*  width: 100%;*/\n/*  background-color: #fff;*/\n/*  padding: 24px;*/\n/*  box-sizing: border-box;*/\n/*}*/\n/*#content::before, #main-content::before, #content::after, #main-content::after {*/\n/*  content: \"\";*/\n/*  display: table;*/\n/*}*/\n/*#content::after, #main-content::after {*/\n/*  clear: both;*/\n/*}*/\n/*.label{*/\n/*  font-size: xx-large;*/\n/*  font-weight: bold;*/\n/*}*/\n.fa {\n  color: darkgray;\n}\n.card-body {\n  margin-left: 25px;\n}\n.profile-p {\n  font-size: 18px;\n  font-style: oblique;\n  color: #686868;\n}\n.center-btn {\n  text-align: center;\n}\n.card-header-title {\n  padding-top: -20px;\n}\n.property-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.property-card {\n  position: relative;\n  margin-top: 10px;\n  align-items: center;\n  max-width: 400px;\n  width: 100%;\n}\n.a-link-card {\n  position: absolute;\n  top: 0; left: 0;\n  height: 100%; width: 100%;\n}\n.img-container {\n  max-height: 250px;\n  height: 100%;\n  width: 100%;\n  margin-bottom: 10px;\n}\n.img-wrap {\n  display: inline-block;\n  position: relative;\n}\n.img-upload {\n  position: absolute;\n  top: 14px;\n  left: 16px;\n}\n.img-delete {\n  position: absolute;\n  top: 14px;\n  right: 16px;\n}\n.delete-button {\n  position: absolute;\n  top: 12px;\n  right: 16px;\n  height: 46px;\n  width: 30px;\n}\n::ng-deep .mat-tab-labels {\n   font-size: 20px;\n   justify-content: center;\n }\n::ng-deep .mat-tab-label {\n  font-size: 18px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWNjb3VudC9hY2NvdW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEscUJBQXFCO0FBQ3JCLHVCQUF1QjtBQUN2QixpQkFBaUI7QUFDakIsb0JBQW9CO0FBQ3BCLG1CQUFtQjtBQUNuQixvQ0FBb0M7QUFFcEMsc0JBQXNCO0FBQ3RCLGlCQUFpQjtBQUNqQixJQUFJO0FBRUoseUJBQXlCO0FBQ3pCLHlCQUF5QjtBQUN6QixJQUFJO0FBQ0osMEJBQTBCO0FBQzFCLHlCQUF5QjtBQUN6QixJQUFJO0FBQ0oscUNBQXFDO0FBQ3JDLDhCQUE4QjtBQUM5QixJQUFJO0FBQ0osMEJBQTBCO0FBQzFCLDRCQUE0QjtBQUM1QixJQUFJO0FBQ0osdUJBQXVCO0FBQ3ZCLGtCQUFrQjtBQUNsQiwwQkFBMEI7QUFDMUIsSUFBSTtBQUNKLGdDQUFnQztBQUNoQyxvQkFBb0I7QUFDcEIsSUFBSTtBQUdKLGVBQWU7QUFDZix3QkFBd0I7QUFDeEIsaUJBQWlCO0FBQ2pCLG9CQUFvQjtBQUNwQixvQkFBb0I7QUFDcEIsc0JBQXNCO0FBQ3RCLElBQUk7QUFFSixhQUFhO0FBQ2IsNkJBQTZCO0FBQzdCLG9CQUFvQjtBQUNwQixtQkFBbUI7QUFDbkIsbUJBQW1CO0FBQ25CLCtCQUErQjtBQUMvQixJQUFJO0FBRUosYUFBYTtBQUNiLHVCQUF1QjtBQUN2QixpQkFBaUI7QUFDakIsK0JBQStCO0FBQy9CLG1CQUFtQjtBQUNuQiw0QkFBNEI7QUFDNUIsSUFBSTtBQUNKLGFBQWE7QUFDYix1QkFBdUI7QUFDdkIsaUJBQWlCO0FBQ2pCLDRCQUE0QjtBQUM1QixtQkFBbUI7QUFDbkIsNEJBQTRCO0FBQzVCLElBQUk7QUFDSixtRkFBbUY7QUFDbkYsaUJBQWlCO0FBQ2pCLG9CQUFvQjtBQUNwQixJQUFJO0FBQ0osMENBQTBDO0FBQzFDLGlCQUFpQjtBQUNqQixJQUFJO0FBRUosVUFBVTtBQUNWLHlCQUF5QjtBQUN6Qix1QkFBdUI7QUFFdkIsSUFBSTtBQUVKO0VBQ0UsZUFBZTtBQUNqQjtBQUVBO0VBQ0UsaUJBQWlCO0FBQ25CO0FBRUE7RUFDRSxlQUFlO0VBQ2YsbUJBQW1CO0VBQ25CLGNBQWM7QUFDaEI7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjtBQUVBO0VBQ0Usa0JBQWtCO0FBQ3BCO0FBRUE7RUFDRSxhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtBQUNyQjtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNoQixtQkFBbUI7RUFDbkIsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLE1BQU0sRUFBRSxPQUFPO0VBQ2YsWUFBWSxFQUFFLFdBQVc7QUFDM0I7QUFFQTtFQUNFLGlCQUFpQjtFQUNqQixZQUFZO0VBQ1osV0FBVztFQUNYLG1CQUFtQjtBQUNyQjtBQUVBO0VBQ0UscUJBQXFCO0VBQ3JCLGtCQUFrQjtBQUNwQjtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLFNBQVM7RUFDVCxVQUFVO0FBQ1o7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixTQUFTO0VBQ1QsV0FBVztBQUNiO0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsU0FBUztFQUNULFdBQVc7RUFDWCxZQUFZO0VBQ1osV0FBVztBQUNiO0FBRUE7R0FDRyxlQUFlO0dBQ2YsdUJBQXVCO0NBQ3pCO0FBRUQ7RUFDRSxlQUFlO0FBQ2pCIiwiZmlsZSI6InNyYy9hcHAvYWNjb3VudC9hY2NvdW50LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKjpob3N0Pi5jb250YWluZXIgeyovXG4vKiAgbWF4LXdpZHRoOiAxMjY0cHg7Ki9cbi8qICB3aWR0aDogMTAwJTsqL1xuLyogIG1hcmdpbjogMCBhdXRvOyovXG4vKiAgZGlzcGxheTogZmxleDsqL1xuLyogIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjsqL1xuXG4vKiAgYmFja2dyb3VuZDogbm9uZTsqL1xuLyogIGZsb2F0OiBsZWZ0OyovXG4vKn0qL1xuXG4vKjpob3N0Pi5tYXQtdGFiLWdyb3VwIHsqL1xuLyogIGZsZXgtZGlyZWN0aW9uOiByb3c7Ki9cbi8qfSovXG4vKjpob3N0Pi5tYXQtdGFiLWhlYWRlciB7Ki9cbi8qICBib3JkZXItYm90dG9tOiBub25lOyovXG4vKn0qL1xuLyo6aG9zdD4ubWF0LXRhYi1oZWFkZXItcGFnaW5hdGlvbiB7Ki9cbi8qICBkaXNwbGF5OiBub25lICFpbXBvcnRhbnQ7Ki9cbi8qfSovXG4vKjpob3N0Pi5tYXQtdGFiLWxhYmVscyB7Ki9cbi8qICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOyovXG4vKn0qL1xuLyo6aG9zdD4ubWF0LWluay1iYXIgeyovXG4vKiAgaGVpZ2h0OiAxMDAlOyovXG4vKiAgbGVmdDogOTglICFpbXBvcnRhbnQ7Ki9cbi8qfSovXG4vKjpob3N0Pi5tYXQtdGFiLWJvZHktd3JhcHBlciB7Ki9cbi8qICBmbGV4OiAxIDEgYXV0bzsqL1xuLyp9Ki9cblxuXG4vKi5jb250YWluZXIgeyovXG4vKiAgcG9zaXRpb246IHJlbGF0aXZlOyovXG4vKiAgd2lkdGg6IDEwMCU7Ki9cbi8qICBmbGV4OiAxIDAgYXV0bzsqL1xuLyogIG1hcmdpbjogMCBhdXRvOyovXG4vKiAgdGV4dC1hbGlnbjogbGVmdDsqL1xuLyp9Ki9cblxuLyojY29udGVudCB7Ki9cbi8qICBib3gtc2l6aW5nOiBjb250ZW50LWJveDsqL1xuLyogIG1hcmdpbjogMCBhdXRvOyovXG4vKiAgcGFkZGluZzogMTVweDsqL1xuLyogIHdpZHRoOiAxMjY0cHg7Ki9cbi8qICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmOyovXG4vKn0qL1xuXG4vKiNjb250ZW50IHsqL1xuLyogIG1heC13aWR0aDogMTEwMHB4OyovXG4vKiAgd2lkdGg6IDEwMCU7Ki9cbi8qICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmOyovXG4vKiAgcGFkZGluZzogMjRweDsqL1xuLyogIGJveC1zaXppbmc6IGJvcmRlci1ib3g7Ki9cbi8qfSovXG4vKiNjb250ZW50IHsqL1xuLyogIG1heC13aWR0aDogMTEwMHB4OyovXG4vKiAgd2lkdGg6IDEwMCU7Ki9cbi8qICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmOyovXG4vKiAgcGFkZGluZzogMjRweDsqL1xuLyogIGJveC1zaXppbmc6IGJvcmRlci1ib3g7Ki9cbi8qfSovXG4vKiNjb250ZW50OjpiZWZvcmUsICNtYWluLWNvbnRlbnQ6OmJlZm9yZSwgI2NvbnRlbnQ6OmFmdGVyLCAjbWFpbi1jb250ZW50OjphZnRlciB7Ki9cbi8qICBjb250ZW50OiBcIlwiOyovXG4vKiAgZGlzcGxheTogdGFibGU7Ki9cbi8qfSovXG4vKiNjb250ZW50OjphZnRlciwgI21haW4tY29udGVudDo6YWZ0ZXIgeyovXG4vKiAgY2xlYXI6IGJvdGg7Ki9cbi8qfSovXG5cbi8qLmxhYmVseyovXG4vKiAgZm9udC1zaXplOiB4eC1sYXJnZTsqL1xuLyogIGZvbnQtd2VpZ2h0OiBib2xkOyovXG5cbi8qfSovXG5cbi5mYSB7XG4gIGNvbG9yOiBkYXJrZ3JheTtcbn1cblxuLmNhcmQtYm9keSB7XG4gIG1hcmdpbi1sZWZ0OiAyNXB4O1xufVxuXG4ucHJvZmlsZS1wIHtcbiAgZm9udC1zaXplOiAxOHB4O1xuICBmb250LXN0eWxlOiBvYmxpcXVlO1xuICBjb2xvcjogIzY4Njg2ODtcbn1cblxuLmNlbnRlci1idG4ge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5jYXJkLWhlYWRlci10aXRsZSB7XG4gIHBhZGRpbmctdG9wOiAtMjBweDtcbn1cblxuLnByb3BlcnR5LWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4ucHJvcGVydHktY2FyZCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgbWFyZ2luLXRvcDogMTBweDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgbWF4LXdpZHRoOiA0MDBweDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5hLWxpbmstY2FyZCB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAwOyBsZWZ0OiAwO1xuICBoZWlnaHQ6IDEwMCU7IHdpZHRoOiAxMDAlO1xufVxuXG4uaW1nLWNvbnRhaW5lciB7XG4gIG1heC1oZWlnaHQ6IDI1MHB4O1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xufVxuXG4uaW1nLXdyYXAge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuLmltZy11cGxvYWQge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMTRweDtcbiAgbGVmdDogMTZweDtcbn1cblxuLmltZy1kZWxldGUge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMTRweDtcbiAgcmlnaHQ6IDE2cHg7XG59XG5cbi5kZWxldGUtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDEycHg7XG4gIHJpZ2h0OiAxNnB4O1xuICBoZWlnaHQ6IDQ2cHg7XG4gIHdpZHRoOiAzMHB4O1xufVxuXG46Om5nLWRlZXAgLm1hdC10YWItbGFiZWxzIHtcbiAgIGZvbnQtc2l6ZTogMjBweDtcbiAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuIH1cblxuOjpuZy1kZWVwIC5tYXQtdGFiLWxhYmVsIHtcbiAgZm9udC1zaXplOiAxOHB4O1xufVxuIl19 */"
 
 /***/ }),
 
@@ -57,7 +57,7 @@ module.exports = "/*:host>.container {*/\n/*  max-width: 1264px;*/\n/*  width: 1
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n<title>Account</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n<body class=\"body\">\n<br>\n\n<div class=\"container\">\n  <div>\n    <h3 class=\"card-header-title\">Welcome {{user.username}}!</h3>\n  </div>\n\n  <mat-tab-group mat-stretch-tabs>\n\n    <mat-tab label=\"Profile\">\n      <br>\n        <div class=\"card-body\">\n\n          <p class=\"profile-p\"><i class=\"fa fa-user fa-fw w3-margin-right w3-xlarge \"></i>{{user.username}}</p>\n          <p class=\"profile-p\"><i class=\"fa fa-info fa-fw w3-margin-right w3-xlarge \"></i>{{user.firstName + ' ' + user.lastName}}</p>\n          <p class=\"profile-p\"><i class=\"fa fa-phone fa-fw w3-margin-right w3-xlarge \"></i>{{formatPhoneNumber(user.phoneNumber)}}</p>\n          <p class=\"profile-p\"><i class=\"fa fa-envelope fa-fw w3-margin-right w3-xlarge \"></i>{{user.emailAddress}}</p>\n\n          <br>\n          <button mat-raised-button type=\"edit\" class=\"btn btn-danger edit-acct-btn\" (click)=\"onEditAccountClick()\">Edit</button>\n\n        </div>\n    </mat-tab>\n\n    <mat-tab label=\"My Listings\">\n      <ng-template [ngIf]=\"userListings[userListingIndex] && userListings.length > 0\">\n        <div class=\"property-container\">\n          <mat-card class=\"property-card\" appMaterialElevation defaultElevation=\"3\" raisedElevation=\"24\">\n\n            <a class=\"a-link-card\" (click)=\"onEditListingClick()\"></a>\n\n            <a class=\"delete-button\" (click)=\"onDeleteListingClick(userListings[userListingIndex])\">\n              <mat-icon style=\"font-size: 33px !important\" color=\"warn\">delete_forever</mat-icon>\n            </a>\n\n            <mat-card-header>\n              <mat-card-title><h5>{{userListings[userListingIndex].title}}</h5>\n              </mat-card-title>\n              <mat-card-subtitle style=\"padding-top: 6px !important\">\n                {{userListings[userListingIndex].street + ', ' + userListings[userListingIndex].city + ', ' + userListings[userListingIndex].state}}\n              </mat-card-subtitle>\n            </mat-card-header>\n\n            <ng-template [ngIf]=\"userListings[userListingIndex] && userListings[userListingIndex].imageUrls.length > 0\">\n              <drag-scroll #drag_scroll>\n                <div class=\"img-wrap\"\n                     *ngFor=\"let imageUrl of userListings[userListingIndex].imageUrls\">\n                  <img class=\"img-container\"\n                       drag-scroll-item\n                       [src]=\"imageUrl\"\n                       alt=\"\" />\n                  <a class=\"a-link-card\" (click)=\"onEditListingClick()\"></a>\n\n                  <a class=\"img-upload\" (click)=\"openInput()\">\n                    <mat-icon style=\"font-size: 30px !important\" color=\"primary\">cloud_upload</mat-icon>\n                    <input id=\"fileInput\"\n                           hidden\n                           type=\"file\"\n                           accept=\".jpg, .jpeg, .png, .tif\"\n                           (change)=\"onUploadImageClick($event.target.files)\"\n                           multiple>\n                  </a>\n                  <a class=\"img-delete\" (click)=\"onDeleteImageClick(imageUrl)\">\n                    <mat-icon style=\"font-size: 30px !important\" color=\"warn\">delete_forever</mat-icon>\n                  </a>\n\n                </div>\n              </drag-scroll>\n            </ng-template>\n\n            <mat-card-content>\n              <h6>{{userListings[userListingIndex].listingType + ' for ' + (userListings[userListingIndex].forSale ? 'sale' : 'rent')}}</h6>\n              <p><i>{{'$' + numberWithCommas(userListings[userListingIndex].price) + ' | ' + userListings[userListingIndex].numBedrooms + ' beds' + ' | ' + userListings[userListingIndex].numBathrooms + ' baths' + ' | ' + numberWithCommas(userListings[userListingIndex].lotSize) + ' sqft'}}</i></p>\n              <p class=\"property-access-title\">{{getPropertyAccessibility(userListings[userListingIndex])}}</p>\n              <p>{{userListings[userListingIndex].description}}</p>\n            </mat-card-content>\n          </mat-card>\n        </div>\n      </ng-template>\n\n      <div class=\"w3-center\">\n        <div class=\"w3-section\">\n          <div class=\"center-btn\">\n            <button mat-button (click)=\"clickLeftUserListings(userListingIndex)\">❮ Prev</button>\n            <button mat-button (click)=\"clickRightUserListings(userListingIndex)\">Next ❯</button>\n          </div>\n        </div>\n      </div>\n    </mat-tab>\n\n    <mat-tab label=\"My Favorites\">\n      <ng-template [ngIf]=\"favoriteListings[favoriteListingIndex] && favoriteListings.length > 0\">\n        <div class=\"property-container\">\n          <mat-card class=\"property-card\" appMaterialElevation defaultElevation=\"3\" raisedElevation=\"24\">\n\n            <a class=\"a-link-card\" (click)=\"navigateToListing(favoriteListings[favoriteListingIndex].listingId)\"></a>\n\n            <a class=\"delete-button\" (click)=\"onRemoveFavoriteListingClick(favoriteListings[favoriteListingIndex])\">\n              <mat-icon style=\"font-size: 24px !important\" color=\"warn\">favorite</mat-icon>\n            </a>\n\n            <mat-card-header>\n              <mat-card-title><h5>{{favoriteListings[favoriteListingIndex].title}}</h5>\n              </mat-card-title>\n              <mat-card-subtitle style=\"padding-top: 6px !important\">\n                {{favoriteListings[favoriteListingIndex].street + ', ' + favoriteListings[favoriteListingIndex].city + ', ' + favoriteListings[favoriteListingIndex].state}}\n              </mat-card-subtitle>\n            </mat-card-header>\n\n            <ng-template [ngIf]=\"favoriteListings[favoriteListingIndex] && favoriteListings[favoriteListingIndex].imageUrls.length > 0\">\n              <drag-scroll #drag_scroll>\n                <div class=\"img-wrap\"\n                     *ngFor=\"let imageUrl of favoriteListings[favoriteListingIndex].imageUrls\">\n                  <img class=\"img-container\"\n                       drag-scroll-item\n                       [src]=\"imageUrl\"\n                       alt=\"\" />\n                  <a class=\"a-link-card\" (click)=\"navigateToListing(favoriteListings[favoriteListingIndex].listingId)\"></a>\n                </div>\n              </drag-scroll>\n            </ng-template>\n\n            <mat-card-content>\n              <h6>{{favoriteListings[favoriteListingIndex].listingType + ' for ' + (favoriteListings[favoriteListingIndex].forSale ? 'sale' : 'rent')}}</h6>\n              <p><i>{{'$' + numberWithCommas(favoriteListings[favoriteListingIndex].price) + ' | ' + favoriteListings[favoriteListingIndex].numBedrooms + ' beds' + ' | ' + favoriteListings[favoriteListingIndex].numBathrooms + ' baths' + ' | ' + numberWithCommas(favoriteListings[favoriteListingIndex].lotSize) + ' sqft'}}</i></p>\n              <p class=\"property-access-title\">{{getPropertyAccessibility(favoriteListings[favoriteListingIndex])}}</p>\n              <p>{{favoriteListings[favoriteListingIndex].description}}</p>\n            </mat-card-content>\n          </mat-card>\n        </div>\n      </ng-template>\n\n      <div class=\"w3-center\">\n        <div class=\"w3-section\">\n          <button mat-button (click)=\"clickLeftFavoriteListings(favoriteListingIndex)\">❮ Prev</button>\n          <button mat-button (click)=\"clickRightFavoriteListings(favoriteListingIndex)\">Next ❯</button>\n        </div>\n      </div>\n    </mat-tab>\n\n  </mat-tab-group>\n\n  <div>\n    <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n  </div>\n\n</div>\n</body>\n</html>\n"
+module.exports = "<html>\n<title>Account</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n<body class=\"body\">\n<br>\n\n<div class=\"container\">\n  <div>\n    <h3 class=\"card-header-title\">Welcome {{user.username}}!</h3>\n  </div>\n\n  <mat-tab-group mat-stretch-tabs>\n\n    <mat-tab label=\"Profile\">\n      <br>\n        <div class=\"card-body\">\n\n          <p class=\"profile-p\"><i class=\"fa fa-user fa-fw w3-margin-right w3-xlarge \"></i>{{user.username}}</p>\n          <p class=\"profile-p\"><i class=\"fa fa-info fa-fw w3-margin-right w3-xlarge \"></i>{{user.firstName + ' ' + user.lastName}}</p>\n          <p class=\"profile-p\"><i class=\"fa fa-phone fa-fw w3-margin-right w3-xlarge \"></i>{{formatPhoneNumber(user.phoneNumber)}}</p>\n          <p class=\"profile-p\"><i class=\"fa fa-envelope fa-fw w3-margin-right w3-xlarge \"></i>{{user.emailAddress}}</p>\n\n          <br>\n          <button mat-raised-button type=\"edit\" class=\"btn btn-danger edit-acct-btn\" (click)=\"onEditAccountClick()\">Edit</button>\n\n        </div>\n    </mat-tab>\n\n    <mat-tab label=\"My Listings\">\n      <ng-template [ngIf]=\"userListings[userListingIndex] && userListings.length > 0\">\n        <div class=\"property-container\">\n          <mat-card class=\"property-card\" appMaterialElevation defaultElevation=\"3\" raisedElevation=\"24\">\n\n            <a class=\"a-link-card\" (click)=\"onEditListingClick()\"></a>\n\n            <a class=\"delete-button\" (click)=\"onDeleteListingClick(userListings[userListingIndex])\">\n              <mat-icon style=\"font-size: 33px !important\" color=\"warn\">delete_forever</mat-icon>\n            </a>\n\n            <mat-card-header>\n              <mat-card-title><h5>{{userListings[userListingIndex].title}}</h5>\n              </mat-card-title>\n              <mat-card-subtitle style=\"padding-top: 6px !important\">\n                {{userListings[userListingIndex].street + ', ' + userListings[userListingIndex].city + ', ' + userListings[userListingIndex].state}}\n              </mat-card-subtitle>\n            </mat-card-header>\n\n            <ng-template [ngIf]=\"userListings[userListingIndex] && userListings[userListingIndex].imageUrls.length > 0\">\n              <drag-scroll #drag_scroll>\n                <div class=\"img-wrap\"\n                     *ngFor=\"let imageUrl of userListings[userListingIndex].imageUrls\">\n                  <img class=\"img-container\"\n                       drag-scroll-item\n                       [src]=\"getImage(imageUrl)\"\n                       alt=\"\" />\n                  <a class=\"a-link-card\" (click)=\"onEditListingClick()\"></a>\n\n                  <a class=\"img-upload\" (click)=\"openInput()\">\n                    <mat-icon style=\"font-size: 30px !important\" color=\"primary\">cloud_upload</mat-icon>\n                    <input id=\"fileInput\"\n                           hidden\n                           type=\"file\"\n                           accept=\".jpg, .jpeg, .png, .tif\"\n                           (change)=\"onUploadImageClick($event.target.files)\"\n                           multiple>\n                  </a>\n                  <a class=\"img-delete\" (click)=\"onDeleteImageClick(imageUrl)\">\n                    <mat-icon style=\"font-size: 30px !important\" color=\"warn\">delete_forever</mat-icon>\n                  </a>\n\n                </div>\n              </drag-scroll>\n            </ng-template>\n\n            <mat-card-content>\n              <h6>{{userListings[userListingIndex].listingType + ' for ' + (userListings[userListingIndex].forSale ? 'sale' : 'rent')}}</h6>\n              <p><i>{{'$' + numberWithCommas(userListings[userListingIndex].price) + ' | ' + userListings[userListingIndex].numBedrooms + ' beds' + ' | ' + userListings[userListingIndex].numBathrooms + ' baths' + ' | ' + numberWithCommas(userListings[userListingIndex].lotSize) + ' sqft'}}</i></p>\n              <p class=\"property-access-title\">{{getPropertyAccessibility(userListings[userListingIndex])}}</p>\n              <p>{{userListings[userListingIndex].description}}</p>\n            </mat-card-content>\n          </mat-card>\n        </div>\n      </ng-template>\n\n      <div class=\"w3-center\">\n        <div class=\"w3-section\">\n          <div class=\"center-btn\">\n            <button mat-button (click)=\"clickLeftUserListings(userListingIndex)\">❮ Prev</button>\n            <button mat-button (click)=\"clickRightUserListings(userListingIndex)\">Next ❯</button>\n          </div>\n        </div>\n      </div>\n    </mat-tab>\n\n    <mat-tab label=\"My Favorites\">\n      <ng-template [ngIf]=\"favoriteListings[favoriteListingIndex] && favoriteListings.length > 0\">\n        <div class=\"property-container\">\n          <mat-card class=\"property-card\" appMaterialElevation defaultElevation=\"3\" raisedElevation=\"24\">\n\n            <a class=\"a-link-card\" (click)=\"navigateToListing(favoriteListings[favoriteListingIndex].listingId)\"></a>\n\n            <a class=\"delete-button\" (click)=\"onRemoveFavoriteListingClick(favoriteListings[favoriteListingIndex])\">\n              <mat-icon style=\"font-size: 24px !important\" color=\"warn\">favorite</mat-icon>\n            </a>\n\n            <mat-card-header>\n              <mat-card-title><h5>{{favoriteListings[favoriteListingIndex].title}}</h5>\n              </mat-card-title>\n              <mat-card-subtitle style=\"padding-top: 6px !important\">\n                {{favoriteListings[favoriteListingIndex].street + ', ' + favoriteListings[favoriteListingIndex].city + ', ' + favoriteListings[favoriteListingIndex].state}}\n              </mat-card-subtitle>\n            </mat-card-header>\n\n            <ng-template [ngIf]=\"favoriteListings[favoriteListingIndex] && favoriteListings[favoriteListingIndex].imageUrls.length > 0\">\n              <drag-scroll #drag_scroll>\n                <div class=\"img-wrap\"\n                     *ngFor=\"let imageUrl of favoriteListings[favoriteListingIndex].imageUrls\">\n                  <img class=\"img-container\"\n                       drag-scroll-item\n                       [src]=\"getImage(imageUrl)\"\n                       alt=\"\" />\n                  <a class=\"a-link-card\" (click)=\"navigateToListing(favoriteListings[favoriteListingIndex].listingId)\"></a>\n                </div>\n              </drag-scroll>\n            </ng-template>\n\n            <mat-card-content>\n              <h6>{{favoriteListings[favoriteListingIndex].listingType + ' for ' + (favoriteListings[favoriteListingIndex].forSale ? 'sale' : 'rent')}}</h6>\n              <p><i>{{'$' + numberWithCommas(favoriteListings[favoriteListingIndex].price) + ' | ' + favoriteListings[favoriteListingIndex].numBedrooms + ' beds' + ' | ' + favoriteListings[favoriteListingIndex].numBathrooms + ' baths' + ' | ' + numberWithCommas(favoriteListings[favoriteListingIndex].lotSize) + ' sqft'}}</i></p>\n              <p class=\"property-access-title\">{{getPropertyAccessibility(favoriteListings[favoriteListingIndex])}}</p>\n              <p>{{favoriteListings[favoriteListingIndex].description}}</p>\n            </mat-card-content>\n          </mat-card>\n        </div>\n      </ng-template>\n\n      <div class=\"w3-center\">\n        <div class=\"w3-section\">\n          <button mat-button (click)=\"clickLeftFavoriteListings(favoriteListingIndex)\">❮ Prev</button>\n          <button mat-button (click)=\"clickRightFavoriteListings(favoriteListingIndex)\">Next ❯</button>\n        </div>\n      </div>\n    </mat-tab>\n\n  </mat-tab-group>\n\n  <div>\n    <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n  </div>\n\n</div>\n</body>\n</html>\n"
 
 /***/ }),
 
@@ -133,6 +133,9 @@ var AccountComponent = /** @class */ (function () {
             console.log(err);
             _this.isLoaded = true;
         });
+    };
+    AccountComponent.prototype.getImage = function (imageUrl) {
+        return _core_services_listings_service__WEBPACK_IMPORTED_MODULE_3__["ListingsService"].cloudStorage + "/" + imageUrl;
     };
     AccountComponent.prototype.clickLeftUserListings = function (i) {
         if (i == 0)
@@ -561,6 +564,361 @@ var AddListingComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/admin-images/admin-images.component.css":
+/*!*********************************************************!*\
+  !*** ./src/app/admin-images/admin-images.component.css ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".card-header-title {\n  margin-top: 18px;\n  margin-bottom: 10px;\n  font-size: 30px;\n  font-weight: bold;\n}\n\n.img-container {\n  max-height: 400px;\n  height: 100%;\n  width: 100%;\n  margin-bottom: 10px;\n}\n\n.img-wrap {\n  display: inline-block;\n  position: relative;\n}\n\n.img-delete {\n  position: absolute;\n  top: 16px;\n  right: 20px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4taW1hZ2VzL2FkbWluLWltYWdlcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtFQUNuQixlQUFlO0VBQ2YsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0UsaUJBQWlCO0VBQ2pCLFlBQVk7RUFDWixXQUFXO0VBQ1gsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UscUJBQXFCO0VBQ3JCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixTQUFTO0VBQ1QsV0FBVztBQUNiIiwiZmlsZSI6InNyYy9hcHAvYWRtaW4taW1hZ2VzL2FkbWluLWltYWdlcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhcmQtaGVhZGVyLXRpdGxlIHtcbiAgbWFyZ2luLXRvcDogMThweDtcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcbiAgZm9udC1zaXplOiAzMHB4O1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmltZy1jb250YWluZXIge1xuICBtYXgtaGVpZ2h0OiA0MDBweDtcbiAgaGVpZ2h0OiAxMDAlO1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcbn1cblxuLmltZy13cmFwIHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbi5pbWctZGVsZXRlIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDE2cHg7XG4gIHJpZ2h0OiAyMHB4O1xufVxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/admin-images/admin-images.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/admin-images/admin-images.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ng-template [ngIf]=\"isUserAdmin && images\">\n  <div class=\"container\">\n\n    <div>\n      <h4 class=\"card-header-title\">Image Gallery</h4>\n    </div>\n\n    <mat-grid-list [cols]=\"breakpoint\" rowHeight=\"2:1\" (window:resize)=\"onResize($event)\">\n      <mat-grid-tile *ngFor=\"let image of images\">\n        <img [src]=\"getImage(image)\" alt=\"no image\" style='height: 100%; width: 100%; object-fit: fill'/>\n        <a class=\"img-delete\" (click)=\"onDeleteImageClick(image)\">\n          <mat-icon style=\"font-size: 30px !important\" color=\"warn\">delete_forever</mat-icon>\n        </a>\n      </mat-grid-tile>\n    </mat-grid-list>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n  </div>\n</ng-template>\n"
+
+/***/ }),
+
+/***/ "./src/app/admin-images/admin-images.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/admin-images/admin-images.component.ts ***!
+  \********************************************************/
+/*! exports provided: AdminImagesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminImagesComponent", function() { return AdminImagesComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core_services_admin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/services/admin.service */ "./src/app/core/services/admin.service.ts");
+/* harmony import */ var _account_delete_dialog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../account/delete.dialog */ "./src/app/account/delete.dialog.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _core_services_listings_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../core/services/listings.service */ "./src/app/core/services/listings.service.ts");
+/* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../register/register.dialog */ "./src/app/register/register.dialog.ts");
+
+
+
+
+
+
+
+var AdminImagesComponent = /** @class */ (function () {
+    function AdminImagesComponent(adminService, listingsService, dialog) {
+        this.adminService = adminService;
+        this.listingsService = listingsService;
+        this.dialog = dialog;
+    }
+    AdminImagesComponent.prototype.ngOnInit = function () {
+        if (!localStorage.getItem('loginUser'))
+            return;
+        this.breakpoint = (window.innerWidth <= 800) ? 1 : 2;
+        this.showSpinner();
+        this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
+        this.isUserAdmin = this.loginUser.username === 'admin';
+        this.loadData();
+    };
+    AdminImagesComponent.prototype.loadData = function () {
+        var _this = this;
+        this.adminService.getAllImages().subscribe(function (images) {
+            console.log(images);
+            _this.images = images;
+            _this.hideSpinner();
+        }, function (err) {
+            console.log(err);
+            _this.hideSpinner();
+        });
+    };
+    AdminImagesComponent.prototype.onResize = function (event) {
+        this.breakpoint = (event.target.innerWidth <= 800) ? 1 : 2;
+    };
+    AdminImagesComponent.prototype.getImage = function (imageUrl) {
+        return _core_services_listings_service__WEBPACK_IMPORTED_MODULE_5__["ListingsService"].cloudStorage + "/" + imageUrl;
+    };
+    AdminImagesComponent.prototype.onDeleteImageClick = function (imageUrl) {
+        this.openDeleteImageDialog(imageUrl, 'Are you sure you want to delete this image?');
+    };
+    AdminImagesComponent.prototype.deleteImage = function (imageUrl) {
+        var _this = this;
+        this.showSpinner();
+        this.listingsService.deleteImage(imageUrl).subscribe(function (result) {
+            _this.openDialog('Successfully deleted image');
+            _this.loadData();
+        }, function (err) {
+            _this.openDialog('Unable to delete image');
+            console.log(err);
+        });
+    };
+    AdminImagesComponent.prototype.showSpinner = function () {
+        this.isLoaded = false;
+    };
+    AdminImagesComponent.prototype.hideSpinner = function () {
+        this.isLoaded = true;
+    };
+    AdminImagesComponent.prototype.openDeleteImageDialog = function (imageUrl, message) {
+        var _this = this;
+        var dialog = this.dialog.open(_account_delete_dialog__WEBPACK_IMPORTED_MODULE_3__["DeleteDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        dialog.afterClosed().subscribe(function (result) {
+            if (result == 'delete') {
+                _this.deleteImage(imageUrl);
+            }
+        });
+    };
+    AdminImagesComponent.prototype.openDialog = function (message) {
+        this.dialog.open(_register_register_dialog__WEBPACK_IMPORTED_MODULE_6__["RegisterDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+    };
+    AdminImagesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-admin-images',
+            template: __webpack_require__(/*! ./admin-images.component.html */ "./src/app/admin-images/admin-images.component.html"),
+            styles: [__webpack_require__(/*! ./admin-images.component.css */ "./src/app/admin-images/admin-images.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_core_services_admin_service__WEBPACK_IMPORTED_MODULE_2__["AdminService"],
+            _core_services_listings_service__WEBPACK_IMPORTED_MODULE_5__["ListingsService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialog"]])
+    ], AdminImagesComponent);
+    return AdminImagesComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin-listings/admin-listings.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/admin-listings/admin-listings.component.css ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/*@media only screen and (max-width: 736px) and (orientation:portrait) {*/\n/*  mat-header-row, mat-row {*/\n/*    width: 300%;*/\n/*  }*/\n/*}*/\n.mat-form-field {\n  font-size: 16px;\n  width: 250px;\n}\n.example-header {\n  min-height: 72px;\n  padding: 12px 26px 0;\n}\n[mat-row].remove-background {\n  background: none;\n}\n.row-link:hover {\n  background-color: rgba(0, 0, 0, .05);\n}\n.table-link {\n  cursor: pointer;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4tbGlzdGluZ3MvYWRtaW4tbGlzdGluZ3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSx5RUFBeUU7QUFDekUsOEJBQThCO0FBQzlCLG1CQUFtQjtBQUNuQixNQUFNO0FBQ04sSUFBSTtBQUVKO0VBQ0UsZUFBZTtFQUNmLFlBQVk7QUFDZDtBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLG9CQUFvQjtBQUN0QjtBQUVBO0VBQ0UsZ0JBQWdCO0FBQ2xCO0FBRUE7RUFDRSxvQ0FBb0M7QUFDdEM7QUFFQTtFQUNFLGVBQWU7QUFDakIiLCJmaWxlIjoic3JjL2FwcC9hZG1pbi1saXN0aW5ncy9hZG1pbi1saXN0aW5ncy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDczNnB4KSBhbmQgKG9yaWVudGF0aW9uOnBvcnRyYWl0KSB7Ki9cbi8qICBtYXQtaGVhZGVyLXJvdywgbWF0LXJvdyB7Ki9cbi8qICAgIHdpZHRoOiAzMDAlOyovXG4vKiAgfSovXG4vKn0qL1xuXG4ubWF0LWZvcm0tZmllbGQge1xuICBmb250LXNpemU6IDE2cHg7XG4gIHdpZHRoOiAyNTBweDtcbn1cblxuLmV4YW1wbGUtaGVhZGVyIHtcbiAgbWluLWhlaWdodDogNzJweDtcbiAgcGFkZGluZzogMTJweCAyNnB4IDA7XG59XG5cblttYXQtcm93XS5yZW1vdmUtYmFja2dyb3VuZCB7XG4gIGJhY2tncm91bmQ6IG5vbmU7XG59XG5cbi5yb3ctbGluazpob3ZlciB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgLjA1KTtcbn1cblxuLnRhYmxlLWxpbmsge1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/admin-listings/admin-listings.component.html":
+/*!**************************************************************!*\
+  !*** ./src/app/admin-listings/admin-listings.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ng-template [ngIf]=\"isUserAdmin\">\n  <div class=\"example-header\">\n    <mat-form-field>\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\n    </mat-form-field>\n  </div>\n\n  <div class=\"example-container mat-elevation-z8\">\n\n    <mat-table class=\"table-link\" [dataSource]=\"dataSource\" matSort>\n\n      <ng-container matColumnDef=\"id\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.listingId}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"title\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Title </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.title}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"listingType\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Listing Type </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.listingType}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"forSale\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Sale or Rent </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{getForSaleTitle(row)}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"address\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Address </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{getAddressTitle(row)}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"price\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Price </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> ${{numberWithCommas(row.price)}} </mat-cell>\n      </ng-container>\n\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n      <mat-row class=\"row-link\"\n               *matRowDef=\"let row; columns: displayedColumns;\"\n               (click)=\"onRowClick(row)\">\n      </mat-row>\n    </mat-table>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n  </div>\n</ng-template>\n"
+
+/***/ }),
+
+/***/ "./src/app/admin-listings/admin-listings.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/admin-listings/admin-listings.component.ts ***!
+  \************************************************************/
+/*! exports provided: AdminListingsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminListingsComponent", function() { return AdminListingsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_services_admin_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/services/admin.service */ "./src/app/core/services/admin.service.ts");
+
+
+
+
+
+var AdminListingsComponent = /** @class */ (function () {
+    function AdminListingsComponent(router, adminService) {
+        this.router = router;
+        this.adminService = adminService;
+        this.isUserAdmin = false;
+        this.isLoaded = false;
+        this.displayedColumns = ['id', 'title', 'listingType', 'forSale', 'address', 'price'];
+    }
+    AdminListingsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (!localStorage.getItem('loginUser'))
+            return;
+        this.showSpinner();
+        this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
+        this.isUserAdmin = this.loginUser.username === 'admin';
+        this.adminService.getAllListings().subscribe(function (listings) {
+            _this.listings = listings;
+            _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](listings);
+            _this.dataSource.paginator = _this.paginator;
+            _this.dataSource.sort = _this.sort;
+            _this.hideSpinner();
+        }, function (err) {
+            console.log(err);
+            _this.hideSpinner();
+        });
+    };
+    AdminListingsComponent.prototype.applyFilter = function (filterValue) {
+        this.dataSource.filter = filterValue.trim().toLowerCase();
+    };
+    AdminListingsComponent.prototype.onRowClick = function (listing) {
+        console.log(listing);
+        this.router.navigate(['/update-property', listing.listingId]);
+    };
+    AdminListingsComponent.prototype.getForSaleTitle = function (listing) {
+        return listing.forSale ? 'Sale' : 'Rent';
+    };
+    AdminListingsComponent.prototype.getAddressTitle = function (listing) {
+        return listing.street + ", " + listing.city + ", " + listing.state + ", " + listing.zipCode;
+    };
+    AdminListingsComponent.prototype.numberWithCommas = function (x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    };
+    AdminListingsComponent.prototype.showSpinner = function () {
+        this.isLoaded = false;
+    };
+    AdminListingsComponent.prototype.hideSpinner = function () {
+        this.isLoaded = true;
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginator"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginator"])
+    ], AdminListingsComponent.prototype, "paginator", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSort"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSort"])
+    ], AdminListingsComponent.prototype, "sort", void 0);
+    AdminListingsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-admin-listings',
+            template: __webpack_require__(/*! ./admin-listings.component.html */ "./src/app/admin-listings/admin-listings.component.html"),
+            styles: [__webpack_require__(/*! ./admin-listings.component.css */ "./src/app/admin-listings/admin-listings.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _core_services_admin_service__WEBPACK_IMPORTED_MODULE_4__["AdminService"]])
+    ], AdminListingsComponent);
+    return AdminListingsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin-users/admin-users.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/admin-users/admin-users.component.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/*@media only screen and (max-width: 736px) and (orientation:portrait) {*/\n/*  mat-header-row, mat-row {*/\n/*    width: 300%;*/\n/*  }*/\n/*}*/\n.mat-form-field {\n  font-size: 16px;\n  width: 250px;\n}\n.example-header {\n  min-height: 72px;\n  padding: 12px 26px 0;\n}\n[mat-row].remove-background {\n  background: none;\n}\n.row-link:hover {\n  background-color: rgba(0, 0, 0, .05);\n}\n.table-link {\n  cursor: pointer;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4tdXNlcnMvYWRtaW4tdXNlcnMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSx5RUFBeUU7QUFDekUsOEJBQThCO0FBQzlCLG1CQUFtQjtBQUNuQixNQUFNO0FBQ04sSUFBSTtBQUVKO0VBQ0UsZUFBZTtFQUNmLFlBQVk7QUFDZDtBQUdBO0VBQ0UsZ0JBQWdCO0VBQ2hCLG9CQUFvQjtBQUN0QjtBQUVBO0VBQ0UsZ0JBQWdCO0FBQ2xCO0FBRUE7RUFDRSxvQ0FBb0M7QUFDdEM7QUFFQTtFQUNFLGVBQWU7QUFDakIiLCJmaWxlIjoic3JjL2FwcC9hZG1pbi11c2Vycy9hZG1pbi11c2Vycy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDczNnB4KSBhbmQgKG9yaWVudGF0aW9uOnBvcnRyYWl0KSB7Ki9cbi8qICBtYXQtaGVhZGVyLXJvdywgbWF0LXJvdyB7Ki9cbi8qICAgIHdpZHRoOiAzMDAlOyovXG4vKiAgfSovXG4vKn0qL1xuXG4ubWF0LWZvcm0tZmllbGQge1xuICBmb250LXNpemU6IDE2cHg7XG4gIHdpZHRoOiAyNTBweDtcbn1cblxuXG4uZXhhbXBsZS1oZWFkZXIge1xuICBtaW4taGVpZ2h0OiA3MnB4O1xuICBwYWRkaW5nOiAxMnB4IDI2cHggMDtcbn1cblxuW21hdC1yb3ddLnJlbW92ZS1iYWNrZ3JvdW5kIHtcbiAgYmFja2dyb3VuZDogbm9uZTtcbn1cblxuLnJvdy1saW5rOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAuMDUpO1xufVxuXG4udGFibGUtbGluayB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/admin-users/admin-users.component.html":
+/*!********************************************************!*\
+  !*** ./src/app/admin-users/admin-users.component.html ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ng-template [ngIf]=\"isUserAdmin\">\n  <div class=\"example-header\">\n    <mat-form-field>\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\n    </mat-form-field>\n  </div>\n\n  <div class=\"example-container mat-elevation-z8\">\n\n    <mat-table class=\"table-link\" [dataSource]=\"dataSource\" matSort>\n\n      <ng-container matColumnDef=\"id\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.userId}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"username\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Username </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.username}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"firstName\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> First Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.firstName}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"lastName\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.lastName}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"emailAddress\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Email Address </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.emailAddress}} </mat-cell>\n      </ng-container>\n\n      <ng-container matColumnDef=\"phoneNumber\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Phone Number </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.phoneNumber}} </mat-cell>\n      </ng-container>\n\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n      <mat-row class=\"row-link\"\n               *matRowDef=\"let row; columns: displayedColumns;\"\n               (click)=\"onRowClick(row)\">\n      </mat-row>\n    </mat-table>\n\n    <div>\n      <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n    </div>\n\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n  </div>\n</ng-template>\n"
+
+/***/ }),
+
+/***/ "./src/app/admin-users/admin-users.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/admin-users/admin-users.component.ts ***!
+  \******************************************************/
+/*! exports provided: AdminUsersComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminUsersComponent", function() { return AdminUsersComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_services_admin_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/services/admin.service */ "./src/app/core/services/admin.service.ts");
+
+
+
+
+
+var AdminUsersComponent = /** @class */ (function () {
+    function AdminUsersComponent(router, adminService) {
+        this.router = router;
+        this.adminService = adminService;
+        this.isUserAdmin = false;
+        this.isLoaded = false;
+        this.displayedColumns = ['id', 'username', 'firstName', 'lastName', 'emailAddress', 'phoneNumber'];
+    }
+    AdminUsersComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (!localStorage.getItem('loginUser'))
+            return;
+        this.showSpinner();
+        this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
+        this.isUserAdmin = this.loginUser.username === 'admin';
+        this.adminService.getAllUsers().subscribe(function (users) {
+            _this.users = users;
+            _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](users);
+            _this.dataSource.paginator = _this.paginator;
+            _this.dataSource.sort = _this.sort;
+            _this.hideSpinner();
+        }, function (err) {
+            console.log(err);
+            _this.hideSpinner();
+        });
+    };
+    AdminUsersComponent.prototype.applyFilter = function (filterValue) {
+        this.dataSource.filter = filterValue.trim().toLowerCase();
+    };
+    AdminUsersComponent.prototype.onRowClick = function (user) {
+        this.router.navigate(['/update-account', user.userId]);
+    };
+    AdminUsersComponent.prototype.showSpinner = function () {
+        this.isLoaded = false;
+    };
+    AdminUsersComponent.prototype.hideSpinner = function () {
+        this.isLoaded = true;
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginator"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginator"])
+    ], AdminUsersComponent.prototype, "paginator", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSort"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSort"])
+    ], AdminUsersComponent.prototype, "sort", void 0);
+    AdminUsersComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-admin-users',
+            template: __webpack_require__(/*! ./admin-users.component.html */ "./src/app/admin-users/admin-users.component.html"),
+            styles: [__webpack_require__(/*! ./admin-users.component.css */ "./src/app/admin-users/admin-users.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _core_services_admin_service__WEBPACK_IMPORTED_MODULE_4__["AdminService"]])
+    ], AdminUsersComponent);
+    return AdminUsersComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/advanced-search/advanced-search.component.css":
 /*!***************************************************************!*\
   !*** ./src/app/advanced-search/advanced-search.component.css ***!
@@ -712,6 +1070,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./advanced-search/advanced-search.component */ "./src/app/advanced-search/advanced-search.component.ts");
 /* harmony import */ var _update_login_update_login_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./update-login/update-login.component */ "./src/app/update-login/update-login.component.ts");
 /* harmony import */ var _update_property_update_property_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./update-property/update-property.component */ "./src/app/update-property/update-property.component.ts");
+/* harmony import */ var _admin_users_admin_users_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./admin-users/admin-users.component */ "./src/app/admin-users/admin-users.component.ts");
+/* harmony import */ var _admin_listings_admin_listings_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./admin-listings/admin-listings.component */ "./src/app/admin-listings/admin-listings.component.ts");
+/* harmony import */ var _update_account_update_account_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./update-account/update-account.component */ "./src/app/update-account/update-account.component.ts");
+/* harmony import */ var _admin_images_admin_images_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./admin-images/admin-images.component */ "./src/app/admin-images/admin-images.component.ts");
+
+
+
+
 
 
 
@@ -780,6 +1146,22 @@ var routes = [
     {
         path: 'update-property/:listingId',
         component: _update_property_update_property_component__WEBPACK_IMPORTED_MODULE_13__["UpdatePropertyComponent"]
+    },
+    {
+        path: 'admin-users',
+        component: _admin_users_admin_users_component__WEBPACK_IMPORTED_MODULE_14__["AdminUsersComponent"]
+    },
+    {
+        path: 'admin-listings',
+        component: _admin_listings_admin_listings_component__WEBPACK_IMPORTED_MODULE_15__["AdminListingsComponent"]
+    },
+    {
+        path: 'admin-images',
+        component: _admin_images_admin_images_component__WEBPACK_IMPORTED_MODULE_17__["AdminImagesComponent"]
+    },
+    {
+        path: 'update-account/:userId',
+        component: _update_account_update_account_component__WEBPACK_IMPORTED_MODULE_16__["UpdateAccountComponent"]
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -904,6 +1286,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _account_delete_dialog__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./account/delete.dialog */ "./src/app/account/delete.dialog.ts");
 /* harmony import */ var _update_login_update_login_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./update-login/update-login.component */ "./src/app/update-login/update-login.component.ts");
 /* harmony import */ var _update_property_update_property_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./update-property/update-property.component */ "./src/app/update-property/update-property.component.ts");
+/* harmony import */ var _admin_users_admin_users_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./admin-users/admin-users.component */ "./src/app/admin-users/admin-users.component.ts");
+/* harmony import */ var _admin_listings_admin_listings_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./admin-listings/admin-listings.component */ "./src/app/admin-listings/admin-listings.component.ts");
+/* harmony import */ var _update_account_update_account_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./update-account/update-account.component */ "./src/app/update-account/update-account.component.ts");
+/* harmony import */ var _admin_images_admin_images_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./admin-images/admin-images.component */ "./src/app/admin-images/admin-images.component.ts");
+
+
+
+
 
 
 
@@ -968,6 +1358,10 @@ var AppModule = /** @class */ (function () {
                 _advanced_search_advanced_search_component__WEBPACK_IMPORTED_MODULE_34__["AdvancedSearchComponent"],
                 _update_login_update_login_component__WEBPACK_IMPORTED_MODULE_37__["UpdateLoginComponent"],
                 _update_property_update_property_component__WEBPACK_IMPORTED_MODULE_38__["UpdatePropertyComponent"],
+                _admin_users_admin_users_component__WEBPACK_IMPORTED_MODULE_39__["AdminUsersComponent"],
+                _admin_listings_admin_listings_component__WEBPACK_IMPORTED_MODULE_40__["AdminListingsComponent"],
+                _update_account_update_account_component__WEBPACK_IMPORTED_MODULE_41__["UpdateAccountComponent"],
+                _admin_images_admin_images_component__WEBPACK_IMPORTED_MODULE_42__["AdminImagesComponent"]
             ],
             entryComponents: [
                 _register_register_dialog__WEBPACK_IMPORTED_MODULE_9__["RegisterDialog"],
@@ -1149,7 +1543,7 @@ module.exports = ".my-toolbar {\n  background-color: white;\n  /* Gradient backg
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-template [ngIf]=\"!isMobileScreen\">\n  <mat-toolbar color=\"primary\" class=\"mat-elevation-z8 my-toolbar\" (window:resize)=\"onResize($event)\">\n\n    <a [routerLink]=\"'/'\"><h6 class=\"home-link\">Home</h6></a>\n\n    <!-- Centered Logo -->\n    <span class=\"my-span\">\n    <img class=\"bh-logo\" src=\"https://i.ibb.co/N1FRWdS/better-home-logo.png\" alt=\"BetterHome\" width=\"100\" height=\"100\">\n  </span>\n\n    <!-- This fills the remaining space of the current row -->\n    <span class=\"example-fill-remaining-space\"></span>\n\n    <ng-template [ngIf]=\"loginUser\">\n      <a [routerLink]=\"'/add-listing'\">Post Listing</a>\n      <a mat-button class=\"my-mat-button\" color=\"primary\" [matMenuTriggerFor]=\"menu\">{{loginUser.username}}\n        <mat-icon>arrow_drop_down</mat-icon>\n      </a>\n\n      <mat-menu #menu=\"matMenu\" xPosition=\"before\">\n        <button mat-menu-item [routerLink]=\"'/account'\">\n          <mat-icon>account_box</mat-icon>\n          <span>Account</span>\n        </button>\n        <button mat-menu-item [routerLink]=\"'/logout'\">\n          <mat-icon>close</mat-icon>\n          <span>Logout</span>\n        </button>\n      </mat-menu>\n\n    </ng-template>\n\n      <ng-template [ngIf]=\"!loginUser\">\n        <a [routerLink]=\"'/login'\">Login</a>\n        <a [routerLink]=\"'/register'\">Register</a>\n      </ng-template>\n\n  </mat-toolbar>\n</ng-template>\n\n<ng-template [ngIf]=\"isMobileScreen\">\n  <mat-toolbar color=\"primary\" class=\"mat-elevation-z8 my-toolbar\" (window:resize)=\"onResize($event)\">\n\n    <a [routerLink]=\"'/'\"><h6 class=\"home-link\">Home</h6></a>\n\n    <!-- Centered Logo -->\n    <span class=\"my-span\">\n      <img class=\"bh-logo\" src=\"https://i.ibb.co/N1FRWdS/better-home-logo.png\" alt=\"BetterHome\" width=\"100\" height=\"100\">\n    </span>\n\n    <!-- This fills the remaining space of the current row -->\n    <span class=\"example-fill-remaining-space\"></span>\n\n    <ng-template [ngIf]=\"loginUser\">\n      <a mat-button class=\"my-mat-button-push-right\" color=\"primary\" [matMenuTriggerFor]=\"menu\">{{loginUser.username}}\n        <mat-icon>arrow_drop_down</mat-icon>\n      </a>\n\n      <mat-menu #menu=\"matMenu\" xPosition=\"before\">\n        <button mat-menu-item [routerLink]=\"'/account'\">\n          <mat-icon>account_box</mat-icon>\n          <span>Account</span>\n        </button>\n        <button mat-menu-item [routerLink]=\"'/add-listing'\">\n          <mat-icon>add</mat-icon>\n          <span>Post Listing</span>\n        </button>\n        <button mat-menu-item [routerLink]=\"'/logout'\">\n          <mat-icon>close</mat-icon>\n          <span>Logout</span>\n        </button>\n      </mat-menu>\n\n    </ng-template>\n\n      <ng-template [ngIf]=\"!loginUser\">\n        <a class=\"my-mat-button-push-slight-right\" [routerLink]=\"'/login'\">Login</a>\n        <a class=\"my-mat-button-push-right\" [routerLink]=\"'/register'\">Register</a>\n      </ng-template>\n\n  </mat-toolbar>\n</ng-template>\n\n"
+module.exports = "<ng-template [ngIf]=\"!isMobileScreen\">\n  <mat-toolbar color=\"primary\" class=\"mat-elevation-z8 my-toolbar\" (window:resize)=\"onResize($event)\">\n\n    <a [routerLink]=\"'/'\"><h6 class=\"home-link\">Home</h6></a>\n\n    <!-- Centered Logo -->\n    <span class=\"my-span\">\n    <img class=\"bh-logo\" src=\"https://i.ibb.co/N1FRWdS/better-home-logo.png\" alt=\"BetterHome\" width=\"100\" height=\"100\">\n  </span>\n\n    <!-- This fills the remaining space of the current row -->\n    <span class=\"example-fill-remaining-space\"></span>\n\n    <ng-template [ngIf]=\"loginUser && isUserAdmin\">\n      <a [routerLink]=\"'/admin-users'\">Users</a>\n      <a [routerLink]=\"'/admin-listings'\">Listings</a>\n      <a [routerLink]=\"'/admin-images'\">Images</a>\n      <a mat-button class=\"my-mat-button\" color=\"primary\" [matMenuTriggerFor]=\"menu\">{{loginUser.username}}\n        <mat-icon>arrow_drop_down</mat-icon>\n      </a>\n\n      <mat-menu #menu=\"matMenu\" xPosition=\"before\">\n        <button mat-menu-item [routerLink]=\"'/account'\">\n          <mat-icon>account_box</mat-icon>\n          <span>Account</span>\n        </button>\n        <button mat-menu-item [routerLink]=\"'/logout'\">\n          <mat-icon>close</mat-icon>\n          <span>Logout</span>\n        </button>\n      </mat-menu>\n\n    </ng-template>\n\n    <ng-template [ngIf]=\"loginUser && !isUserAdmin\">\n      <a [routerLink]=\"'/add-listing'\">Post Listing</a>\n      <a mat-button class=\"my-mat-button\" color=\"primary\" [matMenuTriggerFor]=\"menu\">{{loginUser.username}}\n        <mat-icon>arrow_drop_down</mat-icon>\n      </a>\n\n      <mat-menu #menu=\"matMenu\" xPosition=\"before\">\n        <button mat-menu-item [routerLink]=\"'/account'\">\n          <mat-icon>account_box</mat-icon>\n          <span>Account</span>\n        </button>\n        <button mat-menu-item [routerLink]=\"'/logout'\">\n          <mat-icon>close</mat-icon>\n          <span>Logout</span>\n        </button>\n      </mat-menu>\n\n    </ng-template>\n\n    <ng-template [ngIf]=\"!loginUser\">\n      <a [routerLink]=\"'/login'\">Login</a>\n      <a [routerLink]=\"'/register'\">Register</a>\n    </ng-template>\n\n  </mat-toolbar>\n</ng-template>\n\n<ng-template [ngIf]=\"isMobileScreen\">\n  <mat-toolbar color=\"primary\" class=\"mat-elevation-z8 my-toolbar\" (window:resize)=\"onResize($event)\">\n\n    <a [routerLink]=\"'/'\"><h6 class=\"home-link\">Home</h6></a>\n\n    <!-- Centered Logo -->\n    <span class=\"my-span\">\n      <img class=\"bh-logo\" src=\"https://i.ibb.co/N1FRWdS/better-home-logo.png\" alt=\"BetterHome\" width=\"100\" height=\"100\">\n    </span>\n\n    <!-- This fills the remaining space of the current row -->\n    <span class=\"example-fill-remaining-space\"></span>\n\n    <ng-template [ngIf]=\"loginUser && isUserAdmin\">\n      <a mat-button class=\"my-mat-button\" color=\"primary\" [matMenuTriggerFor]=\"menu\">{{loginUser.username}}\n        <mat-icon>arrow_drop_down</mat-icon>\n      </a>\n\n      <mat-menu #menu=\"matMenu\" xPosition=\"before\">\n        <button mat-menu-item [routerLink]=\"'/admin-users'\">\n          <mat-icon>accessibility_new</mat-icon>\n          <span>Users</span>\n        </button>\n        <button mat-menu-item [routerLink]=\"'/admin-listings'\">\n          <mat-icon>account_balance</mat-icon>\n          <span>Listings</span>\n        </button>\n        <button mat-menu-item [routerLink]=\"'/admin-images'\">\n          <mat-icon>photo_library</mat-icon>\n          <span>Images</span>\n        </button>\n        <button mat-menu-item [routerLink]=\"'/logout'\">\n          <mat-icon>close</mat-icon>\n          <span>Logout</span>\n        </button>\n      </mat-menu>\n\n    </ng-template>\n\n    <ng-template [ngIf]=\"loginUser && !isUserAdmin\">\n      <a mat-button class=\"my-mat-button-push-right\" color=\"primary\" [matMenuTriggerFor]=\"menu\">{{loginUser.username}}\n        <mat-icon>arrow_drop_down</mat-icon>\n      </a>\n\n      <mat-menu #menu=\"matMenu\" xPosition=\"before\">\n        <button mat-menu-item [routerLink]=\"'/account'\">\n          <mat-icon>account_box</mat-icon>\n          <span>Account</span>\n        </button>\n        <button mat-menu-item [routerLink]=\"'/add-listing'\">\n          <mat-icon>add</mat-icon>\n          <span>Post Listing</span>\n        </button>\n        <button mat-menu-item [routerLink]=\"'/logout'\">\n          <mat-icon>close</mat-icon>\n          <span>Logout</span>\n        </button>\n      </mat-menu>\n\n    </ng-template>\n\n    <ng-template [ngIf]=\"!loginUser\">\n      <a class=\"my-mat-button-push-slight-right\" [routerLink]=\"'/login'\">Login</a>\n      <a class=\"my-mat-button-push-right\" [routerLink]=\"'/register'\">Register</a>\n    </ng-template>\n\n  </mat-toolbar>\n</ng-template>\n\n"
 
 /***/ }),
 
@@ -1172,19 +1566,27 @@ __webpack_require__.r(__webpack_exports__);
 var HeaderComponent = /** @class */ (function () {
     function HeaderComponent(loginService) {
         this.loginService = loginService;
+        this.isUserAdmin = false;
     }
     HeaderComponent.prototype.ngOnInit = function () {
         var _this = this;
         if (localStorage.getItem('loginUser')) {
             this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
+            this.isUserAdmin = this.loginUser.username === 'admin';
         }
         this.loginService.getLoginUser.subscribe(function (loginUser) {
             _this.loginUser = loginUser;
+            if (_this.loginUser && !_this.isEmpty(_this.loginUser.username)) {
+                _this.isUserAdmin = _this.loginUser.username === 'admin';
+            }
         });
         this.isMobileScreen = (window.innerWidth <= 500);
     };
     HeaderComponent.prototype.onResize = function (event) {
         this.isMobileScreen = (event.target.innerWidth <= 500);
+    };
+    HeaderComponent.prototype.isEmpty = function (str) {
+        return (!str || 0 === str.length);
     };
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1418,6 +1820,70 @@ var MaterialElevationDirective = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]])
     ], MaterialElevationDirective);
     return MaterialElevationDirective;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/services/admin.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/core/services/admin.service.ts ***!
+  \************************************************/
+/*! exports provided: AdminService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminService", function() { return AdminService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]({ 'Content-Type': 'application/json' })
+};
+var apiUrl = '/api/admin';
+var AdminService = /** @class */ (function () {
+    function AdminService(http) {
+        this.http = http;
+    }
+    AdminService.prototype.getAllUsers = function () {
+        return this.http.get(apiUrl + '/users', httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    };
+    AdminService.prototype.getAllListings = function () {
+        return this.http.get(apiUrl + '/listings', httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    };
+    AdminService.prototype.getAllImages = function () {
+        return this.http.get(apiUrl + '/images', httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    };
+    AdminService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
+    };
+    AdminService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
+    ], AdminService);
+    return AdminService;
 }());
 
 
@@ -1697,7 +2163,8 @@ var ListingsService = /** @class */ (function () {
         return this.http.delete(apiUrl + ("/" + listingId), httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
     };
     ListingsService.prototype.deleteImage = function (imageUrl) {
-        return this.http.put(apiUrl + "/delete-image", { imageUrl: imageUrl }, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+        console.log(imageUrl);
+        return this.http.delete(apiUrl + ("/image/" + imageUrl), httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
     };
     ListingsService.prototype.handleError = function (error) {
         if (error.error instanceof ErrorEvent) {
@@ -1713,6 +2180,7 @@ var ListingsService = /** @class */ (function () {
         // return an observable with a user-facing error message
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
     };
+    ListingsService.cloudStorage = 'https://storage.googleapis.com/better-home-234220';
     ListingsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"]])
@@ -1808,6 +2276,12 @@ var LoginService = /** @class */ (function () {
     /*** Update User ***/
     LoginService.prototype.updateUser = function (user) {
         return this.http.put(apiUrl, user, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    };
+    LoginService.prototype.getSingleUser = function (userId) {
+        return this.http.get(apiUrl + ("/" + userId), httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    };
+    LoginService.prototype.deleteUser = function (userId) {
+        return this.http.delete(apiUrl + ("/" + userId), httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
     };
     LoginService.prototype.emitLoginEvent = function (loginUser) {
         localStorage.setItem('loginUser', JSON.stringify(loginUser));
@@ -2339,7 +2813,7 @@ module.exports = ".main-div {\n  display: flex;\n  justify-content: center;\n  a
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--<mat-toolbar>-->\n<!--<span>Login</span>-->\n<!--</mat-toolbar>-->\n<section class=\"hero is-info is-fullheight-with-navbar is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"main-div\">\n      <mat-card class=\"my-mat-card mat-elevation-z20\">\n        <mat-card-title class=\"main-div\">Login</mat-card-title>\n        <mat-card-content>\n\n          <!--FORM FIELDS HERE-->\n          <div fxLayout=\"column\" fxLayoutAlign=\"center\">\n            <mat-form-field class=\"cont-input\">\n              <mat-label>Username</mat-label>\n              <input matInput placeholder=\"Username\" [(ngModel)]=\"user.username\" name=\"username\" required>\n            </mat-form-field>\n            <mat-form-field class=\"cont-input\">\n              <mat-label>Password</mat-label>\n              <input matInput type=\"password\" placeholder=\"Password\" [(ngModel)]=\"user.password\" name=\"password\" required>\n            </mat-form-field>\n          </div>\n\n        </mat-card-content>\n        <mat-card-actions>\n\n          <div class=\"my-button\" fxLayout=\"column\" fxLayoutAlign=\"center\">\n            <!-- LOGIN BUTTON -->\n            <button mat-raised-button (click)=\"onSubmit()\" color=\"primary\">Login</button>\n          </div>\n\n          <div>\n          <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n          </div>\n\n        </mat-card-actions>\n      </mat-card>\n    </div>\n  </div>\n</section>\n"
+module.exports = "<!--<mat-toolbar>-->\n<!--<span>Login</span>-->\n<!--</mat-toolbar>-->\n<section class=\"hero is-info is-fullheight-with-navbar is-bold\">\n  <div class=\"hero-body\">\n    <div class=\"main-div\">\n      <mat-card class=\"my-mat-card mat-elevation-z20\">\n        <mat-card-title class=\"main-div\">Login</mat-card-title>\n        <mat-card-content>\n\n          <!--FORM FIELDS HERE-->\n          <div fxLayout=\"column\" fxLayoutAlign=\"center\">\n            <mat-form-field class=\"cont-input\">\n              <mat-label>Username</mat-label>\n              <input matInput placeholder=\"Username\" [(ngModel)]=\"user.username\" name=\"username\" required (keyup.enter)=\"onSubmit()\">\n            </mat-form-field>\n            <mat-form-field class=\"cont-input\">\n              <mat-label>Password</mat-label>\n              <input matInput type=\"password\" placeholder=\"Password\" [(ngModel)]=\"user.password\" name=\"password\" required (keyup.enter)=\"onSubmit()\">\n            </mat-form-field>\n          </div>\n\n        </mat-card-content>\n        <mat-card-actions>\n\n          <div class=\"my-button\" fxLayout=\"column\" fxLayoutAlign=\"center\">\n            <!-- LOGIN BUTTON -->\n            <button mat-raised-button (click)=\"onSubmit()\" color=\"primary\">Login</button>\n          </div>\n\n          <div>\n          <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n          </div>\n\n        </mat-card-actions>\n      </mat-card>\n    </div>\n  </div>\n</section>\n"
 
 /***/ }),
 
@@ -2736,6 +3210,172 @@ var SearchResultsComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/update-account/update-account.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/update-account/update-account.component.css ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".main-div {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0 auto;\n  max-width: 350px;\n  width: 100%;\n}\n\n.my-mat-card {\n  max-width: 350px;\n  width: 100%;\n}\n\n.my-button {\n  margin-right: 80px;\n  margin-left: 80px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdXBkYXRlLWFjY291bnQvdXBkYXRlLWFjY291bnQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYix1QkFBdUI7RUFDdkIsbUJBQW1CO0VBQ25CLGNBQWM7RUFDZCxnQkFBZ0I7RUFDaEIsV0FBVztBQUNiOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixpQkFBaUI7QUFDbkIiLCJmaWxlIjoic3JjL2FwcC91cGRhdGUtYWNjb3VudC91cGRhdGUtYWNjb3VudC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1haW4tZGl2IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIG1hcmdpbjogMCBhdXRvO1xuICBtYXgtd2lkdGg6IDM1MHB4O1xuICB3aWR0aDogMTAwJTtcbn1cblxuLm15LW1hdC1jYXJkIHtcbiAgbWF4LXdpZHRoOiAzNTBweDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5teS1idXR0b24ge1xuICBtYXJnaW4tcmlnaHQ6IDgwcHg7XG4gIG1hcmdpbi1sZWZ0OiA4MHB4O1xufVxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/update-account/update-account.component.html":
+/*!**************************************************************!*\
+  !*** ./src/app/update-account/update-account.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ng-template [ngIf]=\"editUser && isUserAdmin\">\n  <section class=\"hero is-info is-fullheight-with-navbar is-bold\">\n    <div class=\"hero-body\">\n      <div class=\"main-div\">\n        <mat-card class=\"my-mat-card mat-elevation-z20\">\n          <mat-card-title class=\"main-div\">Update Account</mat-card-title>\n          <mat-card-content>\n\n            <!--FORM FIELDS HERE-->\n            <div fxLayout=\"column\" fxLayoutAlign=\"center\">\n              <mat-form-field class=\"cont-input\">\n                <mat-label>First Name</mat-label>\n                <input matInput placeholder=\"First name\" [(ngModel)]=\"editUser.firstName\" name=\"firstName\"><br>\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>Last Name</mat-label>\n                <input matInput placeholder=\"Last name\" [(ngModel)]=\"editUser.lastName\" name=\"lastName\">\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>Username</mat-label>\n                <input matInput placeholder=\"Username\" [(ngModel)]=\"editUser.username\" name=\"username\">\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>New Password</mat-label>\n                <input matInput type=\"password\" placeholder=\"New Password\" [(ngModel)]=\"newPassword\" name=\"new-password\">\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>Email Address</mat-label>\n                <input matInput placeholder=\"Email address\" [(ngModel)]=\"editUser.emailAddress\" name=\"emailAddress\">\n              </mat-form-field>\n              <mat-form-field class=\"cont-input\">\n                <mat-label>Phone Number</mat-label>\n                <input matInput placeholder=\"Phone number\" [(ngModel)]=\"editUser.phoneNumber\" name=\"phoneNumber\">\n              </mat-form-field>\n            </div>\n\n          </mat-card-content>\n          <mat-card-actions>\n\n            <div class=\"my-button\" fxLayout=\"row\" fxLayoutAlign=\"center\">\n              <button mat-raised-button (click)=\"onUpdateClick()\" color=\"primary\">Update</button>\n              <button mat-raised-button (click)=\"onDeleteClick()\" color=\"warn\">Delete</button>\n            </div>\n\n            <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n\n          </mat-card-actions>\n        </mat-card>\n      </div>\n    </div>\n  </section>\n</ng-template>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/update-account/update-account.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/update-account/update-account.component.ts ***!
+  \************************************************************/
+/*! exports provided: UpdateAccountComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateAccountComponent", function() { return UpdateAccountComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_services_login_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/services/login.service */ "./src/app/core/services/login.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../register/register.dialog */ "./src/app/register/register.dialog.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _account_delete_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../account/delete.dialog */ "./src/app/account/delete.dialog.ts");
+
+
+
+
+
+
+
+
+var UpdateAccountComponent = /** @class */ (function () {
+    function UpdateAccountComponent(route, router, loginService, dialog) {
+        this.route = route;
+        this.router = router;
+        this.loginService = loginService;
+        this.dialog = dialog;
+        this.newPassword = '';
+        this.isLoaded = false;
+    }
+    UpdateAccountComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (!localStorage.getItem('loginUser'))
+            return;
+        this.showSpinner();
+        this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
+        this.isUserAdmin = this.loginUser.username === 'admin';
+        this.route.paramMap.subscribe(function (params) {
+            _this.userId = Number(params.get('userId'));
+            _this.loginService.getSingleUser(_this.userId).subscribe(function (editUser) {
+                _this.editUser = editUser;
+                _this.hideSpinner();
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    UpdateAccountComponent.prototype.onUpdateClick = function () {
+        var _this = this;
+        this.showSpinner();
+        this.loginService.updateUser({
+            userId: this.userId,
+            firstName: this.editUser.firstName,
+            lastName: this.editUser.lastName,
+            username: this.editUser.username,
+            password: !this.isEmpty(this.newPassword) ? this.newPassword : '',
+            emailAddress: this.editUser.emailAddress,
+            phoneNumber: this.editUser.phoneNumber
+        })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["first"])())
+            .subscribe(function (data) {
+            _this.hideSpinner();
+            _this.openDialog('Update account info successful', true);
+        }, function (error) {
+            console.log(error);
+            _this.hideSpinner();
+        });
+    };
+    UpdateAccountComponent.prototype.deleteUser = function (user) {
+        var _this = this;
+        this.showSpinner();
+        this.loginService.deleteUser(user.userId).subscribe(function (result) {
+            _this.hideSpinner();
+            _this.openDialog('Successfully deleted account', true);
+        }, function (err) {
+            _this.hideSpinner();
+            _this.openDialog('Unable to delete account');
+            console.log(err);
+        });
+    };
+    UpdateAccountComponent.prototype.onDeleteClick = function () {
+        this.openDeleteUserDialog(this.editUser, 'Are you sure you want to delete this user?');
+    };
+    UpdateAccountComponent.prototype.showSpinner = function () {
+        this.isLoaded = false;
+    };
+    UpdateAccountComponent.prototype.hideSpinner = function () {
+        this.isLoaded = true;
+    };
+    UpdateAccountComponent.prototype.isEmpty = function (str) {
+        return (!str || 0 === str.length);
+    };
+    UpdateAccountComponent.prototype.openDialog = function (message, subscribe) {
+        var _this = this;
+        if (subscribe === void 0) { subscribe = false; }
+        var dialogRef = this.dialog.open(_register_register_dialog__WEBPACK_IMPORTED_MODULE_5__["RegisterDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        if (subscribe) {
+            dialogRef.afterClosed().subscribe(function (result) {
+                _this.router.navigate(['/admin-users']);
+            });
+        }
+    };
+    UpdateAccountComponent.prototype.openDeleteUserDialog = function (user, message) {
+        var _this = this;
+        var dialog = this.dialog.open(_account_delete_dialog__WEBPACK_IMPORTED_MODULE_7__["DeleteDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        dialog.afterClosed().subscribe(function (result) {
+            if (result == 'delete') {
+                _this.deleteUser(user);
+            }
+        });
+    };
+    UpdateAccountComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-update-account',
+            template: __webpack_require__(/*! ./update-account.component.html */ "./src/app/update-account/update-account.component.html"),
+            styles: [__webpack_require__(/*! ./update-account.component.css */ "./src/app/update-account/update-account.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _core_services_login_service__WEBPACK_IMPORTED_MODULE_3__["LoginService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDialog"]])
+    ], UpdateAccountComponent);
+    return UpdateAccountComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/update-login/update-login.component.css":
 /*!*********************************************************!*\
   !*** ./src/app/update-login/update-login.component.css ***!
@@ -2901,7 +3541,7 @@ module.exports = ".example-container {\n  display: flex;\n  flex-direction: colu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-template [ngIf]=\"loginUser && listing && listingBelongsToUser\">\n\n  <ng-template [ngIf]=\"isFullScreen\">\n    <div class=\"container example-container\" (window:resize)=\"onResize($event)\">\n      <h2 class=\"post-listing-header\">Update Listing</h2>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Title</mat-label>\n        <input matInput placeholder=\"Title\" [(ngModel)]=\"listing.title\" required>\n      </mat-form-field>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Listing Type</mat-label>\n          <mat-select placeholder=\"Listing Type\" [(value)]=\"listing.listingType\" required>\n            <mat-option value=\"House\">House</mat-option>\n            <mat-option value=\"Apartment\">Apartment</mat-option>\n            <mat-option value=\"Condo\">Condo</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Sale or Rent</mat-label>\n          <mat-select placeholder=\"Sale or Rent\" [(ngModel)]=\"listing.forSale\" required>\n            <mat-option [value]=1>Sale</mat-option>\n            <mat-option [value]=0>Rent</mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Bedrooms</mat-label>\n          <mat-select [(ngModel)]=\"listing.numBedrooms\" required>\n            <mat-option [value]=1>1 Bed</mat-option>\n            <mat-option [value]=2>2 Beds</mat-option>\n            <mat-option [value]=3>3 Beds</mat-option>\n            <mat-option [value]=4>4 Beds</mat-option>\n            <mat-option [value]=5>5 Beds</mat-option>\n            <mat-option [value]=6>6 Beds</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Bathrooms</mat-label>\n          <mat-select [(ngModel)]=\"listing.numBathrooms\" required>\n            <mat-option [value]=1>1 Bath</mat-option>\n            <mat-option [value]=2>2 Baths</mat-option>\n            <mat-option [value]=3>3 Baths</mat-option>\n            <mat-option [value]=4>4 Baths</mat-option>\n            <mat-option [value]=5>5 Baths</mat-option>\n            <mat-option [value]=6>6 Baths</mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Street</mat-label>\n          <input matInput placeholder=\"Street\" [(ngModel)]=\"listing.street\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>City</mat-label>\n          <input matInput placeholder=\"City\" [(ngModel)]=\"listing.city\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>State</mat-label>\n          <input matInput placeholder=\"State\" [(ngModel)]=\"listing.state\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Zip code</mat-label>\n          <input matInput placeholder=\"Zip code\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.zipCode\" required>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Price</mat-label>\n          <input matInput placeholder=\"Price\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.price\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Lot Size</mat-label>\n          <input matInput placeholder=\"Lot Size\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.lotSize\" required>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Hospital Access</mat-label>\n          <mat-select placeholder=\"Hospital Access\" [(ngModel)]=\"listing.hospitalAccess\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Bart Access</mat-label>\n          <mat-select placeholder=\"Bart Access\" [(ngModel)]=\"listing.BARTAccess\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Wheelchair Access</mat-label>\n          <mat-select placeholder=\"Wheelchair Access\" [(ngModel)]=\"listing.wheelchairAccess\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Laundry Access</mat-label>\n          <mat-select placeholder=\"Laundry Access\" [(ngModel)]=\"listing.laundry\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Description</mat-label>\n        <textarea matInput placeholder=\"Description\" [(ngModel)]=\"listing.description\" required></textarea>\n      </mat-form-field>\n\n      <div>\n        <button mat-raised-button color=\"primary\" (click)=\"onUpdateClick()\">Update Listing</button>\n      </div>\n\n      <div>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n  </ng-template>\n\n  <ng-template [ngIf]=\"!isFullScreen\">\n    <div class=\"container example-container\" (window:resize)=\"onResize($event)\">\n      <h2 class=\"post-listing-header\">Update Listing</h2>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Title</mat-label>\n        <input matInput placeholder=\"Title\" [(ngModel)]=\"listing.title\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Listing Type</mat-label>\n        <mat-select placeholder=\"Listing Type\" [(value)]=\"listing.listingType\" required>\n          <mat-option value=\"House\">House</mat-option>\n          <mat-option value=\"Apartment\">Apartment</mat-option>\n          <mat-option value=\"Condo\">Condo</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Sale or Rent</mat-label>\n        <mat-select placeholder=\"Sale or Rent\" [(ngModel)]=\"listing.forSale\" required>\n          <mat-option [value]=1>Sale</mat-option>\n          <mat-option [value]=0>Rent</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-form\">\n        <mat-label>Bedrooms</mat-label>\n        <mat-select [(ngModel)]=\"listing.numBedrooms\" required>\n          <mat-option [value]=1>1 Bed</mat-option>\n          <mat-option [value]=2>2 Beds</mat-option>\n          <mat-option [value]=3>3 Beds</mat-option>\n          <mat-option [value]=4>4 Beds</mat-option>\n          <mat-option [value]=5>5 Beds</mat-option>\n          <mat-option [value]=6>6 Beds</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-form\">\n        <mat-label>Bathrooms</mat-label>\n        <mat-select [(ngModel)]=\"listing.numBathrooms\" required>\n          <mat-option [value]=1>1 Bath</mat-option>\n          <mat-option [value]=2>2 Baths</mat-option>\n          <mat-option [value]=3>3 Baths</mat-option>\n          <mat-option [value]=4>4 Baths</mat-option>\n          <mat-option [value]=5>5 Baths</mat-option>\n          <mat-option [value]=6>6 Baths</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Street</mat-label>\n        <input matInput placeholder=\"Street\" [(ngModel)]=\"listing.street\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>City</mat-label>\n        <input matInput placeholder=\"City\" [(ngModel)]=\"listing.city\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>State</mat-label>\n        <input matInput placeholder=\"State\" [(ngModel)]=\"listing.state\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Zip code</mat-label>\n        <input matInput placeholder=\"Zip code\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.zipCode\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Price</mat-label>\n        <input matInput placeholder=\"Price\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.price\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Lot Size</mat-label>\n        <input matInput placeholder=\"Lot Size\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.lotSize\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Hospital Access</mat-label>\n        <mat-select placeholder=\"Hospital Access\" [(ngModel)]=\"listing.hospitalAccess\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Bart Access</mat-label>\n        <mat-select placeholder=\"Bart Access\" [(ngModel)]=\"listing.BARTAccess\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Wheelchair Access</mat-label>\n        <mat-select placeholder=\"Wheelchair Access\" [(ngModel)]=\"listing.wheelchairAccess\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Laundry Access</mat-label>\n        <mat-select placeholder=\"Laundry Access\" [(ngModel)]=\"listing.laundry\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Description</mat-label>\n        <textarea matInput placeholder=\"Description\" [(ngModel)]=\"listing.description\" required></textarea>\n      </mat-form-field>\n\n      <div>\n        <button mat-raised-button color=\"primary\" (click)=\"onUpdateClick()\">Update Listing</button>\n      </div>\n\n      <div>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n  </ng-template>\n\n</ng-template>\n"
+module.exports = "<ng-template [ngIf]=\"(loginUser && listing && listingBelongsToUser) || (isUserAdmin)\">\n\n  <ng-template [ngIf]=\"isFullScreen\">\n    <div class=\"container example-container\" (window:resize)=\"onResize($event)\">\n      <h2 class=\"post-listing-header\">Update Listing</h2>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Title</mat-label>\n        <input matInput placeholder=\"Title\" [(ngModel)]=\"listing.title\" required>\n      </mat-form-field>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Listing Type</mat-label>\n          <mat-select placeholder=\"Listing Type\" [(value)]=\"listing.listingType\" required>\n            <mat-option value=\"House\">House</mat-option>\n            <mat-option value=\"Apartment\">Apartment</mat-option>\n            <mat-option value=\"Condo\">Condo</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Sale or Rent</mat-label>\n          <mat-select placeholder=\"Sale or Rent\" [(ngModel)]=\"listing.forSale\" required>\n            <mat-option [value]=1>Sale</mat-option>\n            <mat-option [value]=0>Rent</mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Bedrooms</mat-label>\n          <mat-select [(ngModel)]=\"listing.numBedrooms\" required>\n            <mat-option [value]=1>1 Bed</mat-option>\n            <mat-option [value]=2>2 Beds</mat-option>\n            <mat-option [value]=3>3 Beds</mat-option>\n            <mat-option [value]=4>4 Beds</mat-option>\n            <mat-option [value]=5>5 Beds</mat-option>\n            <mat-option [value]=6>6 Beds</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-form\">\n          <mat-label>Bathrooms</mat-label>\n          <mat-select [(ngModel)]=\"listing.numBathrooms\" required>\n            <mat-option [value]=1>1 Bath</mat-option>\n            <mat-option [value]=2>2 Baths</mat-option>\n            <mat-option [value]=3>3 Baths</mat-option>\n            <mat-option [value]=4>4 Baths</mat-option>\n            <mat-option [value]=5>5 Baths</mat-option>\n            <mat-option [value]=6>6 Baths</mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Street</mat-label>\n          <input matInput placeholder=\"Street\" [(ngModel)]=\"listing.street\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>City</mat-label>\n          <input matInput placeholder=\"City\" [(ngModel)]=\"listing.city\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>State</mat-label>\n          <input matInput placeholder=\"State\" [(ngModel)]=\"listing.state\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Zip code</mat-label>\n          <input matInput placeholder=\"Zip code\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.zipCode\" required>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Price</mat-label>\n          <input matInput placeholder=\"Price\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.price\" required>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Lot Size</mat-label>\n          <input matInput placeholder=\"Lot Size\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.lotSize\" required>\n        </mat-form-field>\n      </div>\n\n      <div class=\"form-field-div\">\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Hospital Access</mat-label>\n          <mat-select placeholder=\"Hospital Access\" [(ngModel)]=\"listing.hospitalAccess\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Bart Access</mat-label>\n          <mat-select placeholder=\"Bart Access\" [(ngModel)]=\"listing.BARTAccess\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Wheelchair Access</mat-label>\n          <mat-select placeholder=\"Wheelchair Access\" [(ngModel)]=\"listing.wheelchairAccess\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field class=\"cont-input\">\n          <mat-label>Laundry Access</mat-label>\n          <mat-select placeholder=\"Laundry Access\" [(ngModel)]=\"listing.laundry\">\n            <mat-option [value]=1>Yes</mat-option>\n            <mat-option [value]=0>No</mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Description</mat-label>\n        <textarea matInput placeholder=\"Description\" [(ngModel)]=\"listing.description\" required></textarea>\n      </mat-form-field>\n\n      <div class=\"my-button\" fxLayout=\"row\" fxLayoutAlign=\"center\" fxLayoutGap=\"12px\" fxLayoutGap.xs=\"0\">\n        <button mat-raised-button (click)=\"onUpdateClick()\" color=\"primary\">Update</button>\n        <button mat-raised-button (click)=\"onDeleteClick()\" color=\"warn\">Delete</button>\n      </div>\n\n      <div>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n  </ng-template>\n\n  <ng-template [ngIf]=\"!isFullScreen\">\n    <div class=\"container example-container\" (window:resize)=\"onResize($event)\">\n      <h2 class=\"post-listing-header\">Update Listing</h2>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Title</mat-label>\n        <input matInput placeholder=\"Title\" [(ngModel)]=\"listing.title\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Listing Type</mat-label>\n        <mat-select placeholder=\"Listing Type\" [(value)]=\"listing.listingType\" required>\n          <mat-option value=\"House\">House</mat-option>\n          <mat-option value=\"Apartment\">Apartment</mat-option>\n          <mat-option value=\"Condo\">Condo</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Sale or Rent</mat-label>\n        <mat-select placeholder=\"Sale or Rent\" [(ngModel)]=\"listing.forSale\" required>\n          <mat-option [value]=1>Sale</mat-option>\n          <mat-option [value]=0>Rent</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-form\">\n        <mat-label>Bedrooms</mat-label>\n        <mat-select [(ngModel)]=\"listing.numBedrooms\" required>\n          <mat-option [value]=1>1 Bed</mat-option>\n          <mat-option [value]=2>2 Beds</mat-option>\n          <mat-option [value]=3>3 Beds</mat-option>\n          <mat-option [value]=4>4 Beds</mat-option>\n          <mat-option [value]=5>5 Beds</mat-option>\n          <mat-option [value]=6>6 Beds</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-form\">\n        <mat-label>Bathrooms</mat-label>\n        <mat-select [(ngModel)]=\"listing.numBathrooms\" required>\n          <mat-option [value]=1>1 Bath</mat-option>\n          <mat-option [value]=2>2 Baths</mat-option>\n          <mat-option [value]=3>3 Baths</mat-option>\n          <mat-option [value]=4>4 Baths</mat-option>\n          <mat-option [value]=5>5 Baths</mat-option>\n          <mat-option [value]=6>6 Baths</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Street</mat-label>\n        <input matInput placeholder=\"Street\" [(ngModel)]=\"listing.street\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>City</mat-label>\n        <input matInput placeholder=\"City\" [(ngModel)]=\"listing.city\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>State</mat-label>\n        <input matInput placeholder=\"State\" [(ngModel)]=\"listing.state\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Zip code</mat-label>\n        <input matInput placeholder=\"Zip code\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.zipCode\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Price</mat-label>\n        <input matInput placeholder=\"Price\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.price\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Lot Size</mat-label>\n        <input matInput placeholder=\"Lot Size\" (keypress)=\"numberOnly($event)\" [(ngModel)]=\"listing.lotSize\" required>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Hospital Access</mat-label>\n        <mat-select placeholder=\"Hospital Access\" [(ngModel)]=\"listing.hospitalAccess\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Bart Access</mat-label>\n        <mat-select placeholder=\"Bart Access\" [(ngModel)]=\"listing.BARTAccess\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Wheelchair Access</mat-label>\n        <mat-select placeholder=\"Wheelchair Access\" [(ngModel)]=\"listing.wheelchairAccess\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Laundry Access</mat-label>\n        <mat-select placeholder=\"Laundry Access\" [(ngModel)]=\"listing.laundry\">\n          <mat-option [value]=1>Yes</mat-option>\n          <mat-option [value]=0>No</mat-option>\n        </mat-select>\n      </mat-form-field>\n\n      <mat-form-field class=\"cont-input\">\n        <mat-label>Description</mat-label>\n        <textarea matInput placeholder=\"Description\" [(ngModel)]=\"listing.description\" required></textarea>\n      </mat-form-field>\n\n      <div class=\"my-button\" fxLayout=\"row\" fxLayoutAlign=\"center\">\n        <button mat-raised-button (click)=\"onUpdateClick()\" color=\"primary\">Update</button>\n        <button mat-raised-button (click)=\"onDeleteClick()\" color=\"warn\">Delete</button>\n      </div>\n\n      <div>\n        <mat-spinner *ngIf=\"!isLoaded\"></mat-spinner>\n      </div>\n\n    </div>\n  </ng-template>\n\n</ng-template>\n"
 
 /***/ }),
 
@@ -2922,6 +3562,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _register_register_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../register/register.dialog */ "./src/app/register/register.dialog.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _account_delete_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../account/delete.dialog */ "./src/app/account/delete.dialog.ts");
+
 
 
 
@@ -2944,6 +3586,7 @@ var UpdatePropertyComponent = /** @class */ (function () {
             return;
         this.showSpinner();
         this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
+        this.isUserAdmin = this.loginUser.username === 'admin';
         this.route.paramMap.subscribe(function (params) {
             var listingId = Number(params.get('listingId'));
             _this.listingsService.getSingleListing(listingId).subscribe(function (listing) {
@@ -2979,6 +3622,18 @@ var UpdatePropertyComponent = /** @class */ (function () {
             console.log(err);
             _this.hideSpinner();
             _this.openDialog('Unable to update listing. Please try again', false);
+        });
+    };
+    UpdatePropertyComponent.prototype.onDeleteClick = function () {
+        this.openDeleteListingDialog(this.listing, 'Are you sure you want to delete this listing?');
+    };
+    UpdatePropertyComponent.prototype.deleteListing = function (listing) {
+        var _this = this;
+        this.listingsService.deleteListing(listing.listingId).subscribe(function (result) {
+            _this.openDialog('Successfully deleted listing', true);
+        }, function (err) {
+            console.log(err);
+            _this.openDialog('Unable to delete listing', false);
         });
     };
     UpdatePropertyComponent.prototype.replaceDoubleQuotes = function () {
@@ -3026,9 +3681,28 @@ var UpdatePropertyComponent = /** @class */ (function () {
         });
         if (subscribe) {
             dialogRef.afterClosed().subscribe(function (result) {
-                _this.router.navigate(['/account']);
+                if (_this.isUserAdmin) {
+                    _this.router.navigate(['/admin-listings']);
+                }
+                else {
+                    _this.router.navigate(['/account']);
+                }
             });
         }
+    };
+    UpdatePropertyComponent.prototype.openDeleteListingDialog = function (listing, message) {
+        var _this = this;
+        var dialog = this.dialog.open(_account_delete_dialog__WEBPACK_IMPORTED_MODULE_7__["DeleteDialog"], {
+            width: '250px',
+            data: {
+                message: message
+            }
+        });
+        dialog.afterClosed().subscribe(function (result) {
+            if (result == 'delete') {
+                _this.deleteListing(listing);
+            }
+        });
     };
     UpdatePropertyComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -3109,7 +3783,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/anastasiosgrigoriou/WebstormProjects/csc648-sp19-team43/Project/angular-src/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/tagrigoriou/csc648-sp19-team43/Project/angular-src/src/main.ts */"./src/main.ts");
 
 
 /***/ })

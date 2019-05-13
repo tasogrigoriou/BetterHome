@@ -178,9 +178,9 @@ router.delete('/:id',function (req, res) {
 });
 
 // Delete imageURL for a given Listing
-router.put('/delete-image',function (req, res) {
-    console.log(req.body.imageUrl);
-    let sql = `DELETE FROM ListingImage WHERE imageUrl = ` + database.escape(req.body.imageUrl);
+router.delete('/image/:imageUrl',function (req, res) {
+    console.log(req.params.imageUrl);
+    let sql = `DELETE FROM ListingImage WHERE imageUrl = ` + database.escape(req.params.imageUrl);
     database.query(sql, function (err, result) {
         if (err) {
             res.status(err.status || 500).send(err.message);

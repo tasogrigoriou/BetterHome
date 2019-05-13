@@ -79,7 +79,7 @@ function constructSearchQuery(req) {
         numBedroomsQuery = `AND numBedrooms >= ` + database.escape(numBedrooms);
     }
     if (numBathrooms && numBathrooms !== 0) {
-        numBathroomsQuery = `AND numBathrooms >= ` + database.escape(numBedrooms);
+        numBathroomsQuery = `AND numBathrooms >= ` + database.escape(numBathrooms);
     }
     if (!isNaN(forSale)) {
         forSaleQuery = `AND forSale = ` + database.escape(forSale);

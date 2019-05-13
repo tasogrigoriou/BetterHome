@@ -5,6 +5,7 @@ import {first} from "rxjs/operators";
 import {RegisterDialog} from "../register/register.dialog";
 import {MatDialog} from "@angular/material";
 import {LoginUser} from "../core/services/login.service";
+import {DeleteDialog} from "../account/delete.dialog";
 
 @Component({
   selector: 'app-update-update',
@@ -19,6 +20,7 @@ export class UpdatePropertyComponent implements OnInit {
   listingBelongsToUser: boolean = false;
 
   isFullScreen: boolean;
+  isUserAdmin: boolean;
 
   constructor(
     private router: Router,
@@ -32,6 +34,7 @@ export class UpdatePropertyComponent implements OnInit {
 
     this.showSpinner();
     this.loginUser = JSON.parse(localStorage.getItem('loginUser'));
+    this.isUserAdmin = this.loginUser.username === 'admin';
 
     this.route.paramMap.subscribe(params => {
       let listingId = Number(params.get('listingId'));
@@ -75,6 +78,19 @@ export class UpdatePropertyComponent implements OnInit {
           this.openDialog('Unable to update listing. Please try again', false);
         }
       );
+  }
+
+  onDeleteClick() {
+    this.openDeleteListingDialog(this.listing, 'Are you sure you want to delete this listing?');
+  }
+
+  deleteListing(listing: Listing) {
+    this.listingsService.deleteListing(listing.listingId).subscribe(result => {
+      this.openDialog('Successfully deleted listing', true);
+    }, err => {
+      console.log(err);
+      this.openDialog('Unable to delete listing', false);
+    })
   }
 
   replaceDoubleQuotes() {
@@ -129,8 +145,26 @@ export class UpdatePropertyComponent implements OnInit {
     });
     if (subscribe) {
       dialogRef.afterClosed().subscribe(result => {
-        this.router.navigate(['/account']);
+        if (this.isUserAdmin) {
+          this.router.navigate(['/admin-listings']);
+        } else {
+          this.router.navigate(['/account']);
+        }
       });
     }
+  }
+
+  openDeleteListingDialog(listing: Listing, message: string) {
+    const dialog = this.dialog.open(DeleteDialog, {
+      width: '250px',
+      data: {
+        message: message
+      }
+    });
+    dialog.afterClosed().subscribe(result => {
+      if (result == 'delete') {
+        this.deleteListing(listing);
+      }
+    });
   }
 }
