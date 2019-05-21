@@ -35,9 +35,13 @@ https://drive.google.com/file/d/1KsNDEAZ2DExlS8S8S-eYD_473oWCTcup/view?usp=shari
 
 1. Clone the project either with HTTPS or SSH.
 
-2. Navigate to the project, and install the dependencies for the project:
+2. Navigate to the project:
 ```
 cd csc648-sp19-team43/Project
+```
+
+3. Install the dependencies for the project:  
+```
 npm install
 ```
 
@@ -54,3 +58,8 @@ http://localhost:3000
 ## Authors
 
 * **Anastasios Grigoriou** - *Team Lead* - [tasogrigoriou](https://github.com/tasogrigoriou)
+* **Henok Kassegn** - *Frontend Lead* - [henberhe](https://github.com/henberhe)
+* **Sawyer Nixon** - *Backend Lead* - [sawyernixon](https://github.com/SawyerNixon)
+* **Michael (Cole) Tormey** - *Github Master* - [coletormey](https://github.com/coletormey)
+* **Austin Sy-Velasco** - *Backend Developer* - [iamaustinsy](https://github.com/iamaustinsy)
+* **Liwang Gao** - *Frontend Developer* - [liwanggao](https://github.com/LiwangGao)
