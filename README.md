@@ -2,8 +2,8 @@
 
 Our team created a product entitled "BetterHome" that is a property marketplace dedicated to providing users with the services they need to buy, sell, or rent the place they call home. Users will be able to browse the various property listings on the website, and use our detailed search and filter functions such as laundry and wheelchair access, and hospital / BART proximity in order to find the exact home they are looking for.
 
-The project is deployed on Google Cloud Platform and can be viewed using this link: 
-(https://better-home-234220.appspot.com/)
+The project is deployed on Google Cloud Platform and can be viewed using this link:   
+https://better-home-234220.appspot.com/
 
 ## Getting Started
 
@@ -11,11 +11,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installation
 
-1. Install Node.js v10.15.3:
-(https://nodejs.org/en/download/)
+1. Install Node.js v10.15.3:  
+https://nodejs.org/en/download/
 
-2. Download the Google Cloud SQL Proxy:
-(https://dl.google.com/cloudsql/cloud_sql_proxy.darwin.amd64)
+2. Download the Google Cloud SQL Proxy:  
+https://dl.google.com/cloudsql/cloud_sql_proxy.darwin.amd64
 
 3. If using Linux/MacOS, make the proxy executable: 
 ```
@@ -47,8 +47,8 @@ npm install
 npm start
 ```
 
-4. Navigate in your browser to this link:
-(http://localhost:3000)
+4. Navigate in your browser to this link:  
+http://localhost:3000
 
 5. You're good to go!
 
