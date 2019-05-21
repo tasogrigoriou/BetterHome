@@ -31,7 +31,7 @@ https://drive.google.com/file/d/1KsNDEAZ2DExlS8S8S-eYD_473oWCTcup/view?usp=shari
                   -credential_file=better-home-234220-a7f390d12278.json &
 ```
 
-### Local Environment
+### Running Locally
 
 1. Clone the project either with HTTPS or SSH.
 
