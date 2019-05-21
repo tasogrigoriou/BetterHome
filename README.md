@@ -1,6 +1,6 @@
 # CSC 648/848 Software Engineering Spring 2019 Project - Team 3
 
-Our team created a product entitled "BetterHome" that is a property marketplace dedicated to providing users with the services they need to buy, sell, or rent the place they call home. Users will be able to browse the various property listings on the website, and use our detailed search and filter functions such as laundry and wheelchair access, and hospital / BART proximity in order to find the exact home they are looking for.
+Team 3 created a product entitled "BetterHome" that is a property marketplace dedicated to providing users with the services they need to buy, sell, or rent the place they call home. Users will be able to browse the various property listings on the website, and use our detailed search and filter functions such as laundry and wheelchair access, and hospital / BART proximity in order to find the exact home they are looking for.
 
 The project is deployed on Google Cloud Platform and can be viewed using this link:   
 https://better-home-234220.appspot.com/
