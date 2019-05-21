@@ -22,10 +22,8 @@ https://dl.google.com/cloudsql/cloud_sql_proxy.darwin.amd64
 chmod +x cloud_sql_proxy
 ```
 
-4. Download the credential file used to authenticate your proxy:
-```
+4. Download the credential file used to authenticate your proxy:  
 https://drive.google.com/file/d/1KsNDEAZ2DExlS8S8S-eYD_473oWCTcup/view?usp=sharing
-```
 
 5. Put both the cloud_sql_proxy and the credential file under the same directory, then start the proxy and leave it running using this command:
 ```
