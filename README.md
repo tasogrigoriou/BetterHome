@@ -37,8 +37,9 @@ https://drive.google.com/file/d/1KsNDEAZ2DExlS8S8S-eYD_473oWCTcup/view?usp=shari
 
 1. Clone the project either with HTTPS or SSH.
 
-2. Navigate to , and install the dependencies for the project:
+2. Navigate to the project, and install the dependencies for the project:
 ```
+cd csc648-sp19-team43/Project
 npm install
 ```
 
