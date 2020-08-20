@@ -30,7 +30,7 @@
     "@ng-bootstrap/ng-bootstrap": "^4.0.4",
     "@types/angular": "^1.6.54",
     "@types/jquery": "^3.3.29",
-    "bcrypt": "^3.0.5",
+    "bcrypt": "^5.0.0",
     "bulma": "^0.7.4",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
